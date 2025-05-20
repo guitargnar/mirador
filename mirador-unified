@@ -136,8 +136,8 @@ process_command() {
       run_bridge session "$1"
       ;;
     interactive)
-      # Start an interactive shell session with the bridge
-      python3 -c "import os; os.system('python3 \"$MIRADOR_GIT_ROOT/src/bridge.py\" interactive')"
+      # Start the interactive conversational mode
+      "$MIRADOR_GIT_ROOT/mirador-interactive"
       ;;
     guitar)
       shift

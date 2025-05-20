@@ -79,6 +79,17 @@ The conductor agent analyzes your task and selects the optimal specialists:
 
 The conductor analyzes your requirements, recommends the most appropriate specialists, and explains its selection rationale.
 
+### Interactive Conversation
+
+The interactive mode provides a conversational interface for refining tasks:
+
+```bash
+# Start an interactive session
+~/ai_framework_git/mirador-interactive
+```
+
+This mode allows you to discuss your task with the conductor, refine it with additional details, and execute the recommended specialist chains.
+
 ## Future Enhancements
 
 The Mirador framework continues to evolve with planned enhancements:
