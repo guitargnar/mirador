@@ -57,7 +57,20 @@ time_cmd "$MODEL1 inference" curl -s -X POST http://localhost:11434/api/generate
     \"stream\": false,
     \"temperature\": 0.7,
     \"num_predict\": 1024
-  }" | jq -r '.response' > "$OUTPUT_DIR/step1_output.txt"
+  }" > "$OUTPUT_DIR/step1_raw.json"
+
+# Extract the response safely
+cat "$OUTPUT_DIR/step1_raw.json" | jq -r '.response' 2>/dev/null > "$OUTPUT_DIR/step1_output.txt" || {
+  # If jq fails, try a simpler extraction
+  log_warn "JSON parsing failed, trying alternate extraction method"
+  cat "$OUTPUT_DIR/step1_raw.json" | grep -o '"response":"[^"]*"' | sed 's/"response":"//;s/"$//' > "$OUTPUT_DIR/step1_output.txt"
+  
+  # If that still fails, extract everything between response and the next quote
+  if [ ! -s "$OUTPUT_DIR/step1_output.txt" ]; then
+    log_warn "Alternate extraction method failed, trying basic extraction"
+    cat "$OUTPUT_DIR/step1_raw.json" | sed -n 's/.*"response":"\([^"]*\).*/\1/p' > "$OUTPUT_DIR/step1_output.txt"
+  fi
+}
 
 if [ $? -ne 0 ] || [ ! -s "$OUTPUT_DIR/step1_output.txt" ]; then
   log_error "Error running ${MODEL1} or empty response"
@@ -84,7 +97,20 @@ time_cmd "$MODEL2 inference" curl -s -X POST http://localhost:11434/api/generate
     \"stream\": false,
     \"temperature\": 0.7,
     \"num_predict\": 1024
-  }" | jq -r '.response' > "$OUTPUT_DIR/step2_output.txt"
+  }" > "$OUTPUT_DIR/step2_raw.json"
+
+# Extract the response safely
+cat "$OUTPUT_DIR/step2_raw.json" | jq -r '.response' 2>/dev/null > "$OUTPUT_DIR/step2_output.txt" || {
+  # If jq fails, try a simpler extraction
+  log_warn "JSON parsing failed for model 2, trying alternate extraction method"
+  cat "$OUTPUT_DIR/step2_raw.json" | grep -o '"response":"[^"]*"' | sed 's/"response":"//;s/"$//' > "$OUTPUT_DIR/step2_output.txt"
+  
+  # If that still fails, extract everything between response and the next quote
+  if [ ! -s "$OUTPUT_DIR/step2_output.txt" ]; then
+    log_warn "Alternate extraction method failed, trying basic extraction"
+    cat "$OUTPUT_DIR/step2_raw.json" | sed -n 's/.*"response":"\([^"]*\).*/\1/p' > "$OUTPUT_DIR/step2_output.txt"
+  fi
+}
 
 if [ $? -ne 0 ] || [ ! -s "$OUTPUT_DIR/step2_output.txt" ]; then
   log_error "Error running ${MODEL2} or empty response"
@@ -116,7 +142,20 @@ Based on these insights, please provide your specialized perspective and create 
       \"stream\": false,
       \"temperature\": 0.7,
       \"num_predict\": 1024
-    }" | jq -r '.response' > "$OUTPUT_DIR/step3_output.txt"
+    }" > "$OUTPUT_DIR/step3_raw.json"
+
+  # Extract the response safely
+  cat "$OUTPUT_DIR/step3_raw.json" | jq -r '.response' 2>/dev/null > "$OUTPUT_DIR/step3_output.txt" || {
+    # If jq fails, try a simpler extraction
+    log_warn "JSON parsing failed for model 3, trying alternate extraction method"
+    cat "$OUTPUT_DIR/step3_raw.json" | grep -o '"response":"[^"]*"' | sed 's/"response":"//;s/"$//' > "$OUTPUT_DIR/step3_output.txt"
+    
+    # If that still fails, extract everything between response and the next quote
+    if [ ! -s "$OUTPUT_DIR/step3_output.txt" ]; then
+      log_warn "Alternate extraction method failed, trying basic extraction"
+      cat "$OUTPUT_DIR/step3_raw.json" | sed -n 's/.*"response":"\([^"]*\).*/\1/p' > "$OUTPUT_DIR/step3_output.txt"
+    fi
+  }
 
   if [ $? -ne 0 ] || [ ! -s "$OUTPUT_DIR/step3_output.txt" ]; then
     log_error "Error running ${MODEL3} or empty response"
