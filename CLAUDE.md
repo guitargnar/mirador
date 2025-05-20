@@ -1,55 +1,67 @@
-# CLAUDE.md - Instructions for Claude Code
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-Mirador is a personal AI orchestration framework that chains specialized Ollama models together for enhancing different aspects of life: music learning, financial planning, career development, coding, and business analysis.
+Mirador is a multi-agent AI orchestration framework for chaining specialized Ollama models together. The framework features emergent collaboration properties where specialists progressively enhance each other's work.
 
-## Current Project Status
+## Key Commands
 
-- **Repository**: ~/ai_framework_git
-- **Implementation**: Bash-based model chaining via direct Ollama API calls
-- **Core Components**: Chain runner, workflow integration, output management, logging
-- **Models**: 8 specialized Ollama models with different temperature/context settings
+- **Basic Chain**: `./scripts/run_chain.sh "Your prompt" model1 model2 [model3]` - Run a model chain
+- **Role Chain**: `./scripts/run_role_chain.sh "Your code" model1 model2 [model3]` - Analyze code with specialized roles
+- **Unified Interface**: `./mirador-unified run "Your prompt"` - Access both implementations
+- **Rapid Prototype**: `./mirador-rapid "Your prompt"` - Use the streamlined multi-agent system
+- **Run Tests**: `./tests/run_all_tests.sh` - Run comprehensive tests
+- **Fix Tests**: `./tests/fix_tests.sh` - Repair test scripts if needed
 
-## Key Files
+## Directory Structure
 
-- **Chain Runner**: src/chains/run_chain.sh (core model chaining functionality)
-- **Workflows**: src/workflows/mirador_workflow.sh (domain-specific templates)
-- **Utils**: src/utils/init.sh, src/utils/logging.sh (common utilities)
-- **Config**: config/config.json (model and workflow configuration)
-- **Testing**: tests/ (comprehensive test suite for all models and chains)
+- **scripts/**: User-facing launcher scripts
+- **src/chains/**: Core chain implementation scripts
+- **src/models/optimized/**: Specialized model definitions
+- **src/bridge.py**: Bridge between bash and Python implementations
+- **docs/**: Framework documentation
+- **mirador-rapid**: Simplified interface for the multi-agent system
 
-## Available Models
+## Code Style Guidelines
 
-- **guitar_expert_precise**: Guitar instruction (temperature 0.4)
-- **llama3.2_balanced**: General purpose (temperature 0.6)
-- **fast_agent_focused**: Task organization (temperature 0.3)
-- **code_reviewer_fix**: Code analysis (temperature 0.3)
-- **master_coder**: Code generation (temperature 0.4)
-- **creative_entrepreneur**: Business analysis (temperature 0.7)
-- **enhanced_agent**: Comprehensive analysis (temperature 0.7)
-- **file_reviewer**: Documentation (temperature 0.4)
+- **Bash Scripts**:
+  - Include proper error handling with set -e and explicit error messages
+  - Add descriptive comments for complex operations
+  - Use logging functions (log_info, log_debug, log_error) for traceability
+  - Follow modular design with separate utility scripts
 
-## Progress Timeline
+- **Python Scripts**:
+  - Use type hints for function parameters and return values
+  - Follow PEP 8 conventions for formatting
+  - Use consistent exception handling with specific error messages
+  - Implement proper docstrings for functions and classes
 
-1. **Initial Work**: Evaluated storage usage and identified Ollama models (~56GB)
-2. **Framework Development**: Created bash-based chaining scripts to replace non-functioning Python framework
-3. **Specialized Chains**: Developed domain-specific chain shortcuts (guitar, business, code)
-4. **Modular Logging**: Implemented structured logging with error handling
-5. **Output Management**: Built organized output system with categories
-6. **Git Implementation**: Established clean repository with proper structure
-7. **Test Suite**: Created comprehensive testing system for models and chains
-8. **CURRENT**: Fixing test script issues and preparing for full system validation
+- **Model Configurations**:
+  - Follow the established modelfile format with consistent parameter organization
+  - Document temperature settings (0.3-0.8) and context window sizes
+  - Include comprehensive system prompts for model specialization
 
-## Next Steps
+## Error Handling
 
-1. Complete test script debugging
-2. Run full system testing
-3. Refine model configurations based on test results
-4. Implement advanced chains for specific use cases
-5. Create more specialized templates
-6. Enhance error recovery for production reliability
+- Use the logging system (log_debug, log_info, log_warn, log_error) for operations
+- Implement fallback mechanisms for API response extraction
+- Always validate inputs and check error status after each command
+- Handle Ollama API failures gracefully with retries or alternative approaches
 
-## Command Reference
+## Naming Conventions
 
-See the README.md file for the latest command reference.
+- Use snake_case for variables, functions, and file names
+- Prefix functions with their module name (e.g., log_info, chain_run)
+- Use descriptive names that indicate purpose
+- For model files, follow pattern: [specialization]_[characteristic].modelfile
+
+## Current Development Focus
+
+The project is evolving from a basic chain runner to a sophisticated multi-agent system with:
+- Dynamic agent selection based on task requirements
+- Bidirectional communication between specialists
+- Chain-of-thought standardization for better analysis
+- Enhanced user experience with interactive decision points
+- Parallel processing of compatible specialist tasks

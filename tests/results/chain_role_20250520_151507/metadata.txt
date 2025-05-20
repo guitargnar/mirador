@@ -1,0 +1,12 @@
+Using test code solution:
+function authenticate(username, password) {
+  // Very basic authentication
+  if (username === admin && password === password123) {
+    return { authenticated: true, role: admin };
+  } else if (username && password) {
+    return { authenticated: true, role: user };
+  }
+  return { authenticated: false };
+}
+
+Models: master_coder, code_reviewer_fix, creative_entrepreneur

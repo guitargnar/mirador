@@ -26,9 +26,10 @@ Mirador includes optimized modelfiles for specific purposes:
 | `fast_agent_focused` | Task management | fast-agent | Low temperature (0.3), focused responses |
 | `code_reviewer_fix` | Code review | code-reviewer-fix | Low temperature (0.3), detailed analysis |
 | `master_coder` | Code generation | master-coder | Precise implementation (0.4 temp) |
-| `creative_entrepreneur` | Business analysis | creative-entrepreneur | Higher creativity (0.7 temp) |
+| `creative_entrepreneur` | Business applications | enhanced-agent | Higher creativity (0.8 temp), identifies opportunities |
 | `enhanced_agent` | General analysis | enhanced-agent | Comprehensive responses (0.7 temp) |
 | `file_reviewer` | Documentation | file-reviewer | Structured documentation (0.4 temp) |
+| `ux_designer` | UI/UX design | enhanced-agent | UI/UX focused (0.7 temp), creates interface designs |
 
 ## Building Optimized Models
 
@@ -44,6 +45,7 @@ ollama create master_coder -f ~/ai_framework_git/src/models/optimized/master_cod
 ollama create creative_entrepreneur -f ~/ai_framework_git/src/models/optimized/creative_entrepreneur.modelfile
 ollama create enhanced_agent -f ~/ai_framework_git/src/models/optimized/enhanced_agent.modelfile
 ollama create file_reviewer -f ~/ai_framework_git/src/models/optimized/file_reviewer.modelfile
+ollama create ux_designer -f ~/ai_framework_git/src/models/optimized/ux_designer.modelfile
 ```
 
 ## Creating Custom Models
@@ -90,6 +92,17 @@ ollama create your_model_name -f ~/ai_framework_git/src/models/optimized/your_mo
 - **top_p**: Controls diversity of token selection (0.8-0.95 recommended)
 - **num_gpu**: Number of GPUs to use (typically 1)
 - **num_thread**: Number of CPU threads (4-8 recommended, adjust based on your system)
+
+## Test Environment
+
+The framework has been tested on the following hardware:
+
+- **System**: Macbook Pro with M3 Max chip
+- **RAM**: 36GB
+- **Storage**: 1TB SSD
+- **OS**: macOS
+
+This system configuration provides excellent performance for running multiple Ollama models in sequence.
 
 ## System Prompts
 
