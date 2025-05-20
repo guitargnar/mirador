@@ -49,13 +49,16 @@ add_to_history() {
 analyze_task() {
   local prompt="$1"
   
+  # Escape the prompt for safe Python usage
+  escaped_prompt=$(echo "$prompt" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g' | sed "s/'/\\'/g")
+  
   # Use the conductor to analyze the task
   conductor_output=$(python3 -c "
 import sys
 sys.path.append('$MIRADOR_ROOT')
 from src.conductor import ConductorAgent
 conductor = ConductorAgent()
-result = conductor.ask_conductor('$prompt')
+result = conductor.ask_conductor(\"\"\"$escaped_prompt\"\"\")
 print(result['explanation'])
 print('SPECIALISTS:' + ' '.join(result['specialists']))
 ")
@@ -93,12 +96,15 @@ run_chain() {
   
   # Run the chain
   echo -e "${YELLOW}Running chain with specialists: $specialists${RESET}"
-  output=$("$MIRADOR_ROOT/scripts/run_chain.sh" "$prompt" $specialists > "$output_dir/full_output.txt" 2>&1)
+  # Direct output to terminal for visibility, while also capturing to file
+  "$MIRADOR_ROOT/scripts/run_chain.sh" "$prompt" $specialists | tee "$output_dir/full_output.txt"
   
-  # Find the most recent chain output
-  chain_dir=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d -newer "$output_dir" | sort | tail -1)
+  # Find the most recent chain output - wait a bit for file system to update
+  sleep 1
+  recent_dirs=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d -newer "$output_dir" 2>/dev/null | sort)
   
-  if [ -d "$chain_dir" ]; then
+  if [ -n "$recent_dirs" ]; then
+    chain_dir=$(echo "$recent_dirs" | tail -1)
     if [ -f "$chain_dir/summary.md" ]; then
       # Return the path to the summary
       echo "$chain_dir/summary.md"
@@ -107,8 +113,18 @@ run_chain() {
       echo "$chain_dir"
     fi
   else
-    # Return the output directory if no chain directory found
-    echo "$output_dir"
+    # Do a broader search if no newer directory found
+    chain_dir=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d | sort | tail -1)
+    if [ -d "$chain_dir" ]; then
+      if [ -f "$chain_dir/summary.md" ]; then
+        echo "$chain_dir/summary.md"
+      else
+        echo "$chain_dir"
+      fi
+    else
+      # Return the output directory if no chain directory found
+      echo "$output_dir"
+    fi
   fi
 }
 
@@ -180,7 +196,30 @@ while true; do
       read -r view_results
       
       if [[ "$view_results" == "y" || "$view_results" == "Y" ]]; then
-        less "$result_path"
+        if [ -f "$result_path" ]; then
+          less "$result_path"
+        elif [ -d "$result_path" ]; then
+          # If it's a directory, check for summary.md first
+          if [ -f "$result_path/summary.md" ]; then
+            less "$result_path/summary.md"
+          else
+            echo -e "${YELLOW}Directory exists but no summary file found. Contents:${RESET}"
+            ls -la "$result_path"
+          fi
+        else
+          echo -e "${RED}Error: Could not find results at $result_path${RESET}"
+          # Try to find the most recent chain directory as fallback
+          latest_chain=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d | sort | tail -1)
+          if [ -n "$latest_chain" ]; then
+            echo -e "${YELLOW}Showing most recent chain results instead:${RESET}"
+            if [ -f "$latest_chain/summary.md" ]; then
+              less "$latest_chain/summary.md"
+            else
+              echo -e "${YELLOW}Contents of $latest_chain:${RESET}"
+              ls -la "$latest_chain"
+            fi
+          fi
+        fi
       fi
       
       add_to_history "System" "Chain executed, results at: $result_path"
