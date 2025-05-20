@@ -62,19 +62,22 @@ time_cmd "$MODEL1 inference" curl -s -X POST http://localhost:11434/api/generate
 # Extract the response safely
 log_debug "Extracting response from raw output"
 
-# Try jq first (most reliable when JSON is valid)
-if jq -r '.response' "$OUTPUT_DIR/step1_raw.json" > "$OUTPUT_DIR/step1_output.txt" 2>/dev/null; then
-  log_info "Successfully extracted response with jq"
-else
-  # If jq fails, try using Python (more tolerant of special chars)
-  log_warn "JSON parsing failed, trying Python extraction"
-  python3 -c "import json,sys; print(json.load(open('$OUTPUT_DIR/step1_raw.json'))['response'])" > "$OUTPUT_DIR/step1_output.txt" 2>/dev/null || {
-    # If Python fails too, try a very simple grep approach
-    log_warn "Python extraction failed, trying grep method"
-    # Extract from response" to the end (less prone to special char issues)
-    cat "$OUTPUT_DIR/step1_raw.json" | grep -a 'response":' | cut -d':' -f2- | sed 's/^[\" ]\+//;s/[\"]*}$//' > "$OUTPUT_DIR/step1_output.txt"
-  }
-fi
+# Create a simple function to extract response content
+extract_response() {
+  # Try something very simple first - extract everything after "response":
+  grep -o '"response":[^}]*' "$OUTPUT_DIR/step1_raw.json" | sed 's/"response"://g' > "$OUTPUT_DIR/step1_output.txt"
+  
+  # If that didn't work, try an even simpler approach
+  if [ ! -s "$OUTPUT_DIR/step1_output.txt" ]; then
+    log_debug "Simple extraction failed, trying fallback method"
+    # Just save everything after response":
+    sed -n 's/.*"response"://p' "$OUTPUT_DIR/step1_raw.json" > "$OUTPUT_DIR/step1_output.txt"
+  fi
+}
+
+# Just try the simplest possible approach for maximum reliability
+log_info "Extracting response for model 1"
+extract_response
 
 # Final fallback - just use the raw response if all else fails
 if [ ! -s "$OUTPUT_DIR/step1_output.txt" ]; then
@@ -112,18 +115,16 @@ time_cmd "$MODEL2 inference" curl -s -X POST http://localhost:11434/api/generate
 # Extract the response safely
 log_debug "Extracting response from model 2 raw output"
 
-# Try jq first (most reliable when JSON is valid)
-if jq -r '.response' "$OUTPUT_DIR/step2_raw.json" > "$OUTPUT_DIR/step2_output.txt" 2>/dev/null; then
-  log_info "Successfully extracted response for model 2 with jq"
-else
-  # If jq fails, try using Python (more tolerant of special chars)
-  log_warn "JSON parsing failed for model 2, trying Python extraction"
-  python3 -c "import json,sys; print(json.load(open('$OUTPUT_DIR/step2_raw.json'))['response'])" > "$OUTPUT_DIR/step2_output.txt" 2>/dev/null || {
-    # If Python fails too, try a very simple grep approach
-    log_warn "Python extraction failed for model 2, trying grep method"
-    # Extract from response" to the end (less prone to special char issues)
-    cat "$OUTPUT_DIR/step2_raw.json" | grep -a 'response":' | cut -d':' -f2- | sed 's/^[\" ]\+//;s/[\"]*}$//' > "$OUTPUT_DIR/step2_output.txt"
-  }
+# Just use a very simple extraction for reliability
+log_info "Extracting response for model 2"
+# Try something very simple first - extract everything after "response":
+grep -o '"response":[^}]*' "$OUTPUT_DIR/step2_raw.json" | sed 's/"response"://g' > "$OUTPUT_DIR/step2_output.txt"
+
+# If that didn't work, try an even simpler approach
+if [ ! -s "$OUTPUT_DIR/step2_output.txt" ]; then
+  log_debug "Simple extraction failed for model 2, trying fallback method"
+  # Just save everything after response":
+  sed -n 's/.*"response"://p' "$OUTPUT_DIR/step2_raw.json" > "$OUTPUT_DIR/step2_output.txt"
 fi
 
 # Final fallback - just use the raw response if all else fails
@@ -167,18 +168,16 @@ Based on these insights, please provide your specialized perspective and create 
   # Extract the response safely
   log_debug "Extracting response from model 3 raw output"
 
-  # Try jq first (most reliable when JSON is valid)
-  if jq -r '.response' "$OUTPUT_DIR/step3_raw.json" > "$OUTPUT_DIR/step3_output.txt" 2>/dev/null; then
-    log_info "Successfully extracted response for model 3 with jq"
-  else
-    # If jq fails, try using Python (more tolerant of special chars)
-    log_warn "JSON parsing failed for model 3, trying Python extraction"
-    python3 -c "import json,sys; print(json.load(open('$OUTPUT_DIR/step3_raw.json'))['response'])" > "$OUTPUT_DIR/step3_output.txt" 2>/dev/null || {
-      # If Python fails too, try a very simple grep approach
-      log_warn "Python extraction failed for model 3, trying grep method"
-      # Extract from response" to the end (less prone to special char issues)
-      cat "$OUTPUT_DIR/step3_raw.json" | grep -a 'response":' | cut -d':' -f2- | sed 's/^[\" ]\+//;s/[\"]*}$//' > "$OUTPUT_DIR/step3_output.txt"
-    }
+  # Just use a very simple extraction for reliability
+  log_info "Extracting response for model 3"
+  # Try something very simple first - extract everything after "response":
+  grep -o '"response":[^}]*' "$OUTPUT_DIR/step3_raw.json" | sed 's/"response"://g' > "$OUTPUT_DIR/step3_output.txt"
+  
+  # If that didn't work, try an even simpler approach
+  if [ ! -s "$OUTPUT_DIR/step3_output.txt" ]; then
+    log_debug "Simple extraction failed for model 3, trying fallback method"
+    # Just save everything after response":
+    sed -n 's/.*"response"://p' "$OUTPUT_DIR/step3_raw.json" > "$OUTPUT_DIR/step3_output.txt"
   fi
 
   # Final fallback - just use the raw response if all else fails
