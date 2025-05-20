@@ -31,6 +31,25 @@ The conductor provides:
 - Explanation of why each specialist was selected
 - Option to execute the recommended chain
 
+## Interactive Mode
+
+The interactive mode provides a conversational interface for refining tasks through dialogue:
+
+```bash
+# Start interactive mode
+~/ai_framework_git/mirador-interactive
+
+# Through the unified interface
+~/ai_framework_git/mirador-unified interactive
+```
+
+In interactive mode, you can:
+- Discuss and refine your task with the conductor
+- Get specialist recommendations with explanations
+- Execute chains with the recommended specialists
+- View conversation history
+- Refine previous analyses with additional details
+
 ## Overview
 
 The Mirador project now includes two complementary implementations:

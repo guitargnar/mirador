@@ -1,0 +1,255 @@
+#!/bin/bash
+# Mirador Interactive Mode
+# Conversational interface with the conductor for refining tasks
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+MAGENTA='\033[0;35m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Find the source directory
+MIRADOR_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Make sure the conductor script is executable
+chmod +x "$MIRADOR_ROOT/src/conductor.py"
+
+# Save the conversation history
+HISTORY_DIR="$MIRADOR_ROOT/conversations"
+mkdir -p "$HISTORY_DIR"
+CONVERSATION_ID=$(date +%Y%m%d_%H%M%S)
+CONVERSATION_FILE="$HISTORY_DIR/conversation_$CONVERSATION_ID.txt"
+
+# Print header
+echo -e "${MAGENTA}${BOLD}"
+echo -e "┌───────────────────────────────────────────┐"
+echo -e "│            MIRADOR INTERACTIVE            │"
+echo -e "│        Conversational AI Framework        │"
+echo -e "└───────────────────────────────────────────┘"
+echo -e "${RESET}"
+
+# Initialize conversation history
+echo "# Mirador Interactive Session: $CONVERSATION_ID" > "$CONVERSATION_FILE"
+echo "$(date)" >> "$CONVERSATION_FILE"
+echo "" >> "$CONVERSATION_FILE"
+
+# Function to add to conversation history
+add_to_history() {
+  local role="$1"
+  local message="$2"
+  echo "## $role" >> "$CONVERSATION_FILE"
+  echo "$message" >> "$CONVERSATION_FILE"
+  echo "" >> "$CONVERSATION_FILE"
+}
+
+# Function to run the conductor analysis
+analyze_task() {
+  local prompt="$1"
+  
+  # Use the conductor to analyze the task
+  conductor_output=$(python3 -c "
+import sys
+sys.path.append('$MIRADOR_ROOT')
+from src.conductor import ConductorAgent
+conductor = ConductorAgent()
+result = conductor.ask_conductor('$prompt')
+print(result['explanation'])
+print('SPECIALISTS:' + ' '.join(result['specialists']))
+")
+  
+  # Extract specialists
+  if [[ "$conductor_output" == *"SPECIALISTS:"* ]]; then
+    specialists=$(echo "$conductor_output" | grep "SPECIALISTS:" | sed 's/SPECIALISTS://')
+    explanation=$(echo "$conductor_output" | sed 's/SPECIALISTS:.*//')
+  else
+    specialists="master_coder code_reviewer_fix creative_entrepreneur"
+    explanation="$conductor_output"
+  fi
+  
+  # Return the analysis
+  echo "$explanation"
+  echo "SPECIALISTS:$specialists"
+}
+
+# Function to run a chain
+run_chain() {
+  local prompt="$1"
+  local specialists="$2"
+  
+  # Create output directory with timestamp
+  timestamp=$(date +%Y%m%d_%H%M%S)
+  output_dir="$MIRADOR_ROOT/outputs/interactive_$timestamp"
+  mkdir -p "$output_dir"
+  
+  # Save the prompt and specialists
+  echo "$prompt" > "$output_dir/prompt.txt"
+  echo "$specialists" > "$output_dir/specialists.txt"
+  
+  # Update conversation history
+  add_to_history "System" "Running chain with specialists: $specialists"
+  
+  # Run the chain
+  echo -e "${YELLOW}Running chain with specialists: $specialists${RESET}"
+  output=$("$MIRADOR_ROOT/scripts/run_chain.sh" "$prompt" $specialists > "$output_dir/full_output.txt" 2>&1)
+  
+  # Find the most recent chain output
+  chain_dir=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d -newer "$output_dir" | sort | tail -1)
+  
+  if [ -d "$chain_dir" ]; then
+    if [ -f "$chain_dir/summary.md" ]; then
+      # Return the path to the summary
+      echo "$chain_dir/summary.md"
+    else
+      # If summary doesn't exist, return the output directory
+      echo "$chain_dir"
+    fi
+  else
+    # Return the output directory if no chain directory found
+    echo "$output_dir"
+  fi
+}
+
+# Start the interactive session
+echo -e "${BLUE}${BOLD}Welcome to Mirador Interactive!${RESET}"
+echo -e "I'll help you refine your task and select the optimal specialist chain."
+echo -e "Type ${YELLOW}exit${RESET} to end the session, ${YELLOW}help${RESET} for assistance, or ${YELLOW}history${RESET} to view conversation."
+echo ""
+
+add_to_history "System" "Interactive session started"
+
+# Main conversation loop
+while true; do
+  # Get user input
+  echo -e "${GREEN}${BOLD}You:${RESET} "
+  read -r user_input
+  
+  # Add user input to history
+  add_to_history "User" "$user_input"
+  
+  # Handle special commands
+  if [[ "$user_input" == "exit" || "$user_input" == "quit" ]]; then
+    echo -e "${BLUE}${BOLD}Mirador:${RESET} Goodbye! Session saved to $CONVERSATION_FILE"
+    add_to_history "System" "Session ended"
+    break
+    
+  elif [[ "$user_input" == "help" ]]; then
+    echo -e "${BLUE}${BOLD}Mirador:${RESET} Available commands:"
+    echo "  help     - Show this help message"
+    echo "  exit     - End the session"
+    echo "  history  - View conversation history"
+    echo "  run      - Execute the last analyzed chain"
+    echo "  clear    - Clear the screen"
+    echo "  refine   - Refine the last analysis with new details"
+    echo ""
+    echo "You can also enter any task or question for analysis."
+    add_to_history "System" "Help information displayed"
+    
+  elif [[ "$user_input" == "history" ]]; then
+    echo -e "${BLUE}${BOLD}Mirador:${RESET} Conversation history:"
+    cat "$CONVERSATION_FILE" | less
+    
+  elif [[ "$user_input" == "clear" ]]; then
+    clear
+    echo -e "${MAGENTA}${BOLD}"
+    echo -e "┌───────────────────────────────────────────┐"
+    echo -e "│            MIRADOR INTERACTIVE            │"
+    echo -e "└───────────────────────────────────────────┘"
+    echo -e "${RESET}"
+    add_to_history "System" "Screen cleared"
+    
+  elif [[ "$user_input" == "run" ]]; then
+    # Check if we have specialists
+    if [[ -z "$last_specialists" ]]; then
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} Please analyze a task first."
+      add_to_history "System" "Attempted to run without analysis"
+    else
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} Executing chain with specialists: $last_specialists"
+      echo -e "This may take a few moments..."
+      
+      # Run the chain
+      result_path=$(run_chain "$last_prompt" "$last_specialists")
+      
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} Chain execution complete!"
+      echo -e "Results saved to: $result_path"
+      
+      # Ask if the user wants to view the results
+      echo -e "Would you like to view the results? (y/n)"
+      read -r view_results
+      
+      if [[ "$view_results" == "y" || "$view_results" == "Y" ]]; then
+        less "$result_path"
+      fi
+      
+      add_to_history "System" "Chain executed, results at: $result_path"
+    fi
+    
+  elif [[ "$user_input" == "refine" ]]; then
+    # Check if we have a previous analysis
+    if [[ -z "$last_prompt" ]]; then
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} No previous analysis found. Please enter a task first."
+      add_to_history "System" "Attempted to refine without previous analysis"
+    else
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} Please provide additional details to refine your task:"
+      read -r refinement
+      
+      # Combine original prompt with refinement
+      refined_prompt="$last_prompt [Additional details: $refinement]"
+      
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} Analyzing refined task..."
+      
+      # Analyze the refined task
+      analysis_output=$(analyze_task "$refined_prompt")
+      
+      # Extract specialists
+      if [[ "$analysis_output" == *"SPECIALISTS:"* ]]; then
+        last_specialists=$(echo "$analysis_output" | grep "SPECIALISTS:" | sed 's/SPECIALISTS://')
+        explanation=$(echo "$analysis_output" | sed 's/SPECIALISTS:.*//')
+      else
+        last_specialists="master_coder code_reviewer_fix creative_entrepreneur"
+        explanation="$analysis_output"
+      fi
+      
+      # Update last prompt
+      last_prompt="$refined_prompt"
+      
+      # Display analysis
+      echo -e "${BLUE}${BOLD}Mirador:${RESET} $explanation"
+      echo -e "${YELLOW}Recommended specialists: $last_specialists${RESET}"
+      echo -e "Type ${BOLD}run${RESET} to execute this chain, or ask another question."
+      
+      add_to_history "System" "Task refined: $refinement"
+      add_to_history "Mirador" "$explanation\nRecommended specialists: $last_specialists"
+    fi
+    
+  else
+    # Treat as a task to analyze
+    echo -e "${BLUE}${BOLD}Mirador:${RESET} Analyzing your task..."
+    
+    # Save as last prompt
+    last_prompt="$user_input"
+    
+    # Analyze the task
+    analysis_output=$(analyze_task "$user_input")
+    
+    # Extract specialists
+    if [[ "$analysis_output" == *"SPECIALISTS:"* ]]; then
+      last_specialists=$(echo "$analysis_output" | grep "SPECIALISTS:" | sed 's/SPECIALISTS://')
+      explanation=$(echo "$analysis_output" | sed 's/SPECIALISTS:.*//')
+    else
+      last_specialists="master_coder code_reviewer_fix creative_entrepreneur"
+      explanation="$analysis_output"
+    fi
+    
+    # Display analysis
+    echo -e "${BLUE}${BOLD}Mirador:${RESET} $explanation"
+    echo -e "${YELLOW}Recommended specialists: $last_specialists${RESET}"
+    echo -e "Type ${BOLD}run${RESET} to execute this chain, or ask another question."
+    
+    add_to_history "Mirador" "$explanation\nRecommended specialists: $last_specialists"
+  fi
+  
+  echo ""
+done
