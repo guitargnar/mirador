@@ -21,23 +21,29 @@ Mirador includes optimized modelfiles for specific purposes:
 
 | Model | Purpose | Base Model | Optimization |
 |-------|---------|------------|-------------|
-| `guitar_expert_precise` | Guitar instruction | guitar-expert | Lower temperature (0.4), higher context |
+| `guitar_expert_precise` | Guitar instruction | guitar-expert | Lower temperature (0.4), higher context (16384) |
 | `llama3.2_balanced` | General assistance | llama3.2 | Balanced temperature (0.6), broad knowledge |
-| `fast_agent_focused` | Task management | fast-agent | Focused on actionable plans |
+| `fast_agent_focused` | Task management | fast-agent | Low temperature (0.3), focused responses |
+| `code_reviewer_fix` | Code review | code-reviewer-fix | Low temperature (0.3), detailed analysis |
+| `master_coder` | Code generation | master-coder | Precise implementation (0.4 temp) |
+| `creative_entrepreneur` | Business analysis | creative-entrepreneur | Higher creativity (0.7 temp) |
+| `enhanced_agent` | General analysis | enhanced-agent | Comprehensive responses (0.7 temp) |
+| `file_reviewer` | Documentation | file-reviewer | Structured documentation (0.4 temp) |
 
 ## Building Optimized Models
 
 To build the optimized models:
 
 ```bash
-# Build the balanced general-purpose model
+# Build all the optimized models
 ollama create llama3.2_balanced -f ~/ai_framework_git/src/models/optimized/llama3.2_balanced.modelfile
-
-# Build the precise guitar instruction model
 ollama create guitar_expert_precise -f ~/ai_framework_git/src/models/optimized/guitar_expert_precise.modelfile
-
-# Build the focused task management model
 ollama create fast_agent_focused -f ~/ai_framework_git/src/models/optimized/fast_agent_focused.modelfile
+ollama create code_reviewer_fix -f ~/ai_framework_git/src/models/optimized/code_reviewer_fix.modelfile
+ollama create master_coder -f ~/ai_framework_git/src/models/optimized/master_coder.modelfile
+ollama create creative_entrepreneur -f ~/ai_framework_git/src/models/optimized/creative_entrepreneur.modelfile
+ollama create enhanced_agent -f ~/ai_framework_git/src/models/optimized/enhanced_agent.modelfile
+ollama create file_reviewer -f ~/ai_framework_git/src/models/optimized/file_reviewer.modelfile
 ```
 
 ## Creating Custom Models
