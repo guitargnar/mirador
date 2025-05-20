@@ -1,0 +1,73 @@
+{
+  "models": {
+    "guitar_expert_precise": {
+      "description": "Optimized guitar instruction model",
+      "base_model": "guitar-expert",
+      "prompt_template": "You are a guitar practice coach specializing in structured skill development. Create a practice plan for: {input}\n\nYour plan should include:\n1. Time-efficient warm-up routine\n2. Technical development exercises with tablature\n3. Musical application of techniques\n4. Specific goals and progress metrics\n\nDesign this plan to fit within 30-60 minutes of focused practice."
+    },
+    "llama3.2_balanced": {
+      "description": "Balanced general-purpose model",
+      "base_model": "llama3.2",
+      "prompt_template": "You are a balanced assistant that provides comprehensive but concise responses across a wide range of topics. Analyze this information and provide specific guidance: {input}\n\nYour response should include:\n1. Clear assessment of the situation\n2. Concrete action steps with timeframes\n3. Potential improvements\n4. Long-term strategy recommendations\n\nUse simple language and focus on realistic, implementable steps."
+    },
+    "fast_agent_focused": {
+      "description": "Focused task management model",
+      "base_model": "fast-agent",
+      "prompt_template": "You are a productivity expert specializing in practical time management. Organize these tasks into an actionable system: {input}\n\nYour response should include:\n1. Prioritized task list with estimated effort\n2. Time blocking recommendations\n3. Dependency identification\n4. Progress tracking method\n\nFocus on creating clarity and reducing cognitive load with a simple, executable plan."
+    }
+  },
+  "workflows": {
+    "finance": {
+      "description": "Financial planning and budget management",
+      "chain": ["llama3.2_balanced", "fast_agent_focused"],
+      "template": "financial_planning.txt",
+      "output_category": "financial_plans"
+    },
+    "practice": {
+      "description": "Guitar practice planning",
+      "chain": ["guitar_expert_precise", "fast_agent_focused"],
+      "template": "guitar_practice.txt",
+      "output_category": "guitar_learning"
+    },
+    "career": {
+      "description": "Career development planning",
+      "chain": ["llama3.2_balanced", "fast_agent_focused"],
+      "template": "career_development.txt",
+      "output_category": "career_plans"
+    },
+    "tasks": {
+      "description": "Daily task management",
+      "chain": ["fast_agent_focused"],
+      "template": "daily_planning.txt",
+      "output_category": "business_strategies"
+    }
+  },
+  "output_categories": {
+    "career_plans": {
+      "description": "Career development and planning outputs",
+      "archive_days": 60
+    },
+    "financial_plans": {
+      "description": "Financial planning and budgeting outputs",
+      "archive_days": 90
+    },
+    "guitar_learning": {
+      "description": "Guitar practice routines and learning plans",
+      "archive_days": 30
+    },
+    "business_strategies": {
+      "description": "Business plans and content strategies",
+      "archive_days": 45
+    },
+    "debug_logs": {
+      "description": "Debug information and troubleshooting data",
+      "archive_days": 7
+    }
+  },
+  "system": {
+    "log_level": 1,
+    "output_base_dir": "outputs",
+    "templates_dir": "templates",
+    "archive_enabled": true
+  }
+}
