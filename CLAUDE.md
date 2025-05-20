@@ -57,11 +57,14 @@ Mirador is a multi-agent AI orchestration framework for chaining specialized Oll
 - Use descriptive names that indicate purpose
 - For model files, follow pattern: [specialization]_[characteristic].modelfile
 
-## Current Development Focus
+## Current Development Status
 
-The project is evolving from a basic chain runner to a sophisticated multi-agent system with:
-- Dynamic agent selection based on task requirements
-- Bidirectional communication between specialists
-- Chain-of-thought standardization for better analysis
-- Enhanced user experience with interactive decision points
-- Parallel processing of compatible specialist tasks
+The project has evolved from a basic chain runner to an intelligent multi-agent system with:
+
+✅ **Dynamic agent selection** through the conductor that analyzes tasks and selects specialists
+⬜ Bidirectional communication between specialists
+⬜ Chain-of-thought standardization for better analysis
+⬜ Enhanced user experience with interactive decision points
+⬜ Parallel processing of compatible specialist tasks
+
+The conductor agent now provides task analysis, specialist recommendations, and selection rationale.

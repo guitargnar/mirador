@@ -13,6 +13,24 @@ For a simplified experience that focuses on the emergent multi-agent collaborati
 
 This tool leverages the "accidental brilliance" of specialists building on each other's work, creating a powerful chain of progressive knowledge enhancement.
 
+## Conductor Agent
+
+The conductor agent analyzes your task and dynamically selects the most appropriate specialists:
+
+```bash
+# Analyze task and recommend specialists
+~/ai_framework_git/mirador-conductor "Create a secure login system in Python"
+
+# Through the unified interface
+~/ai_framework_git/mirador-unified conductor "Create a secure login system in Python"
+```
+
+The conductor provides:
+- Analysis of your task requirements
+- Recommended sequence of specialists
+- Explanation of why each specialist was selected
+- Option to execute the recommended chain
+
 ## Overview
 
 The Mirador project now includes two complementary implementations:

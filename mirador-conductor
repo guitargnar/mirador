@@ -1,0 +1,81 @@
+#!/bin/bash
+# Mirador Conductor - Task Analysis and Chain Recommendation
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+MAGENTA='\033[0;35m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Find the source directory
+MIRADOR_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Make sure the conductor script is executable
+chmod +x "$MIRADOR_ROOT/src/conductor.py"
+
+# Print header
+echo -e "${MAGENTA}${BOLD}"
+echo -e "┌───────────────────────────────────────────┐"
+echo -e "│             MIRADOR CONDUCTOR             │"
+echo -e "│        Dynamic Specialist Selection       │"
+echo -e "└───────────────────────────────────────────┘"
+echo -e "${RESET}"
+
+# Function to run the conductor
+run_conductor() {
+  prompt="$*"
+  
+  # If prompt is empty, show help
+  if [ -z "$prompt" ]; then
+    echo -e "${BLUE}${BOLD}Mirador Conductor${RESET}"
+    echo -e "Analyzes your task and recommends the optimal specialist chain."
+    echo ""
+    echo -e "${BOLD}Usage:${RESET}"
+    echo "  ./mirador-conductor \"Your prompt or task description\""
+    echo ""
+    echo -e "${BOLD}Examples:${RESET}"
+    echo "  ./mirador-conductor \"Create a secure login system in Python\""
+    echo "  ./mirador-conductor \"Design a guitar practice routine for sweep picking\""
+    echo "  ./mirador-conductor \"Develop a business plan for an AI startup\""
+    echo ""
+    echo -e "${BOLD}Features:${RESET}"
+    echo "  • Analyzes your task to determine required specialties"
+    echo "  • Recommends optimal specialist sequence"
+    echo "  • Explains rationale for specialist selection"
+    echo "  • Provides ready-to-use command for execution"
+    echo ""
+    exit 0
+  fi
+  
+  # Run the Python conductor script
+  echo -e "${YELLOW}Analyzing your task: ${prompt}${RESET}"
+  python3 "$MIRADOR_ROOT/src/conductor.py" "$prompt"
+  
+  # Ask if user wants to execute the recommended chain
+  echo ""
+  echo -e "${BLUE}Do you want to execute this chain? (y/n)${RESET}"
+  read -r execute
+  
+  if [[ "$execute" == "y" || "$execute" == "Y" ]]; then
+    # Get the specialists from the conductor (re-run in machine-readable mode)
+    specialists=$(python3 -c "
+import sys
+sys.path.append('$MIRADOR_ROOT')
+from src.conductor import ConductorAgent
+conductor = ConductorAgent()
+specialists = conductor.select_specialists('$prompt')
+print(' '.join(specialists))
+")
+    
+    echo -e "${GREEN}Executing chain with specialists: $specialists${RESET}"
+    "$MIRADOR_ROOT/scripts/run_chain.sh" "$prompt" $specialists
+  else
+    echo -e "${BLUE}Chain execution canceled.${RESET}"
+  fi
+}
+
+# Call the function with all arguments
+run_conductor "$*"

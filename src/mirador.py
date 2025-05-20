@@ -158,18 +158,36 @@ def query_model(model, prompt, temperature=None, stream=True, timeout=DEFAULT_TI
         print(f"{RED}Error: {e}{RESET}")
         return f"[ERROR: {str(e)}]"
 
-def run_chain(prompt, models, output_dir=None):
+def run_chain(prompt, models=None, output_dir=None, use_conductor=True):
     """
     Run a chain of models in sequence
     
     Args:
         prompt: The initial prompt
-        models: List of model names to use in sequence
+        models: List of model names to use in sequence (optional if use_conductor=True)
         output_dir: Optional output directory override
+        use_conductor: Whether to use the conductor for dynamic model selection
         
     Returns:
         Dictionary with all outputs and metadata
     """
+    # Use conductor to select models if requested and available
+    if models is None or (use_conductor and 'conductor' in globals() and conductor is not None):
+        try:
+            # Get recommended specialists from conductor
+            result = conductor.ask_conductor(prompt)
+            models = result["specialists"]
+            conductor_explanation = result["explanation"]
+            print(f"{YELLOW}Conductor Analysis:{RESET}\n{conductor_explanation}\n")
+        except Exception as e:
+            print(f"{RED}Error using conductor: {e}. Using default models.{RESET}")
+            if models is None:
+                # Default chain if conductor fails
+                models = ["master_coder", "code_reviewer_fix", "creative_entrepreneur"]
+    elif models is None:
+        # Default chain if no models specified and conductor not available
+        models = ["master_coder", "code_reviewer_fix", "creative_entrepreneur"]
+    
     # Create timestamped output directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     if output_dir is None:
@@ -190,6 +208,12 @@ def run_chain(prompt, models, output_dir=None):
         "models": models,
         "steps": []
     }
+    
+    # Save conductor explanation if available
+    if 'conductor_explanation' in locals():
+        with open(os.path.join(output_dir, "conductor_analysis.txt"), "w") as f:
+            f.write(conductor_explanation)
+        outputs["conductor_analysis"] = conductor_explanation
     
     current_context = prompt
     
@@ -430,7 +454,13 @@ def main():
     # Chain command
     chain_parser = subparsers.add_parser("chain", help="Run a model chain")
     chain_parser.add_argument("prompt", help="The initial prompt")
-    chain_parser.add_argument("models", nargs="+", help="Models to use in sequence")
+    chain_parser.add_argument("models", nargs="*", help="Models to use in sequence (optional with conductor)")
+    chain_parser.add_argument("--no-conductor", action="store_true", help="Disable conductor for model selection")
+    
+    # Conductor command
+    conductor_parser = subparsers.add_parser("conductor", help="Analyze task and recommend specialists")
+    conductor_parser.add_argument("prompt", help="The task to analyze")
+    conductor_parser.add_argument("--execute", action="store_true", help="Execute the recommended chain")
     
     # Template command
     template_parser = subparsers.add_parser("template", help="Run a predefined chain template")
@@ -446,6 +476,7 @@ def main():
     code_parser = subparsers.add_parser("code", help="Run a technical solution through specialized roles")
     code_parser.add_argument("solution", help="The code or technical solution")
     code_parser.add_argument("models", nargs="*", help="Models to use in sequence")
+    code_parser.add_argument("--no-conductor", action="store_true", help="Disable conductor for model selection")
     
     # Models command
     subparsers.add_parser("models", help="List available Ollama models")
@@ -462,22 +493,65 @@ def main():
     # Create output directory if it doesn't exist
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
+    # Use local imports for conductor if needed
+    conductor_module = None
+    try:
+        import sys
+        sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+        from conductor import ConductorAgent
+        conductor_module = ConductorAgent()
+    except ImportError:
+        print(f"{YELLOW}Conductor not available, using fixed chains.{RESET}")
+    
     if args.command == "chain":
-        run_chain(args.prompt, args.models)
+        # Use conductor unless explicitly disabled
+        use_conductor = conductor_module is not None and not getattr(args, 'no_conductor', False)
+        use_models = args.models if hasattr(args, 'models') and args.models else None
+        run_chain(args.prompt, use_models, use_conductor=use_conductor)
+    
+    elif args.command == "conductor":
+        if conductor_module is None:
+            print(f"{RED}Error: Conductor module not available.{RESET}")
+            sys.exit(1)
+            
+        # Analyze task with conductor
+        result = conductor_module.ask_conductor(args.prompt)
+        print(f"{YELLOW}Conductor Analysis:{RESET}\n{result['explanation']}\n")
+        
+        # Execute chain if requested
+        if getattr(args, 'execute', False):
+            run_chain(args.prompt, result["specialists"], use_conductor=False)
+    
     elif args.command == "template":
-        run_chain(args.prompt, CHAIN_TEMPLATES[args.name])
+        run_chain(args.prompt, CHAIN_TEMPLATES[args.name], use_conductor=False)
+    
     elif args.command == "ask":
         query_model(args.model, args.prompt)
+    
     elif args.command == "code":
-        # Use default code chain if no models specified
-        models = args.models if args.models else CHAIN_TEMPLATES["code"]
+        # Use conductor for code analysis unless explicitly disabled
+        use_conductor = conductor_module is not None and not getattr(args, 'no_conductor', False)
+        
+        if use_conductor and (not hasattr(args, 'models') or not args.models):
+            # Analyze code with conductor
+            result = conductor_module.ask_conductor(args.solution)
+            models = result["specialists"]
+            print(f"{YELLOW}Conductor Analysis:{RESET}\n{result['explanation']}\n")
+        else:
+            # Use provided models or default code chain
+            models = args.models if hasattr(args, 'models') and args.models else CHAIN_TEMPLATES["code"]
+            
         run_role_chain(args.solution, models)
+    
     elif args.command == "models":
         list_available_models()
+    
     elif args.command == "roles":
         list_mirador_roles()
+    
     elif args.command == "templates":
         list_chain_templates()
+    
     else:
         # Default to interactive mode
         interactive_mode()

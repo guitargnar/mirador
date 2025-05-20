@@ -72,6 +72,18 @@ process_command() {
       # Pass all remaining arguments as a single prompt
       python3 "$MIRADOR_GIT_ROOT/src/bridge.py" run "$*"
       ;;
+    conductor|analyze)
+      shift
+      # Use the conductor agent
+      if [ $# -eq 0 ]; then
+        echo -e "${RED}Error: Missing prompt${RESET}"
+        echo "Usage: mirador-unified conductor \"Your prompt\""
+        exit 1
+      fi
+      
+      # Run the conductor script directly
+      "$MIRADOR_GIT_ROOT/mirador-conductor" "$*"
+      ;;
     mode)
       shift
       if [ $# -lt 2 ]; then
@@ -140,6 +152,7 @@ process_command() {
       print_header
       echo "Usage:"
       echo "  mirador-unified run \"Your prompt here\"         - Run a full chain"
+      echo "  mirador-unified conductor \"Your prompt\"        - Analyze and recommend specialists"
       echo "  mirador-unified mode dev \"Create a function\"    - Run in developer mode"
       echo "  mirador-unified mode doc \"Document a function\"  - Run in documentation mode"
       echo "  mirador-unified mode business \"Create a plan\"   - Run in business analysis mode"

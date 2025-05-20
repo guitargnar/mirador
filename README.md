@@ -68,6 +68,17 @@ A simplified interface for rapid prototyping that leverages the emergent multi-a
 
 This tool focuses on the "accidental brilliance" found in our multi-agent approach, where specialists progressively enhance each other's work.
 
+### Dynamic Specialist Selection
+
+The conductor agent analyzes your task and selects the optimal specialists:
+
+```bash
+# Analyze task and select specialists
+~/ai_framework_git/mirador-conductor "Create a secure login system in Python"
+```
+
+The conductor analyzes your requirements, recommends the most appropriate specialists, and explains its selection rationale.
+
 ## Future Enhancements
 
 The Mirador framework continues to evolve with planned enhancements:
