@@ -1,0 +1,41 @@
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for output files
+outputs/*
+!outputs/.gitkeep
+
+# MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Sensitive information
+config/secrets.json
+config/keys.json
