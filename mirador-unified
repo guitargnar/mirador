@@ -1,0 +1,166 @@
+#!/bin/bash
+# Mirador Unified Launcher
+# Provides a consistent interface to both the bash-based and Python-based implementations
+
+# Find the source directory
+MIRADOR_GIT_ROOT="/Users/matthewscott/ai_framework_git"
+MIRADOR_PY_ROOT="/Users/matthewscott/ai_framework"
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Make sure the bridge is executable
+chmod +x "$MIRADOR_GIT_ROOT/src/bridge.py"
+
+# Function to print header
+print_header() {
+  echo -e "${BLUE}${BOLD}"
+  echo -e "┌───────────────────────────────────────────┐"
+  echo -e "│                MIRADOR AI                 │"
+  echo -e "│       Unified Framework Interface         │"
+  echo -e "└───────────────────────────────────────────┘"
+  echo -e "${RESET}"
+  echo -e "Unified access to both Mirador implementations"
+  echo ""
+}
+
+# Check dependencies
+check_dependencies() {
+  # Check for both frameworks
+  if [ ! -d "$MIRADOR_GIT_ROOT" ]; then
+    echo -e "${RED}Error: Bash-based Mirador not found at $MIRADOR_GIT_ROOT${RESET}"
+    exit 1
+  fi
+  
+  if [ ! -d "$MIRADOR_PY_ROOT" ]; then
+    echo -e "${YELLOW}Warning: Python-based Mirador not found at $MIRADOR_PY_ROOT${RESET}"
+    echo -e "Some features will not be available"
+  fi
+  
+  # Check for Ollama
+  if ! command -v ollama &> /dev/null; then
+    echo -e "${RED}Error: Ollama is not installed or not in PATH${RESET}"
+    exit 1
+  fi
+}
+
+# Run the bridge script
+run_bridge() {
+  # Convert arguments to a single string for proper handling
+  if [ "$1" = "run" ]; then
+    shift
+    python3 "$MIRADOR_GIT_ROOT/src/bridge.py" run "$*"
+  elif [ "$1" = "mode" ]; then
+    mode=$2
+    shift 2
+    python3 "$MIRADOR_GIT_ROOT/src/bridge.py" mode "$mode" "$*"
+  else
+    python3 "$MIRADOR_GIT_ROOT/src/bridge.py" "$@"
+  fi
+}
+
+# Process command
+process_command() {
+  case "$1" in
+    run)
+      shift
+      # Pass all remaining arguments as a single prompt
+      python3 "$MIRADOR_GIT_ROOT/src/bridge.py" run "$*"
+      ;;
+    mode)
+      shift
+      if [ $# -lt 2 ]; then
+        echo -e "${RED}Error: Missing mode or prompt${RESET}"
+        echo "Usage: mirador-unified mode [dev|doc|business|security|data|mobile|music|ui] \"Your prompt\""
+        exit 1
+      fi
+      
+      mode=$1
+      shift
+      # Pass all remaining arguments as a single prompt
+      python3 "$MIRADOR_GIT_ROOT/src/bridge.py" mode "$mode" "$*"
+      ;;
+    chain)
+      shift
+      # For chain commands, we need to handle "--" separator for the prompt
+      if [[ "$*" == *" -- "* ]]; then
+        # Split at the -- separator
+        models_part="${*%% -- *}"
+        prompt_part="${*#* -- }"
+        python3 "$MIRADOR_GIT_ROOT/src/bridge.py" chain $models_part -- "$prompt_part"
+      else
+        # Fall back to normal processing
+        python3 "$MIRADOR_GIT_ROOT/src/bridge.py" chain "$@"
+      fi
+      ;;
+    bash)
+      shift
+      echo -e "${YELLOW}Running bash implementation directly${RESET}"
+      "$MIRADOR_GIT_ROOT/mirador" "$@"
+      ;;
+    python)
+      shift
+      if [ -d "$MIRADOR_PY_ROOT" ]; then
+        echo -e "${YELLOW}Running Python implementation directly${RESET}"
+        "$MIRADOR_PY_ROOT/mirador" "$@"
+      else
+        echo -e "${RED}Error: Python-based Mirador not found${RESET}"
+        exit 1
+      fi
+      ;;
+    models)
+      run_bridge models
+      ;;
+    sessions)
+      run_bridge sessions
+      ;;
+    session)
+      shift
+      run_bridge session "$1"
+      ;;
+    interactive)
+      # Start an interactive shell session with the bridge
+      python3 -c "import os; os.system('python3 \"$MIRADOR_GIT_ROOT/src/bridge.py\" interactive')"
+      ;;
+    guitar)
+      shift
+      if [ -f "$MIRADOR_PY_ROOT/guitar_studio.py" ]; then
+        python3 "$MIRADOR_PY_ROOT/guitar_studio.py" "$@"
+      else
+        echo -e "${RED}Error: Guitar studio not found${RESET}"
+        exit 1
+      fi
+      ;;
+    *)
+      print_header
+      echo "Usage:"
+      echo "  mirador-unified run \"Your prompt here\"         - Run a full chain"
+      echo "  mirador-unified mode dev \"Create a function\"    - Run in developer mode"
+      echo "  mirador-unified mode doc \"Document a function\"  - Run in documentation mode"
+      echo "  mirador-unified mode business \"Create a plan\"   - Run in business analysis mode"
+      echo "  mirador-unified mode security \"Secure login\"    - Run in security mode"
+      echo "  mirador-unified mode data \"Analyze patterns\"    - Run in data analysis mode"
+      echo "  mirador-unified mode mobile \"Create app\"        - Run in mobile dev mode"
+      echo "  mirador-unified mode music \"Guitar lesson\"      - Run in music mode"
+      echo "  mirador-unified chain model1 model2 -- \"Prompt\" - Run custom chain"
+      echo "  mirador-unified models                         - List available models"
+      echo "  mirador-unified sessions                       - List all sessions"
+      echo "  mirador-unified session 20250520-123456        - View session details"
+      echo "  mirador-unified interactive                    - Start interactive mode"
+      echo "  mirador-unified guitar                         - Launch guitar studio"
+      echo ""
+      echo "Framework Selection:"
+      echo "  mirador-unified bash [args]                    - Use bash implementation"
+      echo "  mirador-unified python [args]                  - Use Python implementation"
+      ;;
+  esac
+}
+
+# Main
+check_dependencies
+process_command "$@"

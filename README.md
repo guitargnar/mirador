@@ -28,11 +28,66 @@ Mirador enables you to chain specialized AI models in sequence to solve complex 
 - bash/zsh
 - Optional: pandoc (for export features)
 
+### Test Environment
+
+This framework has been tested on:
+- Macbook Pro with M3 Max chip, 36GB RAM, 1TB SSD
+- All test outputs and performance metrics are based on this configuration
+
 ## Quick Start
 
 1. Clone this repository
 2. Run the setup script: `./scripts/setup.sh`
 3. Try a chain: `./scripts/run_chain.sh "Your prompt" model1 model2`
+
+### Unified Interface
+
+This repository now includes a unified interface that connects both the bash-based implementation (this repository) and the Python-based implementation (located at `~/ai_framework`):
+
+```bash
+# Use the unified launcher
+~/ai_framework_git/mirador-unified
+
+# Run a prompt through both implementations
+~/ai_framework_git/mirador-unified run "Your prompt here"
+
+# Use specialized modes
+~/ai_framework_git/mirador-unified mode dev "Create a function"
+```
+
+For more details, see [Unified Interface Documentation](docs/UNIFIED_INTERFACE.md).
+
+### Rapid Prototyping
+
+A simplified interface for rapid prototyping that leverages the emergent multi-agent system:
+
+```bash
+# Generate ideas with the collaborative multi-agent system
+~/ai_framework_git/mirador-rapid "Design a secure user authentication system"
+```
+
+This tool focuses on the "accidental brilliance" found in our multi-agent approach, where specialists progressively enhance each other's work.
+
+## Future Enhancements
+
+The Mirador framework continues to evolve with planned enhancements:
+
+### System Architecture
+- **Dynamic Agent Selection**: A "conductor" agent to select only relevant specialists
+- **Bidirectional Communication**: Allow specialists to request information from each other
+- **Knowledge Persistence**: Store specialist outputs for reuse across projects
+
+### Technical Implementation
+- **Chain-of-Thought Standardization**: Structured format for reasoning capture
+- **Evaluation Metrics**: Measure value added by each specialist
+- **Parallel Processing**: Run compatible specialists in parallel
+
+### User Experience
+- **Progress Visualization**: Show how each specialist transforms the project
+- **Interactive Decision Points**: Allow users to guide the specialist chain
+- **Domain-Specific Chains**: Pre-configured specialist sequences for common workflows
+
+These enhancements aim to transform Mirador from a rapid prototyping tool into a comprehensive AI-augmented development platform.
 
 ## Available Models
 
@@ -80,6 +135,39 @@ Mirador enables you to chain specialized AI models in sequence to solve complex 
 # Business strategy chain
 ./scripts/run_chain.sh "Develop a marketing plan for a guitar teaching app" llama3.2_balanced creative_entrepreneur
 ```
+
+### Running a Role-Based Chain for Technical Solutions
+
+The role-based chain is specialized for analyzing code and technical solutions with clearly defined roles:
+
+```bash
+# Code review and business application chain
+./scripts/run_role_chain.sh "function authenticate(user, pass) { 
+  if (user === 'admin' && pass === 'password123') {
+    return true;
+  }
+  return false;
+}" master_coder code_reviewer_fix creative_entrepreneur
+
+# Generate documentation and UI for a solution
+./scripts/run_role_chain.sh "const fetchUserData = async (userId) => {
+  try {
+    const response = await fetch(`/api/users/${userId}`);
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    return null;
+  }
+}" file_reviewer enhanced_agent
+```
+
+Available roles and their specializations:
+- `creative_entrepreneur`: Identify business applications for the solution
+- `enhanced_agent`: Provide comprehensive analysis and insights
+- `master_coder`: Optimize and improve code
+- `code_reviewer_fix`: Identify and fix bugs and security issues
+- `file_reviewer`: Create detailed documentation
+- `ux_designer`: Design user interfaces for implementations
 
 ### Using Domain Workflows
 
