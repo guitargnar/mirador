@@ -63,11 +63,15 @@ The project has evolved from a basic chain runner to an intelligent multi-agent 
 
 ✅ **Dynamic agent selection** through the conductor that analyzes tasks and selects specialists
 ✅ **Interactive user experience** with conversational interface for refining tasks
-⬜ Bidirectional communication between specialists
+✅ **Bidirectional communication** between specialists
+✅ **User intervention points** for guiding specialist communication
 ⬜ Chain-of-thought standardization for better analysis
 ⬜ Parallel processing of compatible specialist tasks
 
 Recent improvements:
 - The conductor agent now provides task analysis, specialist recommendations, and selection rationale
 - Interactive mode allows users to refine tasks through dialogue with the conductor
+- Bidirectional communication enables specialists to query each other for information
+- User intervention points allow approving, modifying, or rejecting specialist communications
+- Progress visualization provides real-time feedback on specialist contributions
 - Conversation history is saved for future reference and continuity

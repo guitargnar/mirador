@@ -1,0 +1,397 @@
+#!/usr/bin/env python3
+"""
+Mirador Intervention CLI
+
+Command-line tool for managing interventions in the Mirador bidirectional
+communication system.
+"""
+
+import os
+import sys
+import json
+import time
+import argparse
+import logging
+from typing import Dict, Any, Optional
+
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Import required modules
+from src.core.message_bus import MessageBus
+from src.core.intervention_manager import InterventionManager
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger("mirador-intervene")
+
+def load_config() -> Dict[str, Any]:
+    """
+    Load configuration from config file.
+    
+    Returns:
+        Configuration dictionary
+    """
+    config_path = os.path.expanduser("~/ai_framework_git/config/intervention.json")
+    
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r") as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"Error loading config: {e}")
+    
+    # Return default config
+    return {
+        "enabled": True,
+        "intervention_types": {
+            "query": {
+                "enabled": True,
+                "priority_threshold": 3,
+                "auto_approve_specialists": [],
+                "always_intervene_specialists": ["security_expert"]
+            },
+            "response": {
+                "enabled": True,
+                "priority_threshold": 2,
+                "auto_approve_specialists": [],
+                "always_intervene_specialists": []
+            },
+            "notification": {
+                "enabled": False
+            }
+        },
+        "timeout_seconds": 300,
+        "default_action": "approve",
+        "watch_mode": False,
+        "learning": {
+            "enabled": True,
+            "min_examples": 5
+        }
+    }
+
+def save_config(config: Dict[str, Any]) -> None:
+    """
+    Save configuration to config file.
+    
+    Args:
+        config: Configuration dictionary to save
+    """
+    config_path = os.path.expanduser("~/ai_framework_git/config/intervention.json")
+    
+    # Create directory if needed
+    os.makedirs(os.path.dirname(config_path), exist_ok=True)
+    
+    try:
+        with open(config_path, "w") as f:
+            json.dump(config, f, indent=2)
+        logger.info(f"Configuration saved to {config_path}")
+    except Exception as e:
+        logger.error(f"Error saving config: {e}")
+
+def start_intervention_session(
+    session_id: Optional[str] = None,
+    watch_only: bool = False
+) -> None:
+    """
+    Start an intervention session.
+    
+    Args:
+        session_id: Optional session ID to connect to. If None, uses active session.
+        watch_only: Whether to run in watch-only mode (no intervention)
+    """
+    # Load configuration
+    config = load_config()
+    
+    # Update watch mode setting
+    config["watch_mode"] = watch_only
+    save_config(config)
+    
+    # Find session directory
+    if session_id:
+        session_dir = os.path.expanduser(f"~/ai_framework_git/outputs/sessions/session_{session_id}")
+    else:
+        # Find most recent session
+        sessions_dir = os.path.expanduser("~/ai_framework_git/outputs/sessions")
+        if not os.path.exists(sessions_dir):
+            logger.error(f"Sessions directory not found: {sessions_dir}")
+            sys.exit(1)
+            
+        session_dirs = [d for d in os.listdir(sessions_dir) if d.startswith("session_")]
+        if not session_dirs:
+            logger.error("No sessions found")
+            sys.exit(1)
+            
+        # Sort by modification time
+        session_dirs.sort(key=lambda d: os.path.getmtime(os.path.join(sessions_dir, d)), reverse=True)
+        session_dir = os.path.join(sessions_dir, session_dirs[0])
+        session_id = session_dirs[0].replace("session_", "")
+    
+    # Verify session directory
+    if not os.path.exists(session_dir):
+        logger.error(f"Session directory not found: {session_dir}")
+        sys.exit(1)
+        
+    logger.info(f"Connecting to session: {session_id}")
+    
+    # Initialize message bus and intervention manager
+    bus = MessageBus(session_id=session_id, session_dir=session_dir)
+    manager = InterventionManager(bus, config=config, cli_mode=True)
+    
+    # Print mode information
+    if watch_only:
+        print(f"Starting watch mode for session {session_id}")
+        print("All messages will be displayed, but will not require intervention.")
+        manager.start_watch_mode()
+    else:
+        print(f"Starting intervention mode for session {session_id}")
+        print("Messages will be intercepted based on your configured rules.")
+    
+    print("Press Ctrl+C to exit")
+    
+    # Simple loop to keep the program running
+    try:
+        while True:
+            # Check for pending messages
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nExiting intervention session")
+        if watch_only:
+            manager.stop_watch_mode()
+
+def configure_interventions() -> None:
+    """Configure intervention settings."""
+    # Load current config
+    config = load_config()
+    
+    print("Mirador Intervention Configuration")
+    print("=================================")
+    
+    # Main configuration loop
+    while True:
+        print("\nCurrent Configuration:")
+        print(f"  Interventions enabled: {config.get('enabled', True)}")
+        print(f"  Watch mode: {config.get('watch_mode', False)}")
+        print(f"  Default action on timeout: {config.get('default_action', 'approve')}")
+        print(f"  Timeout: {config.get('timeout_seconds', 300)} seconds")
+        print(f"  Learning enabled: {config.get('learning', {}).get('enabled', True)}")
+        
+        print("\nIntervention Types:")
+        for type_name, type_config in config.get("intervention_types", {}).items():
+            enabled = type_config.get("enabled", True)
+            priority = type_config.get("priority_threshold", 3)
+            auto_approve = ", ".join(type_config.get("auto_approve_specialists", [])) or "None"
+            always_intervene = ", ".join(type_config.get("always_intervene_specialists", [])) or "None"
+            
+            print(f"  {type_name.capitalize()}:")
+            print(f"    Enabled: {enabled}")
+            print(f"    Priority threshold: {priority}")
+            print(f"    Auto-approve specialists: {auto_approve}")
+            print(f"    Always intervene specialists: {always_intervene}")
+        
+        print("\nOptions:")
+        print("  1. Toggle interventions enabled/disabled")
+        print("  2. Toggle watch mode")
+        print("  3. Set default action on timeout")
+        print("  4. Set timeout duration")
+        print("  5. Toggle learning")
+        print("  6. Configure query interventions")
+        print("  7. Configure response interventions")
+        print("  8. Configure notification interventions")
+        print("  9. Save and exit")
+        
+        choice = input("\nEnter choice: ").strip()
+        
+        if choice == "1":
+            config["enabled"] = not config.get("enabled", True)
+            print(f"Interventions {'enabled' if config['enabled'] else 'disabled'}")
+            
+        elif choice == "2":
+            config["watch_mode"] = not config.get("watch_mode", False)
+            print(f"Watch mode {'enabled' if config['watch_mode'] else 'disabled'}")
+            
+        elif choice == "3":
+            current = config.get("default_action", "approve")
+            new_action = "reject" if current == "approve" else "approve"
+            config["default_action"] = new_action
+            print(f"Default action set to: {new_action}")
+            
+        elif choice == "4":
+            try:
+                new_timeout = int(input("Enter timeout in seconds: ").strip())
+                if new_timeout > 0:
+                    config["timeout_seconds"] = new_timeout
+                    print(f"Timeout set to {new_timeout} seconds")
+                else:
+                    print("Timeout must be positive")
+            except ValueError:
+                print("Invalid input")
+                
+        elif choice == "5":
+            learning_enabled = config.get("learning", {}).get("enabled", True)
+            if "learning" not in config:
+                config["learning"] = {}
+            config["learning"]["enabled"] = not learning_enabled
+            print(f"Learning {'enabled' if config['learning']['enabled'] else 'disabled'}")
+            
+        elif choice in ("6", "7", "8"):
+            # Configure specific intervention type
+            type_map = {
+                "6": "query",
+                "7": "response",
+                "8": "notification"
+            }
+            type_name = type_map[choice]
+            
+            # Ensure type config exists
+            if type_name not in config.get("intervention_types", {}):
+                config.setdefault("intervention_types", {})[type_name] = {
+                    "enabled": True,
+                    "priority_threshold": 3,
+                    "auto_approve_specialists": [],
+                    "always_intervene_specialists": []
+                }
+                
+            configure_intervention_type(config, type_name)
+            
+        elif choice == "9":
+            # Save and exit
+            save_config(config)
+            print("Configuration saved.")
+            return
+            
+        else:
+            print("Invalid choice")
+
+def configure_intervention_type(config: Dict[str, Any], type_name: str) -> None:
+    """
+    Configure a specific intervention type.
+    
+    Args:
+        config: Full configuration dictionary
+        type_name: Name of the intervention type to configure
+    """
+    type_config = config["intervention_types"][type_name]
+    
+    while True:
+        print(f"\nConfiguring {type_name.capitalize()} Interventions")
+        print("=====================================")
+        print(f"  Enabled: {type_config.get('enabled', True)}")
+        print(f"  Priority threshold: {type_config.get('priority_threshold', 3)}")
+        print(f"  Auto-approve specialists: {', '.join(type_config.get('auto_approve_specialists', [])) or 'None'}")
+        print(f"  Always intervene specialists: {', '.join(type_config.get('always_intervene_specialists', [])) or 'None'}")
+        
+        print("\nOptions:")
+        print("  1. Toggle enabled/disabled")
+        print("  2. Set priority threshold")
+        print("  3. Add auto-approve specialist")
+        print("  4. Remove auto-approve specialist")
+        print("  5. Add always-intervene specialist")
+        print("  6. Remove always-intervene specialist")
+        print("  7. Back to main menu")
+        
+        choice = input("\nEnter choice: ").strip()
+        
+        if choice == "1":
+            type_config["enabled"] = not type_config.get("enabled", True)
+            print(f"{type_name.capitalize()} interventions {'enabled' if type_config['enabled'] else 'disabled'}")
+            
+        elif choice == "2":
+            try:
+                threshold = int(input("Enter priority threshold (1-5, lower = higher priority): ").strip())
+                if 1 <= threshold <= 5:
+                    type_config["priority_threshold"] = threshold
+                    print(f"Priority threshold set to {threshold}")
+                else:
+                    print("Priority must be between 1 and 5")
+            except ValueError:
+                print("Invalid input")
+                
+        elif choice == "3":
+            specialist = input("Enter specialist name to auto-approve: ").strip()
+            if specialist:
+                if "auto_approve_specialists" not in type_config:
+                    type_config["auto_approve_specialists"] = []
+                if specialist not in type_config["auto_approve_specialists"]:
+                    type_config["auto_approve_specialists"].append(specialist)
+                print(f"Added {specialist} to auto-approve list")
+                
+        elif choice == "4":
+            if not type_config.get("auto_approve_specialists", []):
+                print("No auto-approve specialists configured")
+                continue
+                
+            print("Current auto-approve specialists:")
+            for i, specialist in enumerate(type_config["auto_approve_specialists"]):
+                print(f"  {i+1}. {specialist}")
+                
+            try:
+                index = int(input("Enter number to remove (0 to cancel): ").strip())
+                if index > 0 and index <= len(type_config["auto_approve_specialists"]):
+                    removed = type_config["auto_approve_specialists"].pop(index-1)
+                    print(f"Removed {removed} from auto-approve list")
+            except ValueError:
+                print("Invalid input")
+                
+        elif choice == "5":
+            specialist = input("Enter specialist name to always intervene: ").strip()
+            if specialist:
+                if "always_intervene_specialists" not in type_config:
+                    type_config["always_intervene_specialists"] = []
+                if specialist not in type_config["always_intervene_specialists"]:
+                    type_config["always_intervene_specialists"].append(specialist)
+                print(f"Added {specialist} to always-intervene list")
+                
+        elif choice == "6":
+            if not type_config.get("always_intervene_specialists", []):
+                print("No always-intervene specialists configured")
+                continue
+                
+            print("Current always-intervene specialists:")
+            for i, specialist in enumerate(type_config["always_intervene_specialists"]):
+                print(f"  {i+1}. {specialist}")
+                
+            try:
+                index = int(input("Enter number to remove (0 to cancel): ").strip())
+                if index > 0 and index <= len(type_config["always_intervene_specialists"]):
+                    removed = type_config["always_intervene_specialists"].pop(index-1)
+                    print(f"Removed {removed} from always-intervene list")
+            except ValueError:
+                print("Invalid input")
+                
+        elif choice == "7":
+            return
+            
+        else:
+            print("Invalid choice")
+
+def main() -> None:
+    """Main entry point."""
+    parser = argparse.ArgumentParser(description="Mirador Intervention CLI")
+    
+    subparsers = parser.add_subparsers(dest="command", help="Command to run")
+    
+    # Start intervention session
+    start_parser = subparsers.add_parser("start", help="Start intervention session")
+    start_parser.add_argument("--session", "-s", help="Session ID to connect to")
+    start_parser.add_argument("--watch", "-w", action="store_true", help="Watch mode (no intervention)")
+    
+    # Configure interventions
+    config_parser = subparsers.add_parser("config", help="Configure intervention settings")
+    
+    # Parse arguments
+    args = parser.parse_args()
+    
+    # Process commands
+    if args.command == "start":
+        start_intervention_session(args.session, args.watch)
+    elif args.command == "config":
+        configure_interventions()
+    else:
+        parser.print_help()
+
+if __name__ == "__main__":
+    main()
