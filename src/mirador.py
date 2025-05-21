@@ -158,7 +158,7 @@ def query_model(model, prompt, temperature=None, stream=True, timeout=DEFAULT_TI
         print(f"{RED}Error: {e}{RESET}")
         return f"[ERROR: {str(e)}]"
 
-def run_chain(prompt, models=None, output_dir=None, use_conductor=True):
+def run_chain(prompt, models=None, output_dir=None, use_conductor=True, visualize=True):
     """
     Run a chain of models in sequence
     
@@ -167,10 +167,20 @@ def run_chain(prompt, models=None, output_dir=None, use_conductor=True):
         models: List of model names to use in sequence (optional if use_conductor=True)
         output_dir: Optional output directory override
         use_conductor: Whether to use the conductor for dynamic model selection
+        visualize: Whether to show progress visualization
         
     Returns:
         Dictionary with all outputs and metadata
     """
+    # Get visualization preferences from config if available
+    try:
+        with open(os.path.join(os.path.dirname(OUTPUT_DIR), "config", "config.json"), "r") as f:
+            config = json.load(f)
+            visualize = config.get("ui", {}).get("visualization_enabled", visualize)
+    except:
+        # Use default if config can't be loaded
+        pass
+    
     # Use conductor to select models if requested and available
     if models is None or (use_conductor and 'conductor' in globals() and conductor is not None):
         try:
@@ -217,10 +227,37 @@ def run_chain(prompt, models=None, output_dir=None, use_conductor=True):
     
     current_context = prompt
     
+    # Start visualization if enabled
+    if visualize:
+        print(f"\n{MAGENTA}{BOLD}Chain Progress Visualization{RESET}")
+        total_steps = len(models)
+        # Simple progress bar
+        print_progress_bar(0, total_steps)
+        # Track chain start time
+        chain_start_time = time.time()
+    
     # Run each model in sequence
     for i, model in enumerate(models):
         step_num = i + 1
-        print(f"\n{YELLOW}Step {step_num}: Running {model}...{RESET}")
+        
+        # Show step start visualization
+        if visualize:
+            print(f"\n{CYAN}{BOLD}Step {step_num}/{len(models)}:{RESET} Running {YELLOW}{model}{RESET}")
+            print(f"{BLUE}{BOLD}Specialist Role:{RESET} {model}")
+            # Show "thinking" animation
+            print(f"{CYAN}Initializing{RESET}", end="")
+            for _ in range(3):
+                time.sleep(0.3)
+                print(".", end="", flush=True)
+            print("\n")
+            # Show model thinking animation
+            print(f"{YELLOW}{model}{RESET} is thinking", end="")
+            for _ in range(5):
+                time.sleep(0.3)
+                print(".", end="", flush=True)
+            print("\n")
+        else:
+            print(f"\n{YELLOW}Step {step_num}: Running {model}...{RESET}")
         
         # Get role-specific prompt if available
         if model in ROLES:
@@ -240,9 +277,14 @@ Please build upon this information and provide further insights."""
         with open(os.path.join(output_dir, f"step{step_num}_prompt.txt"), "w") as f:
             f.write(model_prompt)
         
+        # Save previous context for diff visualization
+        prev_context_path = os.path.join(output_dir, f"step{i}_context.txt")
+        with open(prev_context_path, "w") as f:
+            f.write(current_context)
+        
         # Query the model
         start_time = time.time()
-        response = query_model(model, model_prompt, timeout=120)
+        response = query_model(model, model_prompt, timeout=120, stream=(not visualize))
         elapsed = time.time() - start_time
         
         # Save the response
@@ -257,13 +299,60 @@ Please build upon this information and provide further insights."""
             "time": elapsed
         })
         
+        # Show step completion visualization
+        if visualize:
+            elapsed_formatted = f"{int(elapsed // 60):02d}:{int(elapsed % 60):02d}"
+            print(f"\n{GREEN}{BOLD}Completed:{RESET} {YELLOW}{model}{RESET} ({BLUE}{elapsed_formatted}{RESET})")
+            print_progress_bar(step_num, len(models))
+            
+            # Show diff visualization
+            current_output_path = os.path.join(output_dir, f"step{step_num}_output.txt")
+            print(f"\n{MAGENTA}{BOLD}Contributions from {model}:{RESET}")
+            
+            # Calculate simple metrics for diff
+            with open(prev_context_path) as f1, open(current_output_path) as f2:
+                prev_lines = f1.readlines()
+                curr_lines = f2.readlines()
+                prev_words = sum(len(line.split()) for line in prev_lines)
+                curr_words = sum(len(line.split()) for line in curr_lines)
+                
+                print(f"{BLUE}Previous length:{RESET} {prev_words} words ({len(prev_lines)} lines)")
+                print(f"{BLUE}Current length:{RESET} {curr_words} words ({len(curr_lines)} lines)")
+                print(f"{GREEN}Added {max(0, curr_words - prev_words)} words{RESET}, " + 
+                      f"{RED}Removed {max(0, prev_words - curr_words)} words{RESET}\n")
+        
         # Update context for next model
         current_context = response
+        
+        # Show transition animation if not the last step
+        if visualize and i < len(models) - 1:
+            next_model = models[i+1]
+            print(f"\n{YELLOW}{BOLD}Transition:{RESET} {BLUE}{model}{RESET} → {MAGENTA}{next_model}{RESET}")
+            # Simple transition animation
+            for j in range(20):
+                if j % 4 == 0:
+                    print("\r○○○○", end="", flush=True)
+                elif j % 4 == 1:
+                    print("\r●○○○", end="", flush=True)
+                elif j % 4 == 2:
+                    print("\r●●○○", end="", flush=True)
+                elif j % 4 == 3:
+                    print("\r●●●○", end="", flush=True)
+                time.sleep(0.1)
+            print("\r●●●●")
+            print("\n")
     
-    # Generate summary markdown
-    generate_summary(outputs, output_dir)
+    # Generate summary markdown with visualization data
+    generate_summary(outputs, output_dir, include_visualization=visualize)
     
-    print(f"\n{GREEN}Chain execution complete!{RESET}")
+    # Show chain completion if visualization enabled
+    if visualize:
+        chain_elapsed = time.time() - chain_start_time
+        chain_elapsed_formatted = f"{int(chain_elapsed // 60):02d}:{int(chain_elapsed % 60):02d}"
+        print(f"\n{GREEN}{BOLD}Chain Execution Complete{RESET} (Total time: {BLUE}{chain_elapsed_formatted}{RESET})")
+    else:
+        print(f"\n{GREEN}Chain execution complete!{RESET}")
+        
     print(f"{BLUE}Results saved to: {output_dir}{RESET}")
     
     # Categorize output
@@ -271,7 +360,16 @@ Please build upon this information and provide further insights."""
     
     return outputs
 
-def generate_summary(outputs, output_dir):
+def print_progress_bar(current, total, bar_length=30):
+    """Print a simple progress bar to the console"""
+    percent = int(100.0 * current / total)
+    filled_length = int(bar_length * current / total)
+    bar = '=' * filled_length + ' ' * (bar_length - filled_length)
+    print(f"\rProgress: [{bar}] {percent}%", end='', flush=True)
+    if current == total:
+        print("")
+
+def generate_summary(outputs, output_dir, include_visualization=True):
     """Generate a markdown summary of the chain execution"""
     summary_path = os.path.join(output_dir, "summary.md")
     
@@ -283,12 +381,59 @@ def generate_summary(outputs, output_dir):
         
         f.write("## Models Used\n\n")
         for i, model in enumerate(outputs["models"]):
-            f.write(f"{i+1}. {model}\n")
+            # Add temperature info if available
+            temp = ROLES.get(model, {}).get("temp", "0.7")
+            f.write(f"{i+1}. {model} (temp={temp})\n")
         f.write("\n")
         
         for i, step in enumerate(outputs["steps"]):
-            f.write(f"## Step {i+1}: {step['model']}\n\n")
+            # Add execution time if available
+            time_info = ""
+            if "time" in step:
+                elapsed_mins = int(step["time"] // 60)
+                elapsed_secs = int(step["time"] % 60)
+                time_info = f" (execution time: {elapsed_mins:02d}:{elapsed_secs:02d})"
+            
+            f.write(f"## Step {i+1}: {step['model']}{time_info}\n\n")
             f.write(f"{step['response']}\n\n")
+        
+        # Add visualization section if enabled
+        if include_visualization:
+            f.write("## Chain Transformation Visualization\n\n")
+            f.write("This section visualizes how each specialist transformed the solution:\n\n")
+            
+            # Show the progression path
+            f.write("### Progress Path\n\n")
+            f.write("```\n")
+            f.write(f"Initial Prompt → ")
+            for i, model in enumerate(outputs["models"]):
+                f.write(f"{model}")
+                if i < len(outputs["models"]) - 1:
+                    f.write(" → ")
+            f.write("\n```\n\n")
+            
+            # Add contribution statistics table
+            f.write("### Contribution Analysis\n\n")
+            f.write("| Step | Specialist | Content Length | Processing Time | Key Contribution |\n")
+            f.write("|------|------------|----------------|-----------------|------------------|\n")
+            
+            # Add prompt stats
+            prompt_words = len(outputs["prompt"].split())
+            f.write(f"| 0 | Initial Prompt | {prompt_words} words | - | Starting point |\n")
+            
+            # Add steps stats
+            for i, step in enumerate(outputs["steps"]):
+                response_words = len(step["response"].split())
+                time_fmt = f"{int(step['time'] // 60):02d}:{int(step['time'] % 60):02d}"
+                contribution = ""
+                if i == 0:
+                    contribution = "Initial analysis"
+                elif i == len(outputs["steps"]) - 1:
+                    contribution = "Final integration"
+                else:
+                    contribution = "Refinement and expansion"
+                
+                f.write(f"| {i+1} | {step['model']} | {response_words} words | {time_fmt} | {contribution} |\n")
     
     print(f"{BLUE}Summary created: {summary_path}{RESET}")
 
