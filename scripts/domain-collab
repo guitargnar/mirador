@@ -90,36 +90,41 @@ run_domain() {
   # Change to the framework directory
   cd "$HOME/ai_framework_git"
   
-  # Choose specialists based on domain
+  # Choose specialists based on domain and fix argument handling
   case "$domain" in
     music)
       echo -e "${GREEN}Running music domain chain${RESET}"
-      # Fix argument quoting
-      ./mirador-collaborate --specialists "guitar_expert_precise" "content_creator" "$prompt"
+      specialist_args=("guitar_expert_precise" "content_creator")
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     dev)
       echo -e "${GREEN}Running development domain chain${RESET}"
-      ./mirador-collaborate --specialists "master_coder" "code_reviewer_fix" "security_expert" "$prompt"
+      specialist_args=("master_coder" "code_reviewer_fix" "security_expert")
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     business)
       echo -e "${GREEN}Running business domain chain${RESET}"
-      ./mirador-collaborate --specialists "creative_entrepreneur" "content_creator" "$prompt"
+      specialist_args=("creative_entrepreneur" "content_creator")
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     finance)
       echo -e "${GREEN}Running finance domain chain${RESET}"
-      ./mirador-collaborate --specialists "creative_entrepreneur" "fast_agent_focused" "$prompt"
+      specialist_args=("creative_entrepreneur" "fast_agent_focused")
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     cross)
       echo -e "${GREEN}Running cross-domain chain${RESET}"
-      ./mirador-collaborate --specialists "guitar_expert_precise" "master_coder" "creative_entrepreneur" "$prompt"
+      specialist_args=("guitar_expert_precise" "master_coder" "creative_entrepreneur")
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     custom)
       # For custom, the first argument is the specialists list
-      specialists=($1)
+      # Split by spaces into array
+      IFS=' ' read -r -a specialist_args <<< "$1"
       shift
       prompt="$*"
-      echo -e "${GREEN}Running custom domain chain with specialists: ${specialists[*]}${RESET}"
-      ./mirador-collaborate --specialists "${specialists[@]}" "$prompt"
+      echo -e "${GREEN}Running custom domain chain with specialists: ${specialist_args[*]}${RESET}"
+      ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
       ;;
     *)
       echo -e "${YELLOW}Unknown domain: $domain${RESET}"
@@ -146,23 +151,23 @@ run_interactive() {
   case "$choice" in
     1) 
       domain="music"
-      specialists=("guitar_expert_precise" "content_creator")
+      specialist_args=("guitar_expert_precise" "content_creator")
       ;;
     2) 
       domain="dev"
-      specialists=("master_coder" "code_reviewer_fix" "security_expert")
+      specialist_args=("master_coder" "code_reviewer_fix" "security_expert")
       ;;
     3) 
       domain="business"
-      specialists=("creative_entrepreneur" "content_creator")
+      specialist_args=("creative_entrepreneur" "content_creator")
       ;;
     4) 
       domain="finance"
-      specialists=("creative_entrepreneur" "fast_agent_focused")
+      specialist_args=("creative_entrepreneur" "fast_agent_focused")
       ;;
     5) 
       domain="cross"
-      specialists=("guitar_expert_precise" "master_coder" "creative_entrepreneur")
+      specialist_args=("guitar_expert_precise" "master_coder" "creative_entrepreneur")
       ;;
     6) 
       domain="custom"
@@ -173,7 +178,7 @@ run_interactive() {
       echo -e "  - fast_agent_focused      - file_reviewer"
       echo
       read -p "Enter specialists (space-separated): " specialist_input
-      IFS=' ' read -r -a specialists <<< "$specialist_input"
+      IFS=' ' read -r -a specialist_args <<< "$specialist_input"
       ;;
     *) 
       echo -e "${YELLOW}Invalid choice${RESET}"
@@ -188,8 +193,8 @@ run_interactive() {
   cd "$HOME/ai_framework_git"
   
   # Run the collaboration with proper argument handling
-  echo -e "${GREEN}Running ${domain} domain chain with specialists: ${specialists[*]}${RESET}"
-  ./mirador-collaborate --specialists "${specialists[@]}" "$prompt"
+  echo -e "${GREEN}Running ${domain} domain chain with specialists: ${specialist_args[*]}${RESET}"
+  ./mirador-collaborate --specialists "${specialist_args[@]}" "$prompt"
 }
 
 # Run simple Ollama model
