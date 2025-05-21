@@ -1,0 +1,16 @@
+#\!/usr/bin/env bash
+# Simple script to run Ollama without any complexities
+
+if [ $# -eq 0 ]; then
+  echo "Usage: ollama-easy <model> [prompt]"
+  echo "Example: ollama-easy fast-agent \"What is the capital of France?\""
+  echo "Available models:"
+  ollama list
+  exit 1
+fi
+
+model="$1"
+shift
+prompt="$*"
+
+ollama run "$model" "$prompt"

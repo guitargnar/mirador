@@ -19,7 +19,7 @@ Mirador enables you to chain specialized AI models in sequence to solve complex 
 - **Output Management**: Categorized storage with search and export capabilities
 - **Progress Visualization**: Visual feedback showing how specialists transform solutions
 - **Robust Logging**: Structured logging with error handling
-- **Shell Integration**: Aliases and functions for command-line convenience
+- **Shell Integration**: Simplified domain-collab script and aliases for easy access
 - **Comprehensive Testing**: Test suites for model and chain evaluation
 
 ## Requirements
@@ -39,7 +39,8 @@ This framework has been tested on:
 
 1. Clone this repository
 2. Run the setup script: `./scripts/setup.sh`
-3. Try a chain: `./scripts/run_chain.sh "Your prompt" model1 model2`
+3. Use the simplified interface: `~/bin/domain-collab setup`
+4. Try a chain: `domain-collab fast "Your question"` or `domain-collab domain dev "Your question"`
 
 ### Unified Interface
 
@@ -164,7 +165,25 @@ These enhancements aim to transform Mirador from a rapid prototyping tool into a
 
 ## Usage Examples
 
-### Running a Basic Chain
+### Using the Simplified Interface
+
+```bash
+# Direct model access for quick questions
+domain-collab fast "What is the capital of France?"
+
+# Deep research with enhanced models
+domain-collab deep "Research the history of artificial intelligence"
+
+# Domain-specific specialist chains
+domain-collab domain music "Create a practice routine for sweep picking"
+domain-collab domain dev "Design a secure authentication system in Python"
+domain-collab domain business "Develop a marketing plan for a guitar teaching app"
+
+# Interactive domain selection
+domain-collab interactive
+```
+
+### Running a Basic Chain (Original Method)
 
 ```bash
 # Guitar practice chain
