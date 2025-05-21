@@ -2,85 +2,45 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Build/Lint/Test Commands
 
-Mirador is a multi-agent AI orchestration framework for chaining specialized Ollama models together. The framework features emergent collaboration properties where specialists progressively enhance each other's work.
-
-## Key Commands
-
-### Simplified Interface
-- **Direct Access**: `domain-collab fast "Your question"` - Quick answers with fast-agent
-- **Deep Research**: `domain-collab deep "Your research topic"` - Detailed analysis with enhanced-agent
-- **Domain Chains**: `domain-collab domain dev "Your prompt"` - Run domain-specific specialist chains
-- **Interactive Mode**: `domain-collab interactive` - Menu-based domain selection
-
-### Original Commands
-- **Basic Chain**: `./scripts/run_chain.sh "Your prompt" model1 model2 [model3]` - Run a model chain
-- **Role Chain**: `./scripts/run_role_chain.sh "Your code" model1 model2 [model3]` - Analyze code with specialized roles
-- **Unified Interface**: `./mirador-unified run "Your prompt"` - Access both implementations
-- **Rapid Prototype**: `./mirador-rapid "Your prompt"` - Use the streamlined multi-agent system
-- **Run Tests**: `./tests/run_all_tests.sh` - Run comprehensive tests
-
-## Directory Structure
-
-- **scripts/**: User-facing launcher scripts
-- **src/chains/**: Core chain implementation scripts
-- **src/models/optimized/**: Specialized model definitions
-- **src/bridge.py**: Bridge between bash and Python implementations
-- **docs/**: Framework documentation
-- **mirador-rapid**: Simplified interface for the multi-agent system
+- **React/JavaScript**: `npm run dev` - Run development server
+- **React/JavaScript Tests**: `npm test` - Run tests for React components
+- **Python (Llama project)**: `python3 llama_chat.py` or `python3 hf_chat.py` - Run Llama chat interfaces
+- **Text Generation WebUI**: `python3 server.py` - Start the text generation web UI server
+- **Google Cloud Authentication**: `gcloud auth application-default login` - Authenticate with Google Cloud
 
 ## Code Style Guidelines
 
-- **Bash Scripts**:
-  - Include proper error handling with set -e and explicit error messages
-  - Add descriptive comments for complex operations
-  - Use logging functions (log_info, log_debug, log_error) for traceability
-  - Follow modular design with separate utility scripts
+- **JavaScript/React**:
+  - Use React 19+ functional components with hooks
+  - Import organization: React core imports first, then third-party, then local components/utils
+  - Use Tone.js for audio processing following the standard patterns
 
-- **Python Scripts**:
-  - Use type hints for function parameters and return values
-  - Follow PEP 8 conventions for formatting
-  - Use consistent exception handling with specific error messages
-  - Implement proper docstrings for functions and classes
+- **Python**:
+  - Follow PEP 8 conventions for code formatting
+  - Use descriptive variable names and docstrings for functions
+  - Type hints encouraged for function parameters and return values
+  - For AI projects, organize model code, utility functions, and interfaces separately
 
-- **Model Configurations**:
-  - Follow the established modelfile format with consistent parameter organization
-  - Document temperature settings (0.3-0.8) and context window sizes
-  - Include comprehensive system prompts for model specialization
+## Testing Focus
+
+When using compact mode, focus on test output and code changes to provide concise feedback. For Mirador AI Framework:
+
+- In compact mode, emphasize model selection guidance and command examples
+- Show the most relevant script to use based on the user's need
+- Highlight differences between model temperature settings that affect output
+- For troubleshooting, focus on specific command fixes rather than explanations
 
 ## Error Handling
 
-- Use the logging system (log_debug, log_info, log_warn, log_error) for operations
-- Implement fallback mechanisms for API response extraction
-- Always validate inputs and check error status after each command
-- Handle Ollama API failures gracefully with retries or alternative approaches
+- Use appropriate try/catch blocks for error-prone operations
+- Log errors with meaningful context
+- Handle API failures gracefully with user-friendly fallbacks
 
 ## Naming Conventions
 
-- Use snake_case for variables, functions, and file names
-- Prefix functions with their module name (e.g., log_info, chain_run)
-- Use descriptive names that indicate purpose
-- For model files, follow pattern: [specialization]_[characteristic].modelfile
-
-## Current Development Status
-
-The project has evolved from a basic chain runner to an intelligent multi-agent system with:
-
-✅ **Dynamic agent selection** through the conductor that analyzes tasks and selects specialists
-✅ **Interactive user experience** with conversational interface for refining tasks
-✅ **Bidirectional communication** between specialists
-✅ **User intervention points** for guiding specialist communication
-✅ **Simplified interface** through unified domain-collab script
-⬜ Chain-of-thought standardization for better analysis
-⬜ Parallel processing of compatible specialist tasks
-
-Recent improvements:
-- The conductor agent now provides task analysis, specialist recommendations, and selection rationale
-- Interactive mode allows users to refine tasks through dialogue with the conductor
-- Bidirectional communication enables specialists to query each other for information
-- User intervention points allow approving, modifying, or rejecting specialist communications
-- Progress visualization provides real-time feedback on specialist contributions
-- Simplified domain-collab interface integrates directly with Ollama models
-- Unified command structure with both direct and collaborative access
-- Conversation history is saved for future reference and continuity
+- Use camelCase for JavaScript variables and functions
+- Use PascalCase for React components and TypeScript interfaces
+- Use snake_case for Python variables and functions
+- Use UPPER_CASE for constants in any language
