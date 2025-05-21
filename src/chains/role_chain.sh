@@ -5,12 +5,15 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="$( cd "$SCRIPT_DIR/../.." && pwd )"
 source "$ROOT_DIR/src/utils/init.sh"
+source "$ROOT_DIR/src/utils/visualization.sh"
 
 # Colors for output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
+MAGENTA='\033[0;35m'
+BOLD='\033[1m'
 NC='\033[0m' # No Color
 
 # Define a function to get role prompts instead of using associative arrays
@@ -56,6 +59,22 @@ MODEL1="$2"
 MODEL2="$3"
 MODEL3="$4"  # Optional third model
 
+# Check if visualization is enabled in config
+VISUALIZATION_ENABLED=true
+if [ -f "$MIRADOR_CONFIG_DIR/config.json" ] && command -v jq &> /dev/null; then
+  # Try to get config setting from the configuration file
+  viz_enabled=$(jq -r '.ui.visualization_enabled // true' "$MIRADOR_CONFIG_DIR/config.json")
+  if [ "$viz_enabled" == "false" ]; then
+    VISUALIZATION_ENABLED=false
+  fi
+fi
+
+# Determine total steps
+TOTAL_STEPS=2
+if [ -n "$MODEL3" ]; then
+  TOTAL_STEPS=3
+fi
+
 # Create output directory with timestamped name
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 OUTPUT_DIR="$MIRADOR_OUTPUTS_DIR/chain_${TIMESTAMP}"
@@ -80,8 +99,20 @@ echo -e "${BLUE}Saving results to: ${OUTPUT_DIR}${NC}"
 # Save the original solution
 echo "$SOLUTION" > "$OUTPUT_DIR/original_solution.txt"
 
+# Start chain timer if visualization is enabled
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  start_chain_timer
+  echo -e "\n${MAGENTA}${BOLD}Role Chain Progress Visualization${NC}"
+  show_progress_bar 0 $TOTAL_STEPS "Chain Progress" ""
+fi
+
 # Step 1: Run first model with explicit parameters
-echo -e "${YELLOW}Step 1: Running ${MODEL1} role...${NC}"
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  show_specialist_start "$MODEL1" 1 $TOTAL_STEPS
+  start_timer
+  show_specialist_thinking "$MODEL1"
+fi
+
 log_debug "Executing model: $MODEL1"
 
 # Get the appropriate prompt for this role
@@ -138,8 +169,22 @@ if [ $? -ne 0 ] || [ ! -s "$OUTPUT_DIR/step1_output.txt" ]; then
   exit 1
 fi
 
+# Show completion visualization for step 1
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  show_step_completion "$MODEL1"
+  show_progress_bar 1 $TOTAL_STEPS "Chain Progress" ""
+  # Visualize the differences between solution and model 1 output
+  show_diff "$OUTPUT_DIR/original_solution.txt" "$OUTPUT_DIR/step1_output.txt" "$MODEL1"
+fi
+
 # Step 2: Run second model with first model's output and explicit parameters
-echo -e "${YELLOW}Step 2: Running ${MODEL2} role...${NC}"
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  show_transition "$MODEL1" "$MODEL2"
+  show_specialist_start "$MODEL2" 2 $TOTAL_STEPS
+  start_timer
+  show_specialist_thinking "$MODEL2"
+fi
+
 STEP1_OUTPUT=$(cat "$OUTPUT_DIR/step1_output.txt")
 
 # Get the appropriate prompt for this role
@@ -179,9 +224,23 @@ if [ $? -ne 0 ] || [ ! -s "$OUTPUT_DIR/step2_output.txt" ]; then
   exit 1
 fi
 
+# Show completion visualization for step 2
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  show_step_completion "$MODEL2"
+  show_progress_bar 2 $TOTAL_STEPS "Chain Progress" ""
+  # Visualize the differences between step 1 and step 2 outputs
+  show_diff "$OUTPUT_DIR/step1_output.txt" "$OUTPUT_DIR/step2_output.txt" "$MODEL2"
+fi
+
 # Step 3: Run third model if provided
 if [ -n "$MODEL3" ]; then
-  echo -e "${YELLOW}Step 3: Running ${MODEL3} role...${NC}"
+  if [ "$VISUALIZATION_ENABLED" = true ]; then
+    show_transition "$MODEL2" "$MODEL3"
+    show_specialist_start "$MODEL3" 3 $TOTAL_STEPS
+    start_timer
+    show_specialist_thinking "$MODEL3"
+  fi
+  
   STEP2_OUTPUT=$(cat "$OUTPUT_DIR/step2_output.txt")
   
   # Get the appropriate prompt for this role
@@ -223,6 +282,14 @@ ${ROLE3_PROMPT//\{input\}/Based on all the above information}"
     echo -e "${RED}Error running ${MODEL3} or empty response${NC}"
     exit 1
   fi
+  
+  # Show completion visualization for step 3
+  if [ "$VISUALIZATION_ENABLED" = true ]; then
+    show_step_completion "$MODEL3"
+    show_progress_bar 3 $TOTAL_STEPS "Chain Progress" ""
+    # Visualize the differences between step 2 and step 3 outputs
+    show_diff "$OUTPUT_DIR/step2_output.txt" "$OUTPUT_DIR/step3_output.txt" "$MODEL3"
+  fi
 fi
 
 # Create summary file
@@ -261,6 +328,48 @@ if [ -n "$MODEL3" ]; then
   echo "" >> "$OUTPUT_DIR/summary.md"
 fi
 
+# Create transformation history visualization
+echo "## Chain Transformation Visualization" >> "$OUTPUT_DIR/summary.md"
+echo "" >> "$OUTPUT_DIR/summary.md"
+echo "This section visualizes how each specialist transformed the solution:" >> "$OUTPUT_DIR/summary.md"
+echo "" >> "$OUTPUT_DIR/summary.md"
+
+echo "### Progress Path" >> "$OUTPUT_DIR/summary.md"
+echo "" >> "$OUTPUT_DIR/summary.md"
+echo "```" >> "$OUTPUT_DIR/summary.md"
+echo "Original Solution → $MODEL1 → $MODEL2" >> "$OUTPUT_DIR/summary.md"
+if [ -n "$MODEL3" ]; then
+  echo "                  → $MODEL3" >> "$OUTPUT_DIR/summary.md"
+fi
+echo "```" >> "$OUTPUT_DIR/summary.md"
+echo "" >> "$OUTPUT_DIR/summary.md"
+
+# Add contribution statistics
+echo "### Contribution Analysis" >> "$OUTPUT_DIR/summary.md"
+echo "" >> "$OUTPUT_DIR/summary.md"
+echo "| Step | Specialist | Content Length | Key Contribution |" >> "$OUTPUT_DIR/summary.md"
+echo "|------|------------|----------------|------------------|" >> "$OUTPUT_DIR/summary.md"
+
+# Calculate statistics
+ORIG_LENGTH=$(wc -w < "$OUTPUT_DIR/original_solution.txt")
+STEP1_LENGTH=$(wc -w < "$OUTPUT_DIR/step1_output.txt")
+STEP2_LENGTH=$(wc -w < "$OUTPUT_DIR/step2_output.txt")
+
+echo "| 0 | Original Solution | $ORIG_LENGTH words | Starting input |" >> "$OUTPUT_DIR/summary.md"
+echo "| 1 | $MODEL1 | $STEP1_LENGTH words | Initial analysis |" >> "$OUTPUT_DIR/summary.md"
+echo "| 2 | $MODEL2 | $STEP2_LENGTH words | Optimization and review |" >> "$OUTPUT_DIR/summary.md"
+
+if [ -n "$MODEL3" ]; then
+  STEP3_LENGTH=$(wc -w < "$OUTPUT_DIR/step3_output.txt")
+  echo "| 3 | $MODEL3 | $STEP3_LENGTH words | Final refinement |" >> "$OUTPUT_DIR/summary.md"
+fi
+echo "" >> "$OUTPUT_DIR/summary.md"
+
+# Show chain completion if visualization is enabled
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  show_chain_completion
+fi
+
 log_info "Chain execution complete!"
 echo -e "${GREEN}Role chain execution complete!${NC}"
 echo -e "${BLUE}Results saved to: ${OUTPUT_DIR}${NC}"
@@ -287,6 +396,11 @@ echo -e "${BLUE}Would you like to view the summary? (y/n)${NC}"
 read -r view_summary
 if [[ "$view_summary" == "y" ]]; then
   less "$OUTPUT_DIR/summary.md"
+fi
+
+# Clean up visualization temporary files
+if [ "$VISUALIZATION_ENABLED" = true ]; then
+  cleanup_visualization
 fi
 
 log_info "Role chain execution and organization complete"
