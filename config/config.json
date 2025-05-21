@@ -69,5 +69,13 @@
     "output_base_dir": "outputs",
     "templates_dir": "templates",
     "archive_enabled": true
+  },
+  "ui": {
+    "visualization_enabled": true,
+    "show_progress_bar": true,
+    "show_transitions": true,
+    "show_diff": true,
+    "show_elapsed_time": true,
+    "verbose_output": true
   }
 }

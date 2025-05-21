@@ -32,8 +32,9 @@ export MIRADOR_CONFIG_DIR="$ROOT_DIR/config"
 export MIRADOR_LOGS_DIR="$ROOT_DIR/logs"
 export MIRADOR_OUTPUTS_DIR="$ROOT_DIR/outputs"
 export MIRADOR_TEMPLATES_DIR="$ROOT_DIR/templates"
+export MIRADOR_SESSIONS_DIR="$ROOT_DIR/outputs/sessions"
 
 # Create required directories
-mkdir -p "$MIRADOR_LOGS_DIR" "$MIRADOR_OUTPUTS_DIR" "$MIRADOR_CONFIG_DIR" "$MIRADOR_TEMPLATES_DIR"
+mkdir -p "$MIRADOR_LOGS_DIR" "$MIRADOR_OUTPUTS_DIR" "$MIRADOR_CONFIG_DIR" "$MIRADOR_TEMPLATES_DIR" "$MIRADOR_SESSIONS_DIR"
 
 log_debug "Mirador initialized successfully"

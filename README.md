@@ -17,6 +17,7 @@ Mirador enables you to chain specialized AI models in sequence to solve complex 
 - **Model Chaining**: Sequence multiple specialized models for complex problems
 - **Workflow Integration**: Domain-specific templates and workflows
 - **Output Management**: Categorized storage with search and export capabilities
+- **Progress Visualization**: Visual feedback showing how specialists transform solutions
 - **Robust Logging**: Structured logging with error handling
 - **Shell Integration**: Aliases and functions for command-line convenience
 - **Comprehensive Testing**: Test suites for model and chain evaluation
@@ -55,7 +56,7 @@ This repository now includes a unified interface that connects both the bash-bas
 ~/ai_framework_git/mirador-unified mode dev "Create a function"
 ```
 
-For more details, see [Unified Interface Documentation](docs/UNIFIED_INTERFACE.md).
+For more details, see [Unified Interface Documentation](docs/UNIFIED_INTERFACE.md) and [Progress Visualization Documentation](docs/PROGRESS_VISUALIZATION.md).
 
 ### Rapid Prototyping
 
@@ -90,13 +91,30 @@ The interactive mode provides a conversational interface for refining tasks:
 
 This mode allows you to discuss your task with the conductor, refine it with additional details, and execute the recommended specialist chains.
 
+### Collaborative Communication
+
+The collaborative mode enables specialists to communicate bidirectionally:
+
+```bash
+# Run a chain with bidirectional specialist communication
+~/ai_framework_git/mirador-collaborate "Create a secure authentication system in Python"
+
+# Run with specific specialists
+~/ai_framework_git/mirador-collaborate --specialists master_coder security_expert code_reviewer_fix "Design a database schema for a banking app"
+
+# Run a test to see how it works
+~/ai_framework_git/mirador-collaborate --test
+```
+
+This powerful mode creates a collaborative multi-agent system where specialists can query each other for information, resulting in more comprehensive and higher-quality outputs.
+
 ## Future Enhancements
 
 The Mirador framework continues to evolve with planned enhancements:
 
 ### System Architecture
-- **Dynamic Agent Selection**: A "conductor" agent to select only relevant specialists
-- **Bidirectional Communication**: Allow specialists to request information from each other
+- **Dynamic Agent Selection**: A "conductor" agent to select only relevant specialists ✅
+- **Bidirectional Communication**: Allow specialists to request information from each other ✅
 - **Knowledge Persistence**: Store specialist outputs for reuse across projects
 
 ### Technical Implementation
@@ -105,8 +123,9 @@ The Mirador framework continues to evolve with planned enhancements:
 - **Parallel Processing**: Run compatible specialists in parallel
 
 ### User Experience
-- **Progress Visualization**: Show how each specialist transforms the project
-- **Interactive Decision Points**: Allow users to guide the specialist chain
+- **Progress Visualization**: Real-time visualization showing specialist contributions ✅
+- **Bidirectional Communication**: Specialists can query each other for information ✅
+- **Interactive Decision Points**: Allow users to guide the specialist chain ✅
 - **Domain-Specific Chains**: Pre-configured specialist sequences for common workflows
 
 These enhancements aim to transform Mirador from a rapid prototyping tool into a comprehensive AI-augmented development platform.

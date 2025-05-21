@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "intervention_types": {
+    "query": {
+      "enabled": true,
+      "priority_threshold": 3,
+      "auto_approve_specialists": [],
+      "always_intervene_specialists": [
+        "security_expert"
+      ]
+    },
+    "response": {
+      "enabled": true,
+      "priority_threshold": 2,
+      "auto_approve_specialists": [
+        "enhanced_agent"
+      ],
+      "always_intervene_specialists": []
+    },
+    "notification": {
+      "enabled": false
+    }
+  },
+  "timeout_seconds": 300,
+  "default_action": "approve",
+  "watch_mode": false,
+  "learning": {
+    "enabled": true,
+    "min_examples": 5
+  }
+}

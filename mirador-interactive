@@ -96,11 +96,21 @@ run_chain() {
   
   # Run the chain
   echo -e "${YELLOW}Running chain with specialists: $specialists${RESET}"
-  # Direct output to terminal for visibility, while also capturing to file
-  "$MIRADOR_ROOT/scripts/run_chain.sh" "$prompt" $specialists | tee "$output_dir/full_output.txt"
+  
+  # Create a temporary direct execution script for maximum reliability
+  TEMP_SCRIPT="$output_dir/run_chain_cmd.sh"
+  cat > "$TEMP_SCRIPT" << EOF
+#!/bin/bash
+cd "$MIRADOR_ROOT"
+"$MIRADOR_ROOT/src/chains/run_chain.sh" "$prompt" $specialists
+EOF
+  chmod +x "$TEMP_SCRIPT"
+  
+  # Execute the chain and capture output
+  "$TEMP_SCRIPT" | tee "$output_dir/full_output.txt"
   
   # Find the most recent chain output - wait a bit for file system to update
-  sleep 1
+  sleep 2
   recent_dirs=$(find "$MIRADOR_ROOT/outputs" -name "chain_*" -type d -newer "$output_dir" 2>/dev/null | sort)
   
   if [ -n "$recent_dirs" ]; then
