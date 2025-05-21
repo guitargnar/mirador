@@ -109,6 +109,19 @@ The collaborative mode enables specialists to communicate bidirectionally:
 
 This powerful mode creates a collaborative multi-agent system where specialists can query each other for information, resulting in more comprehensive and higher-quality outputs.
 
+## Documentation
+
+Comprehensive documentation is available to help you get the most out of the Mirador framework:
+
+- [Model & Prompt Guide](docs/ollama/MODEL_PROMPT_GUIDE.md) - Detailed guide for each model's optimal use
+- [Quick Reference](docs/ollama/ONE_PAGE_REFERENCE.md) - One-page cheat sheet for model selection
+- [Command Reference](docs/ollama/OLLAMA_REFERENCE_CARD.md) - All available commands and interfaces
+- [Model Architecture](docs/ollama/MODEL_ARCHITECTURE.md) - Technical details on model optimization and integration
+- [Workflow Patterns](docs/ollama/WORKFLOW_PATTERNS.md) - Established patterns for combining models
+- [Temperature Guide](docs/ollama/TEMPERATURE_GUIDE.md) - How temperature affects model behavior
+- [Model Selection Card](docs/ollama/MODEL_SELECTION_CARD.md) - Visual quick reference for model selection
+- [FAQ](docs/ollama/OLLAMA_FAQ.md) - Frequently asked questions about Ollama and Mirador
+
 ## Future Enhancements
 
 The Mirador framework continues to evolve with planned enhancements:
@@ -116,6 +129,7 @@ The Mirador framework continues to evolve with planned enhancements:
 ### System Architecture
 - **Dynamic Agent Selection**: A "conductor" agent to select only relevant specialists ✅
 - **Bidirectional Communication**: Allow specialists to request information from each other ✅
+- **Ultra-Simple Interface**: Direct, stateless access to specialized models ✅
 - **Knowledge Persistence**: Store specialist outputs for reuse across projects
 
 ### Technical Implementation
@@ -127,22 +141,62 @@ The Mirador framework continues to evolve with planned enhancements:
 - **Progress Visualization**: Real-time visualization showing specialist contributions ✅
 - **Bidirectional Communication**: Specialists can query each other for information ✅
 - **Interactive Decision Points**: Allow users to guide the specialist chain ✅
-- **Domain-Specific Chains**: Pre-configured specialist sequences for common workflows
+- **Domain-Specific Chains**: Pre-configured specialist sequences for common workflows ✅
+- **Model Specialization Guide**: Reference for optimal model-prompt pairings ✅
+- **Comprehensive Documentation**: Reference for model architecture and workflows ✅
 
 These enhancements aim to transform Mirador from a rapid prototyping tool into a comprehensive AI-augmented development platform.
 
 ## Available Models
 
-| Model | Purpose | Base Model | Optimization |
-|-------|---------|------------|-------------|
-| `guitar_expert_precise` | Guitar instruction | guitar-expert | Lower temperature (0.4), higher context (16384) |
-| `llama3.2_balanced` | General assistance | llama3.2 | Balanced temperature (0.6), broad knowledge |
-| `fast_agent_focused` | Task management | fast-agent | Low temperature (0.3), focused responses |
-| `code_reviewer_fix` | Code review | code-reviewer-fix | Low temperature (0.3), detailed analysis |
-| `master_coder` | Code generation | master-coder | Precise implementation (0.4 temp) |
-| `creative_entrepreneur` | Business analysis | creative-entrepreneur | Higher creativity (0.7 temp) |
-| `enhanced_agent` | General analysis | enhanced-agent | Comprehensive responses (0.7 temp) |
-| `file_reviewer` | Documentation | file-reviewer | Structured documentation (0.4 temp) |
+### Quick Reference Table
+
+| Model | Purpose | Base Model | Temperature | Context | Best For |
+|-------|---------|------------|-------------|---------|----------|
+| `fast-agent` | Quick answers | llama3 | 0.3 | 2048 | Factual questions, concise info |
+| `fast_agent_focused` | Structured responses | fast-agent | 0.3 | 2048 | Step-by-step instructions |
+| `guitar_expert_precise` | Guitar instruction | guitar-expert | 0.4 | 16384 | Tablature generation, technique explanation |
+| `llama3.2_balanced` | General assistance | llama3.2 | 0.6 | 8192 | Creative writing, discussions |
+| `code_reviewer_fix` | Code review | code-reviewer-fix | 0.3 | 8192 | Security analysis, bug detection |
+| `master_coder` | Code generation | master-coder | 0.4 | 8192 | Clean code implementation |
+| `creative_entrepreneur` | Business analysis | creative-entrepreneur | 0.7 | 8192 | Business ideas, market opportunities |
+| `enhanced_agent` | Deep research | enhanced-agent | 0.7 | 8192 | Complex questions, thorough analysis |
+| `file_reviewer` | Documentation | file-reviewer | 0.4 | 8192 | API docs, technical writing |
+| `ux_designer` | Interface design | enhanced-agent | 0.7 | 16384 | User flows, interface mockups |
+
+### Model Categories
+
+#### Speed-Optimized Models
+- **fast-agent**: Ultra-fast responses for simple queries
+- **fast_agent_focused**: Structured information with lists and steps
+
+#### Technical Models
+- **master_coder**: Clean, modular code implementation
+- **code_reviewer_fix**: Security analysis and bug detection
+- **file_reviewer**: Technical documentation and explanations
+
+#### Creative Models
+- **creative_entrepreneur**: Business innovation and market analysis
+- **ux_designer**: User interface design and user experience
+- **llama3.2_balanced**: Balanced creativity and precision
+
+#### Specialized Models
+- **guitar_expert_precise**: Guitar technique with tablature generation
+- **enhanced_agent**: Comprehensive research and analysis
+
+### How to Choose the Right Model
+
+1. **For facts and quick answers**: Use `fast-agent`
+2. **For code implementation**: Use `master_coder`
+3. **For business ideas**: Use `creative_entrepreneur`
+4. **For guitar instruction**: Use `guitar_expert_precise`
+5. **For security reviews**: Use `code_reviewer_fix`
+
+For complete documentation on model selection and optimal usage patterns:
+- [Model & Prompt Guide](docs/ollama/MODEL_PROMPT_GUIDE.md) - Detailed guide for each model
+- [Quick Reference](docs/ollama/ONE_PAGE_REFERENCE.md) - One-page cheat sheet
+- [Temperature Guide](docs/ollama/TEMPERATURE_GUIDE.md) - How temperature affects behavior
+- [Model Architecture](docs/ollama/MODEL_ARCHITECTURE.md) - Technical details on optimization
 
 ## Directory Structure
 
@@ -165,15 +219,21 @@ These enhancements aim to transform Mirador from a rapid prototyping tool into a
 
 ## Usage Examples
 
-### Using the Simplified Interface
+### Ultra-Simple Interface
 
 ```bash
-# Direct model access for quick questions
-domain-collab fast "What is the capital of France?"
+# Direct, stateless model access (no session)
+./scripts/direct-ollama.sh fast-agent "What is the capital of France?"
+./scripts/direct-ollama.sh guitar_expert_precise "Show me a G major scale"
 
-# Deep research with enhanced models
-domain-collab deep "Research the history of artificial intelligence"
+# Simple model access with default model
+./scripts/run-ollama.sh "What is the capital of France?"
+./scripts/run-ollama.sh guitar_expert_precise "Show me a G major scale"
+```
 
+### Domain-Specific Interface
+
+```bash
 # Domain-specific specialist chains
 domain-collab domain music "Create a practice routine for sweep picking"
 domain-collab domain dev "Design a secure authentication system in Python"
