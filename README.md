@@ -42,6 +42,22 @@ This framework has been tested on:
 3. Use the simplified interface: `~/bin/domain-collab setup`
 4. Try a chain: `domain-collab fast "Your question"` or `domain-collab domain dev "Your question"`
 
+### Compact Mode Commands
+
+For compact mode in Claude Code (/compact), the most useful commands are:
+
+```bash
+# Direct model access - simplest approach
+./scripts/direct-ollama.sh fast-agent "What is Python?"
+
+# Run with default model (fast-agent)
+./scripts/run-ollama.sh "How do I create a Python function?"
+
+# Domain-specific chains
+domain-collab domain dev "Create a secure login system"
+domain-collab domain music "Show me sweep picking technique"
+```
+
 ### Unified Interface
 
 This repository now includes a unified interface that connects both the bash-based implementation (this repository) and the Python-based implementation (located at `~/ai_framework`):
