@@ -1,150 +1,62 @@
-# Mirador Unified Interface
+# Mirador & Ollama Integration Design
 
-This document explains how to use the unified interface that connects both implementations of the Mirador AI Framework.
+The integration between your Ollama models and the Mirador framework is elegantly simple. This document explains how your modelfiles and system prompts serve as the perfect foundation for Mirador.
 
-## Rapid Prototyping Tool
+## Understanding Ollama Modelfiles
 
-For a simplified experience that focuses on the emergent multi-agent collaboration system, use the rapid prototyping tool:
+Your Ollama modelfiles contain two key elements that allow Mirador to build on top of them without overengineering:
 
-```bash
-# Generate ideas with the multi-agent system
-~/ai_framework_git/mirador-rapid "Design a secure user authentication system"
+1. **Specialized System Prompts**
+   - **Fast Agent**: Optimized for concise, direct responses (temp 0.3)
+   - **Guitar Expert**: Specialized in music with tablature generation (temp 0.4)
+   - **Master Coder**: Deep software engineering expertise (temp 0.4)
+
+2. **Optimized Parameters**
+   - Custom temperature settings for different tasks
+   - Specialized context windows (guitar_expert: 16384, fast_agent: 2048)
+   - Fine-tuned top_p, top_k values for different models
+
+## How Mirador Leverages Your Modelfiles
+
+Mirador doesn't replace or duplicate your model customizations - it uses them as building blocks:
+
+1. **Direct Access Layer**
+   ```bash
+   # When you run
+   domain-collab fast "What is Paris?"
+   
+   # It simply runs
+   ollama run fast-agent "What is Paris?"
+   ```
+
+2. **Message Bus & Collaboration**
+   - Mirador's advanced features aren't reimplementations - they're orchestration
+   - The message bus coordinates between your existing specialized models
+   - Each model uses its own optimized parameters and system prompt
+
+3. **Domain Specialization**
+   - Domain configurations are just groupings of your existing models
+   - No duplicated system prompts or parameters
+   - The domain-collab script translates domain names into specific model combinations
+
+## Simplicity Pattern
+
+The architecture follows a "thin orchestration layer" pattern:
+
+```
+User Request → domain-collab → Ollama API → Your Modelfiles → Response
 ```
 
-This tool leverages the "accidental brilliance" of specialists building on each other's work, creating a powerful chain of progressive knowledge enhancement.
+When more advanced features are needed, domain-collab adds minimal routing:
 
-## Conductor Agent
-
-The conductor agent analyzes your task and dynamically selects the most appropriate specialists:
-
-```bash
-# Analyze task and recommend specialists
-~/ai_framework_git/mirador-conductor "Create a secure login system in Python"
-
-# Through the unified interface
-~/ai_framework_git/mirador-unified conductor "Create a secure login system in Python"
+```
+User Request → domain-collab → Message Bus → Specialists → Ollama API → Response
 ```
 
-The conductor provides:
-- Analysis of your task requirements
-- Recommended sequence of specialists
-- Explanation of why each specialist was selected
-- Option to execute the recommended chain
+## Benefits of This Approach
 
-## Interactive Mode
-
-The interactive mode provides a conversational interface for refining tasks through dialogue:
-
-```bash
-# Start interactive mode
-~/ai_framework_git/mirador-interactive
-
-# Through the unified interface
-~/ai_framework_git/mirador-unified interactive
-```
-
-In interactive mode, you can:
-- Discuss and refine your task with the conductor
-- Get specialist recommendations with explanations
-- Execute chains with the recommended specialists
-- View conversation history
-- Refine previous analyses with additional details
-
-## Overview
-
-The Mirador project now includes two complementary implementations:
-
-1. **Bash-Based Implementation** (`~/ai_framework_git`): Focuses on straightforward model chaining with robust error handling
-
-2. **Python-Based Implementation** (`~/ai_framework`): Provides advanced features like webhooks, session management, and a REST API
-
-The unified interface lets you access both implementations through a single command-line tool, allowing you to leverage the strengths of each system.
-
-## Getting Started
-
-```bash
-# Run the unified launcher
-~/ai_framework_git/mirador-unified
-```
-
-## Key Commands
-
-### Running Prompts
-
-```bash
-# Run a full chain (default)
-~/ai_framework_git/mirador-unified run "Your prompt here"
-
-# Run in specialized modes
-~/ai_framework_git/mirador-unified mode dev "Create a function"
-~/ai_framework_git/mirador-unified mode doc "Document a function"
-~/ai_framework_git/mirador-unified mode business "Create a business plan"
-~/ai_framework_git/mirador-unified mode security "Secure login system"
-~/ai_framework_git/mirador-unified mode data "Analyze customer patterns"
-~/ai_framework_git/mirador-unified mode mobile "Create app concept"
-~/ai_framework_git/mirador-unified mode music "Guitar practice routine"
-
-# Run custom chains
-~/ai_framework_git/mirador-unified chain master_coder code_reviewer_fix -- "Create a secure login system"
-```
-
-### System Management
-
-```bash
-# List available models
-~/ai_framework_git/mirador-unified models
-
-# List all sessions from both implementations
-~/ai_framework_git/mirador-unified sessions
-
-# View specific session details
-~/ai_framework_git/mirador-unified session 20250520-123456
-```
-
-### Direct Framework Access
-
-```bash
-# Use bash implementation directly
-~/ai_framework_git/mirador-unified bash run "Your prompt"
-
-# Use Python implementation directly
-~/ai_framework_git/mirador-unified python run "Your prompt"
-```
-
-## Available Modes
-
-| Mode | Models | Purpose |
-|------|--------|---------|
-| `dev` | master_coder → code_reviewer_fix | Code development focus |
-| `doc` | master_coder → file_reviewer | Documentation focus |
-| `business` | master_coder → creative_entrepreneur | Business analysis |
-| `security` | master_coder → code_reviewer_fix | Security analysis |
-| `data` | enhanced_agent → file_reviewer | Data analysis |
-| `mobile` | master_coder → code_reviewer_fix | Mobile development |
-| `music` | guitar_expert_precise → fast_agent_focused | Music/guitar learning |
-| `ui` | master_coder → ux_designer | User interface design |
-
-## Implementation Details
-
-The unified interface works through a bridge component:
-
-- `~/ai_framework_git/src/bridge.py`: Python bridge that connects both implementations
-- `~/ai_framework_git/mirador-unified`: Bash launcher that provides command-line access
-
-## Using the Guitar Studio
-
-The unified interface also provides access to the specialized guitar studio:
-
-```bash
-# Launch the guitar studio
-~/ai_framework_git/mirador-unified guitar
-```
-
-## Output Organization
-
-Each implementation organizes its outputs differently:
-
-- **Bash Implementation**: `~/ai_framework_git/outputs/chain_TIMESTAMP/`
-- **Python Implementation**: `~/ai_framework/outputs/YYYYMMDD-HHMMSS/`
-
-The unified interface lists sessions from both implementations when you run the `sessions` command.
+1. **Single Source of Truth**: Your model customizations live only in Ollama
+2. **Minimal Overhead**: No duplication of system prompts or parameters
+3. **Maintainability**: Update system prompts in one place (Ollama)
+4. **Flexibility**: Use direct Ollama access or advanced collaboration as needed
+5. **Stability**: If Mirador has issues, you can always fall back to direct Ollama

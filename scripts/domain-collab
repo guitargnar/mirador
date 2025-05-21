@@ -1,0 +1,306 @@
+#\!/usr/bin/env bash
+set -euo pipefail
+
+# Colors for terminal output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+RED='\033[0;31m'
+RESET='\033[0m'
+
+# Global flags
+NO_INTERVENE=false
+VISUALIZE=false
+while [[ "${1:-}" =~ ^-- ]]; do
+  case "$1" in
+    --no-intervene) NO_INTERVENE=true; shift ;;
+    --visualize)    VISUALIZE=true;    shift ;;
+    *) echo -e "${RED}Unknown option $1${RESET}"; exit 1 ;;
+  esac
+done
+
+# -- SUBCOMMAND FUNCTIONS --
+
+# Setup command - install and configure everything
+setup() {
+  echo -e "${YELLOW}Mirador AI Framework Setup${RESET}"
+  echo -e "${BLUE}Checking for required models...${RESET}"
+  
+  # Check if the models exist
+  if \! ollama list | grep -q "fast-agent"; then
+    echo -e "${RED}Error: fast-agent model not found${RESET}"
+    echo "Please run: ollama pull fast-agent"
+    exit 1
+  fi
+  
+  if \! ollama list | grep -q "enhanced-agent" && \! ollama list | grep -q "my-persistent-agent"; then
+    echo -e "${YELLOW}Warning: Neither enhanced-agent nor my-persistent-agent found${RESET}"
+    echo "For deeper research capability, run: ollama pull enhanced-agent"
+  fi
+  
+  # Update .zshrc
+  echo -e "${BLUE}Adding aliases to ~/.zshrc if missing...${RESET}"
+  grep -qF 'alias fast="domain-collab fast"' ~/.zshrc || \
+    echo 'alias fast="domain-collab fast"' >> ~/.zshrc
+  grep -qF 'alias deep="domain-collab deep"' ~/.zshrc || \
+    echo 'alias deep="domain-collab deep"' >> ~/.zshrc
+  grep -qF 'alias m="domain-collab"' ~/.zshrc || \
+    echo 'alias m="domain-collab"' >> ~/.zshrc
+  
+  echo -e "${GREEN}✅ Setup complete\! Restart your terminal or run:${RESET}"
+  echo "source ~/.zshrc"
+}
+
+# Fast command - run fast-agent for quick queries
+fast() {
+  shift
+  echo -e "${BLUE}Running fast-agent for quick response...${RESET}"
+  ollama run fast-agent "$*"
+}
+
+# Deep command - run persistent or enhanced agent for deep research
+deep() {
+  shift
+  if ollama list | grep -q "my-persistent-agent"; then
+    echo -e "${BLUE}Running my-persistent-agent for deep research...${RESET}"
+    # Remove context flag since it causes errors
+    ollama run my-persistent-agent "$*"
+  else
+    echo -e "${BLUE}Running enhanced-agent for deep research...${RESET}"
+    ollama run enhanced-agent "$*"
+  fi
+}
+
+# Run domain chain - handles various domain specialties
+run_domain() {
+  domain=$1
+  shift
+  
+  # Check if we have a prompt
+  if [ $# -eq 0 ]; then
+    echo -e "${RED}Error: Missing prompt${RESET}"
+    show_help
+    exit 1
+  fi
+  
+  # The prompt is everything after the domain
+  prompt="$*"
+  
+  # Change to the framework directory
+  cd "$HOME/ai_framework_git"
+  
+  # Choose specialists based on domain
+  case "$domain" in
+    music)
+      echo -e "${GREEN}Running music domain chain${RESET}"
+      # Fix argument quoting
+      ./mirador-collaborate --specialists "guitar_expert_precise" "content_creator" "$prompt"
+      ;;
+    dev)
+      echo -e "${GREEN}Running development domain chain${RESET}"
+      ./mirador-collaborate --specialists "master_coder" "code_reviewer_fix" "security_expert" "$prompt"
+      ;;
+    business)
+      echo -e "${GREEN}Running business domain chain${RESET}"
+      ./mirador-collaborate --specialists "creative_entrepreneur" "content_creator" "$prompt"
+      ;;
+    finance)
+      echo -e "${GREEN}Running finance domain chain${RESET}"
+      ./mirador-collaborate --specialists "creative_entrepreneur" "fast_agent_focused" "$prompt"
+      ;;
+    cross)
+      echo -e "${GREEN}Running cross-domain chain${RESET}"
+      ./mirador-collaborate --specialists "guitar_expert_precise" "master_coder" "creative_entrepreneur" "$prompt"
+      ;;
+    custom)
+      # For custom, the first argument is the specialists list
+      specialists=($1)
+      shift
+      prompt="$*"
+      echo -e "${GREEN}Running custom domain chain with specialists: ${specialists[*]}${RESET}"
+      ./mirador-collaborate --specialists "${specialists[@]}" "$prompt"
+      ;;
+    *)
+      echo -e "${YELLOW}Unknown domain: $domain${RESET}"
+      show_help
+      exit 1
+      ;;
+  esac
+}
+
+# Interactive mode
+run_interactive() {
+  echo -e "${YELLOW}Mirador Interactive Domain Collaboration${RESET}"
+  echo
+  echo -e "${BLUE}Select a domain:${RESET}"
+  echo -e "  1. ${CYAN}Music${RESET} - Guitar/music focus"
+  echo -e "  2. ${CYAN}Development${RESET} - Software development"
+  echo -e "  3. ${CYAN}Business${RESET} - Business strategy"
+  echo -e "  4. ${CYAN}Finance${RESET} - Financial planning"
+  echo -e "  5. ${CYAN}Cross-domain${RESET} - Music + Code + Business"
+  echo -e "  6. ${CYAN}Custom${RESET} - Select specialists manually"
+  echo
+  read -p "Enter choice (1-6): " choice
+  
+  case "$choice" in
+    1) 
+      domain="music"
+      specialists=("guitar_expert_precise" "content_creator")
+      ;;
+    2) 
+      domain="dev"
+      specialists=("master_coder" "code_reviewer_fix" "security_expert")
+      ;;
+    3) 
+      domain="business"
+      specialists=("creative_entrepreneur" "content_creator")
+      ;;
+    4) 
+      domain="finance"
+      specialists=("creative_entrepreneur" "fast_agent_focused")
+      ;;
+    5) 
+      domain="cross"
+      specialists=("guitar_expert_precise" "master_coder" "creative_entrepreneur")
+      ;;
+    6) 
+      domain="custom"
+      echo -e "${BLUE}Available specialists:${RESET}"
+      echo -e "  - guitar_expert_precise   - content_creator"
+      echo -e "  - master_coder            - code_reviewer_fix"
+      echo -e "  - security_expert         - creative_entrepreneur"
+      echo -e "  - fast_agent_focused      - file_reviewer"
+      echo
+      read -p "Enter specialists (space-separated): " specialist_input
+      IFS=' ' read -r -a specialists <<< "$specialist_input"
+      ;;
+    *) 
+      echo -e "${YELLOW}Invalid choice${RESET}"
+      exit 1
+      ;;
+  esac
+  
+  echo
+  read -p "Enter your prompt: " prompt
+  
+  # Change to the framework directory
+  cd "$HOME/ai_framework_git"
+  
+  # Run the collaboration with proper argument handling
+  echo -e "${GREEN}Running ${domain} domain chain with specialists: ${specialists[*]}${RESET}"
+  ./mirador-collaborate --specialists "${specialists[@]}" "$prompt"
+}
+
+# Run simple Ollama model
+run_model() {
+  model="$1"
+  shift
+  echo -e "${BLUE}Running $model model...${RESET}"
+  
+  # Check if model exists
+  if \! ollama list | grep -q "$model"; then
+    echo -e "${RED}Error: Model $model not found\!${RESET}"
+    echo "Available models:"
+    ollama list
+    exit 1
+  fi
+  
+  # Run the model with the prompt
+  ollama run "$model" "$*"
+}
+
+# Show help message
+show_help() {
+  echo -e "${YELLOW}Mirador Domain Collaboration${RESET}"
+  echo
+  echo -e "Combines domain knowledge with collaborative specialist communication"
+  echo
+  echo -e "${BLUE}Usage:${RESET}"
+  echo -e "  domain-collab <command> [args...]"
+  echo
+  echo -e "${BLUE}Simple Commands:${RESET}"
+  echo -e "  ${CYAN}fast${RESET} \"prompt\"        - Quick answers using fast-agent"
+  echo -e "  ${CYAN}deep${RESET} \"prompt\"        - Deep research using enhanced-agent"
+  echo -e "  ${CYAN}model${RESET} <name> \"prompt\" - Run any specific Ollama model"
+  echo
+  echo -e "${BLUE}Advanced Commands:${RESET}"
+  echo -e "  ${CYAN}domain${RESET} <domain> \"prompt\" - Run domain-specific specialist chain"
+  echo -e "  ${CYAN}interactive${RESET}  - Start interactive session with domain selection"
+  echo -e "  ${CYAN}setup${RESET}        - Configure domain-collab and check models"
+  echo
+  echo -e "${BLUE}Available domains:${RESET}"
+  echo -e "  ${CYAN}music${RESET}      - Guitar/music focus with practice routines"
+  echo -e "  ${CYAN}dev${RESET}        - Software development with security focus"
+  echo -e "  ${CYAN}business${RESET}   - Business strategy and content creation"
+  echo -e "  ${CYAN}finance${RESET}    - Financial planning and management"
+  echo -e "  ${CYAN}cross${RESET}      - Cross-domain combination (music + code + business)"
+  echo -e "  ${CYAN}custom${RESET}     - Custom specialist selection"
+  echo
+  echo -e "${BLUE}Examples:${RESET}"
+  echo -e "  domain-collab fast \"What is the capital of France?\""
+  echo -e "  domain-collab deep \"Research machine learning frameworks for audio\""
+  echo -e "  domain-collab model creative-entrepreneur \"Create a business plan\""
+  echo -e "  domain-collab domain music \"Create a practice routine for sweep picking\""
+  echo
+  echo -e "${BLUE}Global Flags (for advanced commands):${RESET}"
+  echo -e "  --no-intervene    Run chains without any prompts"
+  echo -e "  --visualize       Show progress graphs"
+}
+
+# -- MAIN DISPATCH LOGIC --
+cmd="${1:-}"
+
+case "$cmd" in
+  setup)
+    setup
+    ;;
+  fast)
+    if [ $# -lt 2 ]; then
+      echo -e "${RED}Error: Missing prompt${RESET}"
+      show_help
+      exit 1
+    fi
+    fast "$@"
+    ;;
+  deep)
+    if [ $# -lt 2 ]; then
+      echo -e "${RED}Error: Missing prompt${RESET}"
+      show_help
+      exit 1
+    fi
+    deep "$@"
+    ;;
+  model)
+    if [ $# -lt 3 ]; then
+      echo -e "${RED}Error: Missing model name or prompt${RESET}"
+      echo "Usage: domain-collab model <model-name> \"prompt\""
+      exit 1
+    fi
+    run_model "$2" "${@:3}"
+    ;;
+  domain)
+    if [ $# -lt 3 ]; then
+      echo -e "${RED}Error: Missing domain or prompt${RESET}"
+      show_help
+      exit 1
+    fi
+    shift
+    run_domain "$@"
+    ;;
+  interactive)
+    run_interactive
+    ;;
+  help|--help|-h)
+    show_help
+    ;;
+  *)
+    # Legacy compatibility with old domain-collab syntax
+    if [ -n "$cmd" ] && [ $# -gt 1 ]; then
+      run_domain "$@"
+    else
+      show_help
+      exit 1
+    fi
+    ;;
+esac

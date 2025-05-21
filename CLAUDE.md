@@ -8,12 +8,18 @@ Mirador is a multi-agent AI orchestration framework for chaining specialized Oll
 
 ## Key Commands
 
+### Simplified Interface
+- **Direct Access**: `domain-collab fast "Your question"` - Quick answers with fast-agent
+- **Deep Research**: `domain-collab deep "Your research topic"` - Detailed analysis with enhanced-agent
+- **Domain Chains**: `domain-collab domain dev "Your prompt"` - Run domain-specific specialist chains
+- **Interactive Mode**: `domain-collab interactive` - Menu-based domain selection
+
+### Original Commands
 - **Basic Chain**: `./scripts/run_chain.sh "Your prompt" model1 model2 [model3]` - Run a model chain
 - **Role Chain**: `./scripts/run_role_chain.sh "Your code" model1 model2 [model3]` - Analyze code with specialized roles
 - **Unified Interface**: `./mirador-unified run "Your prompt"` - Access both implementations
 - **Rapid Prototype**: `./mirador-rapid "Your prompt"` - Use the streamlined multi-agent system
 - **Run Tests**: `./tests/run_all_tests.sh` - Run comprehensive tests
-- **Fix Tests**: `./tests/fix_tests.sh` - Repair test scripts if needed
 
 ## Directory Structure
 
@@ -65,6 +71,7 @@ The project has evolved from a basic chain runner to an intelligent multi-agent 
 ✅ **Interactive user experience** with conversational interface for refining tasks
 ✅ **Bidirectional communication** between specialists
 ✅ **User intervention points** for guiding specialist communication
+✅ **Simplified interface** through unified domain-collab script
 ⬜ Chain-of-thought standardization for better analysis
 ⬜ Parallel processing of compatible specialist tasks
 
@@ -74,4 +81,6 @@ Recent improvements:
 - Bidirectional communication enables specialists to query each other for information
 - User intervention points allow approving, modifying, or rejecting specialist communications
 - Progress visualization provides real-time feedback on specialist contributions
+- Simplified domain-collab interface integrates directly with Ollama models
+- Unified command structure with both direct and collaborative access
 - Conversation history is saved for future reference and continuity
