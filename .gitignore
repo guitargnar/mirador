@@ -1,41 +1,75 @@
-# Logs
-logs/
-*.log
+# Mirador Output Files
+outputs/
+chain_*/
+temp_*.txt
+qa_results/
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Directory for output files
-outputs/*
-!outputs/.gitkeep
-
-# MacOS files
+# System Files
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
+.DS_Store?
 ._*
-
-# Temporary files
-*.tmp
-*.swp
-*~
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.env
-.venv
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
+google-env/
 
-# Sensitive information
-config/secrets.json
-config/keys.json
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Model Cache (if any)
+.ollama/
+model_cache/
+
+# Performance Monitoring
+performance_*.txt
+monitor_*.log
