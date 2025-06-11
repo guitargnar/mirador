@@ -73,3 +73,6 @@ model_cache/
 # Performance Monitoring
 performance_*.txt
 monitor_*.log
+mirador_memory.db
+conversations/
+*.docx
