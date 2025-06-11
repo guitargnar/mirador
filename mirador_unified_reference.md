@@ -11,7 +11,7 @@ mirador-ez chain "Complex financial planning scenario" financial_planning_expert
 mirador-ez chain "Career transition analysis" matthew_context_provider enhanced_agent_enforcer
 
 # Real Estate Analysis (79s, comprehensive)
-mirador-ez chain "Louisville real estate investment opportunities" financial_planning_expert_v6 louisville_expert_v2 enhanced_agent_enforcer
+mirador-ez chain "Louisville real estate investment opportunities" financial_planning_expert_v6 louisville_expert_v3 enhanced_agent_enforcer
 
 # Action Planning (57s, actionable)
 mirador-ez chain "Personal finance optimization" matthew_context_provider financial_planning_expert_v6 decision_simplifier
@@ -20,12 +20,12 @@ bash# Meta-Optimized Analysis
 mirador-ez chain "System-guided opportunity identification" mirador_system_specialist matthew_context_provider enhanced_agent_enforcer
 
 # Complete Integration
-mirador-ez chain "Maximum value comprehensive analysis" matthew_context_provider financial_planning_expert_v6 louisville_expert_v2 enhanced_agent_enforcer decision_simplifier
+mirador-ez chain "Maximum value comprehensive analysis" matthew_context_provider financial_planning_expert_v6 louisville_expert_v3 enhanced_agent_enforcer decision_simplifier
 Core Models Quick Reference
 
 matthew_context_provider: Personal situation and goals
 financial_planning_expert_v6: Louisville-specific financial planning
-louisville_expert_v2: Jefferson County resources and opportunities
+louisville_expert_v3: Jefferson County resources and opportunities
 enhanced_agent_enforcer: Strategic synthesis and implementation
 decision_simplifier: Action generation and prioritization
 mirador_system_specialist: System optimization and guidance
