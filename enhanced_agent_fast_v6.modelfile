@@ -1,4 +1,4 @@
-FROM llama3.2_balanced
+FROM llama3.2
 
 PARAMETER temperature 0.4
 PARAMETER top_p 0.85

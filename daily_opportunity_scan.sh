@@ -1,9 +1,9 @@
-#!/bin/bash
+
 echo "=== DAILY MIRADOR OPPORTUNITY SCAN ==="
 echo "Date: $(date)"
 echo ""
 
-# Quick financial opportunity check
+
 echo "💰 Financial Opportunities:"
 mirador-ez ask financial_planning_expert_v6 "What's today's best financial opportunity for Louisville healthcare professional?"
 

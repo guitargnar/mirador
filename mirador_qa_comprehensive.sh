@@ -1,16 +1,16 @@
-#!/bin/bash
+
 
 echo "=== Comprehensive Mirador Quality Assurance ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Create test results directory
+
 mkdir -p qa_results/$(date +%Y%m%d_%H%M%S)
 QA_DIR="qa_results/$(date +%Y%m%d_%H%M%S)"
 
 echo "Results will be saved to: $QA_DIR"
 
-# Test 1: Individual Model Quality
+
 echo "1. Individual Model Quality Assessment:"
 echo "   Testing enhanced_agent_fast_v2..."
 mirador-ez ask enhanced_agent_fast_v2 "Provide strategic analysis for Louisville home buying process" > "$QA_DIR/enhanced_agent_test.txt"
@@ -24,18 +24,18 @@ echo "   Testing louisville_expert_v2..."
 mirador-ez ask louisville_expert_v2 "Provide comprehensive guide to Louisville neighborhoods for families" > "$QA_DIR/louisville_expert_test.txt"
 echo "   ✓ Louisville expert test saved"
 
-# Test 2: Chain Quality
+
 echo "2. Chain Quality Assessment:"
 echo "   Testing comprehensive 3-model chain..."
 mirador-ez chain "Create complete home buying and financial plan for Louisville family earning $80,000" financial_planning_expert_v2 louisville_expert_v2 enhanced_agent_fast_v2 > "$QA_DIR/comprehensive_chain_test.txt"
 echo "   ✓ Comprehensive chain test saved"
 
-# Test 3: Accuracy Validation
+
 echo "3. Accuracy Validation:"
 echo "   Testing specific income processing..."
 mirador-ez ask financial_planning_expert_v2 "Budget analysis for exactly $67,500 annual income in Louisville" > "$QA_DIR/accuracy_income_test.txt"
 
-# Check accuracy
+
 if grep -q "67,500\|$67,500" "$QA_DIR/accuracy_income_test.txt"; then
     echo "   ✓ Income accuracy: PASS"
     echo "PASS" > "$QA_DIR/income_accuracy_result.txt"
@@ -44,7 +44,7 @@ else
     echo "FAIL" > "$QA_DIR/income_accuracy_result.txt"
 fi
 
-# Test 4: Performance Metrics
+
 echo "4. Performance Metrics:"
 echo "   Measuring execution times..."
 
@@ -60,11 +60,11 @@ end_time=$(date +%s)
 financial_time=$((end_time - start_time))
 echo "   Financial expert time: ${financial_time}s"
 
-# Save performance metrics
+
 echo "enhanced_agent_fast_v2: ${enhanced_time}s" > "$QA_DIR/performance_metrics.txt"
 echo "financial_planning_expert_v2: ${financial_time}s" >> "$QA_DIR/performance_metrics.txt"
 
-# Generate QA summary
+
 echo "5. Generating QA Summary..."
 cat > "$QA_DIR/qa_summary.txt" << SUMMARY
 Mirador Quality Assurance Summary

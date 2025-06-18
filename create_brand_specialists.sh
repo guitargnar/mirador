@@ -1,23 +1,23 @@
-#!/bin/bash
+
 
 echo "============================================="
 echo "🎨 CREATING BRAND & SALES SPECIALISTS"
 echo "============================================="
 echo ""
 
-# Create Personal Brand Architect
+
 echo "Creating personal_brand_architect..."
 ollama create personal_brand_architect -f personal_brand_architect.modelfile
 echo "✅ Personal Brand Architect created"
 echo ""
 
-# Create Engagement Optimizer
+
 echo "Creating engagement_optimizer..."
 ollama create engagement_optimizer -f engagement_optimizer.modelfile
 echo "✅ Engagement Optimizer created"
 echo ""
 
-# Create Sales Content Creator
+
 echo "Creating sales_content_creator..."
 ollama create sales_content_creator -f sales_content_creator.modelfile
 echo "✅ Sales Content Creator created"

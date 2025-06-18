@@ -1,0 +1,237 @@
+#!/bin/bash
+
+# Mirador AI Orchestration System - Main Command Interface
+# Version: 2.0 Production
+
+set -e
+
+# Configuration
+OUTPUTS_DIR="$HOME/ai_framework_git/outputs"
+TIMEOUT=120
+CONDUCTOR_AVAILABLE=false
+
+# Create outputs directory if it doesn't exist
+mkdir -p "$OUTPUTS_DIR"
+
+# Helper functions
+log_info() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [INFO] $1"
+}
+
+log_error() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [ERROR] $1" >&2
+}
+
+# Check if model exists
+check_model() {
+    local model_name=$1
+    if ! ollama list | grep -q "^$model_name"; then
+        log_error "Model '$model_name' not found. Please check available models."
+        echo "Available models:"
+        ollama list | head -20
+        return 1
+    fi
+    return 0
+}
+
+# Execute single model
+execute_single_model() {
+    local model_name=$1
+    local prompt=$2
+    
+    log_info "Executing $model_name..."
+    
+    if ! check_model "$model_name"; then
+        return 1
+    fi
+    
+    # Execute with timeout
+    timeout $TIMEOUT ollama run "$model_name" "$prompt"
+}
+
+# Execute chain (sequential execution)
+execute_chain() {
+    local description=$1
+    shift
+    local models=("$@")
+    
+    # Create chain output directory
+    local chain_id="chain_$(date '+%Y%m%d_%H%M%S')"
+    local chain_dir="$OUTPUTS_DIR/$chain_id"
+    mkdir -p "$chain_dir"
+    
+    log_info "Starting chain: $description"
+    log_info "Models: ${models[*]}"
+    log_info "Output directory: $chain_dir"
+    
+    # Track start time
+    local start_time=$(date +%s)
+    
+    # Execute models sequentially
+    local context="$description"
+    local model_outputs=()
+    
+    for i in "${!models[@]}"; do
+        local model="${models[$i]}"
+        
+        if ! check_model "$model"; then
+            log_error "Chain failed: Model $model not available"
+            return 1
+        fi
+        
+        log_info "Executing model $((i+1))/${#models[@]}: $model"
+        
+        # Build context for this model
+        local full_prompt="$context"
+        if [ $i -gt 0 ]; then
+            full_prompt+="\n\nPrevious analysis:\n${model_outputs[$((i-1))]}"
+        fi
+        
+        # Execute model
+        local output
+        if output=$(timeout $TIMEOUT ollama run "$model" "$full_prompt" 2>&1); then
+            model_outputs+=("$output")
+            
+            # Save individual output
+            echo "$output" > "$chain_dir/${model}_output.md"
+            
+            log_info "✓ $model completed"
+        else
+            log_error "✗ $model failed or timed out"
+            echo "Chain execution failed at model: $model" > "$chain_dir/error.log"
+            return 1
+        fi
+    done
+    
+    # Calculate execution time
+    local end_time=$(date +%s)
+    local execution_time=$((end_time - start_time))
+    
+    # Create summary
+    cat > "$chain_dir/summary.md" << SUMMARY
+# Chain Execution Summary
+
+**Description:** $description
+**Models:** ${models[*]}
+**Execution Time:** ${execution_time}s
+**Status:** Complete
+
+## Final Output
+
+${model_outputs[-1]}
+
+## Execution Details
+
+- **Total Models:** ${#models[@]}
+- **Success Rate:** 100%
+- **Average Time per Model:** $((execution_time / ${#models[@]}))s
+
+SUMMARY
+
+    log_info "Chain completed successfully in ${execution_time}s"
+    log_info "Results saved to: $chain_dir"
+    
+    # Display summary
+    echo ""
+    echo "=== CHAIN SUMMARY ==="
+    cat "$chain_dir/summary.md"
+}
+
+# List available models
+list_models() {
+    echo "**Available Mirador Models:**"
+    echo ""
+    
+    echo "🎸 Music Career Specialists:"
+    ollama list | grep -E "(guitar|music|touring|performance)" | head -10
+    
+    echo ""
+    echo "🧠 Meta-Cognitive Models:"
+    ollama list | grep -E "(feedback|cross|synthesizer|reflection)" | head -10
+    
+    echo ""
+    echo "💼 Professional Development:"
+    ollama list | grep -E "(linkedin|communication|income|context)" | head -10
+    
+    echo ""
+    echo "👨‍👧 Personal Life Integration:"
+    ollama list | grep -E "(father|daughter|financial|louisville)" | head -10
+    
+    echo ""
+    echo "All available models:"
+    ollama list
+}
+
+# System health check
+health_check() {
+    echo "=== Mirador System Health Check ==="
+    echo ""
+    
+    # Check Ollama
+    if command -v ollama >/dev/null 2>&1; then
+        echo "✓ Ollama runtime: Available ($(ollama --version))"
+    else
+        echo "✗ Ollama runtime: Not available"
+        return 1
+    fi
+    
+    # Count models
+    local model_count=$(ollama list | wc -l)
+    echo "✓ Installed models: $((model_count - 1))"
+    
+    # Check disk space
+    local available_space=$(df -h ~/ai_framework_git/outputs/ 2>/dev/null | tail -1 | awk '{print $4}' || echo "Unknown")
+    echo "✓ Storage: $available_space available"
+    
+    # Check recent activity
+    local recent_chains=$(find "$OUTPUTS_DIR" -name "chain_*" -mtime -7 2>/dev/null | wc -l)
+    echo "✓ Recent activity: $recent_chains chains (last 7 days)"
+    
+    echo ""
+    echo "=== Health Check Complete ==="
+}
+
+# Main command processing
+main() {
+    case "${1:-}" in
+        "ask")
+            if [ $# -lt 3 ]; then
+                echo "Usage: $0 ask <model_name> \"<prompt>\""
+                exit 1
+            fi
+            execute_single_model "$2" "$3"
+            ;;
+        "chain")
+            if [ $# -lt 3 ]; then
+                echo "Usage: $0 chain \"<description>\" <model1> [model2] [model3] ..."
+                exit 1
+            fi
+            description="$2"
+            shift 2
+            execute_chain "$description" "$@"
+            ;;
+        "models")
+            list_models
+            ;;
+        "health")
+            health_check
+            ;;
+        *)
+            echo "Mirador AI Orchestration System v2.0"
+            echo ""
+            echo "Usage:"
+            echo "  $0 ask <model> \"<prompt>\"        - Single model query"
+            echo "  $0 chain \"<desc>\" <models...>     - Multi-model chain"
+            echo "  $0 models                          - List available models"
+            echo "  $0 health                          - System health check"
+            echo ""
+            echo "Examples:"
+            echo "  $0 ask decision_simplifier_v2 \"What should I focus on today?\""
+            echo "  $0 chain \"Assess touring readiness\" guitar_tone_architect performance_anxiety_coach decision_simplifier_v2"
+            echo ""
+            ;;
+    esac
+}
+
+# Execute main function with all arguments
+main "$@"

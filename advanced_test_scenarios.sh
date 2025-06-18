@@ -1,11 +1,11 @@
-#!/bin/bash
+
 
 echo "============================================="
 echo "MIRADOR ADVANCED TEST SCENARIOS"
 echo "============================================="
 echo ""
 
-# Function to run and log
+
 run_scenario() {
     local category="$1"
     local description="$2"
@@ -19,7 +19,7 @@ run_scenario() {
     sleep 3
 }
 
-# SCENARIO SET 1: COMPLEX MULTI-DOMAIN INTEGRATION
+
 echo "🌐 COMPLEX MULTI-DOMAIN SCENARIOS"
 echo "================================="
 
@@ -29,7 +29,7 @@ run_scenario "INTEGRATED" "Career + Real Estate + Finance Integration" \
 run_scenario "INTEGRATED" "Family + Business + Education Planning" \
 "mirador-ez chain 'Planning to start a family business while homeschooling 2 children. Need integrated strategy for business setup, education planning, and family financial optimization' financial_planning_expert_v5 louisville_expert_v2 enhanced_agent_fast_v6"
 
-# SCENARIO SET 2: CRISIS & OPPORTUNITY SCENARIOS
+
 echo ""
 echo "🚨 CRISIS & OPPORTUNITY SCENARIOS"
 echo "================================="
@@ -40,7 +40,7 @@ run_scenario "CRISIS" "Job Loss Recovery Strategy" \
 run_scenario "OPPORTUNITY" "Inheritance Investment Strategy" \
 "mirador-ez chain 'Inherited 250k unexpectedly. Create comprehensive investment and life optimization strategy considering taxes, lifestyle changes, and long-term wealth building' financial_planning_expert_v5 enhanced_agent_fast_v6"
 
-# SCENARIO SET 3: LOCATION-SPECIFIC DEEP DIVES
+
 echo ""
 echo "📍 LOCATION-SPECIFIC DEEP DIVES"
 echo "================================"
@@ -51,7 +51,7 @@ run_scenario "LOUISVILLE" "Louisville Neighborhood Arbitrage" \
 run_scenario "LOUISVILLE" "Local Business Ecosystem Analysis" \
 "mirador-ez chain 'Map the Louisville business ecosystem for tech startups including funding sources, accelerators, networking groups, and growth opportunities' louisville_expert_v2 enhanced_agent_fast_v6"
 
-# SCENARIO SET 4: UNCONVENTIONAL WEALTH STRATEGIES
+
 echo ""
 echo "💎 UNCONVENTIONAL WEALTH STRATEGIES"
 echo "==================================="
@@ -62,7 +62,7 @@ run_scenario "ALTERNATIVE" "Alternative Income Streams Stack" \
 run_scenario "ALTERNATIVE" "Micro-Business Portfolio Strategy" \
 "mirador-ez chain 'Create strategy for building portfolio of 5 micro-businesses each generating 2-3k monthly with minimal time investment' financial_planning_expert_v5 enhanced_agent_fast_v6"
 
-# SCENARIO SET 5: LIFE TRANSITION SCENARIOS
+
 echo ""
 echo "🔄 LIFE TRANSITION SCENARIOS"
 echo "============================"

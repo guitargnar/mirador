@@ -1,9 +1,9 @@
-# Mirador with Memory - Enhances existing functionality with learning
+
 
 MIRADOR_HOME="$HOME/ai_framework_git"
 MEMORY_PY="$MIRADOR_HOME/mirador_memory.py"
 
-# Initialize memory system if needed
+
 init_memory() {
     if [ ! -f "$MIRADOR_HOME/mirador_memory.db" ]; then
         echo "Initializing Mirador memory system..."
@@ -11,14 +11,14 @@ init_memory() {
     fi
 }
 
-# Log analysis start
+
 log_start() {
     local query="$1"
     local models="$2"
     echo "$query|$models|$(date +%s)" > "$MIRADOR_HOME/.current_analysis"
 }
 
-# Log analysis completion
+
 log_completion() {
     local output_path="$1"
     local quality_score="$2"
@@ -31,7 +31,7 @@ log_completion() {
         local end_time=$(date +%s)
         local exec_time=$((end_time - start_time))
         
-        # Log to memory system
+        
         python3 -c "
 from mirador_memory import MiradorMemory
 memory = MiradorMemory()
@@ -42,7 +42,7 @@ memory.close()
     fi
 }
 
-# Check for similar past analyses
+
 check_history() {
     local query="$1"
     python3 -c "
@@ -60,7 +60,7 @@ memory.close()
 "
 }
 
-# Main execution wrapper
+
 run_with_memory() {
     local command="$1"
     shift
@@ -83,7 +83,7 @@ run_with_memory() {
             check_history "$query"
             log_start "$query" "$models"
             mirador-ez chain "$query" $models
-            # Extract output path from mirador-ez output
+            
             local output_path=$(mirador-ez chain "$query" $models | grep "Results saved to:" | awk '{print $4}')
             log_completion "$output_path" "0.7"
             ;;
@@ -103,5 +103,5 @@ memory.close()
     esac
 }
 
-# Execute
+
 run_with_memory "$@"

@@ -1,6 +1,6 @@
-#!/bin/bash
 
-if [ $# -eq 0 ]; then
+
+if [ $
     echo "Usage: $0 <backup_directory>"
     echo "Available backups:"
     ls -d mirador_backup_* 2>/dev/null || echo "No backups found"
@@ -17,7 +17,7 @@ fi
 echo "=== Mirador Model Restoration ==="
 echo "Restoring from: $BACKUP_DIR"
 
-# Restore model files
+
 if ls "$BACKUP_DIR"/*.modelfile 1> /dev/null 2>&1; then
     echo "Restoring model files..."
     for modelfile in "$BACKUP_DIR"/*.modelfile; do
@@ -25,7 +25,7 @@ if ls "$BACKUP_DIR"/*.modelfile 1> /dev/null 2>&1; then
         cp "$modelfile" .
         echo "Restored: $filename"
         
-        # Recreate the model in Ollama
+        
         model_name="${filename%.modelfile}"
         echo "Recreating model: $model_name"
         ollama create "$model_name" -f "$filename"
@@ -34,7 +34,7 @@ else
     echo "No model files found in backup"
 fi
 
-# Restore documentation
+
 if ls "$BACKUP_DIR"/*.md 1> /dev/null 2>&1; then
     echo "Restoring documentation..."
     cp "$BACKUP_DIR"/*.md .

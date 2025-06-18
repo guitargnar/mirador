@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "=== MIRADOR SYSTEM VALIDATION ==="
 echo "Date: $(date)"
