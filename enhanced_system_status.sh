@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== Enhanced Mirador System Status ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Your existing system check
+
 ./version_info.sh
 
 echo ""
@@ -36,13 +36,13 @@ fi
 echo ""
 echo "=== System Optimization Recommendations ==="
 mirador-ez ask mirador_system_specialist "Analyze current system performance and suggest immediate optimizations"
-#!/bin/bash
+
 
 echo "=== Enhanced Mirador System Status ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Your existing system check
+
 ./version_info.sh
 
 echo ""

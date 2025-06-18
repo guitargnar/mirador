@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "DECISION TRACKING LOG" >> ~/ai_framework_git/decision_log.md
 echo "Date: $(date)" >> ~/ai_framework_git/decision_log.md

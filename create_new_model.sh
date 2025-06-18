@@ -1,6 +1,6 @@
-#!/bin/bash
 
-if [ $# -lt 2 ]; then
+
+if [ $
     echo "Usage: $0 <model_name> <base_model> [description]"
     echo "Example: $0 parenting_expert llama3.2_balanced 'JCPS and child development specialist'"
     exit 1
@@ -15,7 +15,7 @@ echo "Model Name: $MODEL_NAME"
 echo "Base Model: $BASE_MODEL"
 echo "Description: $DESCRIPTION"
 
-# Create model file template
+
 cat > "${MODEL_NAME}.modelfile" << MODELEOF
 FROM $BASE_MODEL
 

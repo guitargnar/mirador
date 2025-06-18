@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "============================================="
 echo "📊 MIRADOR INSIGHTS DASHBOARD"
@@ -9,7 +9,7 @@ echo ""
 OUTPUT_DIR="$HOME/ai_framework_git/outputs"
 INSIGHTS_BASE="$HOME/ai_framework_git/actionable_insights"
 
-# Key metrics
+
 echo "📈 KEY METRICS:"
 echo "=============="
 TOTAL_CHAINS=$(find "$OUTPUT_DIR" -type d -name "chain_*" 2>/dev/null | wc -l)
@@ -21,7 +21,7 @@ echo "Total words analyzed: $TOTAL_WORDS"
 echo "Chains in last 24h: $RECENT_CHAINS"
 echo ""
 
-# Domain coverage
+
 echo "🎯 DOMAIN COVERAGE:"
 echo "=================="
 declare -A domains=(
@@ -44,14 +44,14 @@ done
 echo ""
 echo "💰 VALUE IDENTIFICATION:"
 echo "======================"
-# Count specific value mentions
+
 HIGH_VALUE=$(find "$OUTPUT_DIR" -name "summary.md" -exec grep -l "\$[0-9]\{6,\}" {} \; 2>/dev/null | wc -l)
 MED_VALUE=$(find "$OUTPUT_DIR" -name "summary.md" -exec grep -l "\$[0-9]\{5\}" {} \; 2>/dev/null | wc -l)
 echo "High-value opportunities (>$100k): $HIGH_VALUE"
 echo "Medium-value opportunities ($10-100k): $MED_VALUE"
 echo ""
 
-# Recent high-value insights
+
 echo "🌟 RECENT HIGH-VALUE INSIGHTS:"
 echo "============================="
 find "$OUTPUT_DIR" -name "summary.md" -mtime -7 -exec grep -l "\$[0-9]\{5,\}" {} \; 2>/dev/null | \

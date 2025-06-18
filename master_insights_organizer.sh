@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "============================================="
 echo "MIRADOR MASTER INSIGHTS ORGANIZER"
@@ -8,42 +8,42 @@ echo ""
 OUTPUT_DIR="$HOME/ai_framework_git/outputs"
 INSIGHTS_BASE="$HOME/ai_framework_git/actionable_insights"
 
-# Create organized directory structure
+
 mkdir -p "$INSIGHTS_BASE"/{immediate,short_term,long_term}
 mkdir -p "$INSIGHTS_BASE"/{financial,career,business,real_estate,education,health,lifestyle}
 mkdir -p "$INSIGHTS_BASE"/by_value/{under_10k,10k_50k,50k_100k,over_100k}
 
-# Function to categorize insights
+
 categorize_insight() {
     local summary="$1"
     local base_name=$(basename $(dirname "$summary"))
     
-    # Extract key information
+    
     PROMPT=$(grep -A2 "Initial Prompt" "$summary" 2>/dev/null | tail -1)
     
-    # Create insight file
+    
     INSIGHT_FILE="$INSIGHTS_BASE/all_insights/${base_name}.md"
     mkdir -p "$INSIGHTS_BASE/all_insights"
     
     cat > "$INSIGHT_FILE" << INSIGHT_HEADER
-# Insight: $base_name
+
 Generated: $(date)
 
-## Original Query:
+
 $PROMPT
 
-## Key Takeaways:
+
 INSIGHT_HEADER
 
-    # Extract numbered items
+    
     grep -E "^[0-9]+\." "$summary" >> "$INSIGHT_FILE" 2>/dev/null
     
-    # Extract action items
+    
     echo "" >> "$INSIGHT_FILE"
-    echo "## Action Items:" >> "$INSIGHT_FILE"
+    echo "
     sed -n '/Action Items.*:/,/^$/p' "$summary" | grep -v "Action Items" >> "$INSIGHT_FILE" 2>/dev/null
     
-    # Categorize by timeline
+    
     if grep -qi "immediate\|today\|now\|asap" "$summary"; then
         ln -sf "$INSIGHT_FILE" "$INSIGHTS_BASE/immediate/"
     elif grep -qi "month\|weeks\|30 days\|90 days" "$summary"; then
@@ -52,7 +52,7 @@ INSIGHT_HEADER
         ln -sf "$INSIGHT_FILE" "$INSIGHTS_BASE/long_term/"
     fi
     
-    # Categorize by domain
+    
     if grep -qi "financial\|money\|investment\|wealth" "$summary"; then
         ln -sf "$INSIGHT_FILE" "$INSIGHTS_BASE/financial/"
     fi
@@ -66,7 +66,7 @@ INSIGHT_HEADER
         ln -sf "$INSIGHT_FILE" "$INSIGHTS_BASE/real_estate/"
     fi
     
-    # Categorize by value
+    
     if grep -E "\$[0-9]{6,}" "$summary" >/dev/null 2>&1; then
         ln -sf "$INSIGHT_FILE" "$INSIGHTS_BASE/by_value/over_100k/"
     elif grep -E "\$[5-9][0-9]{4}" "$summary" >/dev/null 2>&1; then
@@ -78,21 +78,21 @@ INSIGHT_HEADER
     fi
 }
 
-# Process all summaries
+
 echo "🔍 Processing all insights..."
 find "$OUTPUT_DIR" -name "summary.md" -print0 2>/dev/null | while IFS= read -r -d '' summary; do
     categorize_insight "$summary"
 done
 
-# Generate master index
+
 echo ""
 echo "📚 Generating master index..."
 
 cat > "$INSIGHTS_BASE/MASTER_INDEX.md" << 'INDEX_HEADER'
-# MIRADOR ACTIONABLE INSIGHTS MASTER INDEX
+
 Generated: DATE_PLACEHOLDER
 
-## Overview
+
 This index organizes all insights extracted from Mirador chains for easy reference and action.
 
 ---
@@ -101,10 +101,10 @@ INDEX_HEADER
 
 sed -i '' "s/DATE_PLACEHOLDER/$(date)/" "$INSIGHTS_BASE/MASTER_INDEX.md"
 
-# Add category summaries
+
 for category in immediate short_term long_term financial career business real_estate; do
     COUNT=$(ls "$INSIGHTS_BASE/$category" 2>/dev/null | wc -l)
-    echo "### ${category} ($COUNT insights)" >> "$INSIGHTS_BASE/MASTER_INDEX.md"
+    echo "
     echo "" >> "$INSIGHTS_BASE/MASTER_INDEX.md"
     
     ls "$INSIGHTS_BASE/$category" 2>/dev/null | head -5 | while read file; do

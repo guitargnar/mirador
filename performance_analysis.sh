@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "=== MIRADOR PERFORMANCE ANALYSIS ==="
 echo "Date: $(date)"
@@ -7,7 +7,7 @@ echo ""
 echo "1. MODEL PERFORMANCE COMPARISON:"
 echo "V3 vs V4 Enhanced Agent Performance:"
 
-# Count word additions/removals in recent chains
+
 echo ""
 echo "Recent Chain Content Analysis:"
 for chain in $(ls -t ~/ai_framework_git/outputs/chain_* | head -10); do
@@ -21,7 +21,7 @@ echo ""
 echo "2. OUTPUT QUALITY ASSESSMENT:"
 echo "Recent Comprehensive Analyses:"
 
-# Show recent chain types and content
+
 ls -t ~/ai_framework_git/outputs/chain_* | head -5 | while read chain; do
     if [ -f "$chain/summary.md" ]; then
         echo ""

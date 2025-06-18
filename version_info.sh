@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "=== Mirador System Version Information ==="
 echo "Timestamp: $(date)"

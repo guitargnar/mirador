@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== Mirador Performance Monitor ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Test individual model performance (macOS compatible)
+
 echo "Individual Model Performance:"
 
 echo "1. Enhanced Agent Fast V3:"

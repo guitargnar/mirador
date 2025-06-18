@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== ADVANCED MIRADOR OPPORTUNITY ANALYTICS ==="
 echo "Generated: $(date)"
 echo ""
 
-# Calculate comprehensive metrics
+
 output_dir="$HOME/ai_framework_git/outputs"
 total_chains=$(ls $output_dir/chain_*/summary.md 2>/dev/null | wc -l)
 total_words=$(find $output_dir -name "summary.md" -exec wc -w {} \; | awk '{sum+=$1} END {print sum}')
@@ -22,7 +22,7 @@ echo ""
 echo "💰 VALUE GENERATION ANALYSIS"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Categorize analyses by type
+
 business_strategies=$(find $output_dir -path "*business_strategies*" -name "summary.md" 2>/dev/null | wc -l)
 career_plans=$(find $output_dir -path "*career_plans*" -name "summary.md" 2>/dev/null | wc -l)
 financial_analyses=$(find $output_dir -name "summary.md" -exec grep -l "financial\|investment\|savings" {} \; 2>/dev/null | wc -l)
@@ -36,7 +36,7 @@ echo ""
 echo "🔥 HIGH-VALUE OPPORTUNITIES IDENTIFIED"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Find highest-value analyses (most words = most comprehensive)
+
 echo "Top 5 Most Comprehensive Analyses:"
 find $output_dir -name "summary.md" -exec wc -w {} \; 2>/dev/null | sort -nr | head -5 | while read words file; do
     chain_name=$(basename $(dirname "$file"))
@@ -60,7 +60,7 @@ echo "3. Track implementation results: ./track_mirador_roi.sh"
 echo "4. Generate opportunity dashboard: ./opportunity_dashboard.sh"
 echo ""
 
-# Generate actionable insights from recent analyses
+
 echo "💡 THIS WEEK'S OPPORTUNITY FOCUS"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 mirador-ez ask mirador_system_specialist "Based on recent analysis patterns, what are the top 3 immediate opportunities I should focus on this week?"

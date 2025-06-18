@@ -1,6 +1,6 @@
-#!/bin/bash
 
-if [ $# -eq 0 ]; then
+
+if [ $
     echo "Usage: $0 <model_name> [test_query]"
     echo "Available models:"
     ollama list | grep -E "(enhanced_agent|financial_planning|louisville_expert)"
@@ -16,7 +16,7 @@ echo "Query: $TEST_QUERY"
 echo "Timestamp: $(date)"
 echo ""
 
-# Test individual model performance
+
 echo "Testing individual model response..."
 start_time=$(date +%s)
 mirador-ez ask "$MODEL_NAME" "$TEST_QUERY" > "test_${MODEL_NAME}_$(date +%Y%m%d_%H%M%S).txt"

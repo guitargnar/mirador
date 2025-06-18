@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "====================================="
 echo "MIRADOR KNOWLEDGE BASE ANALYZER"
@@ -7,11 +7,11 @@ echo ""
 
 OUTPUT_DIR="$HOME/ai_framework_git/outputs"
 
-# Count chains by category
+
 echo "📊 KNOWLEDGE DOMAINS COVERED:"
 echo "============================"
 
-# Categories to analyze
+
 declare -A categories
 categories=(
     ["financial"]="finance|money|investment|wealth"
@@ -36,7 +36,7 @@ echo ""
 echo "📈 OPPORTUNITY METRICS:"
 echo "====================="
 
-# Count specific opportunity mentions
+
 echo "Income opportunities identified: $(find "$OUTPUT_DIR" -name "summary.md" -exec grep -i "income" {} \; 2>/dev/null | grep -c "opportunit")"
 echo "Investment opportunities found: $(find "$OUTPUT_DIR" -name "summary.md" -exec grep -i "invest" {} \; 2>/dev/null | grep -c "opportunit")"
 echo "Career advancement strategies: $(find "$OUTPUT_DIR" -name "summary.md" -exec grep -i "career" {} \; 2>/dev/null | grep -c "advancement\|strateg")"
@@ -46,7 +46,7 @@ echo ""
 echo "🎯 ACTIONABLE INSIGHTS:"
 echo "====================="
 
-# Extract numbered action items
+
 echo "Total action items generated:"
 find "$OUTPUT_DIR" -name "summary.md" -exec grep -E "^[0-9]+\.|^[-*]" {} \; 2>/dev/null | wc -l
 

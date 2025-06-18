@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 echo "============================================="
 echo "📊 VALIDATION RESULTS SUMMARY"
@@ -7,14 +7,14 @@ echo ""
 
 OUTPUT_DIR="$HOME/ai_framework_git/outputs"
 
-# Find the most recent validation report
+
 LATEST_REPORT=$(ls -t ~/ai_framework_git/VALIDATION_REPORT_*.md 2>/dev/null | head -1)
 
 if [ -f "$LATEST_REPORT" ]; then
     echo "📄 Viewing: $(basename $LATEST_REPORT)"
     echo ""
     
-    # Extract key metrics
+    
     echo "💰 FINANCIAL METRICS IDENTIFIED:"
     echo "==============================="
     grep -E "\$[0-9,]+" "$LATEST_REPORT" | sort -u | head -10
@@ -34,7 +34,7 @@ else
     echo "No validation report found. Run the validation suite first."
 fi
 
-# Also check recent chain outputs
+
 echo ""
 echo "📊 RECENT VALIDATION CHAINS:"
 echo "==========================="

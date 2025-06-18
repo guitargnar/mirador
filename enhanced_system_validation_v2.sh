@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== ENHANCED MIRADOR SYSTEM VALIDATION ==="
 echo "Date: $(date)"
 echo
 
-# Check models
+
 echo "1. Checking Enhanced Models:"
 for model in matthew_context_provider_v2 mirador_system_specialist_v2; do
     if ollama list | grep -q "$model"; then
@@ -14,15 +14,15 @@ for model in matthew_context_provider_v2 mirador_system_specialist_v2; do
     fi
 done
 
-# Test personality integration
+
 echo -e "\n2. Testing Personality Integration:"
 echo "Running context analysis..."
 
-# Create a temporary file to capture the full output
+
 TEMP_OUTPUT=$(mktemp)
 mirador-ez chain "What are my key personality traits?" matthew_context_provider_v2 decision_simplifier > "$TEMP_OUTPUT" 2>&1
 
-# Check the summary file instead
+
 LATEST_SUMMARY=$(ls -t outputs/*/summary.md | head -1)
 if [ -f "$LATEST_SUMMARY" ]; then
     if grep -q -i -E "openness|creative|agreeableness|conscientiousness|extraversion|neuroticism" "$LATEST_SUMMARY"; then
@@ -34,10 +34,10 @@ else
     echo "⚠️  Could not find summary file"
 fi
 
-# Clean up
+
 rm -f "$TEMP_OUTPUT"
 
-# Performance test
+
 echo -e "\n3. Running Personality-Optimized Chain:"
 time mirador-ez chain "Quick opportunity scan" matthew_context_provider_v2 decision_simplifier
 

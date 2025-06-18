@@ -1,8 +1,8 @@
-#!/bin/bash
+
 
 echo "=== Mirador Value Analysis ==="
 
-# Your existing output analysis enhanced
+
 output_dir="$HOME/ai_framework_git/outputs"
 
 if [ -d "$output_dir" ]; then
@@ -18,7 +18,7 @@ if [ -d "$output_dir" ]; then
     
     echo ""
     echo "Value Metrics:"
-    # Calculate time savings (assuming manual research = 3 hours per comprehensive analysis)
+    
     chain_count=$(ls $output_dir/chain_*/summary.md 2>/dev/null | wc -l)
     if [ $chain_count -gt 0 ]; then
         time_saved=$((chain_count * 3))

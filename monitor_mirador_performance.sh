@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== Mirador Performance Monitor ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Test individual model performance
+
 echo "Individual Model Performance:"
 echo "1. Enhanced Agent Fast V2:"
 time timeout 60s mirador-ez ask enhanced_agent_fast_v2 "Quick strategic analysis test" > /dev/null 2>&1
@@ -30,7 +30,7 @@ else
     echo "   ✗ Failed or timeout"
 fi
 
-# Test chain performance
+
 echo ""
 echo "Chain Performance:"
 echo "Testing 2-model chain..."

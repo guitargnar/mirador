@@ -1,10 +1,10 @@
-#!/bin/bash
+
 
 echo "=== Mirador Maintenance and Monitoring ==="
 echo "Timestamp: $(date)"
 echo ""
 
-# Create maintenance log directory
+
 mkdir -p maintenance_logs
 LOG_FILE="maintenance_logs/maintenance_$(date +%Y%m%d_%H%M%S).log"
 
@@ -14,7 +14,7 @@ exec 2>&1
 echo "Maintenance log: $LOG_FILE"
 echo ""
 
-# 1. System Health Check
+
 echo "1. System Health Check:"
 echo "   Checking disk space..."
 df -h | grep -E "/$|/home"
@@ -26,7 +26,7 @@ else
     echo "   ✗ Ollama service not running"
 fi
 
-# 2. Model Performance Check
+
 echo ""
 echo "2. Model Performance Check:"
 models=("enhanced_agent_fast_v2" "financial_planning_expert_v2" "louisville_expert_v2")
@@ -45,7 +45,7 @@ for model in "${models[@]}"; do
     fi
 done
 
-# 3. Chain Health Check
+
 echo ""
 echo "3. Chain Health Check:"
 echo "   Testing chain functionality..."
@@ -60,7 +60,7 @@ else
     echo "   ✗ Chain test: Failed or timeout"
 fi
 
-# 4. Accuracy Spot Check
+
 echo ""
 echo "4. Accuracy Spot Check:"
 echo "   Testing financial accuracy..."
@@ -74,7 +74,7 @@ fi
 
 rm -f temp_maintenance_accuracy.txt
 
-# 5. Generate Summary
+
 echo ""
 echo "5. Maintenance Summary:"
 echo "   Maintenance completed at: $(date)"

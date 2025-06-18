@@ -1,8 +1,8 @@
-#!/bin/bash
+
 
 echo "=== Comprehensive Mirador Performance Validation ==="
 
-# Test all your validated patterns
+
 echo "Testing Tier 1 Validated Patterns:"
 
 echo "1. Financial Foundation Pattern..."
