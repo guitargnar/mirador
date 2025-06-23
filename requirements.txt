@@ -19,7 +19,7 @@ numpy==1.26.4             # Numerical operations (optional)
 # Utilities
 python-dotenv==1.0.1      # Environment variable management
 pyyaml==6.0.1            # YAML configuration files
-requests==2.32.3          # HTTP requests (for future API integration)
+requests>=2.32.4          # HTTP requests (for future API integration)
 
 # Development Dependencies
 pytest==8.2.2             # Testing framework
