@@ -1,0 +1,10 @@
+2025-06-23 14:48:10 [INFO] Starting chain: Test optimization performance
+2025-06-23 14:48:10 [INFO] Models: matthew_context_provider_v3 financial_planning_expert_v6 enhanced_agent_enforcer
+2025-06-23 14:48:10 [INFO] Output directory: /Users/matthewscott/ai_framework_git/outputs/chain_20250623_144810
+2025-06-23 14:48:10 [INFO] Executing model 1/3: matthew_context_provider_v3
+2025-06-23 14:48:18 [INFO] ✓ matthew_context_provider_v3 completed
+2025-06-23 14:48:18 [INFO] Executing model 2/3: financial_planning_expert_v6
+2025-06-23 14:48:55 [INFO] ✓ financial_planning_expert_v6 completed
+2025-06-23 14:48:55 [INFO] Executing model 3/3: enhanced_agent_enforcer
+2025-06-23 14:49:00 [INFO] ✓ enhanced_agent_enforcer completed
+./mirador-ez: line 111: model_outputs: bad array subscript

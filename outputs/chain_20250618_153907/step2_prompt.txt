@@ -1,0 +1,75 @@
+Previous output:
+Here's a performance test chain to simulate various user requests and scenarios:
+
+**Test Case 1: Clear Income Amount**
+
+* User Request: "I make $75,000 per year"
+* Expected Output:
+	+ "Based on your specified income of $75,000..."
+	+ Comprehensive budget framework with Louisville-specific considerations
+	+ Implementation steps with local resources (e.g., tax credits, housing assistance)
+	+ Professional consultation recommendations
+
+**Test Case 2: Income Amount in Different Format**
+
+* User Request: "$75,000 per annum"
+* Expected Output:
+	+ "Based on your specified income of $75,000..."
+	+ Comprehensive budget framework with Louisville-specific considerations
+	+ Implementation steps with local resources (e.g., tax credits, housing assistance)
+	+ Professional consultation recommendations
+
+**Test Case 3: No Clear Income Amount**
+
+* User Request: "I make a good salary"
+* Expected Output:
+	+ Clarification question: "Can you please provide more information about your income?"
+	+ Follow-up question to confirm or deny the presence of an income amount
+	+ If no clear income found, ask for clarification again
+
+**Test Case 4: Income Amount with Unit (e.g., $100/hour)**
+
+* User Request: "$100 per hour"
+* Expected Output:
+	+ "Based on your specified income of $100..."
+	+ Comprehensive budget framework with Louisville-specific considerations
+	+ Implementation steps with local resources (e.g., tax credits, housing assistance)
+	+ Professional consultation recommendations
+
+**Test Case 5: Income Amount with Decimal Points**
+
+* User Request: "$75.50 per hour"
+* Expected Output:
+	+ "Based on your specified income of $75.50..."
+	+ Comprehensive budget framework with Louisville-specific considerations
+	+ Implementation steps with local resources (e.g., tax credits, housing assistance)
+	+ Professional consultation recommendations
+
+**Test Case 6: Multiple Income Amounts**
+
+* User Request: "$100,000 per year + $20/hour"
+* Expected Output:
+	+ "Based on your specified income of $100,000..."
+	+ Comprehensive budget framework with Louisville-specific considerations
+	+ Implementation steps with local resources (e.g., tax credits, housing assistance)
+	+ Follow-up question to confirm the presence of a second income amount
+
+**Test Case 7: Edge Case - Zero Income**
+
+* User Request: "I make $0 per year"
+* Expected Output:
+	+ Clarification question: "Can you please provide more information about your income?"
+	+ Follow-up question to confirm or deny the presence of an income amount
+	+ If no clear income found, ask for clarification again
+
+**Test Case 8: Edge Case - Negative Income**
+
+* User Request: "-$100 per hour"
+* Expected Output:
+	+ Clarification question: "Can you please provide more information about your income?"
+	+ Follow-up question to confirm or deny the presence of an income amount
+	+ If no clear income found, ask for clarification again
+
+By simulating various user requests and scenarios, we can ensure that our financial planning system is robust and provides accurate guidance to users in Louisville/Jefferson County.
+
+Please build upon this information and provide further insights.

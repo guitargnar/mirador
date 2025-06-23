@@ -1,0 +1,43 @@
+**Situation Assessment**
+
+To optimize career development with Mirador, I'd like to understand your current goals, challenges, and existing workflow. Can you please share:
+
+1. What specific career development area do you want to focus on (e.g., skill acquisition, networking, job search)?
+2. What are your primary responsibilities or roles in your current or desired role?
+3. What tools or systems do you currently use for career development (e.g., LinkedIn, resume building, interview preparation)?
+4. Are there any specific pain points or challenges you're facing in your career development journey?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I recommend the following approach:
+
+1. **Enhanced Agent Enforcer**: Utilize the Enhanced Agent Enforcer model to create a strategic plan for career development. This model will help identify key areas for improvement and provide actionable recommendations.
+2. **Decision Simplifier**: Leverage the Decision Simplifier model to prioritize tasks and focus on high-impact activities that align with your career goals.
+3. **Financial Planning Expert**: Engage with the Financial Planning Expert model to create a personalized budget and financial plan that supports your career development objectives.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested sequence of models to help you achieve your career development goals:
+
+1. **Situation Assessment** (Matthew Context Provider): Gather information about your current situation, including your strengths, weaknesses, and opportunities.
+2. **Career Development Plan** (Enhanced Agent Enforcer): Create a strategic plan for career development based on your assessment.
+3. **Prioritized Task List** (Decision Simplifier): Generate a prioritized task list to focus on high-impact activities that align with your career goals.
+4. **Financial Planning** (Financial Planning Expert): Develop a personalized budget and financial plan to support your career development objectives.
+
+**Expected Outcome Prediction**
+
+By utilizing this approach, you can expect to:
+
+* Clarify your career development goals and priorities
+* Create a strategic plan for achieving your objectives
+* Focus on high-impact activities that drive progress
+* Develop a personalized financial plan that supports your career growth
+
+**Alternative Strategies (if applicable)**
+
+If you'd like to explore alternative strategies, I can suggest the following:
+
+* **Chain Design Optimization**: We can optimize the chain design to improve the flow of information and tasks between models.
+* **Prompt Engineering Guidance**: I can provide guidance on crafting effective prompts to elicit the desired responses from each model.
+
+Please let me know if you'd like to proceed with this approach or explore alternative strategies.

@@ -1,0 +1,55 @@
+Previous output:
+**Mirador Ecosystem Context**
+
+I'm excited to dive deeper into my goals and objectives within the Mirador ecosystem, specifically in relation to my work as a Humana Risk Management Professional II. My primary objective is to leverage the Mirador system to optimize financial planning, explore local resources, and streamline decision-making processes.
+
+**Current Utilization Patterns**
+
+Currently, I'm interacting with the following specialist models:
+
+1. **financial_planning_expert_v6**: This model provides valuable insights into Medicare compliance and risk management strategies.
+2. **louisville_expert_v2**: Although not specifically tailored to my role, this model offers a general understanding of Louisville's local resources, regulations, and opportunities.
+
+**Goals and Objectives**
+
+My specific goals within the Mirador ecosystem are:
+
+1. Enhance my knowledge of Medicare compliance and risk management strategies.
+2. Identify relevant local resources, regulations, and opportunities for improving my work as a Humana Risk Management Professional II.
+3. Streamline decision-making processes by leveraging the Mirador system's expert models.
+
+**Optimal Approach Recommendation**
+
+Based on my goals and current usage patterns, I recommend the following approach:
+
+1. **Leverage the financial_planning_expert_v6 model**: Utilize this model to gain deeper insights into Medicare compliance and risk management strategies.
+2. **Integrate with the louisville_expert_v2 model**: Combine the financial planning expert with local resources, regulations, and opportunities to create a comprehensive understanding of Louisville's healthcare landscape.
+3. **Enhance decision_simplifier**: Use this model to generate action plans and prioritize decisions based on my specific goals.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested sequence for achieving my objectives:
+
+1. Run the financial_planning_expert_v6 model to gather initial insights into Medicare compliance and risk management strategies.
+2. Utilize the louisville_expert_v2 model to gather information on local resources, regulations, and opportunities.
+3. Feed the output from both models into the decision_simplifier model to generate a prioritized action plan.
+
+**Expected Outcome Prediction**
+
+By leveraging these specialist models in sequence, I can expect to:
+
+* Gain a deeper understanding of Medicare compliance and risk management strategies
+* Identify relevant local resources, regulations, and opportunities for improving my work as a Humana Risk Management Professional II
+* Receive actionable recommendations for achieving my objectives
+
+**Alternative Strategies (if applicable)**
+
+If I'd like to explore alternative approaches, consider the following options:
+
+* Utilize the enhanced_agent_enforcer model to create a more comprehensive strategy.
+* Run the matthew_context_provider model to better understand my personal context and situation.
+* Experiment with different prompt structures for the decision_simplifier model to optimize results.
+
+Please let me know if you'd like to proceed with this approach or explore alternative strategies.
+
+Please build upon this information and provide further insights.

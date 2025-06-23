@@ -1,0 +1,80 @@
+Previous output:
+**Performance Test Chain**
+
+To ensure the accuracy and efficiency of our income processing rules, I'll guide you through a series of tests.
+
+**Test 1: Clear Income Amount**
+
+* Input: `$50,000`
+* Expected Output:
+	+ Cleaned amount: `50000`
+	+ Response structure:
+		- "Based on your specified income of $50,000..."
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+**Test 2: Income Amount with Units (e.g., per hour)**
+
+* Input: `$25/hour`
+* Expected Output:
+	+ Cleaned amount: `25` (remove units)
+	+ Response structure:
+		- "Based on your specified income of $25..."
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+**Test 3: No Clear Income Amount**
+
+* Input: `hello world`
+* Expected Output:
+	+ Clarification request: "Could you please provide a clear income amount?"
+	+ Response structure:
+		- "We couldn't extract an income amount from your input. Could you please provide a clear income amount?"
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+**Test 4: Income Amount with Comma Separation**
+
+* Input: `$1,000,000`
+* Expected Output:
+	+ Cleaned amount: `1000000`
+	+ Response structure:
+		- "Based on your specified income of $1,000,000..."
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+**Test 5: Income Amount with Thousand Separator (e.g., k)**
+
+* Input: `$100k`
+* Expected Output:
+	+ Cleaned amount: `100000` (remove 'k')
+	+ Response structure:
+		- "Based on your specified income of $100,000..."
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+**Test 6: Edge Case - Zero Income Amount**
+
+* Input: `$0`
+* Expected Output:
+	+ Clarification request: "Could you please provide a non-zero income amount?"
+	+ Response structure:
+		- "We couldn't extract an income amount from your input. Could you please provide a non-zero income amount?"
+		- Comprehensive budget framework
+		- Louisville-specific considerations
+		- Implementation steps with local resources
+		- Professional consultation recommendations
+
+By passing these performance tests, we can ensure that our income processing rules accurately extract and process income amounts, providing comprehensive financial guidance to users in the Louisville/Jefferson County context.
+
+Please build upon this information and provide further insights.

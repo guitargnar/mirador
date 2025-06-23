@@ -1,16 +1,12 @@
 <div align="center">
-  <img src="assets/brand/logos/logo.svg" alt="Mirador Logo" width="200"/>
+  <img src="assets/brand/logo/mirador-logo.svg" alt="Mirador Logo" width="300"/>
   
-  # Mirador AI Orchestration Framework
+  **A sophisticated multi-agent AI system that chains specialized language models for personalized, actionable insights aligned with your unique personality, goals, and context.**
   
-  **Observe. Adapt. Remain.**
-  
-  [![Version](https://img.shields.io/badge/version-2.0-success)](https://github.com/guitargnar/mirador)
-  [![License](https://img.shields.io/badge/license-Private-red)](LICENSE)
-  [![AI Models](https://img.shields.io/badge/models-79+-blue)](docs/models.md)
-  [![Response Time](https://img.shields.io/badge/response-5--25s-brightgreen)](docs/performance.md)
-  
-  *A sophisticated multi-agent AI system that chains specialized language models for personalized, actionable insights aligned with your unique personality, goals, and context.*
+  [![Version](https://img.shields.io/badge/version-2.0-7B9E89)](https://github.com/guitargnar/mirador)
+  [![License](https://img.shields.io/badge/license-Private-D17A47)](LICENSE)
+  [![AI Models](https://img.shields.io/badge/models-79+-1B3A33)](docs/models.md)
+  [![Response Time](https://img.shields.io/badge/response-5--25s-7B9E89)](docs/performance.md)
 </div>
 
 ---

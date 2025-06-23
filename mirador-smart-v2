@@ -1,6 +1,15 @@
 #!/bin/bash
 # Smart Mirador wrapper with fixed decision simplifier
 
+# Source branded header
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/scripts/branded_header.sh" 2>/dev/null || true
+
+# Display minimal header
+if command -v mirador_header_mini &> /dev/null; then
+    mirador_header_mini
+fi
+
 QUERY="$1"
 
 # Smart chain selection based on query content

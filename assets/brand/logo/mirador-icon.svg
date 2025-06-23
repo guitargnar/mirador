@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified watchtower icon -->
+  <g id="icon">
+    <!-- Background circle -->
+    <circle cx="50" cy="50" r="45" fill="#1B3A33"/>
+    
+    <!-- Tower structure -->
+    <path d="M 35 50 L 32 75 L 68 75 L 65 50 Z" fill="#E8DCC6"/>
+    
+    <!-- Tower top -->
+    <rect x="30" y="42" width="40" height="10" rx="1" fill="#E8DCC6"/>
+    
+    <!-- Pillars -->
+    <rect x="35" y="50" width="3" height="25" fill="#7B9E89"/>
+    <rect x="48" y="50" width="3" height="25" fill="#7B9E89"/>
+    <rect x="62" y="50" width="3" height="25" fill="#7B9E89"/>
+    
+    <!-- Roof -->
+    <path d="M 28 42 L 50 30 L 72 42 Z" fill="#D17A47"/>
+    
+    <!-- Observation beams -->
+    <g opacity="0.4">
+      <path d="M 50 50 L 20 80 L 25 80 Z" fill="#E8DCC6"/>
+      <path d="M 50 50 L 75 80 L 80 80 Z" fill="#E8DCC6"/>
+    </g>
+  </g>
+</svg>
