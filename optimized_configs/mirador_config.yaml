@@ -1,0 +1,217 @@
+mirador_config:
+  chain_routing:
+    decision:
+      balanced: comprehensive_analysis
+      comprehensive: quality_assured
+      quick: decision_quick
+    financial:
+      balanced: financial_balanced
+      comprehensive: strategic_planning
+      quick: financial_quick
+    local:
+      balanced: comprehensive_analysis
+      comprehensive: life_optimization
+      quick: local_quick
+  chains:
+    balanced_chains:
+      comprehensive_analysis:
+      - matthew_context_provider_v2
+      - financial_planning_expert_v6
+      - louisville_expert_v3
+      - decision_simplifier_v2
+      financial_balanced:
+      - matthew_context_provider_v2
+      - financial_planning_expert_v6
+      - enhanced_agent_fast_v6
+      - decision_simplifier_v2
+      quality_assured:
+      - matthew_context_provider_v2
+      - mirador_system_specialist_v2
+      - enhanced_agent_enforcer_v2
+      - decision_simplifier_v2
+    comprehensive_chains:
+      life_optimization:
+      - matthew_context_provider_v2
+      - financial_planning_expert_v6
+      - health_wellness_optimizer
+      - productivity_optimizer
+      - enhanced_agent_enforcer_v2
+      - decision_simplifier_v2
+      strategic_planning:
+      - matthew_context_provider_v2
+      - financial_planning_expert_v6
+      - louisville_expert_v3
+      - enhanced_agent_enforcer_v2
+      - mirador_system_specialist_v2
+      - decision_simplifier_v2
+    quick_chains:
+      decision_quick:
+      - matthew_context_provider_v2
+      - decision_simplifier_v2
+      financial_quick:
+      - matthew_context_provider_v2
+      - financial_planning_expert_fast
+      - decision_simplifier_v2
+      local_quick:
+      - matthew_context_provider_v2
+      - louisville_expert_v3
+      - decision_simplifier_v2
+  description: Optimized Mirador configuration with consolidated model set
+  execution_settings:
+    context_optimization: true
+    default_timeout: 45
+    max_retries: 2
+    parallel_execution: true
+    quality_validation: true
+  generated: '2025-06-19T09:52:51.311365'
+  models:
+    content_specialists:
+      health_wellness_optimizer:
+        base_model: llama3.2_balanced
+        category: domain_specialist
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.5'
+          top_p: '0.9'
+        priority: low
+        role: Health and wellness optimization guidance
+        temperature: 0.5
+      linkedin_content_expert:
+        base_model: llama3.2_balanced
+        category: content_creation
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.0'
+          temperature: '0.7'
+          top_p: '0.9'
+        priority: medium
+        role: Professional content creation and communication
+        temperature: 0.7
+      productivity_optimizer:
+        base_model: llama3.2_balanced
+        category: domain_specialist
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.5'
+          top_p: '0.9'
+        priority: low
+        role: Productivity and efficiency enhancement
+        temperature: 0.5
+      real_estate_analyzer:
+        base_model: llama3.2_balanced
+        category: domain_specialist
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.4'
+          top_p: '0.8'
+        priority: low
+        role: Real estate analysis and investment evaluation
+        temperature: 0.4
+    core_models:
+      decision_simplifier_v2:
+        base_model: llama3.2_balanced
+        category: decision_support
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.4'
+          top_p: '0.8'
+        priority: high
+        role: Final synthesis and action-oriented recommendations
+        temperature: 0.4
+      matthew_context_provider_v2:
+        base_model: llama3.2_balanced
+        category: context_provider
+        context_window: 3072
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.5'
+          top_p: '0.9'
+        priority: high
+        role: Personal context and preference provider
+        temperature: 0.5
+    domain_specialists:
+      financial_planning_expert_fast:
+        base_model: llama3.2_balanced
+        category: financial_planning
+        context_window: 1536
+        parameters:
+          repeat_penalty: '1.0'
+          temperature: '0.5'
+          top_p: '0.9'
+        priority: medium
+        role: Quick financial queries and calculations
+        temperature: 0.5
+      financial_planning_expert_v6:
+        base_model: llama3.2_balanced
+        category: financial_planning
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.4'
+          top_p: '0.8'
+        priority: high
+        role: Comprehensive financial analysis and planning
+        temperature: 0.4
+      louisville_expert_v3:
+        base_model: llama3.2_balanced
+        category: local_expert
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.6'
+          top_p: '0.9'
+        priority: high
+        role: Louisville-specific context and opportunities
+        temperature: 0.6
+    quality_assurance:
+      enhanced_agent_enforcer_v2:
+        base_model: llama3.2_balanced
+        category: enhanced_agent
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.2'
+          temperature: '0.3'
+          top_p: '0.8'
+        priority: high
+        role: Quality validation and consistency checking
+        temperature: 0.3
+      enhanced_agent_fast_v6:
+        base_model: llama3.2_balanced
+        category: enhanced_agent
+        context_window: 1536
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.4'
+          top_p: '0.8'
+        priority: medium
+        role: Quick validation and error checking
+        temperature: 0.4
+    system_optimization:
+      mirador_system_specialist_v2:
+        base_model: llama3.2_balanced
+        category: system_specialist
+        context_window: 2048
+        parameters:
+          repeat_penalty: '1.1'
+          temperature: '0.5'
+          top_p: '0.9'
+        priority: medium
+        role: Meta-analysis and system optimization
+        temperature: 0.5
+  performance_settings:
+    cache_responses: true
+    cache_ttl_minutes: 30
+    max_concurrent_models: 3
+    memory_limit_mb: 4096
+    response_streaming: true
+  quality_assurance:
+    actionability_scoring: true
+    consistency_checks: true
+    enabled: true
+    fact_checking: true
+    validation_model: enhanced_agent_enforcer_v2
+  version: 2.0_optimized

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Mirador AI Framework Launcher
+
+# Find the source directory
+if [ -f "$(dirname "$0")/src/mirador.py" ]; then
+    # Running from the repository root
+    MIRADOR_SRC="$(dirname "$0")/src/mirador.py"
+elif [ -f "$(dirname "$0")/../src/mirador.py" ]; then
+    # Running from the scripts directory
+    MIRADOR_SRC="$(dirname "$0")/../src/mirador.py"
+else
+    # Default to the git repository location
+    MIRADOR_SRC="${HOME}/ai_framework_git/src/mirador.py"
+fi
+
+# Make sure the script is executable
+chmod +x "$MIRADOR_SRC"
+
+# Run Mirador
+python3 "$MIRADOR_SRC" "$@"

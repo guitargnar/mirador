@@ -1,0 +1,5 @@
+Model: code_reviewer_fix
+Timestamp: Tue Jun 17 11:36:46 EDT 2025
+Prompt: Review and improve the following code, focusing on security, performance, and best practices: function getUserData(userId) { const query = 'SELECT * FROM users WHERE id = ' + userId; return db.query(query).then(results => { if (results.length > 0) { return results[0]; } else { return null; } }).catch(err => { console.log('Database error: ' + err); }); } function authenticateUser(username, password) { return getUserData(username).then(user => { if (user && user.password === password) { const token = createToken(username); return {success: true, token: token}; } else { return {success: false, message: 'Invalid credentials'}; } }); } function createToken(username) { return 'token_' + username + '_' + (new Date()).getTime(); }
+Response size:       45 bytes
+Response time:  nanoseconds

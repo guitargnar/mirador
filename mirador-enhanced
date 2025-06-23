@@ -1,0 +1,151 @@
+#!/bin/bash
+# Enhanced Mirador with timeout and error handling
+
+set -euo pipefail
+
+# Configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_FILE="${HOME}/.mirador/logs/mirador-$(date +%Y%m%d).log"
+DEFAULT_TIMEOUT=120
+MAX_RETRIES=3
+
+# Ensure log directory exists
+mkdir -p "$(dirname "$LOG_FILE")"
+
+# Logging function
+log() {
+    local level="$1"
+    shift
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $*" | tee -a "$LOG_FILE"
+}
+
+# Cleanup function
+cleanup_processes() {
+    log "INFO" "Cleaning up background processes"
+    pkill -f "ollama.*$(basename "$0")" 2>/dev/null || true
+}
+
+# Signal handlers
+trap 'log "INFO" "Received SIGINT, cleaning up..."; cleanup_processes; exit 130' INT
+trap 'log "INFO" "Received SIGTERM, cleaning up..."; cleanup_processes; exit 143' TERM
+
+# Check if Ollama is running
+check_ollama() {
+    if ! curl -s http://localhost:11434/api/tags >/dev/null 2>&1; then
+        log "ERROR" "Ollama is not running. Please start Ollama first."
+        exit 1
+    fi
+}
+
+# Execute ask command with timeout
+cmd_ask() {
+    local model="$1"
+    local prompt="$2"
+    local timeout="${3:-$DEFAULT_TIMEOUT}"
+    
+    log "INFO" "Asking $model with timeout ${timeout}s"
+    
+    # Use timeout command to prevent hanging
+    if timeout "$timeout" ollama run "$model" "$prompt"; then
+        log "INFO" "Ask command completed successfully"
+    else
+        local exit_code=$?
+        if [ $exit_code -eq 124 ]; then
+            log "ERROR" "Command timed out after ${timeout} seconds"
+        else
+            log "ERROR" "Command failed with exit code $exit_code"
+        fi
+        return $exit_code
+    fi
+}
+
+# Execute chain command with enhanced monitoring
+cmd_chain() {
+    local description="$1"
+    shift
+    local models=("$@")
+    
+    log "INFO" "Starting chain: $description"
+    log "INFO" "Models: ${models[*]}"
+    
+    # Create output directory
+    local output_dir="outputs/chain_$(date +%Y%m%d_%H%M%S)"
+    mkdir -p "$output_dir"
+    
+    # Initialize chain content
+    echo "$description" > "$output_dir/chain_content.txt"
+    
+    # Process each model in sequence
+    for i in "${!models[@]}"; do
+        local model="${models[$i]}"
+        local step=$((i + 1))
+        local total=${#models[@]}
+        
+        log "INFO" "Step $step/$total: Running $model"
+        
+        # Read current content
+        local current_content=$(cat "$output_dir/chain_content.txt")
+        
+        # Execute model with timeout
+        if timeout 180 ollama run "$model" "$current_content" >> "$output_dir/chain_content.txt" 2>&1; then
+            log "INFO" "Completed: $model"
+        else
+            log "ERROR" "Failed: $model (step $step)"
+            return 1
+        fi
+    done
+    
+    log "INFO" "Chain execution complete: $output_dir"
+    echo "Results saved to: $output_dir"
+}
+
+# Main command dispatcher
+main() {
+    check_ollama
+    
+    if [ $# -eq 0 ]; then
+        echo "Usage: $0 COMMAND [ARGS...]"
+        echo "Commands:"
+        echo "  ask MODEL PROMPT [TIMEOUT]    - Ask a single model"
+        echo "  chain DESCRIPTION MODEL...    - Execute model chain"
+        echo "  health                        - Check system health"
+        echo "  models                        - List available models"
+        exit 1
+    fi
+    
+    local command="$1"
+    shift
+    
+    case "$command" in
+        "ask")
+            if [ $# -lt 2 ]; then
+                log "ERROR" "Ask command requires model and prompt"
+                exit 1
+            fi
+            cmd_ask "$@"
+            ;;
+        "chain")
+            if [ $# -lt 2 ]; then
+                log "ERROR" "Chain command requires description and at least one model"
+                exit 1
+            fi
+            cmd_chain "$@"
+            ;;
+        "health")
+            log "INFO" "System health check"
+            ollama list
+            echo "Disk usage in outputs:"
+            du -sh outputs/ 2>/dev/null || echo "No outputs directory"
+            ;;
+        "models")
+            log "INFO" "Available models"
+            ollama list
+            ;;
+        *)
+            log "ERROR" "Unknown command: $command"
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"

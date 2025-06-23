@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirador AI Orchestration System - Visual Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: auto;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #a0a0a0;
+        }
+
+        .architecture-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .layer {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .layer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--layer-color), transparent);
+        }
+
+        .layer:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .layer-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .layer-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+
+        .layer-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .layer-description {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .component {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .component:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.02);
+            border-color: var(--layer-color);
+        }
+
+        .component-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--layer-color);
+        }
+
+        .component-description {
+            font-size: 0.9em;
+            color: #c0c0c0;
+            line-height: 1.4;
+        }
+
+        .component-count {
+            background: var(--layer-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            float: right;
+        }
+
+        .data-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        .flow-arrow {
+            font-size: 2em;
+            color: #4ecdc4;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .flow-step {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid #4ecdc4;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: #a0a0a0;
+            margin-top: 5px;
+        }
+
+        /* Layer-specific colors */
+        .interface-layer { --layer-color: #ff6b6b; }
+        .orchestration-layer { --layer-color: #4ecdc4; }
+        .specialists-layer { --layer-color: #45b7d1; }
+        .runtime-layer { --layer-color: #96ceb4; }
+        .storage-layer { --layer-color: #feca57; }
+
+        .specialist-clusters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cluster {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cluster-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .cluster-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .cluster-title {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .cluster-models {
+            list-style: none;
+        }
+
+        .cluster-models li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #c0c0c0;
+        }
+
+        .cluster-models li:last-child {
+            border-bottom: none;
+        }
+
+        .cluster-models li::before {
+            content: "⚡";
+            margin-right: 8px;
+            color: var(--layer-color);
+        }
+
+        .interactive-element {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-element:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .components-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .data-flow {
+                flex-direction: column;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎸 Mirador AI Orchestration System 🤖</h1>
+            <p>Visual Architecture Overview - Personal AI Orchestra for Music Career Acceleration</p>
+        </div>
+
+        <div class="architecture-container">
+            <!-- Interface Layer -->
+            <div class="layer interface-layer">
+                <div class="layer-header">
+                    <div class="layer-icon">🎯</div>
+                    <div class="layer-title">Command Interface Layer</div>
+                </div>
+                <div class="layer-description">
+                    Unified entry point for all system interactions. The mirador-ez command provides consistent access patterns across all functionality, from simple queries to complex multi-model orchestration.
+                </div>
+                <div class="components-grid">
+                    <div class="component interactive-element">
+                        <div class="component-title">Command Router</div>
+                        <div class="component-description">Parses and validates user commands, routing to appropriate execution engines</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Input Processor</div>
+                        <div class="component-description">Handles context building and parameter optimization for model execution</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Output Manager</div>
+                        <div class="component-description">Manages result formatting, storage, and user delivery</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <div class="flow-step">User Input</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Command Processing</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Model Selection</div>
+            </div>
+
+            <!-- Orchestration Layer -->
+            <div class="layer orchestration-layer">
+                <div class="layer-header">
+                    <div class="layer-icon">🎼</div>
+                    <div class="layer-title">Orchestration & Learning Layer</div>
+                </div>
+                <div class="layer-description">
+                    Advanced coordination engine that manages multi-model collaboration, learns from interactions, and continuously optimizes performance. This layer transforms Mirador from a simple AI tool into an intelligent, self-improving system.
+                </div>
+                <div class="components-grid">
+                    <div class="component interactive-element">
+                        <div class="component-title">Chain Executor</div>
+                        <div class="component-description">Sequential model execution with context preservation and progress tracking</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Pattern Learner</div>
+                        <div class="component-description">Cross-model synthesis and breakthrough opportunity identification</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Performance Optimizer</div>
+                        <div class="component-description">Continuous system improvement through feedback loop analysis</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Goal Tracker</div>
+                        <div class="component-description">Monitors progress toward touring guitarist objective</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <div class="flow-step">Chain Planning</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Sequential Execution</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Learning Integration</div>
+            </div>
+
+            <!-- Specialist Models Layer -->
+            <div class="layer specialists-layer">
+                <div class="layer-header">
+                    <div class="layer-icon">🎸</div>
+                    <div class="layer-title">Specialist AI Models Layer</div>
+                    <div class="component-count">17+ Models</div>
+                </div>
+                <div class="layer-description">
+                    Domain-specific AI specialists optimized for music career acceleration, professional development, and personal life integration. Each model brings deep expertise while collaborating seamlessly with others.
+                </div>
+                
+                <div class="specialist-clusters">
+                    <div class="cluster">
+                        <div class="cluster-header">
+                            <div class="cluster-icon">🎸</div>
+                            <div class="cluster-title">Music Career Specialists</div>
+                        </div>
+                        <ul class="cluster-models">
+                            <li>master_guitar_instructor</li>
+                            <li>music_industry_networker</li>
+                            <li>touring_readiness_coach</li>
+                            <li>performance_anxiety_coach</li>
+                            <li>guitar_tone_architect</li>
+                            <li>music_career_timeline_strategist</li>
+                        </ul>
+                    </div>
+
+                    <div class="cluster">
+                        <div class="cluster-header">
+                            <div class="cluster-icon">🧠</div>
+                            <div class="cluster-title">Meta-Cognitive Layer</div>
+                        </div>
+                        <ul class="cluster-models">
+                            <li>feedback_loop_optimizer_fixed</li>
+                            <li>cross_model_synthesizer</li>
+                            <li>mirador_self_reflection_guardian</li>
+                            <li>decision_simplifier_v2</li>
+                        </ul>
+                    </div>
+
+                    <div class="cluster">
+                        <div class="cluster-header">
+                            <div class="cluster-icon">💼</div>
+                            <div class="cluster-title">Professional Development</div>
+                        </div>
+                        <ul class="cluster-models">
+                            <li>linkedin_voice_architect</li>
+                            <li>communication_strategist</li>
+                            <li>side_income_opportunity_scout</li>
+                            <li>matthew_context_provider_v2</li>
+                        </ul>
+                    </div>
+
+                    <div class="cluster">
+                        <div class="cluster-header">
+                            <div class="cluster-icon">👨‍👧</div>
+                            <div class="cluster-title">Personal Life Integration</div>
+                        </div>
+                        <ul class="cluster-models">
+                            <li>father_daughter_music_mentor</li>
+                            <li>financial_planning_expert_v6</li>
+                            <li>louisville_expert_v2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <div class="flow-step">Specialist Selection</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Collaborative Analysis</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Synthesis</div>
+            </div>
+
+            <!-- Runtime Layer -->
+            <div class="layer runtime-layer">
+                <div class="layer-header">
+                    <div class="layer-icon">⚙️</div>
+                    <div class="layer-title">Ollama Runtime Layer</div>
+                </div>
+                <div class="layer-description">
+                    High-performance local AI runtime providing privacy-first execution. Manages model loading, memory allocation, and concurrent processing while ensuring complete data sovereignty.
+                </div>
+                <div class="components-grid">
+                    <div class="component interactive-element">
+                        <div class="component-title">Model Engine</div>
+                        <div class="component-description">Dynamic model loading and unloading based on demand</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Memory Manager</div>
+                        <div class="component-description">Intelligent resource allocation for optimal performance</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Execution Scheduler</div>
+                        <div class="component-description">Parallel processing and queue management</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <div class="flow-step">Model Loading</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Execution</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step">Result Processing</div>
+            </div>
+
+            <!-- Storage Layer -->
+            <div class="layer storage-layer">
+                <div class="layer-header">
+                    <div class="layer-icon">💾</div>
+                    <div class="layer-title">Data Persistence Layer</div>
+                </div>
+                <div class="layer-description">
+                    Comprehensive data management with timestamped outputs, categorized summaries, and learning database. Enables historical analysis, pattern recognition, and continuous improvement.
+                </div>
+                <div class="components-grid">
+                    <div class="component interactive-element">
+                        <div class="component-title">Output Storage</div>
+                        <div class="component-description">Timestamped chain results with individual model contributions</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Learning Database</div>
+                        <div class="component-description">Pattern recognition data and performance optimization history</div>
+                    </div>
+                    <div class="component interactive-element">
+                        <div class="component-title">Archive Manager</div>
+                        <div class="component-description">Automated cleanup and long-term preservation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">17+</div>
+                <div class="stat-label">Specialist Models</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">60-120s</div>
+                <div class="stat-label">Chain Execution</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Privacy Protection</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">🎸</div>
+                <div class="stat-label">Tour Bus Ready</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive hover effects and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for components
+            const components = document.querySelectorAll('.component');
+            components.forEach(component => {
+                component.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.02)';
+                    }, 200);
+                });
+            });
+
+            // Add floating animation to layer icons
+            const layerIcons = document.querySelectorAll('.layer-icon');
+            layerIcons.forEach(icon => {
+                icon.style.animation = 'pulse 3s infinite';
+            });
+
+            // Add staggered animation to cluster models
+            const clusterModels = document.querySelectorAll('.cluster-models li');
+            clusterModels.forEach((model, index) => {
+                model.style.opacity = '0';
+                model.style.transform = 'translateX(-20px)';
+                setTimeout(() => {
+                    model.style.transition = 'all 0.5s ease';
+                    model.style.opacity = '1';
+                    model.style.transform = 'translateX(0)';
+                }, index * 100);
+            });
+
+            // Add interactive flow arrows
+            const flowArrows = document.querySelectorAll('.flow-arrow');
+            flowArrows.forEach(arrow => {
+                arrow.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.2)';
+                    this.style.color = '#ff6b6b';
+                });
+                arrow.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.color = '#4ecdc4';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
