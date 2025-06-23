@@ -1,0 +1,14 @@
+=== COMPREHENSIVE MIRADOR SUMMARY ===
+
+Generated on: Mon Jun 23 12:52:23 EDT 2025
+
+TOTAL FILE COUNTS:
+- Files with 'mirador' in name:      794
+- Modelfiles:      266
+- Chain scripts:       82
+
+MAIN REPOSITORIES:
+1. /Users/matthewscott/ai_framework_git (current)
+2. /Users/matthewscott/Projects/mirador
+3. /Users/matthewscott/ai_framework
+

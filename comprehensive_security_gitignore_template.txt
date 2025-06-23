@@ -1,0 +1,414 @@
+# Comprehensive Security-Focused .gitignore Template
+# This template includes patterns for protecting sensitive data, API keys, credentials, and personal information
+
+#################################
+# SECURITY & SENSITIVE DATA
+#################################
+
+# Environment Variables & Configuration
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+!.env.template
+!.env.sample
+
+# API Keys & Credentials
+*api_key*
+*apikey*
+*api-key*
+API_KEY*
+api_keys/
+credentials/
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+private_key*
+secret_key*
+auth_token*
+access_token*
+refresh_token*
+
+# Authentication & Authorization
+auth/
+.auth/
+oauth_token*
+.htpasswd
+.netrc
+id_rsa*
+id_dsa*
+id_ed25519*
+*.ppk
+
+# Configuration Files with Potential Secrets
+config.json
+config.yml
+config.yaml
+secrets.json
+secrets.yml
+secrets.yaml
+settings.json
+settings.yml
+settings.yaml
+!config.example.json
+!config.template.json
+!settings.example.json
+
+# Database & Connection Strings
+*.db
+*.sqlite
+*.sqlite3
+database.yml
+database.json
+connection_string*
+db_config*
+mongodb.conf
+
+# Cloud Provider Credentials
+# AWS
+.aws/
+aws_config
+aws_credentials
+*.aws_access_key_id
+*.aws_secret_access_key
+
+# Google Cloud
+.gcloud/
+gcloud_credentials.json
+service-account-key.json
+google-credentials.json
+gcp-key.json
+
+# Azure
+.azure/
+azure_credentials*
+*.azureauth
+
+# Personal & Financial Data
+personal_data/
+private/
+sensitive/
+financial/
+*.ssn
+*.tax
+*.bank
+*credit_card*
+*social_security*
+user_data/
+customer_data/
+patient_data/
+
+# Private Model Files (AI/ML)
+*_personal.modelfile
+*_private.modelfile
+matthew_*.modelfile
+personal_models/
+private_models/
+
+# Memory & Session Data
+*.session
+session_data/
+memory_cache/
+mirador_memory.db
+conversations/
+chat_history/
+.conversation_cache/
+
+# Passwords & Auth Files
+password*
+passwd*
+*.password
+*.passwd
+shadow
+master.key
+keystore*
+truststore*
+
+#################################
+# LOGS & TEMPORARY FILES
+#################################
+
+# Logs
+*.log
+logs/
+*.log.*
+debug.log*
+error.log*
+access.log*
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+*.old
+*.orig
+*.cache
+
+#################################
+# OS GENERATED FILES
+#################################
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+#################################
+# IDE & EDITOR FILES
+#################################
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+atlassian-ide-plugin.xml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+#################################
+# LANGUAGE SPECIFIC
+#################################
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+virtualenv/
+.virtualenv/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# Ruby
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.rvmrc
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+Godeps/
+coverage.txt
+coverage.html
+
+#################################
+# FRAMEWORK & TOOL SPECIFIC
+#################################
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Flask
+instance/
+.webassets-cache
+
+# React/Next.js
+.next/
+out/
+build/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+#################################
+# PROJECT SPECIFIC
+#################################
+
+# Mirador/AI Framework
+outputs/
+chain_*/
+temp_*.txt
+qa_results/
+performance_*.txt
+monitor_*.log
+mirador_memory.db
+conversations/
+.ollama/
+model_cache/
+
+# Documentation (unless explicitly needed)
+*.docx
+*.doc
+~$*
+
+# Backup files
+backup/
+backups/
+*.backup
+*_backup
+*_bak
+
+# Cache directories
+.cache/
+cache/
+__cache__/
+.pytest_cache/
+
+# Coverage reports
+coverage/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# Package manager locks (depends on project needs)
+# package-lock.json  # Uncomment if not tracking
+# yarn.lock         # Uncomment if not tracking
+# Pipfile.lock      # Uncomment if not tracking
+
+#################################
+# SECURITY NOTES
+#################################
+
+# 1. Always use .env files for sensitive configuration
+# 2. Create .env.example files with dummy values for reference
+# 3. Use secret management services (AWS Secrets Manager, Azure Key Vault, etc.) in production
+# 4. Implement pre-commit hooks to scan for secrets (git-secrets, gitleaks)
+# 5. Regularly audit your repository for accidentally committed secrets
+# 6. If secrets are accidentally committed, rotate them immediately and clean git history
+# 7. Use environment variables instead of hardcoding sensitive values
+# 8. Consider using encrypted files for highly sensitive data (git-crypt, blackbox)
+
+# Remember: .gitignore only prevents NEW files from being tracked.
+# Files already in the repository must be removed with: git rm --cached <filename>
