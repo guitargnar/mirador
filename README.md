@@ -1,71 +1,25 @@
-Mirador: An intelligent multi-model AI orchestration framework that chains specialized language models to provide personalized, actionable insights aligned with your unique personality, goals, and context.
+<div align="center">
+  <img src="assets/brand/logos/logo.svg" alt="Mirador Logo" width="200"/>
+  
+  # Mirador AI Orchestration Framework
+  
+  **Observe. Adapt. Remain.**
+  
+  [![Version](https://img.shields.io/badge/version-2.0-success)](https://github.com/guitargnar/mirador)
+  [![License](https://img.shields.io/badge/license-Private-red)](LICENSE)
+  [![AI Models](https://img.shields.io/badge/models-79+-blue)](docs/models.md)
+  [![Response Time](https://img.shields.io/badge/response-5--25s-brightgreen)](docs/performance.md)
+  
+  *A sophisticated multi-agent AI system that chains specialized language models for personalized, actionable insights aligned with your unique personality, goals, and context.*
+</div>
 
-🌟 Overview
-Mirador transforms complex decisions into clear actions by orchestrating multiple AI specialists that understand YOU. Built on Ollama and enhanced with Big Five personality integration, Mirador delivers comprehensive analysis in under 60 seconds.
-Key Features
+---
 
-🧠 Personality-Aware Intelligence: Integrated Big Five (OCEAN) profile for personalized recommendations
-🔗 Multi-Model Orchestration: Chains up to 6 specialized models for comprehensive analysis
-💾 Memory System: SQLite-based context retention and pattern learning
-🎯 Smart Chain Selection: Automatically selects optimal model combinations based on query type
-📍 Location-Aware: Deep integration with Louisville, KY resources and opportunities
-⚡ High Performance: 5-25 second response times with 100% completion rate
-🔒 Privacy-First: 100% local execution, no external API calls
+## 🏗️ Architecture
 
-🚀 Quick Start
-bash# Daily opportunity scan (5 minutes)
-./quick_opportunity.sh
+<div align="center">
 
-# Smart financial planning
-./mirador-smart-v2 "How can I optimize my 75000 income?"
-
-# Music career development  
-./mirador-smart-v2 "Create 90-day plan to become touring guitarist"
-
-# System health check
-./daily_check_enhanced.sh
-📋 Requirements
-
-Hardware: MacBook M3 Max or equivalent (16GB+ RAM recommended)
-OS: macOS Sequoia 15.5+ (tested) or Linux
-Software:
-
-Ollama 2.0+
-Python 3.13+
-50GB+ available storage
-Homebrew (for macOS dependencies)
-
-
-
-🛠️ Installation
-
-Clone the repository
-bashgit clone https://github.com/yourusername/mirador.git
-cd mirador
-
-Install dependencies
-bash# Install Ollama
-brew install ollama
-
-# Install Python packages
-pip3 install -r requirements.txt
-
-# Install coreutils for timeout functionality
-brew install coreutils
-
-Pull base models
-bashollama pull llama3.2
-ollama pull llama3.2_balanced
-
-Create specialized models
-bash./deploy_production_mirador.sh
-
-Verify installation
-bash./daily_check_enhanced.sh
-
-
-🏗️ Architecture
-System Overview
+```
 ┌─────────────────────────────────────────────────────────┐
 │                  User Interface Layer                    │
 │          (mirador-smart-v2, mirador-ez, CLI)           │
@@ -73,108 +27,197 @@ System Overview
                           │
 ┌─────────────────────────┴───────────────────────────────┐
 │              Orchestration & Chain Logic                 │
-│        (Smart routing, Chain execution, Caching)        │
+│        (Smart routing, Chain execution, Memory)         │
 └─────────────────────────┬───────────────────────────────┘
                           │
 ┌─────────────────────────┴───────────────────────────────┐
 │                 Specialized AI Models                    │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐       │
-│  │  Matthew    │ │  Financial  │ │ Louisville  │       │
-│  │  Context    │ │   Expert    │ │   Expert    │       │
-│  │    (v3)     │ │    (v8)     │ │    (v3)     │       │
-│  └─────────────┘ └─────────────┘ └─────────────┘       │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐       │
-│  │  Enhanced   │ │  Decision   │ │   System    │       │
-│  │   Agent     │ │ Simplifier  │ │ Specialist  │       │
-│  │    (v1)     │ │    (v3)     │ │    (v2)     │       │
-│  └─────────────┘ └─────────────┘ └─────────────┘       │
+│    Matthew Context │ Financial Expert │ Louisville Expert│
+│    Enhanced Agent │ Decision Simplifier │ System Meta   │
 └─────────────────────────┬───────────────────────────────┘
                           │
 ┌─────────────────────────┴───────────────────────────────┐
 │              Foundation Layer (Ollama)                   │
 │          (Model management, Inference engine)            │
-└─────────────────────────┬───────────────────────────────┘
-                          │
-┌─────────────────────────┴───────────────────────────────┐
-│                  Storage & Memory                        │
-│        (SQLite DB, Output files, Model cache)          │
 └─────────────────────────────────────────────────────────┘
-Core Models
-ModelPurposeSpecialtymatthew_context_provider_v3Personal context & personalityBig Five profile, goals, valuesfinancial_planning_expert_v8Financial analysis & planningLouisville-specific, $75k optimizationlouisville_expert_v3Local knowledge & resourcesVenues, networks, opportunitiesenhanced_agent_enforcerStrategic synthesisCross-domain analysisdecision_simplifier_v3Action generationTimeline-based recommendationsmirador_system_specialist_v2Meta-optimizationSystem improvement
-📊 Performance Metrics
+```
 
-Response Times:
+</div>
 
-Individual models: 5-25 seconds
-3-model chains: 45-60 seconds
-Memory queries: <1 second
+## 🚀 Quick Start
 
+```bash
+# Daily opportunity scan (5 minutes)
+./quick_opportunity.sh
 
-Success Rate: 100% completion rate across 450+ analyses
-Output Quality: Average 390 words of actionable content per chain
-Storage Efficiency: 22MB for 447 complete analyses
+# Smart financial planning
+./mirador-smart-v2 "How can I optimize my income?"
 
-💡 Usage Examples
-Financial Optimization
-bash./mirador-smart-v2 "Create comprehensive budget for 75000 income with savings strategy"
+# Music career development  
+./mirador-smart-v2 "Create 90-day plan to become touring guitarist"
+
+# System health check
+./daily_check_enhanced.sh
+```
+
+## 🎯 Key Features
+
+### 🧠 Personality-Aware Intelligence
+Integrated Big Five (OCEAN) profile optimization for truly personalized recommendations that align with your cognitive style and values.
+
+### 🔗 Multi-Model Orchestration
+Chains up to 6 specialized models for comprehensive analysis, each contributing unique expertise to create nuanced, multi-perspective solutions.
+
+### 💾 Persistent Memory System
+SQLite-based context retention learns from your patterns and preferences, building deeper understanding over time.
+
+### ⚡ Performance Excellence
+- 5-25 second response times per model
+- 100% completion rate across 450+ analyses
+- 390 average words of actionable content per chain
+- 22MB storage for complete analysis history
+
+### 🔒 Privacy-First Design
+100% local execution with no external API calls. Your data never leaves your machine.
+
+## 📋 Requirements
+
+- **Hardware**: MacBook M3 Max or equivalent (16GB+ RAM recommended)
+- **OS**: macOS Sequoia 15.5+ (tested) or Linux
+- **Software**:
+  - Ollama 2.0+
+  - Python 3.13+
+  - 50GB+ available storage
+  - Homebrew (for macOS dependencies)
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:guitargnar/mirador.git
+   cd mirador
+   ```
+
+2. **Install dependencies**
+   ```bash
+   # Install Ollama
+   brew install ollama
+   
+   # Install Python packages
+   pip3 install -r requirements.txt
+   
+   # Install coreutils for timeout functionality
+   brew install coreutils
+   ```
+
+3. **Pull base models**
+   ```bash
+   ollama pull llama3.2:3b-instruct-fp16
+   ollama pull qwen2.5:3b-instruct-fp16
+   ```
+
+4. **Deploy specialized models**
+   ```bash
+   ./deploy_production_mirador.sh
+   ```
+
+5. **Verify installation**
+   ```bash
+   ./daily_check_enhanced.sh
+   ```
+
+## 💎 Core Models
+
+| Model | Purpose | Specialty |
+|-------|---------|-----------|
+| `matthew_context_provider_v3` | Personal context & personality | Big Five profile, goals, values |
+| `financial_planning_expert_v8` | Financial analysis & planning | Location-specific optimization |
+| `louisville_expert_v3` | Local knowledge & resources | Venues, networks, opportunities |
+| `enhanced_agent_enforcer` | Strategic synthesis | Cross-domain analysis |
+| `decision_simplifier_v3` | Action generation | Timeline-based recommendations |
+| `mirador_system_specialist_v2` | Meta-optimization | System improvement |
+
+## 📊 Performance Metrics
+
+- **Response Times**: 5-25 seconds per model, 45-60 seconds for 3-model chains
+- **Success Rate**: 100% completion rate across 450+ analyses
+- **Output Quality**: Average 390 words of actionable content
+- **Storage Efficiency**: 22MB for 447 complete analyses
+
+## 💡 Usage Examples
+
+### Financial Optimization
+```bash
+./mirador-smart-v2 "Create comprehensive budget with savings strategy"
 ./mirador-smart-v2 "Investment opportunities for musicians in Louisville"
-./mirador-smart-v2 "Tax optimization strategies for creative professionals in Kentucky"
-Music Career Development
-bash./mirador-smart-v2 "90-day roadmap to join Cody Ash touring band"
+./mirador-smart-v2 "Tax optimization strategies for creative professionals"
+```
+
+### Music Career Development
+```bash
+./mirador-smart-v2 "90-day roadmap to join touring band"
 ./mirador-smart-v2 "Build guitar skills for country/rock touring"
 ./mirador-smart-v2 "Network with Nashville music industry from Louisville"
-Strategic Planning
-bash./mirador-smart-v2 "Balance family life with touring musician ambitions"
-./mirador-smart-v2 "Leverage high openness personality for creative success"
-./mirador-smart-v2 "Build multiple income streams as Louisville musician"
-🔧 Advanced Configuration
-Custom Chains
-Create specialized chains for repeated workflows:
-bash# Add to mirador-smart-v2
-elif [[ "$QUERY" =~ (your|custom|pattern) ]]; then
-    echo "🎯 Custom chain detected"
-    mirador-ez chain "$QUERY" model1 model2 model3
-Memory System
-The SQLite database tracks:
+```
 
-Query history and patterns
-Model performance metrics
-Opportunity implementation results
-Success patterns for reuse
+### Strategic Planning
+```bash
+./mirador-smart-v2 "Balance family life with touring ambitions"
+./mirador-smart-v2 "Leverage high openness personality for success"
+./mirador-smart-v2 "Build multiple income streams as musician"
+```
 
-Daily Automation
-bash# Add to crontab
-0 8 * * * cd ~/mirador && ./daily_mirador_workflow.sh
-0 9 * * 0 cd ~/mirador && ./weekly_personality_optimization.sh
-📚 Documentation
+## 🎨 Brand Philosophy
 
-Technical Documentation - Architecture details
-Usage Instructions - Comprehensive guide
-Prompt Library - Optimized prompts
-API Reference - Model specifications
+<div align="center">
+  
+### Observe. Adapt. Remain.
 
-🤝 Contributing
-While Mirador is a personal project, suggestions and improvements are welcome:
+**Observe**: Gather intelligence from multiple AI perspectives  
+**Adapt**: Evolve strategies based on comprehensive insights  
+**Remain**: Maintain core values while embracing change  
 
-Fork the repository
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit changes (git commit -m 'Add AmazingFeature')
-Push to branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+</div>
 
-📄 License
-This project is for personal use. See LICENSE for details.
-🙏 Acknowledgments
+## 📚 Documentation
 
-Ollama Team - Local LLM infrastructure
-Anthropic Claude - Development collaboration
-llama3.2 - Base model foundation
-Louisville Tech Community - Inspiration and support
+- [Technical Architecture](docs/technical.md) - System design details
+- [User Guide](docs/user-guide.md) - Comprehensive usage instructions
+- [Model Catalog](docs/models.md) - All 79+ model specifications
+- [Chain Templates](docs/chains.md) - Pre-configured workflows
+- [Security Guidelines](docs/security.md) - Privacy best practices
 
-📈 Project Stats
+## 🛡️ Security & Privacy
 
-Version: 1.1-personality-integrated
-Total Analyses: 450+
-Success Rate: 100%
-Active Since: May 2024
-Last Updated: June 18, 2025
+This repository implements enterprise-grade security:
+- Comprehensive `.gitignore` with 245+ protection patterns
+- Multi-layer credential protection
+- Output sanitization for personal data
+- No external API dependencies
+
+**⚠️ Private Repository**: Authorized access only.
+
+## 📈 Project Stats
+
+- **Version**: 2.0 (Major restructuring)
+- **Total Analyses**: 450+
+- **Model Count**: 79+ specialized models
+- **Success Rate**: 100%
+- **Active Since**: May 2024
+- **Last Updated**: June 23, 2025
+
+## 🤝 Contributing
+
+This is a private project. Contributions limited to authorized collaborators.
+
+## 📄 License
+
+Private and Confidential. All rights reserved.
+
+---
+
+<div align="center">
+  <sub>Built with precision in Louisville, KY</sub>
+  <br>
+  <sub>Powered by local AI • No cloud dependencies • Your data stays yours</sub>
+</div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mirador Watchtower Logo -->
+  <defs>
+    <linearGradient id="copperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B87333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5A2B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87A96B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#556B2F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#2F4F4F" opacity="0.1"/>
+  
+  <!-- Watchtower Structure -->
+  <g transform="translate(100, 100)">
+    <!-- Tower Base -->
+    <path d="M -30 40 L -25 -20 L 25 -20 L 30 40 Z" fill="url(#sageGradient)" opacity="0.8"/>
+    
+    <!-- Tower Top -->
+    <path d="M -35 -20 L -30 -25 L -25 -20 L -25 -50 L 25 -50 L 25 -20 L 30 -25 L 35 -20 L 35 -55 L -35 -55 Z" fill="url(#copperGradient)"/>
+    
+    <!-- Eye Symbol -->
+    <ellipse cx="0" cy="-5" rx="20" ry="12" fill="#2F4F4F" opacity="0.9"/>
+    <circle cx="0" cy="-5" r="8" fill="url(#copperGradient)"/>
+    <circle cx="0" cy="-5" r="4" fill="#2F4F4F"/>
+    
+    <!-- Support Beams -->
+    <line x1="-30" y1="40" x2="-40" y2="60" stroke="url(#sageGradient)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="30" y1="40" x2="40" y2="60" stroke="url(#sageGradient)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Brand Name -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2F4F4F">MIRADOR</text>
+</svg>
