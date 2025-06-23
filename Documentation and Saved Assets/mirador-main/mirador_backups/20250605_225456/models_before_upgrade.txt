@@ -1,0 +1,27 @@
+NAME                                   ID              SIZE      MODIFIED     
+louisville_expert_v2:latest            ab55268fe47c    2.0 GB    4 hours ago     
+financial_planning_expert_v2:latest    3477223d1159    2.0 GB    4 hours ago     
+enhanced_agent_fast_v2:latest          a7d18c74ef6a    2.0 GB    4 hours ago     
+louisville_expert:latest               3eb90cc59e16    19 GB     10 hours ago    
+enhanced_agent_fast:latest             fa24cdb0f7b6    19 GB     10 hours ago    
+financial_planning_expert:latest       6e9bcd5e4a00    2.0 GB    10 hours ago    
+llama3.2_balanced:latest               63a857d3eada    2.0 GB    15 hours ago    
+guitar_expert_precise:latest           b066d857a0fa    2.0 GB    15 hours ago    
+file_reviewer:latest                   245274994231    2.0 GB    15 hours ago    
+master_coder:latest                    4c014d7ae74a    2.0 GB    15 hours ago    
+code_reviewer:latest                   81799583ab9a    776 MB    15 hours ago    
+creative_entrepreneur:latest           c1ded60f460a    19 GB     15 hours ago    
+deepseek-coder:latest                  3ddd2d3fc8d2    776 MB    15 hours ago    
+code_reviewer_fix:latest               0574d42f5174    3.8 GB    15 hours ago    
+fast_agent_focused:latest              2c92d2a8c115    4.1 GB    23 hours ago    
+mistral:latest                         f974a74358d6    4.1 GB    34 hours ago    
+codellama:latest                       8fdf8f752f6e    3.8 GB    34 hours ago    
+llama3.2:latest                        a80c4f17acd5    2.0 GB    34 hours ago    
+fast_agent_ultimate:latest             59c309b8194a    2.0 GB    3 days ago      
+fast_agent_llama:latest                3a17d0b79fb4    2.0 GB    3 days ago      
+enhanced_agent_v2:latest               c8413fd49f8c    19 GB     5 days ago      
+enhanced_agent:latest                  0bf861a08e50    19 GB     5 days ago      
+ux_designer:latest                     23d47ab30caf    19 GB     2 weeks ago     
+my-persistent-agent:latest             cd0b6e7c1421    19 GB     3 weeks ago     
+deepseek-extended:latest               692d57fdbf03    19 GB     3 weeks ago     
+deepseek-coder-lowtemp:latest          c738b49d16e5    18 GB     5 weeks ago     

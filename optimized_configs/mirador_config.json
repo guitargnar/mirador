@@ -1,0 +1,269 @@
+{
+  "mirador_config": {
+    "version": "2.0_optimized",
+    "generated": "2025-06-19T09:52:51.311365",
+    "description": "Optimized Mirador configuration with consolidated model set",
+    "models": {
+      "core_models": {
+        "matthew_context_provider_v2": {
+          "base_model": "llama3.2_balanced",
+          "category": "context_provider",
+          "temperature": 0.5,
+          "context_window": 3072,
+          "role": "Personal context and preference provider",
+          "priority": "high",
+          "parameters": {
+            "temperature": "0.5",
+            "top_p": "0.9",
+            "repeat_penalty": "1.1"
+          }
+        },
+        "decision_simplifier_v2": {
+          "base_model": "llama3.2_balanced",
+          "category": "decision_support",
+          "temperature": 0.4,
+          "context_window": 2048,
+          "role": "Final synthesis and action-oriented recommendations",
+          "priority": "high",
+          "parameters": {
+            "temperature": "0.4",
+            "top_p": "0.8",
+            "repeat_penalty": "1.1"
+          }
+        }
+      },
+      "domain_specialists": {
+        "financial_planning_expert_v6": {
+          "base_model": "llama3.2_balanced",
+          "category": "financial_planning",
+          "temperature": 0.4,
+          "context_window": 2048,
+          "role": "Comprehensive financial analysis and planning",
+          "priority": "high",
+          "parameters": {
+            "temperature": "0.4",
+            "top_p": "0.8",
+            "repeat_penalty": "1.1"
+          }
+        },
+        "financial_planning_expert_fast": {
+          "base_model": "llama3.2_balanced",
+          "category": "financial_planning",
+          "temperature": 0.5,
+          "context_window": 1536,
+          "role": "Quick financial queries and calculations",
+          "priority": "medium",
+          "parameters": {
+            "temperature": "0.5",
+            "top_p": "0.9",
+            "repeat_penalty": "1.0"
+          }
+        },
+        "louisville_expert_v3": {
+          "base_model": "llama3.2_balanced",
+          "category": "local_expert",
+          "temperature": 0.6,
+          "context_window": 2048,
+          "role": "Louisville-specific context and opportunities",
+          "priority": "high",
+          "parameters": {
+            "temperature": "0.6",
+            "top_p": "0.9",
+            "repeat_penalty": "1.1"
+          }
+        }
+      },
+      "quality_assurance": {
+        "enhanced_agent_enforcer_v2": {
+          "base_model": "llama3.2_balanced",
+          "category": "enhanced_agent",
+          "temperature": 0.3,
+          "context_window": 2048,
+          "role": "Quality validation and consistency checking",
+          "priority": "high",
+          "parameters": {
+            "temperature": "0.3",
+            "top_p": "0.8",
+            "repeat_penalty": "1.2"
+          }
+        },
+        "enhanced_agent_fast_v6": {
+          "base_model": "llama3.2_balanced",
+          "category": "enhanced_agent",
+          "temperature": 0.4,
+          "context_window": 1536,
+          "role": "Quick validation and error checking",
+          "priority": "medium",
+          "parameters": {
+            "temperature": "0.4",
+            "top_p": "0.8",
+            "repeat_penalty": "1.1"
+          }
+        }
+      },
+      "system_optimization": {
+        "mirador_system_specialist_v2": {
+          "base_model": "llama3.2_balanced",
+          "category": "system_specialist",
+          "temperature": 0.5,
+          "context_window": 2048,
+          "role": "Meta-analysis and system optimization",
+          "priority": "medium",
+          "parameters": {
+            "temperature": "0.5",
+            "top_p": "0.9",
+            "repeat_penalty": "1.1"
+          }
+        }
+      },
+      "content_specialists": {
+        "linkedin_content_expert": {
+          "base_model": "llama3.2_balanced",
+          "category": "content_creation",
+          "temperature": 0.7,
+          "context_window": 2048,
+          "role": "Professional content creation and communication",
+          "priority": "medium",
+          "parameters": {
+            "temperature": "0.7",
+            "top_p": "0.9",
+            "repeat_penalty": "1.0"
+          }
+        },
+        "real_estate_analyzer": {
+          "base_model": "llama3.2_balanced",
+          "category": "domain_specialist",
+          "temperature": 0.4,
+          "context_window": 2048,
+          "role": "Real estate analysis and investment evaluation",
+          "priority": "low",
+          "parameters": {
+            "temperature": "0.4",
+            "top_p": "0.8",
+            "repeat_penalty": "1.1"
+          }
+        },
+        "health_wellness_optimizer": {
+          "base_model": "llama3.2_balanced",
+          "category": "domain_specialist",
+          "temperature": 0.5,
+          "context_window": 2048,
+          "role": "Health and wellness optimization guidance",
+          "priority": "low",
+          "parameters": {
+            "temperature": "0.5",
+            "top_p": "0.9",
+            "repeat_penalty": "1.1"
+          }
+        },
+        "productivity_optimizer": {
+          "base_model": "llama3.2_balanced",
+          "category": "domain_specialist",
+          "temperature": 0.5,
+          "context_window": 2048,
+          "role": "Productivity and efficiency enhancement",
+          "priority": "low",
+          "parameters": {
+            "temperature": "0.5",
+            "top_p": "0.9",
+            "repeat_penalty": "1.1"
+          }
+        }
+      }
+    },
+    "chains": {
+      "quick_chains": {
+        "financial_quick": [
+          "matthew_context_provider_v2",
+          "financial_planning_expert_fast",
+          "decision_simplifier_v2"
+        ],
+        "decision_quick": [
+          "matthew_context_provider_v2",
+          "decision_simplifier_v2"
+        ],
+        "local_quick": [
+          "matthew_context_provider_v2",
+          "louisville_expert_v3",
+          "decision_simplifier_v2"
+        ]
+      },
+      "balanced_chains": {
+        "financial_balanced": [
+          "matthew_context_provider_v2",
+          "financial_planning_expert_v6",
+          "enhanced_agent_fast_v6",
+          "decision_simplifier_v2"
+        ],
+        "comprehensive_analysis": [
+          "matthew_context_provider_v2",
+          "financial_planning_expert_v6",
+          "louisville_expert_v3",
+          "decision_simplifier_v2"
+        ],
+        "quality_assured": [
+          "matthew_context_provider_v2",
+          "mirador_system_specialist_v2",
+          "enhanced_agent_enforcer_v2",
+          "decision_simplifier_v2"
+        ]
+      },
+      "comprehensive_chains": {
+        "strategic_planning": [
+          "matthew_context_provider_v2",
+          "financial_planning_expert_v6",
+          "louisville_expert_v3",
+          "enhanced_agent_enforcer_v2",
+          "mirador_system_specialist_v2",
+          "decision_simplifier_v2"
+        ],
+        "life_optimization": [
+          "matthew_context_provider_v2",
+          "financial_planning_expert_v6",
+          "health_wellness_optimizer",
+          "productivity_optimizer",
+          "enhanced_agent_enforcer_v2",
+          "decision_simplifier_v2"
+        ]
+      }
+    },
+    "execution_settings": {
+      "default_timeout": 45,
+      "max_retries": 2,
+      "parallel_execution": true,
+      "context_optimization": true,
+      "quality_validation": true
+    },
+    "performance_settings": {
+      "cache_responses": true,
+      "cache_ttl_minutes": 30,
+      "max_concurrent_models": 3,
+      "memory_limit_mb": 4096,
+      "response_streaming": true
+    },
+    "chain_routing": {
+      "financial": {
+        "quick": "financial_quick",
+        "balanced": "financial_balanced",
+        "comprehensive": "strategic_planning"
+      },
+      "decision": {
+        "quick": "decision_quick",
+        "balanced": "comprehensive_analysis",
+        "comprehensive": "quality_assured"
+      },
+      "local": {
+        "quick": "local_quick",
+        "balanced": "comprehensive_analysis",
+        "comprehensive": "life_optimization"
+      }
+    },
+    "quality_assurance": {
+      "enabled": true,
+      "validation_model": "enhanced_agent_enforcer_v2",
+      "consistency_checks": true,
+      "fact_checking": true,
+      "actionability_scoring": true
+    }
+  }
+}
