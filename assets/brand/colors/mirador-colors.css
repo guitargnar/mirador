@@ -1,0 +1,51 @@
+/* Mirador Brand Colors */
+:root {
+  /* Primary Colors */
+  --mirador-deep-forest: #1B3A33;
+  --mirador-sage: #7B9E89;
+  --mirador-sand: #E8DCC6;
+  --mirador-charcoal: #2B2B2B;
+  
+  /* Accent Colors */
+  --mirador-terracotta: #D17A47;
+  --mirador-mist: #B8C5C2;
+  --mirador-stone: #8B8680;
+  
+  /* Semantic Colors */
+  --mirador-success: #7B9E89;
+  --mirador-warning: #D17A47;
+  --mirador-error: #A23B72;
+  --mirador-info: #B8C5C2;
+  
+  /* UI Colors */
+  --mirador-background-dark: #1B3A33;
+  --mirador-background-light: #E8DCC6;
+  --mirador-text-primary: #2B2B2B;
+  --mirador-text-secondary: #8B8680;
+  --mirador-border: #B8C5C2;
+  
+  /* Gradients */
+  --mirador-gradient-primary: linear-gradient(135deg, #1B3A33 0%, #7B9E89 100%);
+  --mirador-gradient-accent: linear-gradient(135deg, #D17A47 0%, #E8DCC6 100%);
+  --mirador-gradient-subtle: linear-gradient(180deg, rgba(123, 158, 137, 0.1) 0%, rgba(232, 220, 198, 0.1) 100%);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mirador-background: var(--mirador-background-dark);
+    --mirador-foreground: var(--mirador-sand);
+    --mirador-text: var(--mirador-sand);
+    --mirador-text-muted: var(--mirador-sage);
+  }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --mirador-background: var(--mirador-background-light);
+    --mirador-foreground: var(--mirador-deep-forest);
+    --mirador-text: var(--mirador-charcoal);
+    --mirador-text-muted: var(--mirador-stone);
+  }
+}

@@ -1,0 +1,8 @@
+Previous output:
+I'd be happy to help with a quick test! Please confirm your specified income amount.
+
+(Note: I'll use this amount consistently throughout our conversation)
+
+Please respond with your income amount, e.g., "$75,000", "75000", or "seventy-five thousand". If no income is specified, please clarify.
+
+Please build upon this information and provide further insights.

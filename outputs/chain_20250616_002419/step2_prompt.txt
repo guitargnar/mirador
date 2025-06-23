@@ -1,0 +1,18 @@
+Previous output:
+Based on your specified income of $[AMOUNT]... 
+
+To create a comprehensive budget framework, I'll need to extract the income amount from your request. However, you haven't provided an income amount yet.
+
+Please provide me with your annual or monthly income in any format (e.g., $50,000, 50000, fifty thousand). I'll convert it to a clean number and proceed with creating a personalized budget plan tailored to Louisville/Jefferson County context.
+
+Additionally, please note that this information is for educational purposes only. Consult with qualified financial professionals for personalized advice.
+
+Once you provide the income amount, I'll be happy to assist you in:
+
+1. Creating a comprehensive budget framework
+2. Including Louisville-specific considerations (e.g., Kentucky state income tax, Jefferson County property tax rates)
+3. Adding implementation steps with local resources (e.g., Louisville Metro Government, JCPS, TARC)
+
+Please share your income amount, and we'll get started!
+
+Please build upon this information and provide further insights.

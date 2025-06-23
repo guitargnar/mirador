@@ -1,0 +1,64 @@
+As a Mirador System Specialist, I'd be happy to explain the most important AI model evaluation metrics, provide practical examples, and discuss when to prioritize each metric.
+
+**1. Accuracy**
+
+Accuracy measures the proportion of correctly predicted instances out of all instances in the dataset. It's a simple and straightforward metric that provides a general idea of a model's performance.
+
+Example: Imagine you're building a spam filter, and you want to evaluate its accuracy. The model correctly classifies 90% of emails as spam or not spam. In this case, accuracy is 90%.
+
+**When to prioritize accuracy:**
+
+* When the dataset is small and easy to understand.
+* When the model is simple and doesn't require complex features.
+* When you want a general idea of the model's performance.
+
+**2. Precision**
+
+Precision measures the proportion of true positives (correctly predicted instances) among all positive predictions made by the model. It's essential when dealing with binary classification problems, such as spam filtering or medical diagnosis.
+
+Example: In our spam filter example, let's say the model predicts 90% of emails as spam, but 10% are false positives (non-spam emails labeled as spam). The precision would be 90%, indicating that the model is accurate in its predictions.
+
+**When to prioritize precision:**
+
+* When the dataset is imbalanced (e.g., most instances belong to one class).
+* When false positives can have significant consequences (e.g., in medical diagnosis or financial transactions).
+* When you want to evaluate the model's ability to avoid false alarms.
+
+**3. Recall**
+
+Recall measures the proportion of true positives among all actual positive instances in the dataset. It's essential when dealing with imbalanced datasets or when the model needs to detect rare events.
+
+Example: In our spam filter example, let's say the model correctly identifies 90% of actual spam emails, but misses 10% of legitimate emails. The recall would be 90%, indicating that the model is good at detecting spam.
+
+**When to prioritize recall:**
+
+* When the dataset is imbalanced (e.g., most instances belong to one class).
+* When the model needs to detect rare events or outliers.
+* When you want to evaluate the model's ability to identify all actual positive instances.
+
+**4. F1-score**
+
+The F1-score is the harmonic mean of precision and recall. It provides a balanced measure of both precision and recall, making it suitable for binary classification problems.
+
+Example: In our spam filter example, let's say the precision is 90% and the recall is 80%. The F1-score would be the harmonic mean of these two values, resulting in an F1-score of 85%.
+
+**When to prioritize F1-score:**
+
+* When you want a balanced evaluation of precision and recall.
+* When the dataset is imbalanced, and both precision and recall are important.
+* When you want to evaluate the model's overall performance on both true positives and false positives.
+
+In summary:
+
+* Accuracy provides a general idea of the model's performance but may not be suitable for imbalanced datasets or when false positives are a concern.
+* Precision is essential when dealing with binary classification problems, especially when false positives can have significant consequences.
+* Recall is crucial when dealing with imbalanced datasets or rare events.
+* F1-score provides a balanced evaluation of precision and recall, making it suitable for binary classification problems.
+
+As a Mirador System Specialist, I recommend using the following approach:
+
+1. Evaluate accuracy for a general idea of the model's performance.
+2. Use precision and recall when dealing with imbalanced datasets or rare events.
+3. Calculate F1-score when you want a balanced evaluation of precision and recall.
+
+By understanding these metrics and their applications, you can optimize your AI model's performance and make informed decisions about its development and deployment.

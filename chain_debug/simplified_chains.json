@@ -1,0 +1,24 @@
+{
+  "simplified_chains": [
+    {
+      "name": "single_enforcer_chain",
+      "models": [
+        "enhanced_agent_enforcer"
+      ],
+      "description": "Single model chain using only the working enforcer model"
+    },
+    {
+      "name": "working_models_chain",
+      "models": [
+        "enhanced_agent_enforcer",
+        "financial_planning_expert_v6"
+      ],
+      "description": "Chain using all confirmed working models"
+    }
+  ],
+  "working_models": [
+    "enhanced_agent_enforcer",
+    "financial_planning_expert_v6"
+  ],
+  "generated_at": "Fri Jun 20 08:04:22 EDT 2025"
+}

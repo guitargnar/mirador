@@ -1,0 +1,29 @@
+Previous output:
+**Financial Planning Analysis**
+
+To better assist you, I'll need more information about your specific situation. Please provide the following details:
+
+1. **Current Financial Situation**:
+	* What is your current income?
+	* What are your fixed expenses (e.g., rent, utilities, car payment)?
+	* Do you have any debt or outstanding loans?
+2. **Financial Goals**:
+	* Are there specific financial goals you'd like to achieve (e.g., saving for a down payment on a house, retirement, or paying off debt)?
+	* What is your desired time horizon for achieving these goals?
+3. **Risk Tolerance**:
+	* How comfortable are you with taking risks in your investments?
+	* Are you willing to accept some level of market volatility in pursuit of higher returns?
+
+Once I have a better understanding of your financial situation, goals, and risk tolerance, I can provide more tailored recommendations.
+
+Please respond with the following format:
+
+`Current Income: $X
+Fixed Expenses: $Y
+Debt/Obligations: Z
+Financial Goals: W
+Risk Tolerance: V`
+
+This will help me generate a comprehensive financial plan that suits your needs.
+
+Please build upon this information and provide further insights.

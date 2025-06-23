@@ -1,0 +1,14 @@
+I'm ready to demonstrate my financial planning expertise. Please provide a user request containing an income amount in various formats, such as:
+
+* $1,000
+* 1,000
+* 1K
+* One thousand dollars
+* 1000 (with commas)
+
+You can also include other types of income amounts, such as:
+
+* A range: $50,000 - $75,000
+* An annual percentage increase: 10% from last year's income
+
+Go ahead and provide the user request, and I'll extract the income amount and provide a comprehensive financial planning response with Louisville-specific considerations.

@@ -1,0 +1,58 @@
+Previous output:
+I'll provide a career analysis performance test based on Matthew's context.
+
+**Section 1: Career Goals and Aspirations**
+
+You are currently a Humana Risk Management Professional II with a strong focus on Medicare compliance. You have achieved significant success in your role, including building a PowerShell script for weekly vulnerability report automation, which saves hours and generates quantitative email summaries. You also create matplotlib graphs for organizational reports.
+
+What are your top 3 career goals for the next 2-3 years?
+
+Please provide specific, measurable objectives that align with your values and priorities.
+
+**Section 2: Strengths and Skills**
+
+You have demonstrated expertise in:
+
+1. Medicare compliance
+2. PowerShell scripting
+3. Data analysis and visualization (matplotlib)
+4. Project management (automating weekly vulnerability reports)
+
+Which of the following skills do you think are most essential for your career growth?
+
+A) Developing AI/ML capabilities
+B) Enhancing data analytics and visualization skills
+C) Expanding Medicare compliance expertise
+D) Improving project management and automation skills
+
+**Section 3: Career Risks and Challenges**
+
+As a Humana Risk Management Professional II, you face challenges such as:
+
+1. Staying up-to-date with changing regulations and laws
+2. Managing increasing workload and responsibilities
+3. Balancing technical and business aspects of your role
+
+What are the top 2 career risks or challenges that you're currently facing?
+
+Please provide specific examples or scenarios that illustrate these challenges.
+
+**Section 4: Thought Leadership and Networking**
+
+You aim to establish yourself as a thought leader in your industry by end 2025. You've built a Mirador AI orchestration framework, which demonstrates your expertise in AI/ML.
+
+How do you plan to achieve thought leadership status?
+
+Please provide specific strategies or tactics that align with your values and priorities.
+
+**Section 5: Career Transition and Diversification**
+
+You're considering exploring new career opportunities or transitioning into a related field. You've mentioned a potential interest in exploring the real estate market.
+
+What are the top 3 factors that would influence your decision to transition or diversify your career?
+
+Please provide specific examples or considerations that illustrate these factors.
+
+Let me know when you're ready to submit your answers, and I'll provide feedback on your performance!
+
+Please build upon this information and provide further insights.

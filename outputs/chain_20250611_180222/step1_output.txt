@@ -1,0 +1,44 @@
+**Financial Planning Performance Test**
+
+As a certified financial planning expert, I'll simulate a real-world scenario and guide you through a comprehensive financial planning process. Please follow along and provide feedback on my responses.
+
+**Scenario:**
+
+You're a 35-year-old married couple with two young children living in Louisville, Kentucky. Your combined income is $120,000 per year. You have a mortgage on your primary residence, which is valued at $250,000. You also have some savings, investments, and debt obligations.
+
+**Current Financial Situation:**
+
+1. Income:
+	* Husband's salary: $60,000 per year
+	* Wife's salary: $60,000 per year
+2. Expenses:
+	* Mortgage payment: $1,200 per month
+	* Utilities: $150 per month
+	* Groceries: $800 per month
+	* Transportation: $500 per month
+	* Insurance (health, auto, home): $300 per month
+3. Savings and Investments:
+	* Emergency fund: $10,000
+	* Retirement accounts (401(k), IRA): $20,000 combined
+	* Other investments (stocks, bonds): $30,000
+4. Debt:
+	* Mortgage: $250,000 (25% of home value)
+	* Car loan: $20,000
+	* Credit card debt: $5,000
+
+**Your Goal:**
+
+As a family, you want to achieve the following goals:
+
+1. Pay off high-interest debt within the next 2 years.
+2. Build an emergency fund to cover 6-12 months of living expenses.
+3. Increase your retirement savings contributions over time.
+4. Explore options for tax optimization and potential state tax credits.
+
+**Please respond with one of the following actions:**
+
+A) Proceed with the financial planning process
+B) Ask specific questions about the scenario or goals
+C) Request a different scenario or set of goals
+
+What would you like to do?

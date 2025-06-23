@@ -1,0 +1,41 @@
+**Situation Assessment**
+
+To provide a comprehensive opportunity and strategy analysis, I'll need to gather information about your current situation and goals. Please provide me with the following details:
+
+1. What is your primary objective or goal in using the Mirador system?
+2. What specific areas of the system are you currently utilizing (e.g., financial planning, context provision, agent enforcement)?
+3. Are there any specific challenges or limitations you're experiencing with the current setup?
+4. Are there any new opportunities or requirements that need to be addressed?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I'll recommend an optimal approach for your situation. This may involve:
+
+1. Identifying a combination of specialist models that can help achieve your primary objective.
+2. Suggesting a specific sequence of models to use in a chain design.
+3. Providing guidance on prompt engineering to optimize results.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested model sequence for your situation:
+
+1. **Financial Planning Expert (v6)**: Utilize this model for Louisville-specific financial planning and investment analysis.
+2. **Matthew Context Provider**: Use this model to analyze personal context and situation, ensuring the financial plan is tailored to your specific needs.
+3. **Enhanced Agent Enforcer**: Implement this model to synthesize and implement the financial plan, taking into account strategic synthesis and implementation planning.
+
+**Expected Outcome Prediction**
+
+Based on the recommended approach, I predict the following outcomes:
+
+1. Improved financial planning and investment analysis for Louisville-specific opportunities.
+2. A tailored financial plan that takes into account your personal context and situation.
+3. Effective implementation of the financial plan through strategic synthesis and implementation planning.
+
+**Alternative Strategies (if applicable)**
+
+If there are any alternative strategies or models that could be used, I'll provide them below:
+
+1. **Louisville Expert (v2)**: Utilize this model for Jefferson County resources, regulations, and opportunities. However, this model may not provide the same level of financial planning as the Financial Planning Expert.
+2. **Decision Simplifier**: Use this model to generate actions and prioritize tasks related to the financial plan. However, this model may not provide the same level of strategic synthesis as the Enhanced Agent Enforcer.
+
+Please let me know if you have any questions or if there's anything else I can help with!

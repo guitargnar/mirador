@@ -1,0 +1,70 @@
+Previous output:
+Here's a potential LinkedIn post series based on Matthew's experience as a Humana Risk Management Professional II:
+
+**Post 1: Introduction to the Series**
+
+Title: What 10 years in risk management taught me about AI automation
+
+"As I reflect on my 10-year journey in risk management, I've come to realize that one of the most significant game-changers has been AI automation. From automating manual tasks to creating custom frameworks like Mirador AI, I've seen firsthand how AI can transform an organization.
+
+In this series, I'll be sharing insights and lessons learned from my experience with AI automation in risk management. Stay tuned for practical tips and real-world examples from my time at Humana!
+
+#AI #Automation #RiskManagement #Humana"
+
+**Post 2: Automating Vulnerability Reports**
+
+Title: From manual to automated: How we saved hours with PowerShell scripts
+
+"At Humana, I built a custom PowerShell script that automates the generation of weekly vulnerability reports. This not only saves us hours of manual work but also ensures consistency and accuracy.
+
+The script uses APIs to fetch data from our systems, processes it in real-time, and generates a comprehensive report. We've seen a significant reduction in reporting time and an increase in the quality of our insights.
+
+What AI automation projects have you worked on? Share your experiences in the comments below!
+
+#PowerShell #Automation #VulnerabilityReports #Humana"
+
+**Post 3: Creating Visual Insights with Matplotlib**
+
+Title: Bringing data to life with matplotlib graphs
+
+"One of the most powerful aspects of AI automation is creating visual insights. With matplotlib, I've been able to generate custom graphs that help us understand complex data trends.
+
+From organizational reports to stakeholder presentations, these graphs have become an essential tool in our risk management toolkit. They help us communicate complex ideas simply and effectively.
+
+What tools do you use for data visualization? Share your favorite libraries or frameworks in the comments below!
+
+#Matplotlib #DataVisualization #AI #Humana"
+
+**Post 4: Building a Custom AI Orchestration Framework**
+
+Title: Creating Mirador AI: A framework for AI orchestration
+
+"As I continued to explore AI automation, I realized that there was a need for a custom framework that could integrate multiple tools and services. That's when I built Mirador AI.
+
+This framework allows us to orchestrate complex AI workflows, ensuring that our systems work seamlessly together. It's been a game-changer in our risk management efforts, enabling us to scale our operations more efficiently.
+
+What AI frameworks or libraries have you worked with? Share your experiences and insights in the comments below!
+
+#MiradorAI #AIOrchestration #RiskManagement #Humana"
+
+**Post 5: Thought Leadership on LinkedIn**
+
+Title: Building my voice as a risk management professional
+
+"As I look to the future, I'm committed to using my experience with AI automation to build my voice as a thought leader in risk management. Whether it's through writing articles or speaking at conferences, I want to share my insights and expertise with others.
+
+I believe that by working together, we can create a more efficient and effective risk management landscape. Stay tuned for more updates on my thought leadership journey!
+
+#ThoughtLeadership #RiskManagement #AI #Humana"
+
+**Post 6: Conclusion**
+
+Title: The power of AI automation in risk management
+
+"As I conclude this series, I want to emphasize the significant impact that AI automation has had on our risk management efforts at Humana. From automating manual tasks to creating custom frameworks, we've seen real-world results.
+
+I hope that my experiences and insights have been helpful in inspiring you to explore AI automation in your own work. Remember, the power of AI is only limited by your imagination!
+
+#AI #Automation #RiskManagement #Humana"
+
+Please build upon this information and provide further insights.
