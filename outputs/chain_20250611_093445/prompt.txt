@@ -1,0 +1,1 @@
+LinkedIn post: How I went from Excel pivot tables to matplotlib graphs - the PowerShell journey that changed my risk reporting (include code snippets)

@@ -1,0 +1,1 @@
+Create a LinkedIn post explaining HTTP fundamentals for AI applications in healthcare. Include request methods, status codes, headers, and specific examples from Medicare compliance systems.

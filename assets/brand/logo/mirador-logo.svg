@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="240" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Watchtower Structure -->
+  <g id="watchtower">
+    <!-- Base circle -->
+    <circle cx="100" cy="60" r="50" fill="#7B9E89" opacity="0.3"/>
+    
+    <!-- Tower structure -->
+    <path d="M 80 60 L 75 100 L 125 100 L 120 60 Z" fill="#1B3A33"/>
+    
+    <!-- Tower top (observation deck) -->
+    <rect x="70" y="50" width="60" height="15" rx="2" fill="#1B3A33"/>
+    
+    <!-- Pillars -->
+    <rect x="75" y="60" width="4" height="40" fill="#2B2B2B"/>
+    <rect x="95" y="60" width="4" height="40" fill="#2B2B2B"/>
+    <rect x="121" y="60" width="4" height="40" fill="#2B2B2B"/>
+    
+    <!-- Roof -->
+    <path d="M 65 50 L 100 35 L 135 50 Z" fill="#7B9E89"/>
+    
+    <!-- Observation beams -->
+    <g opacity="0.6">
+      <path d="M 100 60 L 40 120 L 50 120 Z" fill="#D17A47" opacity="0.5"/>
+      <path d="M 100 60 L 150 120 L 160 120 Z" fill="#D17A47" opacity="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Brand name -->
+  <text x="100" y="140" font-family="Avenir Next, Helvetica Neue, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#1B3A33">MIRADOR</text>
+  
+  <!-- Tagline -->
+  <text x="100" y="165" font-family="Inter, sans-serif" font-size="12" text-anchor="middle" fill="#7B9E89" letter-spacing="2">Observe. Adapt. Remain.</text>
+</svg>

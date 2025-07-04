@@ -1,0 +1,41 @@
+**Situation Assessment**
+
+To optimize financial strategy with the Mirador system, I need to understand your current goals, constraints, and usage patterns. Please provide me with the following information:
+
+1. What is your primary financial goal (e.g., saving for retirement, paying off debt, investing in a business)?
+2. What is your current financial situation (e.g., income, expenses, assets, debts)?
+3. How often do you interact with the Mirador system?
+4. Are there any specific models or chains you've been using, and if so, what are their strengths and weaknesses?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I recommend the following approach:
+
+1. **Financial Planning Expert (V6)**: Utilize the financial planning expert model to analyze your income, expenses, and assets. This will provide a comprehensive understanding of your financial situation.
+2. **Enhanced Agent Enforcer**: Leverage the enhanced agent enforcer model to identify opportunities for strategic synthesis and implementation planning. This will help you create a tailored financial plan that aligns with your goals.
+3. **Decision Simplifier**: Use the decision simplifier model to generate action plans and prioritize tasks. This will ensure that you're focusing on the most critical steps to achieve your financial objectives.
+
+**Specific Model Sequence Suggestion**
+
+To optimize your financial strategy, I suggest the following model sequence:
+
+1. Financial Planning Expert (V6) → Analyze income, expenses, and assets
+2. Enhanced Agent Enforcer → Identify opportunities for strategic synthesis and implementation planning
+3. Decision Simplifier → Generate action plans and prioritize tasks
+
+**Expected Outcome Prediction**
+
+By utilizing this optimized approach, you can expect to achieve the following outcomes:
+
+* A comprehensive understanding of your financial situation
+* A tailored financial plan that aligns with your goals
+* Increased efficiency in achieving your financial objectives
+
+**Alternative Strategies (if applicable)**
+
+If you're looking to optimize your financial strategy further, I recommend exploring alternative strategies, such as:
+
+1. **Matthew Context Provider**: Use the context provider model to analyze your personal situation and identify potential opportunities for improvement.
+2. **Louisville Expert (V2)**: Leverage the local expert model to gain insights into Jefferson County resources, regulations, and opportunities that may impact your financial strategy.
+
+Please let me know if you'd like to explore any of these alternative strategies or if you have any further questions.

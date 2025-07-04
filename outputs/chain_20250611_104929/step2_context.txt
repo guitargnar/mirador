@@ -1,0 +1,64 @@
+**Situation Assessment Update**
+
+Based on the previous output, I'll provide an updated assessment of Matthew's situation:
+
+**Current Profession/Industry**: Humana Risk Management Professional II, Medicare compliance
+
+**Relevant Skills and Experience**: Built PowerShell script for weekly vulnerability report automation, created matplotlib graphs for organizational reports, and has built Mirador AI orchestration framework.
+
+**Career Goals**: Next-level career advancement in a high-demand field with significant growth potential. Matthew wants to leverage his technical skills to transition into a senior leadership role or expert position.
+
+**Financial Goals**: Increase annual salary by 20-50% within the next 2-5 years, considering the current mortgage and household income.
+
+**Availability of Time and Resources for Learning and Professional Development**: Matthew has a relatively stable work schedule, but his girlfriend's lease ends in August, which may impact their living situation. They have a combined household income of $145,000, with Matthew earning $85,000 and his girlfriend earning $60,000.
+
+**Optimal Approach Recommendation**
+
+Considering Matthew's skills and experience, I recommend the following approach:
+
+1. **Upskill and Reskill**: Focus on developing expertise in areas like:
+	* Cloud computing (AWS, Azure, Google Cloud)
+	* Cybersecurity
+	* Data analytics and visualization
+	* AI and machine learning
+2. **Networking and Mentorship**: Attend industry events, conferences, and networking sessions to connect with professionals in his desired field. Consider finding a mentor who can guide him through the transition process.
+3. **Build a Strong Online Presence**: Create a professional online presence by:
+	* Building a personal website or blog to showcase his skills and experience
+	* Establishing a strong LinkedIn profile and connecting with industry leaders
+	* Creating a portfolio of his work (e.g., projects, case studies)
+4. **Pursue Advanced Education**: Consider pursuing a graduate degree (e.g., MBA, MS) or a professional certification (e.g., CFA, PMP) to enhance his credibility and career prospects.
+5. **Stay Agile and Adaptable**: Be prepared to pivot his career path if the market demands it. Stay up-to-date with industry trends and be willing to learn new skills.
+
+**Specific Model Sequence Suggestion**
+
+To achieve Matthew's career and financial goals, I recommend the following sequence of models:
+
+1. **Financial Planning Expert (financial_planning_expert_v6)**: Use this model to create a comprehensive financial plan, including:
+	* Salary increase projections
+	* Investment strategies
+	* Retirement planning
+2. **Enhanced Agent Enforcer (enhanced_agent_enforcer)**: This model will help Matthew identify and prioritize opportunities for career advancement, including:
+	* Job market analysis
+	* Networking strategies
+	* Professional development recommendations
+3. **Decision Simplifier (decision_simplifier)**: Use this model to streamline his decision-making process by:
+	* Identifying potential career paths
+	* Evaluating the pros and cons of each option
+	* Prioritizing opportunities based on alignment with his goals
+
+**Expected Outcome Prediction**
+
+Based on the optimal approach and model sequence, I predict the following outcomes:
+
+* A 20-50% increase in annual salary within the next 2-5 years
+* Successful career transition into a high-demand field with significant growth potential
+* Enhanced credibility and professional reputation through advanced education and certifications
+
+**Alternative Strategies (if applicable)**
+
+If Matthew is not ready to pursue advanced education or certifications, consider the following alternatives:
+
+* **Matthew Context Provider (matthew_context_provider)**: Use this model to analyze his current situation and identify potential career paths that align with his skills and experience.
+* **Louisville Expert (louisville_expert_v2)**: This model can provide insights into local job market trends and opportunities, helping Matthew make informed decisions about his career path.
+
+Please let me know if these recommendations align with your goals and expectations

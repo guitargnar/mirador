@@ -1,0 +1,117 @@
+As the Guitar Tone Architect for Mirador, I'll dive deeper into specific settings, signal chains, and techniques for achieving professional guitar tones across various genres.
+
+**Metal Tones (Modern and Classic)**
+
+For modern metal tones:
+
+* Amp Settings:
+	+ Gain: 7-8/10
+	+ Bass: 5-6/10
+	+ Mids: 4-5/10
+	+ Treble: 6-7/10
+* Effects Chain:
+	+ Overdrive/Distortion: Boss DS-1 or Tube Screamer (Gain at 7-8)
+	+ High-pass Filter: 100 Hz to 200 Hz cutoff
+	+ Reverb: Small room with 20% decay time
+* Signal Chain:
+	+ Guitar → Overdrive/Distortion → Gain → Amp → EQ → Compressor → Master Bus
+
+For classic metal tones:
+
+* Amp Settings:
+	+ Gain: 8-9/10
+	+ Bass: 6-7/10
+	+ Mids: 5-6/10
+	+ Treble: 7-8/10
+* Effects Chain:
+	+ Overdrive/Distortion: Tube Screamer (Gain at 8) or Pro Co RAT
+	+ High-pass Filter: 100 Hz to 200 Hz cutoff
+	+ Reverb: Large room with 30% decay time
+* Signal Chain:
+	+ Guitar → Overdrive/Distortion → Gain → Amp → EQ → Compressor → Master Bus
+
+**Rock (Indie to Hard Rock)**
+
+For indie rock tones:
+
+* Amp Settings:
+	+ Gain: 5-6/10
+	+ Bass: 4-5/10
+	+ Mids: 3-4/10
+	+ Treble: 5-6/10
+* Effects Chain:
+	+ Overdrive/Distortion: Boss BD-2 or Fulltone OCD (Gain at 5)
+	+ High-pass Filter: 100 Hz to 200 Hz cutoff
+	+ Reverb: Small room with 20% decay time
+* Signal Chain:
+	+ Guitar → Overdrive/Distortion → Gain → Amp → EQ → Compressor → Master Bus
+
+For hard rock tones:
+
+* Amp Settings:
+	+ Gain: 7-8/10
+	+ Bass: 5-6/10
+	+ Mids: 4-5/10
+	+ Treble: 6-7/10
+* Effects Chain:
+	+ Overdrive/Distortion: Pro Co RAT or MXR Distortion+
+	+ High-pass Filter: 100 Hz to 200 Hz cutoff
+	+ Reverb: Large room with 30% decay time
+* Signal Chain:
+	+ Guitar → Overdrive/Distortion → Gain → Amp → EQ → Compressor → Master Bus
+
+**Clean Tones for Session Work**
+
+For clean tones:
+
+* Amp Settings:
+	+ Gain: 2-3/10
+	+ Bass: 3-4/10
+	+ Mids: 2-3/10
+	+ Treble: 4-5/10
+* Effects Chain:
+	+ No Overdrive/Distortion
+	+ High-pass Filter: 100 Hz to 200 Hz cutoff
+	+ Reverb: Small room with 20% decay time
+* Signal Chain:
+	+ Guitar → Gain → Amp → EQ → Compressor → Master Bus
+
+**Effects Pedal Combinations**
+
+Some popular effects pedal combinations:
+
+* Overdrive/Distortion + Reverb: Great for creating a natural, ambient sound.
+* Delay + Reverb: Excellent for adding depth and width to your tone.
+* Compression + EQ: Ideal for even out your tone and add punch.
+
+**Amp Simulation Optimization**
+
+To optimize amp simulations:
+
+* Choose the right amp model: Select an amp that matches your desired tone and genre.
+* Adjust gain and bass: Boost or cut the gain and bass to achieve a balanced sound.
+* Experiment with cab emulations: Try different cab models to find one that suits your tone.
+
+**Recording Techniques**
+
+For recording tones:
+
+* Use a high-quality microphone: Choose a mic that captures your tone accurately, such as a dynamic or condenser mic.
+* Monitor your tone: Listen to your tone in real-time to make adjustments during the recording process.
+* Record with a clear signal chain: Keep your signal chain clean and minimal to avoid noise and distortion.
+
+**Budget-Conscious Gear Recommendations**
+
+For budget-friendly options:
+
+* Amps:
+	+ Fender Mustang III (around $200)
+	+ Blackstar ID:Core (around $150)
+* Effects Pedals:
+	+ Boss DS-1 Distortion ($60)
+	+ Fulltone OCD Overdrive ($100)
+* Guitars:
+	+ Epiphone Les Paul Special II (around $300)
+	+ Squier Stratocaster (around $200)
+
+By following these guidelines, you'll be able to achieve professional guitar tones that suit your genre and style. Remember to experiment and find the right settings for your unique tone.

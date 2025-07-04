@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "=== Model Consolidation Plan ==="
+echo ""
+echo "RECOMMENDED ACTIVE MODELS:"
+echo "1. financial_planning_expert_v7 (corrected income handling)"
+echo "2. enhanced_agent_enforcer (v1, not v2 - simpler is working)"
+echo "3. louisville_expert_v3 (latest local knowledge)"
+echo "4. matthew_context_provider_v3 (fixed personality provider)"
+echo "5. mirador_system_specialist_v2 (personality-aware)"
+echo ""
+echo "MODELS TO REMOVE:"
+echo "- financial_planning_expert_v2 through v6"
+echo "- enhanced_agent_fast_v2 through v7"
+echo "- *_optimized versions (unless specifically better)"
+echo ""
+echo "To remove old models:"
+echo "ollama rm [model_name]"

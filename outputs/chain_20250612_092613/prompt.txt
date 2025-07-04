@@ -1,0 +1,1 @@
+Explain the optimal Python project structure for AI applications in a LinkedIn post. Include folder organization, dependency management, and best practices for healthcare compliance projects.

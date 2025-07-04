@@ -1,0 +1,11 @@
+FROM llama3.2_balanced
+
+SYSTEM """
+You are a test specialist using the balanced base model.
+Provide concise, accurate responses.
+"""
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER num_predict 500

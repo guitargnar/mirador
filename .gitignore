@@ -1,0 +1,245 @@
+# ===========================================================
+# MIRADOR SECURITY-ENHANCED .GITIGNORE
+# ===========================================================
+# This file uses multiple layers of protection to prevent
+# accidental exposure of sensitive data
+# ===========================================================
+
+# CRITICAL: Personal & Financial Information
+# ===========================================================
+**/personal_data/
+**/financial_*/
+**/private_*/
+**/confidential_*/
+**/sensitive_*/
+*humana*
+*401k*
+*salary*
+*ssn*
+*tax*
+*bank*
+*aurora*  # Family member names
+matthew_*.json
+matthew_*.txt
+matthew_*.log
+
+# API Keys & Credentials - Multiple Pattern Matching
+# ===========================================================
+# Environment files - ALL variations
+.env
+.env.*
+!.env.example
+!.env.template
+*.env
+env/
+ENV/
+
+# API key patterns (case-insensitive on most systems)
+*api_key*
+*apikey*
+*API_KEY*
+*secret*
+*SECRET*
+*password*
+*PASSWORD*
+*token*
+*TOKEN*
+*credential*
+*CREDENTIAL*
+*.pem
+*.key
+*.cert
+*.crt
+private_key*
+access_token*
+
+# Cloud Provider Credentials
+# ===========================================================
+# AWS
+.aws/
+aws_credentials
+*aws_access*
+*aws_secret*
+
+# Google Cloud
+service-account*.json
+gcp-key.json
+*google*credentials*
+.gcloud/
+
+# Azure
+azure_credentials*
+*.azureauth
+.azure/
+
+# Mirador-Specific Security
+# ===========================================================
+# Model outputs that might contain personal context
+outputs/**/matthew_*
+outputs/**/personal_*
+outputs/**/financial_*
+outputs/**/family_*
+
+# Memory and conversation data
+mirador_memory.db
+conversations/
+memory/
+*_memory.json
+*_history.txt
+*conversation*.log
+
+# Private modelfiles
+modelfiles/private/
+*_private.modelfile
+*_personal.modelfile
+matthew_*.modelfile
+!matthew_advisor.modelfile  # Allow public version
+
+# Chain outputs with personal data
+chain_*/personal_*
+chain_*/financial_*
+chain_*/private_*
+
+# System & IDE Files
+# ===========================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim/
+
+# Development Files
+# ===========================================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+google-env/
+
+# Logs & Temporary Files
+# ===========================================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+cache/
+.cache/
+
+# Security Through Obscurity Patterns
+# ===========================================================
+# Hidden directories that might contain sensitive data
+.private/
+.secret/
+.hidden/
+.secure/
+.vault/
+
+# Decoy patterns (if you implement honeypot files)
+!honeypot/
+!.decoy/
+!fake_credentials.txt
+
+# Database Files
+# ===========================================================
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+!schema.sql
+!migrations/*.sql
+
+# Documentation with sensitive info
+# ===========================================================
+**/notes/personal/
+**/docs/private/
+**/documentation/confidential/
+NOTES.md
+TODO_PRIVATE.md
+ideas_private.txt
+
+# Monitoring & Performance Data
+# ===========================================================
+performance_*.txt
+monitor_*.log
+metrics/
+analytics/
+usage_data/
+
+# Archive Files (might contain multiple sensitive files)
+# ===========================================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+!assets.zip  # Allow specific branded assets
+
+# Ollama Model Cache
+# ===========================================================
+.ollama/
+model_cache/
+*.gguf
+!approved_models/*.gguf
+
+# Additional Security Patterns
+# ===========================================================
+# Prevent common typos and variations
+.evn
+.enc
+.nev
+configuration.json
+config.json
+!config.example.json
+settings.json
+!settings.example.json
+
+# Session and state files
+session_*
+state_*
+checkpoint_*
+
+# Backup patterns
+backup*/
+backups/
+*.backup
+*.old
+*.orig
+
+# ===========================================================
+# REMEMBER: If you accidentally commit sensitive data:
+# 1. Immediately change all exposed credentials
+# 2. Use BFG Repo-Cleaner or git filter-branch
+# 3. Force push after cleaning history
+# 4. Consider the data permanently compromised
+# ===========================================================

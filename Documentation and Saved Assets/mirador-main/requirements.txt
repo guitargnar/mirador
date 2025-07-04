@@ -1,0 +1,45 @@
+# Mirador AI Orchestration System - Python Requirements
+# Python 3.11+ required
+
+# Core Dependencies
+click==8.1.8              # Command line interface
+rich==13.9.4              # Terminal formatting and progress bars
+rich-toolkit==0.14.6      # Additional rich components
+
+# Database
+# sqlite3 is included in Python standard library
+
+# System Monitoring
+psutil==5.9.8             # Process and system utilities
+
+# Data Processing
+pandas==2.2.2             # Data analysis (optional, for analytics)
+numpy==1.26.4             # Numerical operations (optional)
+
+# Utilities
+python-dotenv==1.0.1      # Environment variable management
+pyyaml==6.0.1            # YAML configuration files
+requests==2.32.3          # HTTP requests (for future API integration)
+
+# Development Dependencies
+pytest==8.2.2             # Testing framework
+pytest-cov==5.0.0         # Test coverage
+black==24.4.2             # Code formatter
+flake8==7.0.0            # Linting
+mypy==1.10.0             # Type checking
+
+# Optional Performance Enhancements
+orjson==3.10.5           # Fast JSON parsing
+msgpack==1.0.8           # Binary serialization
+aiofiles==23.2.1         # Async file operations
+
+# Logging and Monitoring
+loguru==0.7.2            # Advanced logging
+watchdog==4.0.1          # File system monitoring
+
+# Future Enhancements (commented out)
+# streamlit==1.35.0       # Web UI
+# fastapi==0.111.0        # API server
+# uvicorn==0.30.1         # ASGI server
+# plotly==5.22.0          # Data visualization
+# schedule==1.2.2         # Task scheduling

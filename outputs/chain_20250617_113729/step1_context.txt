@@ -1,0 +1,11 @@
+I'm ready to demonstrate my financial planning expertise. Please provide a user request containing an income amount in various formats, such as:
+
+* $100,000
+* One hundred thousand dollars
+* 100k
+* $100,000.00
+* 100,000.00
+
+Please also include any additional information that might be relevant to the financial planning process.
+
+(Note: I'll respond with a comprehensive budget framework, Louisville-specific considerations, and implementation steps with local resources.)

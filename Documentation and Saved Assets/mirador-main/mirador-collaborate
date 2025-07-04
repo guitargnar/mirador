@@ -1,0 +1,817 @@
+#!/usr/bin/env python3
+"""
+Mirador Collaborate
+
+Command-line interface for running chains with bidirectional communication between specialists.
+"""
+
+import os
+import sys
+import json
+import time
+import argparse
+import logging
+from typing import List, Dict, Any, Optional
+from datetime import datetime
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(os.path.expanduser("~/ai_framework_git/logs/mirador_collaborate.log"))
+    ]
+)
+logger = logging.getLogger("mirador-collaborate")
+
+# Add source directory to path
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src/core"))
+
+# Import bidirectional communication components
+try:
+    from message_bus import MessageBus
+    from specialist_handler import SpecialistHandler
+except ImportError:
+    logger.error("Failed to import bidirectional communication components. Make sure they are installed correctly.")
+    print("Error: Failed to import required components. See logs for details.")
+    sys.exit(1)
+
+# ANSI colors for output
+GREEN = '\033[0;32m'
+BLUE = '\033[0;34m'
+YELLOW = '\033[1;33m'
+RED = '\033[0;31m'
+MAGENTA = '\033[0;35m'
+CYAN = '\033[0;36m'
+BOLD = '\033[1m'
+RESET = '\033[0m'
+
+
+def visualize_communication_graph(graph: Dict[str, Any]) -> None:
+    """
+    Visualize the communication graph in the terminal.
+    
+    Args:
+        graph: Communication graph data
+    """
+    if not graph.get("edges"):
+        print(f"{YELLOW}No communication took place between specialists.{RESET}")
+        return
+    
+    print(f"\n{CYAN}{BOLD}Communication Graph:{RESET}")
+    print(f"{BLUE}{'='*60}{RESET}")
+    
+    # Group edges by source
+    sources = {}
+    for edge in graph.get("edges", []):
+        source = edge.get("source")
+        if source not in sources:
+            sources[source] = []
+        sources[source].append(edge)
+    
+    # Print edges grouped by source
+    for source, edges in sources.items():
+        print(f"{YELLOW}{BOLD}{source}{RESET} communicated with:")
+        
+        for edge in edges:
+            target = edge.get("target")
+            message_type = edge.get("message_type", "unknown")
+            
+            # Format based on message type
+            if message_type == "query":
+                print(f"  {BLUE}→ {target}{RESET} (query)")
+            elif message_type == "response":
+                print(f"  {GREEN}← {target}{RESET} (response)")
+            else:
+                print(f"  ↔ {target} ({message_type})")
+    
+    print(f"{BLUE}{'='*60}{RESET}")
+
+
+def visualize_query(query: Dict[str, Any]) -> None:
+    """
+    Visualize a query in the terminal.
+    
+    Args:
+        query: Query message data
+    """
+    source = query.get("source_specialist")
+    target = query.get("target_specialist")
+    content = query.get("content", {}).get("query", "No query content")
+    
+    print(f"\n{YELLOW}{BOLD}Query:{RESET}")
+    print(f"{BLUE}From:{RESET} {source}")
+    print(f"{BLUE}To:{RESET} {target}")
+    print(f"{BLUE}Question:{RESET}")
+    print(f"{CYAN}{content}{RESET}")
+    print()
+
+
+def visualize_response(response: Dict[str, Any]) -> None:
+    """
+    Visualize a response in the terminal.
+    
+    Args:
+        response: Response message data
+    """
+    source = response.get("source_specialist")
+    target = response.get("target_specialist")
+    content = response.get("content", {}).get("response", "No response content")
+    
+    print(f"\n{GREEN}{BOLD}Response:{RESET}")
+    print(f"{BLUE}From:{RESET} {source}")
+    print(f"{BLUE}To:{RESET} {target}")
+    print(f"{BLUE}Answer:{RESET}")
+    print(f"{GREEN}{content}{RESET}")
+    print()
+
+
+def save_results(results: Dict[str, Any], output_path: Optional[str] = None) -> str:
+    """
+    Save chain results to disk.
+    
+    Args:
+        results: Results dictionary
+        output_path: Optional output path override
+        
+    Returns:
+        Path to the saved results
+    """
+    # Create timestamped output directory
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    if output_path is None:
+        output_dir = os.path.expanduser(f"~/ai_framework_git/outputs/collaborate_{timestamp}")
+    else:
+        output_dir = output_path
+    
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Save raw results
+    results_path = os.path.join(output_dir, "results.json")
+    with open(results_path, "w") as f:
+        json.dump(results, f, indent=2)
+    
+    # Generate summary markdown
+    summary_path = os.path.join(output_dir, "summary.md")
+    with open(summary_path, "w") as f:
+        f.write("# Mirador Collaboration Results\n\n")
+        
+        # Add initial prompt
+        f.write("## Initial Prompt\n\n")
+        f.write(f"{results.get('prompt', 'No prompt provided')}\n\n")
+        
+        # Add specialists used
+        f.write("## Specialists Used\n\n")
+        for i, specialist in enumerate(results.get("specialists", [])):
+            f.write(f"{i+1}. {specialist}\n")
+        f.write("\n")
+        
+        # Add collaboration graph
+        f.write("## Collaboration Graph\n\n")
+        f.write("```\n")
+        
+        # Draw a simple graph
+        specialists = {}
+        for step in results.get("steps", []):
+            specialist = step.get("specialist")
+            if specialist not in specialists:
+                specialists[specialist] = True
+        
+        # Show connections
+        for edge in results.get("communication_graph", []):
+            source = edge.get("from")
+            target = edge.get("to")
+            edge_type = edge.get("type")
+            
+            if edge_type == "query":
+                f.write(f"{source} → {target}\n")
+            elif edge_type == "response":
+                f.write(f"{source} ← {target}\n")
+        
+        f.write("```\n\n")
+        
+        # Add communication details
+        f.write("## Communication Details\n\n")
+        
+        # Add queries
+        if results.get("queries"):
+            f.write("### Queries\n\n")
+            for query in results.get("queries", []):
+                source = query.get("source_specialist")
+                target = query.get("target_specialist")
+                content = query.get("content", {}).get("query", "No query content")
+                
+                f.write(f"**From {source} to {target}:**\n\n")
+                f.write(f"{content}\n\n")
+        
+        # Add step details
+        f.write("## Step Results\n\n")
+        for i, step in enumerate(results.get("steps", [])):
+            specialist = step.get("specialist")
+            response = step.get("response", "No response")
+            
+            f.write(f"### Step {i+1}: {specialist}\n\n")
+            f.write(f"{response}\n\n")
+    
+    # Generate visualization HTML
+    visualization_path = os.path.join(output_dir, "visualization.html")
+    generate_html_visualization(results, visualization_path)
+    
+    return output_dir
+
+
+def generate_html_visualization(results: Dict[str, Any], output_path: str) -> None:
+    """
+    Generate an HTML visualization of the collaboration.
+    
+    Args:
+        results: Results dictionary
+        output_path: Path to save the HTML file
+    """
+    html = """<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mirador Collaboration Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .step-content {
+            white-space: pre-wrap;
+        }
+        .query {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 3px;
+        }
+        .response {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f3f9f0;
+            border-left: 4px solid #28a745;
+            border-radius: 3px;
+        }
+        .graph-container {
+            margin-top: 30px;
+            height: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        pre {
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mirador Collaboration Visualization</h1>
+    
+    <h2>Initial Prompt</h2>
+    <div class="step">
+        <div class="step-content">
+            <pre>%s</pre>
+        </div>
+    </div>
+    
+    <h2>Collaboration Graph</h2>
+    <div class="graph-container" id="graph"></div>
+    
+    <h2>Step Results</h2>
+    %s
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("graph");
+            
+            // Create nodes and edges
+            const nodes = %s;
+            const edges = %s;
+            
+            // Create visualization
+            const data = {
+                nodes: nodes,
+                edges: edges
+            };
+            
+            const options = {
+                nodes: {
+                    shape: "circle",
+                    size: 25,
+                    font: {
+                        size: 14
+                    }
+                },
+                edges: {
+                    arrows: "to",
+                    smooth: {
+                        type: "curvedCW",
+                        roundness: 0.2
+                    },
+                    font: {
+                        size: 12,
+                        align: "middle"
+                    }
+                },
+                physics: {
+                    enabled: true,
+                    solver: "forceAtlas2Based"
+                }
+            };
+            
+            const network = new vis.Network(container, data, options);
+        });
+    </script>
+</body>
+</html>
+"""
+    
+    # Create step HTML
+    steps_html = ""
+    for i, step in enumerate(results.get("steps", [])):
+        specialist = step.get("specialist")
+        response = step.get("response", "No response")
+        
+        step_html = f"""
+    <div class="step">
+        <div class="step-header">
+            <h3>Step {i+1}: {specialist}</h3>
+            <span>Position: {step.get('position', i+1)}, Iteration: {step.get('iteration', 1)}</span>
+        </div>
+        <div class="step-content">
+            <pre>{response}</pre>
+        </div>
+    """
+        
+        # Add queries
+        queries = step.get("queries", [])
+        if queries:
+            step_html += "<h4>Queries</h4>"
+            for query in queries:
+                target = query.get("target_specialist")
+                content = query.get("content", {}).get("query", "No query content")
+                step_html += f"""
+        <div class="query">
+            <strong>To: {target}</strong>
+            <pre>{content}</pre>
+        </div>
+                """
+        
+        step_html += "</div>"
+        steps_html += step_html
+    
+    # Create nodes for graph visualization
+    nodes = []
+    seen_specialists = set()
+    
+    # Add specialists
+    for specialist in results.get("specialists", []):
+        if specialist not in seen_specialists:
+            nodes.append({
+                "id": specialist,
+                "label": specialist,
+                "color": "#5cb85c"
+            })
+            seen_specialists.add(specialist)
+    
+    # Add any other specialists from communication
+    for edge in results.get("communication_graph", []):
+        source = edge.get("from")
+        target = edge.get("to")
+        
+        if source not in seen_specialists:
+            nodes.append({
+                "id": source,
+                "label": source,
+                "color": "#5cb85c"
+            })
+            seen_specialists.add(source)
+            
+        if target not in seen_specialists:
+            nodes.append({
+                "id": target,
+                "label": target,
+                "color": "#5bc0de"
+            })
+            seen_specialists.add(target)
+    
+    # Create edges
+    edges = []
+    for edge in results.get("communication_graph", []):
+        source = edge.get("from")
+        target = edge.get("to")
+        edge_type = edge.get("type")
+        
+        if edge_type == "query":
+            edges.append({
+                "from": source,
+                "to": target,
+                "label": "query",
+                "color": "#007bff"
+            })
+        elif edge_type == "response":
+            edges.append({
+                "from": source,
+                "to": target,
+                "label": "response",
+                "color": "#28a745",
+                "dashes": True
+            })
+    
+    # Format HTML
+    formatted_html = html % (
+        results.get("prompt", "No prompt provided"),
+        steps_html,
+        json.dumps(nodes),
+        json.dumps(edges)
+    )
+    
+    # Write HTML file
+    with open(output_path, "w") as f:
+        f.write(formatted_html)
+
+
+def parse_arguments() -> argparse.Namespace:
+    """
+    Parse command-line arguments.
+    
+    Returns:
+        Parsed arguments namespace
+    """
+    parser = argparse.ArgumentParser(description="Mirador Collaborate: Run chains with bidirectional communication")
+    
+    parser.add_argument(
+        "prompt",
+        nargs="?",
+        help="The prompt to process"
+    )
+    
+    parser.add_argument(
+        "--specialists", "-s",
+        nargs="+",
+        help="Specialists to use (in order)"
+    )
+    
+    parser.add_argument(
+        "--output", "-o",
+        help="Output directory path"
+    )
+    
+    parser.add_argument(
+        "--file", "-f",
+        help="Read prompt from file"
+    )
+    
+    parser.add_argument(
+        "--iterations", "-i",
+        type=int,
+        default=1,
+        help="Maximum number of iterations"
+    )
+    
+    parser.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        help="Enable verbose output"
+    )
+    
+    parser.add_argument(
+        "--list-specialists",
+        action="store_true",
+        help="List available specialists"
+    )
+    
+    parser.add_argument(
+        "--test",
+        action="store_true",
+        help="Run a test with mock data"
+    )
+    
+    return parser.parse_args()
+
+
+def list_available_specialists() -> None:
+    """
+    List available specialists from configuration.
+    """
+    print(f"{BLUE}{BOLD}Available Specialists:{RESET}")
+    
+    # Check for config file
+    config_paths = [
+        os.path.expanduser("~/ai_framework_git/config/specialists.json"),
+        os.path.expanduser("~/ai_framework_git/config/config.json")
+    ]
+    
+    specialists = {}
+    
+    for path in config_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, "r") as f:
+                    config = json.load(f)
+                
+                # Check format
+                if "specialists" in config:
+                    specialists = config["specialists"]
+                    break
+                elif "models" in config:
+                    specialists = config["models"]
+                    break
+            except Exception as e:
+                logger.error(f"Error loading config from {path}: {e}")
+    
+    if not specialists:
+        # Default specialists if no config found
+        specialists = {
+            "master_coder": {
+                "description": "Code generation specialist",
+                "temperature": 0.4
+            },
+            "code_reviewer_fix": {
+                "description": "Code review and security specialist",
+                "temperature": 0.3
+            },
+            "creative_entrepreneur": {
+                "description": "Business application specialist",
+                "temperature": 0.7
+            },
+            "llama3.2_balanced": {
+                "description": "General purpose specialist",
+                "temperature": 0.6
+            },
+            "enhanced_agent": {
+                "description": "Comprehensive analysis specialist",
+                "temperature": 0.7
+            }
+        }
+    
+    # Print specialists
+    for name, info in specialists.items():
+        description = info.get("description", "No description")
+        temperature = info.get("temperature", "N/A")
+        
+        print(f"  {YELLOW}{name}{RESET} - {description} (temp={temperature})")
+
+
+def run_mock_test() -> None:
+    """
+    Run a test with mock data.
+    """
+    print(f"{BLUE}{BOLD}Running mock test...{RESET}")
+    
+    # Create temporary directory
+    import tempfile
+    import shutil
+    
+    test_dir = tempfile.mkdtemp()
+    
+    try:
+        # Initialize message bus
+        bus = MessageBus(session_id="test_session", session_dir=test_dir)
+        
+        # Initialize handler with mock
+        handler = SpecialistHandler(bus)
+        
+        # Create mock query_specialist method
+        def mock_query(specialist, prompt, **kwargs):
+            if specialist == "master_coder":
+                return """Here's a basic authentication system:
+
+```python
+def authenticate(username, password):
+    # Hash the password before comparing
+    hashed = hash_password(password)
+    return check_credentials(username, hashed)
+```
+
+But I'm not sure about the best hashing algorithm.
+
+<query specialist="security_expert">
+What's the recommended password hashing algorithm for Python in 2023?
+</query>
+
+I'll continue with the implementation.""", []
+            
+            elif specialist == "security_expert":
+                return """The current best practice for password hashing in Python is to use Argon2id.
+
+It's available through the argon2-cffi package and is recommended by OWASP.
+
+Here's an example:
+
+```python
+from argon2 import PasswordHasher
+
+ph = PasswordHasher()
+hash = ph.hash("user_password")
+try:
+    ph.verify(hash, "user_password")  # returns True for correct password
+    # Password is valid
+except:
+    # Password is invalid
+```
+
+This provides better security than older alternatives like bcrypt or PBKDF2.""", []
+            
+            elif specialist == "code_reviewer_fix":
+                return """Looking at the authentication system, there are several issues:
+
+1. No input validation
+2. No rate limiting to prevent brute force
+3. Missing proper error handling
+
+<query specialist="master_coder">
+What's your approach to handling rate limiting in authentication?
+</query>
+
+Here's an improved version:
+
+```python
+from argon2 import PasswordHasher
+import time
+
+def authenticate(username, password, max_attempts=5, timeout=300):
+    # Check for too many attempts
+    if is_rate_limited(username):
+        return False, "Too many attempts. Try again later."
+    
+    try:
+        # Get stored hash for username
+        stored_hash = get_credentials(username)
+        if not stored_hash:
+            # Don't reveal if username exists
+            return False, "Invalid credentials"
+            
+        # Verify password
+        ph = PasswordHasher()
+        ph.verify(stored_hash, password)
+        
+        # Reset attempts on success
+        reset_attempts(username)
+        return True, "Authentication successful"
+        
+    except Exception as e:
+        # Record failed attempt
+        record_attempt(username)
+        return False, "Invalid credentials"
+```
+
+This implementation addresses the security concerns.""", []
+            
+            else:
+                return f"Response from {specialist}", []
+                
+        # Replace the real method with mock
+        handler.query_specialist = mock_query
+        
+        # Run the mock chain
+        results = handler.run_with_collaboration(
+            "Create a secure authentication system in Python",
+            ["master_coder", "security_expert", "code_reviewer_fix"],
+            handle_messages=True,
+            max_iterations=1
+        )
+        
+        # Print results
+        print(f"\n{GREEN}Mock test completed successfully!{RESET}")
+        print(f"Chain executed with {len(results['steps'])} steps")
+        
+        # Visualize communication
+        if results.get("communication_graph"):
+            visualize_communication_graph(results.get("message_graph", {"edges": []}))
+            
+        # Save results
+        output_dir = save_results(results)
+        print(f"\n{GREEN}Results saved to: {output_dir}{RESET}")
+        print(f"  Summary: {os.path.join(output_dir, 'summary.md')}")
+        print(f"  Visualization: {os.path.join(output_dir, 'visualization.html')}")
+        
+    finally:
+        # Clean up
+        shutil.rmtree(test_dir)
+
+
+def main() -> None:
+    """Main entry point for the script."""
+    args = parse_arguments()
+    
+    # Handle list specialists command
+    if args.list_specialists:
+        list_available_specialists()
+        return
+    
+    # Handle test command
+    if args.test:
+        run_mock_test()
+        return
+    
+    # Check for required arguments
+    if not args.prompt and not args.file:
+        print(f"{RED}Error: Either a prompt or input file must be provided{RESET}")
+        print(f"Run {sys.argv[0]} --help for usage information")
+        return
+    
+    # Get prompt from file if specified
+    if args.file:
+        try:
+            with open(args.file, "r") as f:
+                prompt = f.read()
+        except Exception as e:
+            print(f"{RED}Error reading file {args.file}: {e}{RESET}")
+            return
+    else:
+        prompt = args.prompt
+    
+    # Use default specialists if none specified
+    if not args.specialists:
+        specialists = ["master_coder", "code_reviewer_fix", "creative_entrepreneur"]
+    else:
+        specialists = args.specialists
+    
+    # Print introduction
+    print(f"{MAGENTA}{BOLD}")
+    print("┌───────────────────────────────────────────┐")
+    print("│         MIRADOR COLLABORATION             │")
+    print("│     Bidirectional Specialist Chains       │")
+    print("└───────────────────────────────────────────┘")
+    print(f"{RESET}")
+    
+    print(f"{BLUE}Prompt:{RESET} {prompt}")
+    print(f"{BLUE}Specialists:{RESET} {', '.join(specialists)}")
+    print(f"{BLUE}Max iterations:{RESET} {args.iterations}")
+    print()
+    
+    # Initialize message bus
+    session_id = f"collaborate_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    bus = MessageBus(session_id=session_id)
+    
+    # Initialize specialist handler
+    handler = SpecialistHandler(bus)
+    
+    # Run the chain
+    start_time = time.time()
+    print(f"{YELLOW}Running collaborative chain...{RESET}")
+    
+    try:
+        results = handler.run_with_collaboration(
+            prompt=prompt,
+            specialists=specialists,
+            handle_messages=True,
+            max_iterations=args.iterations
+        )
+        
+        elapsed = time.time() - start_time
+        print(f"\n{GREEN}Chain completed in {elapsed:.2f} seconds{RESET}")
+        
+        # Print final result
+        if results.get("steps"):
+            final_step = results["steps"][-1]
+            print(f"\n{BLUE}{BOLD}Final Result:{RESET}")
+            print(f"{final_step['response']}")
+        
+        # Visualize communication
+        visualize_communication_graph(results.get("message_graph", {"edges": []}))
+        
+        # Save results
+        output_dir = save_results(results, args.output)
+        print(f"\n{GREEN}Results saved to: {output_dir}{RESET}")
+        print(f"  Summary: {os.path.join(output_dir, 'summary.md')}")
+        print(f"  Visualization: {os.path.join(output_dir, 'visualization.html')}")
+        
+    except Exception as e:
+        logger.error(f"Error running chain: {e}", exc_info=True)
+        print(f"{RED}Error running chain: {e}{RESET}")
+
+
+if __name__ == "__main__":
+    main()

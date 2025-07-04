@@ -1,0 +1,8 @@
+2025-06-23 14:49:00 [INFO] Starting chain: Test optimization performance
+2025-06-23 14:49:00 [INFO] Models: matthew_advisor_enhanced cross_model_synthesizer
+2025-06-23 14:49:00 [INFO] Output directory: /Users/matthewscott/ai_framework_git/outputs/chain_20250623_144900
+2025-06-23 14:49:01 [INFO] Executing model 1/2: matthew_advisor_enhanced
+2025-06-23 14:49:13 [INFO] ✓ matthew_advisor_enhanced completed
+2025-06-23 14:49:14 [INFO] Executing model 2/2: cross_model_synthesizer
+2025-06-23 14:49:23 [INFO] ✓ cross_model_synthesizer completed
+./mirador-ez: line 111: model_outputs: bad array subscript
