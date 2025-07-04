@@ -1,0 +1,10 @@
+{
+  "name": "performance_training",
+  "description": "Prepare for live performances and recording sessions with structured practice regimens",
+  "command": "mirador chain guitar_expert task_planner \"Create a 30-day practice regimen to prepare for [PERFORMANCE TYPE]\"",
+  "personas": [
+    "guitar_expert",
+    "task_planner"
+  ],
+  "notes": "This chain specializes in performance preparation for guitarists. The guitar_expert provides technical expertise and practice methodologies while the task_planner organizes them into a progressive schedule with specific goals and milestones."
+}

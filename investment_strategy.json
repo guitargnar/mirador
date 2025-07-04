@@ -1,0 +1,10 @@
+{
+  "name": "investment_strategy",
+  "description": "Develop personalized investment frameworks and asset allocation approaches",
+  "command": "mirador chain data_scientist creative_entrepreneur \"Create an investment strategy for [GOAL] considering risk tolerance, time horizon, and available capital\"",
+  "personas": [
+    "data_scientist",
+    "creative_entrepreneur"
+  ],
+  "notes": "This chain combines analytical rigor with strategic thinking for investment planning. The data_scientist provides quantitative analysis while the creative_entrepreneur identifies unconventional opportunities and portfolio diversification approaches."
+}

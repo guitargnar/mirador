@@ -1,0 +1,29 @@
+{
+  "name": "creator_financial_freedom",
+  "description": "Path to financial independence for content creators combining content strategy with financial planning",
+  "steps": [
+    {
+      "name": "content_strategy",
+      "domain": "content",
+      "command": "mirador chain creative_entrepreneur content_creator \"Create a content strategy for a creator in the [NICHE] space focused on building audience and authority\"",
+      "personas": ["creative_entrepreneur", "content_creator"],
+      "output_file": "content_strategy.md"
+    },
+    {
+      "name": "monetization_plan",
+      "domain": "business",
+      "command": "mirador chain creative_entrepreneur creative_entrepreneur \"Create a multi-faceted monetization strategy for a content creator in [NICHE] with [AUDIENCE DESCRIPTION]\"",
+      "personas": ["creative_entrepreneur", "creative_entrepreneur"],
+      "output_file": "monetization_plan.md"
+    },
+    {
+      "name": "financial_plan",
+      "domain": "finance",
+      "command": "mirador chain creative_entrepreneur task_planner \"Create a 5-year financial independence plan for a content creator with [REVENUE STREAMS FROM PREVIOUS OUTPUT]\"",
+      "personas": ["creative_entrepreneur", "task_planner"],
+      "output_file": "financial_independence_plan.md"
+    }
+  ],
+  "execution_notes": "Run these steps sequentially, with each step using information from the previous outputs. Store outputs in separate files for reference and implementation.",
+  "combined_command": "For a quick version, run: mirador chain creative_entrepreneur task_planner \"Create a comprehensive plan for a content creator in [NICHE] to achieve financial independence through content and digital products\""
+}

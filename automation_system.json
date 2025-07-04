@@ -1,0 +1,10 @@
+{
+  "name": "automation_system",
+  "description": "Automate recurring workflows and processes for increased efficiency",
+  "command": "mirador chain master_coder task_planner \"Design an automation system for [WORKFLOW/PROCESS] to eliminate manual tasks and increase efficiency\"",
+  "personas": [
+    "master_coder",
+    "task_planner"
+  ],
+  "notes": "This chain creates technical automation solutions for productivity enhancement. The master_coder provides technical implementation approaches while the task_planner develops the workflow optimization strategy around the technical capabilities."
+}
