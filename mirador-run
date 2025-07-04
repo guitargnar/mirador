@@ -1,0 +1,9 @@
+#!/bin/bash
+# Quick Mirador Run
+
+if [ -z "$1" ]; then
+    echo "Usage: mirador-run <prompt>"
+    exit 1
+fi
+
+python3 "$(dirname "$0")/mirador_v2.py" run --prompt "$*"

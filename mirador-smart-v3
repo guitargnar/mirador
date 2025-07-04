@@ -1,0 +1,142 @@
+#!/bin/bash
+# mirador-smart-v3: Intelligent routing with real capabilities
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check if we should use enhanced version
+if [ -f "$SCRIPT_DIR/mirador_v2.py" ]; then
+    # Use the enhanced version with real metrics and automation
+    python3 "$SCRIPT_DIR/mirador_v2.py" run --prompt "$*"
+else
+    # Fallback to pattern-based routing
+    PROMPT="$*"
+    PROMPT_LOWER=$(echo "$PROMPT" | tr '[:upper:]' '[:lower:]')
+
+    # Intelligent routing based on keywords
+    case "$PROMPT_LOWER" in
+        *financial*|*budget*|*money*|*cost*|*expense*)
+            echo "🏦 Routing to Financial Analysis Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                financial_planning_expert_v8 \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *risk*|*threat*|*vulnerability*|*security*)
+            echo "🛡️ Routing to Risk Assessment Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                risk_analyzer \
+                compliance_checker \
+                enhanced_agent_enforcer \
+                "$PROMPT"
+            ;;
+            
+        *guitar*|*music*|*chord*|*practice*)
+            echo "🎸 Routing to Music Learning Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                guitar_expert \
+                practice_scheduler \
+                "$PROMPT"
+            ;;
+            
+        *code*|*programming*|*debug*|*error*|*bug*)
+            echo "💻 Routing to Technical Analysis Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                code_expert \
+                debug_assistant \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *humana*|*work*|*corporate*|*meeting*|*presentation*)
+            echo "🏢 Routing to Corporate Strategy Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                corporate_navigator \
+                enhanced_agent_enforcer \
+                "$PROMPT"
+            ;;
+            
+        *ai*|*innovation*|*transform*|*future*)
+            echo "🚀 Routing to Innovation Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                ai_leadership_strategist \
+                innovation_catalyst \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *star*rating*|*quality*|*metric*|*performance*)
+            echo "📊 Routing to Quality Improvement Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                quality_analyst \
+                enhanced_agent_enforcer \
+                "$PROMPT"
+            ;;
+            
+        *personal*|*career*|*growth*|*development*)
+            echo "🌟 Routing to Personal Development Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                career_coach \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *relationship*|*communication*|*family*|*partner*)
+            echo "💝 Routing to Relationship Support Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                relationship_communication_specialist \
+                emotional_intelligence_guide \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *analyze*|*review*|*assess*|*evaluate*)
+            echo "🔍 Routing to Analysis Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                analytical_expert \
+                enhanced_agent_enforcer \
+                "$PROMPT"
+            ;;
+            
+        *summary*|*report*|*document*|*write*)
+            echo "📝 Routing to Documentation Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                technical_writer \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *help*|*how*to*|*guide*|*tutorial*)
+            echo "❓ Routing to Help Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                helpful_assistant \
+                step_by_step_guide \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+            
+        *)
+            echo "🤖 Routing to General Intelligence Chain..."
+            "$SCRIPT_DIR/mirador-ez" chain \
+                matthew_context_provider_v3 \
+                enhanced_agent_enforcer \
+                decision_simplifier_v3 \
+                "$PROMPT"
+            ;;
+    esac
+fi
+
+# After execution, check if we should collect metrics
+if [ -f "$SCRIPT_DIR/metrics_tracker.py" ]; then
+    # Log that we completed an execution
+    echo ""
+    echo "📊 Execution complete. Use 'python3 $SCRIPT_DIR/metrics_tracker.py summary' to see your metrics."
+fi
