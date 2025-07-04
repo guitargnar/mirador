@@ -1,0 +1,36 @@
+**Situation Assessment**
+
+To optimize the Mirador system for your use case, I'd like to understand more about your goals and current workflow. Can you please provide some context about what you're trying to achieve with the Mirador system? Are you looking to improve efficiency, generate specific outcomes, or explore new opportunities?
+
+Additionally, what is your current chain design, and which specialist models are you currently utilizing? This information will help me provide more tailored recommendations for optimization.
+
+**Optimal Approach Recommendation**
+
+Based on your input, I'll provide a general outline of the optimal approach. However, please note that this is just a starting point, and further refinement may be necessary to achieve the best results.
+
+To optimize the Mirador system, I recommend the following:
+
+1. **Enhance Agent Enforcer**: Utilize the enhanced agent enforcer specialist model to analyze and refine your chain design. This model can help identify opportunities for strategic synthesis and implementation planning.
+2. **Decision Simplifier**: Integrate the decision simplifier model to generate more focused action sets and prioritize tasks more effectively.
+3. **Matthew Context Provider**: Leverage the Matthew context provider model to gather more detailed personal context and situation analysis, which can inform more accurate predictions and recommendations.
+
+**Specific Model Sequence Suggestion**
+
+Based on your goals and current workflow, I recommend the following sequence of specialist models:
+
+1. Enhanced Agent Enforcer → Decision Simplifier → Matthew Context Provider
+2. Use the output from the Matthew Context Provider to refine your chain design and generate a new sequence.
+3. Iterate between these models to achieve the desired outcome.
+
+**Expected Outcome Prediction**
+
+By optimizing the Mirador system with this approach, I predict that you will experience:
+
+* Improved chain design efficiency
+* Enhanced decision-making and prioritization
+* More accurate predictions and recommendations
+* Increased value extraction from the Mirador system
+
+**Alternative Strategies (if applicable)**
+
+If you'd like to explore alternative strategies or have specific questions about the recommended approach, please let me know. I'm here to help you refine your workflow and achieve the best possible results with the Mirador system.

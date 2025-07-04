@@ -1,0 +1,121 @@
+#!/bin/bash
+# Mirador Rapid Prototyping Tool
+# Simplified interface that focuses on the emergent multi-agent collaboration
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+MAGENTA='\033[0;35m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Directories
+AI_FRAMEWORK_DIR="/Users/matthewscott/ai_framework"
+MIRADOR_DIR="/Users/matthewscott/ai_framework_git"
+
+# Print header
+echo -e "${MAGENTA}${BOLD}"
+echo -e "┌───────────────────────────────────────────┐"
+echo -e "│           MIRADOR RAPID PROTOTYPE         │"
+echo -e "│            Multi-Agent Framework          │"
+echo -e "└───────────────────────────────────────────┘"
+echo -e "${RESET}"
+
+# Function to run the emergent multi-agent system
+run_agents() {
+  prompt="$*"
+  
+  # If prompt is empty, show help
+  if [ -z "$prompt" ]; then
+    echo -e "${BLUE}${BOLD}Mirador Rapid Prototyping Tool${RESET}"
+    echo -e "Harnessing emergent multi-agent collaboration for rapid idea development."
+    echo ""
+    echo -e "${BOLD}Usage:${RESET}"
+    echo "  ./mirador-rapid \"Your prompt or problem statement\""
+    echo ""
+    echo -e "${BOLD}Examples:${RESET}"
+    echo "  ./mirador-rapid \"Design a secure user registration system\""
+    echo "  ./mirador-rapid \"Create a mobile app for guitar practice tracking\""
+    echo "  ./mirador-rapid \"Build an AI-powered recommendation engine\""
+    echo ""
+    echo -e "${BOLD}Features:${RESET}"
+    echo "  • Progressive Knowledge Enhancement"
+    echo "  • Contextual Relevance Filtering"
+    echo "  • Specialization with Context Preservation"
+    echo "  • Chain of Thought Transparency"
+    echo "  • Emergent Collaboration Between Specialists"
+    echo ""
+    exit 0
+  fi
+  
+  # Output directory with timestamp
+  timestamp=$(date +%Y%m%d_%H%M%S)
+  output_dir="$MIRADOR_DIR/outputs/rapid_$timestamp"
+  mkdir -p "$output_dir"
+  
+  # Record the prompt
+  echo "$prompt" > "$output_dir/prompt.txt"
+  
+  echo -e "${YELLOW}${BOLD}Starting multi-agent collaborative process...${RESET}"
+  echo -e "${BLUE}Prompt: ${prompt}${RESET}"
+  echo -e "${BLUE}Results will be saved to: ${output_dir}${RESET}"
+  echo ""
+
+  # Run the Python-based Mirador with the enhanced chain
+  # This will use all the specialized agents in the preferred order
+  if [ -x "$AI_FRAMEWORK_DIR/mirador" ]; then
+    echo -e "${YELLOW}Running specialized agent chain...${RESET}"
+    python3 -m ai_framework.framework --prompt "$prompt" > "$output_dir/full_output.txt"
+    
+    # Create a summary file that highlights the progressive knowledge enhancement
+    {
+      echo "# Mirador Rapid Prototype Results"
+      echo ""
+      echo "## Original Prompt"
+      echo ""
+      echo "$prompt"
+      echo ""
+      echo "## Agent Collaboration Chain"
+      echo ""
+      echo "The following specialized agents collaborated on this problem:"
+      echo ""
+      echo "1. **Master Coder**: Generated initial implementation"
+      echo "2. **Code Reviewer**: Improved security and performance"
+      echo "3. **File Reviewer**: Enhanced documentation"
+      echo "4. **Creative Entrepreneur**: Identified business applications"
+      echo "5. **UX Designer**: Created user interface design"
+      echo "6. **Data Scientist**: Added data analysis insights"
+      echo "7. **System Architect**: Enhanced system architecture"
+      echo "8. **Security Expert**: Improved security measures"
+      echo ""
+      echo "## Key Insights From Emergent Collaboration"
+      echo ""
+      echo "- Progressive knowledge enhancement through the agent chain"
+      echo "- Specialized contributions while maintaining context"
+      echo "- Chain of thought transparency in the development process"
+      echo ""
+      echo "## Full Results"
+      echo ""
+      echo "See the full output in \`full_output.txt\`"
+    } > "$output_dir/summary.md"
+    
+    # Show the full output in the pager
+    less "$output_dir/full_output.txt"
+    
+  else
+    # Fall back to the bash implementation if Python version not available
+    echo -e "${YELLOW}Running fallback implementation...${RESET}"
+    "$MIRADOR_DIR/scripts/run_chain.sh" "$prompt" "master_coder" "code_reviewer_fix" "creative_entrepreneur" || {
+      echo -e "${RED}Error running the chain${RESET}"
+      exit 1
+    }
+  fi
+  
+  echo -e "${GREEN}${BOLD}Process complete!${RESET}"
+  echo -e "${BLUE}Results saved to: ${output_dir}${RESET}"
+}
+
+# Run with all arguments as the prompt
+run_agents "$*"

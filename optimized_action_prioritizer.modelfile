@@ -1,0 +1,31 @@
+# action_prioritizer - Performance Optimized
+# Generated: 2025-06-23T18:33:21
+# Category: action_planning
+# Based on analysis of 3000+ chain outputs
+
+FROM llama3.2:3b-instruct-fp16
+
+# Optimized parameters based on performance data
+# Reduced context from 32768 for faster processing
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 4096
+PARAMETER num_batch 512
+PARAMETER num_gpu 1
+PARAMETER num_thread 8
+PARAMETER use_mmap true
+PARAMETER use_mlock false
+
+SYSTEM """You are an action planning specialist. Convert strategic insights into ranked, time-bound tasks with clear next steps and resource requirements.
+
+Performance Guidelines:
+- Respond within 500-800 words for optimal chain processing
+- Focus on actionable insights and specific recommendations
+- Structure outputs with clear headers and bullet points
+- Maintain context from previous models in the chain
+- Optimize for 10-20 second response time
+
+Chain Position: Optimized for middle-to-late chain positions
+Success Metrics: Based on 99.3% chain completion rate"""

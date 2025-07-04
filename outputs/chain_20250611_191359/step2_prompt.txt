@@ -1,0 +1,53 @@
+Previous output:
+To analyze your best opportunity for this week, I'll need to make a few assumptions about your current situation and goals.
+
+**Assumptions:**
+
+1. You're currently using the Mirador system to achieve a specific goal or set of goals.
+2. You have access to the necessary data and information required to make informed decisions.
+3. You're looking for an opportunity to maximize value from your Mirador usage this week.
+
+**Situation Assessment:**
+
+Based on our previous conversations, I don't have any specific information about your current situation or goals. However, I can guide you through a brief self-assessment to help identify potential opportunities:
+
+1. What are your top priorities for this week?
+2. Are there any specific challenges or obstacles you're facing in achieving your goals?
+3. Have you explored all available resources and tools within the Mirador system?
+
+**Optimal Approach Recommendation:**
+
+Based on general knowledge of the Mirador ecosystem, I recommend the following approach:
+
+1. **Financial Planning Expert (v6)**: Utilize the financial planning expert model to analyze your current financial situation and identify potential opportunities for growth.
+2. **Louisville Expert (v2)**: Leverage the Louisville expert model to gain insights into local resources, regulations, and opportunities that may be relevant to your goals.
+3. **Decision Simplifier**: Apply the decision simplifier model to prioritize actions and focus on the most critical tasks that will drive the greatest value for your goals.
+
+**Specific Model Sequence Suggestion:**
+
+Here's a suggested sequence of models to help you achieve your goals this week:
+
+1. Run the financial planning expert model to analyze your current financial situation.
+2. Use the results from step 1 to inform your decision-making with the financial planning expert model.
+3. Utilize the Louisville expert model to gain insights into local resources and opportunities.
+4. Apply the decision simplifier model to prioritize actions and focus on the most critical tasks.
+
+**Expected Outcome Prediction:**
+
+By following this approach, you can expect to:
+
+* Gain a deeper understanding of your current financial situation and identify potential opportunities for growth.
+* Make informed decisions based on data-driven insights from the financial planning expert model.
+* Leverage local resources and opportunities to drive progress toward your goals.
+* Prioritize actions and focus on the most critical tasks that will drive the greatest value for your goals.
+
+**Alternative Strategies (if applicable):**
+
+If you're facing specific challenges or obstacles, I can suggest alternative strategies to help overcome them. For example:
+
+* If you're struggling with data quality or availability, consider using the **Matthew Context Provider** model to analyze and improve your data.
+* If you're experiencing difficulty prioritizing actions, consider using the **Enhanced Agent Enforcer** model to help streamline your decision-making process.
+
+Please let me know if this analysis meets your expectations, or if you'd like to provide more information about your current situation and goals.
+
+Please build upon this information and provide further insights.

@@ -1,0 +1,6 @@
+2025-06-23 14:49:23 [INFO] Starting chain: Test optimization performance
+2025-06-23 14:49:23 [INFO] Models: matthew_context_provider_v3 financial_planning_expert_v6 optimized_decision_simplifier_v3
+2025-06-23 14:49:23 [INFO] Output directory: /Users/matthewscott/ai_framework_git/outputs/chain_20250623_144923
+2025-06-23 14:49:23 [INFO] Executing model 1/3: matthew_context_provider_v3
+2025-06-23 14:49:31 [INFO] ✓ matthew_context_provider_v3 completed
+2025-06-23 14:49:31 [INFO] Executing model 2/3: financial_planning_expert_v6

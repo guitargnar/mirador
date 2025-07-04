@@ -1,0 +1,39 @@
+Previous output:
+**Situation Assessment**
+
+To optimize the Mirador system for your needs, I'd like to understand more about your goals and current usage patterns. Can you please provide me with the following information:
+
+1. What is your primary objective using the Mirador system (e.g., generating leads, making financial decisions, providing customer support)?
+2. How are you currently interacting with the system (e.g., which specialist models, chains, and prompts are you using)?
+3. Are there any specific pain points or challenges you're experiencing with the system?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I'll provide a tailored recommendation for optimizing your Mirador system usage.
+
+**Specific Model Sequence Suggestion**
+
+I'll suggest a combination of specialist models that can help you achieve your objectives. For example:
+
+1. Start with the `matthew_context_provider` model to analyze your personal context and situation.
+2. Use the `financial_planning_expert_v6` model to generate Louisville-specific financial planning recommendations.
+3. Follow up with the `louisville_expert_v2` model to gain insights into Jefferson County resources, regulations, and opportunities.
+
+**Expected Outcome Prediction**
+
+Based on this suggested model sequence, I predict that you'll be able to:
+
+* Gain a deeper understanding of your personal context and situation
+* Receive tailored financial planning recommendations for Louisville-specific investments
+* Identify valuable resources, regulations, and opportunities in Jefferson County
+
+**Alternative Strategies (if applicable)**
+
+If you'd like to explore alternative approaches, I can offer the following options:
+
+1. Use the `enhanced_agent_enforcer` model to generate strategic synthesis and implementation plans.
+2. Apply the `decision_simplifier` model to prioritize actions and simplify decision-making.
+
+Please let me know if you'd like to explore any of these alternatives or if you have any further questions.
+
+Please build upon this information and provide further insights.

@@ -1,0 +1,1 @@
+Write a LinkedIn post about advanced prompt engineering techniques like chain-of-thought, few-shot learning, and role-based prompting. Include a practical example showing how these techniques improved a Medicare compliance workflow by 300%.

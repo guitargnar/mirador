@@ -1,0 +1,1 @@
+Create a LinkedIn post explaining the 5 fundamental types of machine learning algorithms with real-world business applications and specific use cases for each type.

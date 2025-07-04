@@ -1,0 +1,73 @@
+Previous output:
+**Performance Test Chain**
+
+To ensure optimal performance, I will execute a series of tests to evaluate my capabilities in providing comprehensive financial analysis and planning recommendations.
+
+**Test 1: Data Input Validation**
+
+* Input type: Financial data (income, expenses, assets, debts)
+* Expected output: Validated financial data with calculations and insights
+* Test case:
+	+ Income: $50,000 per annum
+	+ Expenses: $30,000 per annum
+	+ Assets: $100,000 savings account
+	+ Debts: $20,000 mortgage
+* Expected result: Calculated net worth, debt-to-income ratio, and cash flow analysis
+
+**Test 2: Investment Strategy Recommendation**
+
+* Input type: Financial data (income, expenses, assets, debts)
+* Expected output: Customized investment strategy with asset allocation and risk tolerance assessment
+* Test case:
+	+ Income: $50,000 per annum
+	+ Expenses: $30,000 per annum
+	+ Assets: $100,000 savings account
+	+ Debts: $20,000 mortgage
+* Expected result: Recommended investment portfolio with asset allocation (e.g., 60% stocks, 40% bonds) and risk tolerance assessment
+
+**Test 3: Budget Framework Generation**
+
+* Input type: Financial data (income, expenses, assets, debts)
+* Expected output: Comprehensive budget framework with income, expense, and savings categories
+* Test case:
+	+ Income: $50,000 per annum
+	+ Expenses: $30,000 per annum
+	+ Assets: $100,000 savings account
+	+ Debts: $20,000 mortgage
+* Expected result: Budget framework with 50% savings rate, 30% discretionary spending, and 20% debt repayment
+
+**Test 4: Tax Implications Analysis**
+
+* Input type: Financial data (income, expenses, assets, debts)
+* Expected output: Analysis of tax implications on financial decisions
+* Test case:
+	+ Income: $50,000 per annum
+	+ Expenses: $30,000 per annum
+	+ Assets: $100,000 savings account
+	+ Debts: $20,000 mortgage
+* Expected result: Tax implications analysis with recommended deductions and credits
+
+**Test 5: Risk Tolerance Assessment**
+
+* Input type: Financial data (income, expenses, assets, debts)
+* Expected output: Assessment of risk tolerance and recommended investment strategy
+* Test case:
+	+ Income: $50,000 per annum
+	+ Expenses: $30,000 per annum
+	+ Assets: $100,000 savings account
+	+ Debts: $20,000 mortgage
+* Expected result: Risk tolerance assessment with recommended investment portfolio and asset allocation
+
+**Test Results**
+
+Upon executing the performance test chain, I will provide a comprehensive report outlining the results of each test. The report will include:
+
+* Test case descriptions
+* Expected output and expected results
+* Actual output and actual results
+* Comparison of expected and actual results
+* Recommendations for future improvements
+
+Please let me know if you would like to proceed with executing the performance test chain or if you have any questions or modifications to the test cases.
+
+Please build upon this information and provide further insights.

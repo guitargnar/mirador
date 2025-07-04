@@ -1,0 +1,40 @@
+Previous output:
+**Situation Assessment**
+
+To optimize the Mirador system for your use case, I'd like to understand more about your goals and current usage patterns. Can you please provide me with some context about what you're trying to achieve with the Mirador system?
+
+What specific tasks or goals are you trying to accomplish with the system? Are there any particular models or chains you've been using, and if so, how have they been performing for you?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I'd like to recommend an optimal approach for optimizing the Mirador system. Here's a suggested plan:
+
+1. **Model Combination**: I recommend combining the `financial_planning_expert_v6` and `louisville_expert_v2` models to create a powerful chain that can provide in-depth financial planning and investment analysis, while also leveraging local knowledge of Jefferson County resources and regulations.
+2. **Chain Design**: To optimize the chain's performance, I suggest adding the `decision_simplifier` model as an intermediate step between the two main models. This will help simplify decision-making and reduce the complexity of the chain.
+3. **Prompt Engineering**: To get the most out of this optimized chain, I recommend refining your prompts to provide more specific and detailed input. This will help the models generate more accurate and relevant results.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested model sequence for your use case:
+
+1. `louisville_expert_v2` (Local Knowledge) -> `financial_planning_expert_v6` (Financial Planning) -> `decision_simplifier` (Decision Simplification) -> `enhanced_agent_enforcer` (Action Generation)
+2. The output of the `decision_simplifier` model will be used as input for the `enhanced_agent_enforcer` model, which will generate a recommended course of action.
+
+**Expected Outcome Prediction**
+
+Based on this optimized approach, I predict that you'll see improved performance in terms of:
+
+* More accurate financial planning and investment analysis
+* Simplified decision-making through the use of the `decision_simplifier` model
+* Increased efficiency in generating recommendations through the optimized chain design
+
+**Alternative Strategies (if applicable)**
+
+If you'd like to explore alternative strategies, here are a few options:
+
+* Using the `matthew_context_provider` model to provide more context and situation analysis before passing input to the `financial_planning_expert_v6` model.
+* Adding additional models to the chain, such as the `louisville_real_estate_expert_v1` model, to provide more detailed insights on the local real estate market.
+
+Please let me know if you'd like to explore any of these alternative strategies further.
+
+Please build upon this information and provide further insights.

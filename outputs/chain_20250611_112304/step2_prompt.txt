@@ -1,0 +1,44 @@
+Previous output:
+**Situation Assessment**
+
+To provide an optimal approach for strategic planning next week, I need to understand your specific goals and objectives. Please provide me with the following information:
+
+1. What are your top priorities for next week?
+2. Are there any specific challenges or obstacles you're facing that need to be addressed?
+3. Do you have any existing plans or commitments that might impact your ability to focus on strategic planning?
+
+**Optimal Approach Recommendation**
+
+Based on your input, I recommend the following approach:
+
+1. **Decision Simplifier**: Use the Decision Simplifier model to identify key areas of focus and prioritize tasks based on their potential impact.
+2. **Enhanced Agent Enforcer**: Leverage the Enhanced Agent Enforcer model to create a strategic plan that aligns with your priorities and addresses any obstacles or challenges.
+3. **Financial Planning Expert**: If financial planning is relevant to your goals, consider using the Financial Planning Expert model to analyze potential financial implications and make informed decisions.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested sequence of models to help you achieve your strategic planning goals:
+
+1. Start with the Decision Simplifier model to identify key areas of focus.
+2. Use the Enhanced Agent Enforcer model to create a strategic plan that aligns with your priorities.
+3. If financial planning is relevant, use the Financial Planning Expert model to analyze potential financial implications.
+
+**Expected Outcome Prediction**
+
+By following this approach, I predict that you'll be able to:
+
+* Clarify your priorities and focus on high-impact tasks
+* Create a strategic plan that addresses obstacles and challenges
+* Make informed decisions that align with your goals and priorities
+
+**Alternative Strategies (if applicable)**
+
+If you have any additional information or context that might impact my recommendation, please let me know. Some alternative strategies to consider include:
+
+* Using the Matthew Context Provider model to analyze your personal context and situation
+* Leveraging the Louisville Expert model to gain insights into local resources and regulations
+* Employing the financial planning expert's analysis to inform your strategic plan
+
+Please provide any additional information or context that might help me refine my recommendation.
+
+Please build upon this information and provide further insights.
