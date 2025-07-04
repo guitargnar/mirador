@@ -212,6 +212,47 @@ model_cache/
 *.gguf
 !approved_models/*.gguf
 
+# Mirador 2.0 Specific
+# ===========================================================
+# Enhanced framework data
+.mirador/
+!.mirador/config.json.example
+mirador_automation/
+*.db
+*.db-journal
+*.db-wal
+
+# Advocates Program data  
+advocates.db
+pain_points.db
+evidence/
+presentations/*.pptx
+!presentations/template.pptx
+
+# Generated reports
+*_report_*.md
+*_report_*.json
+*_summary_*.md
+evidence_report_*
+pain_point_report_*
+
+# Memory system
+memory/
+.chroma/
+chroma_db/
+vector_store/
+
+# Testing and coverage
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# Flask instance
+instance/
+.webassets-cache
+
 # Additional Security Patterns
 # ===========================================================
 # Prevent common typos and variations

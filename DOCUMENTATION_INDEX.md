@@ -1,160 +1,130 @@
 # Mirador Documentation Index
-## Your Complete Guide to Understanding and Using Mirador
 
----
+## 📚 Complete Guide to All Documentation
 
-## 🎯 START HERE
+### 🚀 Quick Start Guides
+- **[README.md](README.md)** - Main project overview and quick start (Updated for v2.0)
+- **[README_ENHANCED.md](README_ENHANCED.md)** - Enhanced framework technical guide
+- **[README_ADVOCATES.md](README_ADVOCATES.md)** - Humana Advocates Program guide
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history and changes
 
-### For Different Audiences
-
-#### If You're Humana Leadership
-1. [Smart V2 Leadership Brief](SMART_V2_LEADERSHIP_BRIEF.md) - Why 40 lines of code matter
-2. [Pain Points Solution](HUMANA_PAIN_POINTS_SOLUTION.md) - How Mirador addresses real problems
-3. [Executive Presentation](MIRADOR_EXECUTIVE_PRESENTATION.md) - Board-ready slides
-4. [Metrics Dashboard](MIRADOR_METRICS_DASHBOARD.md) - Real ROI data
-
-#### If You're a Humana Associate  
-1. [Pain Point Demos](PAIN_POINT_DEMOS.md) - Copy-paste solutions to YOUR problems
-2. [Personal Command Library](CLAUDE.md) - Daily strategic commands
-3. [Quick Start Guide](README.md#-quick-start) - Start solving problems NOW
-4. [Demo Scenarios](MIRADOR_DEMO_SCENARIOS.md) - Show colleagues what's possible
-
-#### If You're Technical
-1. [Architecture Overview](README.md#-architecture-that-actually-makes-sense) - How it really works
-2. [Humana Integration Guide](HUMANA_INTEGRATION_GUIDE.md) - Technical implementation
-3. [Model Configurations](docs/models.md) - AI model details
-4. [Development Guide](docs/DEVELOPMENT.md) - Extend Mirador
-
-#### If You're an Innovator
-1. [Strategic Playbook](MIRADOR_STRATEGIC_PLAYBOOK.md) - Transform your organization
-2. [Political Navigation](MIRADOR_POLITICAL_NAVIGATION.md) - Navigate corporate dynamics
-3. [Risk Mitigation](MIRADOR_RISK_MITIGATION.md) - Protect your innovation
-4. [Dalia Alignment](MIRADOR_DALIA_ALIGNMENT.md) - Align with digital vision
-
----
-
-## 📚 COMPLETE DOCUMENTATION LIBRARY
-
-### 🚀 Strategic Documents
-- **[README.md](README.md)** - Main overview with pain points focus
-- **[SMART_V2_LEADERSHIP_BRIEF.md](SMART_V2_LEADERSHIP_BRIEF.md)** - The power of simplicity
-- **[HUMANA_PAIN_POINTS_SOLUTION.md](HUMANA_PAIN_POINTS_SOLUTION.md)** - Addressing real problems
-- **[MIRADOR_STRATEGIC_PLAYBOOK.md](MIRADOR_STRATEGIC_PLAYBOOK.md)** - Phase-by-phase reveal strategy
-- **[MIRADOR_EXECUTIVE_PRESENTATION.md](MIRADOR_EXECUTIVE_PRESENTATION.md)** - 15-slide executive deck
-
-### 💡 Practical Guides
-- **[PAIN_POINT_DEMOS.md](PAIN_POINT_DEMOS.md)** - 30+ real problem solutions
+### 🏢 For Humana Associates
+- **[PAIN_POINT_DEMOS.md](PAIN_POINT_DEMOS.md)** - Copy-paste solutions to real problems
 - **[CLAUDE.md](CLAUDE.md)** - Personal command library for daily use
-- **[MIRADOR_DEMO_SCENARIOS.md](MIRADOR_DEMO_SCENARIOS.md)** - Demonstration scripts
-- **[HUMANA_INTEGRATION_GUIDE.md](HUMANA_INTEGRATION_GUIDE.md)** - Implementation guide
+- **[HUMANA_PAIN_POINTS_SOLUTION.md](HUMANA_PAIN_POINTS_SOLUTION.md)** - How Mirador addresses workplace issues
+- **[launch_advocates.py](launch_advocates.py)** - Interactive Advocates Program interface
 
-### 🎯 Positioning & Politics
-- **[MIRADOR_DALIA_ALIGNMENT.md](MIRADOR_DALIA_ALIGNMENT.md)** - Aligning with Powers' vision
-- **[MIRADOR_POLITICAL_NAVIGATION.md](MIRADOR_POLITICAL_NAVIGATION.md)** - Stakeholder management
-- **[MIRADOR_RISK_MITIGATION.md](MIRADOR_RISK_MITIGATION.md)** - Protecting your innovation
-- **[MIRADOR_METRICS_DASHBOARD.md](MIRADOR_METRICS_DASHBOARD.md)** - Proving value with data
+### 📊 For Leadership
+- **[SMART_V2_LEADERSHIP_BRIEF.md](SMART_V2_LEADERSHIP_BRIEF.md)** - Executive brief on Mirador
+- **[MIRADOR_EXECUTIVE_PRESENTATION.md](MIRADOR_EXECUTIVE_PRESENTATION.md)** - Board-ready presentation
+- **[presentation_generator.py](presentation_generator.py)** - Auto-generate PowerPoint presentations
+- **[advocates_dashboard.py](advocates_dashboard.py)** - Real-time metrics dashboard
+
+### 🎯 Strategic Documents
+- **[MIRADOR_STRATEGIC_PLAYBOOK.md](MIRADOR_STRATEGIC_PLAYBOOK.md)** - Phase-by-phase transformation guide
+- **[MIRADOR_DALIA_ALIGNMENT.md](MIRADOR_DALIA_ALIGNMENT.md)** - Alignment with digital transformation
+- **[MIRADOR_POLITICAL_NAVIGATION.md](MIRADOR_POLITICAL_NAVIGATION.md)** - Stakeholder management guide
+- **[MIRADOR_RISK_MITIGATION.md](MIRADOR_RISK_MITIGATION.md)** - Risk management strategies
 
 ### 🔧 Technical Documentation
-- **Model Files** (`*.modelfile`) - AI model configurations
-- **Shell Scripts** (`*.sh`) - Automation scripts
-- **Python Files** (`*.py`) - Core framework code
-- **JSON Configs** (`*.json`) - Chain templates and settings
+- **[demo_real_capabilities.py](demo_real_capabilities.py)** - Live demonstration of v2.0 features
+- **[setup_enhanced.py](setup_enhanced.py)** - Complete setup wizard
+- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture
+- **[docs/API.md](docs/API.md)** - API reference
 
----
+### 📈 Metrics & Evidence
+- **[MIRADOR_METRICS_DASHBOARD.md](MIRADOR_METRICS_DASHBOARD.md)** - Performance metrics
+- **[pain_point_analyzer.py](pain_point_analyzer.py)** - Analyze pain point patterns
+- **[metrics_tracker.py](metrics_tracker.py)** - Track real execution metrics
+- **[quality_assurance.py](quality_assurance.py)** - Validate output quality
 
-## 🎯 QUICK REFERENCE
+### 🛠️ Implementation Guides
+- **[HUMANA_INTEGRATION_GUIDE.md](HUMANA_INTEGRATION_GUIDE.md)** - Enterprise integration
+- **[MIRADOR_DEMO_SCENARIOS.md](MIRADOR_DEMO_SCENARIOS.md)** - Demonstration scripts
+- **[requirements_enhanced.txt](requirements_enhanced.txt)** - Python dependencies
+- **[requirements_advocates.txt](requirements_advocates.txt)** - Advocates Program dependencies
 
-### Most Important Commands
+## 🎯 Quick Navigation by Role
+
+### If You're a Humana Associate
+1. Start with [README_ADVOCATES.md](README_ADVOCATES.md)
+2. Run `python3 launch_advocates.py` to report pain points
+3. Use commands from [PAIN_POINT_DEMOS.md](PAIN_POINT_DEMOS.md)
+4. Track your impact via the dashboard
+
+### If You're in Leadership
+1. Read [SMART_V2_LEADERSHIP_BRIEF.md](SMART_V2_LEADERSHIP_BRIEF.md)
+2. View dashboard at `http://localhost:5000`
+3. Generate presentation with `python3 presentation_generator.py`
+4. Review [MIRADOR_METRICS_DASHBOARD.md](MIRADOR_METRICS_DASHBOARD.md)
+
+### If You're a Developer
+1. Follow [README_ENHANCED.md](README_ENHANCED.md)
+2. Run `python3 setup_enhanced.py`
+3. Study [demo_real_capabilities.py](demo_real_capabilities.py)
+4. Extend using component guides
+
+### If You're an Innovator
+1. Study [MIRADOR_STRATEGIC_PLAYBOOK.md](MIRADOR_STRATEGIC_PLAYBOOK.md)
+2. Navigate politics with [MIRADOR_POLITICAL_NAVIGATION.md](MIRADOR_POLITICAL_NAVIGATION.md)
+3. Mitigate risks using [MIRADOR_RISK_MITIGATION.md](MIRADOR_RISK_MITIGATION.md)
+4. Build your coalition
+
+## 📦 Version 2.0 Components
+
+### Core Enhancements
+- **[enhanced_mirador.py](enhanced_mirador.py)** - Main enhanced framework
+- **[mirador_v2.py](mirador_v2.py)** - Modern CLI interface
+- **[automation_engine.py](automation_engine.py)** - Task automation
+- **[memory_system.py](memory_system.py)** - Learning and persistence
+
+### Advocates Program
+- **[advocates_program.py](advocates_program.py)** - Pain point tracking
+- **[pain_point_analyzer.py](pain_point_analyzer.py)** - Pattern analysis
+- **[advocates_dashboard.py](advocates_dashboard.py)** - Web dashboard
+- **[presentation_generator.py](presentation_generator.py)** - PowerPoint generator
+
+### Scripts & Launchers
+- **[mirador-enhanced](mirador-enhanced)** - Enhanced launcher
+- **[mirador-smart-v3](mirador-smart-v3)** - Intelligent routing
+- **[mirador-run](mirador-run)** - Quick execution
+- **[launch_advocates.py](launch_advocates.py)** - Advocates launcher
+
+## 🔄 Integration Points
+
+All systems work seamlessly together:
 
 ```bash
-# Solve any problem in 30 seconds
-./mirador-smart-v2 "Your question here"
+# Enhanced Mirador feeds metrics to Advocates dashboard
+./mirador-enhanced
+# Metrics automatically available in dashboard
 
-# Run specific solution chains
-./humana_chain_runner.sh [chain_type] "Your specific problem"
+# Advocates Program uses Mirador for analysis
+python3 launch_advocates.py
+# Option 6: Run Mirador Analysis
 
-# Available chain types:
-- innovation_discovery    # Find improvement opportunities
-- ai_leadership          # Position for AI roles
-- corporate_nav          # Navigate politics
-- solution_design        # Design implementations
-- advocates_strategy     # Maximize program impact
-- quick_win             # Generate immediate wins
-- strategic_synthesis    # Comprehensive analysis
+# Pain points can trigger automated solutions
+python3 automation_engine.py start
+# Monitors for new pain points and suggests solutions
 ```
 
-### Key Metrics to Share
-- **97%** efficiency improvement
-- **30 hours/week** saved
-- **12.3x** ROI
-- **Zero** security incidents
-- **$78,000** annual savings per user
-- **40 lines** of code in mirador_smart_v2
+## 📊 Data Flow
 
-### Political Talking Points
-- "Built with existing tools" (no new purchases)
-- "Zero PHI/PII exposure" (completely safe)
-- "Proves internal expertise" (CEO mandate)
-- "Addresses Star Ratings" (key priority)
-- "Associate innovation" (culture transformation)
+1. **Pain Points** → Advocates Program → Database
+2. **Solutions** → Enhanced Mirador → Metrics Tracking
+3. **Evidence** → Pain Point Analyzer → Pattern Detection
+4. **Metrics** → Dashboard → Leadership Presentation
+5. **Feedback** → Memory System → Improved Suggestions
 
----
+## 🎯 The Big Picture
 
-## 📖 READING PATHS
+Mirador 2.0 is not just a tool—it's a complete ecosystem for:
+- **Individual Productivity** (Enhanced Framework)
+- **Organizational Change** (Advocates Program)
+- **Cultural Transformation** (Trust + Tools = Innovation)
 
-### Path 1: The Executive Journey
-1. Start: [README.md](README.md) - See the vision
-2. Deep Dive: [SMART_V2_LEADERSHIP_BRIEF.md](SMART_V2_LEADERSHIP_BRIEF.md) - Understand simplicity
-3. Evidence: [MIRADOR_METRICS_DASHBOARD.md](MIRADOR_METRICS_DASHBOARD.md) - Review metrics
-4. Action: [MIRADOR_EXECUTIVE_PRESENTATION.md](MIRADOR_EXECUTIVE_PRESENTATION.md) - Present to board
-
-### Path 2: The Associate Journey  
-1. Start: [PAIN_POINT_DEMOS.md](PAIN_POINT_DEMOS.md) - Find your problem
-2. Daily Use: [CLAUDE.md](CLAUDE.md) - Strategic commands
-3. Share: [MIRADOR_DEMO_SCENARIOS.md](MIRADOR_DEMO_SCENARIOS.md) - Show others
-4. Build: [HUMANA_INTEGRATION_GUIDE.md](HUMANA_INTEGRATION_GUIDE.md) - Extend it
-
-### Path 3: The Innovator Journey
-1. Vision: [HUMANA_PAIN_POINTS_SOLUTION.md](HUMANA_PAIN_POINTS_SOLUTION.md) - See what's possible
-2. Strategy: [MIRADOR_STRATEGIC_PLAYBOOK.md](MIRADOR_STRATEGIC_PLAYBOOK.md) - Plan approach
-3. Politics: [MIRADOR_POLITICAL_NAVIGATION.md](MIRADOR_POLITICAL_NAVIGATION.md) - Navigate dynamics
-4. Protection: [MIRADOR_RISK_MITIGATION.md](MIRADOR_RISK_MITIGATION.md) - Stay safe
+Every component is designed to prove that associates can solve their own problems better than any vendor—they just need trust and basic tools.
 
 ---
 
-## 🚀 NEXT STEPS
-
-### If You're Ready to Start
-```bash
-git clone https://github.com/guitargnar/mirador.git
-cd mirador
-./mirador-smart-v2 "What should I do first to transform my team's productivity?"
-```
-
-### If You Need Proof
-- Review [metrics](MIRADOR_METRICS_DASHBOARD.md)
-- Run [demos](MIRADOR_DEMO_SCENARIOS.md)
-- Check [testimonials](README.md#-real-testimonials)
-
-### If You Want to Lead
-- Study the [playbook](MIRADOR_STRATEGIC_PLAYBOOK.md)
-- Master [politics](MIRADOR_POLITICAL_NAVIGATION.md)
-- Prepare your [pitch](MIRADOR_EXECUTIVE_PRESENTATION.md)
-
----
-
-## 💡 REMEMBER
-
-**Mirador isn't just documentation. It's proof that:**
-- Associates know the problems
-- Simple solutions work best
-- Trust creates innovation
-- Results beat rhetoric
-
-**Every document here tells part of that story.**
-
-**Your story starts when you run your first command.**
-
----
-
-*"The best documentation is code that works. The second best is proof it transforms organizations. You have both."*
+*"Documentation is only as good as the solutions it enables. Every file here represents a step toward transformation."*
