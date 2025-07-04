@@ -1,0 +1,16 @@
+[1;33mConductor not available, using fixed chains.[0m
+[0;34mRunning chain with 2 models[0m
+[0;34mModels: matthew_context_provider_v3, financial_planning_expert_v6[0m
+[0;34mOutput directory: /Users/matthewscott/ai_framework_git/outputs/chain_20250703_110412[0m
+
+[0;35m[1mChain Progress Visualization[0m
+Progress: [                              ] 0%
+[0;36m[1mStep 1/2:[0m Running [1;33mmatthew_context_provider_v3[0m
+[0;34m[1mSpecialist Role:[0m matthew_context_provider_v3
+[0;36mInitializing[0m...
+
+[1;33mmatthew_context_provider_v3[0m is thinking.....
+
+[1;33mQuerying matthew_context_provider_v3...[0m
+
+Operation cancelled by user

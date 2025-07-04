@@ -1,0 +1,60 @@
+{
+  "chain_templates": {
+    "innovation_discovery": {
+      "description": "Identify and scale grassroots innovation opportunities at Humana",
+      "models": ["matthew_context_provider_v3", "humana_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
+      "example_prompt": "I discovered that teams in Operations are manually processing vendor reports. How can we turn this into an innovation opportunity?"
+    },
+    
+    "ai_leadership_positioning": {
+      "description": "Strategic actions to build AI leadership credibility",
+      "models": ["matthew_context_provider_v3", "ai_leadership_strategist", "enhanced_agent_enforcer"],
+      "example_prompt": "How can I use next week's team meeting to demonstrate AI leadership?"
+    },
+    
+    "corporate_navigation": {
+      "description": "Navigate complex corporate dynamics while driving change",
+      "models": ["matthew_context_provider_v3", "humana_politics_navigator", "enhanced_agent_enforcer"],
+      "example_prompt": "How should I approach the IT security team about relaxing some AI tool restrictions?"
+    },
+    
+    "solution_implementation": {
+      "description": "Design and implement practical solutions within constraints",
+      "models": ["humana_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
+      "example_prompt": "Design a document search assistant using only approved Humana tools"
+    },
+    
+    "advocates_strategy": {
+      "description": "Maximize impact through the Advocates Program",
+      "models": ["matthew_context_provider_v3", "advocates_meeting_optimizer_v2", "ai_leadership_strategist", "enhanced_agent_enforcer"],
+      "example_prompt": "How can I use the next Advocates meeting to build momentum for AI adoption?"
+    },
+    
+    "quick_win_generator": {
+      "description": "Identify and implement quick wins that build credibility",
+      "models": ["humana_innovation_catalyst", "solution_architect"],
+      "example_prompt": "What's a 1-week AI project that would impress leadership?"
+    },
+    
+    "strategic_synthesis": {
+      "description": "Comprehensive analysis combining all strategic elements",
+      "models": ["matthew_context_provider_v3", "humana_innovation_catalyst", "ai_leadership_strategist", "humana_politics_navigator", "enhanced_agent_enforcer"],
+      "example_prompt": "Analyze the opportunity to lead an AI Center of Excellence at Humana"
+    }
+  },
+  
+  "usage_patterns": {
+    "daily_planning": "Use 'ai_leadership_positioning' each morning to identify high-impact actions",
+    "opportunity_analysis": "Use 'innovation_discovery' when you spot inefficiencies",
+    "relationship_building": "Use 'corporate_navigation' before important conversations",
+    "project_planning": "Use 'solution_implementation' for technical initiatives",
+    "weekly_strategy": "Use 'strategic_synthesis' for comprehensive planning sessions"
+  },
+  
+  "proven_combinations": {
+    "highest_usage": ["matthew_context_provider_v3", "enhanced_agent_enforcer"],
+    "financial_planning": ["matthew_context_provider_v3", "financial_planning_expert_v6", "enhanced_agent_enforcer"],
+    "innovation_planning": ["humana_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
+    "political_strategy": ["matthew_context_provider_v3", "humana_politics_navigator", "ai_leadership_strategist"]
+  }
+}

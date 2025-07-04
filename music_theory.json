@@ -1,0 +1,10 @@
+{
+  "name": "music_theory",
+  "description": "Apply theoretical concepts to composition and improvisation",
+  "command": "mirador chain guitar_expert content_creator \"Create a practical guide for applying [THEORY CONCEPT] in [MUSICAL CONTEXT]\"",
+  "personas": [
+    "guitar_expert",
+    "content_creator"
+  ],
+  "notes": "This chain translates complex music theory into practical applications. The guitar_expert provides deep theoretical knowledge while the content_creator organizes it into accessible learning frameworks with concrete examples and exercises."
+}

@@ -1,0 +1,11 @@
+Mirador System Test Suite - Wed Jun  4 11:05:46 EDT 2025
+========================================
+[2025-06-04T15:05:46Z] file_structure: PASS - All required files present and executable
+[2025-06-04T15:05:46Z] python_syntax: PASS - All Python files have valid syntax
+[2025-06-04T15:05:46Z] python_imports: FAIL - Some Python modules failed to import
+[2025-06-04T15:05:46Z] configuration: PASS - All configuration files are valid
+[2025-06-04T15:05:46Z] modelfiles: PASS - All 11 modelfiles have valid syntax
+[2025-06-04T15:05:46Z] shell_scripts: PASS - All 8 shell scripts have valid syntax
+[2025-06-04T15:05:47Z] json_files: PASS - All 21 JSON files are valid
+[2025-06-04T15:06:37Z] command_help: FAIL - Help failures in: mirador mirador-interactive mirador-unified
+[2025-06-04T15:06:37Z] integration: FAIL - Integration tests failed

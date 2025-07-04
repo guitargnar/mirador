@@ -1,0 +1,10 @@
+{
+  "name": "audience_growth",
+  "description": "Strategies for building and engaging audiences across platforms",
+  "command": "mirador chain creative_entrepreneur content_creator \"Create a comprehensive audience building strategy for [NICHE] from zero to 10,000 followers\"",
+  "personas": [
+    "creative_entrepreneur", 
+    "content_creator"
+  ],
+  "notes": "This chain focuses specifically on audience acquisition and engagement tactics. The creative_entrepreneur identifies growth opportunities and platform strategies while the content_creator develops the messaging and content frameworks required for implementation."
+}

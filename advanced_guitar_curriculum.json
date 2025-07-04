@@ -1,0 +1,10 @@
+{
+  "name": "advanced_guitar_curriculum",
+  "description": "Create comprehensive guitar learning curriculum",
+  "command": "mirador chain guitar_expert content_creator \"Create a progressive 12-week curriculum for advanced guitar techniques including sweep picking, tapping, and hybrid picking\"",
+  "personas": [
+    "guitar_expert",
+    "content_creator"
+  ],
+  "notes": "This configuration is for reference only and doesn't modify existing framework behavior"
+}

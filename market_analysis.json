@@ -1,0 +1,10 @@
+{
+  "name": "market_analysis",
+  "description": "Analyze market opportunities, competition, and positioning strategies",
+  "command": "mirador chain creative_entrepreneur data_scientist \"Analyze the market for [PRODUCT/SERVICE] including competitive landscape and growth opportunities\"",
+  "personas": [
+    "creative_entrepreneur",
+    "data_scientist"
+  ],
+  "notes": "This chain specializes in market research and competitive analysis. The creative_entrepreneur provides business context while the data_scientist adds analytical depth. Particularly effective for finding untapped opportunities and positioning strategies."
+}

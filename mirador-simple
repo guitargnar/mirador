@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Simple MIRADOR launcher that works from anywhere
+MIRADOR_HOME="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+cd "$MIRADOR_HOME"
+
+# Set Python path
+export PYTHONPATH="$MIRADOR_HOME:$PYTHONPATH"
+
+# Run mirador.py with all arguments
+python3 mirador.py "$@"

@@ -1,0 +1,10 @@
+{
+  "name": "monetization_strategy",
+  "description": "Develop comprehensive revenue generation strategies and pricing models",
+  "command": "mirador chain creative_entrepreneur creative_entrepreneur \"Create a multi-faceted monetization strategy for [BUSINESS TYPE] including pricing models, revenue streams, and scaling approach\"",
+  "personas": [
+    "creative_entrepreneur",
+    "creative_entrepreneur"
+  ],
+  "notes": "This chain uses the creative_entrepreneur twice to first generate business models and then refine them with critical analysis. The dual-pass approach results in more robust monetization strategies with both innovation and practical implementation steps."
+}

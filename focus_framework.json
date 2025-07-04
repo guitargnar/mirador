@@ -1,0 +1,10 @@
+{
+  "name": "focus_framework",
+  "description": "Strategies for achieving deep focus and flow states consistently",
+  "command": "mirador chain content_creator task_planner \"Design a framework for achieving deep focus every day for [PROFESSION/SITUATION]\"",
+  "personas": [
+    "content_creator",
+    "task_planner"
+  ],
+  "notes": "This chain specializes in cognitive performance optimization. The content_creator develops the conceptual framework while the task_planner creates implementation systems with environment design, habit triggers, and progressive training approaches."
+}

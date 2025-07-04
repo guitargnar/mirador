@@ -1,0 +1,10 @@
+{
+  "name": "financial_freedom",
+  "description": "Comprehensive pathways to financial independence and lifestyle design",
+  "command": "mirador chain creative_entrepreneur task_planner \"Design a 5-year plan for achieving financial freedom starting from [CURRENT SITUATION]\"",
+  "personas": [
+    "creative_entrepreneur",
+    "task_planner"
+  ],
+  "notes": "This chain creates holistic financial independence plans that integrate income strategies, spending optimization, investment approaches, and lifestyle considerations. The creative_entrepreneur generates the strategic vision while the task_planner creates actionable implementation steps."
+}

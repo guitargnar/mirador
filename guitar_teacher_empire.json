@@ -1,0 +1,29 @@
+{
+  "name": "guitar_teacher_empire",
+  "description": "Complete business system for guitar teachers combining curriculum development with business strategy",
+  "steps": [
+    {
+      "name": "curriculum_development",
+      "domain": "music",
+      "command": "mirador chain guitar_expert content_creator \"Create a comprehensive guitar teaching curriculum for [LEVEL/STYLE] students\"",
+      "personas": ["guitar_expert", "content_creator"],
+      "output_file": "guitar_curriculum.md"
+    },
+    {
+      "name": "business_strategy",
+      "domain": "business",
+      "command": "mirador chain creative_entrepreneur content_creator \"Create a business plan for a guitar teaching business offering [DESCRIPTION FROM PREVIOUS OUTPUT]\"",
+      "personas": ["creative_entrepreneur", "content_creator"],
+      "output_file": "guitar_business_plan.md"
+    },
+    {
+      "name": "marketing_plan",
+      "domain": "content",
+      "command": "mirador chain creative_entrepreneur content_creator \"Create a marketing and content strategy to promote a guitar teaching business with [CURRICULUM DESCRIPTION]\"",
+      "personas": ["creative_entrepreneur", "content_creator"],
+      "output_file": "guitar_marketing_plan.md"
+    }
+  ],
+  "execution_notes": "Run these steps sequentially, using output from each step to inform the next one. Store outputs in separate files for reference.",
+  "combined_command": "For a quick version, run: mirador chain guitar_expert creative_entrepreneur \"Create a comprehensive business and curriculum plan for a guitar teaching business focusing on [LEVEL/STYLE]\""
+}

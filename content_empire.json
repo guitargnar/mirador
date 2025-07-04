@@ -1,0 +1,10 @@
+{
+  "name": "content_empire",
+  "description": "Comprehensive content creation strategy and production system",
+  "command": "mirador chain creative_entrepreneur content_creator \"Create a comprehensive content strategy for [TOPIC/NICHE] including content pillars, formats, platforms, and growth tactics\"",
+  "personas": [
+    "creative_entrepreneur",
+    "content_creator"
+  ],
+  "notes": "This chain excels at developing holistic content strategies that balance audience growth with monetization potential. The creative_entrepreneur identifies market opportunities while the content_creator develops structured production frameworks."
+}

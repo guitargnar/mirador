@@ -1,0 +1,10 @@
+{
+  "name": "wealth_acceleration",
+  "description": "Strategies for accelerating wealth building and financial growth",
+  "command": "mirador chain creative_entrepreneur task_planner \"Create a comprehensive wealth-building plan for a [PROFESSION/SITUATION] to accelerate financial growth\"",
+  "personas": [
+    "creative_entrepreneur",
+    "task_planner"
+  ],
+  "notes": "This chain focuses on creating personalized wealth-building strategies. The creative_entrepreneur identifies income expansion and investment opportunities while the task_planner develops implementation systems with specific milestones and actions."
+}
