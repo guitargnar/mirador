@@ -26,16 +26,16 @@ fi
 CHAIN_TYPE=$1
 PROMPT=$2
 
-# Map chain types to model sequences
+# Map chain types to optimized model sequences (context provider first for deep understanding)
 case $CHAIN_TYPE in
     "life_optimization")
         MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="universal_strategy_architect matthew_context_provider_v5_complete practical_implementer"
+        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="creative_catalyst matthew_context_provider_v5_complete practical_implementer"
+        MODELS="matthew_context_provider_v5_complete creative_catalyst practical_implementer"
         ;;
     "relationship_harmony")
         MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
@@ -54,7 +54,8 @@ esac
 
 # Display chain information
 echo -e "${BLUE}╔══════════════════════════════════════════════════════════════╗${RESET}"
-echo -e "${BLUE}║         Mirador Universal AI Chain Runner - v2.0             ║${RESET}"
+echo -e "${BLUE}║      Mirador Universal AI Chain Runner - v5.1 Fine-Tuned     ║${RESET}"
+echo -e "${BLUE}║       Context-Aware Orchestration with Story Integration      ║${RESET}"
 echo -e "${BLUE}╚══════════════════════════════════════════════════════════════╝${RESET}"
 echo -e "\n${YELLOW}Chain Type:${RESET} $CHAIN_TYPE"
 echo -e "${YELLOW}Models:${RESET} $MODELS"
@@ -82,15 +83,36 @@ for i in "${!MODEL_ARRAY[@]}"; do
     
     echo -e "\n${GREEN}[Step $STEP/$TOTAL_MODELS]${RESET} Running ${YELLOW}$MODEL${RESET}..."
     
-    # Create step-specific prompt
+    # Create step-specific prompt with context integration
     if [ $i -eq 0 ]; then
+        # First model gets the original prompt
         STEP_PROMPT="$CURRENT_CONTEXT"
     else
-        STEP_PROMPT="Building on the previous analysis:
+        # Subsequent models get context-aware prompts
+        if [[ "$MODEL" == "matthew_context_provider_v5_complete" ]]; then
+            STEP_PROMPT="Given this challenge/question: '$PROMPT'
 
-$CURRENT_CONTEXT
+And considering the previous analysis: $CURRENT_CONTEXT
 
-Please provide your specialized perspective and detailed recommendations."
+Apply your deep understanding of Matthew's complete story - his musical collaboration experience from Annapurna's 9-year journey, pattern recognition abilities from childhood, current reality as a single father to Sage, relationship building with Katie, financial constraints ($1,650 take-home, $91K equity), and transformation from crisis to AI innovation. How do these personal experiences and constraints specifically inform the approach to this challenge?"
+        elif [[ "$MODEL" == "universal_strategy_architect" ]]; then
+            STEP_PROMPT="Building on Matthew's personal context: $CURRENT_CONTEXT
+
+As a universal strategy architect, analyze this situation through multiple strategic lenses. Connect the personal insights to broader strategic frameworks. How do we scale these personal patterns into actionable business/life strategies? What are the systemic implications and interconnections?"
+        elif [[ "$MODEL" == "creative_catalyst" ]]; then
+            STEP_PROMPT="Given the context and strategy: $CURRENT_CONTEXT
+
+As a creative catalyst, how do we transform these insights into innovative solutions? What creative approaches, inspired by musical collaboration and artistic thinking, can unlock new possibilities? How do we turn constraints into creative advantages?"
+        elif [[ "$MODEL" == "practical_implementer" ]]; then
+            STEP_PROMPT="Based on all previous analysis: $CURRENT_CONTEXT
+
+As a practical implementer, convert these insights into specific, actionable steps. Create concrete implementation plans that account for Matthew's real constraints: time with Sage, energy limitations, relationship dynamics with Katie, work responsibilities, and financial realities. What are the exact next steps?"
+        else
+            # Default prompt for any other models
+            STEP_PROMPT="Building on the previous analysis: $CURRENT_CONTEXT
+
+Please provide your specialized perspective and detailed recommendations, ensuring they connect to Matthew's specific context and constraints."
+        fi
     fi
     
     # Save step prompt
