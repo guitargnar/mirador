@@ -29,22 +29,22 @@ PROMPT=$2
 # Map chain types to model sequences
 case $CHAIN_TYPE in
     "life_optimization")
-        MODELS="matthew_context_provider_v4_accurate universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="universal_strategy_architect matthew_context_provider_v4_accurate practical_implementer"
+        MODELS="universal_strategy_architect matthew_context_provider_v5_complete practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="creative_catalyst matthew_context_provider_v4_accurate practical_implementer"
+        MODELS="creative_catalyst matthew_context_provider_v5_complete practical_implementer"
         ;;
     "relationship_harmony")
-        MODELS="matthew_context_provider_v4_accurate universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "technical_mastery")
-        MODELS="matthew_context_provider_v4_accurate universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "strategic_synthesis")
-        MODELS="matthew_context_provider_v4_accurate universal_strategy_architect creative_catalyst practical_implementer"
+        MODELS="matthew_context_provider_v5_complete universal_strategy_architect creative_catalyst practical_implementer"
         ;;
     *)
         echo -e "${RED}Unknown chain type: $CHAIN_TYPE${RESET}"
