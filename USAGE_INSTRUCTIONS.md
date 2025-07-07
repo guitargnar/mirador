@@ -1,159 +1,156 @@
-Mirador Usage Instructions
-Table of Contents
+# 🚀 Mirador v3.0 Usage Instructions
 
-Getting Started
-Basic Commands
-Smart Chains
-Daily Workflows
-Advanced Usage
-Best Practices
-Troubleshooting
+## Quick Start Guide
 
-Getting Started
-First Time Setup
-After installation, run these commands to verify your system:
-bash# Check system status
-./daily_check_enhanced.sh
+### 1. **Immediate Usage** (Ready Now)
+```bash
+# Navigate to project directory
+cd /Users/matthewscott/Projects/mirador
 
-# Test basic functionality
-mirador-ez ask matthew_context_provider_v3 "Tell me about my personality"
+# Run a practical test
+./mirador_universal_runner.sh life_optimization "How do I balance being a single father, my Humana career, music with Annapurna, and AI innovation work?"
+```
 
-# Run your first smart chain
-./mirador-smart-v2 "What are my top opportunities today?"
-Understanding Output
-Mirador saves all outputs in timestamped directories:
-outputs/
-├── chain_20250618_090633/
-│   ├── step_1_output.md      # First model's response
-│   ├── step_2_output.md      # Second model's response
-│   ├── step_3_output.md      # Third model's response
-│   └── summary.md            # Complete chain summary
-Basic Commands
-Direct Model Queries
-Use mirador-ez ask for single model queries:
-bash# Ask a specific model
-mirador-ez ask [model_name] "[your question]"
+### 2. **Core Commands** (Copy-Paste Ready)
 
-# Examples
-mirador-ez ask financial_planning_expert_v8 "How should I invest $5000?"
-mirador-ez ask louisville_expert_v3 "Best coffee shops near Bardstown Road"
-mirador-ez ask enhanced_agent_enforcer "Strategic analysis of remote work"
-Manual Chain Execution
-Use mirador-ez chain for multi-model analysis:
-bash# Basic syntax
-mirador-ez chain "[description]" model1 model2 model3
+#### Personal Life Optimization
+```bash
+./mirador_universal_runner.sh life_optimization "I need to optimize my daily routine for creative output, business growth, and relationship health. Current situation: single father, working at Humana, playing music with Annapurna, developing Mirador. How do I create sustainable balance?"
+```
 
-# Example
-mirador-ez chain "Career planning analysis" \
-    matthew_context_provider_v3 \
-    enhanced_agent_enforcer \
-    decision_simplifier_v3
-Smart Chains
-Using mirador-smart-v2
-The intelligent wrapper automatically selects the best chain:
-bash# Financial queries
-./mirador-smart-v2 "How can I save for a house with 75000 income?"
-# → Uses: matthew_context → financial_expert → decision_simplifier
+#### Financial Planning & Real Estate
+```bash
+./mirador_universal_runner.sh business_acceleration "I have $91,000 in home equity and take-home pay of $1,650 per paycheck after 401k loan repayments. I want to invest in real estate for wealth building while maintaining financial stability for my family. What's my optimal strategy?"
+```
 
-# Music career queries
-./mirador-smart-v2 "Steps to become touring guitarist this year"
-# → Uses: matthew_context → music_networker → guitar_instructor → decision_simplifier
+#### Career Transition Strategy
+```bash
+./mirador_universal_runner.sh business_acceleration "I've built an 89-model AI system and co-authored the Mirador technical paper while working in risk management at Humana for 10 years. How do I transition into a formal AI innovation leadership role?"
+```
 
-# Local opportunity queries
-./mirador-smart-v2 "Louisville networking events for musicians"
-# → Uses: matthew_context → louisville_expert → decision_simplifier
+#### Creative-Technical Integration
+```bash
+./mirador_universal_runner.sh creative_breakthrough "I'm lead guitarist in Annapurna and have built breakthrough AI technology. How do I integrate these passions - using tech skills to enhance music career while maintaining artistic integrity?"
+```
 
-# General strategic queries
-./mirador-smart-v2 "Identify my best opportunities this month"
-# → Uses: matthew_context → enhanced_agent → decision_simplifier
-Chain Selection Logic
-Query Contains          →  Selected Chain
-─────────────────────────────────────────
-financial/money/budget  →  Financial Optimization Chain
-music/guitar/touring    →  Music Career Chain  
-Louisville/local/KY     →  Local Resources Chain
-opportunity/strategy    →  Strategic Analysis Chain
-personality/traits      →  Self-Awareness Chain
-(default)              →  General Analysis Chain
-Daily Workflows
-Morning Routine (5 minutes)
-bash# 1. System health check
-./daily_check_enhanced.sh
+#### Mirador Business Development
+```bash
+./mirador_universal_runner.sh technical_mastery "I've proven Mirador works with my personal 89-model AI system. How do I scale this framework for broader applications while building a sustainable business model?"
+```
 
-# 2. Daily opportunities
-./quick_opportunity.sh
+#### Professional Networking
+```bash
+./mirador_universal_runner.sh relationship_harmony "As someone transitioning from traditional risk management to AI innovation in Louisville, how do I build the right professional network to support this transition?"
+```
 
-# 3. Focus area for today
-./mirador-smart-v2 "What should I focus on today given my goals?"
-Weekly Planning (30 minutes)
-bash# Run on Sunday evenings
-./weekly_personality_optimization.sh
+### 3. **Available Chain Types**
 
-# Review the week
-./mirador-smart-v2 "Analyze my progress this week toward touring guitarist goal"
+| Chain Type | Purpose | Best For |
+|-----------|---------|----------|
+| `life_optimization` | Holistic life improvement | Work-life balance, family integration |
+| `business_acceleration` | Growth strategies | Career advancement, financial planning |
+| `creative_breakthrough` | Innovation solutions | Music, art, creative blocks |
+| `relationship_harmony` | Relationship optimization | Networking, collaboration, personal relationships |
+| `technical_mastery` | Technical project success | AI development, automation, scaling |
+| `strategic_synthesis` | Comprehensive analysis | Complex multi-domain challenges |
 
-# Plan next week
-./mirador-smart-v2 "Create actionable plan for next week with daily tasks"
-Monthly Review (1 hour)
-bash# First of month
-./monthly_optimization.sh
+---
 
-# Financial review
-./mirador-smart-v2 "Comprehensive financial analysis and next month's budget"
+## Advanced Usage
 
-# Goal progress
-./mirador-smart-v2 "Evaluate monthly progress on all major goals"
+### Custom Prompts for Your Situation
 
-# Clean up old outputs
-./archive_old_outputs.sh
-Advanced Usage
-Custom Chains for Specific Needs
-Music Practice Routine
-bashmirador-ez chain "Weekly guitar practice plan" \
-    matthew_context_provider_v3 \
-    master_guitar_instructor \
-    music_career_timeline_strategist \
-    decision_simplifier_v3
-Financial Deep Dive
-bashmirador-ez chain "Comprehensive financial optimization" \
-    matthew_context_provider_v3 \
-    financial_planning_expert_v8 \
-    louisville_expert_v3 \
-    enhanced_agent_enforcer \
-    decision_simplifier_v3
-Networking Strategy
-bashmirador-ez chain "Music industry networking plan" \
-    matthew_context_provider_v3 \
-    music_industry_networker \
-    louisville_expert_v3 \
-    linkedin_voice_architect \
-    decision_simplifier_v3
-Memory-Enhanced Queries
-Use the memory wrapper for context-aware responses:
-bash# Uses SQLite database to track patterns
-./mirador_with_memory.sh ask enhanced_agent_enforcer "Follow up on last week's opportunities"
+#### Template Structure:
+```bash
+./mirador_universal_runner.sh [CHAIN_TYPE] "[CONTEXT] + [SPECIFIC CHALLENGE] + [DESIRED OUTCOME]"
+```
 
-# Memory system tracks:
-# - Previous queries and responses
-# - Success patterns
-# - Implementation results
-Parallel Analysis
-For faster results on independent analyses:
-bash# Run multiple queries simultaneously
-{
-    ./mirador-smart-v2 "Financial opportunities" > financial.md &
-    ./mirador-smart-v2 "Music career steps" > music.md &
-    ./mirador-smart-v2 "Local resources" > local.md &
-    wait
-}
-# Combine results
-cat financial.md music.md local.md > combined_analysis.md
-Creating Custom Models
-Add specialized expertise:
-bash# Create modelfile
-cat > my_custom_expert.modelfile << 'EOF'
-FROM llama3.2
-SYSTEM """You are an expert in [specific domain].
-Provide actionable advice focused on [specific goals]."""
-PARAMETER temperature 0.3
-PARAMETER num_predict 800
+#### Examples:
+
+**Parenting + Innovation Balance:**
+```bash
+./mirador_universal_runner.sh life_optimization "As a single father, I want to model innovation and entrepreneurship for my child while ensuring they have stability and attention. How do I show what's possible while being present as a father?"
+```
+
+**Louisville Professional Positioning:**
+```bash
+./mirador_universal_runner.sh strategic_synthesis "I live in Louisville and work at Humana, but the AI innovation scene here is limited. How do I position myself as an AI leader locally while building connections to broader tech ecosystems?"
+```
+
+**Privacy-First Business Model:**
+```bash
+./mirador_universal_runner.sh technical_mastery "I built my AI system with privacy-first principles - all models run locally, no third-party data sharing. How do I maintain this approach while scaling for business applications and monetization?"
+```
+
+---
+
+## Output Management
+
+### Understanding Results
+Each chain execution creates:
+- **Real-time progress** displayed in terminal
+- **Detailed output files** in `outputs/` directory
+- **Summary document** with comprehensive analysis
+
+### Output Locations
+```bash
+# Results are saved to timestamped directories:
+outputs/universal_[CHAIN_TYPE]_[TIMESTAMP]/
+├── prompt.txt              # Original input
+├── models.txt              # Models used
+├── step1_prompt.txt        # Context model input
+├── step1_output.txt        # Context model response
+├── step2_prompt.txt        # Specialist model input
+├── step2_output.txt        # Specialist model response
+├── step3_prompt.txt        # Implementation model input
+├── step3_output.txt        # Implementation model response
+└── summary.md              # Complete analysis
+```
+
+### Reading Results
+```bash
+# View latest summary
+ls -t outputs/*/summary.md | head -1 | xargs cat
+
+# View specific step output
+cat outputs/universal_life_optimization_[TIMESTAMP]/step3_output.txt
+```
+
+---
+
+## Testing & Validation
+
+### Run Comprehensive Tests
+```bash
+# Test practical utility based on your real situation
+./tests/test_practical_utility_pdf_context.sh
+
+# View test results
+cat test_logs/practical_utility_report_[TIMESTAMP].txt
+```
+
+### Validate Model Functionality
+```bash
+# Check individual model responses
+echo "What are my current priorities?" | ollama run matthew_context_provider_v4_accurate
+
+# Verify all models exist
+ollama list | grep -E "(matthew_context_provider_v4_accurate|universal_strategy_architect|creative_catalyst|practical_implementer)"
+```
+
+---
+
+## File Locations Reference
+
+### Essential Files
+- **Main Runner**: `/Users/matthewscott/Projects/mirador/mirador_universal_runner.sh`
+- **Model Creation**: `/Users/matthewscott/Projects/mirador/create_optimized_models_fixed.sh`
+- **Test Suite**: `/Users/matthewscott/Projects/mirador/tests/test_practical_utility_pdf_context.sh`
+- **Documentation**: `/Users/matthewscott/Projects/mirador/MIRADOR_COMPREHENSIVE_REFERENCE.md`
+
+### Generated Content
+- **Output Directory**: `/Users/matthewscott/Projects/mirador/outputs/`
+- **Test Logs**: `/Users/matthewscott/Projects/mirador/test_logs/`
+- **Model Files**: `~/matthew_context_v4_accurate.modelfile` (and others)
+
+**Mirador v3.0 is ready for immediate practical use in your multi-faceted life optimization journey.** 🚀
