@@ -1,0 +1,234 @@
+<svg viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: Twilight canvas -->
+  <defs>
+    <linearGradient id="twilightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c1810;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Fractured pattern for childhood trauma -->
+    <pattern id="fracturePattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0,15 L15,0 L30,15 L15,30 Z" fill="none" stroke="#dc143c" stroke-width="1" opacity="0.4"/>
+      <path d="M5,5 L25,25 M25,5 L5,25" stroke="#8b0000" stroke-width="0.5" opacity="0.6"/>
+    </pattern>
+    
+    <!-- Musical wave gradients -->
+    <linearGradient id="musicalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4b0082;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#9370db;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#663399;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Hope/Sage golden gradient -->
+    <radialGradient id="sageGlow">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.2" />
+    </radialGradient>
+    
+    <!-- Crisis energy -->
+    <radialGradient id="crisisEnergy">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6666;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- AI network glow -->
+    <radialGradient id="aiGlow">
+      <stop offset="0%" style="stop-color:#00ffcc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ff88;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00cc99;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- Mirador watchtower -->
+    <linearGradient id="miradorGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6bb6ff;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="800" fill="url(#twilightGradient)"/>
+  
+  <!-- Fractured foundations (lower left) -->
+  <g id="fractured-childhood" transform="translate(50, 600)">
+    <path d="M0,0 L200,0 L180,80 L20,100 Z" fill="url(#fracturePattern)" stroke="#dc143c" stroke-width="2" opacity="0.7"/>
+    <path d="M30,20 L50,50 L80,30 L120,60 L160,40" fill="none" stroke="#8b0000" stroke-width="3" opacity="0.8"/>
+    <text x="100" y="120" text-anchor="middle" fill="#dc143c" font-family="Arial" font-size="14" font-weight="bold">Fractured Patterns</text>
+    <text x="100" y="140" text-anchor="middle" fill="#cc5555" font-family="Arial" font-size="10">Pattern Recognition Born</text>
+  </g>
+  
+  <!-- Musical waves (flowing from left to center) -->
+  <g id="musical-waves" transform="translate(250, 400)">
+    <!-- They Came Bearing Arms waves -->
+    <path d="M0,100 Q100,50 200,100 T400,100" fill="none" stroke="#4b0082" stroke-width="4" opacity="0.8"/>
+    <path d="M0,110 Q100,70 200,110 T400,110" fill="none" stroke="#663399" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Annapurna evolution -->
+    <path d="M100,80 Q200,20 300,80 Q400,40 500,80" fill="none" stroke="url(#musicalGradient)" stroke-width="5"/>
+    <path d="M100,90 Q200,40 300,90 Q400,60 500,90" fill="none" stroke="#9370db" stroke-width="3" opacity="0.7"/>
+    
+    <!-- Musical notes floating -->
+    <circle cx="150" cy="60" r="3" fill="#9370db" opacity="0.8"/>
+    <circle cx="300" cy="40" r="4" fill="#663399" opacity="0.9"/>
+    <circle cx="450" cy="55" r="3" fill="#8a2be2" opacity="0.7"/>
+    
+    <text x="250" y="150" text-anchor="middle" fill="#9370db" font-family="Arial" font-size="14" font-weight="bold">Musical Collaboration</text>
+    <text x="250" y="170" text-anchor="middle" fill="#8a2be2" font-family="Arial" font-size="10">They Came Bearing Arms → Annapurna</text>
+  </g>
+  
+  <!-- Sage compass (golden center) -->
+  <g id="sage-compass" transform="translate(700, 400)">
+    <circle cx="0" cy="0" r="100" fill="url(#sageGlow)" opacity="0.3"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#ffd700" stroke-width="4"/>
+    <circle cx="0" cy="0" r="60" fill="url(#sageGlow)" opacity="0.5"/>
+    
+    <!-- Compass points -->
+    <path d="M0,-80 L15,-55 L0,-30 L-15,-55 Z" fill="#ffd700"/>
+    <path d="M80,0 L55,15 L30,0 L55,-15 Z" fill="#ffd700"/>
+    <path d="M0,80 L15,55 L0,30 L-15,55 Z" fill="#ffd700"/>
+    <path d="M-80,0 L-55,15 L-30,0 L-55,-15 Z" fill="#ffd700"/>
+    
+    <!-- Inner compass detail -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#ffed4e" stroke-width="2"/>
+    <path d="M0,-25 L0,25 M-25,0 L25,0" stroke="#ffd700" stroke-width="1"/>
+    
+    <text x="0" y="8" text-anchor="middle" fill="#1a1a2e" font-family="Arial" font-size="18" font-weight="bold">SAGE</text>
+    <text x="0" y="-120" text-anchor="middle" fill="#ffd700" font-family="Arial" font-size="16" font-weight="bold">Foundation Compass</text>
+  </g>
+  
+  <!-- Crisis lightning (center, dramatic) -->
+  <g id="crisis-catalyst" transform="translate(600, 300)">
+    <path d="M0,0 L30,-60 L15,-65 L45,-100 L40,-105 L60,-140" fill="none" stroke="url(#crisisEnergy)" stroke-width="6"/>
+    <path d="M10,-20 L40,-80 L25,-85 L50,-120" fill="none" stroke="#ff6666" stroke-width="4" opacity="0.8"/>
+    <circle cx="0" cy="0" r="20" fill="url(#crisisEnergy)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="10" fill="#ffffff" opacity="0.9"/>
+    
+    <text x="-80" y="-150" fill="#ff4444" font-family="Arial" font-size="14" font-weight="bold">Crisis Catalyst</text>
+    <text x="-80" y="-130" fill="#ff6666" font-family="Arial" font-size="11">July 14, 2023</text>
+  </g>
+  
+  <!-- AI network emergence (upper right) -->
+  <g id="ai-emergence" transform="translate(950, 150)">
+    <!-- Neural network nodes -->
+    <circle cx="0" cy="0" r="12" fill="url(#aiGlow)"/>
+    <circle cx="80" cy="-40" r="10" fill="#00ffcc"/>
+    <circle cx="80" cy="40" r="10" fill="#00ff88"/>
+    <circle cx="160" cy="-60" r="8" fill="#00ffcc"/>
+    <circle cx="160" cy="0" r="12" fill="#00ff88"/>
+    <circle cx="160" cy="60" r="8" fill="#00ffcc"/>
+    <circle cx="240" cy="-20" r="10" fill="#00ffaa"/>
+    <circle cx="240" cy="20" r="10" fill="#00ffcc"/>
+    
+    <!-- Network connections with animation -->
+    <path d="M12,0 L68,-40" stroke="#00ffcc" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12,0 L68,40" stroke="#00ff88" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M88,-40 L152,-60" stroke="#00ffcc" stroke-width="2" opacity="0.5"/>
+    <path d="M88,-40 L152,0" stroke="#00ff88" stroke-width="2" opacity="0.7"/>
+    <path d="M88,40 L152,0" stroke="#00ffcc" stroke-width="2" opacity="0.6"/>
+    <path d="M88,40 L152,60" stroke="#00ff88" stroke-width="2" opacity="0.5"/>
+    <path d="M168,-60 L232,-20" stroke="#00ffaa" stroke-width="2" opacity="0.4"/>
+    <path d="M168,0 L232,0" stroke="#00ffcc" stroke-width="3" opacity="0.8"/>
+    <path d="M168,60 L232,20" stroke="#00ff88" stroke-width="2" opacity="0.4"/>
+    
+    <!-- Data flow particles -->
+    <circle cx="40" cy="-20" r="2" fill="#ffffff" opacity="0.8">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <path d="M0,0 L200,0"/>
+      </animateMotion>
+    </circle>
+    
+    <text x="120" y="100" text-anchor="middle" fill="#00ffcc" font-family="Arial" font-size="16" font-weight="bold">89 AI Models</text>
+    <text x="120" y="120" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="11">8 Weeks of Innovation</text>
+  </g>
+  
+  <!-- Mirador watchtower (overlooking all) -->
+  <g id="mirador-watchtower" transform="translate(1200, 200)">
+    <!-- Tower base -->
+    <path d="M0,200 L-40,160 L-40,80 L40,80 L40,160 Z" fill="url(#miradorGradient)" stroke="#6bb6ff" stroke-width="3"/>
+    
+    <!-- Tower middle -->
+    <path d="M-40,80 L-30,40 L30,40 L40,80" fill="#4a90e2" stroke="#6bb6ff" stroke-width="2"/>
+    
+    <!-- Watchtower top -->
+    <path d="M-30,40 L-20,0 L20,0 L30,40" fill="#6bb6ff" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Platform/observation deck -->
+    <ellipse cx="0" cy="80" rx="45" ry="8" fill="#6bb6ff" opacity="0.8"/>
+    
+    <!-- Light beam emanating -->
+    <path d="M0,0 L-100,-50 L-100,-30 L0,20 Z" fill="#ffffff" opacity="0.1"/>
+    <path d="M0,0 L100,-50 L100,-30 L0,20 Z" fill="#ffffff" opacity="0.1"/>
+    <path d="M0,0 L0,-100 L-20,-100 L20,-100 Z" fill="#ffffff" opacity="0.15"/>
+    
+    <!-- Observation lens -->
+    <circle cx="0" cy="30" r="15" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="0" cy="30" r="8" fill="#ffffff" opacity="0.3"/>
+    
+    <text x="0" y="250" text-anchor="middle" fill="#6bb6ff" font-family="Arial" font-size="18" font-weight="bold">MIRADOR</text>
+    <text x="0" y="270" text-anchor="middle" fill="#4a90e2" font-family="Arial" font-size="12">La Atalaya</text>
+  </g>
+  
+  <!-- Connecting pathways of light -->
+  <g id="connection-pathways" opacity="0.4">
+    <!-- From fractured childhood to musical waves -->
+    <path d="M250,650 Q400,550 450,500" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;24" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- From musical waves to Sage compass -->
+    <path d="M550,450 Q650,400 700,400" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;24" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- From crisis to AI emergence -->
+    <path d="M660,260 Q800,200 950,180" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- From AI to Mirador watchtower -->
+    <path d="M1190,170 L1200,200" fill="none" stroke="#ffffff" stroke-width="3"/>
+  </g>
+  
+  <!-- Katie connection (building together) -->
+  <g id="katie-connection" transform="translate(850, 500)">
+    <path d="M0,0 Q-100,-50 -200,-50 Q-300,-50 -400,0" fill="none" stroke="#ff69b4" stroke-width="3" opacity="0.7"/>
+    <circle cx="0" cy="0" r="8" fill="#ff69b4"/>
+    <circle cx="-400" cy="0" r="8" fill="#ff69b4"/>
+    <path d="M-200,-50 L-200,-30 L-190,-40 L-210,-40 Z" fill="#ff69b4" opacity="0.8"/>
+    
+    <text x="-200" y="-70" text-anchor="middle" fill="#ff69b4" font-family="Arial" font-size="13" font-weight="bold">Building Together</text>
+  </g>
+  
+  <!-- Future trajectory (hope extending forward) -->
+  <g id="future-path" transform="translate(1300, 250)">
+    <path d="M0,0 L80,-30 L160,-50 L240,-60" fill="none" stroke="#ffd700" stroke-width="4" opacity="0.7" stroke-dasharray="15,8">
+      <animate attributeName="stroke-dashoffset" values="0;46" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="240" cy="-60" r="6" fill="#ffd700">
+      <animate attributeName="r" values="4;10;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Sparks of hope -->
+    <circle cx="80" cy="-30" r="2" fill="#ffed4e">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="-50" r="3" fill="#ffd700">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+  
+  <!-- Title -->
+  <text x="700" y="60" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="32" font-weight="bold">From Fractured Patterns to Orchestrated Purpose</text>
+  <text x="700" y="90" text-anchor="middle" fill="#cccccc" font-family="Arial" font-size="16" opacity="0.8">The Mirador Journey: Crisis to Catalyst</text>
+  
+  <!-- Subtle quote integration -->
+  <text x="700" y="750" text-anchor="middle" fill="#9370db" font-family="Arial" font-size="14" font-style="italic" opacity="0.7">"Somewhere in the rests between those melodic breakdowns, you'll find little seeds. Those seeds are hope."</text>
+</svg>
