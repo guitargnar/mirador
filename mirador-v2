@@ -1,0 +1,4 @@
+#!/bin/bash
+# Direct Mirador v2.0 launcher that bypasses framework.py issues
+cd /Users/matthewscott/Projects/mirador
+python3 mirador_v2.py "$@"

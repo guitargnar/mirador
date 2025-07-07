@@ -413,3 +413,4 @@ class AIFramework:
                     "error": str(e)
                 }
                 errors.append(error_info)
+(Content truncated due to size limit. Use line ranges to read in chunks)

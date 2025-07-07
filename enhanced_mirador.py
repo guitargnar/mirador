@@ -22,7 +22,7 @@ from automation_engine import AutomationEngine
 
 # Import existing framework components
 try:
-    from framework import Framework
+    # from framework import Framework  # Temporarily disabled due to import issue
     from mirador import ROLES, CHAINS
 except ImportError:
     # Fallback if original files don't exist

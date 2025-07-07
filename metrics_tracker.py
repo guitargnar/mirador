@@ -402,13 +402,16 @@ if __name__ == "__main__":
         print(f"\n=== Mirador Metrics Summary (Last {args.days} Days) ===\n")
         print(f"Total Executions: {metrics['total_executions']}")
         print(f"Success Rate: {metrics['success_rate']:.1f}%")
-        print(f"Average Duration: {metrics['avg_duration_seconds']:.1f} seconds")
-        print(f"Total Hours Saved: {metrics['total_hours_saved']:.1f}")
-        print(f"Efficiency Gain: {metrics['avg_efficiency_gain_percent']:.1f}%")
-        print(f"Average Quality Score: {metrics['avg_quality_score']:.1f}/100")
-        print(f"User Rating: {metrics['avg_user_rating']:.1f}/5.0")
-        print(f"Estimated Cost Savings: ${metrics['estimated_cost_savings']:,.2f}")
-        print(f"ROI Multiplier: {metrics['roi_multiplier']:.1f}x")
+        if metrics['avg_duration_seconds'] is not None:
+            print(f"Average Duration: {metrics['avg_duration_seconds']:.1f} seconds")
+        else:
+            print("Average Duration: No data yet")
+        print(f"Total Hours Saved: {metrics['total_hours_saved']:.1f}" if metrics['total_hours_saved'] is not None else "Total Hours Saved: No data yet")
+        print(f"Efficiency Gain: {metrics['avg_efficiency_gain_percent']:.1f}%" if metrics['avg_efficiency_gain_percent'] is not None else "Efficiency Gain: No data yet")
+        print(f"Average Quality Score: {metrics['avg_quality_score']:.1f}/100" if metrics['avg_quality_score'] is not None else "Average Quality Score: No data yet")
+        print(f"User Rating: {metrics['avg_user_rating']:.1f}/5.0" if metrics['avg_user_rating'] is not None else "User Rating: No data yet")
+        print(f"Estimated Cost Savings: ${metrics['estimated_cost_savings']:,.2f}" if metrics['estimated_cost_savings'] is not None else "Estimated Cost Savings: No data yet")
+        print(f"ROI Multiplier: {metrics['roi_multiplier']:.1f}x" if metrics['roi_multiplier'] is not None else "ROI Multiplier: No data yet")
         
     elif args.command == 'history':
         history = tracker.get_execution_history(limit=10)

@@ -13,7 +13,8 @@ from collections import defaultdict, Counter
 import sqlite3
 
 from advocates_program import AdvocatesProgram
-from enhanced_mirador import run_enhanced_chain
+# from enhanced_mirador import run_enhanced_chain  # Temporarily disabled
+run_enhanced_chain = None  # Fallback for now
 
 
 class PainPointAnalyzer:
