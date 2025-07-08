@@ -15,25 +15,25 @@ QUERY="$1"
 # Smart chain selection based on query content
 if [[ "$QUERY" =~ (financial|money|investment|budget|income|salary) ]]; then
     echo "🏦 Detected financial query - using optimized chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 financial_planning_expert_v8 decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 financial_planning_expert_v8 optimized_decision_simplifier_v3
     
 elif [[ "$QUERY" =~ (Louisville|local|Kentucky|downtown|neighborhood) ]]; then
     echo "📍 Detected Louisville query - using local chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 louisville_expert_v3 decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 louisville_expert_v3 optimized_decision_simplifier_v3
     
 elif [[ "$QUERY" =~ (opportunity|opportunities|business|strategy|idea) ]]; then
     echo "💡 Detected opportunity query - using strategic chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 enhanced_agent_enforcer decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 enhanced_agent_enforcer optimized_decision_simplifier_v3
     
 elif [[ "$QUERY" =~ (music|guitar|touring|performance|Cody.*Ash) ]]; then
     echo "🎸 Detected music query - using music career chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 music_industry_networker master_guitar_instructor decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 music_industry_networker master_guitar_instructor optimized_decision_simplifier_v3
     
 elif [[ "$QUERY" =~ (personality|traits|strengths|weaknesses) ]]; then
     echo "🧠 Detected personality query - using self-awareness chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 mirador_system_specialist_v2 decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 mirador_system_specialist_v2 optimized_decision_simplifier_v3
     
 else
     echo "🔍 General query - using comprehensive chain"
-    mirador-ez chain "$QUERY" matthew_context_provider_v3 enhanced_agent_enforcer decision_simplifier_v3
+    mirador-ez chain "$QUERY" matthew_context_provider_v3 enhanced_agent_enforcer optimized_decision_simplifier_v3
 fi
