@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.productivity_temp.json
+
+# Output files (keep examples only)
+meeting_*.txt
+email_actions_*.md
+cms_web_impacts_*.txt
+star_ratings_report_*.txt
+
+# Personal data
+my_accomplishments_*.json
+
+# Private configuration
+.private_config
+.env
+.secrets

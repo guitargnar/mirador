@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="350" fill="#1a1a2e"/>
+  
+  <!-- Window Frame -->
+  <rect x="50" y="30" width="500" height="290" fill="#16213e" stroke="#0f4c75" stroke-width="3" rx="10"/>
+  
+  <!-- Title Bar -->
+  <rect x="50" y="30" width="500" height="50" fill="#0f4c75" rx="10 10 0 0"/>
+  <text x="250" y="60" font-family="monospace" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">
+    ⚡ QUICK ACTIONS
+  </text>
+  
+  <!-- Menu Items -->
+  <g transform="translate(100, 110)">
+    <!-- Option 1 -->
+    <rect x="0" y="0" width="400" height="35" fill="#1e3a5f" stroke="#00d2ff" stroke-width="1" rx="5"/>
+    <text x="20" y="23" font-family="monospace" font-size="16" fill="#ffcc00">1.</text>
+    <text x="50" y="23" font-family="monospace" font-size="16" fill="#fff">📞 Call a school now</text>
+    
+    <!-- Option 2 -->
+    <rect x="0" y="45" width="400" height="35" fill="#1e3a5f" stroke="#00d2ff" stroke-width="1" rx="5"/>
+    <text x="20" y="68" font-family="monospace" font-size="16" fill="#ffcc00">2.</text>
+    <text x="50" y="68" font-family="monospace" font-size="16" fill="#fff">✅ Mark task complete</text>
+    
+    <!-- Option 3 -->
+    <rect x="0" y="90" width="400" height="35" fill="#1e3a5f" stroke="#00d2ff" stroke-width="1" rx="5"/>
+    <text x="20" y="113" font-family="monospace" font-size="16" fill="#ffcc00">3.</text>
+    <text x="50" y="113" font-family="monospace" font-size="16" fill="#fff">📝 Add quick note</text>
+    
+    <!-- Option 4 -->
+    <rect x="0" y="135" width="400" height="35" fill="#1e3a5f" stroke="#00d2ff" stroke-width="1" rx="5"/>
+    <text x="20" y="158" font-family="monospace" font-size="16" fill="#ffcc00">4.</text>
+    <text x="50" y="158" font-family="monospace" font-size="16" fill="#fff">🔍 Check JCPS portal</text>
+  </g>
+  
+  <!-- Selection indicator -->
+  <rect x="100" y="110" width="400" height="35" fill="none" stroke="#00ff00" stroke-width="2" rx="5" stroke-dasharray="5,5">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+</svg>

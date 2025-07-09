@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern for tech feel -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <rect width="40" height="40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  
+  <!-- Central lightning bolt -->
+  <g transform="translate(640, 320)">
+    <path d="M-40 -120 L-80 0 L-40 0 L-60 120 L40 0 L0 0 L40 -120 Z" 
+          fill="#fbbf24" stroke="#f59e0b" stroke-width="3" filter="url(#glow)"
+          transform="scale(1.5)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="640" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+        text-anchor="middle" fill="#ffffff">
+    Productivity Tools
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="640" y="480" font-family="Arial, sans-serif" font-size="36" 
+        text-anchor="middle" fill="#a5b4fc">
+    Save 3-4 hours daily with Python automation
+  </text>
+  
+  <!-- Feature icons -->
+  <g transform="translate(200, 550)">
+    <circle cx="0" cy="0" r="20" fill="#10b981"/>
+    <text x="30" y="5" font-family="Arial" font-size="20" fill="#ffffff">Zero Dependencies</text>
+  </g>
+  
+  <g transform="translate(500, 550)">
+    <circle cx="0" cy="0" r="20" fill="#10b981"/>
+    <text x="30" y="5" font-family="Arial" font-size="20" fill="#ffffff">5 Powerful Tools</text>
+  </g>
+  
+  <g transform="translate(800, 550)">
+    <circle cx="0" cy="0" r="20" fill="#10b981"/>
+    <text x="30" y="5" font-family="Arial" font-size="20" fill="#ffffff">Enterprise Ready</text>
+  </g>
+  
+  <!-- Corner decorations -->
+  <circle cx="100" cy="100" r="60" fill="#fbbf24" opacity="0.2"/>
+  <circle cx="1180" cy="100" r="60" fill="#10b981" opacity="0.2"/>
+  <circle cx="100" cy="540" r="60" fill="#10b981" opacity="0.2"/>
+  <circle cx="1180" cy="540" r="60" fill="#fbbf24" opacity="0.2"/>
+</svg>

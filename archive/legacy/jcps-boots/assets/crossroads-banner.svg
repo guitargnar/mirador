@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Desert gradient background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#F0E68C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky and ground -->
+  <rect width="1200" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Desert floor -->
+  <ellipse cx="600" cy="400" rx="800" ry="100" fill="#D2691E" opacity="0.3"/>
+  
+  <!-- Road intersection -->
+  <path d="M 600 200 L 600 400" stroke="#333" stroke-width="40" fill="none"/>
+  <path d="M 400 300 L 800 300" stroke="#333" stroke-width="40" fill="none"/>
+  
+  <!-- Road lines -->
+  <path d="M 600 200 L 600 400" stroke="#FFF" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  <path d="M 400 300 L 800 300" stroke="#FFF" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  
+  <!-- Street signs -->
+  <g transform="translate(550, 250)">
+    <!-- Pole -->
+    <rect x="45" y="0" width="10" height="100" fill="#666"/>
+    
+    <!-- Sign 1 -->
+    <rect x="0" y="10" width="100" height="30" fill="#4a7c59" rx="3"/>
+    <text x="50" y="30" font-family="Arial, sans-serif" font-size="16" fill="#FFF" text-anchor="middle" font-weight="bold">SAGE CT</text>
+    
+    <!-- Sign 2 -->
+    <rect x="0" y="45" width="100" height="30" fill="#4a7c59" rx="3"/>
+    <text x="50" y="65" font-family="Arial, sans-serif" font-size="16" fill="#FFF" text-anchor="middle" font-weight="bold">SAGE AVE</text>
+  </g>
+  
+  <!-- Desert plants -->
+  <circle cx="200" cy="350" r="3" fill="#8B7355"/>
+  <path d="M 200 350 Q 190 340 195 330 Q 200 340 205 330 Q 210 340 200 350" fill="#556B2F" opacity="0.7"/>
+  
+  <circle cx="900" cy="370" r="3" fill="#8B7355"/>
+  <path d="M 900 370 Q 890 360 895 350 Q 900 360 905 350 Q 910 360 900 370" fill="#556B2F" opacity="0.7"/>
+  
+  <!-- Sun -->
+  <circle cx="150" cy="100" r="40" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Text overlay -->
+  <text x="600" y="100" font-family="Georgia, serif" font-size="32" fill="#333" text-anchor="middle" font-style="italic">
+    At the crossroads of what is and what could be...
+  </text>
+</svg>

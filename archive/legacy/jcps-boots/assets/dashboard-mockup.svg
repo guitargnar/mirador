@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Header -->
+  <rect x="10" y="10" width="780" height="60" fill="#16213e" stroke="#0f4c75" stroke-width="2" rx="5"/>
+  <text x="30" y="45" font-family="monospace" font-size="18" fill="#00d2ff">
+    🎯 JCPS TRANSFER MISSION CONTROL
+  </text>
+  <text x="550" y="45" font-family="monospace" font-size="16" fill="#ffffff">
+    📅 July 8, 2025
+  </text>
+  
+  <!-- Countdown Bar -->
+  <rect x="10" y="80" width="780" height="40" fill="#0f4c75" stroke="#00d2ff" stroke-width="1" rx="3"/>
+  <text x="30" y="105" font-family="monospace" font-size="14" fill="#ffcc00">
+    ⏰ 37 days until school starts
+  </text>
+  <text x="550" y="105" font-family="monospace" font-size="14" fill="#ff6b6b">
+    🔥 Streak: 7 days
+  </text>
+  
+  <!-- Schools Table -->
+  <rect x="10" y="130" width="520" height="250" fill="#16213e" stroke="#0f4c75" stroke-width="2" rx="5"/>
+  <text x="30" y="160" font-family="monospace" font-size="16" fill="#00d2ff" font-weight="bold">
+    🏫 TARGET SCHOOLS
+  </text>
+  
+  <!-- Table Headers -->
+  <line x1="20" y1="175" x2="520" y2="175" stroke="#0f4c75" stroke-width="1"/>
+  <text x="30" y="195" font-family="monospace" font-size="12" fill="#888">School</text>
+  <text x="200" y="195" font-family="monospace" font-size="12" fill="#888">Phone</text>
+  <text x="320" y="195" font-family="monospace" font-size="12" fill="#888">Status</text>
+  <text x="440" y="195" font-family="monospace" font-size="12" fill="#888">Action</text>
+  
+  <!-- School Rows -->
+  <line x1="20" y1="205" x2="520" y2="205" stroke="#0f4c75" stroke-width="1"/>
+  
+  <!-- Norton Commons -->
+  <text x="30" y="225" font-family="monospace" font-size="12" fill="#00d2ff">Norton Commons</text>
+  <text x="200" y="225" font-family="monospace" font-size="12" fill="#fff">(502) 485-8388</text>
+  <text x="320" y="225" font-family="monospace" font-size="12" fill="#ffcc00">⏳ Waitlisted</text>
+  <rect x="440" y="210" width="70" height="25" fill="none" stroke="#00d2ff" stroke-width="1" rx="3"/>
+  <text x="450" y="227" font-family="monospace" font-size="11" fill="#00d2ff">[Call Now]</text>
+  
+  <!-- Greathouse -->
+  <text x="30" y="255" font-family="monospace" font-size="12" fill="#00d2ff">Greathouse/Shryock</text>
+  <text x="200" y="255" font-family="monospace" font-size="12" fill="#fff">(502) 485-8295</text>
+  <text x="320" y="255" font-family="monospace" font-size="12" fill="#fff">👀 Monitoring</text>
+  <rect x="440" y="240" width="70" height="25" fill="none" stroke="#00d2ff" stroke-width="1" rx="3"/>
+  <text x="450" y="257" font-family="monospace" font-size="11" fill="#00d2ff">[Call Now]</text>
+  
+  <!-- Progress Panel -->
+  <rect x="540" y="130" width="250" height="120" fill="#16213e" stroke="#0f4c75" stroke-width="2" rx="5"/>
+  <text x="560" y="160" font-family="monospace" font-size="14" fill="#00d2ff" font-weight="bold">
+    📊 PROGRESS
+  </text>
+  
+  <!-- Progress Bar -->
+  <rect x="560" y="180" width="210" height="20" fill="#0f4c75" rx="10"/>
+  <rect x="560" y="180" width="168" height="20" fill="#00d2ff" rx="10"/>
+  <text x="630" y="195" font-family="monospace" font-size="12" fill="#fff">80%</text>
+  
+  <!-- Metrics -->
+  <text x="560" y="220" font-family="monospace" font-size="11" fill="#888">Schools: 2/3 contacted</text>
+  <text x="560" y="235" font-family="monospace" font-size="11" fill="#888">Tasks: 12/15 complete</text>
+  
+  <!-- Action Panel -->
+  <rect x="540" y="260" width="250" height="120" fill="#16213e" stroke="#0f4c75" stroke-width="2" rx="5"/>
+  <text x="560" y="290" font-family="monospace" font-size="14" fill="#00d2ff" font-weight="bold">
+    📋 TODAY'S PRIORITIES
+  </text>
+  
+  <text x="560" y="315" font-family="monospace" font-size="11" fill="#ff6b6b">🔄 Check JCPS portal</text>
+  <text x="560" y="335" font-family="monospace" font-size="11" fill="#ffcc00">2. Call Norton Commons</text>
+  <text x="560" y="355" font-family="monospace" font-size="11" fill="#fff">3. Email follow-up</text>
+</svg>

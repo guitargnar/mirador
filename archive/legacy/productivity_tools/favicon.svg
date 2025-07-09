@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#2563eb" stroke="#1e40af" stroke-width="1"/>
+  
+  <!-- Lightning bolt for speed/efficiency -->
+  <path d="M19 7 L12 15 L15 15 L13 25 L20 17 L17 17 L19 7" 
+        fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5"/>
+  
+  <!-- Small productivity dots -->
+  <circle cx="8" cy="8" r="1.5" fill="#10b981"/>
+  <circle cx="24" cy="8" r="1.5" fill="#10b981"/>
+  <circle cx="8" cy="24" r="1.5" fill="#10b981"/>
+  <circle cx="24" cy="24" r="1.5" fill="#10b981"/>
+</svg>
