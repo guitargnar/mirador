@@ -1,0 +1,1182 @@
+{
+  "timestamp": "2025-07-09T17:13:39.883914",
+  "total_models": 74,
+  "duplicate_groups": [
+    {
+      "type": "exact",
+      "models": [
+        "llama3.2:3b",
+        "llama3.2:latest"
+      ],
+      "hash": "50d140eb45be6330292f5f813dbf670a"
+    }
+  ],
+  "consolidation_opportunities": [
+    {
+      "type": "same_base",
+      "models": [
+        "llama3.2:3b",
+        "matthew_context_provider_v3:latest",
+        "enhanced_agent_enforcer:latest",
+        "ai_leadership_strategist:latest",
+        "matthew_advisor_enhanced:latest",
+        "matthew_advisor:latest",
+        "enhanced_agent_fast_v6:latest",
+        "financial_planning_expert_v6:latest",
+        "test_balanced_specialist:latest",
+        "cross_model_synthesizer:latest",
+        "feedback_loop_optimizer_fixed:latest",
+        "guitar_tone_architect:latest",
+        "music_career_timeline_strategist:latest",
+        "performance_anxiety_coach:latest",
+        "father_daughter_music_mentor:latest",
+        "father_daughter_wisdom_guide:latest",
+        "matthew_context_provider_optimized:latest",
+        "financial_planning_expert_optimized:latest",
+        "enhanced_agent_enforcer_v2:latest",
+        "mirador_system_specialist_v2:latest",
+        "matthew_context_provider_v2:latest",
+        "opportunity_validator_v2:latest",
+        "louisville_expert_v3:latest",
+        "relationship_communication_specialist:latest",
+        "matthews_linkedin_voice:latest",
+        "linkedin_thought_leader:latest",
+        "enhanced_agent_builder:latest",
+        "life_transition_coordinator:latest",
+        "ai_content_strategist:latest",
+        "parenting_decision_support:latest",
+        "real_estate_analyzer:latest",
+        "business_strategist_fast:latest",
+        "health_wellness_optimizer:latest",
+        "productivity_optimizer:latest",
+        "engagement_optimizer:latest",
+        "personal_brand_architect:latest",
+        "sales_content_creator:latest",
+        "content_strategist_pro:latest",
+        "digital_storyteller:latest",
+        "linkedin_content_expert:latest",
+        "opportunity_analyst:latest",
+        "file_reviewer:latest",
+        "master_coder:latest",
+        "guitar_expert_precise:latest",
+        "llama3.2_balanced:latest",
+        "llama3.2:latest",
+        "fast_agent_ultimate:latest",
+        "fast_agent_llama:latest"
+      ],
+      "base": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff_2.0 GB"
+    },
+    {
+      "type": "same_base",
+      "models": [
+        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v4_accurate:latest",
+        "universal_strategy_architect:latest",
+        "matthew_context_provider_v4:latest",
+        "practical_implementer:latest",
+        "creative_catalyst:latest",
+        "solution_architect:latest",
+        "humana_innovation_catalyst:latest",
+        "humana_politics_navigator:latest",
+        "advocates_meeting_optimizer_v2:latest",
+        "matthews_strategic_accelerator_v2:latest",
+        "advocates_meeting_optimizer:latest",
+        "action_crystallizer:latest",
+        "matthews_strategic_accelerator:latest",
+        "daily_micro_action:latest",
+        "ai_career_strategist:latest",
+        "personal_finance_navigator:latest",
+        "home_sale_optimizer:latest",
+        "humana_ai_advocate:latest",
+        "optimized_decision_simplifier_v3:latest",
+        "optimized_action_prioritizer:latest",
+        "llama3.2:3b-instruct-fp16"
+      ],
+      "base": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b_6.4 GB"
+    },
+    {
+      "type": "same_base",
+      "models": [
+        "code_reviewer:latest",
+        "deepseek-coder:latest"
+      ],
+      "base": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd_776 MB"
+    },
+    {
+      "type": "same_base",
+      "models": [
+        "fast_agent_focused:latest",
+        "mistral:latest"
+      ],
+      "base": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435_4.1 GB"
+    },
+    {
+      "type": "version_family",
+      "family": "enhanced_agent_enforcer",
+      "models": [
+        "enhanced_agent_enforcer:latest",
+        "enhanced_agent_enforcer_v2:latest"
+      ]
+    },
+    {
+      "type": "version_family",
+      "family": "matthew_context_provider",
+      "models": [
+        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v4_accurate:latest",
+        "matthew_context_provider_v4:latest",
+        "matthew_context_provider_v3:latest",
+        "matthew_context_provider_v2:latest"
+      ]
+    },
+    {
+      "type": "version_family",
+      "family": "matthews_strategic_accelerator",
+      "models": [
+        "matthews_strategic_accelerator_v2:latest",
+        "matthews_strategic_accelerator:latest"
+      ]
+    }
+  ],
+  "model_details": {
+    "llama3.2:3b": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": null,
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "hash": "50d140eb45be6330292f5f813dbf670a"
+    },
+    "matthew_context_provider_v5_complete:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's AI orchestration specialist with his complete, accurate life story a",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95"
+      },
+      "hash": "f77e52b27fa22c6fb34aefa895a9b36f"
+    },
+    "matthew_context_provider_v4_accurate:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's AI orchestration specialist with accurate 2025 context:\n\nPERSONAL BA",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8"
+      },
+      "hash": "19e27ceb7a043f7501cb0bddeedc3a0b"
+    },
+    "universal_strategy_architect:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are a universal strategy architect specializing in multi-domain optimization for creativ",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95"
+      },
+      "hash": "8ec854f792b729f8151e767fef27d3f5"
+    },
+    "matthew_context_provider_v4:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's AI orchestration specialist. Updated context based on 2025 reality:\n",
+      "parameters": {
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "362dc008cc2dd35b3dd956467d003d6d"
+    },
+    "practical_implementer:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are a practical implementer focused on converting strategic insights into executable act",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05"
+      },
+      "hash": "9d47d85c53da8ca264720c306e9cce93"
+    },
+    "creative_catalyst:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are a creative catalyst specializing in unlocking innovative potential and breakthrough ",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05"
+      },
+      "hash": "d61605eb106a80ce421f5e1f13c1a632"
+    },
+    "matthew_context_provider_v3:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's personal context provider. You have deep knowledge about Matthew's p",
+      "parameters": {
+        "temperature": "0.3",
+        "top_p": "0.9",
+        "num_predict": "800",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "fb77e003cda5b9a64edff8c65487d7db"
+    },
+    "enhanced_agent_enforcer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Enhanced Agent Enforcer - a strategic synthesis specialist for multi-model chain",
+      "parameters": {
+        "num_predict": "1300",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85"
+      },
+      "hash": "8eaac3c20178dd26b31eca901d0f5314"
+    },
+    "solution_architect:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Solution Architect - specialized in designing practical, implementable solutions",
+      "parameters": {
+        "num_ctx": "8192",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85"
+      },
+      "hash": "74d94d5d163d2cde42243469ad510c1a"
+    },
+    "humana_innovation_catalyst:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are the Humana Innovation Catalyst - specialized in identifying and scaling innovation",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "8192"
+      },
+      "hash": "9a88c88aaeed2733d349664d4cb30525"
+    },
+    "ai_leadership_strategist:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"\"\"You are the AI Leadership Strategist - specialized in positioning Matthew for AI leadershi",
+      "parameters": {
+        "num_ctx": "8192",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.9"
+      },
+      "hash": "1c81f1b2573ec9b2764b709d72557f86"
+    },
+    "humana_politics_navigator:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Humana Politics Navigator, specifically designed to help Matthew navigate the co",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.85"
+      },
+      "hash": "6ec6cb86c5679c51e3efe3fc6a66a9f9"
+    },
+    "advocates_meeting_optimizer_v2:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Advocates Meeting Optimizer V2, now updated with ground truth about the meeting'",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.65",
+        "top_p": "0.85"
+      },
+      "hash": "ca50f28687c6490dc745c2118f24e963"
+    },
+    "matthews_strategic_accelerator_v2:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are Matthew's Strategic Accelerator V2, updated with post-Advocates meeting intelligen",
+      "parameters": {
+        "temperature": "0.75",
+        "top_p": "0.9",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "4981316d406fe681c32fab1fa377ab1b"
+    },
+    "advocates_meeting_optimizer:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are the Advocates Meeting Optimizer, specifically designed for the exclusive 14-person",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85"
+      },
+      "hash": "06c43ae141f66ec3e2292d491af9dc54"
+    },
+    "action_crystallizer:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Action Crystallizer. Your job is to take all previous analysis and convert it in",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.8"
+      },
+      "hash": "7eaf88187c903632f77ce68e0f238b0d"
+    },
+    "matthews_strategic_accelerator:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are Matthew's Strategic Accelerator, a personalized AI advisor who understands Matthew",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.75",
+        "top_p": "0.9"
+      },
+      "hash": "ce854bdb58d7ff1ef509f80972d7d4db"
+    },
+    "daily_micro_action:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are the Daily Micro-Action Generator, designed to break down big goals into specific m",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9"
+      },
+      "hash": "00c1b79259ce959d31e98e45e3ea5260"
+    },
+    "ai_career_strategist:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"\"\"You are the AI Career Strategist, specialized in positioning professionals with 2+ years o",
+      "parameters": {
+        "temperature": "0.7",
+        "top_p": "0.9",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "5436cd17e10f132f75a08a63ddacafa6"
+    },
+    "personal_finance_navigator:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Personal Finance Navigator, designed specifically for someone transitioning from",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.8"
+      },
+      "hash": "a6bd92f763f4f07dfe76687df9f714fb"
+    },
+    "home_sale_optimizer:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Home Sale Optimizer, an expert real estate advisor specializing in maximizing ho",
+      "parameters": {
+        "top_p": "0.85",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6"
+      },
+      "hash": "876dc56e46a67315fca71c9e33cccff1"
+    },
+    "humana_ai_advocate:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are the Humana AI Advocate model, specifically designed to help position someone as an A",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9"
+      },
+      "hash": "ac51edd167d20133574391b52463f1ee"
+    },
+    "optimized_decision_simplifier_v3:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are a decision synthesis specialist. Transform complex analyses into clear, prioritized ",
+      "parameters": {
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_k": "40",
+        "use_mmap": "true",
+        "num_batch": "512",
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_thread": "8",
+        "top_p": "0.9"
+      },
+      "hash": "5fea82a502ba52778332b2994ead4d72"
+    },
+    "optimized_action_prioritizer:latest": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": "SYSTEM \"You are an action planning specialist. Convert strategic insights into ranked, time-bound ta",
+      "parameters": {
+        "num_gpu": "1",
+        "temperature": "0.3",
+        "top_k": "40",
+        "top_p": "0.9",
+        "use_mmap": "true",
+        "num_thread": "8",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "num_batch": "512",
+        "num_ctx": "4096"
+      },
+      "hash": "5101e5fd1758fd10c2bfa98784977ea8"
+    },
+    "llama3.2:3b-instruct-fp16": {
+      "size": "6.4 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "system_prompt": null,
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "hash": "3d7583f3d815fc7d1d7d99f23e51ebd7"
+    },
+    "matthew_advisor_enhanced:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's personal advisor with complete knowledge of his situation:\n\nPERSONAL",
+      "parameters": {
+        "num_batch": "512",
+        "num_ctx": "32768",
+        "repeat_last_n": "64",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_k": "40",
+        "use_mmap": "true",
+        "num_gpu": "1",
+        "num_thread": "8",
+        "top_p": "0.9"
+      },
+      "hash": "f7ad5ac8a648b9b5a6f625d92e60126c"
+    },
+    "matthew_advisor:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are Matthew Scott's personal advisor with complete knowledge of his situation:\n\nPERSONAL",
+      "parameters": {
+        "num_ctx": "8192",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4"
+      },
+      "hash": "bafea1d59e8aa556cc2158c190fb11c0"
+    },
+    "enhanced_agent_fast_v6:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are enhanced_agent_fast_v6, a specialized AI assistant in the Mirador multi-agent orches",
+      "parameters": {
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4"
+      },
+      "hash": "d194ab94d69e153680b6de0f238b38b6"
+    },
+    "financial_planning_expert_v6:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are financial_planning_expert_v6, a specialized AI assistant in the Mirador multi-agent ",
+      "parameters": {
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "hash": "ddf9692ef543af5c111058643e52c19b"
+    },
+    "test_balanced_specialist:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"\nYou are a test specialist using the balanced base model.\nProvide concise, accurate response",
+      "parameters": {
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "500",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3"
+      },
+      "hash": "cc7a37dbbae24564d8ada706b48b098c"
+    },
+    "cross_model_synthesizer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Cross-Model Synthesizer for Mirador.\n\nMISSION: Identify patterns and insights ac",
+      "parameters": {
+        "num_predict": "1500",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.85"
+      },
+      "hash": "c2094e01924b311012b39e70566205c9"
+    },
+    "feedback_loop_optimizer_fixed:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Feedback Loop Optimizer for Mirador.\n\nMISSION: Analyze outputs and generate spec",
+      "parameters": {
+        "temperature": "0.3",
+        "top_p": "0.8",
+        "num_predict": "1500",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "d22ae842627938fbcb39be3812fd082f"
+    },
+    "guitar_tone_architect:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Guitar Tone Architect for Mirador.\n\nEXPERTISE:\n- Amp and effects settings for al",
+      "parameters": {
+        "temperature": "0.5",
+        "top_p": "0.85",
+        "num_predict": "1200",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "41fa0511786ca30a0ce5e1a2269fe4d5"
+    },
+    "music_career_timeline_strategist:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Music Career Timeline Strategist for Mirador.\n\nEXPERTISE:\n- Realistic timeline d",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.8",
+        "num_predict": "1500",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "64d5f090480906c7af01293678ffb210"
+    },
+    "performance_anxiety_coach:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Performance Anxiety Coach for Mirador.\n\nEXPERTISE:\n- Stage presence development\n",
+      "parameters": {
+        "temperature": "0.5",
+        "top_p": "0.85",
+        "num_predict": "1200",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "dbcab09ef82c5f5d1decb10710775c1e"
+    },
+    "father_daughter_music_mentor:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Father-Daughter Music Mentor for Mirador.\n\nMISSION: Create meaningful connection",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_predict": "1200"
+      },
+      "hash": "dddd5ecb478fc97200ae8cea0dda89c3"
+    },
+    "father_daughter_wisdom_guide:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Father-Daughter Wisdom Guide for Mirador.\n\nMISSION: Create meaningful learning e",
+      "parameters": {
+        "num_predict": "1200",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9"
+      },
+      "hash": "bb4b21e67e9e519321bcc5a115094a07"
+    },
+    "matthew_context_provider_optimized:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are Matthew's personal context provider, designed to understand his unique situation and",
+      "parameters": {
+        "temperature": "0.6",
+        "top_p": "0.85",
+        "num_ctx": "2048",
+        "num_gpu": "1",
+        "num_predict": "800",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "9e381408b54a75d2c7f68d20c96e5f92"
+    },
+    "financial_planning_expert_optimized:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are an expert financial planning specialist optimized for Louisville, Kentucky residents",
+      "parameters": {
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.9",
+        "num_ctx": "3072",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6"
+      },
+      "hash": "b4de5b19b30b35610948204fa0f2dd6f"
+    },
+    "enhanced_agent_enforcer_v2:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are an Enhanced Agent Enforcer v2 with meta-cognitive abilities and continuous learning ",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_predict": "2500",
+        "num_thread": "6",
+        "repeat_penalty": "1.05"
+      },
+      "hash": "8d4461b334e07c831815a3073344248d"
+    },
+    "mirador_system_specialist_v2:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Mirador System Specialist - a meta-model that understands the entire Mirador eco",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.05"
+      },
+      "hash": "bd0b53b80820577558d1a43d29952c6c"
+    },
+    "matthew_context_provider_v2:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are Matthew's Context Provider - a specialist model that deeply understands Matthew's pe",
+      "parameters": {
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6"
+      },
+      "hash": "e30545736481cdd58ead7e8bab41a151"
+    },
+    "opportunity_validator_v2:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Enhanced Opportunity Validator - identifying high-ROI opportunities with impleme",
+      "parameters": {
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200"
+      },
+      "hash": "72ce5fe6cd10b1b5a21d87c3a2d1f2d8"
+    },
+    "louisville_expert_v3:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are the Louisville Expert - providing rapid, accurate local intelligence for Jefferson C",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "c7d00236c9f2fd30ddb3faeeb0bef9ac"
+    },
+    "relationship_communication_specialist:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a specialist in navigating complex relationship communications with empathy and stra",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85"
+      },
+      "hash": "836cf5842f97919f281e4af3a4a35f95"
+    },
+    "matthews_linkedin_voice:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"\"\"You write LinkedIn posts in Matthew Scott's authentic voice.\n\nMATTHEW'S STYLE:\n- Direct an",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9",
+        "num_ctx": "16384"
+      },
+      "hash": "57e92c6eb4466d0f2b82d8bac544a7db"
+    },
+    "linkedin_thought_leader:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a LinkedIn content strategist who creates AUTHENTIC, conversational posts about AI a",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9"
+      },
+      "hash": "4bde48cfe3730095d232717368da5b67"
+    },
+    "enhanced_agent_builder:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"\"\"You are an enhancement specialist that BUILDS UPON previous analysis.\n\nCRITICAL RULES:\n1. ",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.85",
+        "num_ctx": "16384"
+      },
+      "hash": "f24813408d37b3bc9de894e76fc0b636"
+    },
+    "life_transition_coordinator:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a life transition strategist specializing in coordinating complex multi-domain life ",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "hash": "63b1534b5f9fd38f70ce306cf4d2dbcb"
+    },
+    "ai_content_strategist:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are an AI thought leadership content strategist specializing in transforming technical e",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9"
+      },
+      "hash": "853c494976af6b9bfc8c9e29c36786be"
+    },
+    "parenting_decision_support:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a family life strategist specializing in co-parenting optimization and child develop",
+      "parameters": {
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "hash": "cb0198cd449ebe436495178319d0fda4"
+    },
+    "real_estate_analyzer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a real estate investment analyst specializing in Louisville market conditions and ta",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "hash": "03e1cb64a4f5739e3f6781b7c41ed153"
+    },
+    "business_strategist_fast:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a business strategy specialist optimized for rapid, actionable analysis.\n\nFOCUS AREA",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "16384"
+      },
+      "hash": "d15f14246137101f33af45d5d1d096d9"
+    },
+    "health_wellness_optimizer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a health and wellness optimization specialist focused on busy professionals in Louis",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85"
+      },
+      "hash": "c04ac024cf59865e3b8015586276604c"
+    },
+    "productivity_optimizer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a time management and productivity optimization expert specializing in knowledge wor",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "hash": "884a0b71e81f97515359b6ef779db9e2"
+    },
+    "engagement_optimizer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a LinkedIn engagement optimization specialist focused on maximizing reach and intera",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9"
+      },
+      "hash": "3c5eb1a6f83a825c42a5f8d4fa0d516e"
+    },
+    "personal_brand_architect:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"\"\"You are a personal brand architect specializing in building distinctive consultant identit",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.75",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.1"
+      },
+      "hash": "d34a85583e9b11d61836bb9b77878834"
+    },
+    "sales_content_creator:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a sales enablement content specialist who transforms insights into revenue-generatin",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1300",
+        "num_thread": "6",
+        "repeat_penalty": "1.1"
+      },
+      "hash": "a74c3932154a7dff1a35d52694e4021a"
+    },
+    "content_strategist_pro:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a content strategy specialist focused on building consulting authority.\n\nSTRATEGIC C",
+      "parameters": {
+        "temperature": "0.7",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "834efca5694814a26f285236ba2c5ffa"
+    },
+    "digital_storyteller:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a master digital storyteller who transforms business insights into compelling narrat",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.9",
+        "top_p": "0.95",
+        "num_ctx": "16384"
+      },
+      "hash": "6cd7dd8d0ac0eeb71edb9b16a20ef1e7"
+    },
+    "linkedin_content_expert:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a LinkedIn content strategy expert specializing in thought leadership for tech consu",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9",
+        "num_ctx": "16384"
+      },
+      "hash": "f5c175a4e5861095a7d84c47c4b559be"
+    },
+    "opportunity_analyst:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are an expert opportunity analyst who evaluates business ideas for feasibility and profi",
+      "parameters": {
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "2000"
+      },
+      "hash": "6597896d5f8ecdd1d646fa8b084a6606"
+    },
+    "file_reviewer:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a technical documentation specialist with experience in open-source projects and ent",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "8192",
+        "num_thread": "8",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "a5a25609daf6dbc0144477e097e372ac"
+    },
+    "master_coder:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a senior software engineer with 15+ years of experience across multiple languages an",
+      "parameters": {
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8",
+        "num_ctx": "8192"
+      },
+      "hash": "6af4e73e2debc5705036cad89373c611"
+    },
+    "guitar_expert_precise:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a master guitarist specialized in technical death metal and advanced techniques. You",
+      "parameters": {
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "hash": "0c94812aab12e145419e15096a378cf5"
+    },
+    "llama3.2_balanced:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are a balanced assistant that provides comprehensive but concise responses across a wide",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9"
+      },
+      "hash": "fb7f76603e200222cf5bcf819dacc292"
+    },
+    "code_reviewer:latest": {
+      "size": "776 MB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd",
+      "system_prompt": "SYSTEM \"You are an expert code reviewer with years of experience at top tech companies. You analyze ",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "99",
+        "num_thread": "16",
+        "temperature": "0.3"
+      },
+      "hash": "7c84bae0634db63ca2dab3368be78d29"
+    },
+    "deepseek-coder:latest": {
+      "size": "776 MB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd",
+      "system_prompt": "SYSTEM You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepsee",
+      "parameters": {},
+      "hash": "adf4e2ed6004da88ef080e1578029c01"
+    },
+    "fast_agent_focused:latest": {
+      "size": "4.1 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435",
+      "system_prompt": "SYSTEM \"You are an expert assistant optimized for speed and efficiency. Your responses are:\n\n1. Conc",
+      "parameters": {
+        "num_ctx": "2048",
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "hash": "c544ede897655ce5856474a8a68b6c5b"
+    },
+    "mistral:latest": {
+      "size": "4.1 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435",
+      "system_prompt": null,
+      "parameters": {
+        "stop": "[/INST]"
+      },
+      "hash": "29f073e76f22adb8e0c3fb5d0de20d26"
+    },
+    "llama3.2:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": null,
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "hash": "50d140eb45be6330292f5f813dbf670a"
+    },
+    "fast_agent_ultimate:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are ProductivityPro, an expert task manager. \n\nFor ANY question about tasks, priorities,",
+      "parameters": {
+        "num_gpu": "1",
+        "num_thread": "4",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "4096"
+      },
+      "hash": "9a7081481527d7b0c4c6086131d69efe"
+    },
+    "fast_agent_llama:latest": {
+      "size": "2.0 GB",
+      "from": "FROM /Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "system_prompt": "SYSTEM \"You are TaskBot. When asked ANYTHING about tasks, priorities, or planning, you IMMEDIATELY r",
+      "parameters": {
+        "temperature": "0.5",
+        "top_p": "0.9",
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_thread": "4",
+        "stop": "<|eot_id|>"
+      },
+      "hash": "29caa74aeb6e64addf40a7ee00bdf8db"
+    }
+  },
+  "recommendations": [
+    {
+      "action": "remove_duplicates",
+      "keep": "llama3.2:3b",
+      "remove": [
+        "llama3.2:latest"
+      ]
+    },
+    {
+      "action": "consolidate_versions",
+      "family": "matthew_context_provider",
+      "versions": [
+        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v4_accurate:latest",
+        "matthew_context_provider_v4:latest",
+        "matthew_context_provider_v3:latest",
+        "matthew_context_provider_v2:latest"
+      ]
+    }
+  ],
+  "summary": {
+    "exact_duplicates": 1,
+    "near_duplicates": 70,
+    "storage_impact_gb": 2.0,
+    "potential_savings_percent": 0.8111879035659818
+  }
+}
