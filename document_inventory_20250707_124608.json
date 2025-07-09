@@ -1,0 +1,65 @@
+{
+  "csv_files": [
+    "/Users/matthewscott/Me/Checking/L&N Excel.csv",
+    "/Users/matthewscott/Me/Checking/US Bank Transactions.csv",
+    "/Users/matthewscott/Me/Checking/Republic Bank.csv",
+    "/Users/matthewscott/Me/Checking/1:1:2025-7:7:2025 Transactions Southwest.CSV",
+    "/Users/matthewscott/Me/Checking/1:1:25-7:7:25 Transactions.CSV",
+    "/Users/matthewscott/Me/Checking/1:1:2025-7:7:2025 Transactions United Explorer.CSV"
+  ],
+  "pdf_statements": [
+    "/Users/matthewscott/Me/Checking/20250321-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250421-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250121-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250621-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250521-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250221-statements-3709-.pdf",
+    "/Users/matthewscott/Me/Checking/20250116-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250616-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250220-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/20250516-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250319-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/20250216-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250618-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/20250316-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250416-statements-8063-.pdf",
+    "/Users/matthewscott/Me/Checking/20250519-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/20250417-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/20250121-statements-5457-.pdf",
+    "/Users/matthewscott/Me/Checking/7-6 Barclays.pdf",
+    "/Users/matthewscott/Me/Checking/June Barclays.pdf",
+    "/Users/matthewscott/Me/Checking/May Barclays.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-06-30.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-04-30.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-01-31.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-03-31.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-02-28.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/58763759_Bank Statement_2025-05-30.pdf"
+  ],
+  "apple_statements": [
+    "/Users/matthewscott/Me/Checking/Apple Card Statement - April 2025.pdf",
+    "/Users/matthewscott/Me/Checking/Apple Card Statement - March 2025.pdf",
+    "/Users/matthewscott/Me/Checking/Apple Card Statement - June 2025.pdf",
+    "/Users/matthewscott/Me/Checking/Apple Card Statement - January 2025.pdf",
+    "/Users/matthewscott/Me/Checking/Apple Card Statement - February 2025.pdf"
+  ],
+  "mortgage_statements": [
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-02-14.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-06-16.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-04-16.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-01-16.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-03-14.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/9165897_Mortgage Statement_2025-05-16.pdf"
+  ],
+  "tax_documents": [
+    "/Users/matthewscott/Me/Checking/Republic Bank All/7481_Tax - 1098_2025-01-13.pdf",
+    "/Users/matthewscott/Me/Checking/Republic Bank All/7481_Tax - 1098_2025-01-13_1.pdf"
+  ],
+  "investment_docs": [
+    "/Users/matthewscott/Me/Checking/_SummaryPlanDescription_HUMspd.pdf",
+    "/Users/matthewscott/Me/Checking/HUMSTKFD.pdf",
+    "/Users/matthewscott/Me/Checking/_SummaryPlanDescription_HUMspd.pdf",
+    "/Users/matthewscott/Me/Checking/Charles Schwab.rtf"
+  ],
+  "account_dashboards": []
+}

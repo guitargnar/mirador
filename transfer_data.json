@@ -1,0 +1,99 @@
+{
+  "current_school": {
+    "name": "Shelby Academy Elementary",
+    "grade": "2nd Grade",
+    "concerns": [
+      "Math proficiency: 6-9% (vs 30% state average)",
+      "Reading proficiency: 15-19% (vs 42% state average)",
+      "28% enrollment decline over 5 years",
+      "30% teacher loss over 5 years",
+      "Ranked #1158 out of 1,230 schools in KY"
+    ],
+    "transfer_status": "Active - can transfer anytime a seat opens"
+  },
+  "target_schools": {
+    "Greathouse/Shryock Traditional": {
+      "priority": "high",
+      "contact_info": "(502) 485-8295",
+      "notes": "Parents praise academic rigor and caring staff. 'Best experience ever' per parent review.",
+      "last_contacted": null,
+      "status": "monitoring"
+    },
+    "Norton Commons Elementary": {
+      "priority": "high",
+      "contact_info": "(502) 485-8388",
+      "notes": "4.5/5 GreatSchools rating. 'Couldn't be happier' per parent review.",
+      "last_contacted": null,
+      "status": "monitoring"
+    },
+    "Goshen Elementary": {
+      "priority": "high",
+      "contact_info": "(502) 485-8322",
+      "notes": "Strong parent satisfaction for individualized learning. 'We love it' - parent of 3-year student.",
+      "last_contacted": null,
+      "status": "monitoring"
+    },
+    "Anchorage Independent": {
+      "priority": "medium",
+      "contact_info": "(502) 245-1463",
+      "notes": "Top-rated but check district boundaries. A rating on Niche.",
+      "last_contacted": null,
+      "status": "monitoring"
+    }
+  },
+  "contacts": {
+    "JCPS School Choice Office": {
+      "phone": "(502) 485-6250",
+      "email": "jcpsschoolchoice@jefferson.kyschools.us",
+      "affiliation": "JCPS",
+      "role": "admin",
+      "notes": "Primary contact for all transfer questions. Office at 4309 Bishop Lane.",
+      "interactions": []
+    }
+  },
+  "resources": {},
+  "activity_log": [],
+  "reminders": [],
+  "action_items": [
+    {
+      "task": "Monitor JCPS portal daily at 7am for seat openings",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "task": "Join JCPS Parents Facebook group",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "task": "Schedule meeting with Shelby principal (week of July 15)",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "task": "Hire math tutor immediately",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "task": "Get daughter assessed at Sylvan Learning for documentation",
+      "priority": "medium",
+      "completed": false
+    },
+    {
+      "task": "Research and tour 2-3 private schools as backup",
+      "priority": "medium",
+      "completed": false
+    },
+    {
+      "task": "Call Office of School Choice weekly",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "task": "Document any anxiety about starting at Shelby",
+      "priority": "medium",
+      "completed": false
+    }
+  ]
+}
