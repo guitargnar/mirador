@@ -1,0 +1,122 @@
+# Chain Execution Results
+
+## Initial Prompt
+
+Create a detailed 7-day guitar practice routine for the coming week focusing on sweep picking, rhythm, and theory
+
+## Models Used
+
+1. guitar_expert_precise
+2. fast_agent_focused
+
+## Step 1: guitar_expert_precise
+
+Here's a 7-day practice routine focusing on sweep picking, rhythm, and theory:
+
+**Day 1: Sweep Picking Fundamentals**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Basic sweep picking pattern (e.g., 2-note sweep) with slow tempo (80 BPM)
+* Technique Focus:
+	+ Practice the basic sweep picking pattern on a single string or multiple strings, focusing on smooth transitions between notes.
+	+ Emphasize proper hand positioning, wrist angle, and finger placement.
+* Exercise Routine (20 minutes):
+	1. Sweep picking exercises: Start with 2-note sweep patterns on individual strings, then move to 3- and 4-note sweeps. Use a metronome to maintain tempo.
+	2. Alternate picking and sweep picking combinations: Intermix alternate picking and sweep picking to develop muscle memory and improve coordination.
+* Cool-down (5 minutes):
+	+ Review the basic sweep picking pattern and practice it slowly.
+
+**Day 2: Rhythm and Timing**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Basic rhythm playing with a metronome (e.g., quarter notes, eighth notes)
+* Technique Focus:
+	+ Practice playing along with a metronome to develop strong timing and rhythm.
+	+ Emphasize playing with a steady, consistent pulse.
+* Exercise Routine (20 minutes):
+	1. Rhythm exercises: Play along with a metronome, focusing on maintaining a steady tempo and accurate timing.
+	2. Time signatures and polyrhythms: Practice playing in different time signatures (e.g., 4/4, 3/4) and experimenting with polyrhythms.
+* Cool-down (5 minutes):
+	+ Review the importance of timing and rhythm in metal music.
+
+**Day 3: Theory - Scales and Modes**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Review basic scales (e.g., pentatonic, major) and modes.
+* Technique Focus:
+	+ Learn a new scale or mode and practice playing it cleanly on the fretboard.
+	+ Emphasize proper finger placement and hand positioning.
+* Exercise Routine (20 minutes):
+	1. Scale and mode exercises: Practice playing scales and modes in different positions on the fretboard.
+	2. Scale-based sweep picking: Use sweep picking to play scales or modes, focusing on smooth transitions between notes.
+* Cool-down (5 minutes):
+	+ Review the importance of scales and modes in metal music.
+
+**Day 4: Sweep Picking Variations**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Basic sweep picking pattern review
+* Technique Focus:
+	+ Practice variations on the basic sweep picking pattern, such as:
+		- Double sweep picking
+		- Triple sweep picking
+		- Sweep picking with alternate picking
+* Exercise Routine (20 minutes):
+	1. Variations: Practice the different sweep picking patterns and techniques.
+	2. Combination exercises: Combine sweep picking with other techniques (e.g., legato, tapping) to develop advanced skills.
+* Cool-down (5 minutes):
+	+ Review the importance of variation in metal music.
+
+**Day 5: Rhythm and Timing - More Complex**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Basic rhythm playing review
+* Technique Focus:
+	+ Practice more complex rhythms, such as:
+		- Time signatures with multiple subdivisions
+		- Polyrhythms with different time signatures
+* Exercise Routine (20 minutes):
+	1. Complex rhythms: Play along with a metronome, focusing on maintaining accurate timing and rhythm.
+	2. Improvisation: Use the complex rhythms to improvise over a backing track or in a solo.
+* Cool-down (5 minutes):
+	+ Review the importance of complexity in metal music.
+
+**Day 6: Theory - Chord Progressions**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Review basic chords (e.g., power chords, open chords)
+* Technique Focus:
+	+ Learn a new chord progression and practice playing it cleanly on the fretboard.
+	+ Emphasize proper finger placement and hand positioning.
+* Exercise Routine (20 minutes):
+	1. Chord progression exercises: Practice playing chord progressions in different keys and time signatures.
+	2. Chord-based sweep picking: Use sweep picking to play chord progressions, focusing on smooth transitions between notes.
+* Cool-down (5 minutes):
+	+ Review the importance of chord progressions in metal music.
+
+**Day 7: Putting it All Together**
+
+* Warm-up (10 minutes):
+	+ Finger stretches and warm-up exercises
+	+ Review all techniques practiced throughout the week
+* Technique Focus:
+	+ Practice a song or piece that incorporates multiple techniques learned throughout the week.
+	+ Emphasize playing with confidence, accuracy, and expression.
+* Exercise Routine (20 minutes):
+	1. Song practice: Play along with a backing track or in a solo, focusing on applying all techniques learned throughout the week.
+	2. Improvisation: Use the song to improvise over different sections or solos.
+* Cool-down (5 minutes):
+	+ Review the importance of practicing songs and improvising.
+
+Remember to stay focused, take breaks, and listen to your body. It's also essential to practice with a metronome and record yourself to track progress and identify areas for improvement.
+
+## Step 2: fast_agent_focused
+
+null
+

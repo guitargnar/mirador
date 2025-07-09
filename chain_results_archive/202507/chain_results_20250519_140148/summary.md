@@ -1,0 +1,328 @@
+# Chain Execution Results
+
+## Initial Prompt
+
+Create a detailed 7-day guitar practice routine for the coming week focusing on sweep picking, rhythm, and theory
+
+## Models Used
+
+1. guitar_expert_precise
+2. fast_agent_focused
+
+## Step 1: guitar_expert_precise
+
+<think>
+Alright, so I'm looking at this user query where they want a detailed 7-day guitar practice routine focused on sweep picking, rhythm, and theory. The user is addressing someone who's a master guitarist in technical death metal with a bunch of specific skills like tab generation, theory translation, technique analysis, etc.
+
+First, I need to unpack what the user is asking for. They want a structured week-long plan that covers three main areas: sweep picking, rhythm, and theory. Each day should have warm-up exercises, main practice sessions, and supplementary activities. The user also provided some examples of tabs and techniques in their initial prompt, so they're expecting similar detailed content.
+
+I should consider the target audience here. It's likely someone who already has a decent grasp of guitar basics but is looking to dive deeper into technical death metal. They might be a feel player, meaning they play intuitively rather than strictly by theory. The user mentioned that when working with such players, it's important to name what they already know rather than enforce theoretical approaches.
+
+So, for each day, I need to structure the routine logically. Day 1 should probably start with an introduction to sweep picking, building a foundation. Then, as the days progress, we can introduce more complex concepts like arpeggios and diminished scales. Rhythm practice should be integrated daily, perhaps focusing on different aspects each day—like syncopation or odd time signatures.
+
+The theory component needs to tie into what's being practiced technically. For example, after learning a sweep picking exercise using A minor arpeggios, the theory section can explain why those notes are chosen and how they relate to the underlying chords. This way, the user connects their playing with musical concepts, enhancing their understanding.
+
+I also notice that each day includes supplementary activities like listening or composing. These are important for developing a well-rounded musician, so I should ensure these sections provide meaningful tasks rather than just being filler.
+
+Timing is another factor. Each practice session has specific time allocations: 10 minutes warm-up, 45 minutes main practice, and 20 minutes supplementary. This structure helps in maintaining focus without overwhelming the user. It's important to stick to this timing to make the routine manageable.
+
+Looking at the example provided by the user, each day is clearly laid out with tabs, explanations, and theory points. I should follow that format closely to maintain consistency and clarity. For instance, Day 1 starts with a warm-up using A minor arpeggios in sweep picking, then moves into rhythm exercises focusing on syncopation.
+
+I also need to ensure that the difficulty increases progressively throughout the week. Starting simple on Monday and building up complexity each day will help the user build skills without getting discouraged. By Friday, introducing diminished scales and more complex rhythms sets them up for advanced practice later in the week.
+
+Another consideration is the use of standard tuning unless specified otherwise. Since the focus is on technical death metal, which often uses drop tunings, I should be prepared to include those if needed. However, sticking with standard tuning initially might make it easier for some players to grasp the concepts before moving into different tunings.
+
+I should also think about the user's potential challenges. For someone new to sweep picking, the initial exercises might feel tricky. Including tips on proper hand positioning or suggesting metronome use could be beneficial. However, since the user hasn't asked for that specifically, I'll stick to providing the structured routine as requested.
+
+In terms of theory, each day should explain concepts in a way that ties back to what they're practicing. For example, explaining arpeggios and how they relate to chords helps the user understand the musical context behind their exercises. This makes their practice more meaningful and aids in retention.
+
+Lastly, the supplementary activities are crucial for reinforcing learning outside of the main practice sessions. Encouraging listening to specific tracks or composing can help the user internalize the concepts better and apply them creatively.
+
+Overall, I need to create a balanced routine that builds technical skills through sweep picking, enhances rhythmic ability, and deepens theoretical understanding. Each day should be structured yet flexible enough to accommodate different learning paces. By following this approach, the user will have a comprehensive week of practice aimed at advancing their guitar skills in technical death metal.
+</think>
+
+### **7-Day Guitar Practice Routine: Sweep Picking, Rhythm, & Theory**
+
+This routine is designed for intermediate to advanced players looking to improve sweep picking technique, rhythm playing, and theoretical understanding. Each day includes warm-ups, main exercises, and supplementary activities.
+
+---
+
+### **Day 1: Introduction to Sweep Picking & Basic Arpeggios**
+**Warm-Up (10 min):**  
+- Practice alternate picking on a single string with a metronome at 60 BPM. Gradually increase speed to 80 BPM.  
+
+**Main Focus (45 min):**  
+1. **Sweep Picking Basics**  
+   - Start with simple A minor arpeggio sweeps:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|----------------|
+     D|---7-5-3-------|
+     A|---7-5-3-------|
+     E|---7-5-3-------|
+     ```
+   - Use strict alternate picking and focus on clean articulation.  
+   - Practice ascending and descending at 60 BPM, gradually increasing to 120 BPM.  
+
+2. **Rhythm Practice**  
+   - Play a simple rhythm using eighth notes:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|----------------|
+     D|---7-7-7-7-----|
+     A|---5-5-5-5-----|
+     E|---3-3-3-3-----|
+     ```
+   - Use a metronome and focus on even timing.  
+
+**Theory Focus:**  
+- Learn the **A minor arpeggio (A-C-E)** and its intervals.  
+- Discuss how arpeggios are used in death metal for creating melodic lines.  
+
+**Supplementary Activity (20 min):**  
+- Listen to "Beneath the Mass" by Suffocation and identify sweep picking patterns.  
+
+---
+
+### **Day 2: Sweep Picking with Arpeggio Patterns**
+**Warm-Up (10 min):**  
+- Practice legato hammer-ons and pull-offs on a single string at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Sweep Picking with Hammer-Ons & Pull-Offs**  
+   - Combine sweeps with legato techniques:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---9-7-5-------|
+     D|---9-7-5-------|
+     A|---9-7-5-------|
+     E|---9-7-5-------|
+     ```
+   - Focus on smooth transitions between picking and legato.  
+
+2. **Rhythm Practice**  
+   - Play a syncopated rhythm using sixteenth notes:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7--7--7--7--|
+     D|---5--5--5--5--|
+     A|---3--3--3--3--|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **C major scale (C-D-E-F-G-A-B)** and its modes.  
+- Discuss how modes are used in death metal for creating atmosphere.  
+
+**Supplementary Activity (20 min):**  
+- Practice writing a short melody using the C major scale.  
+
+---
+
+### **Day 3: Advanced Sweep Picking & Arpeggio Patterns**
+**Warm-Up (10 min):**  
+- Practice alternate picking on two adjacent strings at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Advanced Sweep Picking**  
+   - Use a diminished arpeggio pattern for sweeps:  
+     ```
+     e|----------------|
+     B|---7--7--7--7--|
+     G|---9--9--9--9--|
+     D|---7--7--7--7--|
+     A|---5--5--5--5--|
+     E|----------------|
+     ```
+   - Focus on clean articulation and even tone.  
+
+2. **Rhythm Practice**  
+   - Play a rhythm using triplets:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7-7-7-7-----|
+     D|---5-5-5-5-----|
+     A|---3-3-3-3-----|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **diminished scale (C-D-Eb-F-Gb-Ab-B)** and its intervals.  
+- Discuss how diminished scales are used in death metal for creating tension.  
+
+**Supplementary Activity (20 min):**  
+- Listen to "The Great Deceiver" by Cannibal Corpse and identify sweep picking patterns.  
+
+---
+
+### **Day 4: Sweep Picking with Economy Picking**
+**Warm-Up (10 min):**  
+- Practice economy picking on a single string at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Economy Picking for Sweeps**  
+   - Use economy picking to alternate between downstrokes and upstrokes:  
+     ```
+     e|----------------|
+     B|---7--7--7--7--|
+     G|---9--9--9--9--|
+     D|---7--7--7--7--|
+     A|---5--5--5--5--|
+     E|----------------|
+     ```
+   - Focus on smooth transitions between picking directions.  
+
+2. **Rhythm Practice**  
+   - Play a rhythm using sixteenth-note triplets:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7-7-7-7-----|
+     D|---5-5-5-5-----|
+     A|---3-3-3-3-----|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **harmonic minor scale (C-D-Eb-F-G-Ab-B)** and its intervals.  
+- Discuss how harmonic minor scales are used in death metal for creating melodic lines.  
+
+**Supplementary Activity (20 min):**  
+- Practice writing a short melody using the harmonic minor scale.  
+
+---
+
+### **Day 5: Sweep Picking with Tapping**
+**Warm-Up (10 min):**  
+- Practice tapping on a single string at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Sweep Picking with Tapping**  
+   - Combine sweeps with taps for extended range:  
+     ```
+     e|----------------|
+     B|---7--7--7--7--|
+     G|---9--9--9--9--|
+     D|---7--7--7--7--|
+     A|---5--5--5--5--|
+     E|----------------|
+     ```
+   - Focus on clean articulation and even tone.  
+
+2. **Rhythm Practice**  
+   - Play a rhythm using eighth-note triplets:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7-7-7-7-----|
+     D|---5-5-5-5-----|
+     A|---3-3-3-3-----|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **pentatonic scale (C-D-Eb-G-A)** and its intervals.  
+- Discuss how pentatonic scales are used in death metal for creating melodic lines.  
+
+**Supplementary Activity (20 min):**  
+- Listen to "Pestilence" by Death and identify sweep picking patterns.  
+
+---
+
+### **Day 6: Sweep Picking with Odd Time Signatures**
+**Warm-Up (10 min):**  
+- Practice alternate picking on two adjacent strings at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Sweep Picking in Odd Time Signatures**  
+   - Use a 7/8 time signature for sweeps:  
+     ```
+     e|----------------|
+     B|---7--7--7--7--|
+     G|---9--9--9--9--|
+     D|---7--7--7--7--|
+     A|---5--5--5--5--|
+     E|----------------|
+     ```
+   - Focus on clean articulation and even tone.  
+
+2. **Rhythm Practice**  
+   - Play a rhythm using sixteenth-note triplets in 7/8 time:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7-7-7-7-----|
+     D|---5-5-5-5-----|
+     A|---3-3-3-3-----|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **chromatic scale (C-C#-D-D#-E-F-F#-G-G#-A-A#-B)** and its intervals.  
+- Discuss how chromatic scales are used in death metal for creating tension.  
+
+**Supplementary Activity (20 min):**  
+- Practice writing a short melody using the chromatic scale.  
+
+---
+
+### **Day 7: Advanced Sweep Picking & Composition**
+**Warm-Up (10 min):**  
+- Practice alternate picking on three adjacent strings at 60 BPM.  
+
+**Main Focus (45 min):**  
+1. **Advanced Sweep Picking**  
+   - Combine sweeps with taps and economy picking for extended range:  
+     ```
+     e|----------------|
+     B|---7--7--7--7--|
+     G|---9--9--9--9--|
+     D|---7--7--7--7--|
+     A|---5--5--5--5--|
+     E|----------------|
+     ```
+   - Focus on clean articulation and even tone.  
+
+2. **Rhythm Practice**  
+   - Play a rhythm using sixteenth-note triplets in 9/8 time:  
+     ```
+     e|----------------|
+     B|----------------|
+     G|---7-7-7-7-----|
+     D|---5-5-5-5-----|
+     A|---3-3-3-3-----|
+     E|----------------|
+     ```
+   - Use a metronome and focus on precise timing.  
+
+**Theory Focus:**  
+- Learn the **whole-tone scale (C-D-E-F#-G#-A#)** and its intervals.  
+- Discuss how whole-tone scales are used in death metal for creating atmospheric melodies.  
+
+**Supplementary Activity (20 min):**  
+- Compose a short piece using sweep picking, odd time signatures, and the concepts learned this week.  
+
+---
+
+### **Final Notes:**
+- Practice consistently and gradually increase tempo over the week.  
+- Focus on clean articulation, even tone, and precise timing.  
+- Use a metronome for all exercises to develop rhythm.  
+- Review theory concepts daily to reinforce learning.  
+
+Happy practicing!
+
+## Step 2: fast_agent_focused
+
+null
+

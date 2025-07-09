@@ -1,0 +1,68 @@
+Based on the income amounts provided, let's continue with the simulated market analysis test for the Louisville, KY area.
+
+**Income Amounts Found:**
+
+1. $75,000 per year (annual salary)
+2. $50,000 (one-time gift from an aunt)
+3. No clear income amount found in the request
+
+**Cleaned and Converted Income Amounts:**
+
+1. $75,000 -> $75,000
+2. $50,000 -> $50,000
+3. No clear income amount found; clarification requested.
+
+**Response Structure:**
+
+Based on your specified income of $75,000 per year...
+
+To create a comprehensive budget framework for you, I'll consider the following factors:
+
+* Kentucky state income tax: 5% flat rate (2024)
+* Jefferson County property tax rates: approximately 0.91% average
+* Louisville median home price: $200,000-$250,000 (2024)
+
+Here's a suggested budget breakdown:
+
+1. Essential Expenses:
+	* Housing (mortgage/rent): 30%
+	* Utilities (electricity, water, gas): 5%
+	* Food and groceries: 15%
+	* Transportation (car payment, insurance, gas): 10%
+	* Minimum debt payments (credit cards, loans): 5%
+2. Savings and Debt Repayment:
+	* Emergency fund: 10% of income
+	* Retirement savings: 10% of income
+	* Debt repayment (above minimum payments): 5% of income
+3. Discretionary Spending:
+	* Entertainment (dining out, movies, hobbies): 5%
+	* Travel: 2%
+	* Personal spending (clothing, accessories, gadgets): 3%
+
+**Louisville-Specific Considerations:**
+
+* Take advantage of the city's vibrant cultural scene and outdoor activities to reduce entertainment costs.
+* Explore neighborhoods like NuLu, Highlands, or Old Louisville for affordable housing options.
+* Utilize public transportation (TARC) or bike-share programs to reduce transportation expenses.
+
+**Implementation Steps with Local Resources:**
+
+1. Review your budget regularly to ensure you're on track with savings and debt repayment goals.
+2. Consider using online resources like the Louisville Metro Government's budgeting tools or the JCPS website for educational materials on personal finance.
+3. Consult with a financial advisor or planner familiar with the local market to get personalized advice.
+
+**Additional Insights:**
+
+* The one-time gift of $50,000 could be considered as a lump sum investment or a down payment on a home.
+* With an annual income of $75,000, you may want to explore tax-advantaged retirement accounts such as a 401(k) or IRA.
+* Louisville has a growing startup scene, and the city offers various resources for entrepreneurs, including the Louisville Entrepreneur Center and the Kentucky Innovation Network.
+
+**Next Steps:**
+
+To further refine your budget framework, I'd like to ask:
+
+1. What are your primary financial goals (e.g., saving for a down payment, paying off debt, building an emergency fund)?
+2. Are there any specific expenses or categories you'd like to prioritize or allocate more resources to?
+3. Would you like me to simulate another scenario or provide more detailed guidance on creating a budget framework for the Louisville area?
+
+Please provide your responses, and I'll be happy to assist you further.

@@ -1,0 +1,1 @@
+Explain the most important AI model evaluation metrics (accuracy, precision, recall, F1-score) with practical examples and when to prioritize each metric.

@@ -1,0 +1,22 @@
+**DECISION:** To implement effective prompt engineering strategies that leverage patient-centered language, interdisciplinary collaboration, and real-world evidence to optimize AI-powered decision-making in healthcare.
+
+**OPTIONS:**
+
+1. **Patient-Centered Language**: Implement a comprehensive review of existing medical terminology and replace it with patient-centric terms, ensuring accurate and relevant results.
+2. **Interdisciplinary Collaboration**: Establish an interdisciplinary task force comprising clinicians, researchers, and patients to develop effective prompts that integrate multiple perspectives.
+3. **Real-World Evidence**: Integrate real-world evidence into prompts using machine learning algorithms to analyze and optimize RWE-based prompts.
+
+**RECOMMENDATION:** Option 1 - Patient-Centered Language
+- Improves accuracy by ensuring results are relevant to individual patient needs.
+- Enhances patient satisfaction through more personalized and empathetic responses.
+- Facilitates collaboration with patients and clinicians to refine prompts.
+
+**NEXT STEPS:**
+
+□ Conduct a thorough review of existing medical terminology (Weeks 1-4).
+□ Collaborate with patients and clinicians to identify key terms and phrases (Weeks 5-8).
+□ Integrate patient-centered language into new prompts (Weeks 9-12).
+
+**WATCH FOR:**
+⚠️ Insufficient patient input may lead to irrelevant or inaccurate results.
+⚠️ Failure to incorporate patient-centered language may result in decreased patient satisfaction.

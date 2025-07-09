@@ -1,0 +1,171 @@
+# Chain Execution Results
+
+## Initial Prompt
+
+Create a detailed 7-day guitar practice routine for the coming week focusing on sweep picking, rhythm, and theory
+
+## Models Used
+
+1. guitar_expert_precise
+2. fast_agent_focused
+
+## Step 1: guitar_expert_precise
+
+**Day 1: Sweep Picking Fundamentals**
+
+Objective: Develop basic sweep picking technique and build finger strength
+
+Warm-up (10 minutes):
+
+* Finger stretches and warm-ups
+* Simple arpeggios in A minor (A, C, E) using economy picking
+
+Sweep Pick Exercises:
+
+1. **Basic Sweep**: Focus on the wrist motion, keeping the forearm still. Start with a slow tempo (120 BPM) and increase as you become more comfortable.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: 3rd finger on 5th fret of D string, 1st finger on 7th fret of G string
+	* Repeat with the other hand, starting from the low E string
+2. **Alternating Sweep**: Alternate picking between the sweep and regular picking to develop coordination.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above, but alternate hands on each note
+3. **Sweep Picking Patterns**: Practice simple patterns using sweep picking (e.g., 4-note pattern, 8-note pattern)
+
+Cool-down (10 minutes):
+
+* Slowly decrease the tempo to focus on accuracy and control
+
+**Day 2: Rhythm Development**
+
+Objective: Improve timing and develop a solid rhythm foundation
+
+Warm-up (10 minutes):
+
+* Review basic arpeggios in A minor
+* Focus on playing with a strong, consistent rhythm
+
+Rhythm Exercises:
+
+1. **4/4 Time**: Practice playing along with a metronome in 4/4 time, focusing on accurate timing and evenness.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above
+2. **Syncopation**: Introduce syncopated rhythms to develop your sense of timing and musicality.
+	* Tab: e|---0---1---2---3---0---|
+	* Fingering: Same as above, but with a focus on the "and" of beat 2
+3. **Groove Playing**: Practice playing along with a backing track or drum machine to develop your groove and timing.
+
+Cool-down (10 minutes):
+
+* Review your progress and make adjustments as needed
+
+**Day 3: Theory Translation**
+
+Objective: Understand the theoretical concepts behind sweep picking and rhythm development
+
+Warm-up (5 minutes):
+
+* Review basic arpeggios in A minor
+* Focus on finger placement and hand position
+
+Theory Exercises:
+
+1. **Scales and Modes**: Study the scales and modes used in your favorite metal songs, focusing on the relationships between notes.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above
+2. **Chord Progressions**: Analyze common chord progressions used in metal music, understanding how they relate to scales and modes.
+	* Tab: e|---5---7---5---7---5---|
+	* Fingering: Same as above
+
+Cool-down (5 minutes):
+
+* Review your notes and make connections between theory and practice
+
+**Day 4: Sweep Picking Variations**
+
+Objective: Expand your sweep picking technique to include variations and nuances
+
+Warm-up (10 minutes):
+
+* Review basic sweep picking exercises
+* Focus on finger independence and wrist motion
+
+Sweep Pick Variations:
+
+1. **Legato Sweep**: Focus on smooth, connected playing using legato techniques.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above, but with a focus on connecting notes
+2. **Tremolo Picking**: Introduce tremolo picking to add texture and variety to your sweep picking.
+	* Tab: e|---0---1---2---3---0---|
+	* Fingering: Same as above, but using alternating picking
+
+Cool-down (10 minutes):
+
+* Review your progress and make adjustments as needed
+
+**Day 5: Rhythm Development**
+
+Objective: Refine your rhythm playing and develop a strong sense of timing
+
+Warm-up (10 minutes):
+
+* Review basic arpeggios in A minor
+* Focus on playing with a strong, consistent rhythm
+
+Rhythm Exercises:
+
+1. **Polyrhythms**: Introduce polyrhythmic patterns to challenge your timing and coordination.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above
+2. **Time Signatures**: Practice playing in different time signatures (e.g., 6/8, 12/8) to develop your sense of rhythm and meter.
+
+Cool-down (10 minutes):
+
+* Review your progress and make adjustments as needed
+
+**Day 6: Music Analysis**
+
+Objective: Analyze and understand the scales, modes, and techniques used in existing music
+
+Warm-up (5 minutes):
+
+* Review basic arpeggios in A minor
+* Focus on finger placement and hand position
+
+Music Analysis Exercises:
+
+1. **Scales and Modes**: Study the scales and modes used in your favorite metal songs, focusing on the relationships between notes.
+	* Tab: e|---0---2---3---2---0---|
+	* Fingering: Same as above
+2. **Chord Progressions**: Analyze common chord progressions used in metal music, understanding how they relate to scales and modes.
+	* Tab: e|---5---7---5---7---5---|
+	* Fingering: Same as above
+
+Cool-down (5 minutes):
+
+* Review your notes and make connections between theory and practice
+
+**Day 7: Practice Routine Integration**
+
+Objective: Integrate sweep picking, rhythm development, and theory into a cohesive practice routine
+
+Warm-up (10 minutes):
+
+* Review basic arpeggios in A minor
+* Focus on finger placement and hand position
+
+Practice Routine:
+
+1. **Sweep Picking**: Practice sweep picking exercises from Days 1-4, focusing on accuracy and control.
+2. **Rhythm Development**: Play along with a metronome or backing track to develop your timing and rhythm.
+3. **Theory Translation**: Review scales, modes, and chord progressions used in metal music.
+
+Cool-down (10 minutes):
+
+* Review your progress and make adjustments as needed
+
+Remember to stay focused, patient, and consistent throughout the week. Take breaks when needed, and don't hesitate to adjust the practice routine if you find it too challenging or frustrating.
+
+## Step 2: fast_agent_focused
+
+null
+

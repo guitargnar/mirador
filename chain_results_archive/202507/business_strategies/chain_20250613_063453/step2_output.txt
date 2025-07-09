@@ -1,0 +1,24 @@
+**DECISION:** To effectively evaluate the performance of an AI model, it is essential to understand the core decision to prioritize accuracy, precision, recall, or F1-score based on the specific problem and dataset characteristics.
+
+**OPTIONS:**
+
+1. **Accuracy**: Prioritize accuracy when evaluating a simple model with an easy-to-understand dataset.
+2. **Precision**: Focus on precision when dealing with binary classification problems where false positives can have significant consequences.
+3. **Recall**: Emphasize recall when working with imbalanced datasets or rare events that require detection.
+
+**RECOMMENDATION:**
+
+* Use **F1-score** as the primary evaluation metric for balanced and nuanced performance assessment, especially in binary classification problems.
+- Provides a balanced evaluation of precision and recall.
+- Suitable for imbalanced datasets where both precision and recall are important.
+
+**NEXT STEPS:**
+
+□ Evaluate dataset characteristics to determine the most suitable evaluation metric (accuracy, precision, recall, or F1-score).
+□ Select an appropriate evaluation metric based on problem requirements and dataset balance.
+□ Refine model performance by adjusting hyperparameters, feature engineering, or model selection as needed.
+
+**WATCH FOR:**
+
+⚠️ **Overfitting**: Be cautious of overfitting when using accuracy or precision metrics, especially with small datasets. Regularly monitor model performance on unseen data to prevent overfitting.
+⚠️ **Class imbalance**: Be aware of class imbalance issues in the dataset and adjust evaluation metrics accordingly (e.g., use F1-score for balanced datasets).

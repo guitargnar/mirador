@@ -1,0 +1,42 @@
+Previous output:
+**Situation Assessment**
+
+To identify system-guided opportunities, I'd like to understand your current goals and objectives within the Mirador ecosystem. Can you please provide more context about what you're trying to achieve? Are you looking to optimize financial planning, explore local resources, or perhaps streamline decision-making processes?
+
+Additionally, what specific areas of the Mirador system are you currently utilizing, and how are you interacting with the different specialist models?
+
+**Optimal Approach Recommendation**
+
+Based on your goals and current usage patterns, I recommend the following approach:
+
+1. **Leverage the financial_planning_expert_v6 model**: Utilize this model to gain insights into Louisville-specific financial planning and investment analysis.
+2. **Integrate with the louisville_expert_v2 model**: Combine the financial planning expert with local resources, regulations, and opportunities to create a comprehensive understanding of the area.
+3. **Enhance decision_simplifier**: Use this model to generate action plans and prioritize decisions based on your specific goals.
+
+**Specific Model Sequence Suggestion**
+
+Here's a suggested sequence for achieving your objectives:
+
+1. Run the financial_planning_expert_v6 model to gather initial insights into financial planning and investment analysis.
+2. Utilize the louisville_expert_v2 model to gather information on local resources, regulations, and opportunities.
+3. Feed the output from both models into the decision_simplifier model to generate a prioritized action plan.
+
+**Expected Outcome Prediction**
+
+By leveraging these specialist models in sequence, you can expect to:
+
+* Gain a deeper understanding of Louisville-specific financial planning and investment analysis
+* Identify relevant local resources, regulations, and opportunities
+* Receive actionable recommendations for achieving your objectives
+
+**Alternative Strategies (if applicable)**
+
+If you'd like to explore alternative approaches, consider the following options:
+
+* Utilize the enhanced_agent_enforcer model to create a more comprehensive strategy
+* Run the matthew_context_provider model to better understand your personal context and situation
+* Experiment with different prompt structures for the decision_simplifier model to optimize results
+
+Please let me know if you'd like to proceed with this approach or explore alternative strategies.
+
+Please build upon this information and provide further insights.

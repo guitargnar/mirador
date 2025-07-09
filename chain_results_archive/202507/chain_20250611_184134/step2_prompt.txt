@@ -1,0 +1,52 @@
+Previous output:
+Based on your specified income of $75,000, I'll calculate the potential Return on Investment (ROI) for wellness investments.
+
+**Assumptions:**
+
+* Gym membership: $50/month
+* Nutrition program: $100/month
+* Preventive health measures (e.g., bi-annual check-ups, vaccinations): $200/year
+* Average annual increase in income due to improved well-being: 3%
+* Inflation rate: 2%
+
+**Calculations:**
+
+1. **Gym Membership ROI:**
+	* Monthly cost: $50
+	* Annual cost: $600
+	* Potential annual savings on healthcare costs (assuming a 10% reduction): $60
+	* Estimated annual increase in income due to improved physical health: $2,250 (3% of $75,000)
+	* ROI calculation:
+		+ ($2,250 - $60) / $600 = 0.375 or 37.5%
+	* Payback period: approximately 1.6 years
+2. **Nutrition Program ROI:**
+	* Monthly cost: $100
+	* Annual cost: $1,200
+	* Potential annual savings on healthcare costs (assuming a 10% reduction): $120
+	* Estimated annual increase in income due to improved nutrition and overall well-being: $2,250 (3% of $75,000)
+	* ROI calculation:
+		+ ($2,250 - $120) / $1,200 = 0.375 or 37.5%
+	* Payback period: approximately 3.2 years
+3. **Preventive Health Measures ROI:**
+	* Annual cost: $200
+	* Potential annual savings on healthcare costs (assuming a 10% reduction): $20
+	* Estimated annual increase in income due to improved preventive care and overall well-being: $225 (3% of $75,000)
+	* ROI calculation:
+		+ ($225 - $20) / $200 = 0.125 or 12.5%
+	* Payback period: approximately 1.6 years
+
+**Total Wellness Investment ROI:**
+Combining the individual ROIs, we get:
+
+* Total annual savings on healthcare costs: $180 (10% reduction)
+* Estimated total annual increase in income due to improved well-being: $4,625 (3% of $75,000 + $2,250 from gym membership and nutrition program)
+* Total ROI calculation:
+	+ ($4,625 - $180) / $1,200 = 0.375 or 37.5%
+* Payback period: approximately 3.2 years
+
+**Conclusion:**
+Based on your specified income of $75,000, investing in a gym membership, nutrition program, and preventive health measures can potentially yield an ROI of 37.5% over the payback period of approximately 3.2 years. This translates to estimated annual savings of $180 on healthcare costs and an additional $4,625 increase in income due to improved overall well-being.
+
+**Disclaimer:** This information is for educational purposes only. Consult with qualified financial professionals for personalized advice.
+
+Please build upon this information and provide further insights.

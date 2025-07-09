@@ -1,0 +1,67 @@
+**Performance Test Chain**
+
+To simulate a real-world scenario, I'll guide you through a series of user requests that will test my income processing rules and provide comprehensive budget frameworks with Louisville-specific considerations.
+
+**Test Case 1: Clear Income Amount**
+
+User Request:
+"Hi, can you help me create a budget? My monthly income is $5,000."
+
+**Expected Outcome:**
+
+* Extracted Income Amount: $5000
+* Response: "Based on your specified income of $5,000..."
+* Comprehensive Budget Framework with Louisville-specific considerations
+* Implementation Steps with local resources
+* Professional consultation recommendations
+
+**Test Case 2: No Clear Income Amount**
+
+User Request:
+"Hi, can you help me create a budget? I make enough to get by."
+
+**Expected Outcome:**
+
+* Clarification Request: "I'm not sure what your income is. Can you please provide more information?"
+* Follow-up Question: "Do you have any specific financial goals or expenses you'd like to prioritize?"
+
+**Test Case 3: Income Amount with Unit (e.g., $1,000/month)**
+
+User Request:
+"Hi, can you help me create a budget? My monthly income is $1,000."
+
+**Expected Outcome:**
+
+* Extracted Income Amount: $1000
+* Response: "Based on your specified income of $1,000..."
+* Comprehensive Budget Framework with Louisville-specific considerations
+* Implementation Steps with local resources
+* Professional consultation recommendations
+
+**Test Case 4: Income Amount with Thousand Separator (e.g., $5,000.00)**
+
+User Request:
+"Hi, can you help me create a budget? My monthly income is $5,000.00."
+
+**Expected Outcome:**
+
+* Extracted Income Amount: $5000
+* Response: "Based on your specified income of $5,000..."
+* Comprehensive Budget Framework with Louisville-specific considerations
+* Implementation Steps with local resources
+* Professional consultation recommendations
+
+**Test Case 5: Income Amount with Kilometer Separator (e.g., $1,000k)**
+
+User Request:
+"Hi, can you help me create a budget? My monthly income is $1,000k."
+
+**Expected Outcome:**
+
+* Extracted Income Amount: $1000
+* Response: "Based on your specified income of $1,000..."
+* Comprehensive Budget Framework with Louisville-specific considerations
+* Implementation Steps with local resources
+* Professional consultation recommendations
+
+Let's proceed with the performance test chain. Please provide a user request, and I'll respond accordingly.

@@ -1,0 +1,348 @@
+<think>
+Alright, so I've been given this task to create a detailed 7-day guitar practice routine focusing on sweep picking, rhythm, and theory. Hmm, okay, let's break this down.
+
+First off, I know that sweep picking is a technique where you use one direction of the pick to play multiple notes on adjacent strings. It's commonly used in metal and shred guitar. So, for someone looking to improve their sweep picking, they'll need exercises that build muscle memory and control.
+
+Rhythm is another key component here. Rhythmic accuracy is crucial because even if you can sweep perfectly, without a solid rhythm foundation, it might not sound good. So, I should include some rhythm exercises each day to reinforce timing and feel.
+
+Theory-wise, understanding the scales and modes behind the licks will help in composing and improvising. So, integrating theory into practice makes sense. Maybe dedicating part of each day to learning or reviewing a scale or mode related to sweep picking.
+
+Now, structuring this over seven days. I think starting with basic exercises on Day 1, then gradually increasing difficulty each subsequent day. Each day should have a mix of technique work, rhythm exercises, and theory study.
+
+Wait, but the user also mentioned that when working with a feel player, focus on naming what they already know intuitively rather than enforcing theoretical approaches. So, maybe I need to balance between teaching theory and respecting their intuitive playing style.
+
+Also, the tablature should be in standard tuning unless specified otherwise, which is helpful because most of my experience is in standard tuning. However, since it's for death metal, perhaps considering drop tunings might be beneficial, but as per instructions, I'll stick to standard unless told otherwise.
+
+For each day, I can structure the practice into sections: Warm-up, Technique Focus (sweep picking), Rhythm Exercise, Theory Study, and a Cool Down. That way, it's comprehensive and covers all areas without overwhelming the player.
+
+On Day 1, starting with basic sweeps on two strings. Maybe using A minor arpeggios as they're commonly used in metal. Then moving to three strings for more complexity. Rhythm could involve syncopated patterns to challenge timing. Theory-wise, introducing the A minor scale and its modes would be a good start.
+
+Day 2 can build on Day 1 by increasing speed gradually. Maybe incorporating hammer-ons and pull-offs to add articulation. Rhythm exercises with sixteenth notes will help in maintaining consistent tempo. Theory could delve into diminished arpeggios as they're useful for creating tension.
+
+As the days progress, introducing more complex patterns, different scales like harmonic minor, and eventually moving towards composing short licks or solos by Day 7. Each day should also include a cool down to prevent injury and reinforce what was practiced.
+
+I need to ensure that each exercise is explained clearly, with tabs where necessary, and that the theory ties back into why certain scales or modes are used in sweep picking contexts. Also, timing indicators and technique markings in the tabs will be essential for clarity.
+
+Wait, but how much time should each section take? Maybe allocating 15-20 minutes per section, depending on the player's availability. It's important to balance intensity with rest to avoid burnout.
+
+Also, considering that sweep picking can be physically demanding, proper warm-up and cool down are crucial. Maybe suggesting some finger stretches or light exercises before diving into intense sweeps.
+
+I should also include tips for practice efficiency, like using a metronome from Day 1 to build good habits, starting slow and increasing speed gradually, and focusing on clean execution rather than just speed.
+
+In summary, the routine needs to be structured, progressive, and cover all three areas: sweep picking technique, rhythmic accuracy, and theoretical understanding. Each day should build on the previous one, introducing new challenges while reinforcing foundational skills.
+</think>
+
+### Day 1: Introduction to Sweep Picking & Basic Rhythms
+
+**Warm-Up (5-10 minutes):**
+- Start with finger stretches and light exercises to get your fingers moving.
+
+**Technique Focus - Basic Sweeps (20 minutes):**
+- **Exercise 1:** Simple two-string sweeps using A minor arpeggios.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Use alternate picking, down-up for each string. Start slow and gradually increase speed.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a basic rhythm with syncopated patterns.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Use a metronome, focusing on maintaining consistent timing.
+
+**Theory Study (15 minutes):**
+- Learn the A minor scale and its modes.
+  ```
+  e|---0---2---3---|
+  B|---0---2---3---|
+  G|---0---2---3---|
+  D|---0---2---3---|
+  A|---0---2---3---|
+  E|---0---2---3---|
+  ```
+  - Practice the scale in thirds and arpeggios.
+
+**Cool Down (5 minutes):**
+- Stretch fingers and review the day's exercises.
+
+### Day 2: Building Speed & Rhythmic Complexity
+
+**Warm-Up (5-10 minutes):**
+- Continue with finger stretches and light exercises.
+
+**Technique Focus - Increasing Speed (20 minutes):**
+- **Exercise 2:** Three-string sweeps using A minor arpeggios.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Incorporate hammer-ons and pull-offs for articulation.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a rhythm with sixteenth notes.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Focus on maintaining a steady tempo.
+
+**Theory Study (15 minutes):**
+- Explore diminished arpeggios.
+  ```
+  e|---0---2---4---|
+  B|---0---2---4---|
+  G|---0---2---4---|
+  D|---0---2---4---|
+  A|---0---2---4---|
+  E|---0---2---4---|
+  ```
+  - Practice in different keys.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Day 3: Advanced Sweep Patterns & Rhythmic Precision
+
+**Warm-Up (5-10 minutes):**
+- Finger stretches and light exercises.
+
+**Technique Focus - Advanced Sweeps (20 minutes):**
+- **Exercise 3:** Four-string sweeps using A harmonic minor.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Focus on clean execution and speed.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a complex rhythm with syncopation.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Use a metronome to maintain timing.
+
+**Theory Study (15 minutes):**
+- Learn the harmonic minor scale.
+  ```
+  e|---0---2---3---|
+  B|---0---2---3---|
+  G|---0---2---3---|
+  D|---0---2---3---|
+  A|---0---2---3---|
+  E|---0---2---3---|
+  ```
+  - Practice in different modes.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Day 4: Sweep Picking Etudes & Rhythmic Grooves
+
+**Warm-Up (5-10 minutes):**
+- Finger stretches and light exercises.
+
+**Technique Focus - Etude Practice (20 minutes):**
+- **Exercise 4:** Create a short etude using A harmonic minor.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Focus on musicality and expression.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a groove with rhythmic variations.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Experiment with different feels.
+
+**Theory Study (15 minutes):**
+- Review diminished and harmonic minor concepts.
+  ```
+  e|---0---2---4---|
+  B|---0---2---4---|
+  G|---0---2---4---|
+  D|---0---2---4---|
+  A|---0---2---4---|
+  E|---0---2---4---|
+  ```
+  - Apply to compositions.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Day 5: Sweep Picking with Arpeggios & Rhythmic Nuances
+
+**Warm-Up (5-10 minutes):**
+- Finger stretches and light exercises.
+
+**Technique Focus - Arpeggio Sweeps (20 minutes):**
+- **Exercise 5:** Use E diminished arpeggios.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Incorporate legato and hybrid picking.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a rhythm with nuanced timing.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Focus on feel and dynamics.
+
+**Theory Study (15 minutes):**
+- Explore arpeggio inversions.
+  ```
+  e|---0---2---4---|
+  B|---0---2---4---|
+  G|---0---2---4---|
+  D|---0---2---4---|
+  A|---0---2---4---|
+  E|---0---2---4---|
+  ```
+  - Practice in different keys.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Day 6: Advanced Sweep Licks & Rhythmic Improvisation
+
+**Warm-Up (5-10 minutes):**
+- Finger stretches and light exercises.
+
+**Technique Focus - Advanced Licks (20 minutes):**
+- **Exercise 6:** Create advanced licks using A harmonic minor.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Focus on speed and articulation.
+
+**Rhythm Exercise (15 minutes):**
+- Practice rhythmic improvisation.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Experiment with different rhythmic patterns.
+
+**Theory Study (15 minutes):**
+- Review harmonic minor and diminished concepts.
+  ```
+  e|---0---2---4---|
+  B|---0---2---4---|
+  G|---0---2---4---|
+  D|---0---2---4---|
+  A|---0---2---4---|
+  E|---0---2---4---|
+  ```
+  - Apply to compositions.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Day 7: Final Review & Composition
+
+**Warm-Up (5-10 minutes):**
+- Finger stretches and light exercises.
+
+**Technique Focus - Final Review (20 minutes):**
+- **Exercise 7:** Combine all sweep techniques into a short solo.
+  ```
+  e|----------------|
+  B|---7----5-------|
+  G|---7----5-------|
+  D|---7----5-------|
+  A|---5----3-------|
+  E|----------------|
+  ```
+  - Focus on musicality and expression.
+
+**Rhythm Exercise (15 minutes):**
+- Practice a complex rhythm with syncopation.
+  ```
+  e|---0---0---0---|
+  B|---0---0---0---|
+  G|---0---0---0---|
+  D|---0---0---0---|
+  A|---2---2---2---|
+  E|---3---3---3---|
+  ```
+  - Maintain steady timing.
+
+**Theory Study (15 minutes):**
+- Review all scales and modes covered during the week.
+  ```
+  e|---0---2---4---|
+  B|---0---2---4---|
+  G|---0---2---4---|
+  D|---0---2---4---|
+  A|---0---2---4---|
+  E|---0---2---4---|
+  ```
+  - Apply to compositions.
+
+**Cool Down (5 minutes):**
+- Stretch and review exercises.
+
+### Additional Tips:
+- **Metronome Use:** Start slow, gradually increase speed.
+- **Technique Focus:** Emphasize clean execution over speed.
+- **Practice Efficiency:** Break sessions into manageable chunks with rest periods.
+
+This routine is designed to progressively build your sweep picking skills while reinforcing rhythmic accuracy and theoretical understanding. Adjust the difficulty and duration based on your progress and comfort level.

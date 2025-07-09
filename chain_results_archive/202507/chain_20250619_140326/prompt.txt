@@ -1,0 +1,1 @@
+Write a technical deep-dive on 'Multi-Agent AI Orchestration Patterns That Actually Work in Production' showcasing my experience building ZIGGY and reflexia-model-manager, with code examples and architecture diagrams

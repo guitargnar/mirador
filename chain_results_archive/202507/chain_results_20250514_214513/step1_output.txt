@@ -1,0 +1,179 @@
+<think>
+Alright, the user is asking for a daily guitar practice routine focused on sweep picking. They mentioned they're into technical death metal, so I should keep it intense and relevant.
+
+First, I need to break down what sweep picking entails. It's about moving the pick across multiple strings smoothly, often used in arpeggios. So, starting with basic arpeggio shapes makes sense. Maybe start with a simple triad like A major on the lower strings.
+
+I should structure the routine progressively. Start with single-string exercises to build muscle memory and then move to two strings before tackling full sweeps. Including different pick directions is important for versatility.
+
+Timing indicators are crucial, so I'll use 16th notes at around 80 BPM initially, increasing as they get comfortable. Technique markings like 'r' for reverse will help clarify the direction changes.
+
+Including common death metal arpeggios, like A minor and E diminished, adds practicality. Then, moving to more complex patterns with tap sweeps or legato will challenge them further.
+
+I should also add a section on dynamics and control because sweep picking can be tricky at different tempos. Maybe include exercises that vary in speed to build control.
+
+Ending the routine with a breakdown of common death metal arpeggios ties it all together, showing how these techniques apply to real music. I'll make sure each part builds on the previous one, ensuring steady progress without overwhelming them.
+</think>
+
+Here’s a structured daily practice routine for developing and improving sweep picking technique. This routine is designed to build precision, speed, and control while incorporating both foundational exercises and more advanced patterns.
+
+---
+
+### **Daily Sweep Picking Practice Routine**
+
+#### **1. Warm-Up (5-10 minutes)**
+Start with simple exercises to loosen up your picking hand and prepare for the workout ahead.
+
+**Exercise 1: Single String Alternate Picking**
+- Focus on clean, controlled alternate picking.
+- Use a metronome at 60 BPM, gradually increasing to 80 BPM.
+```
+e|-------------------|
+B|-------------------|
+G|-------------------|
+D|-------------------|
+A|-------------------|
+E|--1-2-3-4-1-2-3-4--|
+```
+
+**Exercise 2: Two String Alternating Picking**
+- Alternate between two adjacent strings, focusing on pick control and string muting.
+```
+e|-------------------|
+B|-------------------|
+G|-------------------|
+D|-------------------|
+A|--1-2-1-2-1-2-1-2--|
+E|--2-1-2-1-2-1-2-1--|
+```
+
+---
+
+#### **2. Basic Sweep Arpeggios (15 minutes)**
+Work on basic sweep arpeggio shapes to build foundational technique.
+
+**Exercise 3: A Major Arpeggio (Ascending/Descending)**
+- Start with a simple triad shape.
+- Use strict alternate picking for the first string, then sweep across the remaining strings.
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+**Exercise 4: A Minor Arpeggio (Descending/Ascending)**
+- Focus on clean string muting and pick control.
+```
+e|-------------------|
+B|-------------------|
+G|---------6-8-9-----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+**Exercise 5: E Diminished Arpeggio (Alternate Directions)**
+- Alternate between ascending and descending sweeps.
+```
+e|-------------------|
+B|-------------------|
+G|---------6-8-9-----|
+D|-----4-6-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+---
+
+#### **3. Advanced Sweep Patterns (20 minutes)**
+Incorporate more complex patterns and techniques like reverse sweeps, tap sweeps, and legato phrasing.
+
+**Exercise 6: Reverse Sweep Arpeggio**
+- Start with a descending sweep on the top three strings, then ascend back up.
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+**Exercise 7: Tap Sweep Arpeggio**
+- Combine tapping and sweeping for a more technical sound.
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+**Exercise 8: Legato Sweep Pattern**
+- Use hammer-ons and pull-offs to create a smoother legato sound.
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+---
+
+#### **4. Dynamics and Control (10 minutes)**
+Work on controlling dynamics, articulation, and timing.
+
+**Exercise 9: Dynamic Sweep Arpeggio**
+- Play the same arpeggio shape at different volumes (soft, medium, loud).
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+**Exercise 10: Timing Challenge**
+- Use a metronome to practice sweeping at uneven tempos (e.g., dotted rhythms or syncopated patterns).
+```
+e|-------------------|
+B|-------------------|
+G|---------7-9-10----|
+D|-----5-7-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+---
+
+#### **5. Breakdown of Common Death Metal Arpeggios (Optional, 10 minutes)**
+Analyze and practice common death metal arpeggio shapes to apply your sweep picking skills to real music.
+
+**Example: A Minor Diminished Arpeggio**
+- Used frequently in technical death metal.
+```
+e|-------------------|
+B|-------------------|
+G|---------6-8-9-----|
+D|-----4-6-----------|
+A|--3---------------|
+E|-------------------|
+```
+
+---
+
+### **Additional Tips for Sweep Picking Success**
+1. **Use a Metronome**: Start slow (around 80 BPM) and gradually increase the tempo as you master each exercise.
+2. **Focus on Cleanliness**: Ensure every note is clear and articulate, especially when transitioning between strings.
+3. **Practice Both Hands**: While sweep picking is pick-hand dominant, your fretting hand must also be precise for clean legato phrasing.
+4. **Incorporate Tap and Legato Techniques**: Combine sweeping with tapping or legato phrasing to create more complex and musical patterns.
+
+---
+
+This routine will help you build foundational sweep picking technique while challenging you with advanced patterns. Stick to it consistently, and you’ll see significant improvement in your technical death metal playing!

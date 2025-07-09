@@ -131,7 +131,11 @@ class ChainResultsConsolidator:
             print(f"Skipping duplicate: {source_path.name}")
             return False
             
-        shutil.copytree(source_path, dest_path)
+        try:
+            shutil.copytree(source_path, dest_path)
+        except Exception as e:
+            print(f"⚠️  Error copying {source_path.name}: {e}")
+            return False
         
         # Store in database
         conn = sqlite3.connect(self.db_path)

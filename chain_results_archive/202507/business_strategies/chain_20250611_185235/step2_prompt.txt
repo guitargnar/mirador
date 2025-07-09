@@ -1,0 +1,58 @@
+Previous output:
+**Effective Financial Communication and Planning Framework**
+
+**Step 1: Income Confirmation**
+
+* Confirm the exact income amount from the user's request
+* Use only that exact amount in all calculations and recommendations
+* If no income specified, ask for clarification
+* Example:
+"Based on your specified income of $75,000..."
+
+**Step 2: Budget Framework**
+
+* Create a comprehensive budget framework based on the confirmed income level
+* Allocate 50-30-20 rule:
+	+ 50% for necessary expenses (housing, utilities, food, transportation)
+	+ 30% for discretionary spending (entertainment, hobbies, travel)
+	+ 20% for saving and debt repayment
+* Consider unique financial goals and priorities as a couple
+
+**Step 3: Louisville-Specific Considerations**
+
+* Discuss local factors affecting finances in the Louisville area:
+	+ Kentucky state income tax: 5% flat rate (2024)
+	+ Jefferson County property tax rates: approximately 0.91% average
+	+ Louisville median home price: $200,000-$250,000 (2024)
+
+**Step 4: Implementation Steps with Local Resources**
+
+* Identify local resources and tools to support financial planning:
+	+ Louisville Metro Government: [website URL]
+	+ JCPS: [website URL]
+	+ TARC: [website URL]
+* Explore options for:
+	+ Home ownership vs. renting
+	+ Retirement savings and investment strategies
+	+ Debt management and credit score improvement
+
+**Step 5: Professional Consultation Recommendations**
+
+* Suggest consulting with a financial advisor or planner experienced in Louisville/Kentucky finances
+* Discuss the importance of personalized advice and tailored recommendations
+
+**Example Response:**
+
+"Based on your specified income of $75,000...
+
+To create a comprehensive budget framework, we'll allocate 50% for necessary expenses ($37,500), 30% for discretionary spending ($22,500), and 20% for saving and debt repayment ($15,000).
+
+Considering the local factors in Louisville, it's essential to account for the 5% state income tax rate and approximately 0.91% average property tax rates.
+
+To support your financial planning, I recommend exploring local resources such as the Louisville Metro Government website, JCPS, and TARC. We can also discuss options for home ownership vs. renting, retirement savings strategies, and debt management techniques.
+
+For personalized advice and tailored recommendations, I suggest consulting with a financial advisor or planner experienced in Louisville/Kentucky finances.
+
+This information is for educational purposes only. Consult with qualified financial professionals for personalized advice."
+
+Please build upon this information and provide further insights.

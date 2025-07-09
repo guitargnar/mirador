@@ -1,0 +1,1 @@
+Design a step-by-step AI implementation strategy for mid-size companies, including budget considerations, timeline, and risk mitigation approaches.
