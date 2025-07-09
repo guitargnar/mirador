@@ -1,0 +1,1401 @@
+{
+  "timestamp": "2025-07-09 16:35:52",
+  "total_models": 74,
+  "models": [
+    {
+      "name": "llama3.2:3b",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "modified": "30 hours ago"
+    },
+    {
+      "name": "matthew_context_provider_v5_complete:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "matthew_context_provider_v4_accurate:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "matthew_context_provider_v4:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "creative_catalyst:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "practical_implementer:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_predict": "2048",
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "universal_strategy_architect:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "num_thread": "8",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.95",
+        "num_ctx": "8192",
+        "num_predict": "2048"
+      },
+      "modified": "2 days ago"
+    },
+    {
+      "name": "humana_innovation_catalyst:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "8192",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "5 days ago"
+    },
+    {
+      "name": "matthew_context_provider_v3:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "800",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.9"
+      },
+      "modified": "5 days ago"
+    },
+    {
+      "name": "ai_leadership_strategist:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.9",
+        "num_ctx": "8192",
+        "repeat_penalty": "1.05"
+      },
+      "modified": "5 days ago"
+    },
+    {
+      "name": "enhanced_agent_enforcer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_predict": "1300",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "5 days ago"
+    },
+    {
+      "name": "solution_architect:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "8192"
+      },
+      "modified": "5 days ago"
+    },
+    {
+      "name": "humana_politics_navigator:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.85"
+      },
+      "modified": "7 days ago"
+    },
+    {
+      "name": "advocates_meeting_optimizer_v2:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.65",
+        "top_p": "0.85"
+      },
+      "modified": "7 days ago"
+    },
+    {
+      "name": "matthews_strategic_accelerator_v2:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.75",
+        "top_p": "0.9"
+      },
+      "modified": "7 days ago"
+    },
+    {
+      "name": "advocates_meeting_optimizer:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "action_crystallizer:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.8"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "matthews_strategic_accelerator:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.75",
+        "top_p": "0.9"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "daily_micro_action:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "ai_career_strategist:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "top_p": "0.9",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "personal_finance_navigator:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.8"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "home_sale_optimizer:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "humana_ai_advocate:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "top_p": "0.9",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7"
+      },
+      "modified": "9 days ago"
+    },
+    {
+      "name": "llama3.2:3b-instruct-fp16",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "optimized_action_prioritizer:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "num_batch": "512",
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_k": "40",
+        "top_p": "0.9",
+        "repeat_penalty": "1.1",
+        "use_mmap": "true"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "optimized_decision_simplifier_v3:latest",
+      "size": "6.4 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+      "parameters": {
+        "top_p": "0.9",
+        "num_batch": "512",
+        "num_thread": "8",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "use_mmap": "true",
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "temperature": "0.3",
+        "top_k": "40"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "matthew_advisor_enhanced:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "top_p": "0.9",
+        "use_mmap": "true",
+        "num_batch": "512",
+        "num_gpu": "1",
+        "num_thread": "8",
+        "repeat_last_n": "64",
+        "repeat_penalty": "1.1",
+        "top_k": "40",
+        "num_ctx": "32768",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "matthew_advisor:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "8192",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "enhanced_agent_fast_v6:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "financial_planning_expert_v6:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "2 weeks ago"
+    },
+    {
+      "name": "test_balanced_specialist:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "500",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.9"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "cross_model_synthesizer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "top_p": "0.85",
+        "num_predict": "1500",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "feedback_loop_optimizer_fixed:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1500",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "guitar_tone_architect:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.85"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "music_career_timeline_strategist:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1500",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "performance_anxiety_coach:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.85"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "father_daughter_music_mentor:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "father_daughter_wisdom_guide:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "financial_planning_expert_optimized:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "3072",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.9"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "matthew_context_provider_optimized:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85",
+        "num_ctx": "2048",
+        "num_gpu": "1",
+        "num_predict": "800",
+        "num_thread": "6",
+        "repeat_penalty": "1.05"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "enhanced_agent_enforcer_v2:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "2500",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "4096"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "mirador_system_specialist_v2:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "matthew_context_provider_v2:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1500",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "opportunity_validator_v2:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.05"
+      },
+      "modified": "3 weeks ago"
+    },
+    {
+      "name": "louisville_expert_v3:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "relationship_communication_specialist:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "matthews_linkedin_voice:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "linkedin_thought_leader:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.9",
+        "num_ctx": "16384"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "enhanced_agent_builder:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "life_transition_coordinator:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "ai_content_strategist:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.7",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "parenting_decision_support:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "real_estate_analyzer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "business_strategist_fast:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "health_wellness_optimizer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "productivity_optimizer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.3",
+        "top_p": "0.8"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "engagement_optimizer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.8",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.05",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "personal_brand_architect:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.75",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "sales_content_creator:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1300",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.7"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "content_strategist_pro:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.7",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1000",
+        "num_thread": "6",
+        "repeat_penalty": "1.1"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "digital_storyteller:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.9",
+        "top_p": "0.95",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1500",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "linkedin_content_expert:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>",
+        "temperature": "0.8",
+        "top_p": "0.9",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "1200",
+        "num_thread": "6",
+        "repeat_penalty": "1.05"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "opportunity_analyst:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_predict": "2000",
+        "num_thread": "6",
+        "repeat_penalty": "1.1",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.85"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "master_coder:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.8"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "guitar_expert_precise:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "temperature": "0.4",
+        "top_p": "0.85",
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "8",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "llama3.2_balanced:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "1",
+        "num_thread": "6",
+        "stop": "<|eot_id|>",
+        "temperature": "0.6",
+        "top_p": "0.9"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "file_reviewer:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "8192",
+        "num_thread": "8",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "deepseek-coder:latest",
+      "size": "776 MB",
+      "llm_family": "Llama",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd",
+      "parameters": {},
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "code_reviewer:latest",
+      "size": "776 MB",
+      "llm_family": "Llama",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd",
+      "parameters": {
+        "num_ctx": "16384",
+        "num_gpu": "99",
+        "num_thread": "16",
+        "temperature": "0.3"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "fast_agent_focused:latest",
+      "size": "4.1 GB",
+      "llm_family": "Llama",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435",
+      "parameters": {
+        "temperature": "0.3",
+        "top_p": "0.8",
+        "num_ctx": "2048",
+        "num_thread": "8",
+        "stop": "<|eot_id|>"
+      },
+      "modified": "4 weeks ago"
+    },
+    {
+      "name": "mistral:latest",
+      "size": "4.1 GB",
+      "llm_family": "Llama",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435",
+      "parameters": {
+        "stop": "[/INST]"
+      },
+      "modified": "5 weeks ago"
+    },
+    {
+      "name": "llama3.2:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "stop": "<|eot_id|>"
+      },
+      "modified": "5 weeks ago"
+    },
+    {
+      "name": "fast_agent_ultimate:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_thread": "4",
+        "stop": "<|eot_id|>",
+        "temperature": "0.4",
+        "top_p": "0.85"
+      },
+      "modified": "5 weeks ago"
+    },
+    {
+      "name": "fast_agent_llama:latest",
+      "size": "2.0 GB",
+      "llm_family": "Llama 3.2",
+      "base_model": "/Users/matthewscott/.ollama/models/blobs/sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+      "parameters": {
+        "num_ctx": "4096",
+        "num_gpu": "1",
+        "num_thread": "4",
+        "stop": "<|eot_id|>",
+        "temperature": "0.5",
+        "top_p": "0.9"
+      },
+      "modified": "5 weeks ago"
+    }
+  ],
+  "summary_by_family": {
+    "Llama 3.2": {
+      "count": 70,
+      "models": [
+        {
+          "name": "llama3.2:3b",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "matthew_context_provider_v5_complete:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthew_context_provider_v4_accurate:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthew_context_provider_v4:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "creative_catalyst:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "practical_implementer:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "universal_strategy_architect:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "humana_innovation_catalyst:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthew_context_provider_v3:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "ai_leadership_strategist:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "enhanced_agent_enforcer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "solution_architect:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "humana_politics_navigator:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "advocates_meeting_optimizer_v2:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthews_strategic_accelerator_v2:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "advocates_meeting_optimizer:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "action_crystallizer:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthews_strategic_accelerator:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "daily_micro_action:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "ai_career_strategist:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "personal_finance_navigator:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "home_sale_optimizer:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "humana_ai_advocate:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "llama3.2:3b-instruct-fp16",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "optimized_action_prioritizer:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "optimized_decision_simplifier_v3:latest",
+          "size": "6.4 GB"
+        },
+        {
+          "name": "matthew_advisor_enhanced:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "matthew_advisor:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "enhanced_agent_fast_v6:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "financial_planning_expert_v6:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "test_balanced_specialist:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "cross_model_synthesizer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "feedback_loop_optimizer_fixed:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "guitar_tone_architect:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "music_career_timeline_strategist:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "performance_anxiety_coach:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "father_daughter_music_mentor:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "father_daughter_wisdom_guide:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "financial_planning_expert_optimized:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "matthew_context_provider_optimized:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "enhanced_agent_enforcer_v2:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "mirador_system_specialist_v2:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "matthew_context_provider_v2:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "opportunity_validator_v2:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "louisville_expert_v3:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "relationship_communication_specialist:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "matthews_linkedin_voice:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "linkedin_thought_leader:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "enhanced_agent_builder:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "life_transition_coordinator:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "ai_content_strategist:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "parenting_decision_support:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "real_estate_analyzer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "business_strategist_fast:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "health_wellness_optimizer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "productivity_optimizer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "engagement_optimizer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "personal_brand_architect:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "sales_content_creator:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "content_strategist_pro:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "digital_storyteller:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "linkedin_content_expert:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "opportunity_analyst:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "master_coder:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "guitar_expert_precise:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "llama3.2_balanced:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "file_reviewer:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "llama3.2:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "fast_agent_ultimate:latest",
+          "size": "2.0 GB"
+        },
+        {
+          "name": "fast_agent_llama:latest",
+          "size": "2.0 GB"
+        }
+      ]
+    },
+    "Llama": {
+      "count": 4,
+      "models": [
+        {
+          "name": "deepseek-coder:latest",
+          "size": "776 MB"
+        },
+        {
+          "name": "code_reviewer:latest",
+          "size": "776 MB"
+        },
+        {
+          "name": "fast_agent_focused:latest",
+          "size": "4.1 GB"
+        },
+        {
+          "name": "mistral:latest",
+          "size": "4.1 GB"
+        }
+      ]
+    }
+  }
+}

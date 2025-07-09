@@ -1,0 +1,530 @@
+{
+  "total_models": 74,
+  "base_families": {
+    "llama": [
+      {
+        "model": "llama3.2:3b",
+        "trace": [
+          "llama3.2:3b",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_v5_complete:latest",
+        "trace": [
+          "matthew_context_provider_v5_complete:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_v4_accurate:latest",
+        "trace": [
+          "matthew_context_provider_v4_accurate:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "practical_implementer:latest",
+        "trace": [
+          "practical_implementer:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "creative_catalyst:latest",
+        "trace": [
+          "creative_catalyst:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "universal_strategy_architect:latest",
+        "trace": [
+          "universal_strategy_architect:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_v4:latest",
+        "trace": [
+          "matthew_context_provider_v4:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "enhanced_agent_enforcer:latest",
+        "trace": [
+          "enhanced_agent_enforcer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "ai_leadership_strategist:latest",
+        "trace": [
+          "ai_leadership_strategist:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_v3:latest",
+        "trace": [
+          "matthew_context_provider_v3:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "solution_architect:latest",
+        "trace": [
+          "solution_architect:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "humana_innovation_catalyst:latest",
+        "trace": [
+          "humana_innovation_catalyst:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "humana_politics_navigator:latest",
+        "trace": [
+          "humana_politics_navigator:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "advocates_meeting_optimizer_v2:latest",
+        "trace": [
+          "advocates_meeting_optimizer_v2:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthews_strategic_accelerator_v2:latest",
+        "trace": [
+          "matthews_strategic_accelerator_v2:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "advocates_meeting_optimizer:latest",
+        "trace": [
+          "advocates_meeting_optimizer:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "action_crystallizer:latest",
+        "trace": [
+          "action_crystallizer:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthews_strategic_accelerator:latest",
+        "trace": [
+          "matthews_strategic_accelerator:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "daily_micro_action:latest",
+        "trace": [
+          "daily_micro_action:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "ai_career_strategist:latest",
+        "trace": [
+          "ai_career_strategist:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "personal_finance_navigator:latest",
+        "trace": [
+          "personal_finance_navigator:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "home_sale_optimizer:latest",
+        "trace": [
+          "home_sale_optimizer:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "humana_ai_advocate:latest",
+        "trace": [
+          "humana_ai_advocate:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "optimized_decision_simplifier_v3:latest",
+        "trace": [
+          "optimized_decision_simplifier_v3:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "llama3.2:3b-instruct-fp16",
+        "trace": [
+          "llama3.2:3b-instruct-fp16",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "optimized_action_prioritizer:latest",
+        "trace": [
+          "optimized_action_prioritizer:latest",
+          "blob:sha256-e2f46... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_advisor_enhanced:latest",
+        "trace": [
+          "matthew_advisor_enhanced:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_advisor:latest",
+        "trace": [
+          "matthew_advisor:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "financial_planning_expert_v6:latest",
+        "trace": [
+          "financial_planning_expert_v6:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "enhanced_agent_fast_v6:latest",
+        "trace": [
+          "enhanced_agent_fast_v6:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "test_balanced_specialist:latest",
+        "trace": [
+          "test_balanced_specialist:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "cross_model_synthesizer:latest",
+        "trace": [
+          "cross_model_synthesizer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "feedback_loop_optimizer_fixed:latest",
+        "trace": [
+          "feedback_loop_optimizer_fixed:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "guitar_tone_architect:latest",
+        "trace": [
+          "guitar_tone_architect:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "music_career_timeline_strategist:latest",
+        "trace": [
+          "music_career_timeline_strategist:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "performance_anxiety_coach:latest",
+        "trace": [
+          "performance_anxiety_coach:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "father_daughter_music_mentor:latest",
+        "trace": [
+          "father_daughter_music_mentor:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "father_daughter_wisdom_guide:latest",
+        "trace": [
+          "father_daughter_wisdom_guide:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "financial_planning_expert_optimized:latest",
+        "trace": [
+          "financial_planning_expert_optimized:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_optimized:latest",
+        "trace": [
+          "matthew_context_provider_optimized:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "enhanced_agent_enforcer_v2:latest",
+        "trace": [
+          "enhanced_agent_enforcer_v2:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "mirador_system_specialist_v2:latest",
+        "trace": [
+          "mirador_system_specialist_v2:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthew_context_provider_v2:latest",
+        "trace": [
+          "matthew_context_provider_v2:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "opportunity_validator_v2:latest",
+        "trace": [
+          "opportunity_validator_v2:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "louisville_expert_v3:latest",
+        "trace": [
+          "louisville_expert_v3:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "relationship_communication_specialist:latest",
+        "trace": [
+          "relationship_communication_specialist:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "matthews_linkedin_voice:latest",
+        "trace": [
+          "matthews_linkedin_voice:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "linkedin_thought_leader:latest",
+        "trace": [
+          "linkedin_thought_leader:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "enhanced_agent_builder:latest",
+        "trace": [
+          "enhanced_agent_builder:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "life_transition_coordinator:latest",
+        "trace": [
+          "life_transition_coordinator:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "ai_content_strategist:latest",
+        "trace": [
+          "ai_content_strategist:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "parenting_decision_support:latest",
+        "trace": [
+          "parenting_decision_support:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "real_estate_analyzer:latest",
+        "trace": [
+          "real_estate_analyzer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "business_strategist_fast:latest",
+        "trace": [
+          "business_strategist_fast:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "health_wellness_optimizer:latest",
+        "trace": [
+          "health_wellness_optimizer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "productivity_optimizer:latest",
+        "trace": [
+          "productivity_optimizer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "personal_brand_architect:latest",
+        "trace": [
+          "personal_brand_architect:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "sales_content_creator:latest",
+        "trace": [
+          "sales_content_creator:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "engagement_optimizer:latest",
+        "trace": [
+          "engagement_optimizer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "content_strategist_pro:latest",
+        "trace": [
+          "content_strategist_pro:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "digital_storyteller:latest",
+        "trace": [
+          "digital_storyteller:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "linkedin_content_expert:latest",
+        "trace": [
+          "linkedin_content_expert:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "opportunity_analyst:latest",
+        "trace": [
+          "opportunity_analyst:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "file_reviewer:latest",
+        "trace": [
+          "file_reviewer:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "guitar_expert_precise:latest",
+        "trace": [
+          "guitar_expert_precise:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "master_coder:latest",
+        "trace": [
+          "master_coder:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "llama3.2_balanced:latest",
+        "trace": [
+          "llama3.2_balanced:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "llama3.2:latest",
+        "trace": [
+          "llama3.2:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "fast_agent_ultimate:latest",
+        "trace": [
+          "fast_agent_ultimate:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      },
+      {
+        "model": "fast_agent_llama:latest",
+        "trace": [
+          "fast_agent_llama:latest",
+          "blob:sha256-dde5a... (llama3.2)"
+        ]
+      }
+    ],
+    "deepseek": [
+      {
+        "model": "code_reviewer:latest",
+        "trace": [
+          "code_reviewer:latest",
+          "blob:sha256-d040c... (deepseek-coder)"
+        ]
+      },
+      {
+        "model": "deepseek-coder:latest",
+        "trace": [
+          "deepseek-coder:latest",
+          "blob:sha256-d040c... (deepseek-coder)"
+        ]
+      }
+    ],
+    "mistral": [
+      {
+        "model": "fast_agent_focused:latest",
+        "trace": [
+          "fast_agent_focused:latest",
+          "blob:sha256-ff823... (mistral)"
+        ]
+      },
+      {
+        "model": "mistral:latest",
+        "trace": [
+          "mistral:latest",
+          "blob:sha256-ff823... (mistral)"
+        ]
+      }
+    ]
+  },
+  "unknown": []
+}
