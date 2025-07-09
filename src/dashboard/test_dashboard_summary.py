@@ -10,7 +10,7 @@ print("""
 ✅ SUCCESSFUL TESTS (23/25):
 ---------------------------
 • Page loads successfully
-• Page title correct: "Matthew Scott - AI Innovation Portfolio"
+• Page title correct: "User - AI Innovation Portfolio"
 • All 4 key metrics displayed (significant cost savings, 97%, 30+ hrs, 80+)
 • All 5 navigation tabs present and clickable
 • Mirador tab content complete (5/5 features)
@@ -18,7 +18,7 @@ print("""
 • Run Query button enabled and clickable
 • All sidebar elements present (8/8)
 • LinkedIn URL correct: https://www.linkedin.com/in/mscott77/
-• Contact email correct: mailto:matthewdscott7@gmail.com
+• Contact email correct: mailto:userdscott7@gmail.com
 • GitHub URL correct: https://github.com/guitargnar
 • JCPS and JobCraft tabs load content
 • Page loads quickly (179ms)
@@ -26,7 +26,7 @@ print("""
 
 ⚠️ MINOR ISSUES (2):
 ------------------
-• Main header shows "Matthew Scott" instead of "AI Innovation Portfolio"
+• Main header shows "User" instead of "AI Innovation Portfolio"
   (This is actually the sidebar name, not an error)
 • Some JavaScript console warnings (typical for Streamlit apps)
 

@@ -428,7 +428,7 @@ def automated_daily_summary(**kwargs):
     
     result = run_framework_chain(
         prompt,
-        models=['matthew_context_provider_v3', 'enhanced_agent_enforcer', 'decision_simplifier_v3']
+        models=['user_context_provider_v3', 'enhanced_agent_enforcer', 'decision_simplifier_v3']
     )
     
     # Save summary

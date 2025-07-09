@@ -21,7 +21,7 @@ def check_unique_important_files():
         'ai_career_strategist_modelfile',
         'advocates_meeting_optimizer_modelfile',
         'home_sale_optimizer_modelfile',
-        'matthew-scott-enhanced-resume'
+        'user-scott-enhanced-resume'
     ]
     
     unique_files = results['only_in_dir1']

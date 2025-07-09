@@ -41,9 +41,9 @@ class MiradorModelTester:
                 "Compare mortgage vs rent for a $300,000 home purchase"
             ],
             'context_provider': [
-                "Provide context about Matthew's financial goals and current situation",
-                "What are Matthew's key priorities for career development?",
-                "Summarize Matthew's personal preferences and constraints"
+                "Provide context about User's financial goals and current situation",
+                "What are User's key priorities for career development?",
+                "Summarize User's personal preferences and constraints"
             ],
             'decision_support': [
                 "Should I take a job offer with 20% salary increase but longer commute?",
@@ -327,8 +327,8 @@ async def main():
     models_to_test = {
         'financial_planning_expert_v6': 'financial_planning',
         'financial_planning_expert_v5': 'financial_planning',
-        'matthew_context_provider_v2': 'context_provider',
-        'matthew_context_provider_v1': 'context_provider',
+        'user_context_provider_v2': 'context_provider',
+        'user_context_provider_v1': 'context_provider',
         'decision_simplifier_v2': 'decision_support',
         'decision_simplifier_v1': 'decision_support',
         'louisville_expert_v3': 'local_expert',

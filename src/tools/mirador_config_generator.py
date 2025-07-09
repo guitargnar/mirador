@@ -20,7 +20,7 @@ class MiradorConfigGenerator:
         # Optimized model configurations based on analysis
         self.consolidated_models = {
             'core_models': {
-                'matthew_context_provider_v2': {
+                'user_context_provider_v2': {
                     'base_model': 'llama3.2_balanced',
                     'category': 'context_provider',
                     'temperature': 0.5,
@@ -190,18 +190,18 @@ class MiradorConfigGenerator:
         # Optimized chain configurations
         self.chain_configurations = {
             'quick_chains': {
-                'financial_quick': ['matthew_context_provider_v2', 'financial_planning_expert_fast', 'decision_simplifier_v2'],
-                'decision_quick': ['matthew_context_provider_v2', 'decision_simplifier_v2'],
-                'local_quick': ['matthew_context_provider_v2', 'louisville_expert_v3', 'decision_simplifier_v2']
+                'financial_quick': ['user_context_provider_v2', 'financial_planning_expert_fast', 'decision_simplifier_v2'],
+                'decision_quick': ['user_context_provider_v2', 'decision_simplifier_v2'],
+                'local_quick': ['user_context_provider_v2', 'louisville_expert_v3', 'decision_simplifier_v2']
             },
             'balanced_chains': {
-                'financial_balanced': ['matthew_context_provider_v2', 'financial_planning_expert_v6', 'enhanced_agent_fast_v6', 'decision_simplifier_v2'],
-                'comprehensive_analysis': ['matthew_context_provider_v2', 'financial_planning_expert_v6', 'louisville_expert_v3', 'decision_simplifier_v2'],
-                'quality_assured': ['matthew_context_provider_v2', 'mirador_system_specialist_v2', 'enhanced_agent_enforcer_v2', 'decision_simplifier_v2']
+                'financial_balanced': ['user_context_provider_v2', 'financial_planning_expert_v6', 'enhanced_agent_fast_v6', 'decision_simplifier_v2'],
+                'comprehensive_analysis': ['user_context_provider_v2', 'financial_planning_expert_v6', 'louisville_expert_v3', 'decision_simplifier_v2'],
+                'quality_assured': ['user_context_provider_v2', 'mirador_system_specialist_v2', 'enhanced_agent_enforcer_v2', 'decision_simplifier_v2']
             },
             'comprehensive_chains': {
-                'strategic_planning': ['matthew_context_provider_v2', 'financial_planning_expert_v6', 'louisville_expert_v3', 'enhanced_agent_enforcer_v2', 'mirador_system_specialist_v2', 'decision_simplifier_v2'],
-                'life_optimization': ['matthew_context_provider_v2', 'financial_planning_expert_v6', 'health_wellness_optimizer', 'productivity_optimizer', 'enhanced_agent_enforcer_v2', 'decision_simplifier_v2']
+                'strategic_planning': ['user_context_provider_v2', 'financial_planning_expert_v6', 'louisville_expert_v3', 'enhanced_agent_enforcer_v2', 'mirador_system_specialist_v2', 'decision_simplifier_v2'],
+                'life_optimization': ['user_context_provider_v2', 'financial_planning_expert_v6', 'health_wellness_optimizer', 'productivity_optimizer', 'enhanced_agent_enforcer_v2', 'decision_simplifier_v2']
             }
         }
 
@@ -248,7 +248,7 @@ Core Responsibilities:
 """
         
         if config['category'] == 'context_provider':
-            base_prompt += """- Provide comprehensive personal context about Matthew's situation, goals, and preferences
+            base_prompt += """- Provide comprehensive personal context about User's situation, goals, and preferences
 - Maintain consistency with established personal information
 - Highlight relevant constraints and priorities for decision-making
 - Ensure all recommendations align with personal values and circumstances"""

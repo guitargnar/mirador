@@ -120,7 +120,7 @@ async def test_dashboard():
             # Test 7: Test sidebar elements
             print("\n📱 Testing Sidebar:")
             sidebar_elements = [
-                ("Matthew Scott", "Name"),
+                ("User", "Name"),
                 ("Target Leadership Role Candidate", "Title"),
                 ("Quick Links", "Section header"),
                 ("LinkedIn", "LinkedIn button"),
@@ -153,7 +153,7 @@ async def test_dashboard():
             contact_button = await page.query_selector("a:has-text('Contact')")
             if contact_button:
                 href = await contact_button.get_attribute("href")
-                if "mailto:matthewdscott7@gmail.com" in href:
+                if "mailto:userdscott7@gmail.com" in href:
                     print(f"  ✅ Contact Email: Correct ({href})")
                 else:
                     print(f"  ❌ Contact Email: Incorrect ({href})")

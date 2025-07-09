@@ -187,7 +187,7 @@ class OllamaModelExtractor:
                 categories['Financial Planning'].append(model_name)
             elif any(keyword in name_lower for keyword in ['music', 'guitar', 'performance']):
                 categories['Music & Performance'].append(model_name)
-            elif any(keyword in name_lower for keyword in ['matthew', 'advisor', 'context']):
+            elif any(keyword in name_lower for keyword in ['user', 'advisor', 'context']):
                 categories['Personal Advisory'].append(model_name)
             elif any(keyword in name_lower for keyword in ['linkedin', 'content', 'social']):
                 categories['Content & Social Media'].append(model_name)

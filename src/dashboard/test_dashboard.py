@@ -25,7 +25,7 @@ def test_dashboard():
         
         checks = {
             "streamlit": "Streamlit framework",
-            "matthew scott": "Author name",
+            "user scott": "Author name",
             "mirador": "Mirador framework",
             "innovation": "Innovation content",
             "$1.2m": "Savings metric",

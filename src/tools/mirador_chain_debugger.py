@@ -42,12 +42,12 @@ class MiradorChainDebugger:
             },
             {
                 "name": "context_financial_chain", 
-                "models": ["matthew_context_provider", "financial_planning_expert_v6"],
+                "models": ["user_context_provider", "financial_planning_expert_v6"],
                 "query": "Develop financial strategy for healthcare professional"
             },
             {
                 "name": "full_decision_chain",
-                "models": ["matthew_context_provider", "enhanced_agent_enforcer", "decision_simplifier"],
+                "models": ["user_context_provider", "enhanced_agent_enforcer", "decision_simplifier"],
                 "query": "Should I save for house or invest in retirement first?"
             }
         ]
@@ -347,10 +347,10 @@ class MiradorChainDebugger:
                 "description": "Single model chain using only the working enforcer model"
             })
         
-        if "matthew_context_provider" in working_models and "enhanced_agent_enforcer" in working_models:
+        if "user_context_provider" in working_models and "enhanced_agent_enforcer" in working_models:
             simplified_chains.append({
                 "name": "context_enforcer_chain",
-                "models": ["matthew_context_provider", "enhanced_agent_enforcer"],
+                "models": ["user_context_provider", "enhanced_agent_enforcer"],
                 "description": "Two-model chain using working context and enforcer models"
             })
         

@@ -563,7 +563,7 @@ class PresentationGenerator:
             "• Create Innovation Zones (50 associates, 90 days)",
             "• Measure results, not compliance",
             "• Direct communication channels",
-            "• Recognize builders like Matthew",
+            "• Recognize builders like User",
             "• Scale what works"
         ]
         

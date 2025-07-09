@@ -112,8 +112,8 @@ def compare_directories(dir1, dir2):
     }
 
 if __name__ == "__main__":
-    dir1 = "/Users/matthewscott/ai_framework_git"
-    dir2 = "/Users/matthewscott/Projects/mirador"
+    dir1 = "/Users/userscott/ai_framework_git"
+    dir2 = "/Users/userscott/Projects/mirador"
     
     print("Comparing directories...")
     print(f"Directory 1: {dir1}")

@@ -32,7 +32,7 @@ class Phase2ReadinessValidator:
         
         # Critical requirements for Phase 2
         self.critical_models = [
-            'matthew_context_provider_v2',
+            'user_context_provider_v2',
             'financial_planning_expert_v6',
             'decision_simplifier_v2',
             'louisville_expert_v3',
@@ -101,7 +101,7 @@ class Phase2ReadinessValidator:
     def check_model_functionality(self) -> ReadinessCheck:
         """Test basic functionality of critical models"""
         test_queries = {
-            'matthew_context_provider_v2': "Provide brief context about Matthew's situation.",
+            'user_context_provider_v2': "Provide brief context about User's situation.",
             'financial_planning_expert_v6': "What are key components of a budget?",
             'decision_simplifier_v2': "List 3 factors to consider when making financial decisions.",
             'louisville_expert_v3': "Name one advantage of living in Louisville.",

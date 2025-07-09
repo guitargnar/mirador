@@ -35,7 +35,7 @@ class MiradorModelDiagnostic:
         
         # Critical models identified from Phase 1 analysis
         self.critical_models = [
-            'matthew_context_provider_v2',
+            'user_context_provider_v2',
             'financial_planning_expert_v6', 
             'decision_simplifier_v2',
             'louisville_expert_v3',
@@ -45,7 +45,7 @@ class MiradorModelDiagnostic:
         
         # Models that were confirmed working in Phase 1
         self.working_models = [
-            'matthew_context_provider_v2',
+            'user_context_provider_v2',
             'louisville_expert_v3', 
             'enhanced_agent_enforcer_v2'
         ]
@@ -178,7 +178,7 @@ class MiradorModelDiagnostic:
             'financial_planning_expert_v6',  # Core financial capability
             'decision_simplifier_v2',        # Essential synthesis
             'enhanced_agent_fast_v6',        # Performance optimization
-            'matthew_context_provider_v1',   # Backup context provider
+            'user_context_provider_v1',   # Backup context provider
             'financial_planning_expert_fast', # Quick financial queries
             'mirador_system_specialist_v2'   # System optimization
         ]
@@ -235,7 +235,7 @@ class MiradorModelDiagnostic:
             f.write("echo \"🧪 Validating critical models...\"\n\n")
             
             test_queries = {
-                'matthew_context_provider_v2': "Provide context about Matthew's current situation and goals.",
+                'user_context_provider_v2': "Provide context about User's current situation and goals.",
                 'financial_planning_expert_v6': "Create a basic budget framework for someone earning $75,000 annually.",
                 'decision_simplifier_v2': "Help me decide between saving for a house vs investing in retirement.",
                 'louisville_expert_v3': "What are good neighborhoods in Louisville for young professionals?",
@@ -347,7 +347,7 @@ class MiradorModelDiagnostic:
             f.write("## Phase 2 Readiness Checklist\n\n")
             f.write("- [ ] All critical models built and available\n")
             f.write("- [ ] Performance testing shows >80% success rate\n")
-            f.write("- [ ] matthew_context_provider_v2 working\n")
+            f.write("- [ ] user_context_provider_v2 working\n")
             f.write("- [ ] financial_planning_expert_v6 working\n")
             f.write("- [ ] decision_simplifier_v2 working\n")
             f.write("- [ ] louisville_expert_v3 working\n")

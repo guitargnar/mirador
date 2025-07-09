@@ -46,7 +46,7 @@ class MiradorModelAnalyzer:
         self.category_patterns = {
             'financial_planning': r'financial.*planning.*expert',
             'enhanced_agent': r'enhanced.*agent',
-            'context_provider': r'matthew.*context.*provider',
+            'context_provider': r'user.*context.*provider',
             'decision_support': r'decision.*simplifier',
             'local_expert': r'louisville.*expert',
             'system_specialist': r'mirador.*system.*specialist',
@@ -71,8 +71,8 @@ class MiradorModelAnalyzer:
                           'enhanced_agent_v1', 'enhanced_agent_v2']
             },
             'context_provider': {
-                'keep': ['matthew_context_provider_v2'],
-                'retire': ['matthew_context_provider_v1']
+                'keep': ['user_context_provider_v2'],
+                'retire': ['user_context_provider_v1']
             },
             'decision_support': {
                 'keep': ['decision_simplifier_v2'],
@@ -166,7 +166,7 @@ class MiradorModelAnalyzer:
                 parts = line.split()
                 if len(parts) >= 3:
                     name = parts[0]
-                    if any(keyword in name.lower() for keyword in ['mirador', 'matthew', 'financial', 'louisville']):
+                    if any(keyword in name.lower() for keyword in ['mirador', 'user', 'financial', 'louisville']):
                         # This looks like a Mirador model
                         size_str = parts[2] if len(parts) > 2 else "0GB"
                         size_mb = self._parse_size(size_str)

@@ -138,8 +138,8 @@ class ModelRegistry:
                 domains=['personal', 'professional'],
                 base_model='llama3.2:3b',
                 performance={'speed': 0.9, 'quality': 0.85},
-                aliases=['matthew_context_provider_v3', 'matthew_context_provider_v4', 
-                        'matthew_context_provider_v5_complete']
+                aliases=['user_context_provider_v3', 'user_context_provider_v4', 
+                        'user_context_provider_v5_complete']
             ),
             'universal_financial_advisor': UniversalModel(
                 id='universal_financial_advisor',
@@ -209,8 +209,8 @@ class ModelRegistry:
         """Analyze redundancy in current model set."""
         # Simulate analysis of 80+ models
         redundant_groups = [
-            ['matthew_context_provider_v3', 'matthew_context_provider_v4', 
-             'matthew_context_provider_v5_complete'],
+            ['user_context_provider_v3', 'user_context_provider_v4', 
+             'user_context_provider_v5_complete'],
             ['financial_planning_expert_v8', 'personal_finance_navigator',
              'budget_optimizer', 'investment_advisor'],
             ['life_coach', 'wellness_advisor', 'balance_expert', 'health_optimizer'],

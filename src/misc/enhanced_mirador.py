@@ -219,13 +219,13 @@ class EnhancedMirador:
         
         # Simple keyword-based selection
         if any(word in prompt_lower for word in ['financial', 'budget', 'cost', 'money']):
-            return ['matthew_context_provider_v3', 'financial_planning_expert_v8', 'decision_simplifier_v3']
+            return ['user_context_provider_v3', 'financial_planning_expert_v8', 'decision_simplifier_v3']
         elif any(word in prompt_lower for word in ['risk', 'threat', 'vulnerability']):
             return ['risk_analyzer', 'compliance_checker', 'enhanced_agent_enforcer']
         elif any(word in prompt_lower for word in ['code', 'programming', 'debug', 'error']):
             return ['code_expert', 'debug_assistant', 'decision_simplifier_v3']
         else:
-            return ['matthew_context_provider_v3', 'enhanced_agent_enforcer', 'decision_simplifier_v3']
+            return ['user_context_provider_v3', 'enhanced_agent_enforcer', 'decision_simplifier_v3']
             
     def _classify_task(self, prompt: str) -> str:
         """Classify task type from prompt"""

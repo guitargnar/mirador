@@ -42,14 +42,14 @@ class MiradorContentDiagnostic:
         # Test cases for each critical model
         self.model_tests = [
             ModelTest(
-                name="matthew_context_provider",
-                test_query="Provide brief context about Matthew's current situation and goals.",
+                name="user_context_provider",
+                test_query="Provide brief context about User's current situation and goals.",
                 expected_min_words=20,
                 category="context_provider"
             ),
             ModelTest(
-                name="matthew_context_provider_v2", 
-                test_query="Provide brief context about Matthew's current situation and goals.",
+                name="user_context_provider_v2", 
+                test_query="Provide brief context about User's current situation and goals.",
                 expected_min_words=20,
                 category="context_provider"
             ),

@@ -113,7 +113,7 @@ class MiradorUnifiedDashboard:
             # Check Mirador
             try:
                 result = subprocess.run(["ollama", "list"], capture_output=True, text=True)
-                model_count = len([l for l in result.stdout.split('\n') if 'matthew' in l or 'enhanced' in l])
+                model_count = len([l for l in result.stdout.split('\n') if 'user' in l or 'enhanced' in l])
                 status_table.add_row("Mirador AI", "✅ Active", f"{model_count} models loaded")
             except:
                 status_table.add_row("Mirador AI", "❌ Offline", "Ollama not running")

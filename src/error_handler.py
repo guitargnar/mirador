@@ -188,7 +188,7 @@ class ChainExecutor:
     def __init__(self):
         self.executor = ModelExecutor()
         self.fallback_models = {
-            'context': ['matthew_context_provider_v3', 'llama3.2:3b'],
+            'context': ['user_context_provider_v3', 'llama3.2:3b'],
             'analysis': ['enhanced_agent_enforcer', 'llama3.2:3b'],
             'synthesis': ['optimized_decision_simplifier_v3', 'llama3.2:3b'],
             'universal': ['llama3.2:3b']  # Universal fallback
@@ -347,7 +347,7 @@ if __name__ == "__main__":
     # Example usage
     chain = ChainExecutor()
     result = chain.execute_chain(
-        ["matthew_context_provider_v3", "enhanced_agent_enforcer", "optimized_decision_simplifier_v3"],
+        ["user_context_provider_v3", "enhanced_agent_enforcer", "optimized_decision_simplifier_v3"],
         "What should I focus on today?"
     )
     

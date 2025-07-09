@@ -22,7 +22,7 @@ class TimeAllocation:
 @dataclass
 class FinancialConstraint:
     """Represents financial constraints"""
-    monthly_income: float = 1650.0  # Matthew's take-home
+    monthly_income: float = 1650.0  # User's take-home
     equity_value: float = 91000.0
     emergency_reserve: float = 500.0
     discretionary_spending: float = 200.0

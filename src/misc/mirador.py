@@ -65,7 +65,7 @@ ROLES = {
         "prompt": "Organize this into a structured plan: {input}",
         "temp": 0.3
     },
-    "matthew_context_provider_v3": {
+    "user_context_provider_v3": {
         "prompt": "Analyze this in the context of my current situation and goals: {input}",
         "temp": 0.4
     },
@@ -103,13 +103,13 @@ CHAIN_TEMPLATES = {
     "document": ["enhanced_agent", "file_reviewer"],
     "ui": ["master_coder", "ux_designer"],
     # Company-specific chains
-    "innovation": ["matthew_context_provider_v3", "company_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
-    "ai_leadership": ["matthew_context_provider_v3", "ai_leadership_strategist", "enhanced_agent_enforcer"],
-    "corporate_nav": ["matthew_context_provider_v3", "company_politics_navigator", "enhanced_agent_enforcer"],
+    "innovation": ["user_context_provider_v3", "company_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
+    "ai_leadership": ["user_context_provider_v3", "ai_leadership_strategist", "enhanced_agent_enforcer"],
+    "corporate_nav": ["user_context_provider_v3", "company_politics_navigator", "enhanced_agent_enforcer"],
     "solution": ["company_innovation_catalyst", "solution_architect", "enhanced_agent_enforcer"],
-    "advocates": ["matthew_context_provider_v3", "advocates_meeting_optimizer_v2", "ai_leadership_strategist", "enhanced_agent_enforcer"],
+    "advocates": ["user_context_provider_v3", "advocates_meeting_optimizer_v2", "ai_leadership_strategist", "enhanced_agent_enforcer"],
     "quick_win": ["company_innovation_catalyst", "solution_architect"],
-    "strategic": ["matthew_context_provider_v3", "company_innovation_catalyst", "ai_leadership_strategist", "company_politics_navigator", "enhanced_agent_enforcer"]
+    "strategic": ["user_context_provider_v3", "company_innovation_catalyst", "ai_leadership_strategist", "company_politics_navigator", "enhanced_agent_enforcer"]
 }
 
 def print_header():

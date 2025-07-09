@@ -14,7 +14,7 @@ def create_web_dashboard():
     dashboard_content = '''#!/usr/bin/env python3
 """
 Mirador AI Portfolio - Web Dashboard
-Professional showcase of Matthew Scott's AI innovation ecosystem
+Professional showcase of User's AI innovation ecosystem
 """
 
 import streamlit as st
@@ -28,7 +28,7 @@ from pathlib import Path
 
 # Page configuration
 st.set_page_config(
-    page_title="Matthew Scott - AI Innovation Portfolio",
+    page_title="User - AI Innovation Portfolio",
     page_icon="🔬",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -295,15 +295,15 @@ with tab5:
 # Sidebar
 with st.sidebar:
     st.image("https://via.placeholder.com/200x200/FFFFFF/7B9E89?text=MS", width=100)
-    st.title("Matthew Scott")
+    st.title("User")
     st.write("Target Leadership Role Candidate")
     
     st.divider()
     
     st.subheader("Quick Links")
-    st.link_button("🔗 LinkedIn", "https://linkedin.com/in/matthewscott")
-    st.link_button("📧 Contact", "mailto:contact@matthewscott.com")
-    st.link_button("💻 GitHub", "https://github.com/matthewscott")
+    st.link_button("🔗 LinkedIn", "https://linkedin.com/in/userscott")
+    st.link_button("📧 Contact", "mailto:contact@userscott.com")
+    st.link_button("💻 GitHub", "https://github.com/userscott")
     
     st.divider()
     
