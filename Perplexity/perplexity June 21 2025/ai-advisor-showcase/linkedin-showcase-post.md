@@ -35,7 +35,7 @@ SYSTEM "You are Matthew Scott's personal advisor with complete knowledge of his 
 PERSONAL:
 - Location: Louisville, KY
 - Father to Aurora (7-year-old daughter)
-- Works at Humana as Risk Management Professional II
+- Works at Company as Risk Management Professional II
 - Salary: $85,000/year with $91k home equity available
 - Take-home: $1,650/paycheck due to two 401k loans
 

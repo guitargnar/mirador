@@ -8,7 +8,7 @@
 ### Probability vs Impact Analysis
 ```
 HIGH IMPACT  │ IT Shutdown       │ Executive Champion
-             │ Legal Challenge   │ Star Ratings Win
+             │ Legal Challenge   │ Quality Metrics Win
              │ Job Risk         │ Industry Recognition
 ─────────────┼──────────────────┼────────────────────
              │ Vendor Pushback  │ Viral Adoption
@@ -100,7 +100,7 @@ LOW IMPACT   │ Peer Jealousy    │ Process Improvement
 ├── security_audit.pdf         # Third-party validation
 ├── ip_assignment.doc          # Clear ownership terms
 ├── user_agreements.pdf        # Consent for pilots
-└── innovation_policy.pdf      # Humana's own policies
+└── innovation_policy.pdf      # Company's own policies
 ```
 
 ---
@@ -130,8 +130,8 @@ DEFENSIVE POSITION:
 - Show innovation policy compliance
 - Document management awareness
 - Highlight business value created
-- Reference Star Ratings impact
-- Invoke Humana values
+- Reference Quality Metrics impact
+- Invoke Company values
 
 OFFENSIVE COUNTER:
 - "I followed all policies"
@@ -354,7 +354,7 @@ Matthew
 
 - Users depend on it daily
 - Executives tout the savings
-- Star Ratings show improvement
+- Quality Metrics show improvement
 - Innovation culture thrives
 - You become untouchable
 

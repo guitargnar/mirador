@@ -93,7 +93,7 @@ graph TB
 ### 3. **Enterprise Productivity Suite**
 - Email action extraction
 - Meeting notes formatting
-- Star Ratings analysis
+- Quality Metrics analysis
 - CMS guidance interpretation
 
 ### 4. **Metrics & Analytics**
@@ -114,17 +114,17 @@ graph TB
 
 ```bash
 # Strategic morning planning
-./humana_chain_runner.sh strategic_synthesis "Plan my day for maximum impact"
+./company_chain_runner.sh strategic_synthesis "Plan my day for maximum impact"
 
 # Pre-meeting intelligence
-./humana_chain_runner.sh corporate_nav "Prepare for meeting with [stakeholder]"
+./company_chain_runner.sh corporate_nav "Prepare for meeting with [stakeholder]"
 
 # Innovation discovery
-./humana_chain_runner.sh innovation_discovery "Find automation opportunities in department X"
+./company_chain_runner.sh innovation_discovery "Find automation opportunities in department X"
 ```
 
 ## 🏆 Success Metrics
-- **70% → 97%** accuracy improvement in Risk Management
+- **70% → 97%** accuracy improvement in Current Department
 - **40 hours/week** saved through automation
 - **$100K+** annual ROI per department
 - **5-star** potential impact on CMS ratings

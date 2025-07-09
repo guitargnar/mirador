@@ -40,7 +40,7 @@ Assuming you have no dependents, here's a breakdown of the recommended budget al
 **Implementation Steps with Local Resources:**
 
 1. Life Insurance:
-	* Research and compare term life insurance options from local carriers (e.g., Humana, Blue Cross Blue Shield).
+	* Research and compare term life insurance options from local carriers (e.g., Company, Blue Cross Blue Shield).
 	* Consider whole life insurance if you want a permanent policy or cash value accumulation.
 2. Disability Insurance:
 	* Contact local disability insurance providers (e.g., Prudential, MetLife) to discuss short-term and long-term coverage options.

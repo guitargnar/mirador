@@ -14,7 +14,7 @@ Write a personal LinkedIn post about my journey learning prompt engineering, inc
 
 **From Compliance to Code: My Journey in Prompt Engineering**
 
-As a Humana Risk Management Professional II specializing in Medicare compliance, I've spent years navigating the intricacies of regulatory requirements and policy nuances. However, with the rapid evolution of AI-powered tools, I recognized the need to upskill and adapt my expertise.
+As a Company Risk Management Professional II specializing in Medicare compliance, I've spent years navigating the intricacies of regulatory requirements and policy nuances. However, with the rapid evolution of AI-powered tools, I recognized the need to upskill and adapt my expertise.
 
 That's when I embarked on an exciting journey into prompt engineering – a field that has revolutionized the way we interact with language models. At first, I was intimidated by the technical aspects, but with persistence and dedication, I've made significant breakthroughs.
 
@@ -53,7 +53,7 @@ As I continue to grow as a prompt engineer, I'm excited to explore new applicati
 
 **Building upon the comprehensive analysis provided...**
 
-As a Humana Risk Management Professional II specializing in Medicare compliance, I've spent years navigating the intricacies of regulatory requirements and policy nuances. However, with the rapid evolution of AI-powered tools, I recognized the need to upskill and adapt my expertise.
+As a Company Risk Management Professional II specializing in Medicare compliance, I've spent years navigating the intricacies of regulatory requirements and policy nuances. However, with the rapid evolution of AI-powered tools, I recognized the need to upskill and adapt my expertise.
 
 That's when I embarked on an exciting journey into prompt engineering – a field that has revolutionized the way we interact with language models. At first, I was intimidated by the technical aspects, but with persistence and dedication, I've made significant breakthroughs.
 

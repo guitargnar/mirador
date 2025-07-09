@@ -1,0 +1,35 @@
+# Mirador AI Orchestration Framework Requirements
+
+# Core Dependencies
+requests>=2.31.0
+argparse>=1.4.0
+pathlib>=1.0.1
+datetime>=4.7
+json>=2.0.9
+
+# System Requirements
+# - macOS (tested on macOS 13+)
+# - Ollama (latest version)
+# - Python 3.8+
+# - Terminal/Bash shell
+
+# Ollama Models (automatically managed)
+# Core models are created via .modelfile definitions
+# Total: 65+ specialized models
+
+# Optional Dependencies for Enhanced Features
+# - Logic Pro X (for audio production workflows)
+# - Git (for version control)
+# - Homebrew (for macOS package management)
+
+# Hardware Recommendations
+# - 16GB+ RAM (for multiple model execution)
+# - SSD storage (for fast model loading)
+# - Stable internet (for model downloads)
+
+# Installation Notes:
+# 1. Install Ollama: https://ollama.ai
+# 2. Start Ollama service: brew services start ollama
+# 3. Run setup scripts to create models
+# 4. Test with: ./mirador-ez models
+

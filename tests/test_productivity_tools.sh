@@ -52,7 +52,7 @@ Also, please note:
 - Security review is scheduled for next Thursday at 2pm
 - We need volunteers for the Advocates Program presentation
 
-The deadline for the Star Ratings submission is March 15th.
+The deadline for the Quality Metrics submission is March 15th.
 
 Let me know if you have any questions.
 
@@ -62,13 +62,13 @@ EOF
     
     # Test meeting notes
     cat > "$TEST_DATA_DIR/test_meeting_notes.txt" << 'EOF'
-Risk Management Team Meeting - January 8, 2025
+Current Department Team Meeting - January 8, 2025
 
 Attendees: Matthew, Sarah, Mike, Lisa, Tom
 
 Agenda:
 - Q1 automation progress update
-- Star Ratings impact discussion
+- Quality Metrics impact discussion
 - Resource allocation for new projects
 
 Key Points Discussed:
@@ -96,7 +96,7 @@ EOF
 Week of January 1-7, 2025
 
 Major Accomplishments:
-- Completed Risk Management automation phase 1
+- Completed Current Department automation phase 1
 - Reduced processing time from 8 hours to 2 hours
 - Zero errors in automated validation for 500+ cases
 - Presented to IT Security and gained approval
@@ -115,7 +115,7 @@ Challenges Overcome:
 
 Recognition:
 - Nominated for Q1 Innovation Award
-- Positive feedback from VP of Risk Management
+- Positive feedback from VP of Current Department
 EOF
     
     echo -e "${GREEN}✅ Test data created successfully${NC}"

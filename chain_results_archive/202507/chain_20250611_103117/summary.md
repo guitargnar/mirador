@@ -82,7 +82,7 @@ As a local expert, I'd be happy to provide additional insights and recommendatio
 	* Highlands: A trendy neighborhood with a mix of old and new homes, close to downtown.
 	* Bardstown Road: A vibrant commercial area with shops, restaurants, and entertainment options.
 2. **Job Market:** Major employers in Louisville include:
-	* Humana: A healthcare company with headquarters in Louisville.
+	* Company: A healthcare company with headquarters in Louisville.
 	* Brown-Forman: A spirits company with a global presence.
 	* Louisville & Southern Railway: A railroad company with a significant presence in the city.
 3. **Education:** JCPS (Jefferson County Public Schools) is one of the largest school districts in Kentucky, serving over 90,000 students. Some popular schools include:

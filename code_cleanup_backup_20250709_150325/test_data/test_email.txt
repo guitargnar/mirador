@@ -1,0 +1,22 @@
+Subject: Q1 Risk Assessment Updates - Action Required
+
+Hi Team,
+
+Following our meeting today, here are the action items:
+
+1. @Matthew - Complete the risk assessment automation by Friday
+2. @Sarah - Review and approve the new process documentation
+3. @Mike - Test the automated workflow with Claims data
+4. @Lisa - Prepare ROI presentation for leadership by next Tuesday
+
+Also, please note:
+- All automation tools must be documented in the shared drive
+- Security review is scheduled for next Thursday at 2pm
+- We need volunteers for the Advocates Program presentation
+
+The deadline for the Star Ratings submission is March 15th.
+
+Let me know if you have any questions.
+
+Best,
+John

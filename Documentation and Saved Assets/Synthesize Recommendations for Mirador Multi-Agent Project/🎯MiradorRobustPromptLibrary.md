@@ -33,7 +33,7 @@ mirador-ez chain "Analyze comprehensive financial strategy for Louisville health
 
 ### Pattern 2: Personal Strategic Development (⏱️ 52s, 938 words)
 ```bash
-mirador-ez chain "Develop strategic career advancement plan for Medicare compliance expert at Humana seeking thought leadership position while evaluating consulting business opportunities and maintaining work-life balance with 7-year-old daughter" matthew_context_provider enhanced_agent_enforcer
+mirador-ez chain "Develop strategic career advancement plan for Medicare compliance expert at Company seeking thought leadership position while evaluating consulting business opportunities and maintaining work-life balance with 7-year-old daughter" matthew_context_provider enhanced_agent_enforcer
 ```
 
 ### Pattern 3: Local Market Intelligence (⏱️ 79s, comprehensive)
@@ -69,7 +69,7 @@ mirador-ez chain "Analyze optimal strategy for $49k remaining mortgage: accelera
 mirador-ez chain "Design real estate investment strategy using $91k home equity for Louisville market, analyzing duplex vs single-family rental properties, financing options, and integration with existing retirement savings goals" financial_planning_expert_v6 louisville_expert_v2 enhanced_agent_enforcer
 
 # Retirement Acceleration
-mirador-ez chain "Accelerate retirement savings for Humana employee currently contributing to 401k, analyzing catch-up strategies, IRA conversions, and additional investment vehicles to achieve early retirement by age 55" matthew_context_provider financial_planning_expert_v6 enhanced_agent_enforcer
+mirador-ez chain "Accelerate retirement savings for Company employee currently contributing to 401k, analyzing catch-up strategies, IRA conversions, and additional investment vehicles to achieve early retirement by age 55" matthew_context_provider financial_planning_expert_v6 enhanced_agent_enforcer
 
 # Portfolio Diversification
 mirador-ez chain "Develop diversified investment portfolio for healthcare professional with $50k available capital, balancing growth potential with risk management, considering Louisville real estate, stock market, and alternative investments" financial_planning_expert_v6 enhanced_agent_enforcer decision_simplifier
@@ -83,7 +83,7 @@ mirador-ez chain "Create aggressive wealth building strategy for Louisville prof
 # Financial Independence Roadmap
 mirador-ez chain "Design 15-year financial independence plan for healthcare compliance professional, including real estate portfolio development, retirement account optimization, and potential business income streams with specific milestones and timelines" matthew_context_provider financial_planning_expert_v6 enhanced_agent_enforcer
 
-# Risk Management Strategy
+# Current Department Strategy
 mirador-ez chain "Develop comprehensive financial risk management strategy including insurance optimization, emergency fund sizing, investment diversification, and protection against career disruption for healthcare professional with family responsibilities" matthew_context_provider financial_planning_expert_v6 decision_simplifier
 ```
 
@@ -107,10 +107,10 @@ mirador-ez chain "Design content creation and distribution strategy for healthca
 ### Career Transition Planning
 ```bash
 # Senior Management Preparation
-mirador-ez chain "Develop strategic plan for transition from Risk Management Professional II to senior management role at Humana or similar healthcare organization, including skill development, leadership experience, and internal positioning strategies" matthew_context_provider enhanced_agent_enforcer decision_simplifier
+mirador-ez chain "Develop strategic plan for transition from Current Role to senior management role at Company or similar healthcare organization, including skill development, leadership experience, and internal positioning strategies" matthew_context_provider enhanced_agent_enforcer decision_simplifier
 
 # Consulting Business Evaluation
-mirador-ez chain "Analyze feasibility and strategy for launching Medicare compliance consulting business while maintaining full-time Humana employment, including market analysis, service offerings, pricing strategy, and risk management" matthew_context_provider financial_planning_expert_v6 louisville_expert_v2 enhanced_agent_enforcer
+mirador-ez chain "Analyze feasibility and strategy for launching Medicare compliance consulting business while maintaining full-time Company employment, including market analysis, service offerings, pricing strategy, and risk management" matthew_context_provider financial_planning_expert_v6 louisville_expert_v2 enhanced_agent_enforcer
 
 # Industry Transition Analysis
 mirador-ez chain "Evaluate opportunities for transitioning Medicare compliance expertise into adjacent industries or roles, analyzing market demand, skill transferability, compensation potential, and career advancement opportunities" matthew_context_provider enhanced_agent_enforcer decision_simplifier
@@ -125,7 +125,7 @@ mirador-ez chain "Create comprehensive professional development plan for healthc
 mirador-ez chain "Design strategic networking plan for healthcare compliance professional in Louisville Metro area, including industry associations, local business groups, professional events, and online community engagement for career advancement" matthew_context_provider louisville_expert_v2 enhanced_agent_enforcer
 
 # Performance Optimization
-mirador-ez chain "Optimize current role performance and visibility at Humana to position for promotion opportunities, including project leadership, process improvement initiatives, and strategic contributions that demonstrate management potential" matthew_context_provider enhanced_agent_enforcer decision_simplifier
+mirador-ez chain "Optimize current role performance and visibility at Company to position for promotion opportunities, including project leadership, process improvement initiatives, and strategic contributions that demonstrate management potential" matthew_context_provider enhanced_agent_enforcer decision_simplifier
 ```
 
 ---
@@ -247,7 +247,7 @@ mirador-ez chain "Compare aggressive wealth building approach (maximum leverage,
 # Career Risk Assessment
 mirador-ez chain "Analyze career risks and mitigation strategies for healthcare compliance professional considering consulting business, including industry changes, regulatory shifts, economic downturns, and personal circumstances" matthew_context_provider enhanced_agent_enforcer decision_simplifier
 
-# Investment Risk Management
+# Investment Current Department
 mirador-ez chain "Develop comprehensive risk management strategy for real estate investment portfolio, including market risk, tenant risk, financing risk, and personal financial security considerations" matthew_context_provider financial_planning_expert_v6 enhanced_agent_enforcer
 ```
 
@@ -394,7 +394,7 @@ mirador-ez chain "Develop emergency financial response plan for unexpected job l
 ### Quick Strategic Analysis
 ```bash
 # Rapid Opportunity Evaluation
-mirador-ez ask decision_simplifier "Should I accept consulting project offer worth $15k requiring 3 months part-time work while maintaining full-time Humana position, considering time constraints and career goals?"
+mirador-ez ask decision_simplifier "Should I accept consulting project offer worth $15k requiring 3 months part-time work while maintaining full-time Company position, considering time constraints and career goals?"
 
 # Fast Decision Framework
 mirador-ez ask enhanced_agent_enforcer "Provide decision framework for evaluating unexpected opportunities or challenges that require quick response while maintaining alignment with long-term goals"

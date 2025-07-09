@@ -8,12 +8,12 @@
 ### Power/Interest Grid
 ```
 HIGH POWER    │ Blockers          │ Champions
-              │ • IT Security     │ • Dalia Powers
-              │ • Procurement     │ • Japan Mehta
-              │ • Legal          │ • Star Ratings Team
+              │ • IT Security     │ • Senior Executive
+              │ • Procurement     │ • Technology Leader
+              │ • Legal          │ • Quality Metrics Team
 ──────────────┼───────────────────┼─────────────────────
               │ Monitor           │ Supporters
-              │ • Vendor Partners │ • Mike Searcy
+              │ • Vendor Partners │ • Team Colleague
 LOW POWER     │ • Traditional IT  │ • Risk Team
               │ • Skeptics       │ • Innovation Advocates
               └───────────────────┴─────────────────────
@@ -40,7 +40,7 @@ LOW POWER     │ • Traditional IT  │ • Risk Team
 **Status**: Under pressure for improvement
 **Leverage**: Mirador directly addresses their pain
 **Approach**: Show measurable consistency gains
-**Message**: "Automated consistency = higher Star Ratings"
+**Message**: "Automated consistency = higher Quality Metrics"
 
 ### ⚠️ IT SECURITY
 **Status**: Potential blocker, risk-averse
@@ -59,8 +59,8 @@ LOW POWER     │ • Traditional IT  │ • Risk Team
 ## 🤝 BUILDING YOUR COALITION
 
 ### Inner Circle (First Movers)
-1. **Mike Searcy** - Fellow Advocate, understands barriers
-2. **Risk Management Team** - Direct beneficiaries
+1. **Team Colleague** - Fellow Advocate, understands barriers
+2. **Current Department Team** - Direct beneficiaries
 3. **Innovation Advocates** - Natural allies
 4. **Pilot Department Heads** - Need their wins
 
@@ -83,7 +83,7 @@ LOW POWER     │ • Traditional IT  │ • Risk Team
 ### Common Objections & Responses
 
 **"Not Invented Here"**
-- Response: "It WAS invented here - by me, a Humana associate"
+- Response: "It WAS invented here - by me, a Company associate"
 - Evidence: Show development history
 - Pivot: "This proves our internal talent"
 
@@ -98,7 +98,7 @@ LOW POWER     │ • Traditional IT  │ • Risk Team
 - Pivot: "This maximizes those investments"
 
 **"Too Good to Be True"**
-- Response: "That's what Risk Management thought"
+- Response: "That's what Current Department thought"
 - Evidence: Live demonstration
 - Pivot: "Let's pilot in your area"
 
@@ -161,7 +161,7 @@ Matthew
 - "Oh, this? Just something I built..."
 
 ### The Strategic Leak
-- Share success with Mike Searcy
+- Share success with Team Colleague
 - Let him mention it to others
 - Build organic buzz
 - Create demand before formal reveal
@@ -202,7 +202,7 @@ Matthew
 
 ### If Politics Get Toxic
 - Focus on patient/member impact
-- Return to Humana values
+- Return to Company values
 - Document business value
 - Let results speak
 
@@ -212,7 +212,7 @@ Matthew
 
 ### Creating Urgency
 - "Competitors are building this"
-- "Star Ratings window is closing"
+- "Quality Metrics window is closing"
 - "Other departments want to pilot"
 - "Japan needs early wins"
 
@@ -246,10 +246,10 @@ political_capital = {
 
 ### Stakeholder Temperature Check
 ```
-Dalia Powers:      🟢 Warm (align with vision)
-Japan Mehta:       🟡 Neutral (needs approach)
+Senior Executive:      🟢 Warm (align with vision)
+Technology Leader:       🟡 Neutral (needs approach)
 IT Security:       🟡 Cautious (needs evidence)
-Star Ratings:      🟢 Interested (clear value)
+Quality Metrics:      🟢 Interested (clear value)
 Procurement:       🔴 Cold (sees threat)
 Risk Team:         🟢 Hot (active users)
 ```
@@ -294,7 +294,7 @@ Risk Team:         🟢 Hot (active users)
 **Redirect**: "Exactly why I built orchestration, not another tool."
 
 **Attack**: "This is your pet project"
-**Redirect**: "It's Risk Management's productivity solution. Want one for your team?"
+**Redirect**: "It's Current Department's productivity solution. Want one for your team?"
 
 ### Preempting Objections
 - "You might be wondering about security..."
@@ -371,7 +371,7 @@ Risk Team:         🟢 Hot (active users)
 
 When all else fails, remember:
 
-**"I built this because I believe in Humana's mission and our associates' potential. If there's a better way to achieve 97% efficiency while empowering our people, I'm all ears. Until then, let me show you what's possible."**
+**"I built this because I believe in Company's mission and our associates' potential. If there's a better way to achieve 97% efficiency while empowering our people, I'm all ears. Until then, let me show you what's possible."**
 
 Then do the demo. Results overcome politics.
 
@@ -379,4 +379,4 @@ Then do the demo. Results overcome politics.
 
 *"In politics, as in technology, the best solution is the one that makes everyone look good."*
 
-**Navigate wisely. Build coalitions. Transform Humana.** 🚀
+**Navigate wisely. Build coalitions. Transform Company.** 🚀

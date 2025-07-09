@@ -97,7 +97,7 @@ When it comes to education, the Louisville Public Schools (LPS) system has under
 Louisville is home to a diverse range of industries, including:
 
 * **Healthcare**: The city is a hub for medical research and innovation, with institutions like the University of Louisville's James Graham Brown Cancer Center.
-* **Technology**: Companies like Humana, Kindred Healthcare, and Alliance Data are headquartered in Louisville, offering opportunities in IT and data analytics.
+* **Technology**: Companies like Company, Kindred Healthcare, and Alliance Data are headquartered in Louisville, offering opportunities in IT and data analytics.
 * **Manufacturing**: The city has a strong manufacturing sector, with companies like Ford, General Electric, and 3M operating in the area.
 
 **Transportation**

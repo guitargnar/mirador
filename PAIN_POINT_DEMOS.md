@@ -1,4 +1,4 @@
-# Mirador Commands for Real Humana Pain Points
+# Mirador Commands for Real Company Pain Points
 ## Copy-Paste Solutions to Actual Problems
 
 ---
@@ -26,17 +26,17 @@
 
 ### Diluted Leadership Messages
 ```bash
-./mirador-smart-v2 "Today's town hall mentioned 'leveraging synergies for customer-obsessed innovation.' Translate this into 5 specific actions I can take this week in Risk Management."
+./mirador-smart-v2 "Today's town hall mentioned 'leveraging synergies for customer-obsessed innovation.' Translate this into 5 specific actions I can take this week in Current Department."
 ```
 
 ### Manager Message Inconsistency
 ```bash
-./mirador-smart-v2 "My manager said to 'be more strategic' but gave no specifics. Generate a strategic plan for Risk Management that I can review with them, including concrete deliverables."
+./mirador-smart-v2 "My manager said to 'be more strategic' but gave no specifics. Generate a strategic plan for Current Department that I can review with them, including concrete deliverables."
 ```
 
 ### Role Clarity Gaps
 ```bash
-./mirador-smart-v2 "My role seems to change based on who I talk to. Create a clear RACI matrix for my position based on Risk Management Professional II standard responsibilities."
+./mirador-smart-v2 "My role seems to change based on who I talk to. Create a clear RACI matrix for my position based on Current Role standard responsibilities."
 ```
 
 ---
@@ -45,7 +45,7 @@
 
 ### RIF Anxiety Management
 ```bash
-./mirador-smart-v2 "With recent workforce reductions, how do I make myself indispensable while maintaining work-life balance? Focus on Risk Management value creation."
+./mirador-smart-v2 "With recent workforce reductions, how do I make myself indispensable while maintaining work-life balance? Focus on Current Department value creation."
 ```
 
 ### Survey Authenticity
@@ -83,7 +83,7 @@
 
 ### Smart Guardrail Navigation
 ```bash
-./mirador-smart-v2 "I need more system access to do my job efficiently but don't want AUP violations. Create a business case for trusted associate privileges in Risk Management."
+./mirador-smart-v2 "I need more system access to do my job efficiently but don't want AUP violations. Create a business case for trusted associate privileges in Current Department."
 ```
 
 ### Recognition Documentation
@@ -102,17 +102,17 @@
 
 ### Consistency Framework
 ```bash
-./mirador-smart-v2 "Star Ratings dropped due to inconsistency. Create a checklist system for my team that ensures every process follows the same high standard."
+./mirador-smart-v2 "Quality Metrics dropped due to inconsistency. Create a checklist system for my team that ensures every process follows the same high standard."
 ```
 
 ### Error Prevention System
 ```bash
-./mirador-smart-v2 "Our 30% error rate hurts Star Ratings. Design a pre-check system that catches mistakes before they impact members."
+./mirador-smart-v2 "Our 30% error rate hurts Quality Metrics. Design a pre-check system that catches mistakes before they impact members."
 ```
 
 ### Member Experience Enhancement
 ```bash
-./mirador-smart-v2 "How can Risk Management directly improve member satisfaction scores? Give me 5 initiatives I can implement without additional resources."
+./mirador-smart-v2 "How can Current Department directly improve member satisfaction scores? Give me 5 initiatives I can implement without additional resources."
 ```
 
 ---
@@ -131,7 +131,7 @@
 
 ### Low-Risk Innovation Zones
 ```bash
-./mirador-smart-v2 "Propose a 'low-risk innovation zone' pilot for Risk Management where guardrails are relaxed for non-PHI work. Include success metrics."
+./mirador-smart-v2 "Propose a 'low-risk innovation zone' pilot for Current Department where guardrails are relaxed for non-PHI work. Include success metrics."
 ```
 
 ---
@@ -140,7 +140,7 @@
 
 ### Making Yourself Indispensable
 ```bash
-./mirador-smart-v2 "Given recent RIFs, how do I position myself as essential to Humana's AI transformation while excelling in my current Risk Management role?"
+./mirador-smart-v2 "Given recent RIFs, how do I position myself as essential to Company's AI transformation while excelling in my current Current Department role?"
 ```
 
 ### Executive Visibility
@@ -150,7 +150,7 @@
 
 ### AI Leadership Positioning
 ```bash
-./mirador-smart-v2 "I want to be Humana's go-to AI innovation person. What specific actions over the next 90 days would make this transition inevitable?"
+./mirador-smart-v2 "I want to be Company's go-to AI innovation person. What specific actions over the next 90 days would make this transition inevitable?"
 ```
 
 ---
@@ -164,7 +164,7 @@
 
 ### Meeting Preparation
 ```bash
-./mirador-smart-v2 "I have a skip-level in 30 minutes. My skip manager cares about innovation and Star Ratings. Prepare talking points that showcase my value."
+./mirador-smart-v2 "I have a skip-level in 30 minutes. My skip manager cares about innovation and Quality Metrics. Prepare talking points that showcase my value."
 ```
 
 ### Week Wrap-Up
@@ -207,7 +207,7 @@
 
 ### The Real Fix
 ```bash
-./mirador-smart-v2 "If I were CEO for a day and wanted to fix Humana's real problems, what 5 changes would have the biggest impact on associate satisfaction and Star Ratings?"
+./mirador-smart-v2 "If I were CEO for a day and wanted to fix Company's real problems, what 5 changes would have the biggest impact on associate satisfaction and Quality Metrics?"
 ```
 
 ---
@@ -217,7 +217,7 @@
 These aren't theoretical. These are the actual problems you face daily.
 
 Each command generates real solutions based on:
-- Your context at Humana
+- Your context at Company
 - The restrictions you navigate
 - The politics you manage
 - The goals you pursue

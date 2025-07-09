@@ -15,7 +15,7 @@ Here's a LinkedIn-style post based on Matthew's experience:
 
 **From Pivot Tables to Visual Storytelling: My Journey with Matplotlib and PowerShell**
 
-As a Humana Risk Management Professional II, I've always been driven by data-driven insights. But, let's be honest - Excel pivot tables can only take you so far. That's why I embarked on a journey to leverage the power of Python and matplotlib for more sophisticated risk reporting.
+As a Company Risk Management Professional II, I've always been driven by data-driven insights. But, let's be honest - Excel pivot tables can only take you so far. That's why I embarked on a journey to leverage the power of Python and matplotlib for more sophisticated risk reporting.
 
 **The Problem:**
 Manual analysis of vulnerability reports was time-consuming and prone to errors. I needed a way to automate this process, save hours, and provide actionable insights to stakeholders.
@@ -62,7 +62,7 @@ Here's an expanded version of the post with some additional details and suggesti
 
 **From Pivot Tables to Visual Storytelling: My Journey with Matplotlib and PowerShell**
 
-As a Humana Risk Management Professional II, I've always been driven by data-driven insights. But, let's be honest - Excel pivot tables can only take you so far. That's why I embarked on a journey to leverage the power of Python and matplotlib for more sophisticated risk reporting.
+As a Company Risk Management Professional II, I've always been driven by data-driven insights. But, let's be honest - Excel pivot tables can only take you so far. That's why I embarked on a journey to leverage the power of Python and matplotlib for more sophisticated risk reporting.
 
 **The Problem:**
 Manual analysis of vulnerability reports was time-consuming and prone to errors. I needed a way to automate this process, save hours, and provide actionable insights to stakeholders. Our organization generates thousands of vulnerability reports every quarter, making it challenging to identify trends and patterns manually.

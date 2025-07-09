@@ -27,7 +27,7 @@ Test Focus: Real-world scenarios based on Matthew Scott's actual situation
 
 MATTHEW'S CONTEXT (from PDF):
 - Single father, Louisville KY
-- Humana Risk Management Professional II (10 years)
+- Company Current Role (10 years)
 - Musician (Annapurna band, lead guitarist)
 - Built 89-model AI system in 8 weeks (2025)
 - Co-authored Mirador technical paper
@@ -103,7 +103,7 @@ run_practical_test() {
 run_practical_test \
     "Single Father Balance" \
     "life_optimization" \
-    "As a single father working full-time at Humana while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?" \
+    "As a single father working full-time at Company while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?" \
     "father child balance career music"
 
 # 2. Financial Real Estate Investment Strategy
@@ -117,8 +117,8 @@ run_practical_test \
 run_practical_test \
     "AI Innovation Leadership Transition" \
     "business_acceleration" \
-    "I've built an 89-model AI system and co-authored the Mirador technical paper while working in risk management at Humana. How do I transition into a formal AI innovation leadership role, either within Humana or through a new venture?" \
-    "AI leadership transition career innovation Humana"
+    "I've built an 89-model AI system and co-authored the Mirador technical paper while working in risk management at Company. How do I transition into a formal AI innovation leadership role, either within Company or through a new venture?" \
+    "AI leadership transition career innovation Company"
 
 # 4. Music and Technology Integration
 run_practical_test \
@@ -155,11 +155,11 @@ run_practical_test \
     "I built my AI system with privacy-first principles - all models run locally, no third-party data sharing. How do I maintain this approach while scaling for business applications?" \
     "privacy local models data protection scaling"
 
-# 9. Risk Management to Innovation Transition
+# 9. Current Department to Innovation Transition
 run_practical_test \
-    "Risk Management Skills Transfer" \
+    "Current Department Skills Transfer" \
     "strategic_synthesis" \
-    "How do I leverage my 10 years of risk management expertise at Humana to strengthen my AI innovation work? What transferable skills make me uniquely positioned in this space?" \
+    "How do I leverage my 10 years of risk management expertise at Company to strengthen my AI innovation work? What transferable skills make me uniquely positioned in this space?" \
     "risk management skills transfer innovation expertise positioning"
 
 # 10. Creative Collaboration Optimization
@@ -195,7 +195,7 @@ The tests focus on Matthew Scott's actual situation as documented in the PDF:
    - Career transition from risk management to AI leadership
 
 2. Professional Opportunities:
-   - Leverage 10-year Humana experience
+   - Leverage 10-year Company experience
    - Scale Mirador framework commercially
    - Build privacy-first AI solutions
 

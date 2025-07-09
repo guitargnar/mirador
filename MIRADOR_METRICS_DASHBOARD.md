@@ -39,7 +39,7 @@ Week 12: ██████████ 55 executions/day (projected)
 
 ### Department Adoption
 ```
-Risk Management     ██████████ 100% (Pilot)
+Current Department     ██████████ 100% (Pilot)
 Clinical Operations ████░░░░░░  40% (Testing)
 Member Services     ██░░░░░░░░  20% (Interest)
 IT Security        ███░░░░░░░  30% (Evaluating)
@@ -50,7 +50,7 @@ Finance            █░░░░░░░░░  10% (Watching)
 
 ## 💰 FINANCIAL IMPACT TRACKER
 
-### Current State (Risk Management Only)
+### Current State (Current Department Only)
 ```yaml
 Weekly Metrics:
   Hours_Saved: 30
@@ -97,7 +97,7 @@ Member Experience Impact:
 - Satisfaction: +27% (follow-up surveys)
 ```
 
-### Projected Star Ratings Improvement
+### Projected Quality Metrics Improvement
 ```
 Current State: 3.5 Stars
 With 5 Depts:  3.7 Stars (+0.2)
@@ -126,7 +126,7 @@ const modelMetrics = {
     accuracy_score: 0.94,
     user_rating: 4.8
   },
-  "humana_innovation_catalyst": {
+  "company_innovation_catalyst": {
     usage_count: 156,
     avg_response_time: "6.1s",
     accuracy_score: 0.92,
@@ -238,7 +238,7 @@ alerts:
 
 ## 📊 DEPARTMENT-SPECIFIC DASHBOARDS
 
-### Risk Management Dashboard
+### Current Department Dashboard
 ```
 Daily Vulnerabilities Processed: 127
 Average Processing Time: 2.3 min (was 18 min)
@@ -270,7 +270,7 @@ Patient Satisfaction: +12%
 ### Monthly Impact Stories
 - **June**: Risk team avoided potential $2M compliance fine
 - **July**: Innovation identified saved $150K annually
-- **August**: Star Ratings pilot showed 0.2 improvement potential
+- **August**: Quality Metrics pilot showed 0.2 improvement potential
 
 ---
 
@@ -329,7 +329,7 @@ Ready to scale? ✓ YES
 ```
 
 ### The Executive Elevator Pitch
-"In 6 months, Mirador has saved 780 hours, prevented 95% of errors, and generated $39,000 in value - with zero budget and zero security incidents. Scaled across Humana, that's $39M annually."
+"In 6 months, Mirador has saved 780 hours, prevented 95% of errors, and generated $39,000 in value - with zero budget and zero security incidents. Scaled across Company, that's $39M annually."
 
 ---
 
@@ -404,7 +404,7 @@ DECISION NEEDED:
 
 ### Demo URL Structure
 ```
-https://mirador-metrics.humana.internal
+https://mirador-metrics.company.internal
 ├── /executive    (high-level KPIs)
 ├── /financial    (ROI calculations)
 ├── /technical    (system performance)

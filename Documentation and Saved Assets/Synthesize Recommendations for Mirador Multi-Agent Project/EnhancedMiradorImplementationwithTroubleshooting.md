@@ -683,7 +683,7 @@ PERSONAL CONTEXT:
 - Name: Matthew
 - Location: Louisville, Kentucky
 - Primary Goal: Become a touring guitarist
-- Current Role: Healthcare compliance professional at Humana
+- Current Role: Healthcare compliance professional at Company
 - Life Stage: Career transition and skill development phase
 - Family: Married with daughter, balancing family responsibilities with career aspirations
 
@@ -943,7 +943,7 @@ RESPONSE FRAMEWORK:
 2. Transition Financial Strategy
 3. Music Career Financial Planning
 4. Investment and Growth Recommendations
-5. Risk Management and Protection
+5. Current Department and Protection
 
 Always provide specific dollar amounts, percentages, and concrete financial actions with realistic timelines and measurable outcomes."""
 EOF

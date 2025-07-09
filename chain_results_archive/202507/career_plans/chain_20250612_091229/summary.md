@@ -76,7 +76,7 @@ The healthcare sector is experiencing significant growth in Louisville, driven b
 	+ Key employers: University of Louisville Health System, Jewish Hospital, St. Joseph Health System
 * **Medical Biller/Coder:** $40,000 - $60,000 per year
 	+ Required skills: Post-secondary certificate or associate's degree in medical billing and coding (e.g., ICD-10, CPT), experience with ICD-10 and CPT coding systems.
-	+ Key employers: Humana, Kindred Healthcare, Baptist Health
+	+ Key employers: Company, Kindred Healthcare, Baptist Health
 
 **Compliance Sector:**
 
@@ -84,7 +84,7 @@ The compliance sector is also experiencing significant growth in Louisville, dri
 
 * **Compliance Officer:** $60,000 - $90,000 per year
 	+ Required skills: Bachelor's degree in a related field (e.g., law, business), experience with regulatory compliance (e.g., HIPAA, OSHA), and strong analytical skills.
-	+ Key employers: Humana, Kindred Healthcare, Baptist Health
+	+ Key employers: Company, Kindred Healthcare, Baptist Health
 * **Risk Management Specialist:** $70,000 - $100,000 per year
 	+ Required skills: Master's degree in risk management or a related field (e.g., business administration, public policy), experience with risk assessment and mitigation, and excellent communication skills.
 	+ Key employers: University of Louisville, Jewish Hospital, St. Joseph Health System

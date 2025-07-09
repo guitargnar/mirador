@@ -1,0 +1,10 @@
+{
+  "name": "time_liberation",
+  "description": "Comprehensive systems for maximizing productivity and time effectiveness",
+  "command": "mirador chain task_planner content_creator \"Create a comprehensive time management system for a [PROFESSION/SITUATION] to maximize productivity and focus\"",
+  "personas": [
+    "task_planner",
+    "content_creator"
+  ],
+  "notes": "This chain specializes in designing personalized time management systems. The task_planner develops the productivity framework while the content_creator creates an implementation guide with clear steps and habit formation strategies."
+}

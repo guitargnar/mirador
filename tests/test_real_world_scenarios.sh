@@ -50,7 +50,7 @@ test_scenario() {
     echo -e "\n${GREEN}Executing...${NC}"
     local start_time=$(date +%s)
     
-    if timeout $TIMEOUT bash -c "cd '$PROJECT_ROOT' && ./humana_chain_runner.sh $chain_type '$prompt' > '$log_file' 2>&1"; then
+    if timeout $TIMEOUT bash -c "cd '$PROJECT_ROOT' && ./company_chain_runner.sh $chain_type '$prompt' > '$log_file' 2>&1"; then
         local end_time=$(date +%s)
         local duration=$((end_time - start_time))
         echo -e "${GREEN}✅ Success${NC} (${duration}s)"
@@ -102,21 +102,21 @@ run_strategic_scenarios() {
     test_scenario \
         "Department Expansion Analysis" \
         "innovation_discovery" \
-        "Risk Management automation saved 75% time. Looking at Claims Processing, Provider Relations, and Member Services - which department should be next for automation? Consider political feasibility and Star Ratings impact." \
+        "Current Department automation saved 75% time. Looking at Claims Processing, Provider Relations, and Member Services - which department should be next for automation? Consider political feasibility and Quality Metrics impact." \
         "04_expansion_analysis"
     
     # Scenario 5: ROI Calculation
     test_scenario \
         "Enterprise ROI Modeling" \
         "solution_design" \
-        "Calculate ROI if we scale automation to Claims (200 people), Provider Relations (150 people), Member Services (300 people). Include hours saved, cost reduction, and Star Ratings impact." \
+        "Calculate ROI if we scale automation to Claims (200 people), Provider Relations (150 people), Member Services (300 people). Include hours saved, cost reduction, and Quality Metrics impact." \
         "05_roi_calculation"
     
     # Scenario 6: Coalition Building
     test_scenario \
         "Strategic Coalition Building" \
         "advocates_strategy" \
-        "Current allies: Mike Searcy, Lisa Chen. Potential supporters: Tom Rodriguez, Sarah Williams. How do I build critical mass for innovation adoption without triggering resistance?" \
+        "Current allies: Team Colleague, Lisa Chen. Potential supporters: Tom Rodriguez, Sarah Williams. How do I build critical mass for innovation adoption without triggering resistance?" \
         "06_coalition_building"
 }
 
@@ -128,7 +128,7 @@ run_advanced_scenarios() {
     test_scenario \
         "Executive Visibility Strategy" \
         "ai_leadership" \
-        "I need to get on the CDO's radar within 30 days. He cares about digital transformation and Star Ratings. Create a visibility plan that feels organic." \
+        "I need to get on the CDO's radar within 30 days. He cares about digital transformation and Quality Metrics. Create a visibility plan that feels organic." \
         "07_executive_positioning"
     
     # Scenario 8: Opposition Handling
@@ -220,10 +220,10 @@ main() {
         exit 1
     fi
     
-    # Check if humana_chain_runner.sh exists
-    if [ ! -f "$PROJECT_ROOT/humana_chain_runner.sh" ]; then
-        echo -e "\n${RED}❌ ERROR: humana_chain_runner.sh not found!${NC}"
-        echo "Expected location: $PROJECT_ROOT/humana_chain_runner.sh"
+    # Check if company_chain_runner.sh exists
+    if [ ! -f "$PROJECT_ROOT/company_chain_runner.sh" ]; then
+        echo -e "\n${RED}❌ ERROR: company_chain_runner.sh not found!${NC}"
+        echo "Expected location: $PROJECT_ROOT/company_chain_runner.sh"
         exit 1
     fi
     

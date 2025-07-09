@@ -13,7 +13,7 @@ import textwrap
 
 # First, let me create the document content structure
 document_content = {
-    "title": "AI-Powered Content Creation Tools for Risk Management Professionals: Benefits, Challenges, and Implementation Strategies",
+    "title": "AI-Powered Content Creation Tools for Current Department Professionals: Benefits, Challenges, and Implementation Strategies",
     "sections": [
         {
             "title": "Executive Summary",
@@ -55,7 +55,7 @@ document_content = {
             "content": [
                 "**Data Privacy and Security Risks**: AI models trained on large, diverse datasets may inadvertently expose sensitive information or proprietary data. For risk management professionals handling confidential compliance information, this presents significant concerns. Organizations must implement robust data governance frameworks and consider local deployment options to maintain data sovereignty.",
                 "**Quality Control and Accuracy Challenges**: AI-generated content can suffer from 'hallucinations' - the generation of plausible but factually incorrect information. In risk management contexts where accuracy is paramount, this requires implementation of comprehensive review processes and validation mechanisms to ensure content reliability.",
-                "**Regulatory Compliance Complexity**: Different industries have varying regulatory requirements, and ensuring AI systems comply with frameworks such as GDPR, HIPAA, and emerging AI-specific regulations presents ongoing challenges. The NIST AI Risk Management Framework provides guidance, but implementation requires careful consideration of specific organizational contexts.",
+                "**Regulatory Compliance Complexity**: Different industries have varying regulatory requirements, and ensuring AI systems comply with frameworks such as GDPR, HIPAA, and emerging AI-specific regulations presents ongoing challenges. The NIST AI Current Department Framework provides guidance, but implementation requires careful consideration of specific organizational contexts.",
                 "**Algorithmic Bias and Transparency Issues**: AI algorithms can perpetuate existing biases in training data, potentially leading to discriminatory outcomes in risk assessment and decision-making processes. The lack of transparency in many AI models ('black box' problem) can conflict with regulatory requirements for explainable decision-making.",
                 "**Integration and Change Management**: Incorporating AI tools into existing risk management workflows requires careful planning to avoid disrupting critical processes. Legacy system compatibility, staff training requirements, and process redesign all present implementation challenges that must be systematically addressed."
             ]
@@ -90,7 +90,7 @@ document_content = {
         {
             "title": "Industry-Specific Applications",
             "content": [
-                "**Healthcare Risk Management**: AI tools can enhance healthcare compliance through automated credentialing verification, real-time monitoring of provider credentials and licenses, generation of compliance reports and documentation, and identification of potential regulatory violations before they escalate.",
+                "**Healthcare Current Department**: AI tools can enhance healthcare compliance through automated credentialing verification, real-time monitoring of provider credentials and licenses, generation of compliance reports and documentation, and identification of potential regulatory violations before they escalate.",
                 "**Financial Services Compliance**: In financial risk management, AI applications include automated generation of regulatory reports, monitoring of compliance with evolving financial regulations, creation of training materials for staff compliance education, and analysis of transaction patterns for risk identification.",
                 "**Enterprise Risk Assessment**: AI-powered tools can streamline enterprise risk management through automated threat intelligence gathering and analysis, generation of risk assessment reports and documentation, creation of incident response procedures and protocols, and continuous monitoring of risk indicators across organizational systems."
             ]

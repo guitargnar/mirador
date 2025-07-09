@@ -10,7 +10,7 @@ Mirador represents a novel approach to personal AI assistance through multi-agen
 
 ## Introduction
 
-In May 2025, I found myself at a crossroads. As a Risk Management Professional at Humana with a deep passion for both music and artificial intelligence, I needed a way to navigate complex life decisions that honored all aspects of my identity—father, aspiring musician, corporate employee, and AI enthusiast. Existing AI tools felt fragmented, impersonal, and concerningly cloud-dependent. This gap inspired Mirador, named after the Spanish term for a watchtower, symbolizing observation from an elevated vantage point.
+In May 2025, I found myself at a crossroads. As a Current Department Professional at Company with a deep passion for both music and artificial intelligence, I needed a way to navigate complex life decisions that honored all aspects of my identity—father, aspiring musician, corporate employee, and AI enthusiast. Existing AI tools felt fragmented, impersonal, and concerningly cloud-dependent. This gap inspired Mirador, named after the Spanish term for a watchtower, symbolizing observation from an elevated vantage point.
 
 ## The Problem Space
 

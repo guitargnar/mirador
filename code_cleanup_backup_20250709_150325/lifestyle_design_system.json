@@ -1,0 +1,29 @@
+{
+  "name": "lifestyle_design_system",
+  "description": "Holistic system for designing ideal lifestyle combining productivity, finance, and wellbeing",
+  "steps": [
+    {
+      "name": "time_system",
+      "domain": "productivity",
+      "command": "mirador chain task_planner content_creator \"Create a comprehensive time management system for [PROFESSION/SITUATION] that maximizes productivity while ensuring work-life balance\"",
+      "personas": ["task_planner", "content_creator"],
+      "output_file": "time_system.md"
+    },
+    {
+      "name": "income_strategy",
+      "domain": "business",
+      "command": "mirador chain creative_entrepreneur content_creator \"Create an income expansion strategy for a [PROFESSION] that optimizes for both earnings and lifestyle flexibility\"",
+      "personas": ["creative_entrepreneur", "content_creator"],
+      "output_file": "income_strategy.md"
+    },
+    {
+      "name": "financial_plan",
+      "domain": "finance",
+      "command": "mirador chain creative_entrepreneur task_planner \"Create a wealth-building plan that supports a lifestyle with [PRIORITIES FROM PREVIOUS OUTPUTS]\"",
+      "personas": ["creative_entrepreneur", "task_planner"],
+      "output_file": "wealth_building_plan.md"
+    }
+  ],
+  "execution_notes": "Run these steps sequentially, incorporating insights from each step into subsequent ones. The goal is to create an integrated lifestyle system where time, work, and finances are aligned with personal values and goals.",
+  "combined_command": "For a quick version, run: mirador chain creative_entrepreneur task_planner \"Design a comprehensive lifestyle system for a [PROFESSION] that optimizes time, income, and finances for maximum freedom and fulfillment\""
+}

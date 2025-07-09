@@ -1,4 +1,4 @@
-# Requirements for Humana Advocates Program Solution
+# Requirements for Company Advocates Program Solution
 
 # Core Python packages
 flask>=2.0.0           # Web dashboard

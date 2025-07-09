@@ -78,7 +78,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ### Model Types
 1. **Context Provider**: `matthew_context_provider_v4_accurate`
    - Real personal/professional context
-   - Louisville, family, Humana background
+   - Louisville, family, Company background
    - Financial situation and goals
 
 2. **Specialist Models**: 
@@ -115,13 +115,13 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ### Example Commands
 ```bash
 # Single father work-life balance
-./mirador_universal_runner.sh life_optimization "How do I balance being a single father, working at Humana, playing music with Annapurna, and developing AI innovations?"
+./mirador_universal_runner.sh life_optimization "How do I balance being a single father, working at Company, playing music with Annapurna, and developing AI innovations?"
 
 # Real estate investment strategy
 ./mirador_universal_runner.sh business_acceleration "I have $91K home equity and $1,650 take-home pay. What's my optimal real estate investment strategy?"
 
 # AI career transition
-./mirador_universal_runner.sh business_acceleration "How do I transition from risk management to AI innovation leadership at Humana?"
+./mirador_universal_runner.sh business_acceleration "How do I transition from risk management to AI innovation leadership at Company?"
 ```
 
 ---
@@ -132,7 +132,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 **Purpose**: Provides accurate personal and professional context for Matthew Scott
 **Context Includes**:
 - Location: Louisville, Kentucky
-- Role: Single father, Humana Senior Risk Management Professional II
+- Role: Single father, Company Senior Current Role
 - Music: Lead guitarist in Annapurna band
 - AI Innovation: 89-model system creator, Mirador co-author
 - Financial: ~$1,650/paycheck, $91K home equity
@@ -216,12 +216,12 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 
 ### Career Transition Example  
 ```bash
-./mirador_universal_runner.sh strategic_synthesis "I've spent 10 years in risk management at Humana and just built an 89-model AI system. How do I position myself for AI innovation leadership while leveraging my compliance and risk expertise?"
+./mirador_universal_runner.sh strategic_synthesis "I've spent 10 years in risk management at Company and just built an 89-model AI system. How do I position myself for AI innovation leadership while leveraging my compliance and risk expertise?"
 ```
 
 **Expected Output**: Career transition plan including:
 - Transferable skills identification
-- Internal positioning strategy at Humana
+- Internal positioning strategy at Company
 - External opportunity development
 - Timeline and milestone planning
 
@@ -276,7 +276,7 @@ mirador/
 
 ### Legacy Organization
 - `Documentation and Saved Assets/` - Historical versions
-- `humana_chain_runner.sh` - Legacy Humana-specific runner
+- `company_chain_runner.sh` - Legacy Company-specific runner
 - `robust_chain_runner.sh` - Previous version chain runner
 
 ---
@@ -366,14 +366,14 @@ echo "test" | ollama run model_name
 ## Version History
 
 ### v3.0.0 (Current)
-- **Universal Platform**: Transformed from Humana-specific to multi-faceted
+- **Universal Platform**: Transformed from Company-specific to multi-faceted
 - **Accurate Context**: Based on real PDF background information
 - **Apple Silicon**: Optimized parameters for M-series chips
 - **Quality Focus**: Increased creativity and response depth
 - **Comprehensive Testing**: Real-world scenario validation
 
 ### v2.0.0 (Previous)
-- Humana-specific enterprise framework
+- Company-specific enterprise framework
 - Corporate chain types
 - Speed-optimized parameters
 

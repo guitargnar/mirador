@@ -80,7 +80,7 @@ To address these challenges, I recommend the following approach:
 
 1. **Lease Decision:** Matthew needs to decide whether to renew his girlfriend's lease or explore alternative living arrangements.
 2. **Home Purchase:** Considering the potential for a home purchase in the future, Matthew should assess his financial readiness and create a plan for saving for a down payment.
-3. **Career Development:** As a Humana Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
+3. **Career Development:** As a Company Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
 
 **Expected Outcome Prediction:**
 
@@ -134,7 +134,7 @@ To address these challenges, I recommend the following refined approach:
 
 1. **Lease Decision:** Matthew needs to decide whether to renew his girlfriend's lease or explore alternative living arrangements.
 2. **Home Purchase:** Considering the potential for a home purchase in the future, Matthew should assess his financial readiness and create a plan for saving for a down payment.
-3. **Career Development:** As a Humana Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
+3. **Career Development:** As a Company Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
 
 **Expected Outcome Prediction:**
 
@@ -196,7 +196,7 @@ To address these challenges, I recommend the following refined approach:
 
 1. **Lease Decision:** Matthew needs to decide whether to renew his girlfriend's lease or explore alternative living arrangements.
 2. **Home Purchase:** Considering the potential for a home purchase in the future, Matthew should assess his financial readiness and create a plan for saving for a down payment.
-3. **Career Development:** As a Humana Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
+3. **Career Development:** As a Company Risk Management Professional II, Matthew has opportunities for career growth and development. He should identify areas where he wants to improve his skills and create a plan for professional advancement.
 
 **Expected Outcome Prediction:**
 

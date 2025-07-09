@@ -4,14 +4,14 @@
 ---
 
 ## 📊 SLIDE 1: THE HOOK
-### "What if every Humana associate had their own AI assistant?"
+### "What if every Company associate had their own AI assistant?"
 
 **Visual**: Split screen
 - Left: Associate drowning in manual tasks
 - Right: Associate focused on strategic work while AI handles routine
 
 **Speaker Notes**: 
-"Today I'll show you how one associate's innovation could transform how all 50,000+ Humana employees work."
+"Today I'll show you how one associate's innovation could transform how all 50,000+ Company employees work."
 
 ---
 
@@ -21,14 +21,14 @@
 **The Reality**:
 - Associates spend 40% of time on routine tasks
 - Innovation happens despite systems, not because of them
-- Star Ratings suffer from inconsistent processes
+- Quality Metrics suffer from inconsistent processes
 - Digital transformation hasn't reached daily operations
 
 **The Cost**:
 - $300M+ in lost productivity annually
 - Declining associate satisfaction
 - Innovation bottlenecks
-- Star Ratings at risk
+- Quality Metrics at risk
 
 **Visual**: Heat map showing time waste across departments
 
@@ -37,7 +37,7 @@
 ## 📊 SLIDE 3: THE REVELATION
 ### Meet Mirador: AI Orchestration That Works Today
 
-**Built by**: Matthew Scott, Risk Management Professional
+**Built by**: Matthew Scott, Current Department Professional
 **Time**: 6 months of nights/weekends
 **Cost**: $0 (used only approved tools)
 **Result**: 70% → 97% efficiency improvement
@@ -53,7 +53,7 @@
 ---
 
 ## 📊 SLIDE 4: PROVEN RESULTS
-### From Pilot to Production: Risk Management Case Study
+### From Pilot to Production: Current Department Case Study
 
 **Before Mirador**:
 - 40 hours/week manual reporting
@@ -83,7 +83,7 @@
 4. System learns and improves
 
 **Why It's Different**:
-- Uses existing Humana tools (ServiceNow, etc.)
+- Uses existing Company tools (ServiceNow, etc.)
 - No PHI/PII exposure
 - Complete audit trails
 - Works on any device
@@ -97,7 +97,7 @@
 
 **Powers' Vision ✓**: "Augmented Intelligence" in action
 **Mehta's Mandate ✓**: AI-forward operations
-**Star Ratings ✓**: Consistency through automation
+**Quality Metrics ✓**: Consistency through automation
 **Cost Reduction ✓**: 75% efficiency gains
 **Culture ✓**: Associates as innovators
 
@@ -119,7 +119,7 @@
 **Medium Term** (90 days):
 - 50 teams enabled
 - 1,500 hours/week saved
-- Star Ratings improvement visible
+- Quality Metrics improvement visible
 
 **Full Scale** (180 days):
 - Enterprise deployment
@@ -139,7 +139,7 @@
 - First-mover advantage in associate AI
 - Differentiator for talent retention
 
-**The Humana Way**:
+**The Company Way**:
 - Trust over control
 - Innovation over procurement
 - Associates over vendors
@@ -185,7 +185,7 @@
 
 **Projected Returns**:
 - Year 1: $10M in productivity
-- Year 2: $25M + Star Ratings impact
+- Year 2: $25M + Quality Metrics impact
 - Year 3: $50M + industry leadership
 
 **Risk**: Minimal (already proven)
@@ -215,7 +215,7 @@
 ## 📊 SLIDE 12: SUCCESS STORIES
 ### Real Associates, Real Impact
 
-**Risk Management**: "Mirador gave me my evenings back"
+**Current Department**: "Mirador gave me my evenings back"
 **Clinical Operations**: "Finally, AI that understands healthcare"
 **Member Services**: "Consistency without rigidity"
 **IT Security**: "Compliant innovation - who knew?"
@@ -225,13 +225,13 @@
 ---
 
 ## 📊 SLIDE 13: THE VISION
-### Humana 2026: Every Associate AI-Empowered
+### Company 2026: Every Associate AI-Empowered
 
 **Imagine**:
 - New hires productive in days, not months
 - Consistent excellence across all operations
 - Innovation happening at every level
-- Humana known as THE place for AI talent
+- Company known as THE place for AI talent
 
 **Reality**: We can start tomorrow
 
@@ -240,7 +240,7 @@
 ---
 
 ## 📊 SLIDE 14: THE ASK
-### Three Decisions to Transform Humana
+### Three Decisions to Transform Company
 
 1. **Approve Mirador enterprise pilot**
    - 5 departments, 90 days
@@ -285,7 +285,7 @@
 ## 🎯 DEMO SCRIPT (10 minutes)
 
 ### Opening (1 min)
-"Let me show you Mirador in action. This is the exact system running in Risk Management today."
+"Let me show you Mirador in action. This is the exact system running in Current Department today."
 
 ### Basic Query (2 min)
 1. Show simple question: "What are today's priorities?"
@@ -323,14 +323,14 @@
 "That's why we need to institutionalize this. The innovation shouldn't depend on one person."
 
 **"How is this different from vendor solutions?"**
-"It's built by us, for us. No vendor understands Humana like Humana associates."
+"It's built by us, for us. No vendor understands Company like Company associates."
 
 ---
 
 ## 🎭 POLITICAL NAVIGATION
 
 ### Potential Allies to Prep:
-- Star Ratings team (you solve their problem)
+- Quality Metrics team (you solve their problem)
 - Innovation advocates (you prove it works)
 - Finance (you save money)
 - Associates (you empower them)
@@ -358,7 +358,7 @@
 - Scalability proof
 
 ### Success Stories Booklet
-- Risk Management case study
+- Current Department case study
 - Associate testimonials
 - Metrics dashboard
 - Future possibilities

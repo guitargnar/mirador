@@ -1,10 +1,10 @@
-Risk Management Team Meeting - January 8, 2025
+Current Department Team Meeting - January 8, 2025
 
 Attendees: Matthew, Sarah, Mike, Lisa, Tom
 
 Agenda:
 - Q1 automation progress update
-- Star Ratings impact discussion
+- Quality Metrics impact discussion
 - Resource allocation for new projects
 
 Key Points Discussed:

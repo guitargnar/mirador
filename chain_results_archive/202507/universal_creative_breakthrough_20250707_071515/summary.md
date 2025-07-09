@@ -9,15 +9,15 @@
 How do I apply the collaborative patterns I learned from Annapurna's 9-year run to scaling Mirador as a business framework?
 
 ## Final Strategic Output
-I'm glad you found my initial statement helpful. I'd be delighted to address each of your concerns and provide guidance on how to balance competing demands, share Mirador with the world while maintaining control and value, protect intellectual property, scale the framework, and optimize your role within Humana.
+I'm glad you found my initial statement helpful. I'd be delighted to address each of your concerns and provide guidance on how to balance competing demands, share Mirador with the world while maintaining control and value, protect intellectual property, scale the framework, and optimize your role within Company.
 
-**Reconciling personal goals with Humana's corporate priorities**
+**Reconciling personal goals with Company's corporate priorities**
 
-To balance your personal goals with Humana's corporate priorities, consider the following steps:
+To balance your personal goals with Company's corporate priorities, consider the following steps:
 
 1. **Re-evaluate your role**: Assess your current responsibilities and how they align with your passion for Mirador. Identify areas where you can make a greater impact or contribute more meaningfully to the company.
 2. **Communicate with your leadership**: Schedule a meeting with your supervisor or HR representative to discuss your concerns and aspirations. Be open about your desire to contribute to Mirador's growth and innovation, while also ensuring that your professional obligations are met.
-3. **Explore internal opportunities**: Look into potential roles within Humana that would allow you to leverage your expertise in AI and innovation, such as leading a research and development team or collaborating with other departments on strategic projects.
+3. **Explore internal opportunities**: Look into potential roles within Company that would allow you to leverage your expertise in AI and innovation, such as leading a research and development team or collaborating with other departments on strategic projects.
 4. **Develop a compromise**: Consider creating a side project or initiative that aligns with Mirador's goals while also meeting your professional responsibilities. This could be a part-time role or a volunteer position within the company.
 
 **Strategic partnerships or collaborations**
@@ -47,14 +47,14 @@ To scale Mirador while preserving its essence, consider the following strategies
 3. **Prioritize transparency and accountability**: Ensure that all stakeholders, including partners, collaborators, and customers, understand Mirador's goals, values, and decision-making processes.
 4. **Monitor and adapt**: Regularly assess Mirador's growth and evolution. Be prepared to make adjustments to ensure the framework remains true to its core principles.
 
-**Optimizing your role within Humana and exploring exit opportunities**
+**Optimizing your role within Company and exploring exit opportunities**
 
-To position yourself for a more innovative or leadership-oriented role within Humana, consider the following steps:
+To position yourself for a more innovative or leadership-oriented role within Company, consider the following steps:
 
 1. **Develop a personal brand**: Establish a strong online presence, including a LinkedIn profile and personal website, to showcase your expertise and achievements.
 2. **Network and build relationships**: Foster relationships with key stakeholders, including senior leaders, across the company. This will help you stay informed about opportunities and stay top of mind for future roles.
-3. **Seek out mentorship**: Find experienced professionals within Humana who can offer guidance and advice on career development and growth.
-4. **Explore external opportunities**: Consider applying for roles outside of Humana or exploring startup opportunities that align with your passions and values.
+3. **Seek out mentorship**: Find experienced professionals within Company who can offer guidance and advice on career development and growth.
+4. **Explore external opportunities**: Consider applying for roles outside of Company or exploring startup opportunities that align with your passions and values.
 
 Regarding the application of Annapurna's business framework to Mirador, I'd be happy to discuss the implications in more detail during a follow-up conversation. Please let me know if you'd like to explore this topic further.
 

@@ -20,13 +20,13 @@ I'd be happy to provide more general information about investing in the Louisvil
 
 **Investing in Louisville: A Growing Economy**
 
-Louisville is experiencing significant growth, with a diverse economy that includes industries such as healthcare, technology, and manufacturing. The city is home to several major employers, including the University of Louisville Health System, Humana, and Brown-Forman Corporation.
+Louisville is experiencing significant growth, with a diverse economy that includes industries such as healthcare, technology, and manufacturing. The city is home to several major employers, including the University of Louisville Health System, Company, and Brown-Forman Corporation.
 
 **Investment Opportunities:**
 
 1. **Real Estate:** Louisville's real estate market is relatively affordable compared to other major cities in the United States. Investors can find a range of properties, from single-family homes to commercial buildings.
 2. **Healthcare:** The healthcare industry is a significant sector in Louisville, with several major hospitals and medical centers, including University of Louisville Health System and Jewish Hospital.
-3. **Technology:** Louisville is home to a growing tech scene, with companies like Humana, Brown-Forman Corporation, and the University of Louisville's Innovation Center.
+3. **Technology:** Louisville is home to a growing tech scene, with companies like Company, Brown-Forman Corporation, and the University of Louisville's Innovation Center.
 4. **Brewing and Distilling:** The city is famous for its bourbon and beer production, with several distilleries and breweries offering tours and investment opportunities.
 
 **Incentives and Tax Credits:**

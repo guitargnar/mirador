@@ -17,7 +17,7 @@ Based on the provided context, I'll evaluate starting a compliance consulting bu
 
 **Opportunity Assessment:**
 
-1. **Market Demand:** As a Humana Risk Management Professional II, Matthew has expertise in Medicare compliance. This is a specialized field with a growing demand for consultants, particularly in the healthcare industry.
+1. **Market Demand:** As a Company Risk Management Professional II, Matthew has expertise in Medicare compliance. This is a specialized field with a growing demand for consultants, particularly in the healthcare industry.
 2. **Competition:** While there may be some competition in Louisville, the market size and growth potential suggest that starting a business with a limited budget can be viable.
 3. **Regulatory Environment:** Kentucky has a relatively relaxed regulatory environment compared to other states, which could benefit Matthew's compliance consulting services.
 
@@ -64,7 +64,7 @@ With the initial plan in place, let's dive deeper into the details of starting a
 
 **Market Analysis:**
 
-Louisville is home to several major healthcare organizations, including Humana, Kindred Healthcare, and Jewish Hospital. The city also has a growing number of medical groups, hospitals, and clinics. According to the Bureau of Labor Statistics, the healthcare industry in Louisville employs over 50,000 people, with many opportunities for compliance consulting services.
+Louisville is home to several major healthcare organizations, including Company, Kindred Healthcare, and Jewish Hospital. The city also has a growing number of medical groups, hospitals, and clinics. According to the Bureau of Labor Statistics, the healthcare industry in Louisville employs over 50,000 people, with many opportunities for compliance consulting services.
 
 **Target Market:**
 
@@ -126,7 +126,7 @@ With the initial plan in place, let's dive deeper into the details of starting a
 
 **Market Analysis:**
 
-Louisville is home to several major healthcare organizations, including Humana, Kindred Healthcare, and Jewish Hospital. The city also has a growing number of medical groups, hospitals, and clinics. According to the Bureau of Labor Statistics, the healthcare industry in Louisville employs over 50,000 people, with many opportunities for compliance consulting services.
+Louisville is home to several major healthcare organizations, including Company, Kindred Healthcare, and Jewish Hospital. The city also has a growing number of medical groups, hospitals, and clinics. According to the Bureau of Labor Statistics, the healthcare industry in Louisville employs over 50,000 people, with many opportunities for compliance consulting services.
 
 **Target Market:**
 

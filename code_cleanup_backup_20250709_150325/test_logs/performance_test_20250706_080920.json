@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-07-06T08:05:22.420899",
+  "system_info": {
+    "cpu_count": 14,
+    "cpu_freq": 4056,
+    "memory_total_gb": 36.0,
+    "platform": "darwin"
+  },
+  "tests": [
+    {
+      "name": "System Resources",
+      "result": {
+        "cpu_avg": 5.06,
+        "cpu_max": 9.3,
+        "memory_avg": 74.26,
+        "memory_max": 74.7
+      }
+    },
+    {
+      "name": "Memory Usage",
+      "result": {
+        "test": "import_memory",
+        "status": "failed",
+        "error": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    import framework\n  File \"/Users/matthewscott/Projects/mirador/framework.py\", line 416\n    (Content truncated due to size limit. Use line ranges to read in chunks)\n     ^^^^^^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?\n"
+      }
+    },
+    {
+      "name": "Startup Times",
+      "result": {
+        "test": "startup_times",
+        "results": [
+          {
+            "component": "Python framework",
+            "startup_time": 0.108,
+            "status": "success"
+          },
+          {
+            "component": "Chain runner",
+            "startup_time": 0.01,
+            "status": "success"
+          },
+          {
+            "component": "Ollama list",
+            "startup_time": 0.021,
+            "status": "success"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chain Performance",
+      "result": {
+        "chain": "strategic_synthesis",
+        "runner": "humana_chain_runner.sh",
+        "status": "failed",
+        "error": "All iterations failed"
+      }
+    },
+    {
+      "name": "Concurrent Execution",
+      "result": {
+        "test": "concurrent_chains",
+        "max_workers": 2,
+        "total_time": 112.4,
+        "chains_tested": 3,
+        "results": [
+          {
+            "runner": "humana_chain_runner.sh",
+            "chain": "strategic_synthesis",
+            "status": "error",
+            "error": ""
+          },
+          {
+            "runner": "humana_chain_runner.sh",
+            "chain": "corporate_nav",
+            "status": "success",
+            "duration": 52.4
+          },
+          {
+            "runner": "humana_chain_runner.sh",
+            "chain": "innovation_discovery",
+            "status": "error",
+            "error": "Command 'cd /Users/matthewscott/Projects/mirador && ./humana_chain_runner.sh innovation_discovery 'Concurrent test'' timed out after 60 seconds"
+          }
+        ]
+      }
+    }
+  ]
+}

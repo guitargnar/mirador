@@ -15,7 +15,7 @@ I'll provide a career analysis performance test based on Matthew's context.
 
 **Section 1: Career Goals**
 
-You are currently a Humana Risk Management Professional II with a strong focus on Medicare compliance. You've built a reputation for your expertise and have developed a valuable skill set in automation through your PowerShell script. Your goal is to establish yourself as a thought leader on LinkedIn by the end of 2025.
+You are currently a Company Risk Management Professional II with a strong focus on Medicare compliance. You've built a reputation for your expertise and have developed a valuable skill set in automation through your PowerShell script. Your goal is to establish yourself as a thought leader on LinkedIn by the end of 2025.
 
 What do you value most in your career?
 

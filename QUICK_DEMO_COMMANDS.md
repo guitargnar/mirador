@@ -4,52 +4,52 @@
 
 ### 🌅 1. Morning Strategic Planning (Test Now!)
 ```bash
-./humana_chain_runner.sh strategic_synthesis "Today is Monday. My calendar: 9am team meeting, 2pm with IT Security, 4pm Advocates meeting. Top priorities: 1) Demo automation savings, 2) Get IT approval, 3) Build innovation coalition. What are my 3 highest-leverage actions today to advance both visible wins and long-term AI leadership positioning?"
+./company_chain_runner.sh strategic_synthesis "Today is Monday. My calendar: 9am team meeting, 2pm with IT Security, 4pm Advocates meeting. Top priorities: 1) Demo automation savings, 2) Get IT approval, 3) Build innovation coalition. What are my 3 highest-leverage actions today to advance both visible wins and long-term AI leadership positioning?"
 ```
 
 ### 💡 2. Quick Win Generator (Find Immediate Value)
 ```bash
-./humana_chain_runner.sh quick_win_generator "I have 90 minutes before my next meeting. What automation can I build RIGHT NOW that would save my team time this week and impress my manager? Focus on Risk Management processes that are manual and error-prone."
+./company_chain_runner.sh quick_win_generator "I have 90 minutes before my next meeting. What automation can I build RIGHT NOW that would save my team time this week and impress my manager? Focus on Current Department processes that are manual and error-prone."
 ```
 
 ### 🎯 3. Meeting Intelligence (Prepare for Success)
 ```bash
-./humana_chain_runner.sh corporate_nav "Meeting with IT Security Director in 20 minutes about my automation tools. He's skeptical about unauthorized AI usage. How do I turn him from blocker to champion? Give me specific talking points, compliance answers, and partnership language."
+./company_chain_runner.sh corporate_nav "Meeting with IT Security Director in 20 minutes about my automation tools. He's skeptical about unauthorized AI usage. How do I turn him from blocker to champion? Give me specific talking points, compliance answers, and partnership language."
 ```
 
 ### 📊 4. ROI Calculator (Prove Your Value)
 ```bash
-./humana_chain_runner.sh solution_design "Risk Management automation saves 40 hours/week with 97% accuracy. Calculate enterprise ROI if we scale to Claims (200 people), Provider Relations (150 people), Member Services (300 people). Show Star Ratings impact, dollar savings, and create executive-ready slides."
+./company_chain_runner.sh solution_design "Current Department automation saves 40 hours/week with 97% accuracy. Calculate enterprise ROI if we scale to Claims (200 people), Provider Relations (150 people), Member Services (300 people). Show Quality Metrics impact, dollar savings, and create executive-ready slides."
 ```
 
 ### 🚀 5. Innovation Expansion (Find Next Target)
 ```bash
-./humana_chain_runner.sh innovation_discovery "Mirador conquered Risk Management. Which department next? Consider: Claims (manual Excel hell), Provider Relations (credentialing chaos), Member Services (repetitive emails), Finance (report generation nightmare). Rank by: political feasibility, Star Ratings impact, and path to AI leadership role."
+./company_chain_runner.sh innovation_discovery "Mirador conquered Current Department. Which department next? Consider: Claims (manual Excel hell), Provider Relations (credentialing chaos), Member Services (repetitive emails), Finance (report generation nightmare). Rank by: political feasibility, Quality Metrics impact, and path to AI leadership role."
 ```
 
 ### 🤝 6. Coalition Building (Create Unstoppable Momentum)
 ```bash
-./humana_chain_runner.sh advocates_strategy "Advocates meeting tomorrow. Theme: 'Innovation in Daily Work'. Current allies: Mike (Operations), Lisa (Finance). Skeptics: Bob (IT), Karen (Regional VP). How do I demo Mirador to create FOMO without triggering antibodies? Script the perfect 5-minute presentation."
+./company_chain_runner.sh advocates_strategy "Advocates meeting tomorrow. Theme: 'Innovation in Daily Work'. Current allies: Mike (Operations), Lisa (Finance). Skeptics: Bob (IT), Karen (Regional VP). How do I demo Mirador to create FOMO without triggering antibodies? Script the perfect 5-minute presentation."
 ```
 
 ### 💼 7. Executive Positioning (Get Noticed)
 ```bash
-./humana_chain_runner.sh ai_leadership "Japan Mehta (CDO) will be at the town hall Thursday. I have 30 seconds in the Q&A to make an impression. He cares about digital transformation and Star Ratings. Create the perfect question that showcases my innovation while positioning me for follow-up conversation."
+./company_chain_runner.sh ai_leadership "Technology Leader (CDO) will be at the town hall Thursday. I have 30 seconds in the Q&A to make an impression. He cares about digital transformation and Quality Metrics. Create the perfect question that showcases my innovation while positioning me for follow-up conversation."
 ```
 
 ### 🛡️ 8. Political Navigation (Handle Opposition)
 ```bash
-./humana_chain_runner.sh corporate_nav "Senior IT leader just emailed my boss questioning 'shadow IT automation tools that pose security risks.' How do I respond professionally, convert the skeptic, get IT endorsement, and maintain innovation momentum? Draft the perfect response email."
+./company_chain_runner.sh corporate_nav "Senior IT leader just emailed my boss questioning 'shadow IT automation tools that pose security risks.' How do I respond professionally, convert the skeptic, get IT endorsement, and maintain innovation momentum? Draft the perfect response email."
 ```
 
 ### 🏆 9. Success Story Creation (Build Your Brand)
 ```bash
-./humana_chain_runner.sh innovation_discovery "This week: saved 40 hours, prevented 3 compliance violations, improved accuracy to 97%, team morale up 30%. Transform into: 1) LinkedIn post (no Mirador mention), 2) Advocates newsletter story, 3) Skip-level talking points, 4) Performance review evidence."
+./company_chain_runner.sh innovation_discovery "This week: saved 40 hours, prevented 3 compliance violations, improved accuracy to 97%, team morale up 30%. Transform into: 1) LinkedIn post (no Mirador mention), 2) Advocates newsletter story, 3) Skip-level talking points, 4) Performance review evidence."
 ```
 
 ### 🎯 10. Career Acceleration (Plan Your Rise)
 ```bash
-./humana_chain_runner.sh strategic_synthesis "I want to be Humana's first VP of AI Innovation within 12 months. Current: Risk Management Professional II. Assets: Mirador success, growing coalition, executive interest. Create 90-day sprint plan with specific milestones, visibility tactics, and success metrics."
+./company_chain_runner.sh strategic_synthesis "I want to be Company's first Target Leadership Role within 12 months. Current: Current Role. Assets: Mirador success, growing coalition, executive interest. Create 90-day sprint plan with specific milestones, visibility tactics, and success metrics."
 ```
 
 ---

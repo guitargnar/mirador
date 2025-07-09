@@ -37,7 +37,7 @@ except ImportError:
 
 # Import context manager for analytics
 try:
-    from context_manager import ContextManager
+    from mirador_core.context_manager import ContextManager
     ANALYTICS_AVAILABLE = True
 except ImportError:
     ANALYTICS_AVAILABLE = False
@@ -74,7 +74,7 @@ class MiradorUnifiedDashboard:
                 "email_parser": "📧 Email Action Parser",
                 "accomplishments": "🏆 Weekly Accomplishments",
                 "cms_analyzer": "📊 CMS Guidance Analyzer",
-                "star_ratings": "⭐ Star Ratings Analyzer"
+                "star_ratings": "⭐ Quality Metrics Analyzer"
             },
             "quick_actions": [
                 ("Morning Intelligence Brief", "./morning_intelligence_brief.sh"),

@@ -1,0 +1,415 @@
+#!/usr/bin/env python3
+import argparse
+import json
+import os
+import requests
+import subprocess
+import sys
+import time
+import logging
+from typing import Dict, Optional, List, Any, Union
+
+# Import webhook handler
+from ai_framework.webhook_handler import WebhookHandler
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(f"ai_framework/logs/mirador_{time.strftime('%Y%m%d')}.log")
+    ]
+)
+logger = logging.getLogger("mirador")
+
+class AIFramework:
+    def __init__(self, config_path="ai_framework/config.json", session_id=None):
+        """
+        Initialize the AI Framework with configuration and session management.
+        
+        Args:
+            config_path: Path to the configuration JSON file
+            session_id: Optional existing session ID to load. If None, creates a new session.
+        """
+        # Create log directory if it doesn't exist
+        os.makedirs("ai_framework/logs", exist_ok=True)
+        
+        # Store config path for reference
+        self.config_path = config_path
+        
+        # Load configuration
+        with open(config_path, 'r') as f:
+            self.config = json.load(f)
+        
+        logger.info(f"Loaded configuration from {config_path}")
+        
+        # Initialize webhook handler
+        self.webhook_handler = WebhookHandler(config_path=config_path)
+        
+        # Initialize state storage
+        self.outputs = {}
+        
+        # Set or generate session ID
+        if session_id:
+            self.session_id = session_id
+            self._load_session()
+            logger.info(f"Loaded existing session: {session_id}")
+        else:
+            self.session_id = time.strftime("%Y%m%d-%H%M%S")
+            # Create output directory for this session
+            os.makedirs(f"ai_framework/outputs/{self.session_id}", exist_ok=True)
+            logger.info(f"Created new session: {self.session_id}")
+    
+    def _load_session(self) -> bool:
+        """
+        Load an existing session from disk.
+        
+        Returns:
+            bool: True if session was loaded successfully, False otherwise
+        """
+        session_dir = f"ai_framework/outputs/{self.session_id}"
+        
+        if not os.path.exists(session_dir):
+            logger.warning(f"Session directory not found: {session_dir}")
+            return False
+            
+        # Load outputs from session directory
+        for persona_id in self.config["chain_order"]:
+            output_path = f"{session_dir}/{persona_id}_output.txt"
+            input_path = f"{session_dir}/{persona_id}_input.txt"
+            
+            if os.path.exists(output_path) and os.path.exists(input_path):
+                with open(output_path, 'r') as f:
+                    output = f.read()
+                with open(input_path, 'r') as f:
+                    input_text = f.read()
+                    
+                # Reconstruct the output dictionary
+                self.outputs[persona_id] = {
+                    "input": input_text,
+                    "output": output,
+                    "elapsed": 0  # We don't know the original time, so default to 0
+                }
+                
+        return True
+    
+    def list_sessions(self) -> List[str]:
+        """
+        List all available sessions.
+        
+        Returns:
+            List[str]: List of session IDs ordered by creation date (newest first)
+        """
+        outputs_dir = "ai_framework/outputs"
+        if not os.path.exists(outputs_dir):
+            return []
+            
+        sessions = [d for d in os.listdir(outputs_dir) 
+                   if os.path.isdir(os.path.join(outputs_dir, d))]
+        # Sort by creation date (newest first)
+        sessions.sort(reverse=True)
+        return sessions
+    
+    def get_session_info(self, session_id: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Get information about a specific session.
+        
+        Args:
+            session_id: Session ID to query. If None, uses current session.
+            
+        Returns:
+            Dict containing session metadata and execution information
+        """
+        session_id = session_id or self.session_id
+        session_dir = f"ai_framework/outputs/{session_id}"
+        
+        if not os.path.exists(session_dir):
+            logger.warning(f"Session not found: {session_id}")
+            return {"error": "Session not found"}
+            
+        # Get summary if it exists
+        summary_path = f"{session_dir}/summary.md"
+        summary = ""
+        if os.path.exists(summary_path):
+            with open(summary_path, 'r') as f:
+                summary = f.read()
+                
+        # Get initial input
+        initial_input = ""
+        input_path = f"{session_dir}/initial_input.txt"
+        if os.path.exists(input_path):
+            with open(input_path, 'r') as f:
+                initial_input = f.read()
+                
+        # Get executed personas
+        executed_personas = []
+        for persona_id in self.config["chain_order"]:
+            output_path = f"{session_dir}/{persona_id}_output.txt"
+            if os.path.exists(output_path):
+                executed_personas.append(persona_id)
+                
+        # Get creation time from session ID
+        try:
+            creation_time = "-".join(session_id.split("-")[:2])
+        except:
+            creation_time = "Unknown"
+                
+        return {
+            "session_id": session_id,
+            "creation_time": creation_time,
+            "executed_personas": executed_personas,
+            "initial_input": initial_input,
+            "summary": summary
+        }
+    def run_persona(self, persona_id, input_text, interactive=True, parameters=None):
+        """
+        Run a single persona and return its output.
+        
+        Args:
+            persona_id (str): The ID of the persona to run
+            input_text (str): The input text to process
+            interactive (bool): Whether to run in interactive mode with user prompts
+            parameters (dict): Optional parameters to override defaults
+            
+        Returns:
+            str: The output text from the persona
+        """
+        if persona_id not in self.config["personas"]:
+            error_msg = f"Persona '{persona_id}' not found in configuration"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
+            
+        persona = self.config["personas"][persona_id]
+        
+        if interactive:
+            print(f"\n{'='*80}")
+            print(f"Running {persona_id.replace('_', ' ').title()} | Role: {persona['role']}")
+            print(f"{'='*80}")
+        
+        logger.info(f"Running persona: {persona_id} with model: {persona['model']}")
+        
+        # Check if this is an optional node and should be skipped
+        if interactive and persona_id in self.config["optional_nodes"]:
+            run_node = input(f"This is an optional node. Run {persona_id}? (y/n): ").lower() == 'y'
+            if not run_node:
+                print(f"Skipping {persona_id}...")
+                logger.info(f"User chose to skip optional persona: {persona_id}")
+                return input_text
+        
+        # Create prompt from template
+        prompt = persona["prompt_template"].format(input=input_text)
+        
+        # Call Ollama
+        model = persona["model"]
+        
+        if interactive:
+            print(f"Calling {model}...")
+        logger.info(f"Calling Ollama model: {model}")
+        
+        start_time = time.time()
+        
+        # Log input prompt
+        input_path = f"ai_framework/outputs/{self.session_id}/{persona_id}_input.txt"
+        with open(input_path, 'w') as f:
+            f.write(prompt)
+        
+        try:
+            # Prepare request payload
+            payload = {
+                "model": model,
+                "prompt": prompt,
+                "stream": True
+            }
+            
+            # Add any custom parameters if provided
+            if parameters:
+                payload.update(parameters)
+                
+            # Call API with streaming
+            response = requests.post(
+                "http://localhost:11434/api/generate",
+                json=payload,
+                stream=True,
+                timeout=600  # 10-minute timeout
+            )
+            
+            # Check for HTTP errors
+            response.raise_for_status()
+            
+            # Process response
+            full_response = ""
+            if interactive:
+                print("\n--- RESPONSE ---")
+            
+            for line in response.iter_lines():
+                if line:
+                    try:
+                        chunk = json.loads(line.decode('utf-8'))
+                        if "response" in chunk:
+                            text = chunk["response"]
+                            if interactive:
+                                print(text, end="", flush=True)
+                            full_response += text
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"Failed to decode JSON: {e}")
+                        continue
+                    except Exception as e:
+                        logger.error(f"Error processing response chunk: {e}")
+                        continue
+            
+            elapsed = time.time() - start_time
+            if interactive:
+                print(f"\n\n--- Completed in {elapsed:.2f} seconds ---")
+            
+            logger.info(f"Persona {persona_id} completed in {elapsed:.2f} seconds")
+            
+            # Save output
+            output_path = f"ai_framework/outputs/{self.session_id}/{persona_id}_output.txt"
+            with open(output_path, 'w') as f:
+                f.write(full_response)
+            
+            if interactive:
+                print(f"Output saved to {output_path}")
+            
+            # Store in memory
+            self.outputs[persona_id] = {
+                "input": prompt,
+                "output": full_response,
+                "elapsed": elapsed
+            }
+            
+            # Send webhook event for persona completion
+            webhook_payload = {
+                "session_id": self.session_id,
+                "persona_id": persona_id,
+                "model": model,
+                "elapsed_time": elapsed,
+                "input_length": len(prompt),
+                "output_length": len(full_response),
+                "output_path": output_path
+            }
+            self.webhook_handler.send_event("persona_completed", webhook_payload)
+            
+            return full_response
+            
+        except requests.exceptions.Timeout:
+            error_msg = f"Request timed out when calling {model}"
+            logger.error(error_msg)
+            if interactive:
+                print(f"Error: {error_msg}")
+            return input_text
+        except requests.exceptions.ConnectionError:
+            error_msg = f"Connection error when calling Ollama. Is the server running?"
+            logger.error(error_msg)
+            if interactive:
+                print(f"Error: {error_msg}")
+            return input_text
+        except Exception as e:
+            logger.error(f"Error running persona {persona_id}: {str(e)}", exc_info=True)
+            if interactive:
+                print(f"Error: {e}")
+            return input_text
+    
+    def run_chain(self, input_text, start_at=None, end_at=None, interactive=True, 
+                persona_parameters=None, skip_optional=False, continue_on_error=False):
+        """
+        Run the complete chain or a segment of it.
+        
+        Args:
+            input_text (str): The input text to process
+            start_at (str, optional): Persona ID to start at
+            end_at (str, optional): Persona ID to end at
+            interactive (bool): Whether to run in interactive mode with user prompts
+            persona_parameters (dict, optional): Dict mapping persona IDs to parameter dicts
+            skip_optional (bool): Whether to automatically skip optional nodes
+            continue_on_error (bool): Whether to continue chain execution on errors
+            
+        Returns:
+            dict: Dictionary of outputs from each persona
+        """
+        logger.info(f"Starting chain execution in session {self.session_id}")
+        logger.info(f"Input length: {len(input_text)} characters")
+        
+        current_input = input_text
+        
+        # Save initial input
+        with open(f"ai_framework/outputs/{self.session_id}/initial_input.txt", 'w') as f:
+            f.write(input_text)
+        
+        # Determine which personas to run
+        chain = self.config["chain_order"]
+        
+        if start_at:
+            try:
+                start_idx = chain.index(start_at)
+                logger.info(f"Starting chain at '{start_at}' (index {start_idx})")
+            except ValueError:
+                logger.warning(f"Persona '{start_at}' not found in chain, starting from beginning")
+                start_idx = 0
+        else:
+            start_idx = 0
+            
+        if end_at:
+            try:
+                end_idx = chain.index(end_at)
+                logger.info(f"Ending chain at '{end_at}' (index {end_idx})")
+            except ValueError:
+                logger.warning(f"Persona '{end_at}' not found in chain, running to end")
+                end_idx = len(chain)-1
+        else:
+            end_idx = len(chain)-1
+        
+        # Initialize with empty parameters if not provided
+        persona_parameters = persona_parameters or {}
+        
+        # Track errors
+        errors = []
+        
+        # Run the chain
+        for i in range(start_idx, end_idx + 1):
+            persona_id = chain[i]
+            
+            # Skip optional nodes if configured to do so
+            if skip_optional and persona_id in self.config["optional_nodes"]:
+                logger.info(f"Automatically skipping optional persona: {persona_id}")
+                if interactive:
+                    print(f"Skipping optional persona: {persona_id}")
+                continue
+                
+            # Get persona-specific parameters if any
+            params = persona_parameters.get(persona_id, None)
+            
+            try:
+                # Run the persona
+                current_input = self.run_persona(
+                    persona_id, 
+                    current_input, 
+                    interactive=interactive,
+                    parameters=params
+                )
+                
+                # Ask if user wants to continue or modify
+                if interactive and i < end_idx:
+                    action = input("\nContinue to next persona? (y/n/e[edit]): ").lower()
+                    if action == 'n':
+                        print("Chain stopped by user.")
+                        logger.info("Chain execution stopped by user")
+                        break
+                    elif action == 'e':
+                        print("Edit the output before continuing:")
+                        print(f"Output file: ai_framework/outputs/{self.session_id}/{persona_id}_output.txt")
+                        edit_cmd = input("Press enter after editing the file...")
+                        # Reload the edited content
+                        with open(f"ai_framework/outputs/{self.session_id}/{persona_id}_output.txt", 'r') as f:
+                            current_input = f.read()
+                        logger.info(f"User edited output of {persona_id} before continuing")
+            
+            except Exception as e:
+                error_msg = f"Error running persona {persona_id}: {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                error_info = {
+                    "persona_id": persona_id,
+                    "error": str(e)
+                }
+                errors.append(error_info)

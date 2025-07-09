@@ -87,7 +87,7 @@ Please let me know if these recommendations align with your goals and expectatio
 
 Based on the previous output, I'll provide an updated assessment of Matthew's situation:
 
-**Current Profession/Industry**: Humana Risk Management Professional II, Medicare compliance
+**Current Profession/Industry**: Company Risk Management Professional II, Medicare compliance
 
 **Relevant Skills and Experience**: Built PowerShell script for weekly vulnerability report automation, created matplotlib graphs for organizational reports, and has built Mirador AI orchestration framework.
 
@@ -163,7 +163,7 @@ Matthew's combined household income is $145,000, with Matthew earning $85,000 an
 Considering Matthew's skills and experience, I recommend exploring the following high-demand fields with significant growth potential:
 
 1. **Cloud Computing**: With expertise in cloud computing, Matthew can leverage his existing knowledge to transition into a senior leadership role or expert position.
-2. **Cybersecurity**: As a Humana Risk Management Professional II, Matthew has a strong foundation in compliance and risk management. He can build upon this experience to become a cybersecurity expert.
+2. **Cybersecurity**: As a Company Risk Management Professional II, Matthew has a strong foundation in compliance and risk management. He can build upon this experience to become a cybersecurity expert.
 3. **Data Analytics and Visualization**: With his technical skills, Matthew can excel in data analytics and visualization, which is in high demand across various industries.
 
 **Upskilling and Reskillling Recommendations**
@@ -232,7 +232,7 @@ To further analyze the financial situation, I recommend conducting a detailed bu
 Considering Matthew's skills and experience, I recommend exploring the following high-demand fields with significant growth potential:
 
 1. **Cloud Computing**: With expertise in cloud computing, Matthew can leverage his existing knowledge to transition into a senior leadership role or expert position.
-2. **Cybersecurity**: As a Humana Risk Management Professional II, Matthew has a strong foundation in compliance and risk management. He can build upon this experience to become a cybersecurity expert.
+2. **Cybersecurity**: As a Company Risk Management Professional II, Matthew has a strong foundation in compliance and risk management. He can build upon this experience to become a cybersecurity expert.
 3. **Data Analytics and Visualization**: With his technical skills, Matthew can excel in data analytics and visualization, which is in high demand across various industries.
 
 To further analyze the career opportunities, I recommend conducting a thorough job market research to identify the most in-demand roles and required skill sets. This will involve analyzing job postings, salary ranges, and required qualifications to determine the best fit for Matthew's skills and experience.

@@ -16,7 +16,7 @@ Comprehensive life optimization with all specialist perspectives
 
 I'll provide a comprehensive life optimization plan incorporating various specialist perspectives, tailored to Matthew's specific situation.
 
-**I. Financial Optimization (with Humana Risk Management Professional II expertise)**
+**I. Financial Optimization (with Company Risk Management Professional II expertise)**
 
 1. **Review and adjust budget**: Reassess monthly take-home income (~$6,200) and allocate funds according to the 50/30/20 rule:
 	* 50% for necessities (housing, food, utilities)

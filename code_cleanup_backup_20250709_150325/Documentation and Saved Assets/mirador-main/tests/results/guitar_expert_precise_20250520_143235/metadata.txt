@@ -1,0 +1,5 @@
+Model: guitar_expert_precise
+Timestamp: Tue May 20 14:39:06 EDT 2025
+Prompt: Create a practice routine for sweep picking arpeggios in metal music. Include tablature examples and a progressive approach from beginner to intermediate level. Explain the music theory behind the arpeggios you're using.
+Response size:    17583 bytes
+Response time: 391134559000 nanoseconds

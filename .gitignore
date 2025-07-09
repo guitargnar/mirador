@@ -284,3 +284,19 @@ backups/
 # 3. Force push after cleaning history
 # 4. Consider the data permanently compromised
 # ===========================================================
+# Financial files
+*.xlsx
+*.xls
+*financial*.txt
+*financial*.json
+
+# Company-specific files
+*humana*
+*company_*
+*corporate_*
+
+# Sensitive data patterns
+*salary*
+*compensation*
+*proprietary*
+*confidential*

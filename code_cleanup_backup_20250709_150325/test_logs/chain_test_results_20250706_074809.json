@@ -1,0 +1,69 @@
+[
+  {
+    "chain": "strategic_synthesis",
+    "runner": "humana_chain_runner.sh",
+    "status": "timeout",
+    "duration": 30,
+    "error": "Timed out after 30s"
+  },
+  {
+    "chain": "corporate_nav",
+    "runner": "humana_chain_runner.sh",
+    "status": "timeout",
+    "duration": 30,
+    "error": "Timed out after 30s"
+  },
+  {
+    "chain": "innovation_discovery",
+    "runner": "humana_chain_runner.sh",
+    "status": "timeout",
+    "duration": 30,
+    "error": "Timed out after 30s"
+  },
+  {
+    "chain": "ai_leadership",
+    "runner": "humana_chain_runner.sh",
+    "status": "timeout",
+    "duration": 30,
+    "error": "Timed out after 30s"
+  },
+  {
+    "chain": "solution_design",
+    "runner": "humana_chain_runner.sh",
+    "status": "timeout",
+    "duration": 30,
+    "error": "Timed out after 30s"
+  },
+  {
+    "chain": "strategic_synthesis",
+    "runner": "robust_chain_runner.sh",
+    "status": "failed",
+    "duration": 0.018529891967773438,
+    "output_length": 0,
+    "error": "./robust_chain_runner.sh: line 35: syntax error near unexpected token `fi'\n./robust_chain_runner.sh: line 35: `fi'\n"
+  },
+  {
+    "chain": "business",
+    "runner": "role_chain.sh",
+    "status": "failed",
+    "duration": 0.02178192138671875,
+    "output_length": 364,
+    "error": "./role_chain.sh: line 7: /Users/matthewscott/src/utils/init.sh: No such file or directory\n./role_chain.sh: line 8: /Users/matthewscott/src/utils/visualization.sh: No such file or directory\n"
+  },
+  {
+    "chain": "code",
+    "runner": "role_chain.sh",
+    "status": "failed",
+    "duration": 0.017464876174926758,
+    "output_length": 364,
+    "error": "./role_chain.sh: line 7: /Users/matthewscott/src/utils/init.sh: No such file or directory\n./role_chain.sh: line 8: /Users/matthewscott/src/utils/visualization.sh: No such file or directory\n"
+  },
+  {
+    "chain": "guitar",
+    "runner": "role_chain.sh",
+    "status": "failed",
+    "duration": 0.016473054885864258,
+    "output_length": 364,
+    "error": "./role_chain.sh: line 7: /Users/matthewscott/src/utils/init.sh: No such file or directory\n./role_chain.sh: line 8: /Users/matthewscott/src/utils/visualization.sh: No such file or directory\n"
+  }
+]

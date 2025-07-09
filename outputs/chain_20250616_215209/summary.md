@@ -70,7 +70,7 @@ Based on the previous output, I'll provide more detailed insights and suggestion
 	2. Utilize social media platforms to promote your services and connect with potential clients.
 	3. Join online marketplaces and forums for musicians and producers.
 	4. Offer discounted rates for initial clients to build your portfolio and reputation.
-* Risk assessment: No employment conflicts with Humana.
+* Risk assessment: No employment conflicts with Company.
 
 **Opportunity 2: Music Production Services**
 
@@ -83,7 +83,7 @@ Based on the previous output, I'll provide more detailed insights and suggestion
 	2. Create a portfolio of your work to showcase to potential clients.
 	3. Utilize social media platforms to promote your services and connect with potential clients.
 	4. Network with other musicians and producers in the industry.
-* Risk assessment: No employment conflicts with Humana.
+* Risk assessment: No employment conflicts with Company.
 
 **Opportunity 3: Guitar Instruction (Online/Local)**
 
@@ -96,7 +96,7 @@ Based on the previous output, I'll provide more detailed insights and suggestion
 	2. Create a website or social media profile to promote your services and connect with potential clients.
 	3. Utilize online platforms like Zoom or Skype for virtual lessons.
 	4. Network with local music schools and stores to offer in-person lessons.
-* Risk assessment: No employment conflicts with Humana.
+* Risk assessment: No employment conflicts with Company.
 
 **Opportunity 4: Sync Licensing Opportunities**
 
@@ -109,7 +109,7 @@ Based on the previous output, I'll provide more detailed insights and suggestion
 	2. Create a portfolio of your music to showcase to potential clients.
 	3. Utilize online platforms like Music Bed or Audiosocket to submit your work for sync licensing.
 	4. Network with industry professionals and attend music festivals and events.
-* Risk assessment: No employment conflicts with Humana.
+* Risk assessment: No employment conflicts with Company.
 
 **Opportunity 5: Live Streaming and Content Monetization**
 
@@ -122,7 +122,7 @@ Based on the previous output, I'll provide more detailed insights and suggestion
 	2. Develop a consistent schedule and format for your live streams.
 	3. Utilize social media platforms to promote your content and engage with your audience.
 	4. Partner with brands or sponsors to monetize your content.
-* Risk assessment: No employment conflicts with Humana.
+* Risk assessment: No employment conflicts with Company.
 
 These opportunities can help you build a successful side income stream as a session guitarist while advancing your touring goals. Remember to prioritize your time and energy, and be selective about the opportunities that align best with your skills and interests.
 

@@ -18,8 +18,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Simple interface
 ./mirador-ez chain "Your query" model1 model2 model3
 
-# Run specific Humana-focused chains
-./humana_chain_runner.sh <chain_type> "Your prompt"
+# Run specific Company-focused chains
+./company_chain_runner.sh <chain_type> "Your prompt"
 ```
 
 ### Model Management
@@ -109,9 +109,9 @@ matthew_context_provider → domain_expert → strategy_architect → decision_s
 
 Each model receives the original prompt plus enriched context from previous models, building comprehensive analysis.
 
-## Humana Strategic Commands
+## Company Strategic Commands
 
-The system includes specialized commands for corporate innovation strategy at Humana. Key chain runners:
+The system includes specialized commands for corporate innovation strategy at Company. Key chain runners:
 
 - `strategic_synthesis`: High-level strategic planning
 - `corporate_nav`: Political navigation and stakeholder management  
@@ -148,32 +148,32 @@ See the strategic prompt library below for specific use cases.
 ### Daily Operations
 ```bash
 # Morning alignment
-./humana_chain_runner.sh strategic_synthesis "Today is [DATE]. My calendar shows: [PASTE YOUR CALENDAR]. My top 3 priorities this week are: 1) Maintain Risk Management excellence, 2) Build Mirador coalition, 3) Position for AI leadership. Given these constraints and opportunities, what are the 3 highest-leverage actions I should take today?"
+./company_chain_runner.sh strategic_synthesis "Today is [DATE]. My calendar shows: [PASTE YOUR CALENDAR]. My top 3 priorities this week are: 1) Maintain Current Department excellence, 2) Build Mirador coalition, 3) Position for AI leadership. Given these constraints and opportunities, what are the 3 highest-leverage actions I should take today?"
 
 # Pre-meeting intelligence
-./humana_chain_runner.sh corporate_nav "I have a meeting with [PERSON/TEAM] in 30 minutes about [TOPIC]. Their priorities are [THEIR GOALS]. How should I navigate this conversation to build support for innovation?"
+./company_chain_runner.sh corporate_nav "I have a meeting with [PERSON/TEAM] in 30 minutes about [TOPIC]. Their priorities are [THEIR GOALS]. How should I navigate this conversation to build support for innovation?"
 
 # End-of-day reflection
-./humana_chain_runner.sh ai_leadership "Today I accomplished: [LIST WINS]. I faced challenges with: [LIST CHALLENGES]. Tomorrow's key meetings are: [LIST MEETINGS]. How can I build on today's momentum?"
+./company_chain_runner.sh ai_leadership "Today I accomplished: [LIST WINS]. I faced challenges with: [LIST CHALLENGES]. Tomorrow's key meetings are: [LIST MEETINGS]. How can I build on today's momentum?"
 ```
 
 ### Innovation Strategy
 ```bash
 # Department ROI calculation
-./humana_chain_runner.sh solution_design "[DEPARTMENT NAME] currently spends [X HOURS] per week on [SPECIFIC TASK]. Calculate the specific ROI if Mirador automated their process."
+./company_chain_runner.sh solution_design "[DEPARTMENT NAME] currently spends [X HOURS] per week on [SPECIFIC TASK]. Calculate the specific ROI if Mirador automated their process."
 
 # Pilot proposals
-./humana_chain_runner.sh solution_design "Create a formal pilot proposal for implementing Mirador in [DEPARTMENT]. Include executive summary, current state analysis, proposed future state, implementation timeline, success metrics."
+./company_chain_runner.sh solution_design "Create a formal pilot proposal for implementing Mirador in [DEPARTMENT]. Include executive summary, current state analysis, proposed future state, implementation timeline, success metrics."
 
 # Scaling strategy
-./humana_chain_runner.sh strategic_synthesis "Assuming approval to scale Mirador, create a 180-day roadmap that maintains quality while scaling, builds organizational capability, and positions me as indispensable architect."
+./company_chain_runner.sh strategic_synthesis "Assuming approval to scale Mirador, create a 180-day roadmap that maintains quality while scaling, builds organizational capability, and positions me as indispensable architect."
 ```
 
 ### Career Acceleration
 ```bash
 # AI leadership positioning
-./humana_chain_runner.sh ai_leadership "I want to be Humana's first VP of AI Innovation. Current title: Risk Management Professional II. What specific actions over the next 90 days position me for this role?"
+./company_chain_runner.sh ai_leadership "I want to be Company's first Target Leadership Role. Current title: Current Role. What specific actions over the next 90 days position me for this role?"
 
 # LinkedIn thought leadership
-./humana_chain_runner.sh ai_leadership "Create a LinkedIn post about [AI TOPIC] that demonstrates thought leadership without revealing Mirador specifically, attracts Humana executive attention."
+./company_chain_runner.sh ai_leadership "Create a LinkedIn post about [AI TOPIC] that demonstrates thought leadership without revealing Mirador specifically, attracts Company executive attention."
 ```

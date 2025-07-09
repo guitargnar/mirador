@@ -2,7 +2,7 @@
 
 ## Initial Prompt
 
-Develop strategic plan for transition from Risk Management Professional II to senior management role at Humana or similar healthcare organization, including skill development, leadership experience, and internal positioning strategies
+Develop strategic plan for transition from Risk Management Professional II to senior management role at Company or similar healthcare organization, including skill development, leadership experience, and internal positioning strategies
 
 ## Models Used
 

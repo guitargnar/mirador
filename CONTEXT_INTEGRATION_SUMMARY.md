@@ -37,8 +37,8 @@ Based on your complete personal story files from `/Users/matthewscott/Me/`, I've
 - **Mightily (2012-2016)**: Intern → Rich Content Developer → Account Executive
   - Mentored by Graham "Pip" Pullen
   - Generated $500K+ revenue, managed six-figure portfolios
-- **Humana (2016-Present)**: Senior Risk Management Professional II
-  - $85,000 salary, $1.2M automation savings
+- **Company (2016-Present)**: Senior Current Role
+  - $85,000 salary, significant cost savings automation savings
   - 30% defect reduction, 15% conversion improvement
 
 ### **⚡ The Transformation Crisis (2023-2024)**

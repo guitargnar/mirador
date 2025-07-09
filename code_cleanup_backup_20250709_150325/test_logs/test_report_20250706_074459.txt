@@ -1,0 +1,42 @@
+================================================================================
+MIRADOR AI FRAMEWORK - COMPREHENSIVE TEST REPORT
+================================================================================
+Test Date: 2025-07-06 07:44:59
+Total Duration: 1.80 seconds
+Project Root: /Users/matthewscott/Projects/mirador
+
+TEST RESULTS SUMMARY
+--------------------------------------------------------------------------------
+
+Python Module Imports:
+  ✅ Passed: 8
+  ❌ Failed: 1
+    ❌ framework: FAILED: invalid syntax. Perhaps you forgot a comma? (framework.py, line 416)
+
+Shell Script Validation:
+  ✅ Passed: 4
+  ❌ Failed: 1
+    ❌ robust_chain_runner.sh: /Users/matthewscott/Projects/mirador/robust_chain_runner.sh: line 35: syntax error near unexpected token `fi'
+/Users/matthewscott/Projects/mirador/robust_chain_runner.sh: line 35: `fi'
+
+Ollama Connectivity:
+  ✅ Status: connected
+
+Configuration Files:
+  ✅ Passed: 3
+  ❌ Failed: 1
+
+Productivity Tools:
+  ✅ Passed: 5
+  ❌ Failed: 0
+
+Memory System:
+  ❌ Status: failed
+
+System Resources:
+  ✅ Status: healthy
+
+================================================================================
+OVERALL: 20 passed, 3 failed
+Success Rate: 87.0%
+================================================================================

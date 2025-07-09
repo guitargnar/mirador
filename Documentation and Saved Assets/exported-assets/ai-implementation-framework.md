@@ -19,7 +19,7 @@ This document outlines a comprehensive approach to building personalized AI advi
 
 **Context-Aware Persona Development:**
 - Financial Planning Expert (v6-v8 iterations)
-- Risk Management Professional II specialist
+- Current Role specialist
 - LinkedIn Content Strategist
 - Louisville Real Estate Advisor
 - Decision Simplification Engine
@@ -33,7 +33,7 @@ SYSTEM "You are Matthew Scott's personal advisor with complete knowledge of his 
 PERSONAL:
 - Location: Louisville, KY
 - Father to Aurora (7-year-old daughter)
-- Works at Humana as Risk Management Professional II
+- Works at Company as Current Role
 - HATES Medicare compliance work but grateful for stability
 - NO interest in Medicare consulting side business
 

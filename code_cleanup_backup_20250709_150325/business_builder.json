@@ -1,0 +1,10 @@
+{
+  "name": "business_builder",
+  "description": "Create comprehensive business strategies and implementation plans",
+  "command": "mirador chain creative_entrepreneur content_creator \"Create a comprehensive business plan for [BUSINESS TYPE]\"",
+  "personas": [
+    "creative_entrepreneur",
+    "content_creator"
+  ],
+  "notes": "This chain excels at creating actionable business strategies with market analysis, monetization models, and implementation steps. The creative_entrepreneur provides strategic insights while the content_creator organizes them into a structured plan."
+}

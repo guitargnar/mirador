@@ -119,7 +119,7 @@ Assuming you've provided this information, here's a summary of your current fina
 Now, let's analyze the opportunities available in the Louisville market:
 
 1. **Job Market:** The Louisville job market is diverse, with major industries in healthcare, technology, and manufacturing. Unemployment rates are relatively low, at 3.4% (as of January 2023). Major employers include:
-	* Humana
+	* Company
 	* University of Louisville Health Care
 	* Brown-Forman Corporation
 2. **Housing Market:** The median home price in Louisville is around $170,000, with a 5-year appreciation rate of 10%. Rent prices are also increasing, with the average rent for a 1-bedroom apartment being around $900.
@@ -212,7 +212,7 @@ Assuming you've provided this information, here's a summary of your current fina
 Now, let's analyze the opportunities available in the Louisville market:
 
 1. **Job Market:** The Louisville job market is diverse, with major industries in healthcare, technology, and manufacturing. Unemployment rates are relatively low, at 3.4% (as of January 2023). Major employers include:
-	* Humana
+	* Company
 	* University of Louisville Health Care
 	* Brown-Forman Corporation
 2. **Housing Market:** The median home price in Louisville is around $170,000, with a 5-year appreciation rate of 10%. Rent prices are also increasing, with the average rent for a 1-bedroom apartment being around $900.

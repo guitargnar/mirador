@@ -1,7 +1,7 @@
 # AI-Powered Personal Advisory System: Video Script Structure
 
 ## Video Overview
-**Title:** "From Risk Management to AI Innovation: Building 89 AI Models in 8 Weeks"
+**Title:** "From Current Department to AI Innovation: Building 89 AI Models in 8 Weeks"
 **Duration:** 8-10 minutes
 **Target Audience:** Business professionals, hiring managers, AI enthusiasts, enterprise decision-makers
 **Tone:** Professional, inspiring, technically credible, business-focused

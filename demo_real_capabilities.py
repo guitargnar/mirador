@@ -181,12 +181,12 @@ def demo_real_world_scenario():
     
     # Simulate a real request
     prompt = """
-Our team's Star Ratings have dropped from 4.2 to 3.8 in the last quarter.
+Our team's Quality Metrics have dropped from 4.2 to 3.8 in the last quarter.
 We need to identify the root causes and create an action plan to improve.
 Focus on quick wins we can implement this week.
 """
     
-    print(f"📝 Request: Star Ratings improvement plan")
+    print(f"📝 Request: Quality Metrics improvement plan")
     print("⏳ Processing with full enhancement stack...\n")
     
     start_time = time.time()
@@ -226,7 +226,7 @@ def show_comparison():
         ("Task automation", "Just prompts", "Actual file processing"),
         ("Learning system", "No memory", "Vector DB + patterns"),
         ("Integration ready", "No APIs", "Slack, email, webhooks"),
-        ("Star Ratings help", "Generic advice", "Specific action plans"),
+        ("Quality Metrics help", "Generic advice", "Specific action plans"),
     ]
     
     for claim, old, new in comparison:

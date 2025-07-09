@@ -3,17 +3,17 @@
 
 ---
 
-## 🎯 DEMO 1: Risk Management Excellence
+## 🎯 DEMO 1: Current Department Excellence
 ### For: Security & Compliance Teams
 ### Duration: 15 minutes
 
-**Setup**: "Let me show you how we achieved 97% efficiency in Risk Management"
+**Setup**: "Let me show you how we achieved 97% efficiency in Current Department"
 
 ### Scenario: Daily Vulnerability Prioritization
 
 ```bash
 # QUERY 1: Morning Priorities
-./humana_chain_runner.sh innovation_discovery "What are the critical vulnerabilities requiring immediate attention today?"
+./company_chain_runner.sh innovation_discovery "What are the critical vulnerabilities requiring immediate attention today?"
 
 # DEMONSTRATES:
 - Instant analysis of multiple data sources
@@ -32,7 +32,7 @@
 
 ```bash
 # QUERY 2: Complex Response Chain
-./humana_chain_runner.sh solution_design "Critical vulnerability CVE-2024-12345 detected on production servers. Create response plan with communications."
+./company_chain_runner.sh solution_design "Critical vulnerability CVE-2024-12345 detected on production servers. Create response plan with communications."
 
 # SHOWS:
 1. Immediate risk assessment
@@ -55,7 +55,7 @@
 
 ```bash
 # QUERY 1: Find Optimization Opportunities
-./humana_chain_runner.sh innovation_discovery "Our team spends 15 hours/week on manual Medicare eligibility verification. How can we improve this?"
+./company_chain_runner.sh innovation_discovery "Our team spends 15 hours/week on manual Medicare eligibility verification. How can we improve this?"
 
 # GENERATES:
 - Current state analysis
@@ -68,7 +68,7 @@
 
 ```bash
 # QUERY 2: 30-Day Impact Project
-./humana_chain_runner.sh quick_win "I have 2 hours/week for innovation. What high-impact project could I complete in 30 days?"
+./company_chain_runner.sh quick_win "I have 2 hours/week for innovation. What high-impact project could I complete in 30 days?"
 
 # PRODUCES:
 - Feasible project options
@@ -90,8 +90,8 @@
 ### Scenario: Strategic Initiative Analysis
 
 ```bash
-# QUERY 1: Star Ratings Impact
-./humana_chain_runner.sh strategic_synthesis "How could AI-powered associate tools improve our Star Ratings within 90 days?"
+# QUERY 1: Quality Metrics Impact
+./company_chain_runner.sh strategic_synthesis "How could AI-powered associate tools improve our Quality Metrics within 90 days?"
 
 # DELIVERS:
 - Multi-factor analysis
@@ -104,7 +104,7 @@
 
 ```bash
 # QUERY 2: Market Differentiation
-./humana_chain_runner.sh ai_leadership "How does associate AI empowerment create competitive advantage in healthcare?"
+./company_chain_runner.sh ai_leadership "How does associate AI empowerment create competitive advantage in healthcare?"
 
 # PROVIDES:
 - Industry analysis
@@ -127,7 +127,7 @@
 
 ```bash
 # QUERY 1: Care Gap Analysis
-./humana_chain_runner.sh solution_design "Design a system to identify and close care gaps for diabetic members using existing tools"
+./company_chain_runner.sh solution_design "Design a system to identify and close care gaps for diabetic members using existing tools"
 
 # CREATES:
 - Gap identification methodology
@@ -140,7 +140,7 @@
 
 ```bash
 # QUERY 2: Documentation Efficiency
-./humana_chain_runner.sh innovation_discovery "Clinical staff spend 3 hours/day on documentation. How can AI help while maintaining quality?"
+./company_chain_runner.sh innovation_discovery "Clinical staff spend 3 hours/day on documentation. How can AI help while maintaining quality?"
 
 # DEVELOPS:
 - Documentation assists
@@ -163,7 +163,7 @@
 
 ```bash
 # Show actual configuration files
-cat humana_chain_templates.json
+cat company_chain_templates.json
 
 # Demonstrate model chaining
 python mirador.py chain "Show me the technical architecture" mirador_system_specialist solution_architect enhanced_agent_enforcer
@@ -182,11 +182,11 @@ python mirador.py chain "Show me the technical architecture" mirador_system_spec
 cat << EOF > department_specialist.modelfile
 FROM llama3.2:latest
 PARAMETER temperature 0.5
-SYSTEM "You are a specialist in [DEPARTMENT] operations at Humana..."
+SYSTEM "You are a specialist in [DEPARTMENT] operations at Company..."
 EOF
 
 # Show instant specialization
-./humana_chain_runner.sh innovation_discovery "How can [DEPARTMENT] benefit from AI automation?"
+./company_chain_runner.sh innovation_discovery "How can [DEPARTMENT] benefit from AI automation?"
 ```
 
 **Audience Wow Moment**: Live customization for their specific needs
@@ -203,7 +203,7 @@ EOF
 
 ```bash
 # QUERY 1: Role Enhancement
-./humana_chain_runner.sh ai_leadership "How does AI transformation enhance rather than threaten associate roles?"
+./company_chain_runner.sh ai_leadership "How does AI transformation enhance rather than threaten associate roles?"
 
 # ADDRESSES:
 - Skill development paths
@@ -216,7 +216,7 @@ EOF
 
 ```bash
 # QUERY 2: Rollout Strategy
-./humana_chain_runner.sh solution_design "Create a 90-day adoption plan for AI tools in a skeptical department"
+./company_chain_runner.sh solution_design "Create a 90-day adoption plan for AI tools in a skeptical department"
 
 # DEVELOPS:
 - Phased approach
@@ -295,11 +295,11 @@ EOF
 
 ## 📝 DEMO SCRIPTS BY STAKEHOLDER
 
-### For Dalia Powers' Team
+### For Senior Executive' Team
 "This embodies your Augmented Intelligence vision..."
 [Show human-in-the-loop features]
 
-### For Japan Mehta
+### For Technology Leader
 "This accelerates our AI-forward strategy..."
 [Show innovation velocity]
 
@@ -331,7 +331,7 @@ EOF
 
 ## 🎯 THE PERFECT CLOSE
 
-"What you've seen today isn't a vendor pitch or a future promise. It's a working system, built by a Humana associate, running in production, saving 30 hours per week.
+"What you've seen today isn't a vendor pitch or a future promise. It's a working system, built by a Company associate, running in production, saving 30 hours per week.
 
 The question isn't whether this works - it does.
 

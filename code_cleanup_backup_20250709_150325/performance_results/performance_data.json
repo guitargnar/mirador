@@ -1,0 +1,344 @@
+{
+  "results": [
+    {
+      "model_name": "financial_planning_expert_v6",
+      "test_type": "scenario_1",
+      "response_time": 13.15976595878601,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "financial_planning_expert_v6",
+      "test_type": "scenario_2",
+      "response_time": 15.418025016784668,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "financial_planning_expert_v6",
+      "test_type": "scenario_3",
+      "response_time": 12.51764702796936,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "financial_planning_expert_v5",
+      "test_type": "scenario_1",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2839 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "financial_planning_expert_v5",
+      "test_type": "scenario_2",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "financial_planning_expert_v5",
+      "test_type": "scenario_3",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "matthew_context_provider_v2",
+      "test_type": "scenario_1",
+      "response_time": 14.731245040893555,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "matthew_context_provider_v2",
+      "test_type": "scenario_2",
+      "response_time": 8.049174070358276,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "matthew_context_provider_v2",
+      "test_type": "scenario_3",
+      "response_time": 4.395392894744873,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "matthew_context_provider_v1",
+      "test_type": "scenario_1",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "matthew_context_provider_v1",
+      "test_type": "scenario_2",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "matthew_context_provider_v1",
+      "test_type": "scenario_3",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "decision_simplifier_v2",
+      "test_type": "scenario_1",
+      "response_time": 11.927128076553345,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "decision_simplifier_v2",
+      "test_type": "scenario_2",
+      "response_time": 11.719956159591675,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "decision_simplifier_v2",
+      "test_type": "scenario_3",
+      "response_time": 17.544578790664673,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "decision_simplifier_v1",
+      "test_type": "scenario_1",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "decision_simplifier_v1",
+      "test_type": "scenario_2",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "decision_simplifier_v1",
+      "test_type": "scenario_3",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "louisville_expert_v3",
+      "test_type": "scenario_1",
+      "response_time": 15.198851108551025,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "louisville_expert_v3",
+      "test_type": "scenario_2",
+      "response_time": 15.950151920318604,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "louisville_expert_v3",
+      "test_type": "scenario_3",
+      "response_time": 12.527862071990967,
+      "success": true,
+      "response_quality": 0.8999999999999999,
+      "error_message": ""
+    },
+    {
+      "model_name": "louisville_expert_v2",
+      "test_type": "scenario_1",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "louisville_expert_v2",
+      "test_type": "scenario_2",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "louisville_expert_v2",
+      "test_type": "scenario_3",
+      "response_time": 0.0,
+      "success": false,
+      "response_quality": 0.0,
+      "error_message": "Model execution error: Model execution failed: \u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1Gpulling manifest \u001b[K\u001b[?25h\u001b[?2026l\nError: pull model manifest: file does not exist\n"
+    },
+    {
+      "model_name": "enhanced_agent_enforcer_v2",
+      "test_type": "scenario_1",
+      "response_time": 30.960308074951172,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "enhanced_agent_enforcer_v2",
+      "test_type": "scenario_2",
+      "response_time": 15.390499114990234,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "enhanced_agent_enforcer_v2",
+      "test_type": "scenario_3",
+      "response_time": 20.361154079437256,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "enhanced_agent_fast_v6",
+      "test_type": "scenario_1",
+      "response_time": 11.043923139572144,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "enhanced_agent_fast_v6",
+      "test_type": "scenario_2",
+      "response_time": 9.793198108673096,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    },
+    {
+      "model_name": "enhanced_agent_fast_v6",
+      "test_type": "scenario_3",
+      "response_time": 9.34045696258545,
+      "success": true,
+      "response_quality": 0.6,
+      "error_message": ""
+    }
+  ],
+  "analysis": {
+    "summary": {
+      "total_tests": 30,
+      "successful_tests": 18,
+      "overall_success_rate": 0.6,
+      "avg_response_time": 13.890517645412022,
+      "avg_quality_score": 0.75
+    },
+    "by_model": {
+      "financial_planning_expert_v6": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 13.698479334513346,
+        "avg_quality_score": 0.8999999999999999,
+        "overall_score": 0.8330152066548666
+      },
+      "financial_planning_expert_v5": {
+        "total_tests": 3,
+        "successful_tests": 0,
+        "success_rate": 0.0,
+        "avg_response_time": 0.0,
+        "avg_quality_score": 0.0,
+        "overall_score": 0.3
+      },
+      "matthew_context_provider_v2": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 9.058604001998901,
+        "avg_quality_score": 0.6,
+        "overall_score": 0.789413959980011
+      },
+      "matthew_context_provider_v1": {
+        "total_tests": 3,
+        "successful_tests": 0,
+        "success_rate": 0.0,
+        "avg_response_time": 0.0,
+        "avg_quality_score": 0.0,
+        "overall_score": 0.3
+      },
+      "decision_simplifier_v2": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 13.730554342269897,
+        "avg_quality_score": 0.8999999999999999,
+        "overall_score": 0.8326944565773011
+      },
+      "decision_simplifier_v1": {
+        "total_tests": 3,
+        "successful_tests": 0,
+        "success_rate": 0.0,
+        "avg_response_time": 0.0,
+        "avg_quality_score": 0.0,
+        "overall_score": 0.3
+      },
+      "louisville_expert_v3": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 14.5589550336202,
+        "avg_quality_score": 0.8999999999999999,
+        "overall_score": 0.8244104496637981
+      },
+      "louisville_expert_v2": {
+        "total_tests": 3,
+        "successful_tests": 0,
+        "success_rate": 0.0,
+        "avg_response_time": 0.0,
+        "avg_quality_score": 0.0,
+        "overall_score": 0.3
+      },
+      "enhanced_agent_enforcer_v2": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 22.23732042312622,
+        "avg_quality_score": 0.6,
+        "overall_score": 0.6576267957687378
+      },
+      "enhanced_agent_fast_v6": {
+        "total_tests": 3,
+        "successful_tests": 3,
+        "success_rate": 1.0,
+        "avg_response_time": 10.059192736943563,
+        "avg_quality_score": 0.6,
+        "overall_score": 0.7794080726305643
+      }
+    },
+    "recommendations": [
+      "\u2705 financial_planning_expert_v6: Excellent performance - recommended for retention",
+      "\u26a0\ufe0f  financial_planning_expert_v5: Low success rate (0.0%) - consider retirement",
+      "\u26a0\ufe0f  matthew_context_provider_v1: Low success rate (0.0%) - consider retirement",
+      "\u2705 decision_simplifier_v2: Excellent performance - recommended for retention",
+      "\u26a0\ufe0f  decision_simplifier_v1: Low success rate (0.0%) - consider retirement",
+      "\u2705 louisville_expert_v3: Excellent performance - recommended for retention",
+      "\u26a0\ufe0f  louisville_expert_v2: Low success rate (0.0%) - consider retirement"
+    ]
+  }
+}

@@ -5,7 +5,7 @@ Mirador is a sophisticated multi-agent AI orchestration system that chains speci
 
 ## Key Context
 - **Owner**: Matthew Scott, Louisville KY
-- **Role**: Risk Management Professional at Humana ($85k)
+- **Role**: Current Department Professional at Company ($85k)
 - **Goals**: Transition to touring guitarist in 3 years while building AI career
 - **Family**: 7-year-old daughter Aurora
 - **Personality**: Openness 85, Conscientiousness 65, Extraversion 45

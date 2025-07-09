@@ -14,7 +14,7 @@ Write a LinkedIn post about advanced prompt engineering techniques like chain-of
 
 **Unlocking the Power of Advanced Prompt Engineering: Boosting Efficiency in Medicare Compliance**
 
-As a Humana Risk Management Professional II, I've had the opportunity to work with various AI-powered tools to streamline our Medicare compliance workflow. Recently, I've been experimenting with advanced prompt engineering techniques that have revolutionized the way we interact with these systems.
+As a Company Risk Management Professional II, I've had the opportunity to work with various AI-powered tools to streamline our Medicare compliance workflow. Recently, I've been experimenting with advanced prompt engineering techniques that have revolutionized the way we interact with these systems.
 
 **Chain-of-Thought Prompting: Unleashing Human-AI Collaboration**
 
@@ -60,7 +60,7 @@ Building upon the comprehensive analysis provided:
 
 **Unlocking the Power of Advanced Prompt Engineering: Boosting Efficiency in Medicare Compliance**
 
-As a Humana Risk Management Professional II, I've had the opportunity to work with various AI-powered tools to streamline our Medicare compliance workflow. Recently, I've been experimenting with advanced prompt engineering techniques that have revolutionized the way we interact with these systems.
+As a Company Risk Management Professional II, I've had the opportunity to work with various AI-powered tools to streamline our Medicare compliance workflow. Recently, I've been experimenting with advanced prompt engineering techniques that have revolutionized the way we interact with these systems.
 
 **Chain-of-Thought Prompting: Unleashing Human-AI Collaboration**
 

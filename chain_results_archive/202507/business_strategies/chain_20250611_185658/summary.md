@@ -87,7 +87,7 @@ To identify potential partners and funding sources, research local organizations
 1. **Louisville Metro Government:** Explore the Mayor's Office for Economic Development, the Louisville Urban Enterprise Initiative, and other departments that support small businesses and community development.
 2. **Jefferson County Public Schools (JCPS):** Partner with JCPS to access underserved communities, develop education and job training programs, and promote economic mobility.
 3. **Local non-profits:** Organizations like the United Way of Louisville, the Greater Louisville Community Foundation, and the Louisville Metro Chamber of Commerce can provide valuable resources, expertise, and funding opportunities.
-4. **Businesses and corporations:** Companies like Humana, Brown-Forman, and Yum! Brands have a strong presence in Louisville and may be interested in supporting social enterprises that align with their values.
+4. **Businesses and corporations:** Companies like Company, Brown-Forman, and Yum! Brands have a strong presence in Louisville and may be interested in supporting social enterprises that align with their values.
 
 **Implementation Steps:**
 

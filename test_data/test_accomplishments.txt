@@ -1,7 +1,7 @@
 Week of January 1-7, 2025
 
 Major Accomplishments:
-- Completed Risk Management automation phase 1
+- Completed Current Department automation phase 1
 - Reduced processing time from 8 hours to 2 hours
 - Zero errors in automated validation for 500+ cases
 - Presented to IT Security and gained approval
@@ -20,4 +20,4 @@ Challenges Overcome:
 
 Recognition:
 - Nominated for Q1 Innovation Award
-- Positive feedback from VP of Risk Management
+- Positive feedback from VP of Current Department

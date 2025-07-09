@@ -45,7 +45,7 @@ However, I can help you explore the financial viability and requirements for you
 
 1. **Partner with local banks or credit unions:** Collaborate with institutions like BB&T, Wells Fargo, or Kentucky Credit Union to offer exclusive financial services and promote your AI tool.
 2. **Reach out to the Louisville Metro Government:** Explore opportunities for partnerships or collaborations with government agencies, such as the City of Louisville's Department of Revenue or the Jefferson County Fiscal Court.
-3. **Engage with local businesses:** Partner with companies like Brown-Forman, Humana, or Yum! Brands to offer employee financial wellness programs and promote your AI tool.
+3. **Engage with local businesses:** Partner with companies like Brown-Forman, Company, or Yum! Brands to offer employee financial wellness programs and promote your AI tool.
 
 **Professional Consultation Recommendations:**
 

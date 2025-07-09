@@ -1,0 +1,67 @@
+{
+  "current_school": {
+    "name": "Shelby Academy Elementary",
+    "grade": "2nd Grade",
+    "concerns": [
+      "Math proficiency: 6-9% (vs 30% state average)",
+      "Reading proficiency: 15-19% (vs 42% state average)",
+      "28% enrollment decline over 5 years",
+      "30% teacher loss over 5 years"
+    ],
+    "transfer_status": "Active - can transfer anytime a seat opens"
+  },
+  "target_schools": {
+    "Greathouse/Shryock Traditional": {
+      "priority": "high",
+      "contact_info": "(502) 485-8295",
+      "status": "monitoring",
+      "last_contacted": null,
+      "notes": "Parents praise academic rigor"
+    },
+    "Norton Commons Elementary": {
+      "priority": "high",
+      "contact_info": "(502) 485-8388",
+      "status": "monitoring",
+      "last_contacted": null,
+      "notes": "4.5/5 GreatSchools rating"
+    },
+    "Goshen Elementary": {
+      "priority": "high",
+      "contact_info": "(502) 485-8322",
+      "status": "monitoring",
+      "last_contacted": null,
+      "notes": "Strong individualized learning"
+    }
+  },
+  "contacts": {},
+  "activity_log": [],
+  "action_items": [
+    {
+      "task": "Check JCPS portal for openings",
+      "priority": "high",
+      "completed": false,
+      "daily": true
+    },
+    {
+      "task": "Join JCPS Parents Facebook group",
+      "priority": "high",
+      "completed": false,
+      "daily": false
+    },
+    {
+      "task": "Schedule Shelby principal meeting",
+      "priority": "high",
+      "completed": false,
+      "daily": false
+    },
+    {
+      "task": "Research math tutors",
+      "priority": "high",
+      "completed": false,
+      "daily": false
+    }
+  ],
+  "achievements": [],
+  "daily_streak": 0,
+  "last_check_date": null
+}

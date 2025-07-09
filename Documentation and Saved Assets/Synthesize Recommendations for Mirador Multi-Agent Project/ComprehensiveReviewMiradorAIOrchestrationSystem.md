@@ -158,7 +158,7 @@ All recommendations account for Louisville/Kentucky-specific factors:
 The system demonstrates sophisticated understanding of Matthew Scott's specific situation:
 
 **Professional Context:**
-- Humana Risk Management Professional II role
+- Company Current Role role
 - Medicare compliance expertise and career goals
 - PowerShell automation skills and achievements
 - LinkedIn thought leadership objectives

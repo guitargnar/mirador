@@ -2,11 +2,11 @@
 
 ## Template 1: Achievement Showcase
 
-🚀 **From Risk Management to AI Innovation in 8 Weeks**
+🚀 **From Current Department to AI Innovation in 8 Weeks**
 
 I just completed something I'm incredibly proud of: building a complete AI advisor system with 89+ specialized models—all running locally with zero external dependencies.
 
-**The Challenge:** As a Risk Management Professional at Humana, I needed personalized financial advice that understood MY specific situation—$85k salary, 401k loans, home equity decisions, single father constraints. Generic AI responses weren't cutting it.
+**The Challenge:** As a Current Department Professional at Company, I needed personalized financial advice that understood MY specific situation—$85k salary, 401k loans, home equity decisions, single father constraints. Generic AI responses weren't cutting it.
 
 **The Solution:** I built a local AI ecosystem that provides context-aware advice:
 • 89+ specialized AI personas (financial, career, technical advisors)
@@ -81,7 +81,7 @@ The intersection of risk management and AI innovation creates unique opportuniti
 
 🏢 **The Enterprise AI Dilemma: Privacy vs. Personalization**
 
-After 10+ years in Risk Management, I've seen organizations struggle with a fundamental AI challenge: How do you get personalized AI benefits without exposing sensitive data?
+After 10+ years in Current Department, I've seen organizations struggle with a fundamental AI challenge: How do you get personalized AI benefits without exposing sensitive data?
 
 **The Problem:**
 - Traditional AI requires external APIs (privacy risk)
@@ -128,11 +128,11 @@ What AI applications would transform your organization if privacy wasn't a conce
 
 ## Template 4: Career Transition Story
 
-🔄 **Career Pivot: Risk Management → AI Innovation**
+🔄 **Career Pivot: Current Department → AI Innovation**
 
 Sometimes the biggest career moves happen when you're not looking for them.
 
-**The Setup:** 10+ years in Risk Management at Humana. Stable job, good income, but feeling stuck in Medicare compliance work with poor leadership.
+**The Setup:** 10+ years in Current Department at Company. Stable job, good income, but feeling stuck in Medicare compliance work with poor leadership.
 
 **The Catalyst:** Two months ago, I had an intuition that Python would be essential in the AI era. Saw a YouTube video about Python's importance and decided to act.
 
@@ -146,7 +146,7 @@ Sometimes the biggest career moves happen when you're not looking for them.
 
 **What This Taught Me:**
 1. **Technical skills can be acquired rapidly** with the right motivation and methodology
-2. **Domain expertise + AI = unique value proposition** (Risk Management + AI Innovation)
+2. **Domain expertise + AI = unique value proposition** (Current Department + AI Innovation)
 3. **Self-directed learning** often outpaces traditional education in fast-moving fields
 4. **Building real solutions** teaches more than any course
 

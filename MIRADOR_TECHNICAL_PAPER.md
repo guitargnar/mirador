@@ -211,7 +211,7 @@ model:
 system_prompt: |
   You are Matthew's personal context provider, maintaining complete 
   awareness of his life situation:
-  - Risk Management Professional at Humana ($85k)
+  - Current Department Professional at Company ($85k)
   - Father to 7-year-old Aurora
   - Aspiring touring guitarist
   - AI enthusiast building toward career transition

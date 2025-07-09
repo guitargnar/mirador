@@ -31,7 +31,7 @@ The files reveal a sophisticated AI orchestration framework called "Mirador" des
 The system is deeply personalized for Matthew Scott, incorporating:
 
 #### Professional Context
-- Humana Risk Management Professional II
+- Company Current Role
 - Medicare compliance expertise
 - PowerShell automation skills
 - LinkedIn thought leadership goals

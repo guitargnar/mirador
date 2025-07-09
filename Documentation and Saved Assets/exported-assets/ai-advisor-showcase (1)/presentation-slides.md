@@ -2,7 +2,7 @@
 ## A Production-Ready Framework for Enterprise AI Applications
 
 **Presentation by Matthew Scott**  
-*Risk Management Professional II → AI Innovation Leader*
+*Current Role → AI Innovation Leader*
 
 ---
 
@@ -145,7 +145,7 @@ When answering, provide practical advice considering these constraints."
 
 ### Immediate Business Applications
 
-**Risk Management & Compliance**
+**Current Department & Compliance**
 - Automated policy guidance
 - Regulatory requirement mapping
 - Context-aware risk assessment
@@ -185,7 +185,7 @@ When answering, provide practical advice considering these constraints."
 - Innovation with practical application
 
 **Professional Growth:**
-- Risk Management → AI Innovation bridge
+- Current Department → AI Innovation bridge
 - 10+ years stability → cutting-edge capability
 - Regulatory compliance → technology leadership
 - Process optimization → system automation
@@ -260,4 +260,4 @@ When answering, provide practical advice considering these constraints."
 
 **Let's talk about building AI systems that prioritize privacy, deliver business value, and create sustainable competitive advantages.**
 
-*"From Risk Management to AI Innovation: Proven ability to rapidly acquire new skills and deliver production-ready solutions."*
+*"From Current Department to AI Innovation: Proven ability to rapidly acquire new skills and deliver production-ready solutions."*

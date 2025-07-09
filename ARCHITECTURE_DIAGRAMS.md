@@ -130,7 +130,7 @@ graph TD
 │                                                                      │
 │  Model 1 Output                                                      │
 │  ┌─────────────────────────────────────────────────────────┐       │
-│  │ Based on Matthew's context as a Risk Management         │       │
+│  │ Based on Matthew's context as a Current Department         │       │
 │  │ Professional earning $85k with a 7-year-old daughter... │       │
 │  │                                                          │       │
 │  │ Key Insights:                                            │       │

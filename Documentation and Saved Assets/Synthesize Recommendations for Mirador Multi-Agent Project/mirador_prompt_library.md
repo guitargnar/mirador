@@ -177,7 +177,7 @@ mirador-ez ask music_career_timeline_strategist "Realistic timeline for building
 mirador-ez ask music_career_timeline_strategist "Parallel income streams while building touring career"
 ```
 
-#### Risk Management
+#### Current Department
 ```bash
 mirador-ez ask music_career_timeline_strategist "Financial safety net requirements for music career transition"
 mirador-ez ask music_career_timeline_strategist "Go/no-go decision points for leaving stable employment"

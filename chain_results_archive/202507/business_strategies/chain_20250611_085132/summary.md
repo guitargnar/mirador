@@ -29,7 +29,7 @@ Here's a 30-day LinkedIn content calendar for Matthew Scott:
 	+ Post: "Want to boost your productivity? Try using a task management tool like Trello or Asana! [Link to tutorial] #ProductivityHacks #TaskManagement"
 	+ Image: A screenshot of the tool in action
 * Day 5: **Wednesday Wisdom**
-	+ Post: "As a Humana Risk Management Professional II, I've learned that effective communication is key to successful risk management. Don't underestimate the power of clear communication! [Link to article] #RiskManagement #Communication"
+	+ Post: "As a Company Risk Management Professional II, I've learned that effective communication is key to successful risk management. Don't underestimate the power of clear communication! [Link to article] #RiskManagement #Communication"
 	+ Image: A graphic illustrating the importance of communication
 * Day 6: **Thursday Thought Leadership**
 	+ Post: "I'm excited to share my latest thought leadership piece on LinkedIn! Read about my vision for Mirador AI orchestration framework and how it's changing the game in risk management. [Link to article] #ThoughtLeadership #MiradorAI"
@@ -73,7 +73,7 @@ Here's an expanded 30-day LinkedIn content calendar for Matthew Scott:
 	+ Post: "Want to boost your productivity? Try using a task management tool like Trello or Asana! [Link to tutorial] #ProductivityHacks #TaskManagement"
 	+ Image: A screenshot of the tool in action
 * Day 5: **Wednesday Wisdom**
-	+ Post: "As a Humana Risk Management Professional II, I've learned that effective communication is key to successful risk management. Don't underestimate the power of clear communication! [Link to article] #RiskManagement #Communication"
+	+ Post: "As a Company Risk Management Professional II, I've learned that effective communication is key to successful risk management. Don't underestimate the power of clear communication! [Link to article] #RiskManagement #Communication"
 	+ Image: A graphic illustrating the importance of communication
 * Day 6: **Thursday Thought Leadership**
 	+ Post: "I'm excited to share my latest thought leadership piece on LinkedIn! Read about my vision for Mirador AI orchestration framework and how it's changing the game in risk management. [Link to article] #ThoughtLeadership #MiradorAI"

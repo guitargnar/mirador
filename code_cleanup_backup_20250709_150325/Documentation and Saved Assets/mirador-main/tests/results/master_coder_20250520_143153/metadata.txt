@@ -1,0 +1,14 @@
+Model: master_coder
+Timestamp: Tue May 20 14:31:53 EDT 2025
+Prompt: Create a Node.js utility module for securely handling user authentication with the following requirements:
+1. Email/password based authentication
+2. JWT token generation and validation
+3. Password hashing using bcrypt
+4. Rate limiting for failed login attempts
+5. Session management with token refresh
+6. Comprehensive error handling
+7. Unit tests for key functions
+
+Organize the code following best practices and include detailed comments explaining the implementation.
+Response size:       51 bytes
+Response time:  nanoseconds

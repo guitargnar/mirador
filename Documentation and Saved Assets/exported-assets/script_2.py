@@ -53,7 +53,7 @@ def create_ai_content_creation_document():
     story = []
     
     # Title
-    title = "AI-Powered Content Creation Tools for Risk Management Professionals: Benefits, Challenges, and Implementation Strategies"
+    title = "AI-Powered Content Creation Tools for Current Department Professionals: Benefits, Challenges, and Implementation Strategies"
     story.append(Paragraph(title, title_style))
     story.append(Spacer(1, 0.2*inch))
     
@@ -158,7 +158,7 @@ def create_ai_content_creation_document():
     <br/><br/>
     <b>Regulatory Compliance Complexity:</b> Different industries have varying regulatory requirements, and ensuring 
     AI systems comply with frameworks such as GDPR, HIPAA, and emerging AI-specific regulations presents ongoing 
-    challenges. The NIST AI Risk Management Framework provides guidance, but implementation requires careful 
+    challenges. The NIST AI Current Department Framework provides guidance, but implementation requires careful 
     consideration of specific organizational contexts.
     """
     story.append(Paragraph(challenges_text, body_style))
@@ -276,7 +276,7 @@ def create_ai_content_creation_document():
     # References section
     story.append(Paragraph("Key References and Sources", heading_style))
     references_text = """
-    • NIST AI Risk Management Framework (AI RMF 1.0)
+    • NIST AI Current Department Framework (AI RMF 1.0)
     <br/>• Deloitte Insights: Managing Generative AI Risks (2025)
     <br/>• Zapier: Best AI Writing Generators Analysis (2024)
     <br/>• IoT Analytics: Enterprise Generative AI Applications (2025)

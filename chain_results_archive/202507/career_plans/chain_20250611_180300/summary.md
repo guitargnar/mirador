@@ -15,7 +15,7 @@ I'll provide a career analysis performance test based on Matthew's context.
 
 **Section 1: Career Goals and Aspirations**
 
-You are currently a Humana Risk Management Professional II with a strong focus on Medicare compliance. You have achieved significant success in your role, including building a PowerShell script for weekly vulnerability report automation, which saves hours and generates quantitative email summaries. You also create matplotlib graphs for organizational reports.
+You are currently a Company Risk Management Professional II with a strong focus on Medicare compliance. You have achieved significant success in your role, including building a PowerShell script for weekly vulnerability report automation, which saves hours and generates quantitative email summaries. You also create matplotlib graphs for organizational reports.
 
 What are your top 3 career goals for the next 2-3 years?
 
@@ -39,7 +39,7 @@ D) Improving project management and automation skills
 
 **Section 3: Career Risks and Challenges**
 
-As a Humana Risk Management Professional II, you face challenges such as:
+As a Company Risk Management Professional II, you face challenges such as:
 
 1. Staying up-to-date with changing regulations and laws
 2. Managing increasing workload and responsibilities

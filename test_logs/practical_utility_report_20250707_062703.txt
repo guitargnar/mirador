@@ -6,7 +6,7 @@ Test Focus: Real-world scenarios based on Matthew Scott's actual situation
 
 MATTHEW'S CONTEXT (from PDF):
 - Single father, Louisville KY
-- Humana Risk Management Professional II (10 years)
+- Company Current Role (10 years)
 - Musician (Annapurna band, lead guitarist)
 - Built 89-model AI system in 8 weeks (2025)
 - Co-authored Mirador technical paper
@@ -18,7 +18,7 @@ TEST RESULTS:
 
 Test 1: Single Father Balance
 Chain: life_optimization
-Prompt: As a single father working full-time at Humana while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?
+Prompt: As a single father working full-time at Company while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?
 Status: FAILED - Chain execution failed (exit code: 1)
 ---
 Test 2: Real Estate Investment Strategy
@@ -28,7 +28,7 @@ Status: FAILED - Chain execution failed (exit code: 1)
 ---
 Test 3: AI Innovation Leadership Transition
 Chain: business_acceleration
-Prompt: I've built an 89-model AI system and co-authored the Mirador technical paper while working in risk management at Humana. How do I transition into a formal AI innovation leadership role, either within Humana or through a new venture?
+Prompt: I've built an 89-model AI system and co-authored the Mirador technical paper while working in risk management at Company. How do I transition into a formal AI innovation leadership role, either within Company or through a new venture?
 Status: FAILED - Chain execution failed (exit code: 1)
 ---
 Test 4: Creative Technology Integration
@@ -56,9 +56,9 @@ Chain: technical_mastery
 Prompt: I built my AI system with privacy-first principles - all models run locally, no third-party data sharing. How do I maintain this approach while scaling for business applications?
 Status: FAILED - Chain execution failed (exit code: 1)
 ---
-Test 9: Risk Management Skills Transfer
+Test 9: Current Department Skills Transfer
 Chain: strategic_synthesis
-Prompt: How do I leverage my 10 years of risk management expertise at Humana to strengthen my AI innovation work? What transferable skills make me uniquely positioned in this space?
+Prompt: How do I leverage my 10 years of risk management expertise at Company to strengthen my AI innovation work? What transferable skills make me uniquely positioned in this space?
 Status: FAILED - Chain execution failed (exit code: 1)
 ---
 Test 10: Band Collaboration Enhancement
@@ -88,7 +88,7 @@ The tests focus on Matthew Scott's actual situation as documented in the PDF:
    - Career transition from risk management to AI leadership
 
 2. Professional Opportunities:
-   - Leverage 10-year Humana experience
+   - Leverage 10-year Company experience
    - Scale Mirador framework commercially
    - Build privacy-first AI solutions
 

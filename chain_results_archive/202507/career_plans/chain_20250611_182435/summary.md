@@ -72,7 +72,7 @@ I'll expand on the previous output, providing more detailed guidance on maximizi
 
 Based on your $75,000 annual salary, you can explore various remote job opportunities that match your skills and interests. Some high-paying remote jobs in Louisville/Jefferson County include:
 
-1. **Software Development:** Companies like IBM, GE Appliances, and Humana offer software development positions with competitive salaries (average $80,000 - $120,000 per year).
+1. **Software Development:** Companies like IBM, GE Appliances, and Company offer software development positions with competitive salaries (average $80,000 - $120,000 per year).
 2. **Data Science:** With the growth of healthcare and technology industries, data science roles are becoming increasingly popular in Louisville. Salaries range from $70,000 to $110,000 per year.
 3. **Digital Marketing:** As a digital marketing specialist, you can work with local companies like Brown-Forman, Yum! Brands, or Anthem, earning an average salary of $60,000 - $90,000 per year.
 

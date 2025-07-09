@@ -1,5 +1,5 @@
 # The mirador_smart_v2 Leadership Brief
-## Why 40 Lines of Code Could Transform Humana
+## Why 40 Lines of Code Could Transform Company
 
 ---
 
@@ -42,7 +42,7 @@
 ### What mirador_smart_v2 Does
 ```bash
 # User asks a question
-./mirador-smart-v2 "How can I improve our Star Ratings?"
+./mirador-smart-v2 "How can I improve our Quality Metrics?"
 
 # It detects the pattern (strategic query)
 # Routes through specialized models:
@@ -81,7 +81,7 @@ Short-term Goals (This Week):
 1. [Clear deliverable with deadline]
 
 Strategic Initiatives (This Month):
-1. [Aligned with Star Ratings improvement]
+1. [Aligned with Quality Metrics improvement]
 ```
 
 ### Pain: "Personal devices needed for innovation"
@@ -107,7 +107,7 @@ Strategic Initiatives (This Month):
 - Consistent 95%+ accuracy
 - $78M annual value
 - Innovation culture thriving
-- Star Ratings improving
+- Quality Metrics improving
 
 ---
 
@@ -124,7 +124,7 @@ Result → Slow innovation, declining metrics
 ```
 Associates → Tools + Trust → Innovation → Value
 Leaders → Empowerment → Results → Growth
-Result → Rapid innovation, improving Star Ratings
+Result → Rapid innovation, improving Quality Metrics
 ```
 
 ---
@@ -132,7 +132,7 @@ Result → Rapid innovation, improving Star Ratings
 ## 🎭 WHY LEADERSHIP SHOULD CARE
 
 ### It Solves Your Biggest Problems
-1. **Star Ratings**: Consistency through automation
+1. **Quality Metrics**: Consistency through automation
 2. **Innovation**: Associates building solutions
 3. **Costs**: $0 development, massive ROI
 4. **Trust**: Proven safe in production
@@ -213,8 +213,8 @@ Result → Rapid innovation, improving Star Ratings
    - Meet the builder (Matthew)
 
 2. **Pilot in 5 departments**
-   - Risk Management (proven)
-   - Clinical Operations (Star Ratings impact)
+   - Current Department (proven)
+   - Clinical Operations (Quality Metrics impact)
    - Member Services (consistency)
    - IT (eat our own dogfood)
    - Finance (ROI focus)
@@ -238,7 +238,7 @@ Result → Rapid innovation, improving Star Ratings
 3. **Measure Everything**
    - Time saved
    - Error reduction
-   - Star Ratings impact
+   - Quality Metrics impact
    - Associate satisfaction
    - ROI achieved
 
@@ -246,12 +246,12 @@ Result → Rapid innovation, improving Star Ratings
 
 ## 🚀 THE VISION REALIZED
 
-### What Humana Could Become
+### What Company Could Become
 **"The healthcare company where associates' innovations transform the industry"**
 
 - Every associate empowered with AI tools
 - Innovation happening at every level
-- Star Ratings leading the industry
+- Quality Metrics leading the industry
 - Costs dropping while quality rises
 - Talent flocking to join us
 
@@ -287,6 +287,6 @@ Or continue buying expensive solutions that don't address the real pain points?
 
 ---
 
-*"Sometimes the most profound transformations come in the simplest packages. mirador_smart_v2 is Humana's opportunity to prove that."*
+*"Sometimes the most profound transformations come in the simplest packages. mirador_smart_v2 is Company's opportunity to prove that."*
 
 **- Built by an associate who believed it was possible**

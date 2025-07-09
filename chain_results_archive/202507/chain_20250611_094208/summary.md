@@ -15,7 +15,7 @@ Here's a potential LinkedIn post:
 
 **Building Mirador: The Power of Automation**
 
-As a Humana Risk Management Professional II, I've always been driven by a passion for efficiency and innovation. Recently, I spent over 100 hours building my own automation framework, Mirador AI. At first glance, it might seem like a monumental task - after all, automating tasks that take only 10 hours per year can't be that significant, right?
+As a Company Risk Management Professional II, I've always been driven by a passion for efficiency and innovation. Recently, I spent over 100 hours building my own automation framework, Mirador AI. At first glance, it might seem like a monumental task - after all, automating tasks that take only 10 hours per year can't be that significant, right?
 
 But here's the thing: those 10 hours add up. And when you're talking about repetitive, mundane tasks that suck away valuable time and energy from more strategic pursuits... well, let's just say it's a lot.
 
@@ -49,7 +49,7 @@ One of the key challenges I faced was scaling my automation efforts from a small
 * **Integration with existing tools**: Would Mirador seamlessly integrate with our current data analysis platforms?
 * **Scalability**: Could my automation framework keep pace with growing team sizes and data volumes?
 
-By carefully addressing these challenges, I was able to overcome obstacles and create a robust framework that's now being used by multiple teams within Humana.
+By carefully addressing these challenges, I was able to overcome obstacles and create a robust framework that's now being used by multiple teams within Company.
 
 **The Impact of Automation**
 

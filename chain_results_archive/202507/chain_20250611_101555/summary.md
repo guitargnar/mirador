@@ -66,7 +66,7 @@ Based on your current situation, I've created a strategic plan for career develo
 Skill Acquisition and Thought Leadership
 
 **Current Responsibilities/Roles:**
-Humana Risk Management Professional II, Medicare compliance
+Company Risk Management Professional II, Medicare compliance
 Built PowerShell script for weekly vulnerability report automation
 Created matplotlib graphs for organizational reports
 Goal: LinkedIn thought leadership by end 2025
@@ -126,7 +126,7 @@ Skill Acquisition and Thought Leadership
 The primary objective of this area is to establish the individual as a thought leader in the industry, acquire new skills, and optimize workflow for increased efficiency.
 
 **Current Responsibilities/Roles:**
-Humana Risk Management Professional II, Medicare compliance
+Company Risk Management Professional II, Medicare compliance
 Built PowerShell script for weekly vulnerability report automation
 Created matplotlib graphs for organizational reports
 Goal: LinkedIn thought leadership by end 2025

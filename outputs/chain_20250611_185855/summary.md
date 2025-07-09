@@ -26,7 +26,7 @@ As a knowledgeable expert on Louisville Metro and Jefferson County, I'd be happy
 1. **Real Estate Investing**: Invest in Louisville's growing neighborhoods, such as NuLu, Shawnee, or Highlands, where property values are increasing.
 2. **Entrepreneurship**: Start a business that addresses a specific community need, such as sustainable agriculture, eco-tourism, or social entrepreneurship.
 3. **Rental Properties**: Invest in rental properties, including apartments and single-family homes, to generate passive income.
-4. **Dividend-paying Stocks**: Invest in dividend-paying stocks of local companies, such as Brown-Forman (B) or Humana (HUM), which can provide a steady stream of income.
+4. **Dividend-paying Stocks**: Invest in dividend-paying stocks of local companies, such as Brown-Forman (B) or Company (HUM), which can provide a steady stream of income.
 5. **Real Estate Crowdfunding**: Explore real estate crowdfunding platforms that allow you to invest in local projects and earn returns through rental income or property appreciation.
 
 **Hybrid Opportunities:**
