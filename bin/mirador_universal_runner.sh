@@ -29,22 +29,22 @@ PROMPT=$2
 # Map chain types to optimized model sequences (context provider first for deep understanding)
 case $CHAIN_TYPE in
     "life_optimization")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="matthew_context_provider_v5_complete creative_catalyst practical_implementer"
+        MODELS="user_context_provider_v5_complete creative_catalyst practical_implementer"
         ;;
     "relationship_harmony")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "technical_mastery")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
         ;;
     "strategic_synthesis")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect creative_catalyst practical_implementer"
+        MODELS="user_context_provider_v5_complete universal_strategy_architect creative_catalyst practical_implementer"
         ;;
     *)
         echo -e "${RED}Unknown chain type: $CHAIN_TYPE${RESET}"
@@ -89,14 +89,14 @@ for i in "${!MODEL_ARRAY[@]}"; do
         STEP_PROMPT="$CURRENT_CONTEXT"
     else
         # Subsequent models get context-aware prompts
-        if [[ "$MODEL" == "matthew_context_provider_v5_complete" ]]; then
+        if [[ "$MODEL" == "user_context_provider_v5_complete" ]]; then
             STEP_PROMPT="Given this challenge/question: '$PROMPT'
 
 And considering the previous analysis: $CURRENT_CONTEXT
 
-Apply your deep understanding of Matthew's complete story - his musical collaboration experience from Annapurna's 9-year journey, pattern recognition abilities from childhood, current reality as a single father to Sage, relationship building with Katie, financial constraints ($1,650 take-home, $91K equity), and transformation from crisis to AI innovation. How do these personal experiences and constraints specifically inform the approach to this challenge?"
+Apply your deep understanding of User's complete story - his musical collaboration experience from Annapurna's 9-year journey, pattern recognition abilities from childhood, current reality as a parent to Child, relationship building with Partner, financial constraints (modest income take-home, home equity equity), and transformation from crisis to AI innovation. How do these personal experiences and constraints specifically inform the approach to this challenge?"
         elif [[ "$MODEL" == "universal_strategy_architect" ]]; then
-            STEP_PROMPT="Building on Matthew's personal context: $CURRENT_CONTEXT
+            STEP_PROMPT="Building on User's personal context: $CURRENT_CONTEXT
 
 As a universal strategy architect, analyze this situation through multiple strategic lenses. Connect the personal insights to broader strategic frameworks. How do we scale these personal patterns into actionable business/life strategies? What are the systemic implications and interconnections?"
         elif [[ "$MODEL" == "creative_catalyst" ]]; then
@@ -106,12 +106,12 @@ As a creative catalyst, how do we transform these insights into innovative solut
         elif [[ "$MODEL" == "practical_implementer" ]]; then
             STEP_PROMPT="Based on all previous analysis: $CURRENT_CONTEXT
 
-As a practical implementer, convert these insights into specific, actionable steps. Create concrete implementation plans that account for Matthew's real constraints: time with Sage, energy limitations, relationship dynamics with Katie, work responsibilities, and financial realities. What are the exact next steps?"
+As a practical implementer, convert these insights into specific, actionable steps. Create concrete implementation plans that account for User's real constraints: time with Child, energy limitations, relationship dynamics with Partner, work responsibilities, and financial realities. What are the exact next steps?"
         else
             # Default prompt for any other models
             STEP_PROMPT="Building on the previous analysis: $CURRENT_CONTEXT
 
-Please provide your specialized perspective and detailed recommendations, ensuring they connect to Matthew's specific context and constraints."
+Please provide your specialized perspective and detailed recommendations, ensuring they connect to User's specific context and constraints."
         fi
     fi
     

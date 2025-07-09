@@ -17,13 +17,13 @@
 
 ## Overview
 
-**Mirador v3.0** is a multi-faceted universal AI orchestration platform that enables collaborative AI chains for creative professionals, entrepreneurs, and innovators. Built specifically for Matthew Scott's real-world needs, it scales from personal optimization to business applications.
+**Mirador v3.0** is a multi-faceted universal AI orchestration platform that enables collaborative AI chains for creative professionals, entrepreneurs, and innovators. Built specifically for User's real-world needs, it scales from personal optimization to business applications.
 
 ### Key Features
 - **Universal Chain Types**: 6 specialized chain orchestrations
 - **Apple Silicon Optimized**: Quality-focused parameters for M-series chips
 - **Privacy-First**: All models run locally, no data sharing
-- **Real Context**: Based on Matthew's actual background and situation
+- **Real Context**: Based on User's actual background and situation
 - **Practical Utility**: Tested against real-world scenarios
 
 ### Primary Use Cases
@@ -60,10 +60,10 @@ cd mirador
 ### Model Verification
 ```bash
 # Check models are created
-ollama list | grep -E "(matthew_context_provider_v4_accurate|universal_strategy_architect|creative_catalyst|practical_implementer)"
+ollama list | grep -E "(user_context_provider_v4_accurate|universal_strategy_architect|creative_catalyst|practical_implementer)"
 
 # Test basic functionality
-echo "What are my current priorities?" | ollama run matthew_context_provider_v4_accurate
+echo "What are my current priorities?" | ollama run user_context_provider_v4_accurate
 ```
 
 ---
@@ -76,9 +76,9 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ```
 
 ### Model Types
-1. **Context Provider**: `matthew_context_provider_v4_accurate`
+1. **Context Provider**: `user_context_provider_v4_accurate`
    - Real personal/professional context
-   - Louisville, family, Company background
+   - city, family, Company background
    - Financial situation and goals
 
 2. **Specialist Models**: 
@@ -115,10 +115,10 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ### Example Commands
 ```bash
 # Single father work-life balance
-./mirador_universal_runner.sh life_optimization "How do I balance being a single father, working at Company, playing music with Annapurna, and developing AI innovations?"
+./mirador_universal_runner.sh life_optimization "How do I balance being a parent, working at Company, playing music with Annapurna, and developing AI innovations?"
 
 # Real estate investment strategy
-./mirador_universal_runner.sh business_acceleration "I have $91K home equity and $1,650 take-home pay. What's my optimal real estate investment strategy?"
+./mirador_universal_runner.sh business_acceleration "I have home equity home equity and modest income take-home pay. What's my optimal real estate investment strategy?"
 
 # AI career transition
 ./mirador_universal_runner.sh business_acceleration "How do I transition from risk management to AI innovation leadership at Company?"
@@ -128,14 +128,14 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 
 ## Model Reference
 
-### matthew_context_provider_v4_accurate
-**Purpose**: Provides accurate personal and professional context for Matthew Scott
+### user_context_provider_v4_accurate
+**Purpose**: Provides accurate personal and professional context for User
 **Context Includes**:
-- Location: Louisville, Kentucky
+- Location: city, state
 - Role: Single father, Company Senior Current Role
 - Music: Lead guitarist in Annapurna band
 - AI Innovation: 89-model system creator, Mirador co-author
-- Financial: ~$1,650/paycheck, $91K home equity
+- Financial: ~modest income/paycheck, home equity home equity
 - Goals: AI leadership, real estate investment, work-life balance
 
 ### universal_strategy_architect
@@ -172,7 +172,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ### 1. life_optimization
 **Models**: context → strategy → implementation
 **Use For**: Work-life balance, family integration, personal growth
-**Example**: Balancing single fatherhood with career and creative pursuits
+**Example**: Balancing parenthood with career and creative pursuits
 
 ### 2. business_acceleration
 **Models**: strategy → context → implementation  
@@ -187,7 +187,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ### 4. relationship_harmony
 **Models**: context → strategy → implementation
 **Use For**: Professional networking, personal relationships, collaboration
-**Example**: Building Louisville AI innovation network
+**Example**: Building city AI innovation network
 
 ### 5. technical_mastery
 **Models**: context → strategy → implementation
@@ -205,7 +205,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 
 ### Financial Planning Example
 ```bash
-./mirador_universal_runner.sh business_acceleration "I have two 401k loans reducing my take-home to $1,650 per paycheck, but I have $91,000 in home equity. I want to invest in real estate while maintaining financial stability for my child. What's my strategy?"
+./mirador_universal_runner.sh business_acceleration "I have two 401k loans reducing my take-home to modest income per paycheck, but I have $91,000 in home equity. I want to invest in real estate while maintaining financial stability for my child. What's my strategy?"
 ```
 
 **Expected Output**: Specific real estate investment strategies accounting for:
@@ -240,7 +240,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 ```
 
 ### Test Coverage
-- **10 Real-World Scenarios** based on Matthew's actual situation
+- **10 Real-World Scenarios** based on User's actual situation
 - **Keyword Validation** for response relevance
 - **Performance Metrics** for execution time
 - **Success Rate Tracking** for reliability assessment
@@ -260,7 +260,7 @@ Input Prompt → Context Model → Specialist Model → Implementation Model →
 mirador/
 ├── mirador_universal_runner.sh          # Main execution script
 ├── create_optimized_models_fixed.sh     # Model creation
-├── matthew_context_accurate.modelfile   # Context model definition
+├── user_context_accurate.modelfile   # Context model definition
 ├── tests/                              # Testing framework
 │   ├── test_practical_utility_pdf_context.sh
 │   └── test_logs/                      # Test results
@@ -344,7 +344,7 @@ ps aux | grep ollama
 ```
 **Solution**: Check model parameters and Ollama availability:
 ```bash
-ollama run matthew_context_provider_v4_accurate "test"
+ollama run user_context_provider_v4_accurate "test"
 ```
 
 ### Performance Optimization
@@ -393,10 +393,10 @@ echo "test" | ollama run model_name
 4. **Debug**: Use debug mode for troubleshooting
 
 ### File Locations Reference
-- **Main Runner**: `/Users/matthewscott/Projects/mirador/mirador_universal_runner.sh`
-- **Model Creation**: `/Users/matthewscott/Projects/mirador/create_optimized_models_fixed.sh`
-- **Test Suite**: `/Users/matthewscott/Projects/mirador/tests/test_practical_utility_pdf_context.sh`
-- **Documentation**: `/Users/matthewscott/Projects/mirador/MIRADOR_COMPREHENSIVE_REFERENCE.md`
+- **Main Runner**: `/Users/userscott/Projects/mirador/mirador_universal_runner.sh`
+- **Model Creation**: `/Users/userscott/Projects/mirador/create_optimized_models_fixed.sh`
+- **Test Suite**: `/Users/userscott/Projects/mirador/tests/test_practical_utility_pdf_context.sh`
+- **Documentation**: `/Users/userscott/Projects/mirador/MIRADOR_COMPREHENSIVE_REFERENCE.md`
 
 ---
 

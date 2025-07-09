@@ -41,7 +41,7 @@
 │  │  ┌─────────────────────────┐  ┌─────────────────────────┐          │       │
 │  │  │   Context Providers (5)  │  │   Domain Experts (28)   │          │       │
 │  │  ├─────────────────────────┤  ├─────────────────────────┤          │       │
-│  │  │ • matthew_context_v3     │  │ • financial_expert_v6   │          │       │
+│  │  │ • user_context_v3     │  │ • financial_expert_v6   │          │       │
 │  │  │ • personality_provider   │  │ • guitar_tone_architect │          │       │
 │  │  │ • louisville_context     │  │ • music_industry_network│          │       │
 │  │  │ • family_context         │  │ • career_transition_spec│          │       │
@@ -130,7 +130,7 @@ graph TD
 │                                                                      │
 │  Model 1 Output                                                      │
 │  ┌─────────────────────────────────────────────────────────┐       │
-│  │ Based on Matthew's context as a Current Department         │       │
+│  │ Based on User's context as a Current Department         │       │
 │  │ Professional earning $85k with a 7-year-old daughter... │       │
 │  │                                                          │       │
 │  │ Key Insights:                                            │       │
@@ -148,7 +148,7 @@ graph TD
 │  │  └──────┬──────┘  └──────┬───────┘  └───────┬───────┘  │       │
 │  │         │                 │                   │          │       │
 │  │         ▼                 ▼                   ▼          │       │
-│  │    [Matthew]        [Transition]         [3 years]      │       │
+│  │    [User]        [Transition]         [3 years]      │       │
 │  │    [$85k]          [Stability]          [Family]        │       │
 │  │    [Aurora]        [Music Career]       [Limited Time]  │       │
 │  └─────────────────────────┬───────────────────────────────┘       │

@@ -1,4 +1,4 @@
-# Matthew's Mirador Integration Guide
+# User's Mirador Integration Guide
 
 ## 🚀 Quick Start - Your Models with Mirador v2.0
 
@@ -7,12 +7,12 @@
 # Use your proven chains with metrics tracking
 python3 mirador_v2.py run \
   --prompt "What should I focus on today at Company?" \
-  --chain "matthew_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer"
+  --chain "user_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer"
 
 # Financial planning with metrics
 python3 mirador_v2.py run \
   --prompt "Analyze my path to financial independence" \
-  --chain "matthew_context_provider_v3,financial_planning_expert_v6,enhanced_agent_enforcer"
+  --chain "user_context_provider_v3,financial_planning_expert_v6,enhanced_agent_enforcer"
 
 # Company navigation
 python3 mirador_v2.py run \
@@ -22,15 +22,15 @@ python3 mirador_v2.py run \
 
 ### 2. Create Custom Launchers for Your Workflows
 ```bash
-# Create matthew-daily launcher
-cat > matthew-daily << 'EOF'
+# Create user-daily launcher
+cat > user-daily << 'EOF'
 #!/bin/bash
 # Your daily strategic briefing with metrics
 python3 mirador_v2.py run \
   --prompt "Create my strategic daily briefing for Company considering current priorities" \
-  --chain "matthew_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer"
+  --chain "user_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer"
 EOF
-chmod +x matthew-daily
+chmod +x user-daily
 
 # Create company-innovate launcher
 cat > company-innovate << 'EOF'
@@ -46,16 +46,16 @@ chmod +x company-innovate
 ### 3. Configure Your Model Preferences
 ```bash
 # Create your model configuration
-cat > ~/.mirador/matthew_models.json << 'EOF'
+cat > ~/.mirador/user_models.json << 'EOF'
 {
   "favorite_chains": {
-    "daily": ["matthew_context_provider_v3", "ai_leadership_strategist", "enhanced_agent_enforcer"],
-    "financial": ["matthew_context_provider_v3", "financial_planning_expert_v6", "personal_finance_navigator"],
+    "daily": ["user_context_provider_v3", "ai_leadership_strategist", "enhanced_agent_enforcer"],
+    "financial": ["user_context_provider_v3", "financial_planning_expert_v6", "personal_finance_navigator"],
     "company": ["company_ai_advocate", "company_innovation_catalyst", "company_politics_navigator"],
-    "career": ["matthew_context_provider_v3", "ai_career_strategist", "opportunity_validator_v2"]
+    "career": ["user_context_provider_v3", "ai_career_strategist", "opportunity_validator_v2"]
   },
   "model_aliases": {
-    "matthew": "matthew_context_provider_v3",
+    "user": "user_context_provider_v3",
     "finance": "financial_planning_expert_v6",
     "company": "company_ai_advocate",
     "leadership": "ai_leadership_strategist"
@@ -72,7 +72,7 @@ EOF
 python3 metrics_tracker.py summary --days 1
 
 # 2. Run your daily briefing
-./matthew-daily
+./user-daily
 
 # 3. Report any pain points
 python3 advocates_program.py report \
@@ -89,7 +89,7 @@ open http://localhost:5000
 # Complex career decision
 python3 mirador_v2.py run \
   --prompt "Should I pursue the enterprise architect role or stay focused on AI leadership?" \
-  --chain "matthew_context_provider_v3,ai_career_strategist,financial_planning_expert_v6,enhanced_agent_enforcer"
+  --chain "user_context_provider_v3,ai_career_strategist,financial_planning_expert_v6,enhanced_agent_enforcer"
 
 # Innovation proposal
 ./company-innovate "How to position Mirador as enterprise solution"
@@ -98,7 +98,7 @@ python3 mirador_v2.py run \
 ### Automation Setup
 ```bash
 # Create automation script
-cat > matthew_automations.py << 'EOF'
+cat > user_automations.py << 'EOF'
 from automation_engine import AutomationEngine
 import subprocess
 
@@ -109,7 +109,7 @@ def morning_briefing():
     return subprocess.run([
         'python3', 'mirador_v2.py', 'run',
         '--prompt', 'Create my strategic daily briefing',
-        '--chain', 'matthew_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer'
+        '--chain', 'user_context_provider_v3,ai_leadership_strategist,enhanced_agent_enforcer'
     ], capture_output=True, text=True)
 
 # Weekly financial review
@@ -117,7 +117,7 @@ def weekly_financial():
     return subprocess.run([
         'python3', 'mirador_v2.py', 'run',
         '--prompt', 'Weekly financial progress review and recommendations',
-        '--chain', 'matthew_context_provider_v3,financial_planning_expert_v6,enhanced_agent_enforcer'
+        '--chain', 'user_context_provider_v3,financial_planning_expert_v6,enhanced_agent_enforcer'
     ], capture_output=True, text=True)
 
 # Register tasks
@@ -131,7 +131,7 @@ engine.start()
 EOF
 
 # Run automations
-python3 matthew_automations.py
+python3 user_automations.py
 ```
 
 ## 🎯 Your Specific Use Cases
@@ -154,7 +154,7 @@ python3 advocates_program.py solution \
 # Multi-model financial analysis
 python3 mirador_v2.py run \
   --prompt "Analyze all income optimization opportunities" \
-  --chain "matthew_context_provider_v3,financial_planning_expert_v6,financial_planning_expert_optimized,louisville_expert_v3"
+  --chain "user_context_provider_v3,financial_planning_expert_v6,financial_planning_expert_optimized,louisville_expert_v3"
 ```
 
 ### 3. Music Career Integration
@@ -162,7 +162,7 @@ python3 mirador_v2.py run \
 # Balance analysis
 python3 mirador_v2.py run \
   --prompt "How to balance Company leadership goals with music performance schedule" \
-  --chain "matthew_context_provider_v3,music_career_timeline_strategist,life_transition_coordinator"
+  --chain "user_context_provider_v3,music_career_timeline_strategist,life_transition_coordinator"
 ```
 
 ## 🔧 Troubleshooting

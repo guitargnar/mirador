@@ -14,7 +14,7 @@ On July 9, 2025, this repository underwent a security cleanup to remove sensitiv
 
 2. **Re-clone the repository**:
    ```bash
-   git clone https://github.com/guitargnar/mirador.git
+   git clone https://github.com/your-username/mirador.git
    cd mirador
    ```
 
@@ -34,7 +34,7 @@ The repository has been cleaned of:
 - ✅ All company name references in code
 
 ## Questions?
-Contact Matthew Scott at matthewdscott7@gmail.com
+Contact User at contact@example.com
 
 ---
 *Last updated: July 9, 2025*

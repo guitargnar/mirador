@@ -1,7 +1,7 @@
 # Mirador: A Personal AI Orchestration Framework for Enhanced Decision-Making and Life Optimization
 
-**Matthew Scott**  
-*Louisville, Kentucky*  
+**User**  
+*city, state*  
 *June 2025*
 
 ## Abstract
@@ -49,8 +49,8 @@ Started with basic shell scripts chaining 3-4 models. Early tests showed promise
 
 ### Phase 2: Rapid Iteration (May 26 - June 10, 2025)
 Created specialized models for my specific needs:
-- `matthew_context_provider`: Encoded my complete life situation
-- `financial_planning_expert`: Louisville-specific financial guidance
+- `user_context_provider`: Encoded my complete life situation
+- `financial_planning_expert`: city-specific financial guidance
 - `guitar_tone_architect`: Music career development strategies
 
 ### Phase 3: Intelligence Layer (June 11-18, 2025)
@@ -78,7 +78,7 @@ Through extensive testing, Mirador excels in several domains:
 
 ### Creative Pursuit Integration
 - Designed practice schedules balancing family time and skill development
-- Identified 15 Louisville-Nashville music industry connections
+- Identified 15 city-Nashville music industry connections
 - Created content strategies for building industry visibility
 
 ### Daily Decision Support
@@ -147,7 +147,7 @@ The watchtower stands ready. The question is: what will you observe from yours?
 
 ---
 
-*Mirador is actively developed and available at [github.com/guitargnar/mirador](https://github.com/guitargnar/mirador). For collaboration inquiries or implementation guidance, connect via GitHub.*
+*Mirador is actively developed and available at [github.com/your-username/mirador](https://github.com/your-username/mirador). For collaboration inquiries or implementation guidance, connect via GitHub.*
 
 ## Appendix: Performance Metrics
 

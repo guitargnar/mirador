@@ -1,9 +1,9 @@
 # 🏰 Mirador - Local AI Orchestration Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform](https://img.shields.io/badge/Platform-macOS-black)](https://github.com/guitargnar/mirador)
+[![Platform](https://img.shields.io/badge/Platform-macOS-black)](https://github.com/your-username/mirador)
 [![Ollama](https://img.shields.io/badge/Powered%20by-Ollama-blue)](https://ollama.ai)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-green)](https://github.com/guitargnar/mirador)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-green)](https://github.com/your-username/mirador)
 
 Mirador orchestrates multiple AI models locally to provide comprehensive analysis for complex decision-making. Built on Ollama, it chains specialized models together for deeper, more nuanced responses while keeping all data on your machine.
 
@@ -23,7 +23,7 @@ Mirador orchestrates multiple AI models locally to provide comprehensive analysi
 brew install ollama
 
 # 2. Clone Mirador
-git clone https://github.com/guitargnar/mirador.git
+git clone https://github.com/your-username/mirador.git
 cd mirador
 
 # 3. Run setup

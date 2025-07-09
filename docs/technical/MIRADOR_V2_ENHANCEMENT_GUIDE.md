@@ -14,7 +14,7 @@
 ./mirador_universal_runner_v2.sh strategic_synthesis "Comprehensive life planning" detailed
 
 # JSON export for tool integration
-./mirador_universal_runner_v2.sh relationship_harmony "Strengthen partnership with Katie" export
+./mirador_universal_runner_v2.sh relationship_harmony "Strengthen partnership with Partner" export
 ```
 
 ### 📊 **New Feedback System**
@@ -67,7 +67,7 @@ python3 constraint_validator.py test
 ### **4. Constraint Validation Engine**
 - Validates time allocations don't exceed 24 hours/day
 - Checks energy requirements against sustainable capacity
-- Monitors financial impact against your $1,650 budget
+- Monitors financial impact against your modest income budget
 - Ensures relationship time is balanced with work activities
 
 ---
@@ -115,7 +115,7 @@ Feedback → Pattern Learning ← Constraint Validation ← Output
 ### **Morning Planning Session**
 ```bash
 # Quick daily plan
-./mirador_universal_runner_v2.sh life_optimization "Today's priorities: work, Sage, Katie, coursework" quick
+./mirador_universal_runner_v2.sh life_optimization "Today's priorities: work, Child, Partner, coursework" quick
 
 # Validate the plan
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -173,7 +173,7 @@ ls -la outputs/universal_*/ | tail -10
 Edit `constraint_validator.py` to adjust:
 - Available personal hours (default: 9 hours)
 - Energy capacity levels (default: 10-point scale)
-- Financial constraints (default: $1,650 income)
+- Financial constraints (default: modest income income)
 - Priority activity definitions
 
 ### **Context Pattern Tuning**
@@ -214,7 +214,7 @@ python3 constraint_validator.py validate project_timeline.md
 ### **Relationship Management**
 ```bash
 # Quick relationship check-ins
-./mirador_universal_runner_v2.sh relationship_harmony "Katie conversation topics" quick
+./mirador_universal_runner_v2.sh relationship_harmony "Partner conversation topics" quick
 
 # Weekly relationship planning
 ./mirador_universal_runner_v2.sh relationship_harmony "Family time optimization" summary
@@ -229,7 +229,7 @@ python3 constraint_validator.py validate project_timeline.md
 **Models not found:**
 ```bash
 ollama list  # Check available models
-# Ensure matthew_context_provider_v5_complete, practical_implementer, etc. exist
+# Ensure user_context_provider_v5_complete, practical_implementer, etc. exist
 ```
 
 **Constraint validation errors:**

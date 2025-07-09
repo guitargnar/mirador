@@ -9,23 +9,23 @@ rm -f docs/personal/PERSONAL_STORY.md
 # Create anonymized modelfiles
 echo "📝 Anonymizing model files..."
 find models/ -name "*.modelfile" -type f | while read file; do
-    if grep -q -i "matthew\|sage\|katie\|carey\|angela\|peter\|jon foster" "$file" 2>/dev/null; then
+    if grep -q -i "user\|sage\|katie\|carey\|angela\|peter\|jon foster" "$file" 2>/dev/null; then
         sed -i '' \
-            -e 's/Matthew Scott/User/g' \
-            -e 's/matthew/user/g' \
-            -e 's/Matthew/User/g' \
-            -e 's/Sage/Child/g' \
-            -e 's/Katie/Partner/g' \
-            -e 's/Carey/Co-parent/g' \
-            -e 's/Angela/Family Member/g' \
-            -e 's/Peter/Family Member/g' \
-            -e 's/Jon Foster/Manager/g' \
-            -e 's/single father/parent/g' \
-            -e 's/\$1,650/modest income/g' \
-            -e 's/\$91K/home equity/g' \
+            -e 's/User/User/g' \
+            -e 's/user/user/g' \
+            -e 's/User/User/g' \
+            -e 's/Child/Child/g' \
+            -e 's/Partner/Partner/g' \
+            -e 's/Co-parent/Co-parent/g' \
+            -e 's/Family Member/Family Member/g' \
+            -e 's/Family Member/Family Member/g' \
+            -e 's/Manager/Manager/g' \
+            -e 's/parent/parent/g' \
+            -e 's/\modest income/modest income/g' \
+            -e 's/\home equity/home equity/g' \
             -e 's/ACL\/MCL injury/injury/g' \
-            -e 's/childhood trauma/past experiences/g' \
-            -e 's/fractured childhood/challenging background/g' \
+            -e 's/past experiences/past experiences/g' \
+            -e 's/challenging background/challenging background/g' \
             "$file"
         echo "  ✓ Anonymized: $file"
     fi
@@ -34,11 +34,11 @@ done
 # Check Python files
 echo "📝 Checking Python files..."
 find src/ -name "*.py" -type f | while read file; do
-    if grep -q -i "matthew\|sage\|katie" "$file" 2>/dev/null; then
+    if grep -q -i "user\|sage\|katie" "$file" 2>/dev/null; then
         sed -i '' \
-            -e 's/Matthew Scott/User/g' \
-            -e 's/matthew/user/g' \
-            -e 's/Matthew/User/g' \
+            -e 's/User/User/g' \
+            -e 's/user/user/g' \
+            -e 's/User/User/g' \
             "$file"
         echo "  ✓ Anonymized: $file"
     fi
@@ -48,8 +48,8 @@ done
 if [ -f "CLAUDE.md" ]; then
     echo "📝 Updating CLAUDE.md..."
     sed -i '' \
-        -e 's/matthewdscott7@gmail.com/contact@example.com/g' \
-        -e 's/Matthew Scott/User/g' \
+        -e 's/contact@example.com/contact@example.com/g' \
+        -e 's/User/User/g' \
         "$file"
 fi
 

@@ -1,7 +1,7 @@
 # Mirador: Technical Architecture of a Privacy-First Multi-Agent AI Orchestration Framework
 
-**Matthew Scott**  
-*Louisville, Kentucky*  
+**User**  
+*city, state*  
 *June 2025*
 
 ## Abstract
@@ -195,7 +195,7 @@ class ContextPropagator:
 ### 2.2 Model Configuration Example
 
 ```yaml
-# matthew_context_provider_v3.yaml
+# user_context_provider_v3.yaml
 model:
   base: llama3.2:3b
   parameters:
@@ -209,7 +209,7 @@ model:
     use_mmap: true
     
 system_prompt: |
-  You are Matthew's personal context provider, maintaining complete 
+  You are User's personal context provider, maintaining complete 
   awareness of his life situation:
   - Current Department Professional at Company ($85k)
   - Father to 7-year-old Aurora
@@ -762,5 +762,5 @@ The 99.3% success rate across 450+ real-world analyses validates the architectur
 
 ---
 
-*For implementation details and source code: [github.com/guitargnar/mirador](https://github.com/guitargnar/mirador)*  
-*Technical inquiries: matthew@mirador.ai*
+*For implementation details and source code: [github.com/your-username/mirador](https://github.com/your-username/mirador)*  
+*Technical inquiries: user@mirador.ai*

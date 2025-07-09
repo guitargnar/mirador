@@ -17,7 +17,7 @@
 *For financial_planning_expert_v6 (temp 0.3) + optimized_action_prioritizer*
 
 **Wealth Building**
-- "With $85k salary, $1650 biweekly take-home, and $91k home equity, create a 24-month plan to generate $50k for real estate investment."
+- "With $85k salary, $1650 biweekly take-home, and home equity home equity, create a 24-month plan to generate $50k for real estate investment."
 - "Calculate exact monthly savings needed to quit corporate job in 3 years with touring income replacing 60% of current salary."
 - "Design tax-optimized strategy for transitioning from W2 to 1099 musician income over 18 months."
 
@@ -34,11 +34,11 @@
 - "Design pre-audition routine combining technical drills and anxiety management for optimal performance."
 
 **Strategic Positioning**
-- "Analyze 5 ways to get on Cody Ash's radar within 60 days using only Louisville resources."
+- "Analyze 5 ways to get on Cody Ash's radar within 60 days using only city resources."
 - "Create content strategy showing my guitar skills that Nashville producers would notice."
 
 ### 🧠 AI Career Transition
-*For enhanced_agent_enforcer + matthew_context_provider_v3*
+*For enhanced_agent_enforcer + user_context_provider_v3*
 
 **Portfolio Development**
 - "Transform Mirador's 450+ successful analyses into 3 compelling case studies for AI engineering roles."
@@ -50,7 +50,7 @@
 - "Identify 3 AI certifications that would validate my practical experience with maximum ROI."
 
 ### 🔄 Daily Optimization
-*For matthew_context_provider_v3 + optimized_action_prioritizer*
+*For user_context_provider_v3 + optimized_action_prioritizer*
 
 **Morning Launch**
 - "Based on my energy patterns and today's commitments, sequence my tasks for maximum flow state."
@@ -104,11 +104,11 @@ Provide decision matrix with weighted scoring."
 
 **Breakthrough Thinking**
 - "What if I could only work 20 hours/week? Redesign my path to all goals with this constraint."
-- "Combine my AI skills and music in 5 ways nobody in Louisville is doing yet."
+- "Combine my AI skills and music in 5 ways nobody in city is doing yet."
 - "If I had to achieve financial independence in 18 months, what radical moves would I make?"
 
 **Opportunity Synthesis**
-- "Find hidden opportunities at the intersection of: Company's size, Louisville's music scene, my AI skills."
+- "Find hidden opportunities at the intersection of: Company's size, city's music scene, my AI skills."
 - "Create 3 business ideas that generate passive income while building music industry connections."
 
 ### 📋 Prompt Templates
@@ -147,11 +147,11 @@ Analysis needed: [specific evaluation]"
 
 **Speed Optimized** (30-45 seconds total):
 - Context Provider → Optimized Decision Simplifier
-- Matthew Advisor → Optimized Action Prioritizer
+- User Advisor → Optimized Action Prioritizer
 
 **Depth Optimized** (60-90 seconds total):
 - Context Provider → Domain Expert → Synthesizer → Action Prioritizer
-- Matthew Advisor → Financial Expert → Enhanced Agent → Decision Simplifier
+- User Advisor → Financial Expert → Enhanced Agent → Decision Simplifier
 
 **Innovation Optimized** (45-75 seconds):
 - Context Provider → Cross-Model Synthesizer → System Specialist → Action Prioritizer

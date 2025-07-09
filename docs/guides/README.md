@@ -1,9 +1,9 @@
 # 🏰 Mirador - Local AI Orchestration Framework
 
-[![Version](https://img.shields.io/badge/Version-5.0.0-gold?style=for-the-badge)](https://github.com/guitargnar/mirador/releases)
-[![Privacy](https://img.shields.io/badge/Privacy-Local%20Only-green?style=for-the-badge&logo=shield)](https://github.com/guitargnar/mirador)
-[![Chains](https://img.shields.io/badge/Universal%20Chains-6-blue?style=for-the-badge&logo=link)](https://github.com/guitargnar/mirador)
-[![Platform](https://img.shields.io/badge/Platform-Apple%20Silicon-black?style=for-the-badge&logo=apple)](https://github.com/guitargnar/mirador)
+[![Version](https://img.shields.io/badge/Version-5.0.0-gold?style=for-the-badge)](https://github.com/your-username/mirador/releases)
+[![Privacy](https://img.shields.io/badge/Privacy-Local%20Only-green?style=for-the-badge&logo=shield)](https://github.com/your-username/mirador)
+[![Chains](https://img.shields.io/badge/Universal%20Chains-6-blue?style=for-the-badge&logo=link)](https://github.com/your-username/mirador)
+[![Platform](https://img.shields.io/badge/Platform-Apple%20Silicon-black?style=for-the-badge&logo=apple)](https://github.com/your-username/mirador)
 
 ## What is Mirador?
 
@@ -13,7 +13,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/guitargnar/mirador.git
+git clone https://github.com/your-username/mirador.git
 cd mirador
 
 # Run a universal chain (requires Ollama)
@@ -131,4 +131,4 @@ MIT License - See [LICENSE](LICENSE) file
 
 **Note**: This is a personal project for local AI experimentation. All processing happens on your machine. Your data stays yours.
 
-For questions or issues: [Create an issue](https://github.com/guitargnar/mirador/issues)
+For questions or issues: [Create an issue](https://github.com/your-username/mirador/issues)

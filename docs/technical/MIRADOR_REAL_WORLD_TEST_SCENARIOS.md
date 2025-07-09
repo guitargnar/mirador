@@ -1,7 +1,7 @@
 # 🎯 Mirador Real-World Test Scenarios & Executable Commands
 
 ## Executive Summary
-This document provides practical, real-world test scenarios that demonstrate Mirador's full capabilities. Each scenario includes context, executable commands, and expected outcomes aligned with Matthew's strategic objectives at Company.
+This document provides practical, real-world test scenarios that demonstrate Mirador's full capabilities. Each scenario includes context, executable commands, and expected outcomes aligned with User's strategic objectives at Company.
 
 ---
 
@@ -168,10 +168,10 @@ This document provides practical, real-world test scenarios that demonstrate Mir
 
 ```bash
 # Test Command 25: Energy Management Protocol
-./company_chain_runner.sh ai_leadership "I'm working on Mirador 20 hours beyond my day job. Energy level: 6/10. Music with Cody: postponed 3 weeks. Date nights with Katie: irregular. Sleep: 5 hours average. How do I optimize my schedule for sustainable high performance? What must I sacrifice temporarily? What cannot be compromised? Create a weekly rhythm that includes: protected family time, music practice, Mirador development, day job excellence, and recovery. Be specific about time blocks and energy management."
+./company_chain_runner.sh ai_leadership "I'm working on Mirador 20 hours beyond my day job. Energy level: 6/10. Music with Cody: postponed 3 weeks. Date nights with Partner: irregular. Sleep: 5 hours average. How do I optimize my schedule for sustainable high performance? What must I sacrifice temporarily? What cannot be compromised? Create a weekly rhythm that includes: protected family time, music practice, Mirador development, day job excellence, and recovery. Be specific about time blocks and energy management."
 
 # Test Command 26: Relationship Navigation
-./company_chain_runner.sh strategic_synthesis "Katie is worried about my Mirador obsession. She said 'I support your ambition but I'm concerned about us.' She values: stability, quality time, shared experiences, future planning. How do I: 1) Address her valid concerns authentically, 2) Include her in the vision and victory, 3) Set boundaries that protect our relationship, 4) Ensure success strengthens our partnership, 5) Plan for post-Mirador life together? Give me specific conversation framework and weekly relationship rituals."
+./company_chain_runner.sh strategic_synthesis "Partner is worried about my Mirador obsession. She said 'I support your ambition but I'm concerned about us.' She values: stability, quality time, shared experiences, future planning. How do I: 1) Address her valid concerns authentically, 2) Include her in the vision and victory, 3) Set boundaries that protect our relationship, 4) Ensure success strengthens our partnership, 5) Plan for post-Mirador life together? Give me specific conversation framework and weekly relationship rituals."
 ```
 
 ### Scenario 14: Strategic Stress Management
@@ -179,7 +179,7 @@ This document provides practical, real-world test scenarios that demonstrate Mir
 
 ```bash
 # Test Command 27: Decision Framework
-./company_chain_runner.sh strategic_synthesis "Current stress level: 8/10. Major decisions pending: reveal Mirador to CDO, accept innovation award nomination, bring on co-collaborators, push for AI COE role. Energy drains: political navigation, secrecy maintenance, work-life balance. Energy sources: user success stories, Katie's support, vision of transformation. Design a decision framework that: 1) Maintains clarity under pressure, 2) Balances risk and opportunity, 3) Includes gut-check mechanisms, 4) Prevents decision fatigue, 5) Keeps long-term vision clear. Include specific decision criteria and stress-reduction protocols."
+./company_chain_runner.sh strategic_synthesis "Current stress level: 8/10. Major decisions pending: reveal Mirador to CDO, accept innovation award nomination, bring on co-collaborators, push for AI COE role. Energy drains: political navigation, secrecy maintenance, work-life balance. Energy sources: user success stories, Partner's support, vision of transformation. Design a decision framework that: 1) Maintains clarity under pressure, 2) Balances risk and opportunity, 3) Includes gut-check mechanisms, 4) Prevents decision fatigue, 5) Keeps long-term vision clear. Include specific decision criteria and stress-reduction protocols."
 
 # Test Command 28: Weekly Review and Planning
 ./company_chain_runner.sh ai_leadership "Week ending. Mirador wins: 2 new departments interested, manager supportive, CDO meeting scheduled. Challenges: IT asking questions, time pressure, relationship strain. Next week critical: CDO meeting, Advocates presentation, audit prep. Create integrated plan that: 1) Maximizes CDO meeting impact, 2) Maintains innovation momentum, 3) Addresses IT concerns proactively, 4) Protects personal relationships, 5) Sets up February for explosive growth. Include hour-by-hour plan for critical days."

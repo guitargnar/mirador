@@ -288,9 +288,9 @@ with st.sidebar:
     st.divider()
     
     st.subheader("Quick Links")
-    st.link_button("🔗 LinkedIn", "https://www.linkedin.com/in/mscott77/")
-    st.link_button("📧 Contact", "mailto:userdscott7@gmail.com")
-    st.link_button("💻 GitHub", "https://github.com/guitargnar")
+    st.link_button("🔗 LinkedIn", "https://linkedin.com/in/your-profile")
+    st.link_button("📧 Contact", "mailto:contact@example.com")
+    st.link_button("💻 GitHub", "https://github.com/your-username")
     
     st.divider()
     

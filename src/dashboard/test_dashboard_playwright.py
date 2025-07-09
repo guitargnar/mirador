@@ -144,7 +144,7 @@ async def test_dashboard():
             linkedin_button = await page.query_selector("a:has-text('LinkedIn')")
             if linkedin_button:
                 href = await linkedin_button.get_attribute("href")
-                if "linkedin.com/in/mscott77" in href:
+                if "linkedin.com/in/your-profile" in href:
                     print(f"  ✅ LinkedIn URL: Correct ({href})")
                 else:
                     print(f"  ❌ LinkedIn URL: Incorrect ({href})")
@@ -153,7 +153,7 @@ async def test_dashboard():
             contact_button = await page.query_selector("a:has-text('Contact')")
             if contact_button:
                 href = await contact_button.get_attribute("href")
-                if "mailto:userdscott7@gmail.com" in href:
+                if "mailto:contact@example.com" in href:
                     print(f"  ✅ Contact Email: Correct ({href})")
                 else:
                     print(f"  ❌ Contact Email: Incorrect ({href})")
@@ -162,7 +162,7 @@ async def test_dashboard():
             github_button = await page.query_selector("a:has-text('GitHub')")
             if github_button:
                 href = await github_button.get_attribute("href")
-                if "github.com/guitargnar" in href:
+                if "github.com/your-username" in href:
                     print(f"  ✅ GitHub URL: Correct ({href})")
                 else:
                     print(f"  ❌ GitHub URL: Incorrect ({href})")

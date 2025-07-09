@@ -51,7 +51,7 @@ else
                 "$PROMPT"
             ;;
             
-        *humana*|*work*|*corporate*|*meeting*|*presentation*)
+        *work*|*corporate*|*meeting*|*presentation*)
             echo "🏢 Routing to Corporate Strategy Chain..."
             "$SCRIPT_DIR/mirador-ez" chain \
                 matthew_context_provider_v3 \

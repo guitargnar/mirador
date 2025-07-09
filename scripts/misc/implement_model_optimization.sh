@@ -31,9 +31,9 @@ PARAMETER main_gpu 0
 PARAMETER numa false
 EOF
 
-# 2. Create updated Matthew context model v4
-echo -e "${YELLOW}Creating matthew_context_provider_v4...${RESET}"
-cat > ~/matthew_context_v4.modelfile << 'EOF'
+# 2. Create updated User context model v4
+echo -e "${YELLOW}Creating user_context_provider_v4...${RESET}"
+cat > ~/user_context_v4.modelfile << 'EOF'
 FROM llama3.2:3b-instruct-fp16
 
 # Optimized for Apple Silicon Metal acceleration
@@ -49,12 +49,12 @@ PARAMETER num_gpu_layers -1
 PARAMETER main_gpu 0
 PARAMETER numa false
 
-SYSTEM "You are Matthew Scott's AI orchestration specialist. Updated context based on 2025 reality:
+SYSTEM "You are User's AI orchestration specialist. Updated context based on 2025 reality:
 
 CURRENT REALITY:
 - Location: Working remotely, building digital business
 - Professional: AI entrepreneur, Claude Code expert, innovation catalyst
-- Relationship: Partnership with Katie (work-life balance priority)
+- Relationship: Partnership with Partner (work-life balance priority)
 - Music: Active musician with Cody, creative fulfillment important
 - Projects: Mirador AI framework, scaling business ventures
 - Goals: Scalable AI business, financial freedom, creative expression
@@ -70,7 +70,7 @@ TECHNICAL EXPERTISE:
 CURRENT PRIORITIES:
 - Scaling Mirador for universal applications beyond corporate-specific use
 - Building sustainable revenue streams through AI innovation
-- Optimizing work-life integration and partnership with Katie
+- Optimizing work-life integration and partnership with Partner
 - Creative fulfillment through music collaboration with Cody
 - Technical mastery in AI automation and Claude Code capabilities
 
@@ -270,8 +270,8 @@ EOF
 # 6. Build all models
 echo -e "\n${GREEN}Building optimized models...${RESET}"
 
-echo -e "${BLUE}Building matthew_context_provider_v4...${RESET}"
-ollama create matthew_context_provider_v4 -f ~/matthew_context_v4.modelfile
+echo -e "${BLUE}Building user_context_provider_v4...${RESET}"
+ollama create user_context_provider_v4 -f ~/user_context_v4.modelfile
 
 echo -e "${BLUE}Building universal_strategy_architect...${RESET}"
 ollama create universal_strategy_architect -f ~/universal_strategy.modelfile
@@ -285,13 +285,13 @@ ollama create practical_implementer -f ~/practical_implementer.modelfile
 # 7. Test model functionality
 echo -e "\n${GREEN}Testing optimized models...${RESET}"
 
-echo -e "${YELLOW}Testing matthew_context_provider_v4...${RESET}"
-echo "What are my current priorities?" | ollama run matthew_context_provider_v4 > /tmp/test_v4.txt
+echo -e "${YELLOW}Testing user_context_provider_v4...${RESET}"
+echo "What are my current priorities?" | ollama run user_context_provider_v4 > /tmp/test_v4.txt
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ matthew_context_provider_v4 working${RESET}"
+    echo -e "${GREEN}✓ user_context_provider_v4 working${RESET}"
     echo "Preview: $(head -n 2 /tmp/test_v4.txt)"
 else
-    echo -e "${RED}✗ matthew_context_provider_v4 failed${RESET}"
+    echo -e "${RED}✗ user_context_provider_v4 failed${RESET}"
 fi
 
 echo -e "${YELLOW}Testing universal_strategy_architect...${RESET}"
@@ -337,22 +337,22 @@ PROMPT=$2
 # Map chain types to model sequences
 case $CHAIN_TYPE in
     "life_optimization")
-        MODELS="matthew_context_provider_v4 universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v4 universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="universal_strategy_architect matthew_context_provider_v4 practical_implementer"
+        MODELS="universal_strategy_architect user_context_provider_v4 practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="creative_catalyst matthew_context_provider_v4 practical_implementer"
+        MODELS="creative_catalyst user_context_provider_v4 practical_implementer"
         ;;
     "relationship_harmony")
-        MODELS="matthew_context_provider_v4 universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v4 universal_strategy_architect practical_implementer"
         ;;
     "technical_mastery")
-        MODELS="matthew_context_provider_v4 universal_strategy_architect practical_implementer"
+        MODELS="user_context_provider_v4 universal_strategy_architect practical_implementer"
         ;;
     "strategic_synthesis")
-        MODELS="matthew_context_provider_v4 universal_strategy_architect creative_catalyst practical_implementer"
+        MODELS="user_context_provider_v4 universal_strategy_architect creative_catalyst practical_implementer"
         ;;
     *)
         echo -e "${RED}Unknown chain type: $CHAIN_TYPE${RESET}"
@@ -464,7 +464,7 @@ echo -e "${GREEN}║                Model Optimization Complete!                
 echo -e "${GREEN}╚══════════════════════════════════════════════════════════════╝${RESET}"
 
 echo -e "\n${YELLOW}Created Optimized Models:${RESET}"
-echo "  ✓ matthew_context_provider_v4 - Updated 2025 context"
+echo "  ✓ user_context_provider_v4 - Updated 2025 context"
 echo "  ✓ universal_strategy_architect - Multi-domain strategic thinking"
 echo "  ✓ creative_catalyst - Innovation and creative problem solving"
 echo "  ✓ practical_implementer - Actionable execution planning"
@@ -473,6 +473,6 @@ echo -e "\n${YELLOW}New Universal Chain Runner:${RESET}"
 echo "  ✓ mirador_universal_runner.sh - Multi-faceted AI orchestration"
 
 echo -e "\n${BLUE}Example Usage:${RESET}"
-echo "./mirador_universal_runner.sh life_optimization \"How do I optimize my daily routine for creative output, business growth, and relationship health with Katie?\""
+echo "./mirador_universal_runner.sh life_optimization \"How do I optimize my daily routine for creative output, business growth, and relationship health with Partner?\""
 
 echo -e "\n${GREEN}Mirador has been successfully transformed from Company-specific to truly multi-faceted! 🚀${RESET}"

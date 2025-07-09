@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Practical Utility Tests Based on Matthew Scott's Real PDF Context
-# Tests real-world scenarios derived from Matthew's actual background and situation
+# Practical Utility Tests Based on User's Real PDF Context
+# Tests real-world scenarios derived from User's actual background and situation
 
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -23,15 +23,15 @@ cat > "$TEST_REPORT" << EOF
 MIRADOR PRACTICAL UTILITY TEST REPORT - PDF CONTEXT
 ================================================================================
 Test Date: $(date '+%Y-%m-%d %H:%M:%S')
-Test Focus: Real-world scenarios based on Matthew Scott's actual situation
+Test Focus: Real-world scenarios based on User's actual situation
 
 MATTHEW'S CONTEXT (from PDF):
-- Single father, Louisville KY
+- Single father, city KY
 - Company Current Role (10 years)
 - Musician (Annapurna band, lead guitarist)
 - Built 89-model AI system in 8 weeks (2025)
 - Co-authored Mirador technical paper
-- Financial: ~$1,650/paycheck, $91K home equity
+- Financial: ~modest income/paycheck, home equity home equity
 - Goals: AI innovation leadership, real estate investment, work-life balance
 
 TEST RESULTS:
@@ -60,7 +60,7 @@ run_practical_test() {
     echo -e "${BLUE}Running chain...${RESET}"
     START_TIME=$(date +%s)
     
-    OUTPUT=$(timeout 120 /Users/matthewscott/Projects/mirador/mirador_universal_runner.sh "$chain_type" "$prompt" 2>/dev/null)
+    OUTPUT=$(timeout 120 /Users/userscott/Projects/mirador/mirador_universal_runner.sh "$chain_type" "$prompt" 2>/dev/null)
     EXIT_CODE=$?
     
     END_TIME=$(date +%s)
@@ -103,14 +103,14 @@ run_practical_test() {
 run_practical_test \
     "Single Father Balance" \
     "life_optimization" \
-    "As a single father working full-time at Company while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?" \
+    "As a parent working full-time at Company while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?" \
     "father child balance career music"
 
 # 2. Financial Real Estate Investment Strategy
 run_practical_test \
     "Real Estate Investment Strategy" \
     "business_acceleration" \
-    "I have $91,000 in home equity and take-home pay of about $1,650 per paycheck after 401k loan repayments. I want to invest in real estate for wealth building while maintaining financial stability for my family. What's my optimal strategy?" \
+    "I have $91,000 in home equity and take-home pay of about modest income per paycheck after 401k loan repayments. I want to invest in real estate for wealth building while maintaining financial stability for my family. What's my optimal strategy?" \
     "equity investment real estate financial stability"
 
 # 3. AI Career Transition Planning
@@ -134,12 +134,12 @@ run_practical_test \
     "I've proven Mirador works with my personal 89-model AI system. How do I scale this framework for broader applications while building a sustainable business model around it?" \
     "Mirador scaling business model framework applications"
 
-# 6. Louisville Professional Network Building
+# 6. city Professional Network Building
 run_practical_test \
-    "Louisville Network Development" \
+    "city Network Development" \
     "relationship_harmony" \
-    "As someone transitioning from traditional risk management to AI innovation in Louisville, how do I build the right professional network to support this transition while maintaining existing relationships?" \
-    "Louisville network professional relationships transition"
+    "As someone transitioning from traditional risk management to AI innovation in city, how do I build the right professional network to support this transition while maintaining existing relationships?" \
+    "city network professional relationships transition"
 
 # 7. Parenting and Innovation Balance
 run_practical_test \
@@ -187,11 +187,11 @@ Success Rate: $(( (PASSED_TESTS * 100) / TOTAL_TESTS ))%
 ANALYSIS: REAL-WORLD APPLICABILITY
 ================================================================================
 
-The tests focus on Matthew Scott's actual situation as documented in the PDF:
+The tests focus on User's actual situation as documented in the PDF:
 
 1. Personal Challenges:
    - Single father balancing work, music, and innovation
-   - Financial planning with specific constraints ($1,650 income, $91K equity)
+   - Financial planning with specific constraints (modest income income, home equity equity)
    - Career transition from risk management to AI leadership
 
 2. Professional Opportunities:
@@ -210,7 +210,7 @@ The tests focus on Matthew Scott's actual situation as documented in the PDF:
    - Privacy-focused architecture
 
 These tests validate whether Mirador provides practical, actionable guidance
-for Matthew's real-world situation rather than generic advice.
+for User's real-world situation rather than generic advice.
 
 ================================================================================
 RECOMMENDATIONS FOR IMPROVEMENT
@@ -220,11 +220,11 @@ $(if [ $FAILED_TESTS -gt 0 ]; then
     echo "Areas needing attention:"
     echo "- Failed tests indicate gaps in practical applicability"
     echo "- Model responses may lack context-specific details"
-    echo "- Consider tuning models for Matthew's specific situation"
+    echo "- Consider tuning models for User's specific situation"
 else
     echo "Excellent performance:"
     echo "- All tests passed, indicating strong real-world utility"
-    echo "- Models demonstrate understanding of Matthew's context"
+    echo "- Models demonstrate understanding of User's context"
     echo "- Framework provides actionable, specific guidance"
 fi)
 
@@ -245,7 +245,7 @@ echo -e "\n${YELLOW}Detailed Report:${RESET} $TEST_REPORT"
 
 # Display final assessment
 if [ $PASSED_TESTS -eq $TOTAL_TESTS ]; then
-    echo -e "\n${GREEN}🎉 EXCELLENT: Mirador demonstrates strong practical utility for Matthew's real-world situation!${RESET}"
+    echo -e "\n${GREEN}🎉 EXCELLENT: Mirador demonstrates strong practical utility for User's real-world situation!${RESET}"
 elif [ $PASSED_TESTS -gt $((TOTAL_TESTS / 2)) ]; then
     echo -e "\n${YELLOW}⚠️  GOOD: Most tests passed, but some areas need refinement for optimal practical utility.${RESET}"
 else

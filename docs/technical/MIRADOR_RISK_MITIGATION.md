@@ -323,7 +323,7 @@ NEXT: Proposing controlled pilot expansion
 I'm committed to full transparency and welcome any 
 questions or concerns.
 
-Matthew
+User
 ```
 
 ### Risk Mitigation Update
@@ -342,7 +342,7 @@ DATA: No PHI/PII ever touched
 
 Happy to discuss further or provide documentation.
 
-Matthew
+User
 ```
 
 ---

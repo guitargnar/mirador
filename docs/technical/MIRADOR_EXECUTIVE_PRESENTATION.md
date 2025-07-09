@@ -37,7 +37,7 @@
 ## 📊 SLIDE 3: THE REVELATION
 ### Meet Mirador: AI Orchestration That Works Today
 
-**Built by**: Matthew Scott, Current Department Professional
+**Built by**: User, Current Department Professional
 **Time**: 6 months of nights/weekends
 **Cost**: $0 (used only approved tools)
 **Result**: 70% → 97% efficiency improvement
@@ -181,7 +181,7 @@
 - Executive sponsorship
 - Change management support
 - Training resources
-- Matthew as architect/lead
+- User as architect/lead
 
 **Projected Returns**:
 - Year 1: $10M in productivity
@@ -245,10 +245,10 @@
 1. **Approve Mirador enterprise pilot**
    - 5 departments, 90 days
    - Success metrics defined
-   - Matthew leads implementation
+   - User leads implementation
 
 2. **Create AI Innovation Office**
-   - Matthew as Director/VP
+   - User as Director/VP
    - Small team, big impact
    - Reports to Digital Health
 

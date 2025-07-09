@@ -42,7 +42,7 @@ find . -name "*.py" -exec sed -i '' 's/from error_handler/from mirador_core.erro
 # Create demo script
 cat > portfolio_demo.sh << 'EOF'
 #!/bin/bash
-echo "Welcome to Matthew Scott's AI Portfolio"
+echo "Welcome to User's AI Portfolio"
 echo "1. Mirador AI Orchestration"
 echo "2. JCPS School Tracker"
 echo "3. JobCraft Resume Optimizer"
@@ -67,12 +67,12 @@ EOF
 ### 5. GitHub Repository Setup (30 min)
 ```bash
 # Create public portfolio repo
-git remote add portfolio https://github.com/matthewscott/ai-portfolio
+git remote add portfolio https://github.com/userscott/ai-portfolio
 git push portfolio feature/portfolio-consolidation:main
 
 # Add professional README
 echo "# AI Innovation Portfolio
-Matthew Scott - Target Leadership Role Candidate
+User - Target Leadership Role Candidate
 Transform crisis into community solutions through AI
 " > README.md
 ```
@@ -104,7 +104,7 @@ Transform crisis into community solutions through AI
    - 19/19 validation tests passing
 
 3. **Community Service**
-   - JCPS-Boots helping Louisville families
+   - JCPS-Boots helping city families
    - Open source contributions
    - Transforming personal crisis into community tools
 

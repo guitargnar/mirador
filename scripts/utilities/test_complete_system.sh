@@ -5,13 +5,13 @@ echo ""
 
 # Test each key model
 echo "Testing Key Models:"
-echo -n "• Matthew Context v3: "
-gtimeout 10s mirador-ez ask matthew_context_provider_v3 "My personality" > /dev/null 2>&1 && echo "✅" || echo "❌"
+echo -n "• User Context v3: "
+gtimeout 10s mirador-ez ask user_context_provider_v3 "My personality" > /dev/null 2>&1 && echo "✅" || echo "❌"
 
 echo -n "• Financial Expert v8: "
 gtimeout 10s mirador-ez ask financial_planning_expert_v8 "Budget for 75k" > /dev/null 2>&1 && echo "✅" || echo "❌"
 
-echo -n "• Louisville Expert: "
+echo -n "• city Expert: "
 gtimeout 10s mirador-ez ask louisville_expert_v3 "Best areas" > /dev/null 2>&1 && echo "✅" || echo "❌"
 
 echo -n "• Enhanced Agent: "

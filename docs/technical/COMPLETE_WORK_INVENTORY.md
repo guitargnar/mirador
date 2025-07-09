@@ -1,20 +1,20 @@
-# Complete Work Inventory - Matthew Scott
+# Complete Work Inventory - User
 
 ## Overview
 This document provides a comprehensive inventory of all work discovered across multiple directories, ensuring nothing is missed in the portfolio consolidation.
 
 ## Primary Work Locations
 
-### 1. Projects Directory (`/Users/matthewscott/Projects/`)
+### 1. Projects Directory (`/Users/userscott/Projects/`)
 - **Mirador** - Main AI orchestration framework (80+ models)
-- **JCPS-Boots** - School transfer tracking system for daughter Sage
+- **JCPS-Boots** - School transfer tracking system for daughter Child
 - **AI-Tools** - Llama deployment, Reflexia, text-generation-webui
 - **DevelopmentTools** - FretVision, Guitar Portfolio
 - **JobTools** - Digital portfolio, JobCraft, AI resumes
 - **SecurityTools** - macOS automation, system cleanup
 - **WebTools** - Link validators, Ziggy portfolio site
 
-### 2. Home Directory Work (`/Users/matthewscott/`)
+### 2. Home Directory Work (`/Users/userscott/`)
 
 #### AI Framework Git (`ai_framework_git/`)
 - **Complete Mirador duplicate** with extensive documentation
@@ -117,7 +117,7 @@ This document provides a comprehensive inventory of all work discovered across m
 
 ### Proposed Structure
 ```
-~/matthew-scott-portfolio/
+~/user-scott-portfolio/
 ├── core-systems/          # Consolidated Mirador + AI tools
 ├── applications/          # All practical tools
 ├── career-materials/      # Resumes, LinkedIn, portfolios

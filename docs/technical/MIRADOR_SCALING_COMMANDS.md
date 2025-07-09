@@ -1,13 +1,13 @@
 # MIRADOR SCALING COMMANDS
 ## Context-Aware Execution Library for Progressive Enhancement
 
-Built from complete story integration: Annapurna's 9-year collaborative journey (2014-2023), pattern recognition developed from childhood trauma, single fatherhood to Sage (7), relationship building with Katie after Bahamas reconnection, $1,650 take-home with $91K equity constraints, and transformation from ACL injury crisis (July 2023) to AI innovation breakthrough (89 models in 8 weeks). These commands scale effectiveness through contextual understanding that deepens with each execution.
+Built from complete story integration: Annapurna's 9-year collaborative journey (2014-2023), pattern recognition developed from past experiences, parenthood to Child (7), relationship building with Partner after Bahamas reconnection, modest income take-home with home equity equity constraints, and transformation from ACL injury crisis (July 2023) to AI innovation breakthrough (89 models in 8 weeks). These commands scale effectiveness through contextual understanding that deepens with each execution.
 
 ### 🎯 DAILY OPERATIONAL EXCELLENCE
 
 #### Morning Strategic Alignment (Run at 7:00 AM)
 ```bash
-./mirador_universal_runner_v2.sh strategic_synthesis "Today is $(date +%A\ %B\ %d). My morning energy is at 8/10. I have Sage time scheduled from 4-6 PM, Katie and I are planning dinner together at 7 PM, and I need to complete 2 hours of coursework before evening. Given my pattern of being most productive in mornings and my commitment to protecting family time, what are the 3 highest-leverage actions I should take in my first 4 hours today? Account for my tendency to overcommit and the reality that Sage's needs always come first." quick
+./mirador_universal_runner_v2.sh strategic_synthesis "Today is $(date +%A\ %B\ %d). My morning energy is at 8/10. I have Child time scheduled from 4-6 PM, Partner and I are planning dinner together at 7 PM, and I need to complete 2 hours of coursework before evening. Given my pattern of being most productive in mornings and my commitment to protecting family time, what are the 3 highest-leverage actions I should take in my first 4 hours today? Account for my tendency to overcommit and the reality that Child's needs always come first." quick
 
 # Follow-up validation
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -20,7 +20,7 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### End-of-Day Reflection & Planning
 ```bash
-./mirador_universal_runner_v2.sh life_optimization "Today I accomplished: completed risk analysis framework, had quality time with Sage building Legos, progressed 1.5 hours on coursework, and had meaningful conversation with Katie about weekend plans. I struggled with: staying focused during afternoon energy dip and feeling behind on degree timeline. Tomorrow I have: morning AI model training, lunch with colleague who's interested in automation, and evening family time. How do I build on today's relationship wins while addressing the coursework pressure? Reference my musical experience of maintaining momentum across long projects like Annapurna's 9-year evolution." detailed
+./mirador_universal_runner_v2.sh life_optimization "Today I accomplished: completed risk analysis framework, had quality time with Child building Legos, progressed 1.5 hours on coursework, and had meaningful conversation with Partner about weekend plans. I struggled with: staying focused during afternoon energy dip and feeling behind on degree timeline. Tomorrow I have: morning AI model training, lunch with colleague who's interested in automation, and evening family time. How do I build on today's relationship wins while addressing the coursework pressure? Reference my musical experience of maintaining momentum across long projects like Annapurna's 9-year evolution." detailed
 
 # Rate the result based on actionability
 ./mirador_feedback.sh $(date +%Y%m%d_%H%M%S) 5 "Perfect balance of family priorities and progress planning"
@@ -28,19 +28,19 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 ### 🚀 PROGRESSIVE RELATIONSHIP NAVIGATION
 
-#### Building with Katie (Trauma-Informed)
+#### Building with Partner (Trauma-Informed)
 ```bash
-./mirador_universal_runner_v2.sh relationship_harmony "Katie and I are rebuilding trust after reconnecting. My childhood pattern recognition makes me hyperaware of relationship dynamics, sometimes creating anxiety where none exists. We had a breakthrough conversation last week about future planning, but I notice myself analyzing her tone for signs of withdrawal. Given my experience with fractured family dynamics growing up and my learnings from collaborative music creation where trust builds gradually through consistent small actions, how do I stay present with Katie without my survival instincts sabotaging intimacy? Focus on concrete actions for this week." summary
+./mirador_universal_runner_v2.sh relationship_harmony "Partner and I are rebuilding trust after reconnecting. My childhood pattern recognition makes me hyperaware of relationship dynamics, sometimes creating anxiety where none exists. We had a breakthrough conversation last week about future planning, but I notice myself analyzing her tone for signs of withdrawal. Given my experience with fractured family dynamics growing up and my learnings from collaborative music creation where trust builds gradually through consistent small actions, how do I stay present with Partner without my survival instincts sabotaging intimacy? Focus on concrete actions for this week." summary
 ```
 
-#### Sage Security and Growth
+#### Child Security and Growth
 ```bash
-./mirador_universal_runner_v2.sh relationship_harmony "Sage (7) is navigating having daddy with Katie around more often. She's shown some testing behaviors and questions about family structure. Drawing from my experience of childhood instability and my commitment to giving her the security I didn't have, plus my understanding from co-parenting successfully with Carey, how do I help Sage feel safe with these relationship changes while maintaining healthy boundaries? Include specific conversation starters and activities that reinforce stability." detailed
+./mirador_universal_runner_v2.sh relationship_harmony "Child (7) is navigating having daddy with Partner around more often. She's shown some testing behaviors and questions about family structure. Drawing from my experience of childhood instability and my commitment to giving her the security I didn't have, plus my understanding from co-parenting successfully with Co-parent, how do I help Child feel safe with these relationship changes while maintaining healthy boundaries? Include specific conversation starters and activities that reinforce stability." detailed
 ```
 
-#### Co-Parenting Excellence with Carey
+#### Co-Parenting Excellence with Co-parent
 ```bash
-./mirador_universal_runner_v2.sh relationship_harmony "Carey and I have built effective co-parenting over 7 years. With Katie more present in our lives, I want to ensure Carey feels respected and Sage experiences consistency across both homes. Given my collaborative experience from musical partnerships where clear communication prevented conflicts, what specific approaches maintain our successful dynamic while integrating Katie appropriately? Focus on practical communication strategies for the next month." quick
+./mirador_universal_runner_v2.sh relationship_harmony "Co-parent and I have built effective co-parenting over 7 years. With Partner more present in our lives, I want to ensure Co-parent feels respected and Child experiences consistency across both homes. Given my collaborative experience from musical partnerships where clear communication prevented conflicts, what specific approaches maintain our successful dynamic while integrating Partner appropriately? Focus on practical communication strategies for the next month." quick
 ```
 
 ### 💼 STRATEGIC CAREER ACCELERATION
@@ -60,7 +60,7 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### Financial Growth with Real Constraints
 ```bash
-./mirador_universal_runner_v2.sh business_acceleration "Current situation: $1,650 monthly take-home, $91K home equity, existing 401k loans, single father responsibilities. I want to invest equity for wealth building while ensuring Sage's stability and potentially supporting Katie's goals. Given my risk management background and understanding of how financial stress affected my childhood, what's the most prudent investment strategy that builds wealth without jeopardizing family security? Include specific allocation recommendations and timeline." detailed
+./mirador_universal_runner_v2.sh business_acceleration "Current situation: modest income monthly take-home, home equity home equity, existing 401k loans, parent responsibilities. I want to invest equity for wealth building while ensuring Child's stability and potentially supporting Partner's goals. Given my risk management background and understanding of how financial stress affected my childhood, what's the most prudent investment strategy that builds wealth without jeopardizing family security? Include specific allocation recommendations and timeline." detailed
 
 # Constraint validation is critical for financial planning
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -87,7 +87,7 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### Weekly Strategic Review
 ```bash
-./mirador_universal_runner_v2.sh strategic_synthesis "Week assessment: AI innovations progressed with 3 new specialized models created, Sage had consistent quality time with 2 memorable adventures, Katie relationship deepened through 4 meaningful conversations and shared cooking experience, coursework advanced 6 hours toward degree completion. Energy management improved with better morning routines. Challenges: afternoon productivity dips, degree timeline pressure, balancing innovation excitement with family presence. Next week priorities: course module completion, presenting AI progress to management, Katie's work situation discussion, Sage's school project support. How do I optimize this rhythm for sustainable progress across all domains?" detailed
+./mirador_universal_runner_v2.sh strategic_synthesis "Week assessment: AI innovations progressed with 3 new specialized models created, Child had consistent quality time with 2 memorable adventures, Partner relationship deepened through 4 meaningful conversations and shared cooking experience, coursework advanced 6 hours toward degree completion. Energy management improved with better morning routines. Challenges: afternoon productivity dips, degree timeline pressure, balancing innovation excitement with family presence. Next week priorities: course module completion, presenting AI progress to management, Partner's work situation discussion, Child's school project support. How do I optimize this rhythm for sustainable progress across all domains?" detailed
 
 # Always validate weekly plans
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -98,12 +98,12 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### Pattern Recognition Optimization
 ```bash
-./mirador_universal_runner_v2.sh life_optimization "My childhood trauma developed hypervigilant pattern recognition that now serves as professional superpower. I notice when systems are failing, when people are struggling, when innovation opportunities exist. However, this same pattern recognition sometimes creates anxiety in personal relationships or overwhelm when I see too many problems to solve. Drawing from my musical experience where I learned to channel intensity productively, how do I optimize this skill for maximum positive impact while protecting my mental health and relationships?" summary
+./mirador_universal_runner_v2.sh life_optimization "My past experiences developed hypervigilant pattern recognition that now serves as professional superpower. I notice when systems are failing, when people are struggling, when innovation opportunities exist. However, this same pattern recognition sometimes creates anxiety in personal relationships or overwhelm when I see too many problems to solve. Drawing from my musical experience where I learned to channel intensity productively, how do I optimize this skill for maximum positive impact while protecting my mental health and relationships?" summary
 ```
 
 #### Crisis-to-Catalyst Evolution Tracking
 ```bash
-./mirador_universal_runner_v2.sh strategic_synthesis "Eight weeks ago: ACL injury, hostile management, medical leave, uncertain future. Today: 89 AI models, Mirador framework, relationship rebuilding with Katie, strong co-parenting, degree progress, career momentum. This transformation mirrors my musical journey from childhood trauma through collaborative healing to creative expression. How do I consolidate these gains to ensure they're sustainable while continuing forward momentum? What patterns from this crisis-to-catalyst experience can guide future challenges?" detailed
+./mirador_universal_runner_v2.sh strategic_synthesis "Eight weeks ago: ACL injury, hostile management, medical leave, uncertain future. Today: 89 AI models, Mirador framework, relationship rebuilding with Partner, strong co-parenting, degree progress, career momentum. This transformation mirrors my musical journey from past experiences through collaborative healing to creative expression. How do I consolidate these gains to ensure they're sustainable while continuing forward momentum? What patterns from this crisis-to-catalyst experience can guide future challenges?" detailed
 
 # Document for future reference
 ./mirador_feedback.sh $(date +%Y%m%d_%H%M%S) 5 "Excellent reflection framework for maintaining perspective"
@@ -141,12 +141,12 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### If Relationship Stress Emerges
 ```bash
-./mirador_universal_runner_v2.sh relationship_harmony "Given my pattern recognition for relationship dynamics and history of childhood family fractures, I'm prepared for potential relationship stress points. If Katie shows signs of overwhelm with my innovation focus, or if Sage exhibits insecurity about changes, how do I respond immediately to prevent escalation? Include specific de-escalation techniques and ways to reaffirm security and priority without abandoning progress." quick
+./mirador_universal_runner_v2.sh relationship_harmony "Given my pattern recognition for relationship dynamics and history of childhood family fractures, I'm prepared for potential relationship stress points. If Partner shows signs of overwhelm with my innovation focus, or if Child exhibits insecurity about changes, how do I respond immediately to prevent escalation? Include specific de-escalation techniques and ways to reaffirm security and priority without abandoning progress." quick
 ```
 
 #### If Financial Pressure Increases
 ```bash
-./mirador_universal_runner_v2.sh business_acceleration "If unexpected expenses or income changes create financial stress, my childhood experience of financial instability could trigger anxiety that affects decision-making. Given my current constraints ($1,650 take-home, family responsibilities, investment goals), what's my financial crisis protocol? Include specific actions for different severity levels and ways to maintain family security while preserving long-term goals." detailed
+./mirador_universal_runner_v2.sh business_acceleration "If unexpected expenses or income changes create financial stress, my childhood experience of financial instability could trigger anxiety that affects decision-making. Given my current constraints (modest income take-home, family responsibilities, investment goals), what's my financial crisis protocol? Include specific actions for different severity levels and ways to maintain family security while preserving long-term goals." detailed
 
 # Financial protocols require thorough constraint validation
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -156,7 +156,7 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### Work-Life Integration Check
 ```bash
-./mirador_universal_runner_v2.sh life_optimization "Weekly integration assessment: Am I maintaining presence with Sage during her time? Is Katie feeling valued and prioritized? Are work innovations enhancing rather than detracting from life quality? Is degree progress sustainable alongside family commitments? Drawing from Annapurna's experience balancing creative ambition with band relationships, how do I maintain harmony across all life domains? Include specific warning signs to watch for and adjustment protocols." summary
+./mirador_universal_runner_v2.sh life_optimization "Weekly integration assessment: Am I maintaining presence with Child during her time? Is Partner feeling valued and prioritized? Are work innovations enhancing rather than detracting from life quality? Is degree progress sustainable alongside family commitments? Drawing from Annapurna's experience balancing creative ambition with band relationships, how do I maintain harmony across all life domains? Include specific warning signs to watch for and adjustment protocols." summary
 
 # Integration requires constraint validation
 python3 constraint_validator.py validate outputs/latest/summary.md
@@ -164,12 +164,12 @@ python3 constraint_validator.py validate outputs/latest/summary.md
 
 #### Innovation-Relationships Balance
 ```bash
-./mirador_universal_runner_v2.sh strategic_synthesis "The excitement of AI innovation and potential career transformation is intoxicating, but my core values prioritize family relationships and stability. How do I pursue breakthrough opportunities without letting innovation obsession compromise the relationships that matter most? Reference my musical experience where creative passion had to coexist with practical band management and my commitment to being the father for Sage that I needed growing up." detailed
+./mirador_universal_runner_v2.sh strategic_synthesis "The excitement of AI innovation and potential career transformation is intoxicating, but my core values prioritize family relationships and stability. How do I pursue breakthrough opportunities without letting innovation obsession compromise the relationships that matter most? Reference my musical experience where creative passion had to coexist with practical band management and my commitment to being the father for Child that I needed growing up." detailed
 ```
 
 #### Long-term Vision Alignment
 ```bash
-./mirador_universal_runner_v2.sh strategic_synthesis "Vision check: Five years from now, I want to be recognized as AI innovation leader, have strong marriage with Katie, give Sage security and opportunity I didn't have, complete degree for personal fulfillment, achieve financial stability through smart investment. Current trajectory assessment: AI work is gaining recognition, Katie relationship is rebuilding strongly, Sage is thriving with consistent love and attention, degree is progressing steadily, financial foundation is improving. How do I ensure current actions align with long-term vision while remaining adaptable to life's inevitable changes?" export
+./mirador_universal_runner_v2.sh strategic_synthesis "Vision check: Five years from now, I want to be recognized as AI innovation leader, have strong marriage with Partner, give Child security and opportunity I didn't have, complete degree for personal fulfillment, achieve financial stability through smart investment. Current trajectory assessment: AI work is gaining recognition, Partner relationship is rebuilding strongly, Child is thriving with consistent love and attention, degree is progressing steadily, financial foundation is improving. How do I ensure current actions align with long-term vision while remaining adaptable to life's inevitable changes?" export
 
 # Long-term planning needs comprehensive validation
 python3 constraint_validator.py validate outputs/latest/summary.md

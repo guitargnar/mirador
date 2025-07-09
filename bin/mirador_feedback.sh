@@ -221,7 +221,7 @@ if [ "$RATING" -le 2 ]; then
     echo "  • Consider the 'summary' format for overview without details"
     echo -e "\n${BLUE}Example improved prompt:${RESET}"
     echo "  Instead of: 'How do I manage my time?'"
-    echo "  Try: 'How do I allocate 3 hours tomorrow between Sage, Katie, and coursework?'"
+    echo "  Try: 'How do I allocate 3 hours tomorrow between Child, Partner, and coursework?'"
 fi
 
 echo -e "\n${GREEN}Feedback saved! This helps Mirador learn your preferences.${RESET}"

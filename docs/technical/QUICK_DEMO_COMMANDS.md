@@ -58,7 +58,7 @@
 
 ### Option 1: Test Individual Commands
 ```bash
-cd /Users/matthewscott/Projects/mirador
+cd /Users/userscott/Projects/mirador
 # Copy any command above and paste into terminal
 ```
 
@@ -102,7 +102,7 @@ cd /Users/matthewscott/Projects/mirador
 - **Feasibility**: Recommendations you can actually implement
 - **Political Savvy**: Navigates corporate culture appropriately
 - **Innovation Balance**: Pushes boundaries while maintaining safety
-- **Personal Touch**: Remembers your context (Katie, music, etc.)
+- **Personal Touch**: Remembers your context (Partner, music, etc.)
 
 ---
 

@@ -5,22 +5,22 @@
 ### 1. **Immediate Usage** (Ready Now)
 ```bash
 # Navigate to project directory
-cd /Users/matthewscott/Projects/mirador
+cd /Users/userscott/Projects/mirador
 
 # Run a practical test
-./mirador_universal_runner.sh life_optimization "How do I balance being a single father, my Company career, music with Annapurna, and AI innovation work?"
+./mirador_universal_runner.sh life_optimization "How do I balance being a parent, my Company career, music with Annapurna, and AI innovation work?"
 ```
 
 ### 2. **Core Commands** (Copy-Paste Ready)
 
 #### Personal Life Optimization
 ```bash
-./mirador_universal_runner.sh life_optimization "I need to optimize my daily routine for creative output, business growth, and relationship health. Current situation: single father, working at Company, playing music with Annapurna, developing Mirador. How do I create sustainable balance?"
+./mirador_universal_runner.sh life_optimization "I need to optimize my daily routine for creative output, business growth, and relationship health. Current situation: parent, working at Company, playing music with Annapurna, developing Mirador. How do I create sustainable balance?"
 ```
 
 #### Financial Planning & Real Estate
 ```bash
-./mirador_universal_runner.sh business_acceleration "I have $91,000 in home equity and take-home pay of $1,650 per paycheck after 401k loan repayments. I want to invest in real estate for wealth building while maintaining financial stability for my family. What's my optimal strategy?"
+./mirador_universal_runner.sh business_acceleration "I have $91,000 in home equity and take-home pay of modest income per paycheck after 401k loan repayments. I want to invest in real estate for wealth building while maintaining financial stability for my family. What's my optimal strategy?"
 ```
 
 #### Career Transition Strategy
@@ -40,7 +40,7 @@ cd /Users/matthewscott/Projects/mirador
 
 #### Professional Networking
 ```bash
-./mirador_universal_runner.sh relationship_harmony "As someone transitioning from traditional risk management to AI innovation in Louisville, how do I build the right professional network to support this transition?"
+./mirador_universal_runner.sh relationship_harmony "As someone transitioning from traditional risk management to AI innovation in city, how do I build the right professional network to support this transition?"
 ```
 
 ### 3. **Available Chain Types**
@@ -69,12 +69,12 @@ cd /Users/matthewscott/Projects/mirador
 
 **Parenting + Innovation Balance:**
 ```bash
-./mirador_universal_runner.sh life_optimization "As a single father, I want to model innovation and entrepreneurship for my child while ensuring they have stability and attention. How do I show what's possible while being present as a father?"
+./mirador_universal_runner.sh life_optimization "As a parent, I want to model innovation and entrepreneurship for my child while ensuring they have stability and attention. How do I show what's possible while being present as a father?"
 ```
 
-**Louisville Professional Positioning:**
+**city Professional Positioning:**
 ```bash
-./mirador_universal_runner.sh strategic_synthesis "I live in Louisville and work at Company, but the AI innovation scene here is limited. How do I position myself as an AI leader locally while building connections to broader tech ecosystems?"
+./mirador_universal_runner.sh strategic_synthesis "I live in city and work at Company, but the AI innovation scene here is limited. How do I position myself as an AI leader locally while building connections to broader tech ecosystems?"
 ```
 
 **Privacy-First Business Model:**
@@ -132,10 +132,10 @@ cat test_logs/practical_utility_report_[TIMESTAMP].txt
 ### Validate Model Functionality
 ```bash
 # Check individual model responses
-echo "What are my current priorities?" | ollama run matthew_context_provider_v4_accurate
+echo "What are my current priorities?" | ollama run user_context_provider_v4_accurate
 
 # Verify all models exist
-ollama list | grep -E "(matthew_context_provider_v4_accurate|universal_strategy_architect|creative_catalyst|practical_implementer)"
+ollama list | grep -E "(user_context_provider_v4_accurate|universal_strategy_architect|creative_catalyst|practical_implementer)"
 ```
 
 ---
@@ -143,14 +143,14 @@ ollama list | grep -E "(matthew_context_provider_v4_accurate|universal_strategy_
 ## File Locations Reference
 
 ### Essential Files
-- **Main Runner**: `/Users/matthewscott/Projects/mirador/mirador_universal_runner.sh`
-- **Model Creation**: `/Users/matthewscott/Projects/mirador/create_optimized_models_fixed.sh`
-- **Test Suite**: `/Users/matthewscott/Projects/mirador/tests/test_practical_utility_pdf_context.sh`
-- **Documentation**: `/Users/matthewscott/Projects/mirador/MIRADOR_COMPREHENSIVE_REFERENCE.md`
+- **Main Runner**: `/Users/userscott/Projects/mirador/mirador_universal_runner.sh`
+- **Model Creation**: `/Users/userscott/Projects/mirador/create_optimized_models_fixed.sh`
+- **Test Suite**: `/Users/userscott/Projects/mirador/tests/test_practical_utility_pdf_context.sh`
+- **Documentation**: `/Users/userscott/Projects/mirador/MIRADOR_COMPREHENSIVE_REFERENCE.md`
 
 ### Generated Content
-- **Output Directory**: `/Users/matthewscott/Projects/mirador/outputs/`
-- **Test Logs**: `/Users/matthewscott/Projects/mirador/test_logs/`
-- **Model Files**: `~/matthew_context_v4_accurate.modelfile` (and others)
+- **Output Directory**: `/Users/userscott/Projects/mirador/outputs/`
+- **Test Logs**: `/Users/userscott/Projects/mirador/test_logs/`
+- **Model Files**: `~/user_context_v4_accurate.modelfile` (and others)
 
 **Mirador v3.0 is ready for immediate practical use in your multi-faceted life optimization journey.** 🚀

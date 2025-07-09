@@ -4,7 +4,7 @@
 Mirador is a sophisticated multi-agent AI orchestration system that chains specialized language models for personalized life optimization. Built over 34 days, it has achieved 99.3% success rate across 3,110 analyses.
 
 ## Key Context
-- **Owner**: Matthew Scott, Louisville KY
+- **Owner**: User, city KY
 - **Role**: Current Department Professional at Company ($85k)
 - **Goals**: Transition to touring guitarist in 3 years while building AI career
 - **Family**: 7-year-old daughter Aurora
@@ -73,7 +73,7 @@ ollama list
 ```
 
 ## Remember
-This system is deeply personal to Matthew - it knows his financial details, family situation, career aspirations, and personality profile. Always maintain privacy-first approach and local-only execution. The watchtower metaphor is central to the brand identity.
+This system is deeply personal to User - it knows his financial details, family situation, career aspirations, and personality profile. Always maintain privacy-first approach and local-only execution. The watchtower metaphor is central to the brand identity.
 
 ---
 

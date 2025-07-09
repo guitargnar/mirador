@@ -5,22 +5,22 @@
 Based on analysis of your current Ollama configuration and test results, I'll provide comprehensive recommendations to:
 1. **Optimize models for quality over speed** with Apple Silicon Metal acceleration
 2. **Refocus Mirador** from Company-specific to truly multi-faceted
-3. **Update model context** based on our conversation about Matthew's real profile
+3. **Update model context** based on our conversation about User's real profile
 
 ---
 
 ## 🔧 Current Model Configuration Analysis
 
 ### **Discovered Issues:**
-- **Outdated Context**: Models still reference Louisville/Company context
+- **Outdated Context**: Models still reference city/Company context
 - **Speed-Optimized Settings**: Temperature 0.3, limited parameters
 - **Limited Tokens**: num_predict 800 (too restrictive)
 - **Generic Template**: Using standard Llama 3.2 template
 
-### **Current matthew_context_provider_v3 Analysis:**
+### **Current user_context_provider_v3 Analysis:**
 ```
-SYSTEM "You are Matthew Scott's personal context provider...
-- Location: Louisville, Kentucky
+SYSTEM "You are User's personal context provider...
+- Location: city, state
 - Professional: Creative technologist, musician, servant leader  
 - Family: Father to Aurora (daughter)
 - Goals: Touring guitarist with Cody Ash, music career development
@@ -72,16 +72,16 @@ PARAMETER numa false            # Disable for Apple Silicon
 
 ---
 
-## 📱 Updated Matthew Context (Based on Our Conversation)
+## 📱 Updated User Context (Based on Our Conversation)
 
-### **Real Matthew Profile 2025:**
+### **Real User Profile 2025:**
 ```
-SYSTEM "You are Matthew Scott's AI orchestration specialist. Updated context:
+SYSTEM "You are User's AI orchestration specialist. Updated context:
 
 CURRENT REALITY:
 - Location: Working remotely, building digital business
 - Professional: AI entrepreneur, Claude Code power user, innovation catalyst
-- Relationship: Partnership with Katie (work-life balance focus)
+- Relationship: Partnership with Partner (work-life balance focus)
 - Music: Active musician with Cody, balancing creative pursuits
 - Projects: Mirador AI framework, multiple business ventures
 - Goals: Building scalable AI-powered business, financial freedom
@@ -98,7 +98,7 @@ CURRENT PRIORITIES:
 - Scaling Mirador beyond single-use cases
 - Optimizing for quality over speed
 - Building sustainable revenue streams
-- Maintaining relationship with Katie
+- Maintaining relationship with Partner
 - Creative fulfillment through music"
 ```
 
@@ -108,7 +108,7 @@ CURRENT PRIORITIES:
 
 ### **Core Universal Models:**
 
-1. **`matthew_context_provider_v4`** - Updated personal context
+1. **`user_context_provider_v4`** - Updated personal context
 2. **`universal_strategy_architect`** - Multi-domain strategic thinking
 3. **`creative_catalyst`** - Innovation and creative problem solving
 4. **`practical_implementer`** - Actionable execution planning
@@ -123,7 +123,7 @@ CURRENT PRIORITIES:
   "universal_chains": {
     "life_optimization": {
       "description": "Holistic life improvement across all domains",
-      "models": ["matthew_context_provider_v4", "universal_strategy_architect", "practical_implementer"]
+      "models": ["user_context_provider_v4", "universal_strategy_architect", "practical_implementer"]
     },
     "business_acceleration": {
       "description": "Startup and business growth strategies",
@@ -131,11 +131,11 @@ CURRENT PRIORITIES:
     },
     "creative_breakthrough": {
       "description": "Unlock creative potential and artistic growth",
-      "models": ["creative_catalyst", "matthew_context_provider_v4", "practical_implementer"]
+      "models": ["creative_catalyst", "user_context_provider_v4", "practical_implementer"]
     },
     "relationship_harmony": {
       "description": "Optimize personal and professional relationships",
-      "models": ["relationship_navigator", "matthew_context_provider_v4", "practical_implementer"]
+      "models": ["relationship_navigator", "user_context_provider_v4", "practical_implementer"]
     },
     "technical_mastery": {
       "description": "AI, automation, and technical project success",
@@ -171,18 +171,18 @@ PARAMETER main_gpu 0
 PARAMETER numa false
 EOF
 
-# 2. Create updated Matthew context model
-cat > ~/matthew_context_v4.modelfile << EOF
+# 2. Create updated User context model
+cat > ~/user_context_v4.modelfile << EOF
 FROM llama3.2:3b-instruct-fp16
 
 $(cat ~/mirador_optimized_base.modelfile)
 
-SYSTEM "You are Matthew Scott's AI orchestration specialist. Updated context:
+SYSTEM "You are User's AI orchestration specialist. Updated context:
 
 CURRENT REALITY:
 - Location: Working remotely, building digital business  
 - Professional: AI entrepreneur, Claude Code expert, innovation catalyst
-- Relationship: Partnership with Katie (work-life balance priority)
+- Relationship: Partnership with Partner (work-life balance priority)
 - Music: Active musician with Cody, creative fulfillment important
 - Projects: Mirador AI framework, scaling business ventures
 - Goals: Scalable AI business, financial freedom, creative expression
@@ -198,7 +198,7 @@ TECHNICAL EXPERTISE:
 CURRENT PRIORITIES:
 - Scaling Mirador for universal applications
 - Building sustainable revenue streams  
-- Optimizing work-life integration with Katie
+- Optimizing work-life integration with Partner
 - Creative fulfillment through music with Cody
 - Technical mastery in AI and automation"
 
@@ -214,7 +214,7 @@ TEMPLATE """<|start_header_id|>system<|end_header_id|>
 EOF
 
 # 3. Build the new model
-ollama create matthew_context_provider_v4 -f ~/matthew_context_v4.modelfile
+ollama create user_context_provider_v4 -f ~/user_context_v4.modelfile
 
 # 4. Create universal strategy architect
 cat > ~/universal_strategy.modelfile << EOF
@@ -261,7 +261,7 @@ ollama create universal_strategy_architect -f ~/universal_strategy.modelfile
 
 ```bash
 # Life Optimization
-./mirador_runner.sh life_optimization "I want to optimize my daily routine for creative output, business growth, and relationship health with Katie. Current schedule: [details]. What's the ideal structure?"
+./mirador_runner.sh life_optimization "I want to optimize my daily routine for creative output, business growth, and relationship health with Partner. Current schedule: [details]. What's the ideal structure?"
 
 # Business Acceleration  
 ./mirador_runner.sh business_acceleration "I have 3 business ideas: AI consulting, music education platform, productivity software. Which should I prioritize based on market opportunity and my skills?"
@@ -270,7 +270,7 @@ ollama create universal_strategy_architect -f ~/universal_strategy.modelfile
 ./mirador_runner.sh creative_breakthrough "I'm stuck creatively with my music. Help me break through this block and find new inspiration while maintaining my partnership with Cody."
 
 # Relationship Harmony
-./mirador_runner.sh relationship_harmony "Katie is concerned about my work intensity. How do I communicate my vision while addressing her needs and strengthening our partnership?"
+./mirador_runner.sh relationship_harmony "Partner is concerned about my work intensity. How do I communicate my vision while addressing her needs and strengthening our partnership?"
 
 # Technical Mastery
 ./mirador_runner.sh technical_mastery "I want to scale my AI automation skills. What's the optimal learning path for advanced Claude Code usage and business applications?"
@@ -303,7 +303,7 @@ ollama create universal_strategy_architect -f ~/universal_strategy.modelfile
 ## 🚀 Implementation Roadmap
 
 ### **Phase 1: Core Model Optimization (Week 1)**
-- Update matthew_context_provider to v4
+- Update user_context_provider to v4
 - Implement Apple Silicon optimizations
 - Test performance improvements
 
@@ -327,7 +327,7 @@ ollama create universal_strategy_architect -f ~/universal_strategy.modelfile
 ## 💡 Key Recommendations
 
 1. **Immediate Actions:**
-   - Update Matthew's context model with current reality
+   - Update User's context model with current reality
    - Implement Apple Silicon optimizations
    - Increase token limits for quality responses
 

@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="mirador-core",
     version="2.0.0",
-    author="Matthew Scott",
-    author_email="contact@matthewscott.com",
+    author="User",
+    author_email="contact@userscott.com",
     description="Unified core library for the Mirador AI ecosystem",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/guitargnar/mirador",
+    url="https://github.com/your-username/mirador",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",

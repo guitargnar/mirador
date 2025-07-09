@@ -11,9 +11,9 @@ echo -e "${BLUE}╔════════════════════�
 echo -e "${BLUE}║         Mirador Model Optimization - Fixed Implementation     ║${RESET}"
 echo -e "${BLUE}╚══════════════════════════════════════════════════════════════╝${RESET}"
 
-# 1. Create updated Matthew context model v4
-echo -e "\n${YELLOW}Creating matthew_context_provider_v4 (fixed)...${RESET}"
-cat > ~/matthew_context_v4_fixed.modelfile << 'EOF'
+# 1. Create updated User context model v4
+echo -e "\n${YELLOW}Creating user_context_provider_v4 (fixed)...${RESET}"
+cat > ~/user_context_v4_fixed.modelfile << 'EOF'
 FROM llama3.2:3b-instruct-fp16
 
 # Apple Silicon optimized parameters
@@ -24,12 +24,12 @@ PARAMETER repeat_penalty 1.05
 PARAMETER num_ctx 8192
 PARAMETER num_thread 8
 
-SYSTEM "You are Matthew Scott's AI orchestration specialist. Updated context based on 2025 reality:
+SYSTEM "You are User's AI orchestration specialist. Updated context based on 2025 reality:
 
 CURRENT REALITY:
 - Location: Working remotely, building digital business
 - Professional: AI entrepreneur, Claude Code expert, innovation catalyst
-- Relationship: Partnership with Katie (work-life balance priority)
+- Relationship: Partnership with Partner (work-life balance priority)
 - Music: Active musician with Cody, creative fulfillment important
 - Projects: Mirador AI framework, scaling business ventures
 - Goals: Scalable AI business, financial freedom, creative expression
@@ -45,7 +45,7 @@ TECHNICAL EXPERTISE:
 CURRENT PRIORITIES:
 - Scaling Mirador for universal applications beyond corporate-specific use
 - Building sustainable revenue streams through AI innovation
-- Optimizing work-life integration and partnership with Katie
+- Optimizing work-life integration and partnership with Partner
 - Creative fulfillment through music collaboration with Cody
 - Technical mastery in AI automation and Claude Code capabilities
 
@@ -230,13 +230,13 @@ EOF
 # 5. Build all models
 echo -e "\n${GREEN}Building optimized models with fixed parameters...${RESET}"
 
-echo -e "${BLUE}Building matthew_context_provider_v4...${RESET}"
-ollama create matthew_context_provider_v4 -f ~/matthew_context_v4_fixed.modelfile
+echo -e "${BLUE}Building user_context_provider_v4...${RESET}"
+ollama create user_context_provider_v4 -f ~/user_context_v4_fixed.modelfile
 
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✓ matthew_context_provider_v4 created successfully${RESET}"
+    echo -e "${GREEN}✓ user_context_provider_v4 created successfully${RESET}"
 else
-    echo -e "${RED}✗ Failed to create matthew_context_provider_v4${RESET}"
+    echo -e "${RED}✗ Failed to create user_context_provider_v4${RESET}"
 fi
 
 echo -e "${BLUE}Building universal_strategy_architect...${RESET}"
@@ -269,13 +269,13 @@ fi
 # 6. Test new models
 echo -e "\n${GREEN}Testing optimized models...${RESET}"
 
-echo -e "${YELLOW}Testing matthew_context_provider_v4...${RESET}"
-TEST_RESPONSE=$(echo "What are my current priorities?" | timeout 30 ollama run matthew_context_provider_v4 2>/dev/null)
+echo -e "${YELLOW}Testing user_context_provider_v4...${RESET}"
+TEST_RESPONSE=$(echo "What are my current priorities?" | timeout 30 ollama run user_context_provider_v4 2>/dev/null)
 if [ $? -eq 0 ] && [ -n "$TEST_RESPONSE" ]; then
-    echo -e "${GREEN}✓ matthew_context_provider_v4 working${RESET}"
+    echo -e "${GREEN}✓ user_context_provider_v4 working${RESET}"
     echo "Preview: $(echo "$TEST_RESPONSE" | head -n 1)"
 else
-    echo -e "${RED}✗ matthew_context_provider_v4 test failed${RESET}"
+    echo -e "${RED}✗ user_context_provider_v4 test failed${RESET}"
 fi
 
 echo -e "${YELLOW}Testing universal_strategy_architect...${RESET}"
@@ -292,7 +292,7 @@ echo -e "${GREEN}║            Fixed Model Optimization Complete!              
 echo -e "${GREEN}╚══════════════════════════════════════════════════════════════╝${RESET}"
 
 echo -e "\n${YELLOW}Created Fixed Optimized Models:${RESET}"
-echo "  ✓ matthew_context_provider_v4 - Updated 2025 context, quality parameters"
+echo "  ✓ user_context_provider_v4 - Updated 2025 context, quality parameters"
 echo "  ✓ universal_strategy_architect - Multi-domain strategic thinking"
 echo "  ✓ creative_catalyst - Innovation and creative problem solving"
 echo "  ✓ practical_implementer - Actionable execution planning"

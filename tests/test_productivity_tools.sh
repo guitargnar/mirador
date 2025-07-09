@@ -42,7 +42,7 @@ Hi Team,
 
 Following our meeting today, here are the action items:
 
-1. @Matthew - Complete the risk assessment automation by Friday
+1. @User - Complete the risk assessment automation by Friday
 2. @Sarah - Review and approve the new process documentation
 3. @Mike - Test the automated workflow with Claims data
 4. @Lisa - Prepare ROI presentation for leadership by next Tuesday
@@ -64,7 +64,7 @@ EOF
     cat > "$TEST_DATA_DIR/test_meeting_notes.txt" << 'EOF'
 Current Department Team Meeting - January 8, 2025
 
-Attendees: Matthew, Sarah, Mike, Lisa, Tom
+Attendees: User, Sarah, Mike, Lisa, Tom
 
 Agenda:
 - Q1 automation progress update
@@ -72,13 +72,13 @@ Agenda:
 - Resource allocation for new projects
 
 Key Points Discussed:
-- Matthew demonstrated 75% time savings with new automation
+- User demonstrated 75% time savings with new automation
 - ROI calculated at $150K annually
 - Need to expand to Claims Processing next
 - IT Security concerns addressed with compliance documentation
 
 Action Items:
-- Matthew: Finalize automation documentation
+- User: Finalize automation documentation
 - Sarah: Schedule executive presentation
 - Mike: Coordinate with Claims for pilot
 - Lisa: Update financial projections

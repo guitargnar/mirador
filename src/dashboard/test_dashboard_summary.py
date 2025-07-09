@@ -17,9 +17,9 @@ print("""
 • Live demo input field functional
 • Run Query button enabled and clickable
 • All sidebar elements present (8/8)
-• LinkedIn URL correct: https://www.linkedin.com/in/mscott77/
-• Contact email correct: mailto:userdscott7@gmail.com
-• GitHub URL correct: https://github.com/guitargnar
+• LinkedIn URL correct: https://www.linkedin.com/in/your-profile/
+• Contact email correct: mailto:contact@example.com
+• GitHub URL correct: https://github.com/your-username
 • JCPS and JobCraft tabs load content
 • Page loads quickly (179ms)
 • DOM ready time excellent (179ms)

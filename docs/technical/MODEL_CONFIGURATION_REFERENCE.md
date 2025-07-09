@@ -6,17 +6,17 @@
 
 | Model Name | Base | Context | Temp | Purpose | Avg Response | Success Rate |
 |------------|------|---------|------|---------|--------------|--------------|
-| `matthew_context_provider_v3` | Llama 3.2 3B | 32768 | 0.1 | Personal context injection | 12s | 99.8% |
+| `user_context_provider_v3` | Llama 3.2 3B | 32768 | 0.1 | Personal context injection | 12s | 99.8% |
 | `personality_context_provider` | Llama 3.2 3B | 16384 | 0.1 | Big Five personality integration | 10s | 99.6% |
 | `louisville_context_v3` | Llama 3.2 3B | 16384 | 0.2 | Local area expertise | 14s | 99.4% |
 | `family_context_provider` | Llama 3.2 3B | 8192 | 0.1 | Family dynamics context | 8s | 99.9% |
 | `goal_context_provider` | Llama 3.2 3B | 8192 | 0.1 | Goal tracking and alignment | 9s | 99.7% |
 
-#### Configuration Example: matthew_context_provider_v3
+#### Configuration Example: user_context_provider_v3
 ```bash
 FROM llama3.2:3b
 
-SYSTEM """You are Matthew's personal context provider, maintaining awareness of:
+SYSTEM """You are User's personal context provider, maintaining awareness of:
 - Professional: Current Department at Company, $85k annual income
 - Personal: Father to 7-year-old Aurora, ambivert personality
 - Aspirations: Touring guitarist (3-year transition plan)
@@ -135,7 +135,7 @@ These models are performance-optimized variants of core models:
 |----------------|-------------------|---------|------------------|
 | `decision_simplifier` | `optimized_decision_simplifier_v3` | Context: 32k→4k, Temp: 0.7→0.3 | -15% time |
 | `action_prioritizer` | `optimized_action_prioritizer` | Context: 16k→4k, Batch: 512→1024 | -18% time |
-| `matthew_advisor` | `matthew_advisor_fast` | Context: 32k→8k, GPU layers: 2 | -22% time |
+| `user_advisor` | `user_advisor_fast` | Context: 32k→8k, GPU layers: 2 | -22% time |
 | `financial_expert` | `financial_expert_quick` | Context: 32k→8k, Temp: 0.5→0.3 | -20% time |
 | Various | `*_cached` variants | Pre-loaded in memory | -40% load time |
 
@@ -185,7 +185,7 @@ These models are performance-optimized variants of core models:
 ### Fast Decision Chains (20-30s)
 ```yaml
 chain:
-  - model: matthew_context_provider_v3
+  - model: user_context_provider_v3
     role: context
     time: 12s
   - model: optimized_decision_simplifier_v3
@@ -198,7 +198,7 @@ use_case: "Quick binary decisions, daily planning"
 ### Comprehensive Analysis Chains (45-60s)
 ```yaml
 chain:
-  - model: matthew_context_provider_v3
+  - model: user_context_provider_v3
     role: context
     time: 12s
   - model: financial_planning_expert_v6

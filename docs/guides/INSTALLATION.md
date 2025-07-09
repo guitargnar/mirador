@@ -14,7 +14,7 @@
 The easiest way to install Mirador is using the setup script:
 
 ```bash
-git clone https://github.com/guitargnar/mirador.git
+git clone https://github.com/your-username/mirador.git
 cd mirador
 ./setup_mirador.sh
 ```
@@ -52,7 +52,7 @@ ollama list
 ### Step 3: Clone Repository
 
 ```bash
-git clone https://github.com/guitargnar/mirador.git
+git clone https://github.com/your-username/mirador.git
 cd mirador
 ```
 

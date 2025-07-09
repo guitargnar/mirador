@@ -3,18 +3,18 @@
 # Generated: 2025-07-09 11:04:43
 
 # Safety checks
-if [ ! -d '/Users/matthewscott/ai_framework_git' ]; then
+if [ ! -d '/Users/userscott/ai_framework_git' ]; then
     echo 'Error: ai_framework_git directory not found'
     exit 1
 fi
 
 # Create backup
-backup_dir="/Users/matthewscott/ai_framework_git_backup_$(date +%Y%m%d_%H%M%S)"
+backup_dir="/Users/userscott/ai_framework_git_backup_$(date +%Y%m%d_%H%M%S)"
 echo "Creating backup at: $backup_dir"
-cp -r /Users/matthewscott/ai_framework_git "$backup_dir"
+cp -r /Users/userscott/ai_framework_git "$backup_dir"
 
 # Delete duplicate files
-cd /Users/matthewscott/ai_framework_git
+cd /Users/userscott/ai_framework_git
 deleted_count=0
 
 if [ -f 'sales_content_creator.modelfile' ]; then
@@ -232,9 +232,9 @@ if [ -f 'daily_opportunity_scan.sh' ]; then
     echo 'Deleted: daily_opportunity_scan.sh'
     ((deleted_count++))
 fi
-if [ -f 'matthew_advisor_enhanced.modelfile' ]; then
-    rm 'matthew_advisor_enhanced.modelfile'
-    echo 'Deleted: matthew_advisor_enhanced.modelfile'
+if [ -f 'user_advisor_enhanced.modelfile' ]; then
+    rm 'user_advisor_enhanced.modelfile'
+    echo 'Deleted: user_advisor_enhanced.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'comprehensive_opportunity_validation.sh' ]; then
@@ -307,9 +307,9 @@ if [ -f 'quick_optimize.sh' ]; then
     echo 'Deleted: quick_optimize.sh'
     ((deleted_count++))
 fi
-if [ -f 'matthew_context_provider_v2.modelfile' ]; then
-    rm 'matthew_context_provider_v2.modelfile'
-    echo 'Deleted: matthew_context_provider_v2.modelfile'
+if [ -f 'user_context_provider_v2.modelfile' ]; then
+    rm 'user_context_provider_v2.modelfile'
+    echo 'Deleted: user_context_provider_v2.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'monitor_mirador_performance_fixed.sh' ]; then
@@ -527,9 +527,9 @@ if [ -f 'weekly_optimization_report.md' ]; then
     echo 'Deleted: weekly_optimization_report.md'
     ((deleted_count++))
 fi
-if [ -f 'matthew_parenting_enhanced.modelfile' ]; then
-    rm 'matthew_parenting_enhanced.modelfile'
-    echo 'Deleted: matthew_parenting_enhanced.modelfile'
+if [ -f 'user_parenting_enhanced.modelfile' ]; then
+    rm 'user_parenting_enhanced.modelfile'
+    echo 'Deleted: user_parenting_enhanced.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'mirador_with_memory.sh' ]; then
@@ -572,9 +572,9 @@ if [ -f 'financial_planning_expert_v6.modelfile' ]; then
     echo 'Deleted: financial_planning_expert_v6.modelfile'
     ((deleted_count++))
 fi
-if [ -f 'matthew_context_provider.modelfile' ]; then
-    rm 'matthew_context_provider.modelfile'
-    echo 'Deleted: matthew_context_provider.modelfile'
+if [ -f 'user_context_provider.modelfile' ]; then
+    rm 'user_context_provider.modelfile'
+    echo 'Deleted: user_context_provider.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'quick_opportunity_test.sh' ]; then
@@ -642,9 +642,9 @@ if [ -f 'create_dream_specialists.sh' ]; then
     echo 'Deleted: create_dream_specialists.sh'
     ((deleted_count++))
 fi
-if [ -f 'matthew_context_provider_v3.modelfile' ]; then
-    rm 'matthew_context_provider_v3.modelfile'
-    echo 'Deleted: matthew_context_provider_v3.modelfile'
+if [ -f 'user_context_provider_v3.modelfile' ]; then
+    rm 'user_context_provider_v3.modelfile'
+    echo 'Deleted: user_context_provider_v3.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'test_mirador_performance.sh' ]; then
@@ -652,9 +652,9 @@ if [ -f 'test_mirador_performance.sh' ]; then
     echo 'Deleted: test_mirador_performance.sh'
     ((deleted_count++))
 fi
-if [ -f 'matthew_advisor.modelfile' ]; then
-    rm 'matthew_advisor.modelfile'
-    echo 'Deleted: matthew_advisor.modelfile'
+if [ -f 'user_advisor.modelfile' ]; then
+    rm 'user_advisor.modelfile'
+    echo 'Deleted: user_advisor.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'backup_models.sh' ]; then
@@ -782,9 +782,9 @@ if [ -f 'setup.py' ]; then
     echo 'Deleted: setup.py'
     ((deleted_count++))
 fi
-if [ -f 'matthew_career_enhanced.modelfile' ]; then
-    rm 'matthew_career_enhanced.modelfile'
-    echo 'Deleted: matthew_career_enhanced.modelfile'
+if [ -f 'user_career_enhanced.modelfile' ]; then
+    rm 'user_career_enhanced.modelfile'
+    echo 'Deleted: user_career_enhanced.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'mirador-intervene' ]; then
@@ -812,9 +812,9 @@ if [ -f 'extract_top_opportunities.sh' ]; then
     echo 'Deleted: extract_top_opportunities.sh'
     ((deleted_count++))
 fi
-if [ -f 'matthew_context_provider_optimized.modelfile' ]; then
-    rm 'matthew_context_provider_optimized.modelfile'
-    echo 'Deleted: matthew_context_provider_optimized.modelfile'
+if [ -f 'user_context_provider_optimized.modelfile' ]; then
+    rm 'user_context_provider_optimized.modelfile'
+    echo 'Deleted: user_context_provider_optimized.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'mirador_health_report_20250618_153258.md' ]; then
@@ -912,9 +912,9 @@ if [ -f 'PRODUCTION_USAGE_GUIDE.md' ]; then
     echo 'Deleted: PRODUCTION_USAGE_GUIDE.md'
     ((deleted_count++))
 fi
-if [ -f 'create_matthew_unified.sh' ]; then
-    rm 'create_matthew_unified.sh'
-    echo 'Deleted: create_matthew_unified.sh'
+if [ -f 'create_user_unified.sh' ]; then
+    rm 'create_user_unified.sh'
+    echo 'Deleted: create_user_unified.sh'
     ((deleted_count++))
 fi
 if [ -f 'implementation_roadmap.sh' ]; then
@@ -997,9 +997,9 @@ if [ -f 'EXECUTIVE_SUMMARY_20250608.md' ]; then
     echo 'Deleted: EXECUTIVE_SUMMARY_20250608.md'
     ((deleted_count++))
 fi
-if [ -f 'matthew_realestate_enhanced.modelfile' ]; then
-    rm 'matthew_realestate_enhanced.modelfile'
-    echo 'Deleted: matthew_realestate_enhanced.modelfile'
+if [ -f 'user_realestate_enhanced.modelfile' ]; then
+    rm 'user_realestate_enhanced.modelfile'
+    echo 'Deleted: user_realestate_enhanced.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'enhanced_agent_fast_v2.modelfile' ]; then
@@ -1107,9 +1107,9 @@ if [ -f 'TECHNICAL_DOCUMENTATION.md' ]; then
     echo 'Deleted: TECHNICAL_DOCUMENTATION.md'
     ((deleted_count++))
 fi
-if [ -f 'matthew_louisville_enhanced.modelfile' ]; then
-    rm 'matthew_louisville_enhanced.modelfile'
-    echo 'Deleted: matthew_louisville_enhanced.modelfile'
+if [ -f 'user_louisville_enhanced.modelfile' ]; then
+    rm 'user_louisville_enhanced.modelfile'
+    echo 'Deleted: user_louisville_enhanced.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'system_maintenance.sh' ]; then
@@ -1987,9 +1987,9 @@ if [ -f 'Documentation and Saved Assets/mirador_emergency_recovery.py' ]; then
     echo 'Deleted: Documentation and Saved Assets/mirador_emergency_recovery.py'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott.md' ]; then
-    rm 'Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott.md'
-    echo 'Deleted: Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott.md'
+if [ -f 'Documentation and Saved Assets/Specialized Ollama Model Files for User.md' ]; then
+    rm 'Documentation and Saved Assets/Specialized Ollama Model Files for User.md'
+    echo 'Deleted: Documentation and Saved Assets/Specialized Ollama Model Files for User.md'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/Mirador AI Orchestration System_ A Comprehensive Synthesis.pdf' ]; then
@@ -2017,9 +2017,9 @@ if [ -f 'Documentation and Saved Assets/strategic_deployment_guide.md' ]; then
     echo 'Deleted: Documentation and Saved Assets/strategic_deployment_guide.md'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott (1).md' ]; then
-    rm 'Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott (1).md'
-    echo 'Deleted: Documentation and Saved Assets/Specialized Ollama Model Files for Matthew Scott (1).md'
+if [ -f 'Documentation and Saved Assets/Specialized Ollama Model Files for User (1).md' ]; then
+    rm 'Documentation and Saved Assets/Specialized Ollama Model Files for User (1).md'
+    echo 'Deleted: Documentation and Saved Assets/Specialized Ollama Model Files for User (1).md'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/Mirador Multi-Agent AI Orchestration System_ Synthesis and Strategic Recommendations.pptx.pdf' ]; then
@@ -2797,9 +2797,9 @@ if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador M
     echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/ComprehensiveMiradorPromptLibrary.md'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/matthew_context_provider_optimized.modelfile' ]; then
-    rm 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/matthew_context_provider_optimized.modelfile'
-    echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/matthew_context_provider_optimized.modelfile'
+if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/user_context_provider_optimized.modelfile' ]; then
+    rm 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/user_context_provider_optimized.modelfile'
+    echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/user_context_provider_optimized.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/mirador_production_test_suite.sh' ]; then
@@ -2857,9 +2857,9 @@ if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador M
     echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/CompleteMiradorSpecialistModelLibrarywithOptimizedOllamaConfigurations.md'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/MatthewScott-PersonaDossier.docx' ]; then
-    rm 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/MatthewScott-PersonaDossier.docx'
-    echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/MatthewScott-PersonaDossier.docx'
+if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/UserScott-PersonaDossier.docx' ]; then
+    rm 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/UserScott-PersonaDossier.docx'
+    echo 'Deleted: Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/UserScott-PersonaDossier.docx'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/compass_artifact_wf-639ebc10-e023-4d93-bb50-4af52b602cda_text_markdown.md' ]; then
@@ -3667,9 +3667,9 @@ if [ -f 'Documentation and Saved Assets/mirador-main/quick_optimize.sh' ]; then
     echo 'Deleted: Documentation and Saved Assets/mirador-main/quick_optimize.sh'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/mirador-main/matthew_context_provider_v2.modelfile' ]; then
-    rm 'Documentation and Saved Assets/mirador-main/matthew_context_provider_v2.modelfile'
-    echo 'Deleted: Documentation and Saved Assets/mirador-main/matthew_context_provider_v2.modelfile'
+if [ -f 'Documentation and Saved Assets/mirador-main/user_context_provider_v2.modelfile' ]; then
+    rm 'Documentation and Saved Assets/mirador-main/user_context_provider_v2.modelfile'
+    echo 'Deleted: Documentation and Saved Assets/mirador-main/user_context_provider_v2.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/mirador-main/monitor_mirador_performance_fixed.sh' ]; then
@@ -3917,9 +3917,9 @@ if [ -f 'Documentation and Saved Assets/mirador-main/financial_planning_expert_v
     echo 'Deleted: Documentation and Saved Assets/mirador-main/financial_planning_expert_v6.modelfile'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/mirador-main/matthew_context_provider.modelfile' ]; then
-    rm 'Documentation and Saved Assets/mirador-main/matthew_context_provider.modelfile'
-    echo 'Deleted: Documentation and Saved Assets/mirador-main/matthew_context_provider.modelfile'
+if [ -f 'Documentation and Saved Assets/mirador-main/user_context_provider.modelfile' ]; then
+    rm 'Documentation and Saved Assets/mirador-main/user_context_provider.modelfile'
+    echo 'Deleted: Documentation and Saved Assets/mirador-main/user_context_provider.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/mirador-main/quick_opportunity_test.sh' ]; then
@@ -3977,9 +3977,9 @@ if [ -f 'Documentation and Saved Assets/mirador-main/create_dream_specialists.sh
     echo 'Deleted: Documentation and Saved Assets/mirador-main/create_dream_specialists.sh'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/mirador-main/matthew_context_provider_v3.modelfile' ]; then
-    rm 'Documentation and Saved Assets/mirador-main/matthew_context_provider_v3.modelfile'
-    echo 'Deleted: Documentation and Saved Assets/mirador-main/matthew_context_provider_v3.modelfile'
+if [ -f 'Documentation and Saved Assets/mirador-main/user_context_provider_v3.modelfile' ]; then
+    rm 'Documentation and Saved Assets/mirador-main/user_context_provider_v3.modelfile'
+    echo 'Deleted: Documentation and Saved Assets/mirador-main/user_context_provider_v3.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/mirador-main/test_mirador_performance.sh' ]; then
@@ -4117,9 +4117,9 @@ if [ -f 'Documentation and Saved Assets/mirador-main/extract_top_opportunities.s
     echo 'Deleted: Documentation and Saved Assets/mirador-main/extract_top_opportunities.sh'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/mirador-main/matthew_context_provider_optimized.modelfile' ]; then
-    rm 'Documentation and Saved Assets/mirador-main/matthew_context_provider_optimized.modelfile'
-    echo 'Deleted: Documentation and Saved Assets/mirador-main/matthew_context_provider_optimized.modelfile'
+if [ -f 'Documentation and Saved Assets/mirador-main/user_context_provider_optimized.modelfile' ]; then
+    rm 'Documentation and Saved Assets/mirador-main/user_context_provider_optimized.modelfile'
+    echo 'Deleted: Documentation and Saved Assets/mirador-main/user_context_provider_optimized.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/mirador-main/mirador_health_report_20250618_153258.md' ]; then
@@ -9177,9 +9177,9 @@ if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/ai_portfol
     echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/ai_portfolio_infographic.png'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_timeline.png' ]; then
-    rm 'Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_timeline.png'
-    echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_timeline.png'
+if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_timeline.png' ]; then
+    rm 'Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_timeline.png'
+    echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_timeline.png'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/style.css' ]; then
@@ -9192,9 +9192,9 @@ if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/linkedin-c
     echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/linkedin-content-strategy.md'
     ((deleted_count++))
 fi
-if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_ecosystem.png' ]; then
-    rm 'Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_ecosystem.png'
-    echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/matthews_ai_ecosystem.png'
+if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_ecosystem.png' ]; then
+    rm 'Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_ecosystem.png'
+    echo 'Deleted: Documentation and Saved Assets/ai-transformation-portfolio 2/users_ai_ecosystem.png'
     ((deleted_count++))
 fi
 if [ -f 'Documentation and Saved Assets/ai-transformation-portfolio 2/app.js' ]; then
@@ -9367,9 +9367,9 @@ if [ -f 'Perplexity/AI-Powered Content Creation Tools for Risk Managem.pdf' ]; t
     echo 'Deleted: Perplexity/AI-Powered Content Creation Tools for Risk Managem.pdf'
     ((deleted_count++))
 fi
-if [ -f 'Perplexity/Specialized Ollama Model Files for Matthew Scott.md' ]; then
-    rm 'Perplexity/Specialized Ollama Model Files for Matthew Scott.md'
-    echo 'Deleted: Perplexity/Specialized Ollama Model Files for Matthew Scott.md'
+if [ -f 'Perplexity/Specialized Ollama Model Files for User.md' ]; then
+    rm 'Perplexity/Specialized Ollama Model Files for User.md'
+    echo 'Deleted: Perplexity/Specialized Ollama Model Files for User.md'
     ((deleted_count++))
 fi
 if [ -f 'Perplexity/perplexity June 21 2025.zip' ]; then
@@ -9512,9 +9512,9 @@ if [ -f 'optimized_configs/modelfiles/enhanced_agent_fast_v6.modelfile' ]; then
     echo 'Deleted: optimized_configs/modelfiles/enhanced_agent_fast_v6.modelfile'
     ((deleted_count++))
 fi
-if [ -f 'optimized_configs/modelfiles/matthew_context_provider_v2.modelfile' ]; then
-    rm 'optimized_configs/modelfiles/matthew_context_provider_v2.modelfile'
-    echo 'Deleted: optimized_configs/modelfiles/matthew_context_provider_v2.modelfile'
+if [ -f 'optimized_configs/modelfiles/user_context_provider_v2.modelfile' ]; then
+    rm 'optimized_configs/modelfiles/user_context_provider_v2.modelfile'
+    echo 'Deleted: optimized_configs/modelfiles/user_context_provider_v2.modelfile'
     ((deleted_count++))
 fi
 if [ -f 'optimized_configs/modelfiles/linkedin_content_expert.modelfile' ]; then

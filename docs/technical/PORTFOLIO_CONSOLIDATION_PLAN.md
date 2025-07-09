@@ -1,7 +1,7 @@
 # Portfolio Consolidation & Unified Dashboard Plan
 
 ## Executive Summary
-This plan outlines the consolidation of Matthew Scott's project ecosystem into a unified portfolio and dashboard system, reducing code duplication by ~60% while preserving all functionality.
+This plan outlines the consolidation of User's project ecosystem into a unified portfolio and dashboard system, reducing code duplication by ~60% while preserving all functionality.
 
 ## Current State Analysis
 

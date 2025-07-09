@@ -22,7 +22,7 @@ class TimeAllocation:
 @dataclass
 class FinancialConstraint:
     """Represents financial constraints"""
-    monthly_income: float = 1650.0  # Matthew's take-home
+    monthly_income: float = 1650.0  # User's take-home
     equity_value: float = 91000.0
     emergency_reserve: float = 500.0
     discretionary_spending: float = 200.0
@@ -138,7 +138,7 @@ class ConstraintValidator:
         
         # Patterns for financial amounts
         patterns = [
-            r'\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)',  # $1,650.00
+            r'\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)',  # modest income.00
             r'(\d{1,3}(?:,\d{3})*)\s*dollars?',     # 1650 dollars
             r'budget\s+of\s+\$?(\d{1,3}(?:,\d{3})*)', # budget of $500
         ]
@@ -364,8 +364,8 @@ def main():
     elif command == "test":
         test_text = """
         Allocate 2 hours per day for coursework completion.
-        Spend 1.5 hours daily with Sage for quality time.
-        Dedicate 1 hour to Katie for relationship building.
+        Spend 1.5 hours daily with Child for quality time.
+        Dedicate 1 hour to Partner for relationship building.
         Schedule 2 hours for AI innovation work.
         Plan 30 minutes for exercise and self-care.
         Budget $150 for educational resources.
