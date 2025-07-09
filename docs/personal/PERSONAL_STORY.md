@@ -151,7 +151,7 @@ cd mirador
 - ⏱️ **30+ hours/week saved** through intelligent automation
 - 🎯 **70% → 97% accuracy improvement** in risk management workflows  
 - 🧠 **89 specialized models** created in 8 weeks during crisis
-- 💰 **significant cost savings automation savings** achieved at Company
+- 💰 **Significant automation efficiency** achieved in enterprise risk management
 
 ### Universal Application
 - 🔒 **100% privacy maintained** - all processing local via Ollama
@@ -246,7 +246,7 @@ Mirador represents more than code—it's a transformation philosophy:
 - **v5.0.0** (2025-07-07) - Complete personal story integration, universal chains
 - **v3.0.0** - Multi-faceted universal platform, Apple Silicon optimization
 - **v2.0.0** - Framework overhaul with Advocates Program integration
-- **v1.0.0** - Initial Company-specific automation proof of concept
+- **v1.0.0** - Initial enterprise automation proof of concept
 
 ## 📜 License & Philosophy
 

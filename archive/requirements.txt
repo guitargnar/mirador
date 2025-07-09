@@ -29,7 +29,7 @@ flake8==7.0.0            # Linting
 mypy==1.10.0             # Type checking
 
 # Optional Performance Enhancements
-orjson==3.10.5           # Fast JSON parsing
+orjson==3.9.15           # Fast JSON parsing (3.10+ has compatibility issues)
 msgpack==1.0.8           # Binary serialization
 aiofiles==23.2.1         # Async file operations
 
@@ -37,12 +37,13 @@ aiofiles==23.2.1         # Async file operations
 loguru==0.7.2            # Advanced logging
 watchdog==4.0.1          # File system monitoring
 
-# Future Enhancements (commented out)
-# streamlit==1.35.0       # Web UI
+# Web Interface (optional - uncomment if using web dashboard)
+streamlit==1.35.0        # Web UI
+plotly==5.22.0           # Data visualization
+
+# API Server (optional - uncomment for API access)
 # fastapi==0.111.0        # API server
 # uvicorn==0.30.1         # ASGI server
-# plotly==5.22.0          # Data visualization
-# schedule==1.2.2         # Task scheduling
 
-# Local mirador-core library
--e ./mirador-core
+# Local mirador-core library (if consolidating into package)
+# -e ./mirador-core
