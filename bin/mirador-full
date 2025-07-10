@@ -1,0 +1,3 @@
+#!/bin/bash
+# All stages - most comprehensive
+exec "$(dirname "$0")/mirador-stream" "$1"

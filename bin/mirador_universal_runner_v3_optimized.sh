@@ -35,7 +35,7 @@ case "$CHAIN_TYPE" in
     "life_optimization")
         # Use latest context provider only (removed duplicates)
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "health_wellness_optimizer:latest"
             "productivity_optimizer:latest"
             "action_crystallizer:latest"
@@ -45,7 +45,7 @@ case "$CHAIN_TYPE" in
     "business_acceleration")
         # Removed duplicate accelerators
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "ai_career_strategist:latest"
             "matthews_strategic_accelerator_v2:latest"
             "solution_architect:latest"
@@ -54,7 +54,7 @@ case "$CHAIN_TYPE" in
     
     "creative_breakthrough")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "creative_catalyst:latest"
             "digital_storyteller:latest"
             "engagement_optimizer:latest"
@@ -63,7 +63,7 @@ case "$CHAIN_TYPE" in
     
     "relationship_harmony")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "relationship_communication_specialist:latest"
             "life_transition_coordinator:latest"
             "action_crystallizer:latest"
@@ -73,7 +73,7 @@ case "$CHAIN_TYPE" in
     "technical_mastery")
         # Use specialized code models
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"  # Lighter for speed
+            "matthew_context_provider_v6_complete:latest"  # Lighter for speed
             "master_coder:latest"
             "code_reviewer:latest"  # DeepSeek-based
             "solution_architect:latest"
@@ -82,7 +82,7 @@ case "$CHAIN_TYPE" in
     
     "strategic_synthesis")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "universal_strategy_architect:latest"
             "cross_model_synthesizer:latest"
             "optimized_decision_simplifier_v3:latest"
@@ -92,7 +92,7 @@ case "$CHAIN_TYPE" in
     "deep_analysis")
         # NEW: Gemma-powered deep reasoning
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "analytical_expert_gemma:latest"
             "universal_strategy_architect:latest"
             "practical_implementer:latest"
@@ -102,7 +102,7 @@ case "$CHAIN_TYPE" in
     "global_insight")
         # NEW: Qwen-powered multilingual
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "multilingual_assistant_qwen:latest"
             "engagement_optimizer:latest"
             "action_crystallizer:latest"
@@ -113,7 +113,7 @@ case "$CHAIN_TYPE" in
         # NEW: Phi-powered fast decisions
         MODELS=(
             "speed_optimizer_phi:latest"
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "action_crystallizer:latest"
         )
         ;;

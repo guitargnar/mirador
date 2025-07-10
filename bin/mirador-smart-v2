@@ -1,5 +1,5 @@
 #!/bin/bash
-# Smart Mirador wrapper with fixed decision simplifier
+# Smart Mirador wrapper with streaming support
 
 # Source branded header
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -10,7 +10,29 @@ if command -v mirador_header_mini &> /dev/null; then
     mirador_header_mini
 fi
 
-QUERY="$1"
+# Parse command line arguments
+STREAM_MODE=false
+QUERY=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --stream)
+            STREAM_MODE=true
+            shift
+            ;;
+        *)
+            QUERY="$1"
+            shift
+            ;;
+    esac
+done
+
+# Check if streaming mode is requested
+if [ "$STREAM_MODE" = true ]; then
+    echo "🚀 Using V3 Streaming Mode"
+    exec "$SCRIPT_DIR/mirador-stream" "$QUERY"
+    exit 0
+fi
 
 # Smart chain selection based on query content
 if [[ "$QUERY" =~ (financial|money|investment|budget|income|salary) ]]; then

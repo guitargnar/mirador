@@ -1,0 +1,211 @@
+#!/bin/bash
+# Mirador EZ Streaming - Integrates V3 streaming with V2 chain infrastructure
+# Maintains backward compatibility while adding <1s latency streaming
+
+set -e
+
+# Configuration
+OUTPUTS_DIR="$HOME/ai_framework_git/outputs"
+TIMEOUT=120
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Create outputs directory if it doesn't exist
+mkdir -p "$OUTPUTS_DIR"
+
+# Helper functions
+log_info() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [INFO] $1"
+}
+
+log_error() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [ERROR] $1" >&2
+}
+
+# Check if model exists
+check_model() {
+    local model_name=$1
+    if ! ollama list | grep -q "^$model_name"; then
+        log_error "Model '$model_name' not found. Please check available models."
+        echo "Available models:"
+        ollama list | head -20
+        return 1
+    fi
+    return 0
+}
+
+# Execute streaming chain
+execute_streaming_chain() {
+    local description=$1
+    shift
+    local models=("$@")
+    
+    # Check if streaming is available
+    if [ ! -x "$SCRIPT_DIR/mirador-stream" ]; then
+        log_error "Streaming not available, falling back to traditional chain"
+        return 1
+    fi
+    
+    log_info "Starting streaming chain: $description"
+    log_info "Using optimized V3 streaming (<1s latency)"
+    
+    # For streaming, we use the mirador-stream directly
+    # It will automatically select appropriate stages
+    "$SCRIPT_DIR/mirador-stream" "$description"
+    
+    return 0
+}
+
+# Execute traditional chain (fallback)
+execute_traditional_chain() {
+    local description=$1
+    shift
+    
+    # Call the original mirador-ez with chain command
+    "$SCRIPT_DIR/mirador-ez" chain "$description" "$@"
+}
+
+# Execute hybrid streaming (best of both worlds)
+execute_hybrid() {
+    local description=$1
+    shift
+    local models=("$@")
+    
+    # Create output directory
+    local chain_id="stream_$(date '+%Y%m%d_%H%M%S')"
+    local chain_dir="$OUTPUTS_DIR/$chain_id"
+    mkdir -p "$chain_dir"
+    
+    log_info "Starting hybrid execution"
+    log_info "Stage 1: Quick streaming response (<1s)"
+    
+    # First, get quick streaming response
+    if [ -x "$SCRIPT_DIR/mirador-stream" ]; then
+        echo "🚀 Quick Response:"
+        "$SCRIPT_DIR/mirador-stream" "$description" --stages quick_response --no-color > "$chain_dir/quick_response.md"
+        cat "$chain_dir/quick_response.md"
+        echo ""
+    fi
+    
+    # Then run traditional chain for deep analysis
+    log_info "Stage 2: Deep chain analysis"
+    echo ""
+    echo "🧠 Deep Analysis (running ${#models[@]} models):"
+    
+    # Build context from streaming response
+    local streaming_context=""
+    if [ -f "$chain_dir/quick_response.md" ]; then
+        streaming_context=$(cat "$chain_dir/quick_response.md")
+    fi
+    
+    # Execute models sequentially with context
+    local context="$description"
+    if [ -n "$streaming_context" ]; then
+        context="$description\n\nInitial analysis:\n$streaming_context"
+    fi
+    
+    local model_outputs=()
+    for i in "${!models[@]}"; do
+        local model="${models[$i]}"
+        
+        if ! check_model "$model"; then
+            log_error "Model $model not available"
+            continue
+        fi
+        
+        log_info "Executing model $((i+1))/${#models[@]}: $model"
+        
+        # Build full prompt
+        local full_prompt="$context"
+        if [ $i -gt 0 ]; then
+            full_prompt+="\n\nPrevious analysis:\n${model_outputs[$((i-1))]}"
+        fi
+        
+        # Execute model
+        local output
+        if output=$(timeout $TIMEOUT ollama run "$model" "$full_prompt" 2>&1); then
+            model_outputs+=("$output")
+            echo "$output" > "$chain_dir/${model}_output.md"
+            log_info "✓ $model completed"
+        else
+            log_error "✗ $model failed"
+        fi
+    done
+    
+    # Save final output
+    if [ ${#model_outputs[@]} -gt 0 ]; then
+        echo "${model_outputs[-1]}" > "$chain_dir/final_output.md"
+        echo ""
+        echo "✨ Final Synthesis:"
+        echo "${model_outputs[-1]}"
+    fi
+    
+    log_info "Results saved to: $chain_dir"
+}
+
+# Main command processing
+main() {
+    case "${1:-}" in
+        "stream")
+            if [ $# -lt 2 ]; then
+                echo "Usage: $0 stream \"<prompt>\""
+                exit 1
+            fi
+            # Pure streaming mode
+            if [ -x "$SCRIPT_DIR/mirador-stream" ]; then
+                "$SCRIPT_DIR/mirador-stream" "$2"
+            else
+                log_error "Streaming not available"
+                exit 1
+            fi
+            ;;
+            
+        "chain")
+            if [ $# -lt 3 ]; then
+                echo "Usage: $0 chain \"<description>\" <model1> [model2] [model3] ..."
+                exit 1
+            fi
+            description="$2"
+            shift 2
+            
+            # Try streaming first, fallback to traditional
+            if ! execute_streaming_chain "$description" "$@"; then
+                execute_traditional_chain "$description" "$@"
+            fi
+            ;;
+            
+        "hybrid")
+            if [ $# -lt 3 ]; then
+                echo "Usage: $0 hybrid \"<description>\" <model1> [model2] [model3] ..."
+                exit 1
+            fi
+            description="$2"
+            shift 2
+            execute_hybrid "$description" "$@"
+            ;;
+            
+        "ask"|"models"|"health")
+            # Pass through to original mirador-ez
+            "$SCRIPT_DIR/mirador-ez" "$@"
+            ;;
+            
+        *)
+            echo "Mirador EZ Streaming - V3 Enhanced Interface"
+            echo ""
+            echo "Usage:"
+            echo "  $0 stream \"<prompt>\"              - Pure V3 streaming (<1s latency)"
+            echo "  $0 chain \"<desc>\" <models...>     - Chain with streaming fallback"
+            echo "  $0 hybrid \"<desc>\" <models...>    - Quick stream + deep chain"
+            echo "  $0 ask <model> \"<prompt>\"         - Single model query"
+            echo "  $0 models                          - List available models"
+            echo "  $0 health                          - System health check"
+            echo ""
+            echo "Examples:"
+            echo "  $0 stream \"What should I focus on today?\""
+            echo "  $0 hybrid \"Plan my day\" matthew_context_provider_v5_complete decision_simplifier_v2"
+            echo ""
+            ;;
+    esac
+}
+
+# Execute main function with all arguments
+main "$@"

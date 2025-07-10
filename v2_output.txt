@@ -1,0 +1,28 @@
+2025-07-10 10:11:06 [INFO] Starting chain: I want to build an AI-powered music composition tool that can generate chord progressions in the style of specific artists. I know Python and basic music theory. Where do I start and what libraries should I use?
+2025-07-10 10:11:06 [INFO] Models: matthew_context_provider_v5_complete:latest music_industry_networker master_guitar_instructor optimized_decision_simplifier_v3
+2025-07-10 10:11:06 [INFO] Output directory: /Users/matthewscott/ai_framework_git/outputs/chain_20250710_101106
+2025-07-10 10:11:06 [INFO] Executing model 1/4: matthew_context_provider_v5_complete:latest
+2025-07-10 10:11:44 [INFO] ✓ matthew_context_provider_v5_complete:latest completed
+2025-07-10 10:11:44 [ERROR] Model 'music_industry_networker' not found. Please check available models.
+Available models:
+NAME                                            ID              SIZE      MODIFIED     
+command_r_code_analyst:latest                   a52fe2db2903    18 GB     15 hours ago    
+command_r_rag_specialist:latest                 f5ee92a4a35c    18 GB     15 hours ago    
+speed_optimizer_phi:latest                      165639e8db2b    2.2 GB    16 hours ago    
+phi3:mini                                       4f2222927938    2.2 GB    16 hours ago    
+qwen2.5:7b                                      845dbda0ea48    4.7 GB    16 hours ago    
+multilingual_assistant_qwen:latest              a8738f636c94    4.7 GB    16 hours ago    
+analytical_expert_gemma:latest                  9fbdc217239c    5.4 GB    16 hours ago    
+gemma2:9b                                       ff02c3702f32    5.4 GB    16 hours ago    
+command-r:35b                                   7d96360d357f    18 GB     16 hours ago    
+phi3:medium                                     cf611a26b048    7.9 GB    17 hours ago    
+qwen2.5:32b                                     9f13ba1299af    19 GB     17 hours ago    
+gemma2:27b                                      53261bc9c192    15 GB     17 hours ago    
+llama3.2:3b                                     a80c4f17acd5    2.0 GB    47 hours ago    
+matthew_context_provider_v5_complete:latest     e1cde85294ac    6.4 GB    3 days ago      
+universal_strategy_architect:latest             855029a016f9    6.4 GB    3 days ago      
+creative_catalyst:latest                        fab7bb31116f    6.4 GB    3 days ago      
+practical_implementer:latest                    742db1609fa1    6.4 GB    3 days ago      
+humana_innovation_catalyst:latest               b2eefc671762    6.4 GB    6 days ago      
+enhanced_agent_enforcer:latest                  7e456c57d826    2.0 GB    6 days ago      
+2025-07-10 10:11:44 [ERROR] Chain failed: Model music_industry_networker not available

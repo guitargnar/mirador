@@ -1,0 +1,22 @@
+================================================================================
+MIRADOR PRACTICAL UTILITY TEST REPORT - PDF CONTEXT
+================================================================================
+Test Date: 2025-07-10 18:15:21
+Test Focus: Real-world scenarios based on User's actual situation
+
+MATTHEW'S CONTEXT (from PDF):
+- Single father, city KY
+- Company Current Role (10 years)
+- Musician (Annapurna band, lead guitarist)
+- Built 89-model AI system in 8 weeks (2025)
+- Co-authored Mirador technical paper
+- Financial: ~modest income/paycheck, home equity home equity
+- Goals: AI innovation leadership, real estate investment, work-life balance
+
+TEST RESULTS:
+================================================================================
+
+Test 1: Single Father Balance
+Chain: life_optimization
+Prompt: As a parent working full-time at Company while pursuing music with Annapurna and developing AI innovations, how do I create sustainable work-life balance that doesn't compromise my responsibilities to my child or my career growth?
+Status: FAILED - Missing keywords: father child balance career music

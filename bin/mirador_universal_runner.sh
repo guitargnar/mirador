@@ -29,22 +29,22 @@ PROMPT=$2
 # Map chain types to optimized model sequences (context provider first for deep understanding)
 case $CHAIN_TYPE in
     "life_optimization")
-        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="user_context_provider_v5_complete creative_catalyst practical_implementer"
+        MODELS="matthew_context_provider_v6_complete creative_catalyst practical_implementer"
         ;;
     "relationship_harmony")
-        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "technical_mastery")
-        MODELS="user_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "strategic_synthesis")
-        MODELS="user_context_provider_v5_complete universal_strategy_architect creative_catalyst practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect creative_catalyst practical_implementer"
         ;;
     *)
         echo -e "${RED}Unknown chain type: $CHAIN_TYPE${RESET}"
@@ -89,7 +89,7 @@ for i in "${!MODEL_ARRAY[@]}"; do
         STEP_PROMPT="$CURRENT_CONTEXT"
     else
         # Subsequent models get context-aware prompts
-        if [[ "$MODEL" == "user_context_provider_v5_complete" ]]; then
+        if [[ "$MODEL" == "matthew_context_provider_v6_complete" ]]; then
             STEP_PROMPT="Given this challenge/question: '$PROMPT'
 
 And considering the previous analysis: $CURRENT_CONTEXT

@@ -48,22 +48,22 @@ esac
 # Map chain types to optimized model sequences (context provider first for deep understanding)
 case $CHAIN_TYPE in
     "life_optimization")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "business_acceleration")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "creative_breakthrough")
-        MODELS="matthew_context_provider_v5_complete creative_catalyst practical_implementer"
+        MODELS="matthew_context_provider_v6_complete creative_catalyst practical_implementer"
         ;;
     "relationship_harmony")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "technical_mastery")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect practical_implementer"
         ;;
     "strategic_synthesis")
-        MODELS="matthew_context_provider_v5_complete universal_strategy_architect creative_catalyst practical_implementer"
+        MODELS="matthew_context_provider_v6_complete universal_strategy_architect creative_catalyst practical_implementer"
         ;;
     *)
         echo -e "${RED}Unknown chain type: $CHAIN_TYPE${RESET}"
@@ -112,7 +112,7 @@ TOTAL_MODELS=${#MODEL_ARRAY[@]}
 # Adjust model sequence based on format
 if [ "$FORMAT" = "quick" ]; then
     # For quick format, only use the practical implementer
-    MODEL_ARRAY=("matthew_context_provider_v5_complete" "practical_implementer")
+    MODEL_ARRAY=("matthew_context_provider_v6_complete" "practical_implementer")
     TOTAL_MODELS=${#MODEL_ARRAY[@]}
 fi
 
@@ -148,7 +148,7 @@ IMPORTANT: Structure your response as JSON with keys: 'summary', 'key_actions' (
         esac
         
         # Subsequent models get context-aware prompts
-        if [[ "$MODEL" == "matthew_context_provider_v5_complete" ]]; then
+        if [[ "$MODEL" == "matthew_context_provider_v6_complete" ]]; then
             STEP_PROMPT="Given this challenge/question: '$PROMPT'
 
 And considering the previous analysis: $CURRENT_CONTEXT

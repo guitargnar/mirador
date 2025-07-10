@@ -314,7 +314,7 @@ class ModelSelector:
         models = self.select_models(query)
         
         # Add context provider as first model
-        chain = ["matthew_context_provider_v5_complete:latest"] + models
+        chain = ["matthew_context_provider_v6_complete:latest"] + models
         
         return {
             "query_analysis": analysis,

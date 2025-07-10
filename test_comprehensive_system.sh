@@ -44,7 +44,7 @@ run_test "Core Models Available" \
 
 # Test 2: Context provider works
 run_test "Context Provider" \
-    "echo 'test' | ollama run matthew_context_provider_v5_complete:latest 2>&1" \
+    "echo 'test' | ollama run matthew_context_provider_v6_complete:latest 2>&1" \
     "."
 
 # Test 3: Auto-router functionality
@@ -91,7 +91,7 @@ run_test "Feedback System" \
 # Test 9: Performance (basic chain should complete in < 60s)
 echo -e "${BLUE}Testing: Performance Benchmark${NC}"
 START_TIME=$(date +%s)
-timeout 60s ./mirador-ez chain "Quick test" matthew_context_provider_v5_complete:latest practical_implementer >/dev/null 2>&1
+timeout 60s ./mirador-ez chain "Quick test" matthew_context_provider_v6_complete:latest practical_implementer >/dev/null 2>&1
 RESULT=$?
 END_TIME=$(date +%s)
 DURATION=$((END_TIME - START_TIME))

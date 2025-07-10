@@ -143,7 +143,7 @@ cat > models/diverse/hybrid_chain_examples.json << 'EOF'
     "deep_analysis_chain": {
       "description": "Combines Gemma's reasoning with Llama's implementation",
       "models": [
-        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v6_complete:latest",
         "analytical_expert_gemma:latest",
         "practical_implementer:latest"
       ],
@@ -156,7 +156,7 @@ cat > models/diverse/hybrid_chain_examples.json << 'EOF'
     "global_communication_chain": {
       "description": "Leverages Qwen's multilingual capabilities",
       "models": [
-        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v6_complete:latest",
         "multilingual_assistant_qwen:latest",
         "engagement_optimizer:latest"
       ],
@@ -182,7 +182,7 @@ cat > models/diverse/hybrid_chain_examples.json << 'EOF'
     "comprehensive_analysis_chain": {
       "description": "Combines all model families for maximum insight",
       "models": [
-        "matthew_context_provider_v5_complete:latest",
+        "matthew_context_provider_v6_complete:latest",
         "analytical_expert_gemma:latest",
         "multilingual_assistant_qwen:latest",
         "speed_optimizer_phi:latest",

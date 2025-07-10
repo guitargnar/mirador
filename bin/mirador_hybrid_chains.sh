@@ -67,7 +67,7 @@ case "$CHAIN_TYPE" in
     "synthesis")
         if [ "$FAST_MODE" = true ]; then
             MODELS=(
-                "matthew_context_provider_v5_complete:latest"
+                "matthew_context_provider_v6_complete:latest"
                 "llama3.2:3b"                    # Llama perspective
                 "gemma2_fast:latest"             # Gemma perspective
                 "qwen2_fast:latest"              # Qwen perspective
@@ -75,7 +75,7 @@ case "$CHAIN_TYPE" in
             )
         else
             MODELS=(
-                "matthew_context_provider_v5_complete:latest"
+                "matthew_context_provider_v6_complete:latest"
                 "universal_strategy_architect:latest"  # Llama-based
                 "analytical_expert_gemma:latest"       # Gemma-based
                 "multilingual_assistant_qwen:latest"   # Qwen-based
@@ -86,7 +86,7 @@ case "$CHAIN_TYPE" in
     
     "research")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_rag_specialist:latest"    # Document analysis
             "analytical_expert_gemma:latest"     # Deep reasoning
             "mistral:latest"                     # Additional perspective
@@ -96,7 +96,7 @@ case "$CHAIN_TYPE" in
     
     "creative")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "creative_catalyst:latest"           # Llama-based creativity
             "speed_optimizer_phi:latest"         # Quick ideation
             "mistral:latest"                     # European perspective
@@ -106,7 +106,7 @@ case "$CHAIN_TYPE" in
     
     "technical")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "code_reviewer:latest"               # DeepSeek code analysis
             "command_r_code_analyst:latest"      # Command-R code understanding
             "analytical_expert_gemma:latest"     # Technical reasoning
@@ -116,7 +116,7 @@ case "$CHAIN_TYPE" in
     
     "decision")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "speed_optimizer_phi:latest"         # Quick analysis
             "analytical_expert_gemma:latest"     # Deep reasoning
             "practical_implementer:latest"       # Practical perspective
@@ -126,7 +126,7 @@ case "$CHAIN_TYPE" in
     
     "cultural")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "multilingual_assistant_qwen:latest" # Cultural understanding
             "analytical_expert_gemma:latest"     # Analysis
             "command_r_rag_specialist:latest"    # Context integration

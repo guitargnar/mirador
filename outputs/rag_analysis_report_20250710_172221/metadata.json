@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T21:24:25Z",
+    "analysis_type": "report",
+    "query": "Extract key financial metrics and risk factors\n",
+    "document_path": "complex_financial_scenario.txt\n",
+    "models": ["matthew_context_provider_v5_complete:latest","command_r_rag_specialist:latest","business_strategist_fast:latest","action_crystallizer:latest\n"],
+    "output_dir": "outputs/rag_analysis_report_20250710_172221"
+}

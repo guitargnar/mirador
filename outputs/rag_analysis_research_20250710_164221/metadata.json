@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T21:05:34Z",
+    "analysis_type": "research",
+    "query": "What novel contributions does this framework make to multi-model orchestration?\n",
+    "document_path": "Comprehensive Technical Analysis_ Mirador AI Framework Deep-Dive.md\n",
+    "models": ["matthew_context_provider_v5_complete:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","universal_strategy_architect:latest\n"],
+    "output_dir": "outputs/rag_analysis_research_20250710_164221"
+}

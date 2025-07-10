@@ -38,18 +38,18 @@ OLD_MODELS=(
 )
 
 NEW_MODELS=(
-    "matthew_context_provider_v5_complete:latest"
-    "matthew_context_provider_v5_complete:latest"
-    "matthew_context_provider_v5_complete:latest"
-    "matthew_context_provider_v5_complete:latest"
-    "matthew_context_provider_v5_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
     "matthews_strategic_accelerator_v2:latest"
     "advocates_meeting_optimizer_v2:latest"
     "enhanced_agent_enforcer:latest"
     "enhanced_agent_enforcer:latest"
     "financial_planning_expert_v6:latest"
-    "matthew_context_provider_v5_complete:latest"
-    "matthew_context_provider_v5_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
+    "matthew_context_provider_v6_complete:latest"
     "creative_catalyst:latest"
     "llama3.2:3b"
     "speed_optimizer_phi:latest"
@@ -87,8 +87,8 @@ for file in $CHAIN_SCRIPTS; do
         done
         
         # Special case: Update matthew_context_provider_v3 without :latest suffix
-        sed -i '' "s|matthew_context_provider_v3\"|matthew_context_provider_v5_complete:latest\"|g" "$temp_file"
-        sed -i '' "s|matthew_context_provider_v3 |matthew_context_provider_v5_complete:latest |g" "$temp_file"
+        sed -i '' "s|matthew_context_provider_v3\"|matthew_context_provider_v6_complete:latest\"|g" "$temp_file"
+        sed -i '' "s|matthew_context_provider_v3 |matthew_context_provider_v6_complete:latest |g" "$temp_file"
         
         # Move temp file to original
         mv "$temp_file" "$file"
