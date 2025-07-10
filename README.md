@@ -2,6 +2,8 @@
 
 <div align="center">
   
+  ![Mirador Banner](assets/images/mirador_banner.png)
+  
   **Your Personal AI Council - Local, Private, Powerful**
   
   [![Models](https://img.shields.io/badge/Models-69-blue.svg)](https://github.com/guitargnar/mirador)
@@ -16,6 +18,10 @@
 </div>
 
 ---
+
+<div align="center">
+  <img src="assets/images/mirador_logo.png" alt="Mirador Logo" width="200">
+</div>
 
 ## ✨ What is Mirador?
 
@@ -123,16 +129,11 @@ cd mirador
 
 ## 📊 Architecture
 
-```mermaid
-graph LR
-    A[User Query] --> B[Smart Router]
-    B --> C[Chain Selection]
-    C --> D[Model Pipeline]
-    D --> E[Context Accumulation]
-    E --> F[Validated Output]
-    F --> G[Feedback Loop]
-    G --> B
-```
+![Architecture Diagram](assets/diagrams/architecture.png)
+
+### How Mirador Works
+
+![Flow Diagram](assets/diagrams/flow_diagram.png)
 
 ### Model Diversity
 
