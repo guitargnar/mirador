@@ -1,0 +1,6 @@
+- Identify the primary objective of your quick decision (e.g., selecting a supplier)
+    - Evaluate potential options based on key criteria such as price, quality, and reliability
+        - Prioritize these factors according to their importance for your specific situation
+            - Choose the option that best aligns with priorities while meeting essential requirements
+                - If needed, conduct a brief due diligence or quick assessment of shortlisted options (if applicable)
+                    - Make an informed decision promptly and communicate it clearly to relevant stakeholders

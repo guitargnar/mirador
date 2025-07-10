@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-07-09T21:58:50Z",
+    "chain_type": "rapid_decision",
+    "format": "detailed",
+    "models": ["speed_optimizer_phi:latest","matthew_context_provider_v3:latest","action_crystallizer:latest\n"],
+    "prompt": "Quick decision query\n"
+}

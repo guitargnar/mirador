@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-09T23:37:10Z",
+    "analysis_type": "document",
+    "query": "What are the key components of an effective AI strategy?\n",
+    "document_path": "null\n",
+    "models": ["matthew_context_provider_v3:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","practical_implementer:latest\n"],
+    "output_dir": "outputs/rag_analysis_document_20250709_193544"
+}

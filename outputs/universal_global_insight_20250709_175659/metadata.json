@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-07-09T21:57:45Z",
+    "chain_type": "global_insight",
+    "format": "detailed",
+    "models": ["matthew_context_provider_v3:latest","multilingual_assistant_qwen:latest","engagement_optimizer:latest","action_crystallizer:latest\n"],
+    "prompt": "Multilingual query\n"
+}

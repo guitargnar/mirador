@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-07-09T21:55:23Z",
+    "chain_type": "deep_analysis",
+    "format": "detailed",
+    "models": ["matthew_context_provider_v5_complete:latest","analytical_expert_gemma:latest","universal_strategy_architect:latest","practical_implementer:latest\n"],
+    "prompt": "Complex analysis query\n"
+}

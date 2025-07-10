@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T03:09:50Z",
+    "analysis_type": "research",
+    "query": "What are the main contributions and limitations of this research?\n",
+    "document_path": "null\n",
+    "models": ["matthew_context_provider_v3:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","universal_strategy_architect:latest\n"],
+    "output_dir": "outputs/rag_analysis_research_20250709_230157"
+}

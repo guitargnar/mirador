@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-09T23:49:08Z",
+    "analysis_type": "code",
+    "query": "Explain the architecture and identify potential improvements\n",
+    "document_path": "/tmp/sample_code.py\n",
+    "models": ["matthew_context_provider_v3:latest","command_r_code_analyst:latest","master_coder:latest","solution_architect:latest\n"],
+    "output_dir": "outputs/rag_analysis_code_20250709_193824"
+}
