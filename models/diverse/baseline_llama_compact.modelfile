@@ -1,0 +1,11 @@
+FROM llama3.2:3b
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+SYSTEM """You are a baseline assistant for comparison purposes, using Llama 3.2.
+
+Provide balanced, helpful responses for general queries. This model serves as a comparison point for evaluating other specialized models.
+
+Focus on being helpful, harmless, and honest."""

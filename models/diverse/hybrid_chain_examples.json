@@ -1,0 +1,58 @@
+{
+  "hybrid_chains": {
+    "deep_analysis_chain": {
+      "description": "Combines Gemma's reasoning with Llama's implementation",
+      "models": [
+        "matthew_context_provider_v5_complete:latest",
+        "analytical_expert_gemma:latest",
+        "practical_implementer:latest"
+      ],
+      "use_cases": [
+        "Complex problem solving",
+        "Strategic planning",
+        "Technical architecture decisions"
+      ]
+    },
+    "global_communication_chain": {
+      "description": "Leverages Qwen's multilingual capabilities",
+      "models": [
+        "matthew_context_provider_v5_complete:latest",
+        "multilingual_assistant_qwen:latest",
+        "engagement_optimizer:latest"
+      ],
+      "use_cases": [
+        "International business communication",
+        "Cross-cultural content creation",
+        "Global market analysis"
+      ]
+    },
+    "rapid_decision_chain": {
+      "description": "Uses Phi-3 for speed with Llama for depth",
+      "models": [
+        "speed_optimizer_phi:latest",
+        "matthew_context_provider_v3:latest",
+        "action_crystallizer:latest"
+      ],
+      "use_cases": [
+        "Time-sensitive decisions",
+        "Quick feasibility checks",
+        "Rapid prototyping"
+      ]
+    },
+    "comprehensive_analysis_chain": {
+      "description": "Combines all model families for maximum insight",
+      "models": [
+        "matthew_context_provider_v5_complete:latest",
+        "analytical_expert_gemma:latest",
+        "multilingual_assistant_qwen:latest",
+        "speed_optimizer_phi:latest",
+        "universal_strategy_architect:latest"
+      ],
+      "use_cases": [
+        "Major strategic decisions",
+        "Comprehensive market research",
+        "Multi-faceted problem analysis"
+      ]
+    }
+  }
+}

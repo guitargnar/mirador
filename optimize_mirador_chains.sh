@@ -88,7 +88,7 @@ case "$CHAIN_TYPE" in
     "technical_mastery")
         # Use specialized code models
         MODELS=(
-            "matthew_context_provider_v3:latest"  # Lighter for speed
+            "matthew_context_provider_v5_complete:latest"  # Lighter for speed
             "master_coder:latest"
             "code_reviewer:latest"  # DeepSeek-based
             "solution_architect:latest"
@@ -117,7 +117,7 @@ case "$CHAIN_TYPE" in
     "global_insight")
         # NEW: Qwen-powered multilingual
         MODELS=(
-            "matthew_context_provider_v3:latest"
+            "matthew_context_provider_v5_complete:latest"
             "multilingual_assistant_qwen:latest"
             "engagement_optimizer:latest"
             "action_crystallizer:latest"
@@ -128,7 +128,7 @@ case "$CHAIN_TYPE" in
         # NEW: Phi-powered fast decisions
         MODELS=(
             "speed_optimizer_phi:latest"
-            "matthew_context_provider_v3:latest"
+            "matthew_context_provider_v5_complete:latest"
             "action_crystallizer:latest"
         )
         ;;
