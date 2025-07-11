@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-07-11T14:03:06Z",
+    "chain_type": "life_optimization",
+    "format": "quick",
+    "models": ["matthew_context_provider_v6_complete:latest","health_wellness_optimizer:latest","productivity_optimizer:latest","action_crystallizer:latest\n"],
+    "prompt": "Plan my ideal work-life balance routine\n"
+}

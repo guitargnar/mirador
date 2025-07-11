@@ -1,462 +1,378 @@
-<div align="center">
-  <img src="assets/mirador-logo.svg" alt="Mirador Logo" width="200">
-  
-  # Mirador AI Orchestration Platform
-  
-  *From personal AI assistant to production-ready API platform - orchestrating 80+ specialized models for enhanced intelligence*
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![API Version](https://img.shields.io/badge/API-v5.0-00ff88.svg)](https://github.com/guitargnar/mirador)
-  [![Built with Ollama](https://img.shields.io/badge/Built%20with-Ollama-blue.svg)](https://ollama.ai)
-  [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg)](https://fastapi.tiangolo.com)
-  [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com)
-  [![macOS](https://img.shields.io/badge/Platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
-</div>
+# Mirador AI Framework
 
----
+[![Version](https://img.shields.io/badge/version-3.0-blue.svg)](https://github.com/guitargnar/mirador)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](./tests)
+[![Built with Ollama](https://img.shields.io/badge/Built%20with-Ollama-orange.svg)](https://ollama.ai)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
 
-## 🚀 The Evolution Story
+> **Mirador**: *A Spanish term meaning "lookout" or "viewpoint" - a place that offers expansive views and new perspectives*
 
-What started as a personal productivity tool has evolved into a **production-ready AI orchestration platform**. Mirador began when I needed a smarter way to leverage multiple AI models for complex tasks. Instead of jumping between different tools, I built a system that intelligently routes queries through chains of specialized models, each contributing their expertise to create comprehensive, nuanced responses.
+## 🌟 Overview
 
-Today, Mirador v5 transforms this personal assistant into a **scalable API platform** that teams and applications can integrate, bringing the power of orchestrated AI to any workflow.
+Mirador is a sophisticated AI orchestration framework that intelligently chains multiple specialized language models to deliver comprehensive, nuanced responses. By routing queries through carefully crafted sequences of models, each contributing their unique expertise, Mirador transforms simple prompts into rich, actionable insights.
 
-> **Note**: The original CLI tools (`mirador-smart-v2`, `mirador_universal_runner_v2.sh`) are still available and work alongside the new API. The API provides programmatic access, authentication, and scalability features for production use.
+### Core Philosophy
 
-### 🎯 What's New in v5
+Instead of relying on a single AI model, Mirador embraces the principle of specialized expertise. Like a well-coordinated team where each member brings unique skills, Mirador orchestrates 80+ specialized models to tackle complex queries with depth and precision.
 
-<div align="center">
-  <img src="assets/mirador-api-architecture.svg" alt="Mirador API Architecture" width="100%">
-</div>
+## 🚀 Key Features
 
-**From CLI to API**: The entire Mirador ecosystem is now accessible through a production-ready REST API, GraphQL interface, and real-time WebSocket connections.
-
-**Key Enhancements**:
-- 🔐 **Enterprise Authentication**: API key management with scope-based permissions
-- ⚡ **Real-time Streaming**: Server-Sent Events (SSE) and WebSocket support
-- 🚦 **Rate Limiting**: Configurable throttling to prevent abuse
-- 📊 **GraphQL Interface**: Flexible queries for complex data needs
-- 🐳 **Docker-Ready**: Full containerization with docker-compose
-- 📈 **Production Monitoring**: Prometheus metrics and health checks
-- 🧪 **Comprehensive Testing**: Integration tests and load testing suite
-- 📦 **Python SDK**: Native client library for easy integration
-- 🔄 **Webhook Transformers**: Integration with Slack, Discord, Teams
-- 💾 **Redis Caching**: Response caching for improved performance
-
-## 🌟 Core Features
-
-### Intelligent Multi-Model Orchestration
-- **🧠 80+ Specialized Models**: Each optimized for specific domains
-- **⚡ Smart Query Routing**: Automatically selects optimal model chains
-- **🔒 100% Local Processing**: All models run on your infrastructure
-- **🚀 Sub-Second Responses**: Optimized for Apple Silicon performance
-- **🎯 Domain Expertise**: Finance, health, music, career, creative, and more
-- **🔄 Progressive Enhancement**: Streaming responses with increasing depth
-- **📊 Context Accumulation**: Each model builds on previous insights
-
-### Production-Ready API
-- **REST & GraphQL**: Multiple API paradigms for different use cases
-- **Real-time Updates**: SSE and WebSocket for live interactions
-- **Horizontal Scaling**: Kubernetes-ready with health checks
-- **Comprehensive Docs**: OpenAPI/Swagger documentation
-- **Security First**: API keys, rate limiting, and scope management
-
-## 📋 Table of Contents
-
-- [Architecture](#-architecture)
-- [Quick Start](#-quick-start)
-- [API Documentation](#-api-documentation)
-- [Installation](#-installation)
-- [Usage Examples](#-usage-examples)
-- [Model Chains](#-model-chains)
-- [Development](#-development)
-- [Performance](#-performance)
-- [Contributing](#-contributing)
+- **🧠 80+ Specialized Models**: Each optimized for specific domains (finance, health, creativity, strategy, etc.)
+- **⚡ Smart Query Routing**: Automatically selects optimal model chains based on query analysis
+- **🔒 100% Local Processing**: All models run locally via Ollama - no external API dependencies
+- **🎯 Context Accumulation**: Each model builds upon insights from previous models in the chain
+- **📊 Multiple Output Formats**: Quick summaries, detailed analysis, or export-ready documents
+- **🔄 Feedback Learning**: Rate outputs to improve future responses
+- **💾 Memory System**: SQLite-based conversation history for contextual awareness
+- **🌐 Diverse Base LLMs**: Leverages Llama 3.2, Gemma 2, Qwen 2.5, Phi-3, Command-R, and more
 
 ## 🏗️ Architecture
 
-### System Overview
-
 ```mermaid
 graph TB
-    subgraph "Client Layer"
-        A1[Web Apps] 
-        A2[Mobile Apps]
-        A3[Python SDK]
-        A4[CLI Tools]
-        A5[Webhooks]
+    subgraph "Entry Points"
+        A[User Query]
+        B[mirador-smart-v2]
+        C[Universal Runner]
+        D[mirador-ez]
     end
     
-    subgraph "API Gateway"
-        B1[FastAPI Server]
-        B2[Authentication]
-        B3[Rate Limiting]
-        B4[Load Balancer]
+    subgraph "Smart Routing"
+        E[Query Analysis]
+        F[Chain Selection]
+        G[Model Pipeline]
     end
     
-    subgraph "Communication Protocols"
-        C1[REST API v5]
-        C2[GraphQL]
-        C3[WebSocket]
-        C4[SSE Streaming]
+    subgraph "Model Orchestration"
+        H[Context Provider]
+        I[Domain Expert]
+        J[Strategy Architect]
+        K[Implementation Guide]
     end
     
-    subgraph "Orchestration Engine"
-        D1[Smart Router]
-        D2[Chain Manager]
-        D3[Context Engine]
-        D4[Model Registry]
+    subgraph "Output Management"
+        L[Constraint Validation]
+        M[Format Selection]
+        N[Session Storage]
     end
     
-    subgraph "Model Fleet"
-        E1[Context Providers]
-        E2[Domain Experts]
-        E3[Strategy Models]
-        E4[Creative Models]
-        E5[Implementation Models]
+    subgraph "Support Systems"
+        O[Context Cache]
+        P[Feedback Collection]
+        Q[Memory Database]
     end
     
-    subgraph "Infrastructure"
-        F1[Redis Cache]
-        F2[PostgreSQL]
-        F3[Prometheus]
-        F4[Docker/K8s]
-    end
+    A --> B & C & D
+    B --> E --> F
+    C --> F
+    F --> G --> H
+    H --> I --> J --> K
+    K --> L --> M --> N
     
-    A1 & A2 & A3 & A4 & A5 --> B1
-    B1 --> C1 & C2 & C3 & C4
-    C1 & C2 & C3 & C4 --> D1
-    D1 --> D2 --> D3
-    D3 --> E1 & E2 & E3 & E4 & E5
-    D1 & D2 --> F1
-    B2 --> F2
-    B1 & D1 --> F3
+    G <--> O
+    N --> P --> Q
+    Q --> H
 ```
 
-### Model Orchestration Flow
+### Model Chaining Pattern
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant API
-    participant Router
-    participant Models
-    participant Cache
-    
-    Client->>API: POST /api/v5/chains/execute
-    API->>Router: Analyze query intent
-    Router->>Cache: Check for cached response
-    
-    alt Cache hit
-        Cache-->>Client: Return cached result
-    else Cache miss
-        Router->>Models: Execute model chain
-        Models->>Models: Context accumulation
-        Models-->>Router: Progressive responses
-        Router->>Cache: Store result
-        Router-->>Client: Stream responses (SSE)
-    end
-```
+Each chain follows a progressive enhancement pattern:
+
+1. **Context Provider**: Establishes personal/professional background
+2. **Domain Expert**: Applies specialized knowledge to the query
+3. **Strategy Model**: Develops comprehensive approaches
+4. **Implementation Model**: Translates strategies into actionable steps
 
 ## 🚀 Quick Start
 
-### Option 1: Using the API (New in v5)
+### Prerequisites
 
-#### Using Docker (Recommended)
+- macOS with Apple Silicon (M1/M2/M3) or Intel
+- [Ollama](https://ollama.ai) installed
+- Python 3.8+
+- 16GB+ RAM (32GB recommended for larger models)
+- 100GB+ free storage for models
+
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/guitargnar/mirador.git
 cd mirador
 
-# Start all services
-docker-compose up -d
-
-# Check health
-curl http://localhost:8000/api/v5/health
-
-# Create an API key (first, get admin key from .env)
-export ADMIN_KEY=$(grep ADMIN_API_KEY .env | cut -d '=' -f2)
-curl -X POST http://localhost:8000/api/v5/auth/api-keys \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: $ADMIN_KEY" \
-  -d '{"name": "My App", "scopes": ["chains:execute", "models:read"]}'
-```
-
-#### Using Python SDK
-
-```python
-from mirador import MiradorClient
-
-# Initialize client
-client = MiradorClient(
-    base_url="http://localhost:8000",
-    api_key="your-api-key"
-)
-
-# Execute a chain
-response = client.chains.execute(
-    prompt="Help me plan my day for maximum productivity",
-    chain_type="life_optimization",
-    stream=True
-)
-
-# Stream responses
-for chunk in response:
-    print(chunk.content, end="")
-```
-
-#### Direct API Usage
-
-```bash
-# Execute a chain with streaming
-curl -N -X POST http://localhost:8000/api/v5/chains/execute \
-  -H "Authorization: Bearer your-api-key" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Create a financial plan for the next quarter",
-    "chain_type": "financial_planning",
-    "stream": true
-  }'
-
-# GraphQL query
-curl -X POST http://localhost:8000/api/v5/graphql \
-  -H "Authorization: Bearer your-api-key" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "{ models { id name description specialties } }"
-  }'
-```
-
-### Option 2: Using the CLI (Original Tool)
-
-```bash
-# Basic smart routing
-./mirador-smart-v2 "Help me plan a productive day"
-
-# Run specific chain type
-./mirador_universal_runner_v2.sh life_optimization "I need to balance work and personal life"
-
-# Quick summary format
-./mirador_universal_runner_v2.sh business_acceleration "Analyze market opportunities" summary
-```
-
-## 📚 API Documentation
-
-### Base URL
-```
-http://localhost:8000/api/v5
-```
-
-### Authentication
-All endpoints require authentication via API key:
-```
-Authorization: Bearer your-api-key
-```
-
-### Core Endpoints
-
-#### Chains API
-- `POST /chains/execute` - Execute a model chain
-- `GET /chains` - List available chains
-- `GET /chains/{chain_id}` - Get chain details
-
-#### Models API
-- `GET /models` - List all models
-- `POST /models/{model_id}/generate` - Direct model inference
-- `GET /models/{model_id}` - Get model details
-
-#### Streaming API
-- `POST /chains/execute/stream` - SSE streaming execution
-- WebSocket: `ws://localhost:8000/api/v5/ws` - Real-time bidirectional
-
-#### GraphQL
-- `POST /graphql` - GraphQL endpoint
-- `GET /graphql` - GraphQL playground
-
-### Example: Financial Planning Chain
-
-```bash
-curl -X POST http://localhost:8000/api/v5/chains/execute \
-  -H "Authorization: Bearer your-api-key" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "I have $50k to invest. Help me create a diversified portfolio.",
-    "chain_type": "financial_planning",
-    "parameters": {
-      "risk_tolerance": "moderate",
-      "time_horizon": "10 years"
-    }
-  }'
-```
-
-Response:
-```json
-{
-  "id": "chain_run_12345",
-  "status": "completed",
-  "chain_type": "financial_planning",
-  "models_used": [
-    "matthew_context_provider",
-    "universal_financial_advisor",
-    "practical_implementer"
-  ],
-  "result": {
-    "summary": "Here's a diversified portfolio strategy...",
-    "detailed_plan": "...",
-    "action_items": ["..."],
-    "risk_analysis": "..."
-  },
-  "metadata": {
-    "execution_time": 2.3,
-    "tokens_used": 4521
-  }
-}
-```
-
-## 🔧 Installation
-
-### Prerequisites
-- Docker & Docker Compose
-- 16GB+ RAM (32GB+ recommended for API)
-- 100GB storage for models
-- Ollama installed locally (required for model management)
-- macOS with Apple Silicon (M1/M2/M3) for optimal performance
-
-### Full Installation
-
-```bash
-# Clone repository
-git clone https://github.com/guitargnar/mirador.git
-cd mirador
-
 # Install Ollama (if not already installed)
-# macOS: brew install ollama
-# Others: https://ollama.ai/download
+brew install ollama
 
 # Start Ollama service
 ollama serve &
 
-# Copy environment template
-cp .env.example .env
+# Install Python dependencies
+pip3 install -r requirements.txt
 
-# Edit .env with your configuration (set ADMIN_API_KEY)
-vim .env
+# Install diverse base LLMs (takes 30-60 minutes)
+./install_diverse_models.sh
 
-# Pull and create models (first time only - takes 30-60 minutes)
-./scripts/install_diverse_models.sh
-./scripts/create_consolidated_models.sh
+# Create specialized models
+./create_diverse_models.sh
 
-# Start API services
-docker-compose up -d
+# Create consolidated models (Phase 2)
+./scripts/consolidate_models_phase2.sh
 
-# For local development without Docker:
-# pip install -r requirements.txt
-# uvicorn src.api.main:app --reload --host 0.0.0.0 --port 8000
+# Run initial setup
+./setup_mirador.sh
 
-# Run tests
-docker-compose exec mirador-api pytest tests/
-
-# View logs
-docker-compose logs -f mirador-api
+# Test the installation
+./tests/run_tests.sh
 ```
 
-### Production Deployment
+## 📋 Usage Examples
+
+### Basic Usage with Smart Routing
 
 ```bash
-# Build production image
-docker build -t mirador-api:latest .
+# Let Mirador analyze and route your query intelligently
+./mirador-smart-v2 "Help me create a financial plan for the next quarter"
 
-# Deploy to Kubernetes
-kubectl apply -f k8s/
-
-# Or use Helm
-helm install mirador ./helm/mirador
+# Simple interface with custom models
+./mirador-ez chain "Analyze my career options" model1 model2 model3
 ```
 
-## 📊 Performance
-
-### Benchmarks
-- **Response Time**: 95th percentile < 2s
-- **Throughput**: 1000+ requests/second
-- **Concurrent Users**: 500+ with streaming
-- **Model Loading**: < 500ms cold start
-- **Cache Hit Rate**: 85%+ for common queries
-
-### Load Testing
+### Universal Runner with Chain Types
 
 ```bash
-cd tests/load
-./run_load_tests.sh -k YOUR_ADMIN_KEY -u 100 -r 10 -t 5m
+# Life optimization chain
+./mirador_universal_runner_v2.sh life_optimization "I need better work-life balance" detailed
+
+# Business acceleration chain
+./mirador_universal_runner_v3_optimized.sh business_acceleration "Expand my consulting business" summary
+
+# Creative breakthrough chain
+./bin/mirador_universal_runner_v3_optimized.sh creative_breakthrough "Design a new product concept" export
 ```
 
-## 🛠️ Development
+### Available Chain Types
 
-### Running Locally
+- **life_optimization**: Personal productivity and life balance
+- **business_acceleration**: Business strategy and growth
+- **creative_breakthrough**: Creative projects and innovation
+- **relationship_harmony**: Communication and relationships
+- **technical_mastery**: Technical problem-solving
+- **strategic_synthesis**: High-level strategic planning
+- **deep_analysis**: In-depth analytical tasks
+- **global_insight**: Multicultural and global perspectives
+- **rapid_decision**: Quick decision-making support
+
+### Output Formats
+
+- **quick**: Bullet points and key takeaways only
+- **summary**: Concise overview (default)
+- **detailed**: Comprehensive analysis with context
+- **export**: Full output saved to file
+
+### Advanced Features
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# Analyze documents with RAG chains
+./test_rag_chain.sh document "path/to/document.pdf" "Summarize key findings"
 
-# Start development server
-uvicorn src.api.main:app --reload --host 0.0.0.0 --port 8000
+# Test model performance
+python3 tests/test_performance.py
 
-# Run specific tests
-pytest tests/integration/test_api_endpoints.py -v
+# View usage statistics
+python3 context_manager.py stats
 
-# Format code
-black src/ tests/
-flake8 src/ tests/
+# Provide feedback on outputs
+./mirador_feedback.sh SESSION_ID 5 "Excellent strategic insights"
+
+# Run comprehensive system health check
+./daily_check_enhanced.sh
 ```
 
-### Adding New Model Chains
+## 🎯 Model Descriptions
 
-1. Define the chain in `src/api/chains/definitions.py`
-2. Add routing logic in `src/api/services/routing.py`
-3. Create tests in `tests/integration/`
-4. Update documentation
+### Core Context Providers
+- **matthew_context_provider_v6**: Personal and professional context grounding
+- **universal_context_provider**: General-purpose context establishment
 
-## 🌐 Deployment Options
+### Domain Specialists
+- **financial_planning_expert**: Investment and financial strategies
+- **health_wellness_optimizer**: Health and wellness guidance
+- **guitar_expert**: Music theory and guitar techniques
+- **louisville_expert**: Local Louisville knowledge and insights
+- **ai_leadership_strategist**: AI and technology leadership
 
-### Cloud Providers
-- **AWS**: ECS/EKS deployment guides available
-- **GCP**: Cloud Run / GKE templates included
-- **Azure**: AKS deployment scripts provided
+### Strategy Models
+- **universal_strategy_architect**: High-level strategic planning
+- **business_strategist_fast**: Rapid business strategy development
+- **creative_catalyst**: Innovation and creative solutions
 
-### Monitoring
-- Prometheus metrics at `/metrics`
-- Grafana dashboards in `monitoring/dashboards/`
-- Custom alerts for model performance
+### Implementation Models
+- **practical_implementer**: Actionable step-by-step plans
+- **action_crystallizer**: Clear, prioritized action items
+- **decision_simplifier**: Complex decision clarification
+
+### Base LLM Diversity
+- **Llama 3.2**: Primary model for most contexts (~70%)
+- **Gemma 2 27B**: Google's model for analytical reasoning
+- **Qwen 2.5 32B**: Alibaba's multilingual model
+- **Phi-3 Medium**: Microsoft's ultra-fast model
+- **Command-R 35B**: Cohere's RAG-optimized model
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```bash
+# Ollama settings
+OLLAMA_HOST=http://localhost:11434
+OLLAMA_TIMEOUT=300
+
+# Model parameters
+DEFAULT_TEMPERATURE=0.7
+DEFAULT_MAX_TOKENS=2048
+DEFAULT_CONTEXT_WINDOW=8192
+
+# Performance settings
+CACHE_ENABLED=true
+CACHE_TTL=3600
+MAX_CONCURRENT_MODELS=3
+```
+
+### Model Configuration
+
+Model behavior can be customized by editing the modelfiles in `/models/`:
+
+```dockerfile
+# Example: Adjusting temperature for creative models
+PARAMETER temperature 0.9
+PARAMETER top_p 0.95
+PARAMETER num_predict 2048
+```
+
+## 🧪 Testing
+
+Mirador includes a comprehensive test suite:
+
+```bash
+# Interactive test menu
+./tests/run_tests.sh
+
+# Quick validation (5 min)
+./tests/run_tests.sh quick
+
+# Standard test suite (15 min)
+./tests/run_tests.sh standard
+
+# Comprehensive tests (30+ min)
+./tests/run_tests.sh comprehensive
+
+# Test specific functionality
+python3 tests/test_chains.py
+python3 tests/test_models.py
+python3 tests/test_performance.py
+
+# Real-world scenario testing
+./tests/test_real_world_scenarios.sh
+```
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+
+**Models not responding:**
+```bash
+# Check Ollama service
+ollama list
+ollama serve
+
+# Verify model installation
+ollama run matthew_context_provider_v6
+
+# Check system resources
+./monitor_mirador_performance.sh
+```
+
+**Slow performance:**
+```bash
+# Optimize model loading
+./optimize_model_performance.sh
+
+# Clear cache
+rm -rf .cache/
+
+# Reduce concurrent models
+export MAX_CONCURRENT_MODELS=2
+```
+
+**Memory issues:**
+```bash
+# Use smaller models
+./mirador_universal_runner_v2.sh life_optimization "query" quick
+
+# Monitor memory usage
+python3 tests/test_performance.py --memory
+```
+
+### Debug Mode
+
+Enable verbose logging:
+```bash
+export MIRADOR_DEBUG=true
+./mirador-smart-v2 "test query"
+```
 
 ## 🤝 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-### Priority Areas
-- Additional model chains
-- Performance optimizations
-- Client SDKs (JavaScript, Go, Rust)
-- UI/Dashboard development
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests (`./tests/run_tests.sh`)
+5. Commit with descriptive message
+6. Push to your fork
+7. Open a Pull Request
+
+### Adding New Models
+
+1. Create a modelfile in `/models/domain/`
+2. Build the model: `ollama create model_name -f modelfile`
+3. Add to appropriate chains in runner scripts
+4. Test thoroughly with sample queries
+5. Document in this README
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - Built on [Ollama](https://ollama.ai) for local model execution
-- Powered by [FastAPI](https://fastapi.tiangolo.com) for modern API development
-- Inspired by the Unix philosophy of specialized tools working together
+- Inspired by Unix philosophy of specialized tools working together
+- Community contributors who have helped shape Mirador
+
+## 📚 Additional Resources
+
+- [Architecture Documentation](docs/ARCHITECTURE.md)
+- [Model Documentation](docs/MODELS.md)
+- [API Reference](docs/api/)
+- [Quick Reference Guide](docs/QUICK_REFERENCE.md)
+- [Ollama Model Guide](docs/ollama/MODEL_ARCHITECTURE.md)
 
 ---
 
 <div align="center">
-  <h3>🔮 Mirador v5: Your AI Orchestration Platform</h3>
-  <i>From personal assistant to production platform - expanding perspectives through orchestrated intelligence</i>
+  <h3>🔮 Mirador: Expanding Perspectives Through Orchestrated Intelligence</h3>
+  <p>Transform your queries into comprehensive insights with the power of 80+ specialized AI models working in harmony.</p>
   
-  <br><br>
-  
-  <a href="https://github.com/guitargnar/mirador">API Docs</a> • 
-  <a href="https://github.com/guitargnar/mirador/issues">Issues</a> • 
-  <a href="https://github.com/guitargnar/mirador/discussions">Discussions</a>
+  <p>
+    <a href="https://github.com/guitargnar/mirador/issues">Report Bug</a> •
+    <a href="https://github.com/guitargnar/mirador/discussions">Discussions</a> •
+    <a href="docs/guides/">Guides</a>
+  </p>
 </div>
