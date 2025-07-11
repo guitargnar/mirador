@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-07-10T22:37:00.186338",
+  "platform": "claude_code_local",
+  "results": {
+    "math_simple": {
+      "time": 0.007870912551879883,
+      "code": "sum(range(1000000))"
+    },
+    "math_complex": {
+      "time": 0.04527091979980469,
+      "code": "sum(i**2 for i in range(1000000))"
+    },
+    "list_comprehension": {
+      "time": 0.02877211570739746,
+      "code": "[i*2 for i in range(1000000)]"
+    },
+    "string_ops": {
+      "time": 0.006120920181274414,
+      "code": "\"test\" * 1000000"
+    },
+    "dict_creation": {
+      "time": 0.005361080169677734,
+      "code": "{i: i**2 for i in range(100000)}"
+    }
+  }
+}
