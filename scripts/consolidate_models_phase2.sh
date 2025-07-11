@@ -1,6 +1,7 @@
 #!/bin/bash
 # Model Consolidation Phase 2
 # Reduces 71+ models to ~30 core models while maintaining capabilities
+# Compatible with bash 3.2 (macOS default)
 
 set -e  # Exit on error
 
@@ -79,23 +80,70 @@ remove_old_model() {
 echo -e "${BLUE}Step 1: Backup existing models${NC}"
 echo "========================================"
 
-# List of models to consolidate
-declare -A consolidation_groups=(
-    ["financial"]="financial_planning_expert_v8 personal_finance_navigator budget_optimizer financial_advisor money_mindset_coach"
-    ["health"]="health_wellness_advisor fitness_coach wellness_optimizer health_navigator"
-    ["location"]="louisville_expert louisville_local_guide kentucky_insider louisville_navigator"
-    ["music"]="music_advisor guitar_mentor performance_coach music_strategist"
-    ["career"]="career_strategist professional_development_coach career_navigator"
-    ["corporate"]="corporate_navigator corporate_strategy risk_management_advisor"
-    ["creative"]="creative_catalyst creative_breakthrough idea_generator innovation_spark"
-    ["relationship"]="relationship_harmony family_advisor social_navigator"
-)
+# Define consolidation groups (bash 3.2 compatible)
+# Financial models
+financial_models="financial_planning_expert_v8 personal_finance_navigator budget_optimizer financial_advisor money_mindset_coach"
 
-# Backup all models that will be consolidated
-for group in "${!consolidation_groups[@]}"; do
-    for model in ${consolidation_groups[$group]}; do
-        backup_model "$model"
-    done
+# Health models
+health_models="health_wellness_advisor fitness_coach wellness_optimizer health_navigator"
+
+# Location models
+location_models="louisville_expert louisville_local_guide kentucky_insider louisville_navigator"
+
+# Music models
+music_models="music_advisor guitar_mentor performance_coach music_strategist"
+
+# Career models
+career_models="career_strategist professional_development_coach career_navigator"
+
+# Corporate models
+corporate_models="corporate_navigator corporate_strategy risk_management_advisor"
+
+# Creative models
+creative_models="creative_catalyst creative_breakthrough idea_generator innovation_spark"
+
+# Relationship models
+relationship_models="relationship_harmony family_advisor social_navigator"
+
+# Backup all models
+echo "Backing up financial models..."
+for model in $financial_models; do
+    backup_model "$model"
+done
+
+echo "Backing up health models..."
+for model in $health_models; do
+    backup_model "$model"
+done
+
+echo "Backing up location models..."
+for model in $location_models; do
+    backup_model "$model"
+done
+
+echo "Backing up music models..."
+for model in $music_models; do
+    backup_model "$model"
+done
+
+echo "Backing up career models..."
+for model in $career_models; do
+    backup_model "$model"
+done
+
+echo "Backing up corporate models..."
+for model in $corporate_models; do
+    backup_model "$model"
+done
+
+echo "Backing up creative models..."
+for model in $creative_models; do
+    backup_model "$model"
+done
+
+echo "Backing up relationship models..."
+for model in $relationship_models; do
+    backup_model "$model"
 done
 
 echo ""
@@ -106,7 +154,7 @@ echo "========================================"
 create_consolidated_model \
     "universal_financial_advisor" \
     "llama3.2:latest" \
-    "${consolidation_groups[financial]}" \
+    "$financial_models" \
     "You are a comprehensive financial advisor with expertise in personal finance, budgeting, investment strategies, and money mindset. You understand Matthew's financial constraints (single parent, Risk Management Professional II at Humana, Louisville KY, supporting three teens). Provide practical, actionable financial guidance that considers both immediate needs and long-term goals. Be empathetic about financial stress while offering concrete solutions." \
     "PARAMETER num_ctx 4096"
 
@@ -114,7 +162,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_health_wellness" \
     "gemma2:9b" \
-    "${consolidation_groups[health]}" \
+    "$health_models" \
     "You are a holistic health and wellness guide specializing in fitness, nutrition, mental health, and lifestyle optimization. You understand the challenges of maintaining health as a single parent with a demanding corporate job. Provide evidence-based advice that's practical for someone with limited time and energy. Consider both physical and mental wellness in your recommendations." \
     ""
 
@@ -122,7 +170,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_louisville_expert" \
     "llama3.2:latest" \
-    "${consolidation_groups[location]}" \
+    "$location_models" \
     "You are the ultimate Louisville, Kentucky expert with deep knowledge of local resources, culture, opportunities, and hidden gems. You understand the city from a parent's perspective - schools (JCPS), family activities, local services, and professional networking. Provide insider knowledge that helps navigate Louisville life effectively." \
     "PARAMETER temperature 0.5"
 
@@ -130,7 +178,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_music_mentor" \
     "llama3.2:latest" \
-    "${consolidation_groups[music]}" \
+    "$music_models" \
     "You are a comprehensive music mentor specializing in guitar performance, music theory, practice strategies, and performance psychology. You understand Matthew's 40+ years of guitar experience and his connection to music as emotional outlet. Provide advanced guidance for both technical development and artistic expression. Balance serious musicianship with the joy of playing." \
     ""
 
@@ -138,7 +186,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_career_strategist" \
     "qwen2.5:14b" \
-    "${consolidation_groups[career]}" \
+    "$career_models" \
     "You are a strategic career advisor specializing in corporate advancement, AI leadership positioning, and professional development. You understand Matthew's trajectory from musician to tech professional, current role as Risk Management Professional II at Humana, and vision to become VP of AI Innovation. Provide actionable strategies for career advancement while maintaining work-life balance." \
     ""
 
@@ -146,7 +194,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_corporate_navigator" \
     "llama3.2:latest" \
-    "${consolidation_groups[corporate]}" \
+    "$corporate_models" \
     "You are an expert in corporate strategy, organizational dynamics, and political navigation. You specialize in helping innovators succeed within large healthcare organizations like Humana. Understand how to position AI initiatives, build coalitions, demonstrate ROI, and navigate corporate culture. Provide Machiavellian insights when needed while maintaining ethical standards." \
     "PARAMETER temperature 0.6"
 
@@ -154,7 +202,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_creative_catalyst" \
     "gemma2:9b" \
-    "${consolidation_groups[creative]}" \
+    "$creative_models" \
     "You are a creative catalyst specializing in breakthrough thinking, innovation, and creative problem-solving. You help transform conventional approaches into innovative solutions. Whether it's technical challenges, life decisions, or artistic expression, you provide unexpected perspectives and creative frameworks. Push beyond obvious solutions to find transformative approaches." \
     "PARAMETER temperature 0.9"
 
@@ -162,7 +210,7 @@ create_consolidated_model \
 create_consolidated_model \
     "universal_relationship_harmony" \
     "llama3.2:latest" \
-    "${consolidation_groups[relationship]}" \
+    "$relationship_models" \
     "You are a relationship and family dynamics expert specializing in single parenting, teen development, and interpersonal navigation. You understand the complexities of raising three teenagers (16, 14, 14) while managing a demanding career. Provide compassionate, practical advice for family harmony, effective communication, and building strong relationships despite time constraints." \
     ""
 
@@ -197,10 +245,44 @@ echo "========================================"
 # Remove old models (optional - uncomment to execute)
 echo -e "${YELLOW}Ready to remove old models. Uncomment the removal section to proceed.${NC}"
 
-# for group in "${!consolidation_groups[@]}"; do
-#     for model in ${consolidation_groups[$group]}; do
-#         remove_old_model "$model"
-#     done
+# echo "Removing financial models..."
+# for model in $financial_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing health models..."
+# for model in $health_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing location models..."
+# for model in $location_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing music models..."
+# for model in $music_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing career models..."
+# for model in $career_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing corporate models..."
+# for model in $corporate_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing creative models..."
+# for model in $creative_models; do
+#     remove_old_model "$model"
+# done
+
+# echo "Removing relationship models..."
+# for model in $relationship_models; do
+#     remove_old_model "$model"
 # done
 
 echo ""
