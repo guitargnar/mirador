@@ -1,0 +1,368 @@
+# Mirador GraphQL Query Examples
+
+# ====================
+# QUERIES
+# ====================
+
+# List all available models
+query ListAllModels {
+  models {
+    name
+    description
+    type
+    version
+    capabilities
+    performance
+  }
+}
+
+# Get detailed information about a specific model
+query GetModelDetails($modelName: String!) {
+  model(name: $modelName) {
+    name
+    description
+    type
+    version
+    parameters
+    capabilities
+    performance
+    createdAt
+    updatedAt
+  }
+}
+
+# List all chain configurations
+query ListChainConfigs {
+  chains {
+    name
+    type
+    description
+    models
+    defaultOptions
+    supportedFormats
+  }
+}
+
+# Get user sessions with pagination
+query GetUserSessions($limit: Int = 20, $offset: Int = 0) {
+  sessions(limit: $limit, offset: $offset) {
+    id
+    name
+    createdAt
+    updatedAt
+    queryCount
+    metadata
+  }
+}
+
+# Get session history
+query GetSessionHistory($sessionId: ID!) {
+  sessionHistory(sessionId: $sessionId)
+}
+
+# Get all webhooks
+query GetWebhooks($activeOnly: Boolean = false) {
+  webhooks(activeOnly: $activeOnly) {
+    id
+    name
+    url
+    events
+    active
+    transformer
+    lastTriggered
+    triggerCount
+  }
+}
+
+# Get cache statistics
+query GetCacheStatistics {
+  cacheStats {
+    enabled
+    connected
+    memoryUsed
+    totalKeys
+    hitRate
+    namespaces
+  }
+}
+
+# Get API health status
+query GetHealthStatus {
+  health
+}
+
+# Complex query with multiple resources
+query GetDashboardData {
+  models {
+    name
+    type
+    version
+  }
+  chains {
+    name
+    type
+  }
+  sessions(limit: 5, offset: 0) {
+    id
+    name
+    createdAt
+    queryCount
+  }
+  cacheStats {
+    enabled
+    hitRate
+  }
+  health
+}
+
+# ====================
+# MUTATIONS
+# ====================
+
+# Execute a query with smart routing
+mutation ExecuteSmartQuery($prompt: String!, $format: OutputFormatEnum = DETAILED) {
+  executeQuery(input: {
+    prompt: $prompt
+    format: $format
+    useCache: true
+  }) {
+    response {
+      id
+      content
+      chainType
+      modelsUsed
+      executionTime
+      tokenCount
+      createdAt
+      cached
+    }
+  }
+}
+
+# Run a specific chain
+mutation RunSpecificChain(
+  $chainType: ChainTypeEnum!,
+  $prompt: String!,
+  $format: OutputFormatEnum = DETAILED
+) {
+  runChain(chainType: $chainType, input: {
+    prompt: $prompt
+    format: $format
+    useCache: true
+  }) {
+    response {
+      id
+      chainType
+      sessionId
+      results {
+        model
+        output
+        confidence
+        executionTime
+      }
+      summary
+      executionTime
+      tokensUsed
+      createdAt
+    }
+  }
+}
+
+# Test a specific model
+mutation TestModelPerformance($modelName: String!, $prompt: String!) {
+  testModel(modelName: $modelName, input: {
+    prompt: $prompt
+    useCache: false
+  }) {
+    output
+    executionTime
+    cached
+  }
+}
+
+# Create a new session
+mutation CreateNewSession($name: String, $metadata: JSON) {
+  createSession(input: {
+    name: $name
+    metadata: $metadata
+  }) {
+    session {
+      id
+      name
+      createdAt
+    }
+  }
+}
+
+# Create a webhook
+mutation CreateWebhook(
+  $name: String!,
+  $url: String!,
+  $events: [String]!
+) {
+  createWebhook(input: {
+    name: $name
+    url: $url
+    events: $events
+    active: true
+  }) {
+    webhook {
+      id
+      name
+      url
+      events
+      active
+      createdAt
+    }
+  }
+}
+
+# Update webhook configuration
+mutation UpdateWebhookConfig($id: ID!, $active: Boolean) {
+  updateWebhook(id: $id, input: {
+    active: $active
+  }) {
+    webhook {
+      id
+      active
+      updatedAt
+    }
+  }
+}
+
+# Delete a webhook
+mutation DeleteWebhook($id: ID!) {
+  deleteWebhook(id: $id) {
+    success
+  }
+}
+
+# Clear cache by namespace
+mutation ClearCacheNamespace($namespace: String!) {
+  clearCache(namespace: $namespace) {
+    cleared
+    message
+  }
+}
+
+# Clear cache by pattern
+mutation ClearCachePattern($pattern: String!) {
+  clearCache(pattern: $pattern) {
+    cleared
+    message
+  }
+}
+
+# Clear user cache
+mutation ClearUserCache($userId: String!) {
+  clearCache(userId: $userId) {
+    cleared
+    message
+  }
+}
+
+# ====================
+# SUBSCRIPTIONS
+# ====================
+
+# Stream query execution
+subscription StreamQueryExecution($query: String!) {
+  queryStream(query: $query) {
+    content
+    stage
+    model
+    confidence
+    timestamp
+    metadata
+  }
+}
+
+# Stream chain execution with specific type
+subscription StreamChainExecution(
+  $chainType: ChainTypeEnum!,
+  $prompt: String!,
+  $sessionId: String
+) {
+  chainStream(
+    chainType: $chainType,
+    prompt: $prompt,
+    sessionId: $sessionId
+  ) {
+    content
+    stage
+    model
+    confidence
+    timestamp
+    metadata
+  }
+}
+
+# ====================
+# FRAGMENTS
+# ====================
+
+# Reusable model fields
+fragment ModelBasicInfo on ModelType {
+  name
+  description
+  type
+  version
+}
+
+fragment ModelFullInfo on ModelType {
+  ...ModelBasicInfo
+  parameters
+  capabilities
+  performance
+  createdAt
+  updatedAt
+}
+
+# Reusable chain fields
+fragment ChainInfo on ChainConfigType {
+  name
+  type
+  description
+  models
+  supportedFormats
+}
+
+# Reusable session fields
+fragment SessionInfo on SessionType {
+  id
+  name
+  createdAt
+  updatedAt
+  queryCount
+  metadata
+}
+
+# ====================
+# EXAMPLE VARIABLES
+# ====================
+
+# For ExecuteSmartQuery
+# {
+#   "prompt": "What are the best practices for GraphQL API design?",
+#   "format": "DETAILED"
+# }
+
+# For RunSpecificChain
+# {
+#   "chainType": "TECHNICAL_MASTERY",
+#   "prompt": "Explain the benefits of microservices architecture",
+#   "format": "SUMMARY"
+# }
+
+# For TestModelPerformance
+# {
+#   "modelName": "matthew_context_provider_v6",
+#   "prompt": "Hello, how are you?"
+# }
+
+# For CreateWebhook
+# {
+#   "name": "Slack Notifications",
+#   "url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+#   "events": ["query.completed", "session.created", "error.occurred"]
+# }
