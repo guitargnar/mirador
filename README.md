@@ -1,6 +1,6 @@
 # Mirador AI Framework
 
-![Mirador AI Framework](assets/mirador-hero.svg)
+![Mirador AI Framework](assets/mirador-animated-hero.svg)
 
 [![Version](https://img.shields.io/badge/version-3.0-blue.svg)](https://github.com/guitargnar/mirador)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -20,6 +20,8 @@ Instead of relying on a single AI model, Mirador embraces the principle of speci
 
 ## 🚀 Key Features
 
+![Mirador Features](assets/mirador-feature-cards.svg)
+
 - **🧠 80+ Specialized Models**: Each optimized for specific domains (finance, health, creativity, strategy, etc.)
 - **⚡ Smart Query Routing**: Automatically selects optimal model chains based on query analysis
 - **🔒 100% Local Processing**: All models run locally via Ollama - no external API dependencies
@@ -28,6 +30,10 @@ Instead of relying on a single AI model, Mirador embraces the principle of speci
 - **🔄 Feedback Learning**: Rate outputs to improve future responses
 - **💾 Memory System**: SQLite-based conversation history for contextual awareness
 - **🌐 Diverse Base LLMs**: Leverages Llama 3.2, Gemma 2, Qwen 2.5, Phi-3, Command-R, and more
+
+## 🔄 How It Works
+
+![Mirador Workflow](assets/mirador-workflow.svg)
 
 ## 🏗️ Architecture
 
