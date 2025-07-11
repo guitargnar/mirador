@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T20:02:32Z",
+    "analysis_type": "research",
+    "query": "Analyze this Mirador output to understand: 1) How does the context accumulation work between models? 2) What patterns emerge in the model selection? 3) How does each model's contribution differ? 4) What \n  makes this multi-model approach more effective than a single model? Extract specific examples from the text.\n",
+    "document_path": "/Users/matthewscott/Projects/mirador/outputs/universal_strategic_synthesis_20250709_231711/full_analysis.md\n",
+    "models": ["matthew_context_provider_v5_complete:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","universal_strategy_architect:latest\n"],
+    "output_dir": "outputs/rag_analysis_research_20250710_154949"
+}

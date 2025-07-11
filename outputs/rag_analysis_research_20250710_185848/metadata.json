@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T23:10:33Z",
+    "analysis_type": "research",
+    "query": "Analyze the full set of RAG analysis reports from July 10th. Identify the meta-patterns in how the 'analytical_expert_gemma' and 'practical_implementer' models build upon, refine, or diverge from the initial 'command_r_rag_specialist' output. What is the core value added by each step in the chain?\n",
+    "document_path": "outputs/\n",
+    "models": ["matthew_context_provider_v5_complete:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","universal_strategy_architect:latest\n"],
+    "output_dir": "outputs/rag_analysis_research_20250710_185848"
+}

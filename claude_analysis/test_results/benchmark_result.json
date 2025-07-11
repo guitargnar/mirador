@@ -1,0 +1,9 @@
+{
+  "test_name": "sum_of_squares_1M",
+  "execution_time": 0.04567074775695801,
+  "result": 333332833333500000,
+  "operations": 1000000,
+  "ops_per_second": 21895853.453541245,
+  "timestamp": "2025-07-10T22:28:18.594683",
+  "platform": "local_python"
+}

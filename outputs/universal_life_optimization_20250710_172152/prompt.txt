@@ -1,0 +1,2 @@
+Review the hybrid synthesis at outputs/hybrid_synthesis_20250709_232604/hybrid_synthesis.md and create a personalized AI adoption strategy that balances the positive implications 
+  (efficiency, healthcare, safety) with mitigation strategies for the negative ones (job displacement, bias, loss of human touch)

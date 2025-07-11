@@ -60,8 +60,27 @@ run_practical_test() {
     echo -e "${BLUE}Running chain...${RESET}"
     START_TIME=$(date +%s)
     
-    OUTPUT=$(timeout 120 /Users/userscott/Projects/mirador/mirador_universal_runner.sh "$chain_type" "$prompt" 2>/dev/null)
+    # Create temp directory for this test
+    TEST_OUTPUT_DIR="/tmp/mirador_test_$$_$TOTAL_TESTS"
+    mkdir -p "$TEST_OUTPUT_DIR"
+    
+    # Run the chain and save outputs to temp dir
+    timeout 120 /Users/matthewscott/Projects/mirador/bin/mirador_universal_runner.sh "$chain_type" "$prompt" > "$TEST_OUTPUT_DIR/full_output.txt" 2>&1
     EXIT_CODE=$?
+    
+    # Extract the actual model outputs from the generated files
+    OUTPUT=""
+    if [ -d "outputs" ]; then
+        LATEST_DIR=$(ls -td outputs/universal_${chain_type}_* 2>/dev/null | head -1)
+        if [ -n "$LATEST_DIR" ] && [ -d "$LATEST_DIR" ]; then
+            # Concatenate all step outputs
+            for step_file in "$LATEST_DIR"/step*_output.txt; do
+                if [ -f "$step_file" ]; then
+                    OUTPUT="$OUTPUT$(cat "$step_file" 2>/dev/null) "
+                fi
+            done
+        fi
+    fi
     
     END_TIME=$(date +%s)
     DURATION=$((END_TIME - START_TIME))
@@ -97,6 +116,9 @@ run_practical_test() {
     fi
     
     echo "---" >> "$TEST_REPORT"
+    
+    # Clean up temp directory
+    rm -rf "$TEST_OUTPUT_DIR" 2>/dev/null
 }
 
 # 1. Single Father Work-Life Balance

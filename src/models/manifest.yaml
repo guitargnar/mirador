@@ -1,0 +1,142 @@
+# Mirador V3 Model Manifest
+# Dynamic model configuration for intelligent loading
+
+models:
+  # Quick Response Models (Low latency, <2s)
+  quick_response:
+    - id: phi3:mini
+      name: "Phi-3 Mini"
+      type: quick
+      latency: 1.2
+      memory: 3.8
+      capabilities:
+        - general_knowledge
+        - quick_answers
+        - summarization
+      fallback: llama3.2:1b
+      
+    - id: llama3.2:1b
+      name: "Llama 3.2 1B"
+      type: quick
+      latency: 1.5
+      memory: 1.5
+      capabilities:
+        - general_knowledge
+        - quick_answers
+      
+    - id: gemma:2b
+      name: "Gemma 2B"
+      type: quick
+      latency: 1.8
+      memory: 2.8
+      capabilities:
+        - quick_answers
+        - code_generation
+
+  # Deep Analysis Models (Medium latency, 2-10s)
+  deep_analysis:
+    - id: gemma2:9b
+      name: "Gemma 2 9B"
+      type: analysis
+      latency: 5.2
+      memory: 9.5
+      capabilities:
+        - deep_analysis
+        - reasoning
+        - code_generation
+      fallback: mistral:7b
+      
+    - id: mistral:7b
+      name: "Mistral 7B"
+      type: analysis
+      latency: 4.8
+      memory: 7.5
+      capabilities:
+        - analysis
+        - reasoning
+        - creative_writing
+        
+    - id: llama3.1:8b
+      name: "Llama 3.1 8B"
+      type: analysis
+      latency: 6.0
+      memory: 8.5
+      capabilities:
+        - deep_analysis
+        - reasoning
+        - technical_writing
+
+  # Synthesis Models (Higher latency, 10-30s)
+  synthesis:
+    - id: matthew_context_provider_v5_complete:latest
+      name: "Matthew Context Provider V5"
+      type: synthesis
+      latency: 15.0
+      memory: 13.0
+      capabilities:
+        - personal_context
+        - synthesis
+        - strategic_planning
+      fallback: llama3.1:8b
+      
+    - id: universal_strategy_architect:latest
+      name: "Universal Strategy Architect"
+      type: synthesis
+      latency: 12.0
+      memory: 11.0
+      capabilities:
+        - strategic_planning
+        - synthesis
+        - business_analysis
+        
+    - id: qwen2.5:14b
+      name: "Qwen 2.5 14B"
+      type: synthesis
+      latency: 18.0
+      memory: 14.5
+      capabilities:
+        - synthesis
+        - multilingual
+        - reasoning
+
+# Query type to capability mapping
+query_mappings:
+  technical:
+    required_capabilities:
+      - code_generation
+      - technical_writing
+    preferred_models:
+      - gemma2:9b
+      - mistral:7b
+      
+  personal:
+    required_capabilities:
+      - personal_context
+      - strategic_planning
+    preferred_models:
+      - matthew_context_provider_v5_complete:latest
+      
+  creative:
+    required_capabilities:
+      - creative_writing
+      - synthesis
+    preferred_models:
+      - mistral:7b
+      - universal_strategy_architect:latest
+      
+  business:
+    required_capabilities:
+      - business_analysis
+      - strategic_planning
+    preferred_models:
+      - universal_strategy_architect:latest
+      - matthew_context_provider_v5_complete:latest
+
+# Performance thresholds
+performance:
+  max_latency:
+    quick: 2.0
+    analysis: 10.0
+    synthesis: 30.0
+  max_memory_gb: 16.0
+  min_confidence_score: 0.7

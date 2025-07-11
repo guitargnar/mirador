@@ -61,7 +61,7 @@ echo ""
 
 # Test original chains
 test_chain "baseline_financial" \
-    "matthew_context_provider_v5_complete:latest" \
+    "matthew_context_provider_v6_complete:latest" \
     "financial_planning_expert_v6" \
     "enhanced_agent_enforcer"
 
@@ -75,7 +75,7 @@ echo ""
 # Test optimized chains (if models exist)
 if ollama list | grep -q "optimized_decision_simplifier_v3"; then
     test_chain "optimized_financial" \
-        "matthew_context_provider_v5_complete:latest" \
+        "matthew_context_provider_v6_complete:latest" \
         "financial_planning_expert_v6" \
         "optimized_decision_simplifier_v3"
 else

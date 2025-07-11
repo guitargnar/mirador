@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""
+Mirador V3 Streaming Interface
+Achieves <1s first token latency with progressive enhancement
+"""
+
+import asyncio
+import argparse
+import sys
+from pathlib import Path
+
+# Add parent directory to Python path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.streaming.orchestrator import StreamingOrchestrator, StreamToken
+
+async def stream_query(query: str, stages: list = None, no_color: bool = False):
+    """Stream a query through the orchestrator"""
+    orchestrator = StreamingOrchestrator(pre_warm=True)
+    
+    # Track metrics
+    response_text = ""
+    
+    async for token in orchestrator.process(query, stages):
+        # Color output based on confidence
+        if no_color or not sys.stdout.isatty():
+            print(token.content, end="", flush=True)
+        else:
+            # Apply color based on confidence
+            if token.confidence < 0.7:
+                # Gray for low confidence
+                print(f"\033[90m{token.content}\033[0m", end="", flush=True)
+            elif token.confidence < 0.9:
+                # White/bright for medium confidence
+                print(f"\033[97m{token.content}\033[0m", end="", flush=True)
+            else:
+                # Cyan for high confidence
+                print(f"\033[96m{token.content}\033[0m", end="", flush=True)
+        
+        response_text += token.content
+    
+    # Return response for potential piping
+    return response_text
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Mirador V3 Streaming Interface - <1s first token latency",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  mirador-stream "What should I focus on today?"
+  mirador-stream "Analyze this problem" --stages quick_response
+  mirador-stream "Deep analysis needed" --stages deep_analysis synthesis
+  
+Available stages:
+  - quick_response: Fast initial response (0.05-0.5s)
+  - deep_analysis: Deeper insights (5-10s)
+  - synthesis: Comprehensive synthesis (10-20s)
+        """
+    )
+    
+    parser.add_argument(
+        "query",
+        help="The query to process"
+    )
+    
+    parser.add_argument(
+        "--stages",
+        nargs="+",
+        choices=["quick_response", "deep_analysis", "synthesis"],
+        help="Specific stages to run (default: all)"
+    )
+    
+    parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="Disable colored output"
+    )
+    
+    parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help="Suppress progress indicators"
+    )
+    
+    args = parser.parse_args()
+    
+    # Run the async function
+    try:
+        asyncio.run(stream_query(
+            args.query,
+            stages=args.stages,
+            no_color=args.no_color
+        ))
+    except KeyboardInterrupt:
+        print("\n\nInterrupted by user", file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print(f"\nError: {e}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

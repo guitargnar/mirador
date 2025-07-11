@@ -1,0 +1,252 @@
+#!/usr/bin/env python3
+"""
+StreamingOrchestrator - Progressive enhancement streaming for Mirador V3
+Achieves <1s first token latency with multi-stage processing
+"""
+
+import asyncio
+from typing import AsyncGenerator, Dict, Any, List, Optional
+from dataclasses import dataclass, field
+import time
+from ollama import AsyncClient
+import logging
+from pathlib import Path
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+@dataclass
+class StreamToken:
+    """Represents a token in the streaming response"""
+    content: str
+    confidence: float
+    stage: Optional[str] = None
+    model: Optional[str] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+    timestamp: float = field(default_factory=time.time)
+
+@dataclass
+class ModelStage:
+    """Configuration for a model stage"""
+    name: str
+    model: str
+    confidence: float
+    timeout: int = 30
+    system_prompt: Optional[str] = None
+    stage_type: str = "quick"  # quick, analysis, synthesis
+    options: Dict[str, Any] = field(default_factory=dict)
+
+class StreamingOrchestrator:
+    """Orchestrates progressive model enhancement with streaming"""
+    
+    def __init__(self, pre_warm: bool = True):
+        self.client = AsyncClient()
+        self.pre_warm = pre_warm
+        
+        # Optimized stages for <1s latency
+        self.stages = [
+            ModelStage(
+                name="quick_response",
+                model="speed_optimizer_phi:latest",  # Our fastest model
+                confidence=0.6,
+                timeout=10,
+                system_prompt="Provide a quick, helpful response. Be concise.",
+                stage_type="quick",
+                options={
+                    "temperature": 0.1,
+                    "top_p": 0.9,
+                    "num_predict": 150
+                }
+            ),
+            ModelStage(
+                name="deep_analysis", 
+                model="gemma2:9b",
+                confidence=0.85,
+                timeout=20,
+                system_prompt="Provide deeper analysis building on the previous response. Add insights and nuance.",
+                stage_type="analysis",
+                options={
+                    "temperature": 0.7,
+                    "top_p": 0.95,
+                    "num_predict": 300
+                }
+            ),
+            ModelStage(
+                name="synthesis",
+                model="matthew_context_provider_v5_complete:latest",
+                confidence=0.95,
+                timeout=30,
+                system_prompt="Synthesize all previous insights into a comprehensive, personalized response.",
+                stage_type="synthesis",
+                options={
+                    "temperature": 0.8,
+                    "top_p": 0.95,
+                    "num_predict": 500
+                }
+            )
+        ]
+        
+        self.start_time = None
+        self.first_token_time = None
+        self._warmed_models = set()
+    
+    async def _warm_model(self, model: str):
+        """Pre-warm a model for faster first token"""
+        if model not in self._warmed_models:
+            try:
+                logger.info(f"Pre-warming {model}...")
+                await self.client.generate(
+                    model=model, 
+                    prompt="Hi",
+                    stream=False,
+                    options={"num_predict": 1}
+                )
+                self._warmed_models.add(model)
+            except Exception as e:
+                logger.warning(f"Failed to pre-warm {model}: {e}")
+    
+    async def process(self, query: str, stages: Optional[List[str]] = None) -> AsyncGenerator[StreamToken, None]:
+        """Process query through progressive enhancement stages"""
+        self.start_time = time.time()
+        self.first_token_time = None
+        
+        # Pre-warm first stage model if enabled
+        if self.pre_warm and self.stages:
+            await self._warm_model(self.stages[0].model)
+        
+        # Select stages to run
+        active_stages = self.stages
+        if stages:
+            active_stages = [s for s in self.stages if s.name in stages]
+        
+        # Immediate acknowledgment
+        yield StreamToken("🤔 Processing your query...\n", 0.1)
+        
+        # Context accumulation for each stage
+        accumulated_context = ""
+        
+        for stage_idx, stage in enumerate(active_stages):
+            # Stage announcement
+            emoji = self._get_stage_emoji(stage.name)
+            yield StreamToken(
+                f"\n{emoji} {stage.name.replace('_', ' ').title()}:\n",
+                stage.confidence - 0.1,
+                stage=stage.name,
+                model=stage.model
+            )
+            
+            try:
+                # Build messages for this stage
+                messages = self._build_messages(query, stage, accumulated_context)
+                
+                # Stream from model
+                response_text = ""
+                async with asyncio.timeout(stage.timeout):
+                    async for chunk in await self.client.chat(
+                        model=stage.model,
+                        messages=messages,
+                        stream=True,
+                        options=stage.options
+                    ):
+                        content = chunk['message']['content']
+                        
+                        # Track first token time
+                        if self.first_token_time is None and content.strip():
+                            self.first_token_time = time.time() - self.start_time
+                            logger.info(f"First token: {self.first_token_time:.3f}s")
+                        
+                        yield StreamToken(
+                            content,
+                            stage.confidence,
+                            stage=stage.name,
+                            model=stage.model,
+                            metadata={
+                                "stage_index": stage_idx,
+                                "chunk_time": time.time() - self.start_time
+                            }
+                        )
+                        response_text += content
+                
+                # Accumulate context for next stage
+                accumulated_context += f"\n{stage.name}: {response_text}"
+                
+                # Add stage separator
+                if stage_idx < len(active_stages) - 1:
+                    yield StreamToken("\n", stage.confidence)
+                
+            except asyncio.TimeoutError:
+                yield StreamToken(
+                    f"\n⏱️ {stage.name} timed out, continuing...\n",
+                    stage.confidence,
+                    metadata={"error": "timeout", "stage": stage.name}
+                )
+            except Exception as e:
+                logger.error(f"Error in {stage.name}: {e}")
+                yield StreamToken(
+                    f"\n⚠️ {stage.name} unavailable: {str(e)}\n", 
+                    stage.confidence,
+                    metadata={"error": str(e), "stage": stage.name}
+                )
+        
+        # Final metrics
+        total_time = time.time() - self.start_time
+        yield StreamToken(
+            f"\n\n✅ Complete! (First token: {self.first_token_time:.3f}s, Total: {total_time:.1f}s)\n",
+            1.0,
+            metadata={
+                "final": True,
+                "total_time": total_time,
+                "first_token_time": self.first_token_time
+            }
+        )
+    
+    def _get_stage_emoji(self, stage_name: str) -> str:
+        """Get emoji for stage"""
+        emojis = {
+            "quick_response": "🚀",
+            "deep_analysis": "🧠",
+            "synthesis": "✨"
+        }
+        return emojis.get(stage_name, "📝")
+    
+    def _build_messages(self, query: str, stage: ModelStage, context: str) -> List[Dict[str, str]]:
+        """Build messages for model"""
+        messages = []
+        
+        # Add system prompt if available
+        if stage.system_prompt:
+            system_content = stage.system_prompt
+            if context and stage.stage_type != "quick":
+                system_content += f"\n\nPrevious analysis:{context}"
+            messages.append({"role": "system", "content": system_content})
+        
+        # Add user query
+        messages.append({"role": "user", "content": query})
+        
+        return messages
+
+# Example usage
+async def example_usage():
+    """Example of using the StreamingOrchestrator"""
+    orchestrator = StreamingOrchestrator(pre_warm=True)
+    
+    query = "What are the three most important things I should focus on today?"
+    
+    print("🎯 Mirador V3 Streaming Example")
+    print("=" * 60)
+    
+    async for token in orchestrator.process(query):
+        # Color based on confidence
+        if token.confidence < 0.7:
+            print(f"\033[90m{token.content}\033[0m", end="", flush=True)  # Gray
+        elif token.confidence < 0.9:
+            print(f"\033[97m{token.content}\033[0m", end="", flush=True)  # White
+        else:
+            print(f"\033[96m{token.content}\033[0m", end="", flush=True)  # Cyan
+
+if __name__ == "__main__":
+    asyncio.run(example_usage())

@@ -1,0 +1,13 @@
+{
+  "benchmark_results": [],
+  "metadata": {
+    "created": "2025-07-11",
+    "description": "Performance benchmarking results for Claude integration",
+    "metrics": [
+      "response_time",
+      "tokens_per_second",
+      "memory_usage",
+      "success_rate"
+    ]
+  }
+}

@@ -54,7 +54,7 @@ fi
 case "$ANALYSIS_TYPE" in
     "document")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_rag_specialist:latest"
             "analytical_expert_gemma:latest"
             "practical_implementer:latest"
@@ -63,7 +63,7 @@ case "$ANALYSIS_TYPE" in
     
     "code")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_code_analyst:latest"
             "master_coder:latest"
             "solution_architect:latest"
@@ -72,7 +72,7 @@ case "$ANALYSIS_TYPE" in
     
     "research")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_rag_specialist:latest"
             "analytical_expert_gemma:latest"
             "universal_strategy_architect:latest"
@@ -81,7 +81,7 @@ case "$ANALYSIS_TYPE" in
     
     "report")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_rag_specialist:latest"
             "business_strategist_fast:latest"
             "action_crystallizer:latest"
@@ -90,7 +90,7 @@ case "$ANALYSIS_TYPE" in
     
     "comparison")
         MODELS=(
-            "matthew_context_provider_v5_complete:latest"
+            "matthew_context_provider_v6_complete:latest"
             "command_r_rag_specialist:latest"
             "analytical_expert_gemma:latest"
             "cross_model_synthesizer:latest"

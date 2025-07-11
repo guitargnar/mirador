@@ -1,0 +1,3 @@
+#!/bin/bash
+# Quick response only - fastest option
+exec "$(dirname "$0")/mirador-stream" "$1" --stages quick_response

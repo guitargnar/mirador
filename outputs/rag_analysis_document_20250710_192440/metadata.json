@@ -1,0 +1,8 @@
+{
+    "timestamp": "2025-07-10T23:26:36Z",
+    "analysis_type": "document",
+    "query": "Analyze the Mirador technical paper and explain how multi-model orchestration creates emergent insights that single models cannot achieve.\n",
+    "document_path": "null\n",
+    "models": ["matthew_context_provider_v6_complete:latest","command_r_rag_specialist:latest","analytical_expert_gemma:latest","practical_implementer:latest\n"],
+    "output_dir": "outputs/rag_analysis_document_20250710_192440"
+}

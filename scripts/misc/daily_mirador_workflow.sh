@@ -18,7 +18,7 @@ echo ""
 if [ $(date +%u) -eq 1 ]; then
     echo "3️⃣ WEEKLY FINANCIAL REVIEW (Monday)"
     mirador-ez chain "Review my financial position and identify optimization opportunities for the week" \
-        matthew_context_provider_v5_complete:latest \
+        matthew_context_provider_v6_complete:latest \
         financial_planning_expert_v8 \
         decision_simplifier
     echo ""
@@ -28,7 +28,7 @@ fi
 if [ $(date +%u) -eq 3 ]; then
     echo "3️⃣ MUSIC CAREER PROGRESS (Wednesday)"
     mirador-ez chain "Evaluate my progress toward touring guitarist goals and next steps" \
-        matthew_context_provider_v5_complete:latest \
+        matthew_context_provider_v6_complete:latest \
         music_industry_networker \
         touring_readiness_coach
     echo ""

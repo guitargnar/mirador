@@ -1,0 +1,104 @@
+#!/bin/bash
+# Mirador V3 - Smart wrapper with streaming support
+# Achieves <1s first token latency while maintaining backward compatibility
+
+# Source branded header
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/scripts/branded_header.sh" 2>/dev/null || true
+
+# Display minimal header
+if command -v mirador_header_mini &> /dev/null; then
+    mirador_header_mini
+fi
+
+# Parse arguments
+QUERY="$1"
+USE_STREAMING=true
+FALLBACK_TO_V2=false
+
+# Check for flags
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --no-stream)
+            USE_STREAMING=false
+            shift
+            ;;
+        --v2)
+            FALLBACK_TO_V2=true
+            shift
+            ;;
+        *)
+            QUERY="$1"
+            shift
+            ;;
+    esac
+done
+
+# Helper function to check if streaming is available
+check_streaming_available() {
+    if [ -x "$SCRIPT_DIR/bin/mirador-stream" ] && command -v python3 &> /dev/null; then
+        return 0
+    fi
+    return 1
+}
+
+# Smart chain selection based on query content
+select_chain_models() {
+    local query="$1"
+    local models=()
+    
+    if [[ "$query" =~ (financial|money|investment|budget|income|salary) ]]; then
+        echo "🏦 Detected financial query"
+        models=("matthew_context_provider_v5_complete:latest" "financial_planning_expert_v8" "optimized_decision_simplifier_v3")
+        
+    elif [[ "$query" =~ (Louisville|local|Kentucky|downtown|neighborhood) ]]; then
+        echo "📍 Detected Louisville query"
+        models=("matthew_context_provider_v5_complete:latest" "louisville_expert_v3" "optimized_decision_simplifier_v3")
+        
+    elif [[ "$query" =~ (opportunity|opportunities|business|strategy|idea) ]]; then
+        echo "💡 Detected opportunity query"
+        models=("matthew_context_provider_v5_complete:latest" "enhanced_agent_enforcer" "optimized_decision_simplifier_v3")
+        
+    elif [[ "$query" =~ (music|guitar|touring|performance|Cody.*Ash) ]]; then
+        echo "🎸 Detected music query"
+        models=("matthew_context_provider_v5_complete:latest" "music_industry_networker" "master_guitar_instructor" "optimized_decision_simplifier_v3")
+        
+    elif [[ "$query" =~ (personality|traits|strengths|weaknesses) ]]; then
+        echo "🧠 Detected personality query"
+        models=("matthew_context_provider_v5_complete:latest" "mirador_system_specialist_v2" "optimized_decision_simplifier_v3")
+        
+    else
+        echo "🔍 General query"
+        models=("matthew_context_provider_v5_complete:latest" "enhanced_agent_enforcer" "optimized_decision_simplifier_v3")
+    fi
+    
+    echo "${models[@]}"
+}
+
+# Main execution logic
+if [ "$FALLBACK_TO_V2" = true ] || [ "$USE_STREAMING" = false ]; then
+    # Use traditional V2 approach
+    echo "📊 Using Mirador V2 (traditional mode)"
+    exec "$SCRIPT_DIR/mirador" "$QUERY"
+    
+elif check_streaming_available && [ "$USE_STREAMING" = true ]; then
+    # Use V3 streaming for <1s latency
+    echo "🚀 Using Mirador V3 (streaming mode)"
+    
+    # Determine stages based on query complexity
+    if [[ "$QUERY" =~ ^(list|what are|give me|tell me).*(three|3|top|main) ]]; then
+        # Simple query - quick response only
+        "$SCRIPT_DIR/bin/mirador-stream" "$QUERY" --stages quick_response
+    elif [[ "$QUERY" =~ (analyze|explain|deep|comprehensive|detailed) ]]; then
+        # Complex query - all stages
+        "$SCRIPT_DIR/bin/mirador-stream" "$QUERY"
+    else
+        # Medium query - quick + synthesis
+        "$SCRIPT_DIR/bin/mirador-stream" "$QUERY" --stages quick_response synthesis
+    fi
+    
+else
+    # Fallback to V2 if streaming not available
+    echo "⚠️  Streaming not available, falling back to V2"
+    exec "$SCRIPT_DIR/mirador" "$QUERY"
+fi

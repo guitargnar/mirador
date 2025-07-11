@@ -1,0 +1,4 @@
+[38;2;123;158;137mMIRADOR[0m - [38;2;209;122;71mObserve. Adapt. Remain.[0m
+
+💡 Detected opportunity query - using strategic chain
+/opt/homebrew/Cellar/python@3.13/3.13.4/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/matthewscott/Projects/mirador/mirador.py': [Errno 2] No such file or directory

@@ -1,290 +1,430 @@
-# 🔮 Mirador AI Framework
-
 <div align="center">
+  <img src="assets/mirador-logo.svg" alt="Mirador Logo" width="200">
   
-  ![Mirador Banner](assets/images/mirador_banner.png)
+  # Mirador AI Orchestration System
   
-  **Your Personal AI Council - Local, Private, Powerful**
+  *A sophisticated personal AI assistant that orchestrates multiple specialized models for enhanced intelligence*
   
-  [![Models](https://img.shields.io/badge/Models-69-blue.svg)](https://github.com/guitargnar/mirador)
-  [![Diversity](https://img.shields.io/badge/Model%20Diversity-97%25-green.svg)](https://github.com/guitargnar/mirador)
-  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-  [![Status](https://img.shields.io/badge/Status-Active-success.svg)](https://github.com/guitargnar/mirador)
-  
-  <img src="https://img.shields.io/badge/Privacy-100%25%20Local-red.svg" alt="Privacy">
-  <img src="https://img.shields.io/badge/Context-128K%20Tokens-orange.svg" alt="Context">
-  <img src="https://img.shields.io/badge/Chains-6%20Types-purple.svg" alt="Chains">
-
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Built with Ollama](https://img.shields.io/badge/Built%20with-Ollama-blue.svg)](https://ollama.ai)
+  [![macOS](https://img.shields.io/badge/Platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
 </div>
 
 ---
 
-<div align="center">
-  <img src="assets/images/mirador_logo.png" alt="Mirador Logo" width="200">
-</div>
+## 🌟 Overview
 
-## ✨ What is Mirador?
+**Mirador** (Spanish for "lookout" or "viewpoint") is an advanced AI orchestration system that coordinates multiple specialized language models to provide personalized, context-aware assistance. Unlike single-model approaches, Mirador intelligently routes queries through chains of specialized models, each contributing their unique expertise to generate comprehensive, nuanced responses.
 
-Mirador is a sophisticated **local AI orchestration system** that chains multiple specialized language models to deliver personalized, context-aware insights. Think of it as your personal AI council where each model brings unique expertise.
+### Key Features
 
-### 🎯 Key Features
+- **🧠 Multi-Model Orchestration**: Seamlessly chains 8+ consolidated AI models
+- **⚡ Smart Routing**: Automatically selects optimal model chains based on query intent
+- **🔒 100% Local Processing**: All data stays on your machine - complete privacy
+- **🚀 Sub-Second Response Times**: Optimized for Apple Silicon performance
+- **🎯 Domain Expertise**: Specialized models for finance, health, music, career, and more
+- **🔄 Progressive Enhancement**: Streaming responses with increasing depth
+- **📊 Context Accumulation**: Each model builds on previous insights
 
-<table>
-<tr>
-<td width="50%">
+## 📋 Table of Contents
 
-**🧠 Multi-Model Intelligence**
-- 69 specialized models
-- 97% provider diversity
-- Chain 3-6 models per query
+- [Architecture](#-architecture)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Usage](#-usage)
+- [Model Chains](#-model-chains)
+- [Prompt Library](#-prompt-library)
+- [Technical Requirements](#-technical-requirements)
+- [Development](#-development)
+- [Contributing](#-contributing)
 
-</td>
-<td width="50%">
+## 🏗️ Architecture
 
-**🔒 Complete Privacy**
-- 100% local processing
-- No data leaves your machine
-- You control everything
+```mermaid
+graph TD
+    A[User Query] --> B{Smart Router}
+    B --> |Quick Response| C[Speed Optimizer]
+    B --> |Financial| D[Financial Chain]
+    B --> |Health| E[Health Chain]
+    B --> |Music| F[Music Chain]
+    B --> |Career| G[Career Chain]
+    B --> |Creative| H[Creative Chain]
+    B --> |Strategic| I[Strategic Chain]
+    
+    D --> D1[Context Provider]
+    D1 --> D2[Financial Advisor]
+    D2 --> D3[Implementer]
+    
+    E --> E1[Context Provider]
+    E1 --> E2[Health Wellness]
+    E2 --> E3[Implementer]
+    
+    F --> F1[Context Provider]
+    F1 --> F2[Music Mentor]
+    F2 --> F3[Creative Catalyst]
+    
+    subgraph "Context Flow"
+        J[Original Query] --> K[Model 1 Response]
+        K --> L[Accumulated Context]
+        L --> M[Model 2 Enhanced]
+        M --> N[Final Synthesis]
+    end
+```
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+### Model Architecture
 
-**📄 Advanced Document Analysis**
-- RAG chains with Command-R 35B
-- Support for PDF, code, JSON, CSV
-- 128K token context window
+Mirador uses a sophisticated multi-tier architecture:
 
-</td>
-<td width="50%">
+1. **Context Providers**: Personal and domain context models
+2. **Domain Experts**: Specialized knowledge models
+3. **Strategy Models**: Planning and synthesis
+4. **Implementation Models**: Actionable guidance
 
-**🚀 Intelligent Routing**
-- Auto-selects best chain
-- Query-aware optimization
-- Continuous learning
+## 🚀 Installation
 
-</td>
-</tr>
-</table>
+### Prerequisites
 
----
+- macOS (optimized for Apple Silicon M1/M2/M3)
+- [Ollama](https://ollama.ai) installed
+- Python 3.8+ 
+- 16GB+ RAM recommended
+- 100GB storage for models
 
-## 🚀 Quick Start
+### Step 1: Clone the Repository
 
-### 1. Prerequisites
 ```bash
-# Install Ollama
-curl -fsSL https://ollama.com/install.sh | sh
-
-# Clone Mirador
-git clone https://github.com/guitargnar/mirador.git
+git clone https://github.com/yourusername/mirador.git
 cd mirador
 ```
 
-### 2. Simple Commands
-
-<details>
-<summary><b>🎯 Auto-Router (Easiest)</b></summary>
+### Step 2: Install Dependencies
 
 ```bash
-# Let Mirador choose the best approach
-./bin/mirador_auto_router.sh "How can I optimize my monthly budget?"
-./bin/mirador_auto_router.sh "Analyze my career trajectory"
-./bin/mirador_auto_router.sh "Plan my startup launch"
-```
-</details>
+# Install Python dependencies
+pip3 install -r requirements.txt
 
-<details>
-<summary><b>📄 Document Analysis</b></summary>
+# Install Ollama (if not already installed)
+curl https://ollama.ai/install.sh | sh
+```
+
+### Step 3: Pull Base Models
 
 ```bash
-# Analyze any document
-./bin/mirador_rag_chain.sh document "Summarize key points" report.pdf
-
-# Code review
-./bin/mirador_rag_chain.sh code "Security audit" app.py
-
-# Research synthesis
-./bin/mirador_rag_chain.sh research "Extract methodology" paper.pdf
+# Install diverse base LLMs
+./scripts/install_diverse_models.sh
 ```
-</details>
 
-<details>
-<summary><b>🧩 Hybrid Chains</b></summary>
+### Step 4: Create Mirador Models
 
 ```bash
-# Strategic planning
-./bin/mirador_hybrid_chains.sh synthesis "90-day business plan"
-
-# Creative projects
-./bin/mirador_hybrid_chains.sh creative "Album concept ideas"
-
-# Technical architecture
-./bin/mirador_hybrid_chains.sh technical "Design microservices"
+# Create all specialized models
+./scripts/create_consolidated_models.sh
 ```
-</details>
 
----
+### Step 5: Verify Installation
 
-## 📊 Architecture
-
-![Architecture Diagram](assets/diagrams/architecture.png)
-
-### How Mirador Works
-
-![Flow Diagram](assets/diagrams/flow_diagram.png)
-
-### Model Diversity
-
-<div align="center">
-
-| Base Model | Purpose | Context | Special Features |
-|------------|---------|---------|------------------|
-| **Gemma 2** 27B | Analytical thinking | 8K | Google's latest |
-| **Qwen 2.5** 32B | Multilingual tasks | 32K | 29 languages |
-| **Phi-3** Medium | Fast reasoning | 128K | Microsoft's efficient |
-| **Command-R** 35B | RAG & retrieval | 128K | Built for search |
-| **Llama 3.2** | General purpose | 128K | Meta's flagship |
-
-</div>
-
----
-
-## 🎨 Example Outputs
-
-### Financial Analysis
 ```bash
-./bin/mirador_auto_router.sh "Analyze my spending and suggest optimizations"
+# Test the system
+./scripts/test_consolidated_models.sh
 ```
-> **Output**: Detailed spending analysis with 5 actionable optimizations, potential savings calculation, and implementation timeline.
 
-### Career Strategy
+## 🎯 Quick Start
+
+### Basic Usage
+
 ```bash
-./bin/mirador_hybrid_chains.sh synthesis "Path to senior engineering role"
-```
-> **Output**: Skill gap analysis, 90-day learning plan, networking strategy, and milestone tracking system.
+# Smart routing based on query
+./bin/mirador-smart-v2 "What should I focus on today?"
 
-### Document Intelligence
+# Direct chain execution
+./mirador_universal_runner_v2.sh life_optimization "How can I improve my work-life balance?"
+
+# Quick response mode
+./bin/mirador-smart-v2 "Quick summary of my priorities"
+```
+
+### Example Sessions
+
 ```bash
-./bin/mirador_rag_chain.sh document "Extract action items" meeting_notes.pdf
+# Financial planning
+cd ~/Projects/mirador
+./bin/mirador-smart-v2 "Help me create a budget for next month"
+
+# Health optimization
+./bin/mirador-smart-v2 "How can I improve my energy levels?"
+
+# Creative breakthrough
+./mirador_universal_runner_v2.sh creative_breakthrough "I need innovative ideas for my startup"
+
+# Music practice
+./bin/mirador-smart-v2 "Structure my guitar practice session"
 ```
-> **Output**: Prioritized task list, owner assignments, deadlines, and follow-up schedule.
 
----
+## 📚 Usage
 
-## 📈 Performance & Privacy
+### Command Line Interface
 
-<div align="center">
-<table>
-<tr>
-<th>Metric</th>
-<th>Value</th>
-<th>What it Means</th>
-</tr>
-<tr>
-<td>Response Time</td>
-<td>&lt; 45s</td>
-<td>Fast local processing</td>
-</tr>
-<tr>
-<td>Privacy</td>
-<td>100%</td>
-<td>No data leaves your machine</td>
-</tr>
-<tr>
-<td>Model Diversity</td>
-<td>97%</td>
-<td>Not dependent on single provider</td>
-</tr>
-<tr>
-<td>Context Window</td>
-<td>128K</td>
-<td>Analyze entire documents</td>
-</tr>
-</table>
-</div>
-
----
-
-## 🛠️ Advanced Features
-
-### 🔄 Feedback System
+#### Smart Router (Recommended)
 ```bash
-# Rate outputs to improve future responses
-./mirador_feedback.sh SESSION_ID 5 "Saved me 2 hours!"
-
-# View performance analytics
-./analyze_feedback.py
+./bin/mirador-smart-v2 "Your query here"
 ```
 
-### 🧪 Testing Suite
+The smart router automatically:
+- Analyzes query intent
+- Selects optimal model chain
+- Manages context flow
+- Provides progressive responses
+
+#### Universal Runner
 ```bash
-# Run comprehensive tests
-./test_core_functionality.sh
-
-# Test specific features
-./test_rag_chain.sh
-./test_advanced_features.sh
+./mirador_universal_runner_v2.sh <chain_type> "Your prompt" [format]
 ```
 
-### 🎯 Custom Chains
+Chain types:
+- `life_optimization`: Holistic life improvement
+- `business_acceleration`: Startup and business growth
+- `creative_breakthrough`: Innovation and creativity
+- `relationship_harmony`: Personal relationships
+- `technical_mastery`: Technical excellence
+- `strategic_synthesis`: Comprehensive planning
+
+Formats:
+- `quick`: Key points only
+- `summary`: Concise overview
+- `detailed`: Full analysis (default)
+- `export`: Save to file
+
+#### Direct Model Access
 ```bash
-# Build your own model pipeline
-./mirador-ez chain "Your query" model1 model2 model3
+# For testing specific models
+echo "Your query" | ollama run universal_financial_advisor
 ```
 
----
+### Configuration
 
-## 🌟 Vision: Personal AI Operating System
+Model routing is configured in `config/model_routing_v2.yaml`:
 
-We're building towards an AI system that:
+```yaml
+routing_rules:
+  financial:
+    patterns: ["money", "budget", "finance", "investment"]
+    models: ["matthew_context_provider", "universal_financial_advisor", "practical_implementer"]
+```
 
-- **🔒 Respects Privacy**: Everything stays local
-- **🧠 Learns Your Patterns**: Personalized to you
-- **⚡ Provides Instant Value**: Actionable insights
-- **🌱 Evolves Continuously**: Gets better over time
+## 🔗 Model Chains
 
----
+### Financial Planning Chain
+```
+matthew_context_provider → universal_financial_advisor → practical_implementer
+```
+Best for: Budgeting, investments, financial decisions
+
+### Health & Wellness Chain
+```
+matthew_context_provider → universal_health_wellness → practical_implementer
+```
+Best for: Fitness, nutrition, stress management, energy optimization
+
+### Music & Creative Chain
+```
+matthew_context_provider → universal_music_mentor → universal_creative_catalyst
+```
+Best for: Music practice, creative projects, artistic development
+
+### Career Development Chain
+```
+matthew_context_provider → universal_career_strategist → universal_corporate_navigator
+```
+Best for: Career planning, corporate strategy, professional growth
+
+### Strategic Planning Chain
+```
+matthew_context_provider → universal_strategy_architect → analytical_expert_gemma → practical_implementer
+```
+Best for: Complex decisions, long-term planning, comprehensive analysis
+
+## 📝 Prompt Library
+
+### Life Optimization
+
+```bash
+cd ~/Projects/mirador
+
+# Daily Planning
+./bin/mirador-smart-v2 "What should I focus on today given my current projects and priorities?"
+
+# Goal Setting
+./mirador_universal_runner_v2.sh life_optimization "Help me set quarterly goals that align with my values"
+
+# Productivity
+./bin/mirador-smart-v2 "How can I optimize my daily routine for maximum productivity?"
+```
+
+### Financial Management
+
+```bash
+# Budget Analysis
+./bin/mirador-smart-v2 "Analyze my spending patterns and suggest optimization strategies"
+
+# Investment Planning
+./bin/mirador-smart-v2 "Create an investment strategy for my risk profile and goals"
+
+# Debt Management
+./bin/mirador-smart-v2 "Help me create a plan to eliminate my debt efficiently"
+```
+
+### Health & Wellness
+
+```bash
+# Energy Optimization
+./bin/mirador-smart-v2 "I'm feeling tired lately. How can I boost my energy naturally?"
+
+# Fitness Planning
+./bin/mirador-smart-v2 "Design a workout routine that fits my busy schedule"
+
+# Stress Management
+./bin/mirador-smart-v2 "Give me practical stress reduction techniques for high-pressure work"
+```
+
+### Career Development
+
+```bash
+# AI Leadership
+./bin/mirador-smart-v2 "How do I position myself for AI leadership at Humana?"
+
+# Skill Development
+./bin/mirador-smart-v2 "What skills should I develop for career advancement in tech?"
+
+# Networking Strategy
+./bin/mirador-smart-v2 "Create a networking strategy for building industry connections"
+```
+
+### Creative Projects
+
+```bash
+# Innovation
+./mirador_universal_runner_v2.sh creative_breakthrough "Generate breakthrough ideas for healthcare AI"
+
+# Music Development
+./bin/mirador-smart-v2 "Help me write a song about transformation and growth"
+
+# Content Creation
+./bin/mirador-smart-v2 "Create a content strategy for my AI thought leadership"
+```
+
+### Business Strategy
+
+```bash
+# Startup Planning
+./mirador_universal_runner_v2.sh business_acceleration "Create a 90-day launch plan for my AI startup"
+
+# Market Analysis
+./bin/mirador-smart-v2 "Analyze market opportunities for personalized AI assistants"
+
+# Revenue Models
+./bin/mirador-smart-v2 "Suggest monetization strategies for my AI orchestration platform"
+```
+
+## 💻 Technical Requirements
+
+### System Requirements
+- **OS**: macOS 11.0+ (Big Sur or later)
+- **CPU**: Apple Silicon (M1/M2/M3) recommended, Intel supported
+- **RAM**: 16GB minimum, 32GB recommended
+- **Storage**: 100GB free space for models
+- **Ollama**: v0.1.0 or later
+
+### Python Dependencies
+```txt
+numpy==1.24.0
+pandas==2.0.0
+pyyaml==6.0
+rich==13.0.0
+asyncio==3.4.3
+aiohttp==3.8.0
+```
+
+### Model Requirements
+- Base models: ~50GB total
+- Consolidated models: ~40GB
+- Context window: 8192 tokens
+- Temperature: 0.7 (configurable)
+
+## 🛠️ Development
+
+### Project Structure
+```
+mirador/
+├── bin/                    # Executable scripts
+│   ├── mirador-smart-v2   # Main smart router
+│   └── mirador-stream     # Streaming interface
+├── scripts/               # Utility scripts
+│   ├── consolidate_models_phase2.sh
+│   └── test_consolidated_models.sh
+├── config/               # Configuration files
+│   └── model_routing_v2.yaml
+├── models/               # Model definitions
+│   └── diverse/         # Base model configurations
+├── tests/               # Test suite
+├── outputs/             # Session outputs
+└── docs/               # Documentation
+```
+
+### Adding New Models
+
+1. Create modelfile:
+```bash
+cat > modelfile_custom << EOF
+FROM llama3.2:latest
+PARAMETER temperature 0.7
+PARAMETER num_ctx 8192
+SYSTEM "You are a specialized expert in..."
+EOF
+```
+
+2. Create model:
+```bash
+ollama create custom_model -f modelfile_custom
+```
+
+3. Add to routing configuration in `config/model_routing_v2.yaml`
+
+### Running Tests
+
+```bash
+# Run all tests
+./tests/run_tests.sh
+
+# Test specific chain
+python3 tests/test_chains.py
+
+# Performance benchmarks
+python3 tests/test_performance.py
+```
 
 ## 🤝 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+While Mirador is primarily a personal project, contributions are welcome for:
 
-### Development Setup
-```bash
-# Install dependencies
-pip install -r requirements.txt
+1. Bug fixes and performance improvements
+2. New model chains and routing patterns
+3. Documentation improvements
+4. Test coverage expansion
 
-# Run tests
-pytest tests/
+Please open an issue first to discuss major changes.
 
-# Check code style
-./scripts/lint.sh
-```
+## 📄 License
 
----
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📚 Documentation
+## 🙏 Acknowledgments
 
-- **[Quick Start Guide](docs/Quick_Start_Guide.md)** - Get running in 5 minutes
-- **[Architecture Overview](ADVANCED_FEATURES.md)** - Deep dive into the system
-- **[Model Reference](CONSOLIDATED_MODELS.md)** - All available models
-- **[Simple Commands](SIMPLE_COMMANDS.md)** - Easy reference guide
-- **[File Ingestion](FILE_INGESTION.md)** - Document processing capabilities
-
----
-
-## 📜 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
+- Built on [Ollama](https://ollama.ai) for local model execution
+- Inspired by the concept of ensemble intelligence
+- Optimized for Apple Silicon architecture
 
 ---
 
 <div align="center">
-  
-  **Built with ❤️ by the Mirador Community**
-  
-  [Report Bug](https://github.com/guitargnar/mirador/issues) · [Request Feature](https://github.com/guitargnar/mirador/issues) · [Join Discussion](https://github.com/guitargnar/mirador/discussions)
-  
+  <i>Mirador - Expanding your perspective through orchestrated intelligence</i>
 </div>
