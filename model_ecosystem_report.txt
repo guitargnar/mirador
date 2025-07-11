@@ -1,0 +1,192 @@
+
+# Mirador Model Ecosystem Analysis Report
+Generated: 2025-07-11 15:39:15
+
+## Executive Summary
+- Total Models: 90
+- Model Categories: 4
+- Active Chains: 11
+- Average Model Size: 1147.27 bytes
+
+## Model Categories
+- domain: 70 models
+- personal: 10 models
+- diverse: 8 models
+- root: 2 models
+
+## Base Model Distribution
+- llama3.2: 44 models (48.9%)
+- llama3.2_balanced: 28 models (31.1%)
+- qwen2.5: 3 models (3.3%)
+- enhanced-agent: 3 models (3.3%)
+- command-r: 2 models (2.2%)
+- gemma2: 2 models (2.2%)
+- phi3: 2 models (2.2%)
+- enhanced_agent: 2 models (2.2%)
+- deepseek-coder: 1 models (1.1%)
+- codellama: 1 models (1.1%)
+- enhanced_agent_fast: 1 models (1.1%)
+
+## Model Specializations
+- expert: 18 models
+- implementation: 16 models
+- financial: 16 models
+- context: 15 models
+- strategy: 14 models
+- optimization: 3 models
+- general: 3 models
+- analysis: 3 models
+- synthesis: 1 models
+- creative: 1 models
+
+## Model Families
+
+### other (45 models)
+  - ai_leadership_strategist
+  - audio_production_strategist
+  - baseline_llama_compact
+  - baseline_llama_compact:latest
+  - code_reviewer
+  ... and 40 more
+
+### matthew_family (10 models)
+  - matthew_advisor
+  - matthew_advisor_enhanced
+  - matthew_career_enhanced
+  - matthew_context_provider
+  - matthew_context_provider_optimized
+  ... and 5 more
+
+### expert_family (5 models)
+  - analytical_expert_gemma
+  - analytical_expert_gemma:latest
+  - guitar_expert
+  - guitar_expert_precise
+  - linkedin_content_expert
+
+### optimizer_family (7 models)
+  - engagement_optimizer
+  - feedback_loop_optimizer
+  - feedback_loop_optimizer_fixed
+  - health_wellness_optimizer
+  - productivity_optimizer
+  ... and 2 more
+
+### enhanced_agent_family (10 models)
+  - enhanced_agent_enforcer
+  - enhanced_agent_enforcer_v2
+  - enhanced_agent_fast
+  - enhanced_agent_fast_v2
+  - enhanced_agent_fast_v3
+  ... and 5 more
+
+### louisville_family (3 models)
+  - louisville_expert
+  - louisville_expert_v2
+  - louisville_expert_v3
+
+### financial_family (10 models)
+  - financial_planning_expert
+  - financial_planning_expert_fast
+  - financial_planning_expert_optimized
+  - financial_planning_expert_v2
+  - financial_planning_expert_v3
+  ... and 5 more
+
+## Chain Usage Analysis
+
+### mirador-collaborate
+Models used: 1
+  - security_expert
+
+### mirador-intervene
+Models used: 1
+  - security_expert
+
+### mirador-smart-v2
+Models used: 1
+  - speed_optimizer_phi
+
+### mirador-smart-v2-consolidated
+Models used: 1
+  - speed_optimizer_phi
+
+### mirador-smart-v3
+Models used: 1
+  - speed_optimizer_phi
+
+### mirador-v3
+Models used: 2
+  - financial_planning_expert_v8
+  - louisville_expert_v3
+
+### mirador_hybrid_chains
+Models used: 18
+  - speed_optimizer_phi:latest
+  - action_crystallizer:latest
+  - universal_strategy_architect:latest
+  - command_r_rag_specialist:latest
+  - solution_architect:latest
+  ... and 13 more
+
+### mirador_maintenance
+Models used: 2
+  - louisville_expert_v2
+  - financial_planning_expert_v2
+
+### mirador_rag_chain
+Models used: 11
+  - master_coder:latest
+  - action_crystallizer:latest
+  - solution_architect:latest
+  - command_r_rag_specialist:latest
+  - universal_strategy_architect:latest
+  ... and 6 more
+
+### mirador_universal_runner
+Models used: 1
+  - matthew_context_provider_v6_complete
+
+### mirador_universal_runner_v3_optimized
+Models used: 22
+  - speed_optimizer_phi:latest
+  - relationship_communication_specialist:latest
+  - cross_model_synthesizer:latest
+  - analytical_expert_gemma:latest
+  - multilingual_assistant_qwen:latest
+  ... and 17 more
+
+## Parameter Analysis
+- temperature: used in 89 models, most common value: 0.4 (27 times)
+- num_ctx: used in 34 models, most common value: 8192 (11 times)
+- num_predict: used in 61 models, most common value: 1500 (18 times)
+- top_p: used in 86 models, most common value: 0.9 (35 times)
+- repeat_penalty: used in 50 models, most common value: 1.1 (27 times)
+- top_k: used in 8 models, most common value: 40 (5 times)
+- repeat_last_n: used in 5 models, most common value: 64 (1 times)
+- num_batch: used in 8 models, most common value: 512 (4 times)
+- num_gpu: used in 14 models, most common value: 1 (12 times)
+- num_thread: used in 18 models, most common value: 8 (11 times)
+- use_mmap: used in 8 models, most common value: true (8 times)
+- use_mlock: used in 8 models, most common value: true (5 times)
+- numa: used in 4 models, most common value: false (4 times)
+- stop: used in 1 models, most common value: "</summary>" (1 times)
+
+## Complexity Analysis
+Top 10 Most Complex Models:
+  - llama3.2_balanced: 70.04
+  - matthew_louisville_enhanced: 29.88
+  - matthew_parenting_enhanced: 29.56
+  - matthew_realestate_enhanced: 29.52
+  - matthew_career_enhanced: 29.49
+  - matthew_advisor_enhanced: 26.68
+  - optimized_decision_simplifier_v3: 23.9
+  - optimized_action_prioritizer: 23.9
+  - optimized_enhanced_agent_fast_v7: 23.86
+  - enhanced_agent_enforcer_v2: 15.51
+
+## Model Dependency Graph Statistics
+- Nodes: 95
+- Edges: 84
+- Most inherited from: command_r_code_analyst (1 dependencies)
+- Most used as base: llama3.2 (44 derivatives)

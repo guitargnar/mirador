@@ -1,0 +1,210 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="neuralGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="neuromorphic">
+      <feMorphology operator="dilate" radius="1"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#skyGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E40AF" stroke-width="0.5" opacity="0.2"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  
+  <!-- Animated Particles -->
+  <g id="particles">
+    <circle r="2" fill="#60A5FA" opacity="0.6">
+      <animateMotion dur="20s" repeatCount="indefinite">
+        <mpath href="#particlePath1"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5" fill="#F59E0B" opacity="0.6">
+      <animateMotion dur="25s" repeatCount="indefinite">
+        <mpath href="#particlePath2"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.5" fill="#8B5CF6" opacity="0.6">
+      <animateMotion dur="30s" repeatCount="indefinite">
+        <mpath href="#particlePath3"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Particle Paths -->
+  <path id="particlePath1" d="M100,300 Q300,200 500,300 T900,300 Q1100,400 1200,300" fill="none"/>
+  <path id="particlePath2" d="M0,400 Q200,300 400,400 T800,400 Q1000,300 1200,400" fill="none"/>
+  <path id="particlePath3" d="M200,200 Q400,300 600,200 T1000,200 Q1100,300 1200,200" fill="none"/>
+  
+  <!-- Central Neural Network -->
+  <g id="neuralNetwork" transform="translate(600,300)">
+    <!-- Core Node -->
+    <circle cx="0" cy="0" r="80" fill="url(#neuralGlow)" filter="url(#glow)">
+      <animate attributeName="r" values="80;85;80" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Inner Ring Nodes -->
+    <g id="innerRing">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="60s" repeatCount="indefinite"/>
+      <circle cx="150" cy="0" r="30" fill="#60A5FA" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="75" cy="130" r="30" fill="#F59E0B" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="-75" cy="130" r="30" fill="#8B5CF6" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="-150" cy="0" r="30" fill="#10B981" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="-75" cy="-130" r="30" fill="#EF4444" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="75" cy="-130" r="30" fill="#F97316" opacity="0.8" filter="url(#glow)"/>
+    </g>
+    
+    <!-- Outer Ring Nodes -->
+    <g id="outerRing">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="90s" repeatCount="indefinite"/>
+      <circle cx="250" cy="0" r="20" fill="#60A5FA" opacity="0.6"/>
+      <circle cx="177" cy="177" r="20" fill="#F59E0B" opacity="0.6"/>
+      <circle cx="0" cy="250" r="20" fill="#8B5CF6" opacity="0.6"/>
+      <circle cx="-177" cy="177" r="20" fill="#10B981" opacity="0.6"/>
+      <circle cx="-250" cy="0" r="20" fill="#EF4444" opacity="0.6"/>
+      <circle cx="-177" cy="-177" r="20" fill="#F97316" opacity="0.6"/>
+      <circle cx="0" cy="-250" r="20" fill="#6366F1" opacity="0.6"/>
+      <circle cx="177" cy="-177" r="20" fill="#EC4899" opacity="0.6"/>
+    </g>
+    
+    <!-- Connections -->
+    <g id="connections" opacity="0.3">
+      <line x1="0" y1="0" x2="150" y2="0" stroke="#60A5FA" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="75" y2="130" stroke="#F59E0B" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="-75" y2="130" stroke="#8B5CF6" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="-150" y2="0" stroke="#10B981" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="3.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="-75" y2="-130" stroke="#EF4444" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="75" y2="-130" stroke="#F97316" stroke-width="2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    
+    <!-- Data Flow Pulses -->
+    <g id="dataFlow">
+      <circle r="5" fill="url(#pulseGradient)">
+        <animateMotion dur="3s" repeatCount="indefinite">
+          <mpath href="#flowPath1"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="5" fill="url(#pulseGradient)">
+        <animateMotion dur="3.5s" repeatCount="indefinite">
+          <mpath href="#flowPath2"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="5" fill="url(#pulseGradient)">
+        <animateMotion dur="4s" repeatCount="indefinite">
+          <mpath href="#flowPath3"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Flow Paths -->
+    <path id="flowPath1" d="M0,0 L150,0 L250,0" fill="none"/>
+    <path id="flowPath2" d="M0,0 L-75,130 L-177,177" fill="none"/>
+    <path id="flowPath3" d="M0,0 L75,-130 L177,-177" fill="none"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#F9FAFB">
+    MIRADOR
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#94A3B8">
+    AI Orchestration Framework
+  </text>
+  
+  <!-- Stats -->
+  <g id="stats" transform="translate(600,500)">
+    <text x="-300" y="0" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#60A5FA">
+      80+ Models
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#F59E0B">
+      9 Chain Types
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#8B5CF6">
+      100% Local
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  
+  <!-- Floating Icons -->
+  <g id="floatingIcons">
+    <!-- Brain Icon -->
+    <g transform="translate(100,150)">
+      <animateTransform attributeName="transform" type="translate" values="100,150;100,130;100,150" dur="6s" repeatCount="indefinite"/>
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#60A5FA" opacity="0.6"/>
+    </g>
+    
+    <!-- Code Icon -->
+    <g transform="translate(1050,200)">
+      <animateTransform attributeName="transform" type="translate" values="1050,200;1050,180;1050,200" dur="7s" repeatCount="indefinite"/>
+      <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="#F59E0B" opacity="0.6"/>
+    </g>
+    
+    <!-- Network Icon -->
+    <g transform="translate(150,450)">
+      <animateTransform attributeName="transform" type="translate" values="150,450;150,430;150,450" dur="8s" repeatCount="indefinite"/>
+      <circle cx="12" cy="12" r="3" fill="#8B5CF6" opacity="0.6"/>
+      <circle cx="4" cy="4" r="2" fill="#8B5CF6" opacity="0.6"/>
+      <circle cx="20" cy="4" r="2" fill="#8B5CF6" opacity="0.6"/>
+      <circle cx="4" cy="20" r="2" fill="#8B5CF6" opacity="0.6"/>
+      <circle cx="20" cy="20" r="2" fill="#8B5CF6" opacity="0.6"/>
+      <line x1="12" y1="12" x2="4" y2="4" stroke="#8B5CF6" stroke-width="1" opacity="0.3"/>
+      <line x1="12" y1="12" x2="20" y2="4" stroke="#8B5CF6" stroke-width="1" opacity="0.3"/>
+      <line x1="12" y1="12" x2="4" y2="20" stroke="#8B5CF6" stroke-width="1" opacity="0.3"/>
+      <line x1="12" y1="12" x2="20" y2="20" stroke="#8B5CF6" stroke-width="1" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

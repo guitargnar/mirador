@@ -1,0 +1,169 @@
+MIRADOR SMART V2 ROUTING ANALYSIS
+==================================================
+
+EXECUTIVE SUMMARY
+--------------------
+Total Intent Types: 8
+Total Pattern Matches: 64
+Unique Models Used: 12
+
+DECISION TREE
+--------------------
+Mirador Smart V2 Decision Tree
+========================================
+
+Query Analysis Flow:
+├── Quick Response Check
+│   └── Keywords: quick, brief, summary, tldr, short, what.*now, immediate
+│
+├── Financial Check
+│   ├── Keywords: money, budget, finance, salary, investment
+│   │   ...4 more
+│   └── Models: matthew_context_provider_v6_complete → universal_financial_advisor → practical_implementer
+│
+├── Health Check
+│   ├── Keywords: health, fitness, wellness, stress, sleep
+│   │   ...4 more
+│   └── Models: matthew_context_provider_v6_complete → universal_health_wellness → practical_implementer
+│
+├── Location Check
+│   ├── Keywords: louisville, kentucky, local, jcps, school
+│   │   ...2 more
+│   └── Models: universal_louisville_expert → practical_implementer
+│
+├── Music Check
+│   ├── Keywords: music, guitar, practice, performance, song
+│   │   ...3 more
+│   └── Models: matthew_context_provider_v6_complete → universal_music_mentor → universal_creative_catalyst
+│
+├── Career Check
+│   ├── Keywords: career, job, promotion, humana, corporate
+│   │   ...4 more
+│   └── Models: matthew_context_provider_v6_complete → universal_career_strategist → universal_corporate_navigator
+│
+├── Creative Check
+│   ├── Keywords: creative, innovate, idea, breakthrough, design
+│   │   ...2 more
+│   └── Models: universal_creative_catalyst → universal_strategy_architect → practical_implementer
+│
+├── Family Check
+│   ├── Keywords: family, kids, teens, relationship, parenting
+│   │   ...3 more
+│   └── Models: matthew_context_provider_v6_complete → universal_relationship_harmony → practical_implementer
+│
+└── Strategic Check
+
+INTENT ROUTING DETAILS
+--------------------
+
+QUICK:
+  Description: Fast responses for immediate needs
+  Pattern Count: 7
+  Patterns: quick, brief, summary, tldr, short, what.*now, immediate
+  Model Chain (1 models): speed_optimizer_phi
+
+FINANCIAL:
+  Description: Money, budgeting, investment advice
+  Pattern Count: 9
+  Patterns: money, budget, finance, salary, investment, savings, afford, cost, spend
+  Model Chain (3 models): matthew_context_provider_v6_complete → universal_financial_advisor → practical_implementer
+
+HEALTH:
+  Description: Wellness, fitness, lifestyle optimization
+  Pattern Count: 9
+  Patterns: health, fitness, wellness, stress, sleep, energy, tired, exercise, nutrition
+  Model Chain (3 models): matthew_context_provider_v6_complete → universal_health_wellness → practical_implementer
+
+LOCATION:
+  Description: Louisville-specific knowledge
+  Pattern Count: 7
+  Patterns: louisville, kentucky, local, jcps, school, neighborhood, downtown
+  Model Chain (2 models): universal_louisville_expert → practical_implementer
+
+MUSIC:
+  Description: Guitar, practice, performance guidance
+  Pattern Count: 8
+  Patterns: music, guitar, practice, performance, song, play, band, chord
+  Model Chain (3 models): matthew_context_provider_v6_complete → universal_music_mentor → universal_creative_catalyst
+
+CAREER:
+  Description: Professional development, corporate strategy
+  Pattern Count: 9
+  Patterns: career, job, promotion, humana, corporate, work, meeting, boss, ai.*leader
+  Model Chain (3 models): matthew_context_provider_v6_complete → universal_career_strategist → universal_corporate_navigator
+
+CREATIVE:
+  Description: Innovation, breakthrough thinking
+  Pattern Count: 7
+  Patterns: creative, innovate, idea, breakthrough, design, imagine, invent
+  Model Chain (3 models): universal_creative_catalyst → universal_strategy_architect → practical_implementer
+
+FAMILY:
+  Description: Parenting, relationships, family dynamics
+  Pattern Count: 8
+  Patterns: family, kids, teens, relationship, parenting, daughter, son, children
+  Model Chain (3 models): matthew_context_provider_v6_complete → universal_relationship_harmony → practical_implementer
+
+
+MODEL USAGE ANALYSIS
+--------------------
+
+practical_implementer:
+  Usage Count: 5
+  Average Position: 2.8
+  Used In: financial, health, location, creative, family
+
+matthew_context_provider_v6_complete:
+  Usage Count: 5
+  Average Position: 1.0
+  Used In: financial, health, music, career, family
+
+universal_creative_catalyst:
+  Usage Count: 2
+  Average Position: 2.0
+  Used In: music, creative
+
+speed_optimizer_phi:
+  Usage Count: 1
+  Average Position: 1.0
+  Used In: quick
+
+universal_career_strategist:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: career
+
+universal_corporate_navigator:
+  Usage Count: 1
+  Average Position: 3.0
+  Used In: career
+
+universal_health_wellness:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: health
+
+universal_louisville_expert:
+  Usage Count: 1
+  Average Position: 1.0
+  Used In: location
+
+universal_music_mentor:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: music
+
+universal_strategy_architect:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: creative
+
+universal_relationship_harmony:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: family
+
+universal_financial_advisor:
+  Usage Count: 1
+  Average Position: 2.0
+  Used In: financial

@@ -1,0 +1,1205 @@
+{
+  "scripts": {
+    "mirador-smart-v2-consolidated": {
+      "name": "mirador-smart-v2-consolidated",
+      "size": 5419,
+      "lines": 176,
+      "models": [
+        "speed_optimizer_phi"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "speed_optimizer_phi"
+      ],
+      "functions": [
+        "analyze_query",
+        "get_model_chain"
+      ],
+      "external_commands": [],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-smart": {
+      "name": "mirador-smart",
+      "size": 1529,
+      "lines": 30,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-smart.sh": {
+      "name": "mirador-smart.sh",
+      "size": 2663,
+      "lines": 91,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "",
+      "version": null
+    },
+    "mirador-smart-v3": {
+      "name": "mirador-smart-v3",
+      "size": 10277,
+      "lines": 286,
+      "models": [
+        "speed_optimizer_phi"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "speed_optimizer_phi"
+      ],
+      "functions": [
+        "analyze_query",
+        "get_model_chain",
+        "create_enhanced_prompt"
+      ],
+      "external_commands": [
+        "git",
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation",
+        "has_feedback_integration"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-smart-v2": {
+      "name": "mirador-smart-v2",
+      "size": 5419,
+      "lines": 176,
+      "models": [
+        "speed_optimizer_phi"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "speed_optimizer_phi"
+      ],
+      "functions": [
+        "analyze_query",
+        "get_model_chain"
+      ],
+      "external_commands": [],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_universal_runner.sh": {
+      "name": "mirador_universal_runner.sh",
+      "size": 7310,
+      "lines": 159,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [
+        "life_optimization",
+        "matthew_context_provider_v6_complete",
+        "strategic_synthesis",
+        "relationship_harmony",
+        "creative_breakthrough",
+        "universal_strategy_architect",
+        "technical_mastery",
+        "business_acceleration"
+      ],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "uses_timeout",
+        "has_logging"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_universal_runner_v3_optimized.sh": {
+      "name": "mirador_universal_runner_v3_optimized.sh",
+      "size": 5993,
+      "lines": 215,
+      "models": [
+        "productivity_optimizer:latest",
+        "solution_architect:latest",
+        "cross_model_synthesizer:latest",
+        "DeepSeek-based",
+        "master_coder:latest",
+        "creative_catalyst:latest",
+        "universal_strategy_architect:latest",
+        "matthews_strategic_accelerator_v2:latest",
+        "ai_career_strategist:latest",
+        "speed",
+        "matthew_context_provider_v6_complete:latest",
+        "digital_storyteller:latest",
+        "Lighter",
+        "relationship_communication_specialist:latest",
+        "practical_implementer:latest",
+        "engagement_optimizer:latest",
+        "code_reviewer:latest",
+        "for",
+        "health_wellness_optimizer:latest",
+        "speed_optimizer_phi:latest",
+        "analytical_expert_gemma:latest",
+        "life_transition_coordinator:latest",
+        "optimized_decision_simplifier_v3:latest",
+        "action_crystallizer:latest",
+        "multilingual_assistant_qwen:latest"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "life_optimization",
+        "deep_analysis",
+        "global_insight",
+        "strategic_synthesis",
+        "rapid_decision",
+        "relationship_harmony",
+        "creative_breakthrough",
+        "chain_type",
+        "technical_mastery",
+        "business_acceleration"
+      ],
+      "functions": [],
+      "external_commands": [
+        "jq",
+        "grep"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_conductor.sh": {
+      "name": "mirador_conductor.sh",
+      "size": 945,
+      "lines": 25,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "",
+      "version": null
+    },
+    "mirador_auto_router.sh": {
+      "name": "mirador_auto_router.sh",
+      "size": 5221,
+      "lines": 186,
+      "models": [],
+      "scripts_referenced": [
+        "mirador_hybrid_chains.sh",
+        "mirador-smart-v2",
+        "mirador_universal_runner_v3_optimized.sh",
+        "mirador_universal_runner_v2.sh",
+        "mirador_rag_chain.sh"
+      ],
+      "chains": [
+        "deep_analysis",
+        "global_insight",
+        "rapid_decision",
+        "business_acceleration",
+        "relationship_harmony",
+        "life_optimization"
+      ],
+      "functions": [
+        "route_query"
+      ],
+      "external_commands": [
+        "python3?",
+        "jq"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_with_memory.sh": {
+      "name": "mirador_with_memory.sh",
+      "size": 2651,
+      "lines": 107,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [
+        "individual_query",
+        "quality_score",
+        "models_used"
+      ],
+      "functions": [
+        "init_memory",
+        "log_start",
+        "log_completion",
+        "check_history",
+        "run_with_memory"
+      ],
+      "external_commands": [
+        "python3?",
+        "grep",
+        "awk"
+      ],
+      "patterns": [
+        "has_logging"
+      ],
+      "description": "",
+      "version": null
+    },
+    "mirador_domains.sh": {
+      "name": "mirador_domains.sh",
+      "size": 760,
+      "lines": 18,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "",
+      "version": null
+    },
+    "mirador_workflow.sh": {
+      "name": "mirador_workflow.sh",
+      "size": 10435,
+      "lines": 339,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [
+        "guitar_learning",
+        "business_strategies",
+        "financial_plans",
+        "career_plans"
+      ],
+      "functions": [
+        "show_help",
+        "create_default_templates",
+        "run_with_template",
+        "review_entries",
+        "load_workflow_config"
+      ],
+      "external_commands": [
+        "jq",
+        "grep",
+        "sed"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "creates_output_dir",
+        "has_logging"
+      ],
+      "description": "!/usr/bin/env bash",
+      "version": null
+    },
+    "mirador_rag_chain.sh": {
+      "name": "mirador_rag_chain.sh",
+      "size": 6377,
+      "lines": 234,
+      "models": [
+        "analytical_expert_gemma:latest",
+        "solution_architect:latest",
+        "universal_strategy_architect:latest",
+        "cross_model_synthesizer:latest",
+        "business_strategist_fast:latest",
+        "practical_implementer:latest",
+        "command_r_code_analyst:latest",
+        "command_r_rag_specialist:latest",
+        "master_coder:latest",
+        "matthew_context_provider_v6_complete:latest",
+        "action_crystallizer:latest"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "document_path",
+        "command_r",
+        "analysis_type"
+      ],
+      "functions": [],
+      "external_commands": [
+        "jq",
+        "grep"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_hybrid_chains.sh": {
+      "name": "mirador_hybrid_chains.sh",
+      "size": 9772,
+      "lines": 335,
+      "models": [
+        "gemma2_fast:latest",
+        "qwen2_fast:latest",
+        "Qwen-based",
+        "cross_model_synthesizer:latest",
+        "solution_architect:latest",
+        "creativity",
+        "Llama-based",
+        "perspective",
+        "reasoning",
+        "creative_catalyst:latest",
+        "design",
+        "Technical",
+        "synthesis",
+        "understanding",
+        "Action",
+        "analysis",
+        "universal_strategy_architect:latest",
+        "mistral:latest",
+        "llama3",
+        "strategy",
+        "Qwen",
+        "matthew_context_provider_v6_complete:latest",
+        "Document",
+        "code",
+        "ideation",
+        "Synthesis",
+        "Communication",
+        "digital_storyteller:latest",
+        "Additional",
+        "Command-R",
+        "Gemma",
+        "integration",
+        "practical_implementer:latest",
+        "command_r_code_analyst:latest",
+        "command_r_rag_specialist:latest",
+        "narrative",
+        "engagement_optimizer:latest",
+        "code_reviewer:latest",
+        "Quick",
+        "Final",
+        "speed_optimizer_phi:latest",
+        "European",
+        "analytical_expert_gemma:latest",
+        "Practical",
+        "2:3b",
+        "Cultural",
+        "Llama",
+        "DeepSeek",
+        "Gemma-based",
+        "Analysis",
+        "items",
+        "Deep",
+        "Context",
+        "Architecture",
+        "action_crystallizer:latest",
+        "multilingual_assistant_qwen:latest"
+      ],
+      "scripts_referenced": [],
+      "chains": [
+        "base_llms",
+        "fast_mode",
+        "chain_type"
+      ],
+      "functions": [
+        "run_model",
+        "get_base_llm"
+      ],
+      "external_commands": [
+        "jq",
+        "grep"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "uses_context_accumulation"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "prompt_feedback.sh": {
+      "name": "prompt_feedback.sh",
+      "size": 539,
+      "lines": 23,
+      "models": [],
+      "scripts_referenced": [
+        "mirador_feedback.sh"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [
+        "has_feedback_integration"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-ez-stream": {
+      "name": "mirador-ez-stream",
+      "size": 6439,
+      "lines": 211,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez",
+        "mirador-stream"
+      ],
+      "chains": [],
+      "functions": [
+        "log_info",
+        "log_error",
+        "check_model",
+        "execute_streaming_chain",
+        "execute_traditional_chain",
+        "execute_hybrid",
+        "main"
+      ],
+      "external_commands": [
+        "grep"
+      ],
+      "patterns": [
+        "has_usage",
+        "has_error_handling",
+        "has_logging"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-ez": {
+      "name": "mirador-ez",
+      "size": 6442,
+      "lines": 237,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [
+        "log_info",
+        "log_error",
+        "check_model",
+        "execute_single_model",
+        "execute_chain",
+        "list_models",
+        "health_check",
+        "main"
+      ],
+      "external_commands": [
+        "grep",
+        "awk"
+      ],
+      "patterns": [
+        "has_usage",
+        "has_error_handling",
+        "has_logging",
+        "has_feedback_integration"
+      ],
+      "description": "!/bin/bash",
+      "version": "2.0"
+    },
+    "mirador-full": {
+      "name": "mirador-full",
+      "size": 89,
+      "lines": 3,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-stream"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-v2": {
+      "name": "mirador-v2",
+      "size": 143,
+      "lines": 4,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-run": {
+      "name": "mirador-run",
+      "size": 166,
+      "lines": 9,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "has_usage"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-unified": {
+      "name": "mirador-unified",
+      "size": 6028,
+      "lines": 179,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-interactive",
+        "mirador-conductor"
+      ],
+      "chains": [],
+      "functions": [
+        "print_header",
+        "check_dependencies",
+        "run_bridge",
+        "process_command"
+      ],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-enhanced": {
+      "name": "mirador-enhanced",
+      "size": 595,
+      "lines": 18,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-intervene": {
+      "name": "mirador-intervene",
+      "size": 15409,
+      "lines": 397,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [
+        "auto_approve_specialists",
+        "timeout_seconds",
+        "watch_mode",
+        "__main__",
+        "store_true",
+        "priority_threshold",
+        "intervention_types",
+        "always_intervene_specialists",
+        "default_action"
+      ],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [],
+      "description": "!/usr/bin/env python3",
+      "version": null
+    },
+    "mirador-interactive": {
+      "name": "mirador-interactive",
+      "size": 11125,
+      "lines": 304,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [
+        "add_to_history",
+        "analyze_task",
+        "run_chain"
+      ],
+      "external_commands": [
+        "python3?",
+        "grep",
+        "sed"
+      ],
+      "patterns": [
+        "uses_colors",
+        "creates_output_dir"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-collaborate": {
+      "name": "mirador-collaborate",
+      "size": 24509,
+      "lines": 817,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [
+        "message_type",
+        "test_session",
+        "target_specialist",
+        "message_graph",
+        "communication_graph",
+        "source_specialist",
+        "code_reviewer_fix",
+        "__main__",
+        "store_true",
+        "user_password",
+        "master_coder",
+        "security_expert"
+      ],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors"
+      ],
+      "description": "!/usr/bin/env python3",
+      "version": null
+    },
+    "mirador-conductor": {
+      "name": "mirador-conductor",
+      "size": 2823,
+      "lines": 81,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [
+        "run_conductor"
+      ],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-quick": {
+      "name": "mirador-quick",
+      "size": 118,
+      "lines": 3,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-stream"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-stream": {
+      "name": "mirador-stream",
+      "size": 3037,
+      "lines": 103,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [
+        "quick_response",
+        "store_true",
+        "__main__"
+      ],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors"
+      ],
+      "description": "!/usr/bin/env python3",
+      "version": null
+    },
+    "mirador-rapid": {
+      "name": "mirador-rapid",
+      "size": 4611,
+      "lines": 121,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [
+        "run_agents"
+      ],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "creates_output_dir"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador-simple": {
+      "name": "mirador-simple",
+      "size": 272,
+      "lines": 11,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "python3?"
+      ],
+      "patterns": [],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_maintenance.sh": {
+      "name": "mirador_maintenance.sh",
+      "size": 2066,
+      "lines": 85,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [
+        "enhanced_agent_fast_v2"
+      ],
+      "functions": [],
+      "external_commands": [
+        "grep"
+      ],
+      "patterns": [
+        "uses_timeout"
+      ],
+      "description": "",
+      "version": null
+    },
+    "mirador_feedback.sh": {
+      "name": "mirador_feedback.sh",
+      "size": 7003,
+      "lines": 227,
+      "models": [],
+      "scripts_referenced": [],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "python3?",
+        "sed"
+      ],
+      "patterns": [
+        "uses_colors",
+        "has_usage",
+        "has_logging",
+        "interactive",
+        "has_feedback_integration",
+        "uses_python"
+      ],
+      "description": "!/bin/bash",
+      "version": null
+    },
+    "mirador_qa_comprehensive.sh": {
+      "name": "mirador_qa_comprehensive.sh",
+      "size": 3648,
+      "lines": 104,
+      "models": [],
+      "scripts_referenced": [
+        "mirador-ez"
+      ],
+      "chains": [],
+      "functions": [],
+      "external_commands": [
+        "grep"
+      ],
+      "patterns": [],
+      "description": "",
+      "version": null
+    }
+  },
+  "categories": {
+    "smart_routers": [
+      "mirador-smart-v2-consolidated",
+      "mirador-smart",
+      "mirador-smart.sh",
+      "mirador-smart-v3",
+      "mirador-smart-v2"
+    ],
+    "universal_runners": [
+      "mirador_universal_runner.sh",
+      "mirador_universal_runner_v3_optimized.sh"
+    ],
+    "specialized_chains": [
+      "mirador_conductor.sh",
+      "mirador_auto_router.sh",
+      "mirador_with_memory.sh",
+      "mirador_domains.sh",
+      "mirador_workflow.sh",
+      "mirador_rag_chain.sh",
+      "mirador_hybrid_chains.sh"
+    ],
+    "utilities": [
+      "prompt_feedback.sh"
+    ],
+    "core_interfaces": [
+      "mirador-ez-stream",
+      "mirador-ez",
+      "mirador-full",
+      "mirador-v2",
+      "mirador-run",
+      "mirador-unified",
+      "mirador-enhanced",
+      "mirador-intervene",
+      "mirador-interactive",
+      "mirador-collaborate",
+      "mirador-conductor",
+      "mirador-quick",
+      "mirador-stream",
+      "mirador-rapid",
+      "mirador-simple"
+    ],
+    "maintenance": [
+      "mirador_maintenance.sh"
+    ],
+    "feedback_systems": [
+      "mirador_feedback.sh",
+      "mirador_qa_comprehensive.sh"
+    ],
+    "directories": [
+      "mirador-core",
+      "conversations",
+      "outputs"
+    ],
+    "backups": [
+      "mirador-smart-v2.backup",
+      "mirador-smart-v2.backup_20250710_233251",
+      "mirador-smart-v2.backup_20250710_214426"
+    ],
+    "others": [
+      ".DS_Store"
+    ]
+  },
+  "families": {
+    "smart_routing": [
+      "mirador-smart-v2-consolidated",
+      "mirador-smart",
+      "mirador-smart.sh",
+      "mirador-smart-v3",
+      "mirador-smart-v2"
+    ],
+    "universal_runners": [
+      "mirador_universal_runner.sh",
+      "mirador_universal_runner_v3_optimized.sh"
+    ],
+    "domain_conductor.sh": [
+      "mirador_conductor.sh"
+    ],
+    "domain_auto": [
+      "mirador_auto_router.sh"
+    ],
+    "domain_with": [
+      "mirador_with_memory.sh"
+    ],
+    "domain_domains.sh": [
+      "mirador_domains.sh"
+    ],
+    "domain_workflow.sh": [
+      "mirador_workflow.sh"
+    ],
+    "domain_rag": [
+      "mirador_rag_chain.sh"
+    ],
+    "domain_hybrid": [
+      "mirador_hybrid_chains.sh"
+    ],
+    "domain_feedback.sh": [
+      "prompt_feedback.sh",
+      "mirador_feedback.sh"
+    ],
+    "core_interfaces": [
+      "mirador-ez-stream",
+      "mirador-ez",
+      "mirador-full",
+      "mirador-v2",
+      "mirador-run",
+      "mirador-unified",
+      "mirador-enhanced",
+      "mirador-intervene",
+      "mirador-interactive",
+      "mirador-collaborate",
+      "mirador-conductor",
+      "mirador-quick",
+      "mirador-stream",
+      "mirador-rapid",
+      "mirador-simple"
+    ],
+    "domain_maintenance.sh": [
+      "mirador_maintenance.sh"
+    ],
+    "domain_qa": [
+      "mirador_qa_comprehensive.sh"
+    ]
+  },
+  "model_analysis": {
+    "most_used_models": [
+      [
+        "speed_optimizer_phi",
+        3
+      ],
+      [
+        "solution_architect:latest",
+        3
+      ],
+      [
+        "cross_model_synthesizer:latest",
+        3
+      ],
+      [
+        "universal_strategy_architect:latest",
+        3
+      ],
+      [
+        "matthew_context_provider_v6_complete:latest",
+        3
+      ],
+      [
+        "practical_implementer:latest",
+        3
+      ],
+      [
+        "analytical_expert_gemma:latest",
+        3
+      ],
+      [
+        "action_crystallizer:latest",
+        3
+      ],
+      [
+        "master_coder:latest",
+        2
+      ],
+      [
+        "creative_catalyst:latest",
+        2
+      ]
+    ],
+    "model_combinations": {
+      "['DeepSeek-based', 'Lighter', 'action_crystallizer:latest', 'ai_career_strategist:latest', 'analytical_expert_gemma:latest', 'code_reviewer:latest', 'creative_catalyst:latest', 'cross_model_synthesizer:latest', 'digital_storyteller:latest', 'engagement_optimizer:latest', 'for', 'health_wellness_optimizer:latest', 'life_transition_coordinator:latest', 'master_coder:latest', 'matthew_context_provider_v6_complete:latest', 'matthews_strategic_accelerator_v2:latest', 'multilingual_assistant_qwen:latest', 'optimized_decision_simplifier_v3:latest', 'practical_implementer:latest', 'productivity_optimizer:latest', 'relationship_communication_specialist:latest', 'solution_architect:latest', 'speed', 'speed_optimizer_phi:latest', 'universal_strategy_architect:latest']": [
+        "mirador_universal_runner_v3_optimized.sh"
+      ],
+      "['action_crystallizer:latest', 'analytical_expert_gemma:latest', 'business_strategist_fast:latest', 'command_r_code_analyst:latest', 'command_r_rag_specialist:latest', 'cross_model_synthesizer:latest', 'master_coder:latest', 'matthew_context_provider_v6_complete:latest', 'practical_implementer:latest', 'solution_architect:latest', 'universal_strategy_architect:latest']": [
+        "mirador_rag_chain.sh"
+      ],
+      "['2:3b', 'Action', 'Additional', 'Analysis', 'Architecture', 'Command-R', 'Communication', 'Context', 'Cultural', 'Deep', 'DeepSeek', 'Document', 'European', 'Final', 'Gemma', 'Gemma-based', 'Llama', 'Llama-based', 'Practical', 'Quick', 'Qwen', 'Qwen-based', 'Synthesis', 'Technical', 'action_crystallizer:latest', 'analysis', 'analytical_expert_gemma:latest', 'code', 'code_reviewer:latest', 'command_r_code_analyst:latest', 'command_r_rag_specialist:latest', 'creative_catalyst:latest', 'creativity', 'cross_model_synthesizer:latest', 'design', 'digital_storyteller:latest', 'engagement_optimizer:latest', 'gemma2_fast:latest', 'ideation', 'integration', 'items', 'llama3', 'matthew_context_provider_v6_complete:latest', 'mistral:latest', 'multilingual_assistant_qwen:latest', 'narrative', 'perspective', 'practical_implementer:latest', 'qwen2_fast:latest', 'reasoning', 'solution_architect:latest', 'speed_optimizer_phi:latest', 'strategy', 'synthesis', 'understanding', 'universal_strategy_architect:latest']": [
+        "mirador_hybrid_chains.sh"
+      ]
+    },
+    "total_unique_models": 70,
+    "scripts_using_models": 6
+  },
+  "hidden_features": [
+    {
+      "script": "mirador-smart",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-smart.sh",
+      "type": "undocumented",
+      "description": ""
+    },
+    {
+      "script": "mirador-smart-v3",
+      "type": "feature_rich",
+      "patterns": [
+        "has_feedback_integration",
+        "uses_context_accumulation",
+        "has_usage",
+        "has_logging"
+      ]
+    },
+    {
+      "script": "mirador_universal_runner_v3_optimized.sh",
+      "type": "unique_models",
+      "models": [
+        "productivity_optimizer:latest",
+        "matthews_strategic_accelerator_v2:latest",
+        "DeepSeek-based",
+        "Lighter",
+        "ai_career_strategist:latest",
+        "relationship_communication_specialist:latest",
+        "life_transition_coordinator:latest",
+        "speed",
+        "optimized_decision_simplifier_v3:latest",
+        "health_wellness_optimizer:latest",
+        "for"
+      ]
+    },
+    {
+      "script": "mirador_conductor.sh",
+      "type": "undocumented",
+      "description": ""
+    },
+    {
+      "script": "mirador_with_memory.sh",
+      "type": "undocumented",
+      "description": ""
+    },
+    {
+      "script": "mirador_domains.sh",
+      "type": "undocumented",
+      "description": ""
+    },
+    {
+      "script": "mirador_rag_chain.sh",
+      "type": "unique_models",
+      "models": [
+        "business_strategist_fast:latest"
+      ]
+    },
+    {
+      "script": "mirador_hybrid_chains.sh",
+      "type": "unique_models",
+      "models": [
+        "qwen2_fast:latest",
+        "gemma2_fast:latest",
+        "Qwen-based",
+        "creativity",
+        "Llama-based",
+        "perspective",
+        "reasoning",
+        "design",
+        "Technical",
+        "understanding",
+        "synthesis",
+        "Action",
+        "analysis",
+        "mistral:latest",
+        "llama3",
+        "strategy",
+        "Qwen",
+        "Document",
+        "code",
+        "ideation",
+        "Synthesis",
+        "Communication",
+        "Additional",
+        "Command-R",
+        "Gemma",
+        "integration",
+        "narrative",
+        "Quick",
+        "Final",
+        "European",
+        "Practical",
+        "2:3b",
+        "Cultural",
+        "Llama",
+        "DeepSeek",
+        "Gemma-based",
+        "Analysis",
+        "items",
+        "Deep",
+        "Context",
+        "Architecture"
+      ]
+    },
+    {
+      "script": "prompt_feedback.sh",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-full",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-v2",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-enhanced",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-intervene",
+      "type": "undocumented",
+      "description": "!/usr/bin/env python3"
+    },
+    {
+      "script": "mirador-interactive",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-collaborate",
+      "type": "undocumented",
+      "description": "!/usr/bin/env python3"
+    },
+    {
+      "script": "mirador-quick",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador-stream",
+      "type": "undocumented",
+      "description": "!/usr/bin/env python3"
+    },
+    {
+      "script": "mirador-simple",
+      "type": "undocumented",
+      "description": "!/bin/bash"
+    },
+    {
+      "script": "mirador_maintenance.sh",
+      "type": "undocumented",
+      "description": ""
+    },
+    {
+      "script": "mirador_feedback.sh",
+      "type": "feature_rich",
+      "patterns": [
+        "interactive",
+        "uses_python",
+        "has_logging",
+        "has_usage",
+        "has_feedback_integration"
+      ]
+    },
+    {
+      "script": "mirador_qa_comprehensive.sh",
+      "type": "undocumented",
+      "description": ""
+    }
+  ]
+}

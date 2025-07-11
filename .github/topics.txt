@@ -1,0 +1,23 @@
+# GitHub Topics for Mirador Repository
+# Add these topics to improve discoverability
+
+ai
+artificial-intelligence
+llm
+large-language-models
+ollama
+orchestration
+ai-orchestration
+machine-learning
+nlp
+natural-language-processing
+chain-of-thought
+prompt-engineering
+local-ai
+privacy-first
+macos
+apple-silicon
+python
+shell-scripting
+ai-framework
+multi-model

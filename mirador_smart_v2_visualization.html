@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mirador Smart V2 Routing Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        .intent-card { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; background-color: #f9f9f9; }
+        .intent-header { font-weight: bold; color: #2c5aa0; font-size: 18px; margin-bottom: 10px; }
+        .patterns { background-color: #e8f4f8; padding: 10px; border-radius: 3px; margin: 5px 0; }
+        .pattern-tag { display: inline-block; background-color: #2c5aa0; color: white; padding: 3px 8px; margin: 2px; border-radius: 3px; font-size: 12px; }
+        .model-chain { background-color: #f0f8ff; padding: 10px; border-radius: 3px; margin: 5px 0; }
+        .model { display: inline-block; background-color: #4caf50; color: white; padding: 5px 10px; margin: 2px; border-radius: 3px; }
+        .arrow { color: #666; margin: 0 5px; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat-card { background-color: #f8f8f8; padding: 15px; border-radius: 5px; text-align: center; border: 1px solid #e0e0e0; }
+        .stat-number { font-size: 28px; font-weight: bold; color: #2c5aa0; }
+        .stat-label { color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mirador Smart V2 Routing Analysis</h1>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Intent Types</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">64</div>
+                <div class="stat-label">Total Patterns</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Unique Models</div>
+            </div>
+        </div>
+        
+        <h2>Intent Routing Details</h2>
+
+        <div class="intent-card">
+            <div class="intent-header">QUICK</div>
+            <div style="color: #666; margin-bottom: 10px;">Fast responses for immediate needs</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">quick</span><span class="pattern-tag">brief</span><span class="pattern-tag">summary</span><span class="pattern-tag">tldr</span><span class="pattern-tag">short</span><span class="pattern-tag">what.*now</span><span class="pattern-tag">immediate</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">speed_optimizer_phi</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">FINANCIAL</div>
+            <div style="color: #666; margin-bottom: 10px;">Money, budgeting, investment advice</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">money</span><span class="pattern-tag">budget</span><span class="pattern-tag">finance</span><span class="pattern-tag">salary</span><span class="pattern-tag">investment</span><span class="pattern-tag">savings</span><span class="pattern-tag">afford</span><span class="pattern-tag">cost</span><span class="pattern-tag">spend</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">matthew_context_provider_v6_complete</span> <span class="arrow">→</span> <span class="model">universal_financial_advisor</span> <span class="arrow">→</span> <span class="model">practical_implementer</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">HEALTH</div>
+            <div style="color: #666; margin-bottom: 10px;">Wellness, fitness, lifestyle optimization</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">health</span><span class="pattern-tag">fitness</span><span class="pattern-tag">wellness</span><span class="pattern-tag">stress</span><span class="pattern-tag">sleep</span><span class="pattern-tag">energy</span><span class="pattern-tag">tired</span><span class="pattern-tag">exercise</span><span class="pattern-tag">nutrition</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">matthew_context_provider_v6_complete</span> <span class="arrow">→</span> <span class="model">universal_health_wellness</span> <span class="arrow">→</span> <span class="model">practical_implementer</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">LOCATION</div>
+            <div style="color: #666; margin-bottom: 10px;">Louisville-specific knowledge</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">louisville</span><span class="pattern-tag">kentucky</span><span class="pattern-tag">local</span><span class="pattern-tag">jcps</span><span class="pattern-tag">school</span><span class="pattern-tag">neighborhood</span><span class="pattern-tag">downtown</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">universal_louisville_expert</span> <span class="arrow">→</span> <span class="model">practical_implementer</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">MUSIC</div>
+            <div style="color: #666; margin-bottom: 10px;">Guitar, practice, performance guidance</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">music</span><span class="pattern-tag">guitar</span><span class="pattern-tag">practice</span><span class="pattern-tag">performance</span><span class="pattern-tag">song</span><span class="pattern-tag">play</span><span class="pattern-tag">band</span><span class="pattern-tag">chord</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">matthew_context_provider_v6_complete</span> <span class="arrow">→</span> <span class="model">universal_music_mentor</span> <span class="arrow">→</span> <span class="model">universal_creative_catalyst</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">CAREER</div>
+            <div style="color: #666; margin-bottom: 10px;">Professional development, corporate strategy</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">career</span><span class="pattern-tag">job</span><span class="pattern-tag">promotion</span><span class="pattern-tag">humana</span><span class="pattern-tag">corporate</span><span class="pattern-tag">work</span><span class="pattern-tag">meeting</span><span class="pattern-tag">boss</span><span class="pattern-tag">ai.*leader</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">matthew_context_provider_v6_complete</span> <span class="arrow">→</span> <span class="model">universal_career_strategist</span> <span class="arrow">→</span> <span class="model">universal_corporate_navigator</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">CREATIVE</div>
+            <div style="color: #666; margin-bottom: 10px;">Innovation, breakthrough thinking</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">creative</span><span class="pattern-tag">innovate</span><span class="pattern-tag">idea</span><span class="pattern-tag">breakthrough</span><span class="pattern-tag">design</span><span class="pattern-tag">imagine</span><span class="pattern-tag">invent</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">universal_creative_catalyst</span> <span class="arrow">→</span> <span class="model">universal_strategy_architect</span> <span class="arrow">→</span> <span class="model">practical_implementer</span>
+            </div>
+        </div>
+
+        <div class="intent-card">
+            <div class="intent-header">FAMILY</div>
+            <div style="color: #666; margin-bottom: 10px;">Parenting, relationships, family dynamics</div>
+            
+            <div class="patterns">
+                <strong>Trigger Patterns:</strong><br>
+                <span class="pattern-tag">family</span><span class="pattern-tag">kids</span><span class="pattern-tag">teens</span><span class="pattern-tag">relationship</span><span class="pattern-tag">parenting</span><span class="pattern-tag">daughter</span><span class="pattern-tag">son</span><span class="pattern-tag">children</span>
+            </div>
+            
+            <div class="model-chain">
+                <strong>Model Chain:</strong><br>
+                <span class="model">matthew_context_provider_v6_complete</span> <span class="arrow">→</span> <span class="model">universal_relationship_harmony</span> <span class="arrow">→</span> <span class="model">practical_implementer</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

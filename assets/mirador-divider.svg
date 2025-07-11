@@ -1,0 +1,69 @@
+<svg width="1200" height="100" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dividerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0" />
+      <stop offset="25%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="100" fill="transparent"/>
+  
+  <!-- Central line with gradient -->
+  <line x1="100" y1="50" x2="1100" y2="50" stroke="url(#dividerGradient)" stroke-width="2">
+    <animate attributeName="x1" values="100;50;100" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1100;1150;1100" dur="10s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Decorative nodes -->
+  <g>
+    <!-- Left node -->
+    <circle cx="100" cy="50" r="4" fill="#60A5FA">
+      <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Center nodes -->
+    <circle cx="400" cy="50" r="3" fill="#60A5FA" opacity="0.6">
+      <animate attributeName="cy" values="50;45;50" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="50" r="5" fill="#8B5CF6">
+      <animate attributeName="r" values="5;8;5" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="50" r="3" fill="#F59E0B" opacity="0.6">
+      <animate attributeName="cy" values="50;55;50" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Right node -->
+    <circle cx="1100" cy="50" r="4" fill="#F59E0B">
+      <animate attributeName="r" values="4;6;4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Flowing particles -->
+  <g>
+    <circle r="2" fill="#60A5FA" opacity="0">
+      <animateMotion dur="5s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#8B5CF6" opacity="0">
+      <animateMotion dur="5s" begin="1.5s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" dur="5s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#F59E0B" opacity="0">
+      <animateMotion dur="5s" begin="3s" repeatCount="indefinite">
+        <mpath href="#flowPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" dur="5s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Flow path -->
+  <path id="flowPath" d="M100,50 Q300,40 600,50 T1100,50" fill="none"/>
+</svg>
