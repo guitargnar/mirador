@@ -1,454 +1,616 @@
-# Mirador Prompt Library
+# Mirador AI Framework - Comprehensive Prompt Library
 
-A comprehensive collection of prompts optimized for the Mirador AI Orchestration System. Each prompt is designed to leverage specific model chains and includes the exact commands to execute from your home directory.
+## Overview
+
+This comprehensive prompt library provides ready-to-use commands spanning all aspects of personal and professional life. Each command leverages Mirador's sophisticated chain-of-thought reasoning while respecting real-world constraints.
 
 ## Table of Contents
 
-- [Daily Life Management](#daily-life-management)
+- [Quick Reference](#quick-reference)
+- [Personal Productivity](#personal-productivity)
+- [Career & Professional Development](#career--professional-development)
+- [Technical & Coding](#technical--coding)
 - [Financial Planning](#financial-planning)
 - [Health & Wellness](#health--wellness)
-- [Career Development](#career-development)
-- [Creative Projects](#creative-projects)
-- [Business Strategy](#business-strategy)
-- [Technical Mastery](#technical-mastery)
-- [Relationship & Family](#relationship--family)
-- [Louisville Specific](#louisville-specific)
-- [Music & Performance](#music--performance)
+- [Family & Relationships](#family--relationships)
+- [Music & Creative](#music--creative)
+- [Strategic Planning](#strategic-planning)
+- [Learning & Development](#learning--development)
+- [Louisville-Specific](#louisville-specific)
+- [Advanced Combinations](#advanced-combinations)
+- [Custom Chain Examples](#custom-chain-examples)
 
----
+## Quick Reference
 
-## Daily Life Management
-
-### Morning Planning
+### Basic Command Structure
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "What are my top 3 priorities today based on my current projects, deadlines, and personal commitments?"
+# Smart router (automatic chain selection)
+./mirador-smart-v2 "Your query here"
+
+# Universal runner with specific chain
+./mirador_universal_runner_v2.sh <chain_type> "Your query" [format]
+
+# Optimized runner with diverse models
+./bin/mirador_universal_runner_v3_optimized.sh <chain_type> "Your query" [format]
+
+# Simple interface
+./mirador-ez chain "Your query" model1 model2 model3
 ```
 
-### Weekly Review
+### Available Chains
+- `life_optimization` - Holistic life balance
+- `business_acceleration` - Career and business growth
+- `creative_breakthrough` - Innovation and creative solutions
+- `relationship_harmony` - Family and relationships
+- `technical_mastery` - Coding and technical tasks
+- `strategic_synthesis` - High-level planning
+- `deep_analysis` - Thorough investigation (v3)
+- `global_insight` - Multicultural perspectives (v3)
+- `rapid_decision` - Fast decisions (v3)
+
+### Output Formats
+- `quick` - Key points only
+- `summary` - Executive summary
+- `detailed` - Full analysis (default)
+- `export` - Save to file
+
+## Personal Productivity
+
+### Daily Planning
 ```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh life_optimization "Analyze my past week's activities and suggest improvements for next week's schedule and productivity"
+# Optimize your daily schedule
+./mirador-smart-v2 "Create an optimal daily schedule balancing work, family time with 3 teens, guitar practice, and personal projects"
+
+# Morning routine optimization
+./mirador_universal_runner_v2.sh life_optimization "Design a morning routine that maximizes energy for a 46-year-old single dad working in corporate tech"
+
+# Time blocking strategy
+./mirador-smart-v2 "Help me implement time blocking for maximum productivity with only 9 hours of personal time daily"
 ```
 
-### Time Optimization
+### Energy Management
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How can I better balance my time between Humana work, AI side projects, music practice, and family time?"
+# Energy optimization throughout the day
+./mirador_universal_runner_v2.sh life_optimization "How can I maintain consistent energy levels throughout my workday given my constraints"
+
+# Burnout prevention
+./mirador-smart-v2 "Create a burnout prevention plan for someone juggling corporate job, parenting, and personal ambitions"
+
+# Recovery strategies
+./mirador_universal_runner_v2.sh life_optimization "Quick recovery techniques between meetings to maintain focus and energy" quick
+```
+
+### Task Prioritization
+```bash
+# Weekly priority setting
+./mirador-smart-v2 "Help me prioritize my tasks for the week considering work deadlines, family commitments, and personal goals"
+
+# Project management
+./mirador_universal_runner_v2.sh strategic_synthesis "Create a project management system for balancing multiple initiatives with limited time"
+
+# Decision making framework
+./mirador_universal_runner_v3_optimized.sh rapid_decision "Should I focus on AI certification or building portfolio projects this month?"
+```
+
+## Career & Professional Development
+
+### VP Track Strategy
+```bash
+# Career advancement roadmap
+./mirador_universal_runner_v2.sh business_acceleration "Create a detailed 18-month roadmap to VP of AI Innovation at Humana"
+
+# Leadership development
+./mirador-smart-v2 "What leadership skills should I prioritize developing for a VP role in healthcare AI"
+
+# Political navigation
+./mirador_universal_runner_v2.sh business_acceleration "How to navigate corporate politics at Humana while maintaining authenticity"
+```
+
+### AI Innovation Leadership
+```bash
+# AI strategy for Humana
+./mirador-smart-v2 "Develop an AI innovation strategy for Humana's risk management division"
+
+# Innovation proposals
+./mirador_universal_runner_v2.sh creative_breakthrough "Generate innovative AI use cases for healthcare risk management"
+
+# Building influence
+./mirador_universal_runner_v2.sh business_acceleration "How to build influence as an AI thought leader within a large healthcare organization"
+```
+
+### Networking & Visibility
+```bash
+# Strategic networking
+./mirador-smart-v2 "Create a networking strategy to increase visibility with Humana executives"
+
+# Personal branding
+./mirador_universal_runner_v2.sh business_acceleration "Build a personal brand as an AI innovator within corporate constraints"
+
+# Stakeholder management
+./mirador-smart-v2 "How to manage stakeholders effectively while pushing for AI adoption"
+```
+
+## Technical & Coding
+
+### Python Development
+```bash
+# Data processing script
+./mirador-smart-v2 "Write a Python script to process healthcare claims data and identify anomalies"
+
+# API development
+./mirador_universal_runner_v2.sh technical_mastery "Create a FastAPI service for risk scoring with authentication and rate limiting"
+
+# Automation scripts
+./mirador-smart-v2 "Python script to automate daily risk management reports with email notifications"
+```
+
+### SQL Optimization
+```bash
+# Query optimization
+./mirador-smart-v2 "Optimize this SQL query for better performance: [paste your query]"
+
+# Database design
+./mirador_universal_runner_v2.sh technical_mastery "Design a database schema for tracking AI model performance metrics"
+
+# Complex queries
+./mirador-smart-v2 "Write SQL to analyze member risk patterns across multiple dimensions"
+```
+
+### AI/ML Implementation
+```bash
+# Model deployment
+./mirador-smart-v2 "How to deploy a risk prediction model using Humana's infrastructure"
+
+# LLM integration
+./mirador_universal_runner_v2.sh technical_mastery "Integrate Ollama models into existing Python application"
+
+# Performance optimization
+./mirador-smart-v2 "Optimize inference speed for local LLM deployment on Apple Silicon"
+```
+
+### Automation & DevOps
+```bash
+# CI/CD pipeline
+./mirador-smart-v2 "Create GitHub Actions workflow for automated testing and deployment"
+
+# Infrastructure as code
+./mirador_universal_runner_v2.sh technical_mastery "Write Terraform configuration for deploying Mirador to cloud"
+
+# Monitoring setup
+./mirador-smart-v2 "Implement comprehensive monitoring for AI model performance"
+```
+
+## Financial Planning
+
+### Budget Optimization
+```bash
+# Monthly budget analysis
+./mirador-smart-v2 "Optimize my $1,650 monthly budget with 3 teenage kids"
+
+# Savings strategies
+./mirador_universal_runner_v2.sh financial "How to save for emergency fund on tight budget with teenage expenses"
+
+# Expense reduction
+./mirador-smart-v2 "Identify areas to reduce expenses without impacting family quality of life"
+```
+
+### Investment Planning
+```bash
+# Investment strategy
+./mirador-smart-v2 "Create investment strategy for single parent with limited disposable income"
+
+# Retirement planning
+./mirador_universal_runner_v2.sh financial "Retirement saving options for 46-year-old with late start"
+
+# College funding
+./mirador-smart-v2 "Strategies to help with college expenses for 3 teenagers on limited budget"
+```
+
+### Financial Goals
+```bash
+# Short-term goals
+./mirador_universal_runner_v3_optimized.sh rapid_decision "Should I prioritize debt reduction or emergency fund building?"
+
+# Long-term planning
+./mirador_universal_runner_v2.sh strategic_synthesis "Create 5-year financial plan balancing current needs with future security"
+
+# Side income
+./mirador-smart-v2 "Feasible side income opportunities that won't interfere with primary job and parenting"
+```
+
+## Health & Wellness
+
+### Stress Management
+```bash
+# Corporate stress relief
+./mirador-smart-v2 "Quick stress management techniques for high-pressure corporate environment"
+
+# Work-life balance
+./mirador_universal_runner_v2.sh life_optimization "Strategies to maintain work-life balance as single parent in demanding job"
+
+# Mental health
+./mirador-smart-v2 "Daily mental health practices for busy professional dealing with multiple stressors"
+```
+
+### Physical Health
+```bash
+# Exercise routine
+./mirador-smart-v2 "Design 20-minute daily exercise routine for energy and stress relief"
+
+# Nutrition planning
+./mirador_universal_runner_v2.sh health "Simple meal prep strategies for single dad with 3 teens"
+
+# Sleep optimization
+./mirador-smart-v2 "How to improve sleep quality with teenage household and work stress"
+```
+
+### Energy & Focus
+```bash
+# Energy management
+./mirador-smart-v2 "Natural ways to boost energy without relying on excessive caffeine"
+
+# Focus techniques
+./mirador_universal_runner_v2.sh life_optimization "Techniques to maintain focus during long workdays" quick
+
+# Recovery practices
+./mirador-smart-v2 "Quick recovery practices between stressful meetings"
+```
+
+## Family & Relationships
+
+### Parenting Teenagers
+```bash
+# Teen communication
+./mirador-smart-v2 "How to maintain connection with teenage daughter who's pulling away"
+
+# Boundary setting
+./mirador_universal_runner_v2.sh relationship_harmony "Setting healthy boundaries with teenagers while maintaining trust"
+
+# Educational support
+./mirador-smart-v2 "Supporting 3 teens through JCPS challenges while managing work demands"
+```
+
+### Family Dynamics
+```bash
+# Quality time
+./mirador-smart-v2 "Creative ways to spend quality time with teens who have different interests"
+
+# Conflict resolution
+./mirador_universal_runner_v2.sh relationship_harmony "Strategies for resolving conflicts between siblings in single-parent household"
+
+# Family meetings
+./mirador-smart-v2 "How to run effective family meetings with 3 teenagers"
+```
+
+### Single Parenting
+```bash
+# Support systems
+./mirador-smart-v2 "Building support network as single father in Louisville"
+
+# Time management
+./mirador_universal_runner_v2.sh life_optimization "Balancing parenting duties with career ambitions as single parent"
+
+# Self-care
+./mirador-smart-v2 "Self-care strategies for single parents that actually work with time constraints"
+```
+
+## Music & Creative
+
+### Guitar Practice
+```bash
+# Practice routine
+./mirador-smart-v2 "Design 30-minute daily guitar practice routine for technical metal"
+
+# Technique improvement
+./mirador_universal_runner_v2.sh music "Exercises to improve alternate picking speed and accuracy"
+
+# Music theory
+./mirador-smart-v2 "Explain modal interchange in context of metal composition"
+```
+
+### Band Development
+```bash
+# Songwriting
+./mirador-smart-v2 "Collaborative songwriting process for alt-metal band Annapurna"
+
+# Performance preparation
+./mirador_universal_runner_v2.sh music "Checklist for preparing for live performance at Louisville venue"
+
+# Recording tips
+./mirador-smart-v2 "Home recording setup recommendations for metal guitar"
+```
+
+### Creative Projects
+```bash
+# Creative inspiration
+./mirador_universal_runner_v2.sh creative_breakthrough "Generate unique concepts for ambient metal compositions"
+
+# Time for creativity
+./mirador-smart-v2 "How to maintain creative music practice with demanding schedule"
+
+# Skill development
+./mirador-smart-v2 "Path to mastering seven-string guitar techniques"
+```
+
+## Strategic Planning
+
+### Long-term Vision
+```bash
+# 5-year plan
+./mirador_universal_runner_v2.sh strategic_synthesis "Create comprehensive 5-year plan balancing career, family, and personal goals"
+
+# Life optimization
+./mirador-smart-v2 "Design ideal life scenario and backward plan to achieve it"
+
+# Goal alignment
+./mirador_universal_runner_v2.sh strategic_synthesis "Align daily actions with long-term vision for meaningful progress"
 ```
 
 ### Decision Making
 ```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh strategic_synthesis "I need to decide between [option A] and [option B]. Help me analyze the pros, cons, and long-term implications"
+# Major decisions
+./mirador_universal_runner_v2.sh strategic_synthesis "Framework for making major life decisions with multiple stakeholders"
+
+# Trade-off analysis
+./mirador-smart-v2 "Analyze trade-offs between career advancement and family time"
+
+# Risk assessment
+./mirador_universal_runner_v3_optimized.sh deep_analysis "Assess risks and opportunities in pursuing VP track"
 ```
 
----
-
-## Financial Planning
-
-### Monthly Budget Review
+### Personal Development
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Analyze my monthly expenses and create a optimized budget that aligns with my savings goals and lifestyle"
+# Skill prioritization
+./mirador-smart-v2 "Which skills will provide highest ROI for career and personal goals"
+
+# Learning plan
+./mirador_universal_runner_v2.sh strategic_synthesis "Create structured learning plan for AI leadership skills"
+
+# Growth tracking
+./mirador-smart-v2 "System for tracking personal and professional growth metrics"
 ```
 
-### Investment Strategy
+## Learning & Development
+
+### AI/ML Learning
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Given my risk tolerance and 5-year goals, suggest an investment portfolio allocation strategy"
+# Learning pathway
+./mirador-smart-v2 "Structured pathway to master LLMs and generative AI for healthcare"
+
+# Certification strategy
+./mirador_universal_runner_v2.sh business_acceleration "Which AI certifications provide most value for VP track"
+
+# Practical projects
+./mirador-smart-v2 "AI project ideas that demonstrate leadership and innovation"
 ```
 
-### Debt Management
+### Leadership Skills
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Create a strategic plan to pay off my debts while maintaining quality of life and building emergency savings"
+# Executive presence
+./mirador-smart-v2 "Develop executive presence while maintaining authenticity"
+
+# Strategic thinking
+./mirador_universal_runner_v2.sh business_acceleration "Exercises to improve strategic thinking for executive role"
+
+# Communication skills
+./mirador-smart-v2 "Improve executive communication skills for C-suite interactions"
 ```
 
-### Side Income Optimization
+### Technical Skills
 ```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh business_acceleration "How can I monetize my AI expertise and music skills for additional income streams?"
+# Skill gaps
+./mirador-smart-v2 "Identify and address technical skill gaps for AI leadership role"
+
+# Learning efficiency
+./mirador_universal_runner_v2.sh life_optimization "Most efficient ways to learn new technical skills with time constraints"
+
+# Hands-on practice
+./mirador-smart-v2 "Create hands-on learning projects for cloud and AI technologies"
 ```
 
-### Real Estate Analysis
+## Louisville-Specific
+
+### Local Resources
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Should I refinance my duplex or invest in improvements? Analyze the financial implications"
+# Community connections
+./mirador-smart-v2 "Tech and AI communities in Louisville for networking"
+
+# Education options
+./mirador-smart-v2 "Best JCPS schools and programs for teenagers interested in technology"
+
+# Local opportunities
+./mirador-smart-v2 "Louisville-based opportunities for AI innovation and leadership"
 ```
 
----
-
-## Health & Wellness
-
-### Energy Optimization
+### Healthcare Landscape
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "I'm experiencing afternoon energy crashes. Create a comprehensive plan to optimize my energy throughout the day"
+# Humana ecosystem
+./mirador-smart-v2 "Navigate Humana's Louisville headquarters culture and opportunities"
+
+# Healthcare innovation
+./mirador-smart-v2 "Louisville healthcare innovation ecosystem and how to contribute"
+
+# Local partnerships
+./mirador-smart-v2 "Potential Louisville partnerships for healthcare AI initiatives"
 ```
 
-### Fitness Planning
+### Music Scene
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Design a 30-minute daily workout routine that fits my schedule and helps with stress management"
+# Venue strategies
+./mirador-smart-v2 "Best Louisville venues for alt-metal band performances"
+
+# Local networking
+./mirador-smart-v2 "Connect with Louisville metal music community"
+
+# Recording options
+./mirador-smart-v2 "Recording studios in Louisville suitable for metal production"
 ```
 
-### Nutrition Strategy
+## Advanced Combinations
+
+### Complex Multi-Domain Queries
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Create a meal planning strategy that supports my energy needs, is time-efficient, and budget-friendly"
+# Career + Family Balance
+./mirador_universal_runner_v2.sh strategic_synthesis "How to advance to VP level while being present for teenage kids' important years"
+
+# Technical + Financial
+./mirador-smart-v2 "Monetize AI skills through side projects without conflicting with Humana employment"
+
+# Health + Productivity
+./mirador_universal_runner_v2.sh life_optimization "Optimize health routines to support demanding career and parenting schedule"
 ```
 
-### Stress Management
+### Integrated Life Planning
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Give me a personalized stress management toolkit for high-pressure corporate environments"
+# Holistic optimization
+./mirador_universal_runner_v2.sh life_optimization "Create integrated plan covering career, family, health, finances, and personal growth"
+
+# Constraint-aware planning
+./mirador-smart-v2 "Design life system that respects all constraints while maximizing fulfillment"
+
+# Synergy identification
+./mirador_universal_runner_v2.sh strategic_synthesis "Identify synergies between different life areas for multiplicative benefits"
 ```
 
-### Sleep Optimization
+### Crisis Management
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "My sleep quality is poor. Analyze potential causes and create an improvement plan"
+# Emergency planning
+./mirador_universal_runner_v3_optimized.sh rapid_decision "Teenager having crisis during important work deadline - how to handle"
+
+# Financial emergency
+./mirador-smart-v2 "quick Unexpected $500 expense with tight budget - options?"
+
+# Health crisis
+./mirador_universal_runner_v3_optimized.sh rapid_decision "Dealing with health issue while maintaining work and family responsibilities"
 ```
 
----
+## Custom Chain Examples
 
-## Career Development
-
-### AI Leadership Positioning
+### Creating Your Own Chains
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How do I position myself as an AI thought leader within Humana's healthcare innovation space?"
+# Financial + Strategic + Implementation
+./mirador-ez chain "Create a plan to increase income by 50% in 2 years" universal_financial_advisor universal_strategy_architect practical_implementer
+
+# Creative + Technical + Practical
+./mirador-ez chain "Build an AI-powered music composition tool" creative_catalyst master_coder practical_implementer
+
+# Analysis + Strategy + Decision
+./mirador-ez chain "Analyze career options and recommend best path" analytical_expert_gemma universal_strategy_architect optimized_decision_simplifier_v3
 ```
 
-### Skill Development Plan
+### Specialized Workflows
 ```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh technical_mastery "What technical skills should I prioritize learning in the next 6 months to advance my AI career?"
+# Morning Planning Workflow
+./mirador-smart-v2 "Plan my day" && ./mirador-smart-v2 "quick Top 3 priorities" && ./mirador-smart-v2 "Energy management tips for today"
+
+# Weekly Review Workflow
+./mirador_universal_runner_v2.sh strategic_synthesis "Weekly review and planning" detailed > weekly_review_$(date +%Y%m%d).md
+
+# Project Kickoff Workflow
+PROJECT="AI Innovation Initiative"
+./mirador-smart-v2 "Define success criteria for $PROJECT" && \
+./mirador-smart-v2 "Identify risks for $PROJECT" && \
+./mirador-smart-v2 "Create implementation plan for $PROJECT"
 ```
 
-### Corporate Navigation
+### Batch Processing
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How do I navigate corporate politics while maintaining authenticity and advancing my innovative ideas?"
+# Process multiple queries
+for query in "Morning routine" "Lunch break optimization" "Evening wind-down"; do
+    ./mirador-smart-v2 "$query" quick
+done
+
+# Generate multiple perspectives
+TOPIC="Should I pursue MBA while working"
+for chain in life_optimization business_acceleration strategic_synthesis; do
+    echo "=== $chain perspective ===" 
+    ./mirador_universal_runner_v2.sh $chain "$TOPIC" summary
+done
 ```
-
-### Performance Review Prep
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Help me prepare for my performance review by highlighting my AI contributions and impact at Humana"
-```
-
-### Career Pivot Strategy
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh strategic_synthesis "Create a 2-year plan to transition from traditional IT to AI leadership role"
-```
-
----
-
-## Creative Projects
-
-### AI Innovation Ideas
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh creative_breakthrough "Generate innovative AI applications for healthcare that haven't been explored yet"
-```
-
-### Music Composition
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Help me write a song that captures the journey of personal transformation through technology"
-```
-
-### Content Creation Strategy
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Create a content calendar for establishing my AI thought leadership on LinkedIn and Medium"
-```
-
-### Product Development
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh business_acceleration "I want to productize Mirador. Create a product development roadmap"
-```
-
-### Creative Problem Solving
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "I'm stuck on [specific problem]. Give me 5 unconventional approaches to solve it"
-```
-
----
-
-## Business Strategy
-
-### Startup Planning
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh business_acceleration "Create a comprehensive business plan for commercializing my AI orchestration technology"
-```
-
-### Market Analysis
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Analyze the market opportunity for personalized AI assistants in healthcare"
-```
-
-### Competitive Strategy
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How can Mirador differentiate itself from ChatGPT, Claude, and other AI assistants?"
-```
-
-### Revenue Model Design
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Design multiple revenue models for Mirador including B2B, B2C, and enterprise options"
-```
-
-### Partnership Strategy
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh strategic_synthesis "Identify potential strategic partners for Mirador and create an outreach plan"
-```
-
----
-
-## Technical Mastery
-
-### Architecture Optimization
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh technical_mastery "How can I optimize Mirador's architecture for better performance and scalability?"
-```
-
-### Code Review Request
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Review this code snippet and suggest improvements: [paste code]"
-```
-
-### Algorithm Design
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Design an efficient algorithm for dynamic model selection based on query complexity"
-```
-
-### Security Audit
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Perform a security analysis of Mirador's architecture and suggest hardening measures"
-```
-
-### Performance Tuning
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Analyze Mirador's performance bottlenecks and create an optimization plan"
-```
-
----
-
-## Relationship & Family
-
-### Parenting Strategies
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How can I better support my teenage daughter's college preparation while managing my busy schedule?"
-```
-
-### Co-Parenting Communication
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Create a communication framework for effective co-parenting with minimal conflict"
-```
-
-### Work-Life Integration
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh relationship_harmony "How do I maintain strong family relationships while pursuing ambitious career goals?"
-```
-
-### Dating as a Single Parent
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Provide guidance on dating as a single father with limited time and specific priorities"
-```
-
-### Family Activity Planning
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Suggest weekend activities in Louisville that would appeal to both me and my teenager"
-```
-
----
-
-## Louisville Specific
-
-### Local Networking
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Where can I connect with other AI professionals and entrepreneurs in Louisville?"
-```
-
-### Restaurant Recommendations
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Recommend restaurants in Louisville for a business dinner that showcase local cuisine"
-```
-
-### School District Analysis
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Compare JCPS high schools for STEM programs and overall academic excellence"
-```
-
-### Local Investment Opportunities
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "What are the emerging neighborhoods in Louisville for real estate investment?"
-```
-
-### Community Involvement
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How can I contribute to Louisville's tech community while building my professional network?"
-```
-
----
-
-## Music & Performance
-
-### Practice Optimization
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Create a 45-minute guitar practice routine focusing on improvisation and technique"
-```
-
-### Performance Preparation
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "I have a gig next week. Create a preparation checklist and practice schedule"
-```
-
-### Songwriting Workshop
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh creative_breakthrough "Help me write lyrics about the intersection of technology and human connection"
-```
-
-### Band Management
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "How can I better manage band dynamics and keep everyone motivated in Annapurna?"
-```
-
-### Music Theory Deep Dive
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Explain modal interchange and give me practical examples for rock composition"
-```
-
----
-
-## Advanced Prompt Techniques
-
-### Chain Specific Prompts
-
-#### Life Optimization Chain
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh life_optimization "Conduct a holistic life audit across health, wealth, relationships, and purpose. Identify the top 3 areas for improvement and create action plans"
-```
-
-#### Strategic Synthesis Chain
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh strategic_synthesis "Analyze the convergence of AI, healthcare, and personal wellness. Identify opportunities where I can make unique contributions"
-```
-
-#### Creative Breakthrough Chain
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh creative_breakthrough "Generate 10 moonshot ideas that combine my expertise in AI, music, and healthcare"
-```
-
-### Format Options
-
-#### Quick Summary
-```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Quick: What's the most important thing I should do right now?"
-```
-
-#### Detailed Analysis
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh strategic_synthesis "Comprehensive analysis of my career trajectory and opportunities" detailed
-```
-
-#### Export to File
-```bash
-cd ~/Projects/mirador
-./mirador_universal_runner_v2.sh business_acceleration "Create a full business plan for my AI consulting practice" export
-```
-
----
-
-## Custom Prompt Templates
-
-### Problem-Solution Framework
-```
-"I'm facing [specific challenge]. Context: [relevant background]. Constraints: [time/money/resources]. Give me a step-by-step solution that considers these factors."
-```
-
-### Decision Analysis Template
-```
-"I need to decide between [option A] and [option B]. My priorities are [list priorities]. My constraints are [list constraints]. Help me make the best decision."
-```
-
-### Goal Achievement Template
-```
-"My goal is [specific goal] by [timeframe]. Current situation: [where you are now]. Resources available: [what you have]. Create a realistic plan to achieve this."
-```
-
-### Innovation Request Template
-```
-"Take [existing concept/problem] and apply [different domain/perspective] to generate innovative solutions. Focus on practical implementation."
-```
-
----
 
 ## Tips for Effective Prompts
 
-1. **Be Specific**: Include context, constraints, and desired outcomes
-2. **Use Examples**: "Like X but for Y" helps models understand your intent
-3. **Set Boundaries**: Specify what you don't want in the response
-4. **Request Formats**: Ask for lists, steps, or specific structures
-5. **Iterate**: Use follow-up prompts to refine responses
-
----
-
-## Experimental Prompts
-
-### Meta-Learning
+### Be Specific
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Analyze my last 10 queries and tell me what patterns you see in my thinking and decision-making"
+# Good: Specific context and constraints
+./mirador-smart-v2 "Create 20-minute morning routine for single dad with 3 teens who needs to leave by 7:30am"
+
+# Less effective: Too vague
+./mirador-smart-v2 "Help with morning routine"
 ```
 
-### System Optimization
+### Include Constraints
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Based on how I use Mirador, suggest custom model chains that would serve me better"
+# Good: Clear constraints
+./mirador-smart-v2 "Investment options with only $50/month available and need liquidity"
+
+# Less effective: Missing key constraints
+./mirador-smart-v2 "How should I invest"
 ```
 
-### Predictive Assistance
+### Specify Desired Output
 ```bash
-cd ~/Projects/mirador
-./bin/mirador-smart-v2 "Based on my patterns, what questions should I be asking but haven't thought of yet?"
+# Good: Clear format request
+./mirador-smart-v2 "Create bulleted action list for improving team communication"
+
+# Less effective: Unclear format
+./mirador-smart-v2 "Help with team communication"
 ```
 
----
+### Use Appropriate Chains
+```bash
+# Good: Technical query to technical chain
+./mirador_universal_runner_v2.sh technical_mastery "Debug Python async/await issues"
 
-Remember: Mirador's strength lies in chaining multiple specialized models. Craft your prompts to leverage this multi-perspective approach for richer, more nuanced responses.
+# Less effective: Technical query to general chain
+./mirador_universal_runner_v2.sh life_optimization "Debug Python async/await issues"
+```
+
+## Troubleshooting Commands
+
+### System Health Checks
+```bash
+# Check model availability
+ollama list | grep -E "(matthew_context|universal_strategy|creative_catalyst|practical_implementer)"
+
+# Test basic functionality
+./mirador-smart-v2 "quick test"
+
+# Verify routing
+DEBUG=1 ./mirador-smart-v2 "Test query for debugging"
+```
+
+### Performance Testing
+```bash
+# Time a query
+time ./mirador-smart-v2 "Quick analysis of this idea"
+
+# Compare chain performance
+time ./mirador_universal_runner_v2.sh life_optimization "Test query" quick
+time ./mirador_universal_runner_v3_optimized.sh rapid_decision "Test query"
+```
+
+### Output Management
+```bash
+# Save output
+./mirador-smart-v2 "Important analysis" > analysis_$(date +%Y%m%d).md
+
+# Export detailed analysis
+./mirador_universal_runner_v2.sh strategic_synthesis "Comprehensive plan" export
+
+# View recent outputs
+ls -la outputs/universal_*/ | tail -20
+```
+
+## Conclusion
+
+This prompt library provides comprehensive examples spanning all aspects of the Mirador AI Framework. Each command is designed to leverage the system's sophisticated chain-of-thought reasoning while respecting real-world constraints. The examples range from simple daily planning to complex strategic analysis, demonstrating the framework's versatility.
+
+Remember to:
+1. Choose the appropriate chain for your query type
+2. Include relevant context and constraints
+3. Specify output format when needed
+4. Use the smart router for automatic chain selection
+5. Experiment with different chains for varied perspectives
+
+The Mirador system is designed to provide practical, actionable insights that respect your time, energy, and financial constraints while helping you achieve your ambitious goals.

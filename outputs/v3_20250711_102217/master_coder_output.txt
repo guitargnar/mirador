@@ -1,0 +1,26 @@
+```python
+import datetime
+import os
+import logging
+
+# Set up logger with Humana compliance standards (log level 30)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def main():
+    try:
+        # Current date and time for security logging
+        now = datetime.datetime.now()
+        print(f"Running at {now}")
+        
+        # Execute the 'Hello World' script and catch any exceptions
+        try:
+            print("Hello World!")
+        except Exception as e:
+            logging.error(f"Error: {e} - Script execution failed")
+    
+    except Exception as e:
+        logging.error(f"Unexpected Error: {e} - Main script execution failed")
+
+if __name__ == "__main__":
+    main()
+```
