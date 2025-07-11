@@ -6,7 +6,7 @@
   *From personal AI assistant to production-ready API platform - orchestrating 80+ specialized models for enhanced intelligence*
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![API Version](https://img.shields.io/badge/API-v5.0-00ff88.svg)](https://github.com/yourusername/mirador/tree/feature/v3-streaming-mvp)
+  [![API Version](https://img.shields.io/badge/API-v5.0-00ff88.svg)](https://github.com/guitargnar/mirador)
   [![Built with Ollama](https://img.shields.io/badge/Built%20with-Ollama-blue.svg)](https://ollama.ai)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg)](https://fastapi.tiangolo.com)
   [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com)
@@ -20,6 +20,8 @@
 What started as a personal productivity tool has evolved into a **production-ready AI orchestration platform**. Mirador began when I needed a smarter way to leverage multiple AI models for complex tasks. Instead of jumping between different tools, I built a system that intelligently routes queries through chains of specialized models, each contributing their expertise to create comprehensive, nuanced responses.
 
 Today, Mirador v5 transforms this personal assistant into a **scalable API platform** that teams and applications can integrate, bringing the power of orchestrated AI to any workflow.
+
+> **Note**: The original CLI tools (`mirador-smart-v2`, `mirador_universal_runner_v2.sh`) are still available and work alongside the new API. The API provides programmatic access, authentication, and scalability features for production use.
 
 ### 🎯 What's New in v5
 
@@ -158,34 +160,37 @@ sequenceDiagram
 
 ## 🚀 Quick Start
 
-### Using Docker (Recommended)
+### Option 1: Using the API (New in v5)
+
+#### Using Docker (Recommended)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mirador.git
+git clone https://github.com/guitargnar/mirador.git
 cd mirador
 
 # Start all services
 docker-compose up -d
 
 # Check health
-curl http://localhost/api/v5/health
+curl http://localhost:8000/api/v5/health
 
-# Create an API key
-curl -X POST http://localhost/api/v5/auth/api-keys \
+# Create an API key (first, get admin key from .env)
+export ADMIN_KEY=$(grep ADMIN_API_KEY .env | cut -d '=' -f2)
+curl -X POST http://localhost:8000/api/v5/auth/api-keys \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: your-admin-key" \
+  -H "X-API-Key: $ADMIN_KEY" \
   -d '{"name": "My App", "scopes": ["chains:execute", "models:read"]}'
 ```
 
-### Using Python SDK
+#### Using Python SDK
 
 ```python
 from mirador import MiradorClient
 
 # Initialize client
 client = MiradorClient(
-    base_url="http://localhost",
+    base_url="http://localhost:8000",
     api_key="your-api-key"
 )
 
@@ -201,11 +206,11 @@ for chunk in response:
     print(chunk.content, end="")
 ```
 
-### Direct API Usage
+#### Direct API Usage
 
 ```bash
 # Execute a chain with streaming
-curl -N -X POST http://localhost/api/v5/chains/execute \
+curl -N -X POST http://localhost:8000/api/v5/chains/execute \
   -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -215,7 +220,7 @@ curl -N -X POST http://localhost/api/v5/chains/execute \
   }'
 
 # GraphQL query
-curl -X POST http://localhost/api/v5/graphql \
+curl -X POST http://localhost:8000/api/v5/graphql \
   -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -223,11 +228,24 @@ curl -X POST http://localhost/api/v5/graphql \
   }'
 ```
 
+### Option 2: Using the CLI (Original Tool)
+
+```bash
+# Basic smart routing
+./mirador-smart-v2 "Help me plan a productive day"
+
+# Run specific chain type
+./mirador_universal_runner_v2.sh life_optimization "I need to balance work and personal life"
+
+# Quick summary format
+./mirador_universal_runner_v2.sh business_acceleration "Analyze market opportunities" summary
+```
+
 ## 📚 API Documentation
 
 ### Base URL
 ```
-http://localhost/api/v5
+http://localhost:8000/api/v5
 ```
 
 ### Authentication
@@ -250,7 +268,7 @@ Authorization: Bearer your-api-key
 
 #### Streaming API
 - `POST /chains/execute/stream` - SSE streaming execution
-- WebSocket: `ws://localhost/api/v5/ws` - Real-time bidirectional
+- WebSocket: `ws://localhost:8000/api/v5/ws` - Real-time bidirectional
 
 #### GraphQL
 - `POST /graphql` - GraphQL endpoint
@@ -259,7 +277,7 @@ Authorization: Bearer your-api-key
 ### Example: Financial Planning Chain
 
 ```bash
-curl -X POST http://localhost/api/v5/chains/execute \
+curl -X POST http://localhost:8000/api/v5/chains/execute \
   -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -300,29 +318,41 @@ Response:
 
 ### Prerequisites
 - Docker & Docker Compose
-- 16GB+ RAM
+- 16GB+ RAM (32GB+ recommended for API)
 - 100GB storage for models
-- (Optional) Ollama for local model management
+- Ollama installed locally (required for model management)
+- macOS with Apple Silicon (M1/M2/M3) for optimal performance
 
 ### Full Installation
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/mirador.git
+git clone https://github.com/guitargnar/mirador.git
 cd mirador
+
+# Install Ollama (if not already installed)
+# macOS: brew install ollama
+# Others: https://ollama.ai/download
+
+# Start Ollama service
+ollama serve &
 
 # Copy environment template
 cp .env.example .env
 
-# Edit .env with your configuration
+# Edit .env with your configuration (set ADMIN_API_KEY)
 vim .env
 
-# Pull and create models (first time only)
+# Pull and create models (first time only - takes 30-60 minutes)
 ./scripts/install_diverse_models.sh
 ./scripts/create_consolidated_models.sh
 
-# Start services
+# Start API services
 docker-compose up -d
+
+# For local development without Docker:
+# pip install -r requirements.txt
+# uvicorn src.api.main:app --reload --host 0.0.0.0 --port 8000
 
 # Run tests
 docker-compose exec mirador-api pytest tests/
@@ -426,7 +456,7 @@ MIT License - see [LICENSE](LICENSE) for details.
   
   <br><br>
   
-  <a href="https://github.com/yourusername/mirador/tree/feature/v3-streaming-mvp">API Docs</a> • 
-  <a href="https://github.com/yourusername/mirador/issues">Issues</a> • 
-  <a href="https://github.com/yourusername/mirador/discussions">Discussions</a>
+  <a href="https://github.com/guitargnar/mirador">API Docs</a> • 
+  <a href="https://github.com/guitargnar/mirador/issues">Issues</a> • 
+  <a href="https://github.com/guitargnar/mirador/discussions">Discussions</a>
 </div>
