@@ -289,6 +289,9 @@ echo ""
 echo -e "${BLUE}Step 5: Generate updated routing configuration${NC}"
 echo "========================================"
 
+# Create config directory if it doesn't exist
+mkdir -p "${HOME}/Projects/mirador/config"
+
 # Create new routing configuration
 cat > "${HOME}/Projects/mirador/config/model_routing_v2.yaml" << 'EOF'
 # Mirador Model Routing Configuration V2

@@ -14,16 +14,18 @@ NC='\033[0m'
 echo -e "${BLUE}=== Testing Consolidated Model Architecture ===${NC}"
 echo ""
 
-# Test queries for each domain
-declare -A test_queries=(
-    ["financial"]="What should my budget priorities be this month?"
-    ["health"]="How can I improve my energy levels?"
-    ["location"]="What's the best school district in Louisville?"
-    ["music"]="How should I structure my guitar practice?"
-    ["career"]="How do I position myself for AI leadership?"
-    ["creative"]="Give me a breakthrough idea for AI adoption"
-    ["family"]="How do I help my teens with college prep?"
-    ["strategic"]="Create a 90-day plan for Mirador adoption"
+# Test queries for each domain (bash 3.2 compatible)
+# Using parallel arrays instead of associative array
+test_domains=("financial" "health" "location" "music" "career" "creative" "family" "strategic")
+test_queries=(
+    "What should my budget priorities be this month?"
+    "How can I improve my energy levels?"
+    "What's the best school district in Louisville?"
+    "How should I structure my guitar practice?"
+    "How do I position myself for AI leadership?"
+    "Give me a breakthrough idea for AI adoption"
+    "How do I help my teens with college prep?"
+    "Create a 90-day plan for Mirador adoption"
 )
 
 # Function to test a consolidated model
@@ -37,7 +39,7 @@ test_model() {
     echo ""
     
     # Test if model exists
-    if ollama list | grep -q "^$model "; then
+    if ollama list | grep -q "$model:latest"; then
         echo -e "${GREEN}✓ Model exists${NC}"
         
         # Quick test
@@ -72,7 +74,7 @@ base_models=(
 )
 
 for model in "${base_models[@]}"; do
-    if ollama list | grep -q "^$model "; then
+    if ollama list | grep -q "$model:latest"; then
         echo -e "${GREEN}✓ $model${NC}"
     else
         echo -e "${RED}✗ $model (missing)${NC}"
@@ -83,25 +85,46 @@ echo ""
 echo -e "${BLUE}Step 2: Testing consolidated models (if created)${NC}"
 echo "========================================"
 
-# Map of consolidated models to test
-declare -A consolidated_models=(
-    ["universal_financial_advisor"]="financial"
-    ["universal_health_wellness"]="health"
-    ["universal_louisville_expert"]="location"
-    ["universal_music_mentor"]="music"
-    ["universal_career_strategist"]="career"
-    ["universal_corporate_navigator"]="career"
-    ["universal_creative_catalyst"]="creative"
-    ["universal_relationship_harmony"]="family"
+# Map of consolidated models to test (bash 3.2 compatible)
+# Using parallel arrays
+consolidated_model_names=(
+    "universal_financial_advisor"
+    "universal_health_wellness"
+    "universal_louisville_expert"
+    "universal_music_mentor"
+    "universal_career_strategist"
+    "universal_corporate_navigator"
+    "universal_creative_catalyst"
+    "universal_relationship_harmony"
+)
+consolidated_model_domains=(
+    "financial"
+    "health"
+    "location"
+    "music"
+    "career"
+    "career"
+    "creative"
+    "family"
 )
 
 # Count successes
 success_count=0
 total_count=0
 
-for model in "${!consolidated_models[@]}"; do
-    domain="${consolidated_models[$model]}"
-    query="${test_queries[$domain]}"
+# Test each consolidated model
+for i in "${!consolidated_model_names[@]}"; do
+    model="${consolidated_model_names[$i]}"
+    domain="${consolidated_model_domains[$i]}"
+    
+    # Find the query for this domain
+    query=""
+    for j in "${!test_domains[@]}"; do
+        if [ "${test_domains[$j]}" = "$domain" ]; then
+            query="${test_queries[$j]}"
+            break
+        fi
+    done
     
     ((total_count++))
     if test_model "$model" "$query" "$domain"; then

@@ -1,0 +1,83 @@
+# Mirador Model Routing Configuration V2
+# Consolidated model architecture
+
+routing_rules:
+  # Quick response patterns
+  quick_queries:
+    patterns: ["quick", "brief", "summary", "tldr", "short"]
+    models: ["speed_optimizer_phi"]
+    max_tokens: 200
+  
+  # Financial queries
+  financial:
+    patterns: ["money", "budget", "finance", "salary", "investment", "savings"]
+    models: ["matthew_context_provider_v6_complete", "universal_financial_advisor", "practical_implementer"]
+  
+  # Health & Wellness
+  health:
+    patterns: ["health", "fitness", "wellness", "stress", "sleep", "energy"]
+    models: ["matthew_context_provider_v6_complete", "universal_health_wellness", "practical_implementer"]
+  
+  # Louisville specific
+  location:
+    patterns: ["louisville", "kentucky", "local", "jcps", "school"]
+    models: ["universal_louisville_expert", "practical_implementer"]
+  
+  # Music related
+  music:
+    patterns: ["music", "guitar", "practice", "performance", "song"]
+    models: ["matthew_context_provider_v6_complete", "universal_music_mentor", "universal_creative_catalyst"]
+  
+  # Career & Corporate
+  career:
+    patterns: ["career", "job", "promotion", "humana", "corporate", "work"]
+    models: ["matthew_context_provider_v6_complete", "universal_career_strategist", "universal_corporate_navigator"]
+  
+  # Creative & Innovation
+  creative:
+    patterns: ["creative", "innovate", "idea", "breakthrough", "design"]
+    models: ["universal_creative_catalyst", "universal_strategy_architect", "practical_implementer"]
+  
+  # Relationships & Family
+  family:
+    patterns: ["family", "kids", "teens", "relationship", "parenting"]
+    models: ["matthew_context_provider_v6_complete", "universal_relationship_harmony", "practical_implementer"]
+  
+  # Strategic planning (default)
+  strategic:
+    patterns: ["plan", "strategy", "analyze", "decide", "optimize"]
+    models: ["matthew_context_provider_v6_complete", "universal_strategy_architect", "analytical_expert_gemma", "practical_implementer"]
+
+# Model capabilities mapping
+model_capabilities:
+  universal_financial_advisor:
+    domains: ["finance", "budgeting", "investment", "money_mindset"]
+    strengths: ["practical_advice", "financial_planning", "constraint_awareness"]
+    
+  universal_health_wellness:
+    domains: ["health", "fitness", "wellness", "lifestyle"]
+    strengths: ["holistic_approach", "evidence_based", "time_efficient"]
+    
+  universal_louisville_expert:
+    domains: ["local_knowledge", "resources", "networking", "family_activities"]
+    strengths: ["insider_knowledge", "practical_tips", "community_connections"]
+    
+  universal_music_mentor:
+    domains: ["music", "guitar", "performance", "practice"]
+    strengths: ["technical_expertise", "artistic_development", "performance_psychology"]
+    
+  universal_career_strategist:
+    domains: ["career", "leadership", "professional_development", "ai_positioning"]
+    strengths: ["strategic_thinking", "advancement_tactics", "industry_insights"]
+    
+  universal_corporate_navigator:
+    domains: ["corporate_politics", "organizational_dynamics", "innovation_adoption"]
+    strengths: ["political_savvy", "coalition_building", "roi_demonstration"]
+    
+  universal_creative_catalyst:
+    domains: ["creativity", "innovation", "problem_solving", "ideation"]
+    strengths: ["breakthrough_thinking", "unconventional_approaches", "creative_frameworks"]
+    
+  universal_relationship_harmony:
+    domains: ["relationships", "parenting", "communication", "family_dynamics"]
+    strengths: ["empathy", "practical_solutions", "teen_expertise"]
