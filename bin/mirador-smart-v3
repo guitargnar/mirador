@@ -1,142 +1,286 @@
 #!/bin/bash
-# mirador-smart-v3: Intelligent routing with real capabilities
+# Mirador Smart Router V3 - Enhanced Technical Routing & Direct Responses
+# Optimized for Matthew's workflow: technical, strategic, compliance
 
-# Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Configuration
+MIRADOR_HOME="${HOME}/Projects/mirador"
 
-# Check if we should use enhanced version
-if [ -f "$SCRIPT_DIR/mirador_v2.py" ]; then
-    # Use the enhanced version with real metrics and automation
-    python3 "$SCRIPT_DIR/mirador_v2.py" run --prompt "$*"
-else
-    # Fallback to pattern-based routing
-    PROMPT="$*"
-    PROMPT_LOWER=$(echo "$PROMPT" | tr '[:upper:]' '[:lower:]')
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m'
 
-    # Intelligent routing based on keywords
-    case "$PROMPT_LOWER" in
-        *financial*|*budget*|*money*|*cost*|*expense*)
-            echo "🏦 Routing to Financial Analysis Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                financial_planning_expert_v8 \
-                decision_simplifier_v3 \
-                "$PROMPT"
+# Function to analyze query intent with enhanced technical detection
+analyze_query() {
+    local query="$1"
+    local query_lower=$(echo "$query" | tr '[:upper:]' '[:lower:]')
+    
+    # Technical/Programming patterns (HIGHEST PRIORITY)
+    if [[ "$query_lower" =~ (code|python|javascript|script|sql|powershell|bash|shell|program|debug|error|api|function|algorithm|optimize|performance|syntax|compile|git|database|query|automation|compliance.*script|data.*validation|fix|bug|implement|refactor|test|unit.*test) ]]; then
+        echo "technical"
+        return
+    fi
+    
+    # Quick response patterns
+    if [[ "$query_lower" =~ (quick|brief|summary|tldr|short|what.*is|how.*many|when.*did|where.*is|simple|tell.*me.*briefly) ]]; then
+        echo "quick"
+        return
+    fi
+    
+    # Financial patterns
+    if [[ "$query_lower" =~ (money|budget|finance|salary|investment|savings|afford|cost|spend|debt|income|expense|portfolio|401k|ira) ]]; then
+        echo "financial"
+        return
+    fi
+    
+    # Health & wellness patterns
+    if [[ "$query_lower" =~ (health|fitness|wellness|stress|sleep|energy|tired|exercise|nutrition|workout|diet|mindful) ]]; then
+        echo "health"
+        return
+    fi
+    
+    # Louisville/location patterns
+    if [[ "$query_lower" =~ (louisville|kentucky|local|jcps|school|neighborhood|downtown) ]]; then
+        echo "location"
+        return
+    fi
+    
+    # Music patterns
+    if [[ "$query_lower" =~ (music|guitar|practice|performance|song|play|band|chord|scale|tab|melody|harmony|blues|jazz|metal) ]]; then
+        echo "music"
+        return
+    fi
+    
+    # Career/corporate patterns
+    if [[ "$query_lower" =~ (career|job|promotion|humana|corporate|work|meeting|boss|ai.*leader|vp|leadership) ]]; then
+        echo "career"
+        return
+    fi
+    
+    # Creative patterns
+    if [[ "$query_lower" =~ (creative|innovate|idea|breakthrough|design|imagine|invent|story|write.*blog|content) ]]; then
+        echo "creative"
+        return
+    fi
+    
+    # Family/relationship patterns
+    if [[ "$query_lower" =~ (family|kids|teens|relationship|parenting|daughter|son|children) ]]; then
+        echo "family"
+        return
+    fi
+    
+    # Strategic patterns (default for complex planning)
+    if [[ "$query_lower" =~ (plan|priorit|strategy|decision|focus|goal|approach|roadmap|should.*i|analyze|pros.*cons|eisenhower|allocate|balance) ]]; then
+        echo "strategic"
+        return
+    fi
+    
+    # Default to strategic
+    echo "strategic"
+}
+
+# Function to get model chain for intent
+get_model_chain() {
+    local intent="$1"
+    
+    case "$intent" in
+        "technical")
+            # NEW: Technical chain for programming/automation
+            echo "matthew_context_provider_v6_complete master_coder command_r_code_analyst practical_implementer"
             ;;
-            
-        *risk*|*threat*|*vulnerability*|*security*)
-            echo "🛡️ Routing to Risk Assessment Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                risk_analyzer \
-                compliance_checker \
-                enhanced_agent_enforcer \
-                "$PROMPT"
+        "quick")
+            echo "speed_optimizer_phi"
             ;;
-            
-        *guitar*|*music*|*chord*|*practice*)
-            echo "🎸 Routing to Music Learning Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                guitar_expert \
-                practice_scheduler \
-                "$PROMPT"
+        "financial")
+            echo "matthew_context_provider_v6_complete universal_financial_advisor practical_implementer"
             ;;
-            
-        *code*|*programming*|*debug*|*error*|*bug*)
-            echo "💻 Routing to Technical Analysis Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                code_expert \
-                debug_assistant \
-                decision_simplifier_v3 \
-                "$PROMPT"
+        "health")
+            echo "matthew_context_provider_v6_complete universal_health_wellness practical_implementer"
             ;;
-            
-        *work*|*corporate*|*meeting*|*presentation*)
-            echo "🏢 Routing to Corporate Strategy Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                corporate_navigator \
-                enhanced_agent_enforcer \
-                "$PROMPT"
+        "location")
+            echo "universal_louisville_expert practical_implementer"
             ;;
-            
-        *ai*|*innovation*|*transform*|*future*)
-            echo "🚀 Routing to Innovation Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                ai_leadership_strategist \
-                innovation_catalyst \
-                decision_simplifier_v3 \
-                "$PROMPT"
+        "music")
+            echo "matthew_context_provider_v6_complete universal_music_mentor universal_creative_catalyst"
             ;;
-            
-        *star*rating*|*quality*|*metric*|*performance*)
-            echo "📊 Routing to Quality Improvement Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                quality_analyst \
-                enhanced_agent_enforcer \
-                "$PROMPT"
+        "career")
+            echo "matthew_context_provider_v6_complete universal_career_strategist universal_corporate_navigator"
             ;;
-            
-        *personal*|*career*|*growth*|*development*)
-            echo "🌟 Routing to Personal Development Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                career_coach \
-                decision_simplifier_v3 \
-                "$PROMPT"
+        "creative")
+            echo "universal_creative_catalyst universal_strategy_architect practical_implementer"
             ;;
-            
-        *relationship*|*communication*|*family*|*partner*)
-            echo "💝 Routing to Relationship Support Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                relationship_communication_specialist \
-                emotional_intelligence_guide \
-                decision_simplifier_v3 \
-                "$PROMPT"
+        "family")
+            echo "matthew_context_provider_v6_complete universal_relationship_harmony practical_implementer"
             ;;
-            
-        *analyze*|*review*|*assess*|*evaluate*)
-            echo "🔍 Routing to Analysis Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                analytical_expert \
-                enhanced_agent_enforcer \
-                "$PROMPT"
-            ;;
-            
-        *summary*|*report*|*document*|*write*)
-            echo "📝 Routing to Documentation Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                technical_writer \
-                decision_simplifier_v3 \
-                "$PROMPT"
-            ;;
-            
-        *help*|*how*to*|*guide*|*tutorial*)
-            echo "❓ Routing to Help Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                helpful_assistant \
-                step_by_step_guide \
-                decision_simplifier_v3 \
-                "$PROMPT"
-            ;;
-            
-        *)
-            echo "🤖 Routing to General Intelligence Chain..."
-            "$SCRIPT_DIR/mirador-ez" chain \
-                matthew_context_provider_v3 \
-                enhanced_agent_enforcer \
-                decision_simplifier_v3 \
-                "$PROMPT"
+        "strategic"|*)
+            echo "matthew_context_provider_v6_complete universal_strategy_architect analytical_expert_gemma practical_implementer"
             ;;
     esac
+}
+
+# Enhanced prompt function for direct responses
+create_enhanced_prompt() {
+    local query="$1"
+    local intent="$2"
+    local time_context=$(date '+%A, %B %d, %Y at %I:%M %p')
+    local time_of_day=$(date +%H)
+    
+    # Determine context based on time
+    local temporal_context=""
+    if [ $time_of_day -lt 9 ]; then
+        temporal_context="Early morning context: Focus on quick wins and priority setting."
+    elif [ $time_of_day -lt 12 ]; then
+        temporal_context="Morning context: Peak productivity time for deep work."
+    elif [ $time_of_day -lt 17 ]; then
+        temporal_context="Afternoon context: Good for meetings, collaboration, and creative work."
+    elif [ $time_of_day -lt 21 ]; then
+        temporal_context="Evening context: Family time balanced with personal projects."
+    else
+        temporal_context="Late night context: Quick tasks and planning for tomorrow."
+    fi
+    
+    # Create intent-specific instructions
+    local intent_instructions=""
+    case "$intent" in
+        "technical")
+            intent_instructions="Provide direct, executable code solutions. Skip explanations unless specifically asked. Include error handling. Focus on Humana compliance and security best practices."
+            ;;
+        "financial")
+            intent_instructions="Give direct financial recommendations without disclaimers. Include specific numbers and actionable steps. Consider single parent budget constraints."
+            ;;
+        "strategic")
+            intent_instructions="Provide clear, prioritized action items. Use Eisenhower matrix when applicable. Consider work-life balance constraints."
+            ;;
+        *)
+            intent_instructions="Be direct and actionable. Skip disclaimers and caveats."
+            ;;
+    esac
+    
+    echo "INSTRUCTIONS: $intent_instructions
+
+CONTEXT: Matthew Scott - Risk Management Professional II at Humana, single father of 3 teens, lead guitarist in Annapurna, AI innovator working on Mirador framework. 
+Current: $time_context
+$temporal_context
+
+QUERY: $query
+
+RESPONSE STYLE: Direct, practical, no disclaimers. Get straight to actionable recommendations."
+}
+
+# Main execution
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 \"Your query here\""
+    echo ""
+    echo "Mirador Smart Router v3 - Enhanced with technical routing and direct responses"
+    echo ""
+    echo "Available intents:"
+    echo "  - technical: Code, scripts, automation, debugging, compliance"
+    echo "  - quick: Fast responses for immediate needs"
+    echo "  - financial: Money, budgeting, investment advice"
+    echo "  - health: Wellness, fitness, lifestyle optimization"
+    echo "  - location: Louisville-specific knowledge"
+    echo "  - music: Guitar, practice, performance guidance"
+    echo "  - career: Professional development, corporate strategy"
+    echo "  - creative: Innovation, breakthrough thinking"
+    echo "  - family: Parenting, relationships, family dynamics"
+    echo "  - strategic: Deep analysis and planning (default)"
+    exit 1
 fi
 
-# After execution, check if we should collect metrics
-if [ -f "$SCRIPT_DIR/metrics_tracker.py" ]; then
-    # Log that we completed an execution
-    echo ""
-    echo "📊 Execution complete. Use 'python3 $SCRIPT_DIR/metrics_tracker.py summary' to see your metrics."
+QUERY="$1"
+
+# Create output directory
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+OUTPUT_DIR="${MIRADOR_HOME}/outputs/v3_${TIMESTAMP}"
+mkdir -p "$OUTPUT_DIR"
+
+# Log query and routing
+echo "Query: $QUERY" > "$OUTPUT_DIR/query.log"
+echo "Timestamp: $(date)" >> "$OUTPUT_DIR/query.log"
+
+# Analyze query
+echo -e "${YELLOW}🧠 Analyzing query intent...${NC}"
+INTENT=$(analyze_query "$QUERY")
+echo -e "${GREEN}Intent detected: ${INTENT}${NC}"
+
+# Get model chain
+MODELS=$(get_model_chain "$INTENT")
+echo -e "${BLUE}Selected models: ${MODELS}${NC}"
+
+# Log routing decision
+echo "Intent: $INTENT" >> "$OUTPUT_DIR/query.log"
+echo "Models: $MODELS" >> "$OUTPUT_DIR/query.log"
+
+# Create routing feedback entry
+FEEDBACK_LOG="${MIRADOR_HOME}/logs/routing_feedback.log"
+mkdir -p "${MIRADOR_HOME}/logs"
+echo "$(date),$INTENT,\"$QUERY\"" >> "$FEEDBACK_LOG"
+
+echo ""
+
+# Execute with selected models
+if [ "$INTENT" = "quick" ]; then
+    # For quick queries, use simple Ollama call with enhanced prompt
+    echo -e "${GREEN}🚀 Quick Response:${NC}"
+    ENHANCED_PROMPT=$(create_enhanced_prompt "$QUERY" "$INTENT")
+    RESPONSE=$(echo "$ENHANCED_PROMPT" | ollama run speed_optimizer_phi 2>&1)
+    echo "$RESPONSE"
+    echo "$RESPONSE" > "$OUTPUT_DIR/response.txt"
+else
+    # For complex queries, execute chain manually
+    echo -e "${YELLOW}🔄 Processing through model chain...${NC}"
+    
+    # Initialize context
+    CONTEXT=""
+    MODEL_COUNT=0
+    
+    # Process through each model in the chain
+    for MODEL in $MODELS; do
+        MODEL_COUNT=$((MODEL_COUNT + 1))
+        echo -e "${BLUE}→ Running $MODEL${NC}"
+        
+        if [ -z "$CONTEXT" ]; then
+            # First model gets enhanced prompt
+            ENHANCED_PROMPT=$(create_enhanced_prompt "$QUERY" "$INTENT")
+            RESPONSE=$(echo "$ENHANCED_PROMPT" | ollama run "$MODEL" 2>/dev/null)
+        else
+            # Subsequent models get query + accumulated context
+            PROMPT="$(create_enhanced_prompt "$QUERY" "$INTENT")
+
+Previous analysis from the model chain:
+$CONTEXT
+
+Build upon this analysis with your specialized expertise. Be more specific and actionable."
+            RESPONSE=$(echo "$PROMPT" | ollama run "$MODEL" 2>/dev/null)
+        fi
+        
+        # Save individual model output
+        echo "$RESPONSE" > "$OUTPUT_DIR/${MODEL}_output.txt"
+        
+        # Show response
+        echo "$RESPONSE"
+        
+        # Add newline between models (except last)
+        if [ $MODEL_COUNT -lt $(echo $MODELS | wc -w) ]; then
+            echo ""
+        fi
+        
+        # Accumulate context
+        CONTEXT="$CONTEXT
+
+=== Insights from $MODEL ===
+$RESPONSE"
+    done
+    
+    # Save full chain output
+    echo "$CONTEXT" > "$OUTPUT_DIR/full_chain.txt"
 fi
+
+# Show output location
+echo ""
+echo -e "${GREEN}✓ Output saved to $OUTPUT_DIR${NC}"
+
+# Quick feedback prompt
+echo -e "${BLUE}Was this routing correct? (Check $FEEDBACK_LOG if not)${NC}"

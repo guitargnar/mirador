@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-07-11T14:04:53Z",
+    "chain_type": "business_acceleration",
+    "format": "quick",
+    "models": ["matthew_context_provider_v6_complete:latest","ai_career_strategist:latest","matthews_strategic_accelerator_v2:latest","solution_architect:latest\n"],
+    "prompt": "Accelerate our AI adoption at Humana\n"
+}
