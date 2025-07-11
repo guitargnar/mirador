@@ -84,7 +84,7 @@ class ModelRegistry:
                 capabilities=["deep_analysis", "reasoning"]
             ),
             ModelInfo(
-                id="matthew_context_provider_v5_complete:latest",
+                id="matthew_context_provider_v6_complete:latest",
                 name="Matthew Context Provider",
                 type="synthesis",
                 latency=15.0,

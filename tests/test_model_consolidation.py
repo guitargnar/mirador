@@ -78,7 +78,7 @@ class TestModelRegistry(unittest.TestCase):
         test_groups = [
             {
                 'models': ['matthew_context_provider_v3', 'matthew_context_provider_v4', 
-                          'matthew_context_provider_v5_complete'],
+                          'matthew_context_provider_v6_complete'],
                 'consolidated_name': 'universal_context_provider'
             },
             {

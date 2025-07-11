@@ -86,7 +86,7 @@ class StreamingOrchestrator:
             ),
             ModelStage(
                 name="synthesis",
-                model="matthew_context_provider_v5_complete:latest",
+                model="matthew_context_provider_v6_complete:latest",
                 confidence=0.95,
                 timeout=30,
                 system_prompt="Synthesize all previous insights into a comprehensive, personalized response.",
