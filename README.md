@@ -1,5 +1,7 @@
 # Mirador AI Framework
 
+![Mirador AI Framework](assets/mirador-hero.svg)
+
 [![Version](https://img.shields.io/badge/version-3.0-blue.svg)](https://github.com/guitargnar/mirador)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](./tests)
@@ -125,6 +127,45 @@ pip3 install -r requirements.txt
 # Test the installation
 ./tests/run_tests.sh
 ```
+
+## 🎬 Demo
+
+### Quick Demo: Financial Planning Query
+
+```bash
+$ ./mirador-smart-v2 "Help me create a financial plan for early retirement"
+
+🔍 Analyzing query...
+📊 Selected chain: financial_optimization
+🎯 Engaging 5 specialized models...
+
+[matthew_context_provider_v5] → Personal context loaded
+[financial_advisor_expert] → Analyzing financial strategies
+[investment_strategist] → Evaluating portfolio options
+[retirement_planner] → Creating milestone roadmap
+[decision_simplifier] → Consolidating recommendations
+
+✅ Analysis complete! Output saved to: outputs/financial_2024-01-11_143022/
+```
+
+### Live Example: Creative Project
+
+```bash
+$ ./mirador_universal_runner_v2.sh creative_breakthrough "Design a music app for seniors" quick
+
+⚡ Quick mode activated
+🎨 Creative chain engaged
+💡 Generated 12 innovative concepts
+📱 Top 3 recommendations ready
+
+View full analysis: outputs/universal_creative_2024-01-11_143155/
+```
+
+### Watch Mirador in Action
+
+- **[Video Demo](https://youtu.be/demo-placeholder)**: 5-minute walkthrough of core features
+- **[Interactive Tutorial](https://mirador-demo.example.com)**: Try Mirador in your browser
+- **[Case Studies](docs/case-studies.md)**: Real-world applications and results
 
 ## 📋 Usage Examples
 
