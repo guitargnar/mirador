@@ -1,0 +1,70 @@
+# Core dependencies
+flask==3.0.0
+flask-cors==4.0.0
+flask-limiter==3.5.0
+flask-socketio==5.3.5
+python-socketio==5.10.0
+
+# Authentication
+pyjwt==2.8.0
+passlib==1.7.4
+bcrypt==4.1.2
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.0
+
+# Redis and caching
+redis==5.0.1
+hiredis==2.3.2  # C parser for better performance
+
+# API documentation
+flasgger==0.9.7.1
+marshmallow==3.20.1
+apispec==6.3.0
+
+# Async support
+aiohttp==3.9.1
+aiofiles==23.2.1
+asyncio==3.4.3
+
+# SSE support
+flask-sse==1.0.0
+sseclient-py==1.8.0
+
+# WebSocket
+websocket-client==1.7.0
+python-engineio==4.8.0
+
+# Utilities
+python-dotenv==1.0.0
+python-dateutil==2.8.2
+pydantic==2.5.2
+orjson==3.9.10
+
+# Monitoring
+prometheus-client==0.19.0
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0
+opentelemetry-instrumentation-flask==0.42b0
+
+# Production servers
+gunicorn==21.2.0
+gevent==23.9.1
+gevent-websocket==0.10.1
+eventlet==0.33.3
+uwsgi==2.0.23
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+black==23.12.0
+isort==5.13.2
+flake8==6.1.0
+mypy==1.7.1
+
+# Logging
+python-json-logger==2.0.7
+structlog==23.2.0
