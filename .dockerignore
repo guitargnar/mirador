@@ -1,0 +1,152 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+logs/
+*.log
+.env
+.env.*
+!.env.example
+outputs/
+chain_results_archive/
+test_logs/
+test_data/
+test_outputs/
+*.db
+*.sqlite
+*.sqlite3
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+docs/_build/
+site/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Docker
+.dockerignore
+docker-compose*.yml
+!docker-compose.yml
+!docker-compose.prod.yml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Large model files
+models/
+*.bin
+*.onnx
+*.pb
+*.h5
+*.pkl
+*.pickle
+*.joblib
+
+# Ollama models (not needed in container)
+ollama_models/
+.ollama/
+
+# Development files
+Makefile
+setup.cfg
+pyproject.toml
+poetry.lock
+Pipfile
+Pipfile.lock
+
+# Tests
+tests/
+test_*.py
+*_test.py
+conftest.py
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Scripts not needed in production
+scripts/
+*.sh
+!entrypoint.sh
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# OS files
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  mirador-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mirador-api
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - MIRADOR_ENV=production
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgresql://mirador:mirador@postgres:5432/mirador
+      - LOG_LEVEL=info
+      - API_BASE_URL=http://localhost:5000
+      - CORS_ORIGINS=http://localhost:3000,http://localhost:8080
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    networks:
+      - mirador-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/v5/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  redis:
+    image: redis:7-alpine
+    container_name: mirador-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - mirador-network
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: mirador-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=mirador
+      - POSTGRES_PASSWORD=mirador
+      - POSTGRES_DB=mirador
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - mirador-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mirador"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  nginx:
+    image: nginx:alpine
+    container_name: mirador-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+      - ./nginx/ssl:/etc/nginx/ssl
+      - ./static:/usr/share/nginx/html/static
+    depends_on:
+      - mirador-api
+    networks:
+      - mirador-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis-data:
+  postgres-data:
+
+networks:
+  mirador-network:
+    driver: bridge
