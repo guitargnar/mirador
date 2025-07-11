@@ -1,0 +1,172 @@
+MIRADOR TECHNOLOGY STACK
+==================================================
+
+FILE TYPE DISTRIBUTION:
+------------------------------
+  .txt             9342 files
+  .py              5543 files
+  .md              2335 files
+  .sh               881 files
+  .h                532 files
+  .pyi              411 files
+  .json             214 files
+  .modelfile        205 files
+  .js               100 files
+  .so                98 files
+  .f90               61 files
+  .log               41 files
+  .png               41 files
+  .typed             35 files
+  .pxd               35 files
+
+
+DETECTED TECHNOLOGIES:
+------------------------------
+
+Docker:
+  ✓ Found Dockerfile
+  ✓ Found docker-compose.yml
+
+GraphQL:
+  ✓ Found graphql/
+
+JSON:
+  ✓ 214 files with .json
+
+JavaScript:
+  ✓ 100 files with .js
+  ✓ Found package.json
+
+Markdown:
+  ✓ 2335 files with .md
+
+Nginx:
+  ✓ Found nginx.conf
+  ✓ Found nginx/
+
+Python:
+  ✓ 5543 files with .py
+  ✓ Found requirements.txt
+  ✓ Found setup.py
+
+SQL:
+  ✓ 1 files with .sql
+
+Shell/Bash:
+  ✓ 881 files with .sh
+  ✓ Found bin/
+
+YAML:
+  ✓ 3 files with .yaml
+  ✓ 5 files with .yml
+
+
+PYTHON DEPENDENCIES:
+------------------------------
+  - aiofiles==23.2.1
+  - aiofiles>=23.0.0
+  - aiofiles>=23.0.0           # Async file operations
+  - aiohttp==3.9.1
+  - aiohttp==3.9.1             # Async HTTP client/server
+  - alembic==1.13.0
+  - apispec==6.3.0
+  - argparse                   # Built-in - argument parsing (included in Python)
+  - asyncio-mqtt==0.16.2       # Async MQTT client
+  - asyncio==3.4.3
+  - asyncpg==0.29.0            # PostgreSQL async driver
+  - bcrypt==4.1.2
+  - black==23.12.0
+  - black==23.12.1             # Code formatter
+  - click==8.1.7               # Command-line interface creation
+  - curses                     # Built-in - terminal UI (included in Python)
+  - eventlet==0.33.3
+  - fastapi==0.104.1           # Modern web API framework
+  - flake8==6.1.0
+  - flake8==6.1.0              # Linting tool
+  - flasgger==0.9.7.1
+  - flask-cors==4.0.0
+  - flask-cors==4.0.0          # CORS support for Flask
+  - flask-limiter==3.5.0
+  - flask-socketio==5.3.5
+  - flask-sse==1.0.0
+  - flask==3.0.0
+  - flask==3.0.0               # Web framework for productivity tools
+  - gevent-websocket==0.10.1
+  - gevent==23.9.1
+  - gunicorn==21.2.0
+  - gunicorn==21.2.0           # WSGI HTTP server
+  - hashlib                    # Built-in - for hashing (included in Python)
+  - hiredis==2.3.2  # C parser for better performance
+  - httpx==0.25.2              # Modern HTTP client
+  - httpx>=0.24.0
+  - isort==5.13.2
+  - locust==2.17.0             # Load testing framework
+  - marshmallow==3.20.1
+  - marshmallow==3.20.1        # Object serialization/deserialization
+  - matplotlib==3.7.2          # Plotting library for model analysis
+  - mypy==1.7.1
+  - mypy==1.7.1                # Static type checker
+  - numpy==1.24.3              # Numerical computing
+  - ollama>=0.1.7
+  - ollama>=0.1.7              # Ollama Python client for LLM integration
+  - opentelemetry-api==1.21.0
+  - opentelemetry-instrumentation-flask==0.42b0
+  - opentelemetry-sdk==1.21.0
+  - orjson==3.9.10
+  - orjson==3.9.15             # Fast JSON parser (Note: 3.10+ has compatibility issues)
+  - pandas==2.0.3              # Data manipulation and analysis
+  - passlib==1.7.4
+  - passlib[bcrypt]==1.7.4     # Password hashing
+  - plotly==5.18.0             # Interactive visualizations
+  - prometheus-client==0.19.0
+  - prometheus-client==0.19.0  # Prometheus metrics
+  - psutil==5.9.6              # System and process utilities
+  - pydantic==2.5.2
+  - pydantic>=2.0.0
+  - pyjwt==2.8.0
+  - pytest-asyncio==0.21.1
+  - pytest-asyncio==0.21.1     # Async test support
+  - pytest-cov==4.1.0
+  - pytest-cov==4.1.0          # Code coverage
+  - pytest-mock==3.12.0
+  - pytest==7.4.3
+  - pytest==7.4.3              # Testing framework
+  - python-dateutil==2.8.2
+  - python-dateutil==2.8.2     # Date/time utilities
+  - python-dateutil>=2.8.0
+  - python-dotenv==1.0.0
+  - python-dotenv==1.0.0       # Load environment variables from .env
+  - python-engineio==4.8.0
+  - python-jose[cryptography]==3.3.0  # JWT token handling
+  - python-json-logger==2.0.7
+  - python-json-logger==2.0.7  # JSON logging
+  - python-multipart==0.0.6    # Multipart form data parsing
+  - python-pptx==0.6.23        # PowerPoint presentation generation
+  - python-socketio==5.10.0
+  - pyyaml==6.0.1              # YAML parser for configuration files
+  - redis==5.0.1
+  - redis==5.0.1               # Redis client
+  - requests==2.31.0           # HTTP library
+  - requests>=2.28.0
+  - rich==13.7.0               # Rich terminal formatting
+  - schedule==1.2.0            # Job scheduling
+  - seaborn==0.12.2            # Statistical data visualization
+  - slowapi==0.1.9             # Rate limiting
+  - sqlalchemy==2.0.23
+  - sqlalchemy==2.0.23         # SQL toolkit and ORM
+  - sqlite3                    # Built-in - lightweight database (included in Python)
+  - sseclient-py==1.8.0
+  - sseclient-py>=1.7.2
+  - strawberry-graphql[fastapi]==0.215.1  # GraphQL framework
+  - streamlit==1.32.0          # Web dashboard framework
+  - structlog==23.2.0
+  - structlog==23.2.0          # Structured logging
+  - testcontainers==3.7.1      # Docker container testing
+  - typer==0.9.0               # CLI app framework
+  - typing-extensions>=4.5.0
+  - unittest-mock              # Built-in - mock objects for testing
+  - urllib3>=1.26.0
+  - uvicorn[standard]==0.24.0  # ASGI server
+  - uwsgi==2.0.23
+  - websocket-client==1.7.0
+  - websocket-client>=1.5.0

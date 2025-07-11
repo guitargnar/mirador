@@ -1,0 +1,41 @@
+MIRADOR CODEBASE METRICS
+==================================================
+
+OVERALL METRICS:
+------------------------------
+Total Files: 21,809
+Total Size: 824.10 MB
+Components: 17
+File Types: 87
+
+
+COMPONENT SIZE DISTRIBUTION:
+------------------------------
+archive          92.5% ██████████████████████████████████████████████
+docs              2.8% █
+tests             2.7% █
+outputs           0.8% 
+other             0.5% 
+scripts           0.5% 
+core              0.1% 
+models            0.0% 
+tools             0.0% 
+api               0.0% 
+chains            0.0% 
+dashboard         0.0% 
+config            0.0% 
+streaming         0.0% 
+memory            0.0% 
+examples          0.0% 
+deployment        0.0% 
+
+
+LANGUAGE DISTRIBUTION:
+------------------------------
+Other           11245 files
+Python           5543 files
+Markdown         2335 files
+Shell             881 files
+JSON              214 files
+JavaScript        100 files
+YAML                8 files

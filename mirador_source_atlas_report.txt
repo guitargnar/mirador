@@ -1,0 +1,208 @@
+================================================================================
+MIRADOR AI FRAMEWORK - SOURCE CODE ATLAS
+================================================================================
+Generated: 2025-07-11 15:19:36
+Root Path: /Users/matthewscott/Projects/mirador
+
+COMPONENT OVERVIEW
+----------------------------------------
+
+📁 API
+   Purpose: REST API, GraphQL endpoints, and web service interfaces
+   Files: 40
+   Size: 0.18 MB
+   Key files:
+     - archive/legacy/venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/limited_api1.c
+     - archive/legacy/venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/limited_api2.pyx
+     - archive/legacy/venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/limited_api_latest.c
+     - archive/legacy/venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/meson.build
+     - archive/legacy/venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/setup.py
+     ... and 35 more
+
+📁 ARCHIVE
+   Purpose: Legacy code, backups, and historical versions
+   Files: 12,907
+   Size: 762.54 MB
+   Key files:
+     - archive/legacy/Documentation and Saved Assets/AI_Content_Creation_Risk_Management_Guide.pdf
+     - archive/legacy/Documentation and Saved Assets/Identifying High-Value Projects from Provided File Paths.zip
+     - archive/legacy/Documentation and Saved Assets/Identifying High-Value Projects from Provided File Paths/Mirador.docx
+     - archive/legacy/Documentation and Saved Assets/Identifying High-Value Projects from Provided File Paths/Mirador—AnOrchestratedAIChainingFramework.pdf
+     - archive/legacy/Documentation and Saved Assets/Identifying High-Value Projects from Provided File Paths/TheMiradorFramework.pdf
+     ... and 12902 more
+
+📁 CHAINS
+   Purpose: Chain orchestration scripts and universal runners
+   Files: 31
+   Size: 0.15 MB
+   Key files:
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/chains/role_chain.sh
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/chains/run_chain.sh
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_business_chain.sh
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_code_chain.sh
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_guitar_chain.sh
+     ... and 26 more
+
+📁 CONFIG
+   Purpose: Configuration files, environment settings, and manifests
+   Files: 26
+   Size: 0.07 MB
+   Key files:
+     - .env
+     - .env.example
+     - .github/workflows/release.yml
+     - archive/legacy/Documentation and Saved Assets/mirador-main/config/config.json
+     - archive/legacy/Documentation and Saved Assets/mirador-main/config/intervention.json
+     ... and 21 more
+
+📁 CORE
+   Purpose: Core framework logic, conductors, and essential components
+   Files: 52
+   Size: 0.71 MB
+   Key files:
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/conductor.py
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/core/__init__.py
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/core/intervention_manager.py
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/core/message_bus.py
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/core/specialist_handler.py
+     ... and 47 more
+
+📁 DASHBOARD
+   Purpose: Web dashboards, UI components, and visualizations
+   Files: 6
+   Size: 0.09 MB
+   Key files:
+     - src/dashboard/create_web_dashboard.py
+     - src/dashboard/dashboard_status.py
+     - src/dashboard/mirador_dashboard.py
+     - src/dashboard/mirador_unified_dashboard.py
+     - src/dashboard/mirador_web_dashboard.py
+     ... and 1 more
+
+📁 DEPLOYMENT
+   Purpose: Docker configs, deployment scripts, and infrastructure
+   Files: 2
+   Size: 0.01 MB
+   Key files:
+     - Dockerfile
+     - nginx/nginx.conf
+
+📁 DOCS
+   Purpose: Documentation, guides, specifications, and README files
+   Files: 2,309
+   Size: 22.71 MB
+   Key files:
+     - .claude/PROJECT_HANDOFF.md
+     - .github/ISSUE_TEMPLATE/bug_report.md
+     - ADVANCED_FEATURES.md
+     - CHANGELOG.md
+     - CLAUDE.md
+     ... and 2304 more
+
+📁 EXAMPLES
+   Purpose: Example usage, demos, and sample implementations
+   Files: 7
+   Size: 0.03 MB
+   Key files:
+     - examples/basic_usage.py
+     - examples/cache_demo.py
+     - examples/graphql_queries.graphql
+     - examples/rag_python_demo.py
+     - sdk/python/examples/async_example.py
+     ... and 2 more
+
+📁 MEMORY
+   Purpose: Memory systems, context management, and persistence
+   Files: 4
+   Size: 0.04 MB
+   Key files:
+     - src/memory/__init__.py
+     - src/memory/context.py
+     - src/memory/database.py
+     - src/memory/learning.py
+
+📁 MODELS
+   Purpose: Ollama model definitions, configurations, and AI model files
+   Files: 171
+   Size: 0.25 MB
+   Key files:
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/models/optimized/code_reviewer_fix.modelfile
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/models/optimized/creative_entrepreneur.modelfile
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/models/optimized/enhanced_agent.modelfile
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/models/optimized/fast_agent_focused.modelfile
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/models/optimized/file_reviewer.modelfile
+     ... and 166 more
+
+📁 OTHER
+   Purpose: Miscellaneous files not fitting other categories
+   Files: 91
+   Size: 4.40 MB
+   Key files:
+     - .claude/settings.local.json
+     - .decoy/monitor.py
+     - .dockerignore
+     - .github/topics.txt
+     - .gitignore
+     ... and 86 more
+
+📁 OUTPUTS
+   Purpose: Generated outputs, logs, and runtime artifacts
+   Files: 3,243
+   Size: 6.64 MB
+   Key files:
+     - archive/legacy/ai_framework/logs/errors_20250706.log
+     - archive/legacy/ai_framework/logs/errors_20250707.log
+     - archive/legacy/ai_framework/logs/mirador_20250707.log
+     - archive/legacy/archive/code_cleanup_backup_20250709_150325/test_logs/chain_test_results_20250706_074809.json
+     - archive/legacy/archive/code_cleanup_backup_20250709_150325/test_logs/chain_test_results_20250706_075349.json
+     ... and 3238 more
+
+📁 SCRIPTS
+   Purpose: Utility scripts, installers, and automation tools
+   Files: 889
+   Size: 3.80 MB
+   Key files:
+     - analyze_model_batch.sh
+     - archive/legacy/Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/SYSTEM_TEST_SUITE.sh
+     - archive/legacy/Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/immediate_action_plan.sh
+     - archive/legacy/Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/implementation_commands.sh
+     - archive/legacy/Documentation and Saved Assets/Synthesize Recommendations for Mirador Multi-Agent Project/implementation_roadmap.sh
+     ... and 884 more
+
+📁 STREAMING
+   Purpose: Streaming capabilities and real-time processing
+   Files: 8
+   Size: 0.06 MB
+   Key files:
+     - src/streaming/__init__.py
+     - src/streaming/cli.py
+     - src/streaming/dashboard.py
+     - src/streaming/enhanced_orchestrator.py
+     - src/streaming/orchestrator.py
+     ... and 3 more
+
+📁 TESTS
+   Purpose: Test suites, validation scripts, and quality assurance
+   Files: 2,009
+   Size: 22.18 MB
+   Key files:
+     - archive/legacy/Documentation and Saved Assets/mirador-main/src/test/test_integration.py
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/results/code_reviewer_fix_20250520_142559/metadata.txt
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/results/code_reviewer_fix_20250520_142559/output.txt
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/results/code_reviewer_fix_20250520_142559/response.json
+     - archive/legacy/Documentation and Saved Assets/mirador-main/tests/results/code_reviewer_fix_20250617_113645/metadata.txt
+     ... and 2004 more
+
+📁 TOOLS
+   Purpose: Development tools, analyzers, and utilities
+   Files: 14
+   Size: 0.25 MB
+   Key files:
+     - src/tools/__init__.py
+     - src/tools/mirador_chain_debugger.py
+     - src/tools/mirador_config_generator.py
+     - src/tools/mirador_content_diagnostic.py
+     - src/tools/mirador_memory.py
+     ... and 9 more
+
+TOTAL: 21,809 files, 824.10 MB

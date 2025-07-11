@@ -1,0 +1,907 @@
+{
+  "summary": {
+    "total_intents": 8,
+    "total_unique_patterns": 64,
+    "model_usage_frequency": {
+      "speed_optimizer_phi": 1,
+      "matthew_context_provider_v6_complete": 5,
+      "universal_financial_advisor": 1,
+      "practical_implementer": 5,
+      "universal_health_wellness": 1,
+      "universal_louisville_expert": 1,
+      "universal_music_mentor": 1,
+      "universal_creative_catalyst": 2,
+      "universal_career_strategist": 1,
+      "universal_corporate_navigator": 1,
+      "universal_strategy_architect": 1,
+      "universal_relationship_harmony": 1
+    }
+  },
+  "intent_details": {
+    "quick": {
+      "description": "Fast responses for immediate needs",
+      "trigger_patterns": [
+        "quick",
+        "brief",
+        "summary",
+        "tldr",
+        "short",
+        "what.*now",
+        "immediate"
+      ],
+      "model_chain": [
+        "speed_optimizer_phi"
+      ],
+      "chain_length": 1
+    },
+    "financial": {
+      "description": "Money, budgeting, investment advice",
+      "trigger_patterns": [
+        "money",
+        "budget",
+        "finance",
+        "salary",
+        "investment",
+        "savings",
+        "afford",
+        "cost",
+        "spend"
+      ],
+      "model_chain": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ],
+      "chain_length": 3
+    },
+    "health": {
+      "description": "Wellness, fitness, lifestyle optimization",
+      "trigger_patterns": [
+        "health",
+        "fitness",
+        "wellness",
+        "stress",
+        "sleep",
+        "energy",
+        "tired",
+        "exercise",
+        "nutrition"
+      ],
+      "model_chain": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ],
+      "chain_length": 3
+    },
+    "location": {
+      "description": "Louisville-specific knowledge",
+      "trigger_patterns": [
+        "louisville",
+        "kentucky",
+        "local",
+        "jcps",
+        "school",
+        "neighborhood",
+        "downtown"
+      ],
+      "model_chain": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ],
+      "chain_length": 2
+    },
+    "music": {
+      "description": "Guitar, practice, performance guidance",
+      "trigger_patterns": [
+        "music",
+        "guitar",
+        "practice",
+        "performance",
+        "song",
+        "play",
+        "band",
+        "chord"
+      ],
+      "model_chain": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ],
+      "chain_length": 3
+    },
+    "career": {
+      "description": "Professional development, corporate strategy",
+      "trigger_patterns": [
+        "career",
+        "job",
+        "promotion",
+        "humana",
+        "corporate",
+        "work",
+        "meeting",
+        "boss",
+        "ai.*leader"
+      ],
+      "model_chain": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ],
+      "chain_length": 3
+    },
+    "creative": {
+      "description": "Innovation, breakthrough thinking",
+      "trigger_patterns": [
+        "creative",
+        "innovate",
+        "idea",
+        "breakthrough",
+        "design",
+        "imagine",
+        "invent"
+      ],
+      "model_chain": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ],
+      "chain_length": 3
+    },
+    "family": {
+      "description": "Parenting, relationships, family dynamics",
+      "trigger_patterns": [
+        "family",
+        "kids",
+        "teens",
+        "relationship",
+        "parenting",
+        "daughter",
+        "son",
+        "children"
+      ],
+      "model_chain": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ],
+      "chain_length": 3
+    }
+  },
+  "model_details": {
+    "speed_optimizer_phi": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "quick",
+          "position": 1,
+          "total_in_chain": 1
+        }
+      ],
+      "typical_position": 1.0
+    },
+    "universal_career_strategist": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "career",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "practical_implementer": {
+      "usage_count": 5,
+      "used_in_intents": [
+        {
+          "intent": "financial",
+          "position": 3,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "health",
+          "position": 3,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "location",
+          "position": 2,
+          "total_in_chain": 2
+        },
+        {
+          "intent": "creative",
+          "position": 3,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "family",
+          "position": 3,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.8
+    },
+    "universal_corporate_navigator": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "career",
+          "position": 3,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 3.0
+    },
+    "matthew_context_provider_v6_complete": {
+      "usage_count": 5,
+      "used_in_intents": [
+        {
+          "intent": "financial",
+          "position": 1,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "health",
+          "position": 1,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "music",
+          "position": 1,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "career",
+          "position": 1,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "family",
+          "position": 1,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 1.0
+    },
+    "universal_health_wellness": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "health",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "universal_louisville_expert": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "location",
+          "position": 1,
+          "total_in_chain": 2
+        }
+      ],
+      "typical_position": 1.0
+    },
+    "universal_music_mentor": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "music",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "universal_creative_catalyst": {
+      "usage_count": 2,
+      "used_in_intents": [
+        {
+          "intent": "music",
+          "position": 3,
+          "total_in_chain": 3
+        },
+        {
+          "intent": "creative",
+          "position": 1,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "universal_strategy_architect": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "creative",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "universal_relationship_harmony": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "family",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    },
+    "universal_financial_advisor": {
+      "usage_count": 1,
+      "used_in_intents": [
+        {
+          "intent": "financial",
+          "position": 2,
+          "total_in_chain": 3
+        }
+      ],
+      "typical_position": 2.0
+    }
+  },
+  "routing_matrix": [
+    {
+      "pattern": "quick",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "brief",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "summary",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "tldr",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "short",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "what.*now",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "immediate",
+      "intent": "quick",
+      "models": [
+        "speed_optimizer_phi"
+      ]
+    },
+    {
+      "pattern": "money",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "budget",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "finance",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "salary",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "investment",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "savings",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "afford",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "cost",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "spend",
+      "intent": "financial",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_financial_advisor",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "health",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "fitness",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "wellness",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "stress",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "sleep",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "energy",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "tired",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "exercise",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "nutrition",
+      "intent": "health",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_health_wellness",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "louisville",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "kentucky",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "local",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "jcps",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "school",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "neighborhood",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "downtown",
+      "intent": "location",
+      "models": [
+        "universal_louisville_expert",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "music",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "guitar",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "practice",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "performance",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "song",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "play",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "band",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "chord",
+      "intent": "music",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_music_mentor",
+        "universal_creative_catalyst"
+      ]
+    },
+    {
+      "pattern": "career",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "job",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "promotion",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "humana",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "corporate",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "work",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "meeting",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "boss",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "ai.*leader",
+      "intent": "career",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_career_strategist",
+        "universal_corporate_navigator"
+      ]
+    },
+    {
+      "pattern": "creative",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "innovate",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "idea",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "breakthrough",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "design",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "imagine",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "invent",
+      "intent": "creative",
+      "models": [
+        "universal_creative_catalyst",
+        "universal_strategy_architect",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "family",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "kids",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "teens",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "relationship",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "parenting",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "daughter",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "son",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    },
+    {
+      "pattern": "children",
+      "intent": "family",
+      "models": [
+        "matthew_context_provider_v6_complete",
+        "universal_relationship_harmony",
+        "practical_implementer"
+      ]
+    }
+  ]
+}

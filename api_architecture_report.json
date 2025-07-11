@@ -1,0 +1,438 @@
+{
+  "generated_at": "2025-07-11T15:55:57.283931",
+  "api_version": "5.0.0",
+  "summary": {
+    "total_rest_endpoints": 16,
+    "total_graphql_operations": 21,
+    "streaming_protocols": 5,
+    "chain_types": 9,
+    "authentication_methods": 4,
+    "caching_strategies": 7
+  },
+  "endpoints": {
+    "rest": [
+      {
+        "path": "/api/v5/query",
+        "method": "POST",
+        "handler": "execute_query",
+        "description": "Execute a query with smart routing and caching\n    \n    The query will be routed to the appropriate chain based on content analysis.\n    Results are cached to improve performance for repeated queries.",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": "Smart query routing"
+      },
+      {
+        "path": "/api/v5/query",
+        "method": "OPTIONS",
+        "handler": "execute_query",
+        "description": "Execute a query with smart routing and caching\n    \n    The query will be routed to the appropriate chain based on content analysis.\n    Results are cached to improve performance for repeated queries.",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": "Smart query routing"
+      },
+      {
+        "path": "/api/v5/chains/<chain_type>/run",
+        "method": "POST",
+        "handler": "run_chain",
+        "description": "Run a specific chain with caching\n    \n    Executes the specified chain type with the given prompt.\n    Results are cached based on chain type, prompt, and format.",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": "Chain execution endpoints"
+      },
+      {
+        "path": "/api/v5/chains/<chain_type>/run",
+        "method": "OPTIONS",
+        "handler": "run_chain",
+        "description": "Run a specific chain with caching\n    \n    Executes the specified chain type with the given prompt.\n    Results are cached based on chain type, prompt, and format.",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": "Chain execution endpoints"
+      },
+      {
+        "path": "/api/v5/query/cache",
+        "method": "DELETE",
+        "handler": "clear_query_cache",
+        "description": "Clear query cache for the current user",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": "Smart query routing"
+      },
+      {
+        "path": "/api/v5/cache/stats",
+        "method": "GET",
+        "handler": "get_cache_stats",
+        "description": "Get cache statistics",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/cache/warmup",
+        "method": "POST",
+        "handler": "",
+        "description": "",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/models/<model_name>/test",
+        "method": "POST",
+        "handler": "test_model",
+        "description": "Test a specific model with caching\n    \n    Useful for testing individual model responses.\n    Results are cached to avoid repeated model calls.",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/*",
+        "method": "*",
+        "handler": "api_router",
+        "description": "Main API router (implementation not found)",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/*",
+        "method": "*",
+        "handler": "AuthenticationMiddleware",
+        "description": "JWT authentication middleware",
+        "auth_required": true,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/*",
+        "method": "*",
+        "handler": "RateLimitMiddleware",
+        "description": "Rate limiting middleware",
+        "auth_required": false,
+        "rate_limited": true,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/query",
+        "method": "POST",
+        "handler": "execute_query",
+        "description": "Execute a query with smart routing",
+        "auth_required": true,
+        "rate_limited": false,
+        "cached": true,
+        "chain_mapping": "Smart query routing"
+      },
+      {
+        "path": "/api/v5/chains/{chain_type}/run",
+        "method": "POST",
+        "handler": "run_chain",
+        "description": "Run a specific chain",
+        "auth_required": true,
+        "rate_limited": false,
+        "cached": true,
+        "chain_mapping": "Direct chain execution"
+      },
+      {
+        "path": "/api/v5/models/{model_name}/test",
+        "method": "POST",
+        "handler": "test_model",
+        "description": "Test a specific model",
+        "auth_required": true,
+        "rate_limited": false,
+        "cached": true,
+        "chain_mapping": "Individual model testing"
+      },
+      {
+        "path": "/api/v5/health",
+        "method": "GET",
+        "handler": "health_check",
+        "description": "Health check endpoint",
+        "auth_required": false,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      },
+      {
+        "path": "/api/v5/metrics",
+        "method": "GET",
+        "handler": "get_metrics",
+        "description": "Get performance metrics",
+        "auth_required": true,
+        "rate_limited": false,
+        "cached": false,
+        "chain_mapping": null
+      }
+    ],
+    "graphql": [
+      {
+        "name": "models",
+        "type": "query",
+        "description": "List all available models",
+        "chain_mapping": "Individual model testing"
+      },
+      {
+        "name": "model",
+        "type": "query",
+        "description": "Get a specific model",
+        "chain_mapping": "Individual model testing"
+      },
+      {
+        "name": "chains",
+        "type": "query",
+        "description": "List all available chains",
+        "chain_mapping": "Direct chain execution"
+      },
+      {
+        "name": "chain",
+        "type": "query",
+        "description": "Get a specific chain configuration",
+        "chain_mapping": "Direct chain execution"
+      },
+      {
+        "name": "sessions",
+        "type": "query",
+        "description": "List user sessions",
+        "chain_mapping": null
+      },
+      {
+        "name": "session",
+        "type": "query",
+        "description": "Get a specific session",
+        "chain_mapping": null
+      },
+      {
+        "name": "session_history",
+        "type": "query",
+        "description": "Get session history",
+        "chain_mapping": null
+      },
+      {
+        "name": "webhooks",
+        "type": "query",
+        "description": "List webhooks",
+        "chain_mapping": null
+      },
+      {
+        "name": "webhook",
+        "type": "query",
+        "description": "Get a specific webhook",
+        "chain_mapping": null
+      },
+      {
+        "name": "cache_stats",
+        "type": "query",
+        "description": "Get cache statistics",
+        "chain_mapping": null
+      },
+      {
+        "name": "health",
+        "type": "query",
+        "description": "API health status",
+        "chain_mapping": null
+      },
+      {
+        "name": "ExecuteQuery",
+        "type": "mutation",
+        "description": "Execute a query with smart routing",
+        "chain_mapping": "Smart query routing"
+      },
+      {
+        "name": "RunChain",
+        "type": "mutation",
+        "description": "Run a specific chain",
+        "chain_mapping": "Direct chain execution"
+      },
+      {
+        "name": "TestModel",
+        "type": "mutation",
+        "description": "Test a model",
+        "chain_mapping": "Individual model testing"
+      },
+      {
+        "name": "CreateSession",
+        "type": "mutation",
+        "description": "Create a new session",
+        "chain_mapping": null
+      },
+      {
+        "name": "CreateWebhook",
+        "type": "mutation",
+        "description": "Create a webhook",
+        "chain_mapping": null
+      },
+      {
+        "name": "UpdateWebhook",
+        "type": "mutation",
+        "description": "Update a webhook",
+        "chain_mapping": null
+      },
+      {
+        "name": "DeleteWebhook",
+        "type": "mutation",
+        "description": "Delete a webhook",
+        "chain_mapping": null
+      },
+      {
+        "name": "ClearCache",
+        "type": "mutation",
+        "description": "Clear cache",
+        "chain_mapping": null
+      },
+      {
+        "name": "query_stream",
+        "type": "subscription",
+        "description": "Subscribe to streaming query responses",
+        "chain_mapping": "Streaming chain execution"
+      },
+      {
+        "name": "chain_stream",
+        "type": "subscription",
+        "description": "Subscribe to streaming chain execution",
+        "chain_mapping": "Streaming chain execution"
+      }
+    ]
+  },
+  "streaming": [
+    {
+      "type": "websocket",
+      "path": "/api/v5/ws",
+      "description": "WebSocket endpoints for real-time streaming",
+      "protocol": "ws/wss",
+      "models_used": []
+    },
+    {
+      "type": "graphql_subscription",
+      "path": "/api/v5/graphql (subscription: query_stream)",
+      "description": "Subscribe to streaming query responses",
+      "protocol": "GraphQL Subscriptions over WebSocket",
+      "models_used": []
+    },
+    {
+      "type": "graphql_subscription",
+      "path": "/api/v5/graphql (subscription: chain_stream)",
+      "description": "Subscribe to streaming chain execution",
+      "protocol": "GraphQL Subscriptions over WebSocket",
+      "models_used": []
+    },
+    {
+      "type": "async_generator",
+      "path": "StreamingOrchestrator.process()",
+      "description": "Progressive enhancement streaming with <1s first token latency",
+      "protocol": "Python AsyncGenerator",
+      "models_used": [
+        "quick_response (speed_optimizer_phi:latest)",
+        "deep_analysis (gemma2:9b)",
+        "synthesis (matthew_context_provider_v6_complete:latest)"
+      ]
+    },
+    {
+      "type": "sse",
+      "path": "/api/v5/stream",
+      "description": "Server-Sent Events for real-time updates (configured but implementation not found)",
+      "protocol": "text/event-stream",
+      "models_used": []
+    }
+  ],
+  "chain_mappings": {
+    "life_optimization": [
+      "POST /api/v5/chains/life_optimization/run",
+      "POST /api/v5/query (with chain_type=life_optimization)",
+      "GraphQL: RunChain(chain_type=life_optimization)",
+      "GraphQL: query_stream(chain_type=life_optimization)",
+      "GraphQL: chain_stream(chain_type=life_optimization)"
+    ],
+    "business_acceleration": [
+      "POST /api/v5/chains/business_acceleration/run",
+      "POST /api/v5/query (with chain_type=business_acceleration)",
+      "GraphQL: RunChain(chain_type=business_acceleration)",
+      "GraphQL: query_stream(chain_type=business_acceleration)",
+      "GraphQL: chain_stream(chain_type=business_acceleration)"
+    ],
+    "creative_breakthrough": [
+      "POST /api/v5/chains/creative_breakthrough/run",
+      "POST /api/v5/query (with chain_type=creative_breakthrough)",
+      "GraphQL: RunChain(chain_type=creative_breakthrough)",
+      "GraphQL: query_stream(chain_type=creative_breakthrough)",
+      "GraphQL: chain_stream(chain_type=creative_breakthrough)"
+    ],
+    "relationship_harmony": [
+      "POST /api/v5/chains/relationship_harmony/run",
+      "POST /api/v5/query (with chain_type=relationship_harmony)",
+      "GraphQL: RunChain(chain_type=relationship_harmony)",
+      "GraphQL: query_stream(chain_type=relationship_harmony)",
+      "GraphQL: chain_stream(chain_type=relationship_harmony)"
+    ],
+    "technical_mastery": [
+      "POST /api/v5/chains/technical_mastery/run",
+      "POST /api/v5/query (with chain_type=technical_mastery)",
+      "GraphQL: RunChain(chain_type=technical_mastery)",
+      "GraphQL: query_stream(chain_type=technical_mastery)",
+      "GraphQL: chain_stream(chain_type=technical_mastery)"
+    ],
+    "strategic_synthesis": [
+      "POST /api/v5/chains/strategic_synthesis/run",
+      "POST /api/v5/query (with chain_type=strategic_synthesis)",
+      "GraphQL: RunChain(chain_type=strategic_synthesis)",
+      "GraphQL: query_stream(chain_type=strategic_synthesis)",
+      "GraphQL: chain_stream(chain_type=strategic_synthesis)"
+    ],
+    "deep_analysis": [
+      "POST /api/v5/chains/deep_analysis/run",
+      "POST /api/v5/query (with chain_type=deep_analysis)",
+      "GraphQL: RunChain(chain_type=deep_analysis)",
+      "GraphQL: query_stream(chain_type=deep_analysis)",
+      "GraphQL: chain_stream(chain_type=deep_analysis)"
+    ],
+    "global_insight": [
+      "POST /api/v5/chains/global_insight/run",
+      "POST /api/v5/query (with chain_type=global_insight)",
+      "GraphQL: RunChain(chain_type=global_insight)",
+      "GraphQL: query_stream(chain_type=global_insight)",
+      "GraphQL: chain_stream(chain_type=global_insight)"
+    ],
+    "rapid_decision": [
+      "POST /api/v5/chains/rapid_decision/run",
+      "POST /api/v5/query (with chain_type=rapid_decision)",
+      "GraphQL: RunChain(chain_type=rapid_decision)",
+      "GraphQL: query_stream(chain_type=rapid_decision)",
+      "GraphQL: chain_stream(chain_type=rapid_decision)"
+    ]
+  },
+  "authentication": [
+    "@require_auth(['read']) - Read access",
+    "@require_auth(['admin']) - Admin access",
+    "JWT tokens in Authorization header",
+    "API keys for service-to-service auth"
+  ],
+  "caching": [
+    "Redis-based distributed cache",
+    "Query response caching (TTL: 1 hour)",
+    "Chain result caching (TTL: 30 minutes)",
+    "Model output caching (TTL: 15 minutes)",
+    "Session context caching (TTL: 24 hours)",
+    "Cache warmup for common queries",
+    "@cached_query, @cached_chain, @cached_model decorators"
+  ],
+  "models": {
+    "speed_optimizer_phi:latest": "Fastest model for quick responses (<1s)",
+    "gemma2:9b": "Deep analysis model",
+    "matthew_context_provider_v6_complete:latest": "Synthesis and personalization",
+    "80+ specialized models": "Domain-specific expertise"
+  },
+  "architecture_insights": {
+    "api_design": "Hybrid REST + GraphQL with real-time streaming",
+    "performance": "Sub-1s first token latency via progressive enhancement",
+    "scalability": "Redis caching, connection pooling, async processing",
+    "security": "JWT auth, rate limiting, role-based access control",
+    "monitoring": "Health checks, metrics collection, distributed tracing"
+  }
+}

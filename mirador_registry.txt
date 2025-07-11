@@ -1,0 +1,1129 @@
+MIRADOR MODEL & CHAIN REGISTRY
+==================================================
+
+OLLAMA MODELS (185 found):
+----------------------------------------
+  📦 ai_leadership_strategist
+     Path: models/domain/ai_leadership_strategist.modelfile
+     Size: 2901 bytes
+
+  📦 analytical_expert_gemma
+     Path: models/diverse/analytical_expert_gemma.modelfile
+     Size: 632 bytes
+
+  📦 analytical_expert_gemma
+     Path: models/diverse/analytical_expert_gemma.modelfile
+     Size: 632 bytes
+
+  📦 analytical_expert_gemma:latest
+     Path: models/diverse/analytical_expert_gemma:latest.modelfile
+     Size: 632 bytes
+
+  📦 analytical_expert_gemma:latest
+     Path: models/diverse/analytical_expert_gemma:latest.modelfile
+     Size: 632 bytes
+
+  📦 audio_production_strategist
+     Path: models/domain/audio_production_strategist.modelfile
+     Size: 831 bytes
+
+  📦 baseline_llama_compact
+     Path: models/diverse/baseline_llama_compact.modelfile
+     Size: 358 bytes
+
+  📦 baseline_llama_compact:latest
+     Path: models/diverse/baseline_llama_compact:latest.modelfile
+     Size: 358 bytes
+
+  📦 code_reviewer
+     Path: models/domain/code_reviewer.modelfile
+     Size: 676 bytes
+
+  📦 code_reviewer_fix
+     Path: src/ai_framework/models/optimized/code_reviewer_fix.modelfile
+     Size: 855 bytes
+
+  📦 code_reviewer_fix
+     Path: models/domain/code_reviewer_fix.modelfile
+     Size: 847 bytes
+
+  📦 command_r_code_analyst
+     Path: models/command_r_code_analyst.modelfile
+     Size: 1540 bytes
+
+  📦 command_r_rag_specialist
+     Path: models/command_r_rag_specialist.modelfile
+     Size: 1563 bytes
+
+  📦 content_strategist_pro
+     Path: models/domain/content_strategist_pro.modelfile
+     Size: 872 bytes
+
+  📦 create_matthew_unified
+     Path: scripts/misc/create_matthew_unified.sh
+     Size: 1193 bytes
+
+  📦 creative_entrepreneur
+     Path: src/ai_framework/models/optimized/creative_entrepreneur.modelfile
+     Size: 936 bytes
+
+  📦 creative_entrepreneur
+     Path: models/domain/creative_entrepreneur.modelfile
+     Size: 936 bytes
+
+  📦 cross_model_synthesizer
+     Path: models/domain/cross_model_synthesizer.modelfile
+     Size: 908 bytes
+
+  📦 decision_enhancer
+     Path: models/domain/decision_enhancer.modelfile
+     Size: 564 bytes
+
+  📦 decision_simplifier_v2
+     Path: models/domain/decision_simplifier_v2.modelfile
+     Size: 806 bytes
+
+  📦 decision_simplifier_v3
+     Path: models/domain/decision_simplifier_v3.modelfile
+     Size: 812 bytes
+
+  📦 digital_asset_curator
+     Path: models/domain/digital_asset_curator.modelfile
+     Size: 878 bytes
+
+  📦 digital_storyteller
+     Path: models/domain/digital_storyteller.modelfile
+     Size: 870 bytes
+
+  📦 engagement_optimizer
+     Path: models/domain/engagement_optimizer.modelfile
+     Size: 1444 bytes
+
+  📦 enhanced_agent
+     Path: src/ai_framework/models/optimized/enhanced_agent.modelfile
+     Size: 776 bytes
+
+  📦 enhanced_agent
+     Path: models/domain/enhanced_agent.modelfile
+     Size: 776 bytes
+
+  📦 enhanced_agent_enforcer
+     Path: models/domain/enhanced_agent_enforcer.modelfile
+     Size: 1329 bytes
+
+  📦 enhanced_agent_enforcer_v2
+     Path: models/domain/enhanced_agent_enforcer_v2.modelfile
+     Size: 1968 bytes
+
+  📦 enhanced_agent_fast
+     Path: models/domain/enhanced_agent_fast.modelfile
+     Size: 934 bytes
+
+  📦 enhanced_agent_fast_v2
+     Path: models/domain/enhanced_agent_fast_v2.modelfile
+     Size: 1085 bytes
+
+  📦 enhanced_agent_fast_v3
+     Path: models/domain/enhanced_agent_fast_v3.modelfile
+     Size: 1279 bytes
+
+  📦 enhanced_agent_fast_v4
+     Path: models/domain/enhanced_agent_fast_v4.modelfile
+     Size: 1281 bytes
+
+  📦 enhanced_agent_fast_v5
+     Path: models/domain/enhanced_agent_fast_v5.modelfile
+     Size: 1546 bytes
+
+  📦 enhanced_agent_fast_v6
+     Path: models/domain/enhanced_agent_fast_v6.modelfile
+     Size: 1270 bytes
+
+  📦 enhanced_agent_fast_v7
+     Path: models/domain/enhanced_agent_fast_v7.modelfile
+     Size: 332 bytes
+
+  📦 fast_agent_focused
+     Path: src/ai_framework/models/optimized/fast_agent_focused.modelfile
+     Size: 808 bytes
+
+  📦 fast_agent_focused
+     Path: models/domain/fast_agent_focused.modelfile
+     Size: 0 bytes
+
+  📦 father_daughter_music_mentor
+     Path: models/domain/father_daughter_music_mentor.modelfile
+     Size: 990 bytes
+
+  📦 father_daughter_wisdom_guide
+     Path: models/domain/father_daughter_wisdom_guide.modelfile
+     Size: 694 bytes
+
+  📦 feedback_loop_optimizer
+     Path: models/domain/feedback_loop_optimizer.modelfile
+     Size: 1833 bytes
+
+  📦 feedback_loop_optimizer_fixed
+     Path: models/domain/feedback_loop_optimizer_fixed.modelfile
+     Size: 876 bytes
+
+  📦 file_reviewer
+     Path: src/ai_framework/models/optimized/file_reviewer.modelfile
+     Size: 888 bytes
+
+  📦 file_reviewer
+     Path: models/domain/file_reviewer.modelfile
+     Size: 883 bytes
+
+  📦 financial_planning_expert
+     Path: models/domain/financial_planning_expert.modelfile
+     Size: 1793 bytes
+
+  📦 financial_planning_expert
+     Path: models/domain/financial_planning_expert.modelfile
+     Size: 1793 bytes
+
+  📦 financial_planning_expert_fast
+     Path: models/domain/financial_planning_expert_fast.modelfile
+     Size: 291 bytes
+
+  📦 financial_planning_expert_fast
+     Path: models/domain/financial_planning_expert_fast.modelfile
+     Size: 291 bytes
+
+  📦 financial_planning_expert_optimized
+     Path: models/domain/financial_planning_expert_optimized.modelfile
+     Size: 917 bytes
+
+  📦 financial_planning_expert_optimized
+     Path: models/domain/financial_planning_expert_optimized.modelfile
+     Size: 917 bytes
+
+  📦 financial_planning_expert_v2
+     Path: models/domain/financial_planning_expert_v2.modelfile
+     Size: 1528 bytes
+
+  📦 financial_planning_expert_v2
+     Path: models/domain/financial_planning_expert_v2.modelfile
+     Size: 1528 bytes
+
+  📦 financial_planning_expert_v3
+     Path: models/domain/financial_planning_expert_v3.modelfile
+     Size: 1851 bytes
+
+  📦 financial_planning_expert_v3
+     Path: models/domain/financial_planning_expert_v3.modelfile
+     Size: 1851 bytes
+
+  📦 financial_planning_expert_v4
+     Path: models/domain/financial_planning_expert_v4.modelfile
+     Size: 1866 bytes
+
+  📦 financial_planning_expert_v4
+     Path: models/domain/financial_planning_expert_v4.modelfile
+     Size: 1866 bytes
+
+  📦 financial_planning_expert_v5
+     Path: models/domain/financial_planning_expert_v5.modelfile
+     Size: 1618 bytes
+
+  📦 financial_planning_expert_v5
+     Path: models/domain/financial_planning_expert_v5.modelfile
+     Size: 1618 bytes
+
+  📦 financial_planning_expert_v6
+     Path: models/domain/financial_planning_expert_v6.modelfile
+     Size: 1338 bytes
+
+  📦 financial_planning_expert_v6
+     Path: models/domain/financial_planning_expert_v6.modelfile
+     Size: 1338 bytes
+
+  📦 financial_planning_expert_v7
+     Path: models/domain/financial_planning_expert_v7.modelfile
+     Size: 710 bytes
+
+  📦 financial_planning_expert_v7
+     Path: models/domain/financial_planning_expert_v7.modelfile
+     Size: 710 bytes
+
+  📦 financial_planning_expert_v8
+     Path: models/domain/financial_planning_expert_v8.modelfile
+     Size: 868 bytes
+
+  📦 financial_planning_expert_v8
+     Path: models/domain/financial_planning_expert_v8.modelfile
+     Size: 868 bytes
+
+  📦 guitar_expert
+     Path: models/domain/guitar_expert.modelfile
+     Size: 1145 bytes
+
+  📦 guitar_expert
+     Path: models/domain/guitar_expert.modelfile
+     Size: 1145 bytes
+
+  📦 guitar_expert_precise
+     Path: src/ai_framework/models/optimized/guitar_expert_precise.modelfile
+     Size: 1308 bytes
+
+  📦 guitar_expert_precise
+     Path: models/domain/guitar_expert_precise.modelfile
+     Size: 1303 bytes
+
+  📦 guitar_expert_precise
+     Path: src/ai_framework/models/optimized/guitar_expert_precise.modelfile
+     Size: 1308 bytes
+
+  📦 guitar_expert_precise
+     Path: models/domain/guitar_expert_precise.modelfile
+     Size: 1303 bytes
+
+  📦 guitar_tone_architect
+     Path: models/domain/guitar_tone_architect.modelfile
+     Size: 845 bytes
+
+  📦 health_wellness_optimizer
+     Path: models/domain/health_wellness_optimizer.modelfile
+     Size: 992 bytes
+
+  📦 linkedin_content_expert
+     Path: models/domain/linkedin_content_expert.modelfile
+     Size: 1274 bytes
+
+  📦 linkedin_content_expert
+     Path: models/domain/linkedin_content_expert.modelfile
+     Size: 1274 bytes
+
+  📦 linkedin_voice_architect
+     Path: models/domain/linkedin_voice_architect.modelfile
+     Size: 962 bytes
+
+  📦 llama3.2_balanced
+     Path: src/ai_framework/models/optimized/llama3.2_balanced.modelfile
+     Size: 925 bytes
+
+  📦 llama3.2_balanced
+     Path: models/domain/llama3.2_balanced.modelfile
+     Size: 925 bytes
+
+  📦 louisville_expert
+     Path: models/domain/louisville_expert.modelfile
+     Size: 1799 bytes
+
+  📦 louisville_expert
+     Path: models/domain/louisville_expert.modelfile
+     Size: 1799 bytes
+
+  📦 louisville_expert_v2
+     Path: models/domain/louisville_expert_v2.modelfile
+     Size: 1286 bytes
+
+  📦 louisville_expert_v2
+     Path: models/domain/louisville_expert_v2.modelfile
+     Size: 1286 bytes
+
+  📦 louisville_expert_v3
+     Path: models/domain/louisville_expert_v3.modelfile
+     Size: 809 bytes
+
+  📦 louisville_expert_v3
+     Path: models/domain/louisville_expert_v3.modelfile
+     Size: 809 bytes
+
+  📦 master_coder
+     Path: src/ai_framework/models/optimized/master_coder.modelfile
+     Size: 868 bytes
+
+  📦 master_coder
+     Path: models/domain/master_coder.modelfile
+     Size: 864 bytes
+
+  📦 master_guitar_instructor
+     Path: models/domain/master_guitar_instructor.modelfile
+     Size: 1156 bytes
+
+  📦 matthew_advisor
+     Path: models/personal/matthew_advisor.modelfile
+     Size: 1100 bytes
+
+  📦 matthew_advisor
+     Path: models/personal/matthew_advisor.modelfile
+     Size: 1100 bytes
+
+  📦 matthew_advisor_enhanced
+     Path: models/personal/matthew_advisor_enhanced.modelfile
+     Size: 1311 bytes
+
+  📦 matthew_advisor_enhanced
+     Path: models/personal/matthew_advisor_enhanced.modelfile
+     Size: 1311 bytes
+
+  📦 matthew_career_enhanced
+     Path: models/personal/matthew_career_enhanced.modelfile
+     Size: 1922 bytes
+
+  📦 matthew_career_enhanced
+     Path: models/personal/matthew_career_enhanced.modelfile
+     Size: 1922 bytes
+
+  📦 matthew_context_provider
+     Path: models/personal/matthew_context_provider.modelfile
+     Size: 946 bytes
+
+  📦 matthew_context_provider
+     Path: models/personal/matthew_context_provider.modelfile
+     Size: 946 bytes
+
+  📦 matthew_context_provider_optimized
+     Path: models/personal/matthew_context_provider_optimized.modelfile
+     Size: 939 bytes
+
+  📦 matthew_context_provider_optimized
+     Path: models/personal/matthew_context_provider_optimized.modelfile
+     Size: 939 bytes
+
+  📦 matthew_context_provider_v2
+     Path: models/personal/matthew_context_provider_v2.modelfile
+     Size: 2315 bytes
+
+  📦 matthew_context_provider_v2
+     Path: models/personal/matthew_context_provider_v2.modelfile
+     Size: 2315 bytes
+
+  📦 matthew_context_provider_v3
+     Path: models/personal/matthew_context_provider_v3.modelfile
+     Size: 1058 bytes
+
+  📦 matthew_context_provider_v3
+     Path: models/personal/matthew_context_provider_v3.modelfile
+     Size: 1058 bytes
+
+  📦 matthew_context_provider_v6_complete_output
+     Path: outputs/v3_20250711_100854/matthew_context_provider_v6_complete_output.txt
+     Size: 1012 bytes
+
+  📦 matthew_context_provider_v6_complete_output
+     Path: outputs/v3_20250711_102217/matthew_context_provider_v6_complete_output.txt
+     Size: 707 bytes
+
+  📦 matthew_context_provider_v6_complete_output
+     Path: outputs/v3_20250711_094801/matthew_context_provider_v6_complete_output.txt
+     Size: 2801 bytes
+
+  📦 matthew_louisville_enhanced
+     Path: models/personal/matthew_louisville_enhanced.modelfile
+     Size: 2304 bytes
+
+  📦 matthew_louisville_enhanced
+     Path: models/personal/matthew_louisville_enhanced.modelfile
+     Size: 2304 bytes
+
+  📦 matthew_parenting_enhanced
+     Path: models/personal/matthew_parenting_enhanced.modelfile
+     Size: 1990 bytes
+
+  📦 matthew_parenting_enhanced
+     Path: models/personal/matthew_parenting_enhanced.modelfile
+     Size: 1990 bytes
+
+  📦 matthew_realestate_enhanced
+     Path: models/personal/matthew_realestate_enhanced.modelfile
+     Size: 1927 bytes
+
+  📦 matthew_realestate_enhanced
+     Path: models/personal/matthew_realestate_enhanced.modelfile
+     Size: 1927 bytes
+
+  📦 mirador_self_reflection_guardian
+     Path: models/domain/mirador_self_reflection_guardian.modelfile
+     Size: 1011 bytes
+
+  📦 mirador_system_specialist
+     Path: models/domain/mirador_system_specialist.modelfile
+     Size: 1659 bytes
+
+  📦 mirador_system_specialist_v2
+     Path: models/domain/mirador_system_specialist_v2.modelfile
+     Size: 2183 bytes
+
+  📦 mirador_universal_runner
+     Path: bin/mirador_universal_runner.sh
+     Size: 7310 bytes
+
+  📦 mirador_universal_runner
+     Path: chain_backups_20250709_231655/mirador_universal_runner.sh
+     Size: 7289 bytes
+
+  📦 mirador_universal_runner_v2
+     Path: chain_backups_20250709_231655/mirador_universal_runner_v2.sh
+     Size: 11891 bytes
+
+  📦 mirador_universal_runner_v2
+     Path: scripts/misc/mirador_universal_runner_v2.sh
+     Size: 11891 bytes
+
+  📦 mirador_universal_runner_v3_optimized
+     Path: chain_backups_20250709_193417/mirador_universal_runner_v3_optimized.sh
+     Size: 5966 bytes
+
+  📦 mirador_universal_runner_v3_optimized
+     Path: bin/mirador_universal_runner_v3_optimized.sh
+     Size: 5993 bytes
+
+  📦 mirador_universal_runner_v3_optimized
+     Path: chain_backups_20250709_231655/mirador_universal_runner_v3_optimized.sh
+     Size: 5966 bytes
+
+  📦 mirador_universal_runner_v3_optimized
+     Path: chain_backups_20250709_193511/mirador_universal_runner_v3_optimized.sh
+     Size: 5966 bytes
+
+  📦 multilingual_assistant_qwen
+     Path: models/diverse/multilingual_assistant_qwen.modelfile
+     Size: 719 bytes
+
+  📦 multilingual_assistant_qwen:latest
+     Path: models/diverse/multilingual_assistant_qwen:latest.modelfile
+     Size: 719 bytes
+
+  📦 music_career_timeline_strategist
+     Path: models/domain/music_career_timeline_strategist.modelfile
+     Size: 862 bytes
+
+  📦 music_industry_networker
+     Path: models/domain/music_industry_networker.modelfile
+     Size: 1036 bytes
+
+  📦 opportunity_analyst
+     Path: models/domain/opportunity_analyst.modelfile
+     Size: 1123 bytes
+
+  📦 opportunity_validator_v2
+     Path: models/domain/opportunity_validator_v2.modelfile
+     Size: 1457 bytes
+
+  📦 optimized_action_prioritizer
+     Path: models/domain/optimized_action_prioritizer.modelfile
+     Size: 1088 bytes
+
+  📦 optimized_decision_simplifier_v3
+     Path: models/domain/optimized_decision_simplifier_v3.modelfile
+     Size: 1098 bytes
+
+  📦 optimized_enhanced_agent_fast_v7
+     Path: models/domain/optimized_enhanced_agent_fast_v7.modelfile
+     Size: 1058 bytes
+
+  📦 performance_anxiety_coach
+     Path: models/domain/performance_anxiety_coach.modelfile
+     Size: 778 bytes
+
+  📦 personal_brand_architect
+     Path: models/domain/personal_brand_architect.modelfile
+     Size: 1338 bytes
+
+  📦 productivity_optimizer
+     Path: models/domain/productivity_optimizer.modelfile
+     Size: 949 bytes
+
+  📦 response_1_matthew_context_provider_v3_latest
+     Path: outputs/rag_analysis_code_20250709_193824/response_1_matthew_context_provider_v3_latest.md
+     Size: 1 bytes
+
+  📦 response_1_matthew_context_provider_v3_latest
+     Path: outputs/rag_analysis_research_20250709_230157/response_1_matthew_context_provider_v3_latest.md
+     Size: 1 bytes
+
+  📦 response_1_matthew_context_provider_v3_latest
+     Path: outputs/rag_analysis_document_20250709_193544/response_1_matthew_context_provider_v3_latest.md
+     Size: 1 bytes
+
+  📦 response_1_matthew_context_provider_v3_latest
+     Path: outputs/universal_global_insight_20250709_175659/response_1_matthew_context_provider_v3_latest.md
+     Size: 1146 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_code_20250710_163501/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 2908 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/hybrid_synthesis_20250709_232604/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 3641 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_research_20250710_185848/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 4149 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_research_20250710_154949/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 4452 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_research_20250710_164221/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 3120 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_document_20250709_233704/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 2158 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_report_20250710_172221/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 1654 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/universal_deep_analysis_20250709_175440/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 274 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_document_20250710_161648/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 4176 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/hybrid_synthesis_20250710_171325/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 2874 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/rag_analysis_document_20250709_231854/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 2241 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/universal_strategic_synthesis_20250709_231711/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 3271 bytes
+
+  📦 response_1_matthew_context_provider_v5_complete_latest
+     Path: outputs/universal_strategic_synthesis_20250710_171717/response_1_matthew_context_provider_v5_complete_latest.md
+     Size: 2473 bytes
+
+  📦 response_1_matthew_context_provider_v6_complete_latest
+     Path: outputs/rag_analysis_document_20250710_192440/response_1_matthew_context_provider_v6_complete_latest.md
+     Size: 3457 bytes
+
+  📦 response_1_matthew_context_provider_v6_complete_latest
+     Path: outputs/universal_life_optimization_20250711_100142/response_1_matthew_context_provider_v6_complete_latest.md
+     Size: 1870 bytes
+
+  📦 response_1_matthew_context_provider_v6_complete_latest
+     Path: outputs/universal_business_acceleration_20250711_100306/response_1_matthew_context_provider_v6_complete_latest.md
+     Size: 2310 bytes
+
+  📦 response_1_matthew_context_provider_v6_complete_latest
+     Path: outputs/universal_creative_breakthrough_20250711_100453/response_1_matthew_context_provider_v6_complete_latest.md
+     Size: 2359 bytes
+
+  📦 response_2_analytical_expert_gemma_latest
+     Path: outputs/universal_deep_analysis_20250709_175440/response_2_analytical_expert_gemma_latest.md
+     Size: 1591 bytes
+
+  📦 response_2_matthew_context_provider_v3_latest
+     Path: outputs/universal_rapid_decision_20250709_175829/response_2_matthew_context_provider_v3_latest.md
+     Size: 2094 bytes
+
+  📦 response_2_universal_strategy_architect_latest
+     Path: outputs/hybrid_synthesis_20250709_232604/response_2_universal_strategy_architect_latest.md
+     Size: 4869 bytes
+
+  📦 response_2_universal_strategy_architect_latest
+     Path: outputs/hybrid_synthesis_20250710_171325/response_2_universal_strategy_architect_latest.md
+     Size: 3144 bytes
+
+  📦 response_2_universal_strategy_architect_latest
+     Path: outputs/universal_strategic_synthesis_20250709_231711/response_2_universal_strategy_architect_latest.md
+     Size: 3005 bytes
+
+  📦 response_2_universal_strategy_architect_latest
+     Path: outputs/universal_strategic_synthesis_20250710_171717/response_2_universal_strategy_architect_latest.md
+     Size: 3839 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/hybrid_synthesis_20250709_232604/response_3_analytical_expert_gemma_latest.md
+     Size: 3681 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_research_20250710_185848/response_3_analytical_expert_gemma_latest.md
+     Size: 2219 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_research_20250710_154949/response_3_analytical_expert_gemma_latest.md
+     Size: 2579 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_document_20250710_192440/response_3_analytical_expert_gemma_latest.md
+     Size: 2438 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_research_20250710_164221/response_3_analytical_expert_gemma_latest.md
+     Size: 1963 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_document_20250709_233704/response_3_analytical_expert_gemma_latest.md
+     Size: 1957 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_research_20250709_230157/response_3_analytical_expert_gemma_latest.md
+     Size: 1698 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_document_20250709_193544/response_3_analytical_expert_gemma_latest.md
+     Size: 2853 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_document_20250710_161648/response_3_analytical_expert_gemma_latest.md
+     Size: 1777 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/hybrid_synthesis_20250710_171325/response_3_analytical_expert_gemma_latest.md
+     Size: 3209 bytes
+
+  📦 response_3_analytical_expert_gemma_latest
+     Path: outputs/rag_analysis_document_20250709_231854/response_3_analytical_expert_gemma_latest.md
+     Size: 2211 bytes
+
+  📦 response_3_matthews_strategic_accelerator_v2_latest
+     Path: outputs/universal_business_acceleration_20250711_100306/response_3_matthews_strategic_accelerator_v2_latest.md
+     Size: 3883 bytes
+
+  📦 response_3_universal_strategy_architect_latest
+     Path: outputs/universal_deep_analysis_20250709_175440/response_3_universal_strategy_architect_latest.md
+     Size: 1892 bytes
+
+  📦 response_4_universal_strategy_architect_latest
+     Path: outputs/rag_analysis_research_20250710_185848/response_4_universal_strategy_architect_latest.md
+     Size: 3125 bytes
+
+  📦 response_4_universal_strategy_architect_latest
+     Path: outputs/rag_analysis_research_20250710_154949/response_4_universal_strategy_architect_latest.md
+     Size: 3729 bytes
+
+  📦 response_4_universal_strategy_architect_latest
+     Path: outputs/rag_analysis_research_20250710_164221/response_4_universal_strategy_architect_latest.md
+     Size: 2676 bytes
+
+  📦 response_4_universal_strategy_architect_latest
+     Path: outputs/rag_analysis_research_20250709_230157/response_4_universal_strategy_architect_latest.md
+     Size: 3826 bytes
+
+  📦 sales_content_creator
+     Path: models/domain/sales_content_creator.modelfile
+     Size: 1332 bytes
+
+  📦 side_income_opportunity_scout
+     Path: models/domain/side_income_opportunity_scout.modelfile
+     Size: 966 bytes
+
+  📦 solution_architect
+     Path: models/domain/solution_architect.modelfile
+     Size: 2894 bytes
+
+  📦 speed_optimizer_phi
+     Path: models/diverse/speed_optimizer_phi.modelfile
+     Size: 600 bytes
+
+  📦 speed_optimizer_phi:latest
+     Path: models/diverse/speed_optimizer_phi:latest.modelfile
+     Size: 600 bytes
+
+  📦 test_balanced_model
+     Path: models/domain/test_balanced_model.modelfile
+     Size: 235 bytes
+
+  📦 test_guitar_expert_precise
+     Path: tests/models/test_guitar_expert_precise.sh
+     Size: 1384 bytes
+
+  📦 touring_readiness_coach
+     Path: models/domain/touring_readiness_coach.modelfile
+     Size: 935 bytes
+
+  📦 ux_designer
+     Path: src/ai_framework/models/optimized/ux_designer.modelfile
+     Size: 1158 bytes
+
+  📦 ux_designer
+     Path: models/domain/ux_designer.modelfile
+     Size: 1158 bytes
+
+
+CHAIN RUNNERS (150 found):
+----------------------------------------
+
+SIMPLIFIED chains:
+  ⚡ mirador-ez
+     Path: bin/mirador-ez
+  ⚡ mirador-ez
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-ez
+  ⚡ mirador-simple
+     Path: bin/mirador-simple
+
+SMART-ROUTING chains:
+  ⚡ mirador-smart
+     Path: bin/mirador-smart
+  ⚡ mirador-smart
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-smart
+  ⚡ mirador-smart-v2
+     Path: bin/mirador-smart-v2
+  ⚡ mirador-smart-v2
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-smart-v2
+  ⚡ mirador-smart-v2-consolidated
+     Path: bin/mirador-smart-v2-consolidated
+  ⚡ mirador-smart-v2.backup
+     Path: bin/mirador-smart-v2.backup
+  ⚡ mirador-smart-v2.backup_20250710_214426
+     Path: bin/mirador-smart-v2.backup_20250710_214426
+  ⚡ mirador-smart-v2.backup_20250710_233251
+     Path: bin/mirador-smart-v2.backup_20250710_233251
+  ⚡ mirador-smart-v3
+     Path: bin/mirador-smart-v3
+  ⚡ mirador-smart.sh
+     Path: bin/mirador-smart.sh
+  ⚡ mirador-smart.sh
+     Path: chain_backups_20250709_231655/mirador-smart.sh
+  ⚡ mirador-smart.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-smart.sh
+  ⚡ mirador-smart.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/mirador-smart.sh
+  ⚡ mirador-smart.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/mirador-smart.sh
+  ⚡ smart_chain_selector.sh
+     Path: chain_backups_20250709_231655/smart_chain_selector.sh
+  ⚡ smart_chain_selector.sh
+     Path: scripts/chains/smart_chain_selector.sh
+  ⚡ smart_chain_selector.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/smart_chain_selector.sh
+  ⚡ smart_chain_selector.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/smart_chain_selector.sh
+  ⚡ smart_chain_selector.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/smart_chain_selector.sh
+
+STANDARD chains:
+  ⚡ compare_chain_performance.sh
+     Path: compare_chain_performance.sh
+  ⚡ compare_chain_performance.sh
+     Path: chain_backups_20250709_231655/compare_chain_performance.sh
+  ⚡ fix_update_chains.sh
+     Path: fix_update_chains.sh
+  ⚡ meta_chain_optimizer.sh
+     Path: chain_backups_20250709_231655/meta_chain_optimizer.sh
+  ⚡ meta_chain_optimizer.sh
+     Path: scripts/chains/meta_chain_optimizer.sh
+  ⚡ meta_chain_optimizer.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/meta_chain_optimizer.sh
+  ⚡ meta_chain_optimizer.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/meta_chain_optimizer.sh
+  ⚡ meta_chain_optimizer.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/meta_chain_optimizer.sh
+  ⚡ mirador-collaborate
+     Path: bin/mirador-collaborate
+  ⚡ mirador-collaborate
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-collaborate
+  ⚡ mirador-conductor
+     Path: bin/mirador-conductor
+  ⚡ mirador-conductor
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-conductor
+  ⚡ mirador-enhanced
+     Path: bin/mirador-enhanced
+  ⚡ mirador-full
+     Path: bin/mirador-full
+  ⚡ mirador-interactive
+     Path: bin/mirador-interactive
+  ⚡ mirador-interactive
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-interactive
+  ⚡ mirador-intervene
+     Path: bin/mirador-intervene
+  ⚡ mirador-intervene
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-intervene
+  ⚡ mirador-quick
+     Path: bin/mirador-quick
+  ⚡ mirador-rapid
+     Path: bin/mirador-rapid
+  ⚡ mirador-rapid
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-rapid
+  ⚡ mirador-run
+     Path: bin/mirador-run
+  ⚡ mirador-unified
+     Path: bin/mirador-unified
+  ⚡ mirador-unified
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/mirador-unified
+  ⚡ mirador-v2
+     Path: bin/mirador-v2
+  ⚡ mirador-v2-backup
+     Path: mirador-v2-backup
+  ⚡ mirador-v3
+     Path: mirador-v3
+  ⚡ mirador_hybrid_chains.sh
+     Path: bin/mirador_hybrid_chains.sh
+  ⚡ mirador_hybrid_chains.sh
+     Path: chain_backups_20250709_231655/mirador_hybrid_chains.sh
+  ⚡ mirador_rag_chain.sh
+     Path: bin/mirador_rag_chain.sh
+  ⚡ mirador_rag_chain.sh
+     Path: chain_backups_20250709_231655/mirador_rag_chain.sh
+  ⚡ optimize_mirador_chains.sh
+     Path: optimize_mirador_chains.sh
+  ⚡ optimize_mirador_chains.sh
+     Path: chain_backups_20250709_231655/optimize_mirador_chains.sh
+  ⚡ personality_optimized_chains.sh
+     Path: chain_backups_20250709_231655/personality_optimized_chains.sh
+  ⚡ personality_optimized_chains.sh
+     Path: scripts/chains/personality_optimized_chains.sh
+  ⚡ personality_optimized_chains.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/personality_optimized_chains.sh
+  ⚡ personality_optimized_chains.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/personality_optimized_chains.sh
+  ⚡ personality_optimized_chains.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/personality_optimized_chains.sh
+  ⚡ robust_chain_runner.sh
+     Path: chain_backups_20250709_231655/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: scripts/chains/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: chain_backups_20250709_231655/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: scripts/chains/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/robust_chain_runner.sh
+  ⚡ robust_chain_runner.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/robust_chain_runner.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: chain_backups_20250709_231655/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: scripts/chains/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: chain_backups_20250709_231655/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: scripts/chains/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/robust_chain_runner_macos.sh
+  ⚡ robust_chain_runner_macos.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/robust_chain_runner_macos.sh
+  ⚡ role_chain.sh
+     Path: chain_backups_20250709_231655/role_chain.sh
+  ⚡ role_chain.sh
+     Path: src/ai_framework/chains/role_chain.sh
+  ⚡ role_chain.sh
+     Path: scripts/chains/role_chain.sh
+  ⚡ role_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/src/chains/role_chain.sh
+  ⚡ role_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/role_chain.sh
+  ⚡ run_chain.sh
+     Path: scripts/run_chain.sh
+  ⚡ run_chain.sh
+     Path: chain_backups_20250709_231655/run_chain.sh
+  ⚡ run_chain.sh
+     Path: src/chains/run_chain.sh
+  ⚡ run_chain.sh
+     Path: src/ai_framework/chains/run_chain.sh
+  ⚡ run_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/scripts/run_chain.sh
+  ⚡ run_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/src/chains/run_chain.sh
+  ⚡ run_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/scripts/run_chain.sh
+  ⚡ run_chain_cmd.sh
+     Path: chain_backups_20250709_231655/run_chain_cmd.sh
+  ⚡ run_chain_cmd.sh
+     Path: bin/outputs/interactive_20250710_172454/run_chain_cmd.sh
+  ⚡ run_chain_cmd.sh
+     Path: bin/outputs/interactive_20250710_172509/run_chain_cmd.sh
+  ⚡ run_chain_cmd.sh
+     Path: archive/legacy/chain_results_archive/202507/interactive_20250604_152650/run_chain_cmd.sh
+  ⚡ run_chain_cmd.sh
+     Path: archive/legacy/chain_results_archive/202507/interactive_20250604_152618/run_chain_cmd.sh
+  ⚡ run_chain_cmd.sh
+     Path: archive/legacy/archive/old_outputs/run_chain_cmd.sh
+  ⚡ run_role_chain.sh
+     Path: scripts/run_role_chain.sh
+  ⚡ run_role_chain.sh
+     Path: chain_backups_20250709_231655/run_role_chain.sh
+  ⚡ run_role_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/scripts/run_role_chain.sh
+  ⚡ run_role_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/scripts/run_role_chain.sh
+  ⚡ run_test_chains.sh
+     Path: chain_backups_20250709_231655/run_test_chains.sh
+  ⚡ run_test_chains.sh
+     Path: scripts/chains/run_test_chains.sh
+  ⚡ run_test_chains.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/run_test_chains.sh
+  ⚡ run_test_chains.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/run_test_chains.sh
+  ⚡ run_test_chains.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/run_test_chains.sh
+  ⚡ test_business_chain.sh
+     Path: chain_backups_20250709_231655/test_business_chain.sh
+  ⚡ test_business_chain.sh
+     Path: tests/chains/test_business_chain.sh
+  ⚡ test_business_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_business_chain.sh
+  ⚡ test_business_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/tests/chains/test_business_chain.sh
+  ⚡ test_business_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/tests/chains/test_business_chain.sh
+  ⚡ test_chain.sh
+     Path: scripts/test_chain.sh
+  ⚡ test_chain.sh
+     Path: chain_backups_20250709_231655/test_chain.sh
+  ⚡ test_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/scripts/test_chain.sh
+  ⚡ test_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/scripts/test_chain.sh
+  ⚡ test_code_chain.sh
+     Path: chain_backups_20250709_231655/test_code_chain.sh
+  ⚡ test_code_chain.sh
+     Path: tests/chains/test_code_chain.sh
+  ⚡ test_code_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_code_chain.sh
+  ⚡ test_code_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/tests/chains/test_code_chain.sh
+  ⚡ test_code_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/tests/chains/test_code_chain.sh
+  ⚡ test_guitar_chain.sh
+     Path: chain_backups_20250709_231655/test_guitar_chain.sh
+  ⚡ test_guitar_chain.sh
+     Path: tests/chains/test_guitar_chain.sh
+  ⚡ test_guitar_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_guitar_chain.sh
+  ⚡ test_guitar_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/tests/chains/test_guitar_chain.sh
+  ⚡ test_guitar_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/tests/chains/test_guitar_chain.sh
+  ⚡ test_optimized_chains.sh
+     Path: chain_backups_20250709_231655/test_optimized_chains.sh
+  ⚡ test_optimized_chains.sh
+     Path: scripts/chains/test_optimized_chains.sh
+  ⚡ test_optimized_chains.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/test_optimized_chains.sh
+  ⚡ test_rag_chain.sh
+     Path: test_rag_chain.sh
+  ⚡ test_rag_chain.sh
+     Path: chain_backups_20250709_231655/test_rag_chain.sh
+  ⚡ test_role_chain.sh
+     Path: chain_backups_20250709_231655/test_role_chain.sh
+  ⚡ test_role_chain.sh
+     Path: tests/chains/test_role_chain.sh
+  ⚡ test_role_chain.sh
+     Path: archive/legacy/Documentation and Saved Assets/mirador-main/tests/chains/test_role_chain.sh
+  ⚡ test_role_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/Documentation and Saved Assets/mirador-main/tests/chains/test_role_chain.sh
+  ⚡ test_role_chain.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/tests/chains/test_role_chain.sh
+  ⚡ update_chains_consolidated.sh
+     Path: update_chains_consolidated.sh
+  ⚡ update_chains_consolidated.sh
+     Path: chain_backups_20250709_231655/update_chains_consolidated.sh
+
+STREAMING chains:
+  ⚡ mirador-ez-stream
+     Path: bin/mirador-ez-stream
+  ⚡ mirador-stream
+     Path: bin/mirador-stream
+
+UNIVERSAL chains:
+  ⚡ mirador_universal_runner.sh
+     Path: bin/mirador_universal_runner.sh
+  ⚡ mirador_universal_runner.sh
+     Path: chain_backups_20250709_231655/mirador_universal_runner.sh
+  ⚡ mirador_universal_runner.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/mirador_universal_runner.sh
+  ⚡ mirador_universal_runner_v2.sh
+     Path: chain_backups_20250709_231655/mirador_universal_runner_v2.sh
+  ⚡ mirador_universal_runner_v2.sh
+     Path: scripts/misc/mirador_universal_runner_v2.sh
+  ⚡ mirador_universal_runner_v2.sh
+     Path: archive/legacy/archive/code_cleanup_backup_20250709_150325/mirador_universal_runner_v2.sh
+  ⚡ mirador_universal_runner_v3_optimized.sh
+     Path: chain_backups_20250709_193417/mirador_universal_runner_v3_optimized.sh
+  ⚡ mirador_universal_runner_v3_optimized.sh
+     Path: bin/mirador_universal_runner_v3_optimized.sh
+  ⚡ mirador_universal_runner_v3_optimized.sh
+     Path: chain_backups_20250709_231655/mirador_universal_runner_v3_optimized.sh
+  ⚡ mirador_universal_runner_v3_optimized.sh
+     Path: chain_backups_20250709_193511/mirador_universal_runner_v3_optimized.sh
+
+
+UTILITY SCRIPTS (61 found):
+----------------------------------------
+
+Installation and setup:
+  🔧 install_diverse_models.sh
+  🔧 setup.sh
+  🔧 setup_maintenance_cron.sh
+  🔧 setup_mirador.sh
+  🔧 setup_mirador.sh
+
+Resource creation:
+  🔧 create_action_tracker.sh
+  🔧 create_brand_specialists.sh
+  🔧 create_content_specialists.sh
+  🔧 create_diverse_models.sh
+  🔧 create_dream_specialists.sh
+  🔧 create_executive_summary.sh
+  🔧 create_feedback_system.sh
+  🔧 create_matthew_unified.sh
+  🔧 create_new_model.sh
+  🔧 create_optimized_models_fixed.sh
+
+Testing and validation:
+  🔧 test_advanced_features.sh
+  🔧 test_api_quick.sh
+  🔧 test_business_chain.sh
+  🔧 test_business_chain.sh
+  🔧 test_chain.sh
+  🔧 test_chain.sh
+  🔧 test_code_chain.sh
+  🔧 test_code_chain.sh
+  🔧 test_code_reviewer_fix.sh
+  🔧 test_complete_system.sh
+  🔧 test_comprehensive_system.sh
+  🔧 test_consolidated_models.sh
+  🔧 test_core_functionality.sh
+  🔧 test_creative_entrepreneur.sh
+  🔧 test_diverse_models.sh
+  🔧 test_enhanced_agent.sh
+  🔧 test_fast_agent_focused.sh
+  🔧 test_file_reviewer.sh
+  🔧 test_first_token.sh
+  🔧 test_guitar_chain.sh
+  🔧 test_guitar_chain.sh
+  🔧 test_guitar_expert_precise.sh
+  🔧 test_llama3.2_balanced.sh
+  🔧 test_master_coder.sh
+  🔧 test_memory_system.sh
+  🔧 test_mirador_accuracy.sh
+  🔧 test_mirador_accuracy.sh
+  🔧 test_mirador_performance.sh
+  🔧 test_mirador_performance.sh
+  🔧 test_model_performance.sh
+  🔧 test_models_fixed.sh
+  🔧 test_optimized_chains.sh
+  🔧 test_optimized_chains.sh
+  🔧 test_performance_macos.sh
+  🔧 test_practical_utility_pdf_context.sh
+  🔧 test_productivity_tools.sh
+  🔧 test_rag_chain.sh
+  🔧 test_rag_chain.sh
+  🔧 test_real_world_scenarios.sh
+  🔧 test_role_chain.sh
+  🔧 test_role_chain.sh
+  🔧 test_simple.sh
+  🔧 test_suite.sh
+  🔧 test_v3_performance.sh
+  🔧 test_v3_timing.sh
+  🔧 test_workflow.sh
