@@ -1,244 +1,416 @@
-# CLAUDE.md
+# CLAUDE.md - Mirador AI Framework Vision & Architecture
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides comprehensive guidance to Claude Code (claude.ai/code) for the Mirador AI Framework project.
 
-## Build/Run Commands
+## 🎯 Project Vision
 
-### Core Mirador Commands
-```bash
-# Basic chain execution with smart routing
-./mirador-smart-v2 "Your query here"
+Mirador is evolving from a powerful local AI orchestration CLI tool into a comprehensive AI platform with three core interfaces:
+1. **CLI** - Command-line interface for developers and power users
+2. **API** - RESTful/GraphQL/WebSocket APIs for integration and scalability  
+3. **Web Dashboard** - Visual interface for broader accessibility and collaboration
 
-# Universal runner with format options
-./mirador_universal_runner_v2.sh <chain_type> "Your prompt" [format]
-# Chain types: life_optimization, business_acceleration, creative_breakthrough, 
-#              relationship_harmony, technical_mastery, strategic_synthesis
-# Formats: quick, summary, detailed (default), export
+### Core Philosophy
+"Keep the CLI's power, add the API's scalability, and the web's accessibility."
 
-# Optimized runner with diverse models
-./bin/mirador_universal_runner_v3_optimized.sh <chain_type> "Your prompt" [format]
-# Additional chains: deep_analysis, global_insight, rapid_decision
+## 🏗️ Current State (v5.0)
 
-# Simple interface
-./mirador-ez chain "Your query" model1 model2 model3
+### Completed Features
+- ✅ 80+ specialized Ollama models with diverse base LLMs
+- ✅ Smart query routing with intent detection
+- ✅ 9 chain types for different use cases
+- ✅ Progressive enhancement streaming (<1s first token)
+- ✅ Production-ready REST API with Flask
+- ✅ GraphQL interface with subscriptions
+- ✅ WebSocket support for real-time streaming
+- ✅ JWT authentication and rate limiting
+- ✅ Redis caching layer
+- ✅ Docker containerization
+- ✅ Comprehensive test suite
+- ✅ Python SDK/client library
 
-# Run specific Humana-focused chains
-./humana_chain_runner.sh <chain_type> "Your prompt"
+### Repository Structure
+```
+mirador/
+├── bin/                    # CLI scripts (mirador-smart-v2, runners)
+├── src/
+│   ├── api/               # API implementation (Flask, GraphQL)
+│   ├── streaming/         # Streaming orchestration
+│   ├── ai_framework/      # Core AI logic
+│   └── memory/            # Context management
+├── models/                # Modelfiles for Ollama
+├── tests/                 # Test suite
+├── examples/              # Usage examples
+├── docs/                  # Documentation
+└── assets/               # Branding and visuals
 ```
 
-### Model Management
-```bash
-# Create/update optimized models
-./create_optimized_models_fixed.sh
+## 🚀 Next Phase: Web Dashboard Implementation
 
-# List installed models
-ollama list | grep -E "(matthew_context|universal_strategy|creative_catalyst|practical_implementer)"
+### Phase 1: Foundation (Weeks 1-2)
+**Goal**: Establish base web application structure
 
-# Test model directly
-echo "Test prompt" | ollama run matthew_context_provider_v5_complete
+**Technical Stack**:
+- Frontend: React 18+ with TypeScript
+- Framework: Next.js 14 (SSR/SSG)
+- State: TanStack Query + Zustand
+- Styling: Tailwind CSS + Framer Motion
+- Build: Vite/Turbopack
 
-# Analyze model base LLMs
-python3 trace_ollama_models.py
+**Key Tasks**:
+1. Create `web/` directory structure
+2. Set up Next.js with TypeScript
+3. Configure development environment
+4. Implement design system (colors, typography, spacing)
+5. Create base layout components
+6. Set up routing structure
 
-# Install diverse base LLMs
-./install_diverse_models.sh
+### Phase 2: Core UI Components (Weeks 3-4)
+**Goal**: Build reusable component library
 
-# Create models with diverse base LLMs
-./create_diverse_models.sh
+**Components**:
+- QueryInput (smart search with intent preview)
+- StreamingResponse (real-time updates)
+- ChainVisualizer (flow diagrams)
+- ModelCard (performance metrics)
+- SessionHistory (conversation browser)
+- ProgressIndicator (multi-stage)
 
-# Clean up duplicate models
-./cleanup_duplicate_models.sh
+**Architecture**:
+- Atomic Design methodology
+- Storybook for component development
+- Accessibility-first (WCAG 2.1 AA)
+- Responsive design (mobile-first)
+
+### Phase 3: Query Interface (Weeks 5-6)
+**Goal**: Implement core query functionality
+
+**Features**:
+- Smart search bar with autocomplete
+- Intent detection visualization
+- Query history with search
+- Suggested prompts
+- Format selection (quick/summary/detailed)
+- Export capabilities
+
+**Integration**:
+- Connect to existing API endpoints
+- WebSocket for streaming responses
+- Progressive enhancement display
+- Error handling and retry logic
+
+### Phase 4: Visualization Suite (Weeks 7-8)
+**Goal**: Create interactive visualizations
+
+**Visualizations**:
+1. **Chain Flow Diagram**
+   - D3.js-based interactive graph
+   - Real-time progress indicators
+   - Model performance metrics
+   - Clickable nodes for details
+
+2. **Model Ecosystem Map**
+   - Network graph of model relationships
+   - Performance heatmaps
+   - Usage statistics
+   - Filtering and search
+
+3. **Analytics Dashboard**
+   - Usage patterns over time
+   - Cost/performance optimization
+   - Popular chains and queries
+   - User engagement metrics
+
+### Phase 5: Advanced Features (Weeks 9-10)
+**Goal**: Add power-user features
+
+**Features**:
+- Visual chain builder (drag-and-drop)
+- A/B testing interface
+- Custom dashboard layouts
+- Collaborative sessions
+- Voice input/output
+- Keyboard shortcuts
+
+**Technical Challenges**:
+- Real-time collaboration (CRDT/OT)
+- Complex state management
+- Performance optimization
+- Cross-browser compatibility
+
+### Phase 6: Production Readiness (Weeks 11-12)
+**Goal**: Prepare for deployment
+
+**Tasks**:
+- Performance optimization
+- Security audit
+- Load testing
+- Documentation
+- CI/CD pipeline
+- Monitoring setup
+
+## 📐 Architecture Decisions
+
+### Frontend Architecture
+```
+web/
+├── app/                    # Next.js 14 app directory
+│   ├── (auth)/            # Auth-protected routes
+│   ├── api/               # API routes (BFF pattern)
+│   ├── dashboard/         # Main dashboard
+│   └── query/             # Query interface
+├── components/            # Reusable components
+│   ├── ui/               # Base UI components
+│   ├── features/         # Feature-specific components
+│   └── layouts/          # Layout components
+├── lib/                   # Utilities and helpers
+│   ├── api/              # API client
+│   ├── hooks/            # Custom React hooks
+│   └── stores/           # State management
+├── styles/               # Global styles
+└── public/               # Static assets
 ```
 
-### Testing & Validation
-```bash
-# Run comprehensive test suite
-./tests/run_tests.sh
+### State Management Strategy
+```typescript
+// Server State (TanStack Query)
+- API responses
+- Session data
+- Model configurations
+- Analytics data
 
-# Test specific chains
-python3 tests/test_chains.py
+// Client State (Zustand)
+- UI preferences
+- Active query
+- Selected chain
+- View modes
 
-# Test model availability
-python3 tests/test_models.py
-
-# Performance testing
-python3 tests/test_performance.py
-
-# Test diverse models
-./models/diverse/test_diverse_models.sh
-
-# Validate constraints on output
-python3 constraint_validator.py validate outputs/session_folder/summary.md
-
-# Check system health
-./daily_check_enhanced.sh
+// Real-time State (WebSocket)
+- Streaming responses
+- Progress updates
+- Collaborative cursors
 ```
 
-### Feedback & Analytics
-```bash
-# Rate an output (1-5 scale)
-./mirador_feedback.sh SESSION_ID 5 "Excellent - saved 2 hours"
+### Component Patterns
+1. **Compound Components** for complex UI
+2. **Render Props** for flexible rendering
+3. **Custom Hooks** for logic reuse
+4. **Portal Pattern** for modals/tooltips
+5. **Observer Pattern** for real-time updates
 
-# View usage statistics
-python3 context_manager.py stats
-
-# Generate insights from memory
-python3 ai_memory/init_db.py  # Initialize memory database
-```
-
-### Dependencies
-```bash
-# Install Python dependencies
-pip3 install -r requirements.txt
-
-# Note: orjson==3.9.15 (3.10+ has compatibility issues)
-```
-
-## Architecture Overview
-
-Mirador is a multi-layered AI orchestration system built on Ollama, implementing sophisticated chain-of-thought reasoning through specialized models.
-
-### Core Flow
-```
-User Query → Smart Router → Chain Selection → Model Pipeline → Constraint Validation → Output
-                                                    ↓
-                                            Context Accumulation
-                                                    ↓
-                                            Feedback Collection → Memory System
-```
-
-### Key Components
-
-1. **Entry Points** 
-   - `mirador-smart-v2`: Smart routing based on query analysis
-   - `mirador_universal_runner_v2.sh`: Universal chain runner
-   - `mirador_universal_runner_v3_optimized.sh`: Optimized with diverse models
-
-2. **Model Layer** (80+ specialized models)
-   - Context providers: Personal/professional background
-   - Domain experts: Financial, music, health, Louisville-specific
-   - Strategy models: Planning and synthesis
-   - Implementation models: Actionable steps
-   - **Base LLMs**: 
-     - Llama 3.2 (primary - ~70% of models)
-     - Gemma 2 27B (Google's efficient reasoning)
-     - Qwen 2.5 32B (Alibaba's multilingual)
-     - Phi-3 Medium (Microsoft's ultra-fast)
-     - Command-R 35B (Cohere's RAG-optimized)
-     - Mistral 7B (French efficient model)
-     - DeepSeek-Coder (specialized for code)
-
-3. **Chain Orchestration**
-   - 9 universal chain types (6 original + 3 optimized)
-   - Dynamic model selection (3-6 models per chain)
-   - Context flows and accumulates through model sequence
-
-4. **Support Systems**
-   - `context_manager.py`: Context caching and usage tracking
-   - `constraint_validator.py`: Real-world feasibility checking
-   - `mirador_feedback.sh`: User rating collection
-   - `ai_memory/`: SQLite-based conversation history
-
-5. **Output Management**
-   - Structured outputs in `outputs/universal_<chain>_<timestamp>/`
-   - Multiple format options for different use cases
-   - Session tracking and persistence
-
-### Model Chaining Pattern
-```
-matthew_context_provider → domain_expert → strategy_architect → decision_simplifier
-```
-
-Each model receives the original prompt plus enriched context from previous models, building comprehensive analysis.
-
-## Testing Guidelines
-
-- Run `./tests/run_tests.sh` for interactive test menu
-- Quick tests (5 min): Basic validation
-- Standard tests (15 min): System + chains + basic performance
-- Comprehensive tests (30+ min): Full suite including all models
-- Test results saved to `/test_logs/`
-
-Key test files:
-- `tests/mirador_test_suite.py`: System validation
-- `tests/test_chains.py`: Chain functionality
-- `tests/test_models.py`: Ollama model checks
-- `tests/test_performance.py`: Performance benchmarks
-- `tests/TEST_EXECUTION_GUIDE.md`: Comprehensive testing documentation
-
-## Development Notes
-
-### Adding New Models
-1. Create modelfile in root directory
-2. Run `ollama create model_name -f modelfile`
-3. Add to appropriate chain in runners
-4. Test with sample queries
-
-### Model Diversity Strategy
-The system now incorporates diverse base LLMs to reduce over-reliance on Llama:
-- **Gemma 2**: Best for analytical and reasoning tasks
-- **Qwen 2.5**: Excellent for multilingual and cultural contexts
-- **Phi-3**: Ultra-fast for quick decisions and summaries
-- **Command-R**: Optimized for RAG (retrieval-augmented generation)
-
-### Modifying Chains
-- Edit model sequences in shell scripts
-- Ensure context provider is first for proper grounding
-- Test full chain execution before committing
-
-### Performance Optimization
-- Models use Apple Silicon optimized parameters
-- Context window: 8192 tokens
-- Response length: 2048 tokens
-- Temperature: 0.7 for balanced creativity
-- Larger models (27B-35B) provide better quality at cost of speed
+## 🔧 Development Guidelines
 
 ### Code Style
-- Shell scripts: Use bash, follow existing patterns
-- Python: PEP 8, type hints encouraged
-- Maintain existing file structure
-- Test changes thoroughly
+- **TypeScript**: Strict mode enabled
+- **React**: Functional components with hooks
+- **Styling**: Tailwind utility classes + CSS modules for complex styles
+- **Testing**: Jest + React Testing Library + Playwright
+- **Linting**: ESLint + Prettier
 
-## Common Patterns
+### Performance Standards
+- First Contentful Paint < 1.5s
+- Time to Interactive < 3s
+- Lighthouse score > 90
+- 60fps animations
+- Bundle size < 200KB (initial)
 
-### Query Routing (mirador-smart-v2)
-```bash
-if [[ "$QUERY" =~ (financial|money|investment) ]]; then
-    # Use financial chain
-elif [[ "$QUERY" =~ (Louisville|local|Kentucky) ]]; then
-    # Use Louisville chain
+### Accessibility Requirements
+- WCAG 2.1 AA compliance
+- Keyboard navigation
+- Screen reader support
+- High contrast mode
+- Reduced motion support
+
+### Security Considerations
+- Content Security Policy
+- XSS prevention
+- CSRF protection
+- Secure WebSocket connections
+- Input sanitization
+
+## 🎨 Design System
+
+### Brand Colors
+```css
+--primary: #3B82F6;      /* Blue */
+--secondary: #10B981;    /* Green */
+--accent: #F59E0B;       /* Amber */
+--background: #0F172A;   /* Dark blue */
+--surface: #1E293B;      /* Lighter dark */
+--text: #E2E8F0;        /* Light gray */
 ```
 
-### Model Chaining
-```bash
-for MODEL in "${MODELS[@]}"; do
-    OUTPUT=$(echo "$INPUT" | ollama run "$MODEL")
-    CONTEXT="$CONTEXT\n\n=== $MODEL ===\n$OUTPUT"
-done
+### Typography
+- Headers: Inter or system-ui
+- Body: Inter or system-ui
+- Code: JetBrains Mono or monospace
+
+### Spacing Scale
+- 4px base unit
+- Consistent 8-point grid
+- Responsive spacing tokens
+
+## 🔄 Integration Points
+
+### API Communication
+```typescript
+// Query execution
+POST /api/v5/query
+WebSocket /api/v5/ws
+
+// Chain management
+GET /api/v5/chains
+POST /api/v5/chains/{type}/run
+
+// Model information
+GET /api/v5/models
+GET /api/v5/models/{name}
+
+// Sessions
+GET /api/v5/sessions
+POST /api/v5/sessions
 ```
 
-### Output Formats
-- quick: Key points only (grep bullet points)
-- summary: First 100 lines
-- detailed: Full analysis
-- export: Save to file
+### Real-time Features
+- WebSocket for streaming responses
+- Server-Sent Events for progress
+- GraphQL subscriptions for updates
+- Optimistic UI updates
 
-## Humana-Specific Commands
+## 📈 Success Metrics
 
-The system includes specialized commands for corporate innovation strategy. Key chains:
-- `strategic_synthesis`: High-level strategic planning
-- `corporate_nav`: Political navigation
-- `ai_leadership`: Career positioning
-- `solution_design`: Formal proposals
+### Technical Metrics
+- Page load time < 2s
+- API response time < 100ms (cached)
+- 99.9% uptime
+- Zero critical security issues
 
-See shell scripts in root for implementation details.
+### User Metrics
+- 10x increase in user adoption
+- 80% feature discovery rate
+- 5-star user satisfaction
+- <5% error rate
 
-## Important Notes
+### Business Metrics
+- 100+ integrations
+- 1000+ daily active users
+- 50% conversion to paid tier
+- 90% retention rate
 
-- All models run locally via Ollama
-- No external API dependencies
-- Privacy-first architecture
-- Session data stored locally in SQLite
-- Optimized for Apple Silicon (M-series chips)
-- Model diversity reduces single-vendor dependency
-- Larger models (27B+) require significant RAM (16GB+ recommended)
+## 🚢 Deployment Strategy
+
+### Development
+```bash
+npm run dev          # Start development server
+npm run storybook    # Component development
+npm run test        # Run tests
+npm run build       # Production build
+```
+
+### Production
+- Vercel/Netlify for frontend
+- Docker Swarm/K8s for API
+- Redis cluster for caching
+- PostgreSQL for persistence
+- CDN for static assets
+
+## 📝 Version Control Best Practices
+
+### Branch Strategy
+- `main` - Production-ready code
+- `develop` - Integration branch
+- `feature/*` - New features
+- `fix/*` - Bug fixes
+- `chore/*` - Maintenance
+
+### Commit Convention
+```
+type(scope): description
+
+feat(web): add chain visualization component
+fix(api): resolve WebSocket memory leak
+docs(readme): update installation guide
+```
+
+### Pull Request Process
+1. Create feature branch
+2. Implement with tests
+3. Update documentation
+4. Request review
+5. Merge after approval
+
+## 🎯 Immediate Next Steps
+
+1. **Set up web project structure**
+   ```bash
+   npx create-next-app@latest web --typescript --tailwind --app
+   ```
+
+2. **Install core dependencies**
+   ```bash
+   npm install @tanstack/react-query zustand framer-motion
+   npm install -D @types/react @types/node jest @testing-library/react
+   ```
+
+3. **Create initial components**
+   - Layout shell
+   - Query input
+   - Response display
+   - Loading states
+
+4. **Connect to API**
+   - Set up API client
+   - Test WebSocket connection
+   - Implement auth flow
+
+5. **Deploy preview**
+   - Set up CI/CD
+   - Deploy to Vercel
+   - Share with team
+
+## 🤝 Collaboration Guidelines
+
+### For Contributors
+- Read existing code before writing new code
+- Follow established patterns
+- Write tests for new features
+- Update documentation
+- Request reviews early
+
+### For Reviewers
+- Check for accessibility
+- Verify responsive design
+- Test error scenarios
+- Ensure consistent styling
+- Validate performance
+
+## 🔮 Future Enhancements
+
+### Short Term (3-6 months)
+- Mobile app (React Native)
+- Browser extension
+- VS Code plugin
+- Slack/Teams integration
+
+### Long Term (6-12 months)
+- Multi-language support
+- White-label solution
+- Marketplace for chains
+- Community model sharing
+- Enterprise features
+
+## 📚 Resources
+
+### Documentation
+- [API Architecture](./API_ARCHITECTURE_ANALYSIS.md)
+- [Model Ecosystem](./model_ecosystem_insights.md)
+- [Testing Guide](./tests/TEST_EXECUTION_GUIDE.md)
+
+### External Resources
+- [Ollama Documentation](https://ollama.ai/docs)
+- [React Documentation](https://react.dev)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
+
+---
+
+Remember: The goal is to democratize AI orchestration while maintaining the power and flexibility that makes Mirador unique. Every decision should balance developer experience, user accessibility, and system performance.
