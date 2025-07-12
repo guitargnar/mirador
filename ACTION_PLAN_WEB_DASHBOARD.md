@@ -71,10 +71,13 @@ web/
 
 **Features**:
 - Smart autocomplete with intent detection
-- Recent queries dropdown
-- Voice input button
+- Visual intent indicator showing which regex patterns matched
+- Recent queries dropdown with usage frequency
+- Voice input button with speech-to-text
 - Format selector (quick/summary/detailed/export)
 - Keyboard shortcuts (Cmd+K to focus)
+- Constraint preview (show active time/budget/resource limits)
+- "Trust indicator" badge showing local processing
 
 **State Management**:
 ```typescript
@@ -93,11 +96,14 @@ interface QueryState {
 **File**: `web/src/components/features/StreamingResponse.tsx`
 
 **Features**:
-- Progressive content reveal
+- Progressive content reveal with smooth animations
 - Stage indicators (Quick → Deep → Synthesis)
+- Real-time display of current model processing
+- Model contribution cards showing base LLM and specialty
 - Markdown rendering with syntax highlighting
-- Copy button and export options
-- Elapsed time display
+- Copy button and export options (JSON, MD, PDF)
+- Elapsed time and token count display
+- Performance metrics (tokens/sec, memory usage)
 
 **WebSocket Integration**:
 ```typescript
@@ -127,10 +133,13 @@ export function useStreamingQuery() {
 
 **Visualization**:
 - D3.js force-directed graph
-- Animated data flow between models
-- Node colors indicate status
-- Click nodes for model details
-- Real-time progress tracking
+- Animated data flow between models (particles moving along edges)
+- Node colors indicate status (pending/active/complete)
+- Node size reflects processing time
+- Click nodes for model details (base LLM, temperature, context window)
+- Real-time progress tracking with percentage complete
+- Context accumulation visualization (growing context bubble)
+- Hover to see model's contribution preview
 
 ### Priority 2: Model Performance Cards
 **File**: `web/src/components/features/ModelPerformanceCard.tsx`
@@ -228,12 +237,19 @@ npm run test:e2e
 - **Server State**: TanStack Query for caching and synchronization
 - **Client State**: Zustand for UI state and preferences
 - **Real-time**: Direct WebSocket handling for streams
+- **Local Storage**: Persist user preferences and recent queries
 
 ### Styling Approach
 - **Base**: Tailwind CSS for utility classes
 - **Components**: CSS Modules for component-specific styles
 - **Animations**: Framer Motion for smooth transitions
 - **Icons**: Lucide React for consistent iconography
+- **Dark Mode**: System preference detection + manual toggle
+
+### Security Considerations
+- **Local Processing Badge**: Visual indicator that data stays on device
+- **No Analytics on Query Content**: Only track usage patterns, not content
+- **Sanitize All Inputs**: Prevent XSS even though processing is local
 
 ### Testing Strategy
 - **Unit Tests**: Jest + React Testing Library
@@ -298,7 +314,31 @@ npm run test:e2e
 - 50% return rate
 - 4.5+ star rating
 - 10+ user testimonials
+- 80% report feeling more confident using AI
+- 90% appreciate local processing privacy
+- Average session length > 10 minutes
+- 5+ queries per session average
 
 ---
 
 **Remember**: The goal is to ship a working MVP quickly, gather feedback, and iterate. Don't let perfect be the enemy of good. Focus on core value: making Mirador's AI orchestration visually accessible and delightful to use.
+
+## 🏑 Enterprise Deployment Considerations
+
+### On-Premise Installation
+- Package as Docker container with web UI included
+- Support for air-gapped environments (no internet required)
+- Integration with corporate SSO (SAML, OAuth)
+- Audit logging for compliance requirements
+
+### Hardware Optimization Display
+- Real-time GPU/CPU utilization meters
+- Memory usage visualization
+- Model loading progress indicators
+- Hardware recommendation based on usage patterns
+
+### Trust & Security UI
+- Prominent "100% Local" badge on every page
+- Data flow diagram showing no external connections
+- Compliance indicators (HIPAA, SOC2, etc.)
+- Session encryption status display

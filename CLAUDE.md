@@ -16,9 +16,12 @@ Mirador is evolving from a powerful local AI orchestration CLI tool into a compr
 
 ### Completed Features
 - ✅ 80+ specialized Ollama models with diverse base LLMs
-- ✅ Smart query routing with intent detection
+- ✅ Smart query routing with intent detection (regex-based, priority for technical queries)
 - ✅ 9 chain types for different use cases
 - ✅ Progressive enhancement streaming (<1s first token)
+- ✅ Context accumulation across model chain (verified: `CONTEXT="$CONTEXT $RESPONSE"`)
+- ✅ Personal context injection (user profile, time-of-day awareness)
+- ✅ Constraint validation system (time, budget, energy limits)
 - ✅ Production-ready REST API with Flask
 - ✅ GraphQL interface with subscriptions
 - ✅ WebSocket support for real-time streaming
@@ -27,6 +30,8 @@ Mirador is evolving from a powerful local AI orchestration CLI tool into a compr
 - ✅ Docker containerization
 - ✅ Comprehensive test suite
 - ✅ Python SDK/client library
+- ✅ Session memory with SQLite persistence
+- ✅ Feedback logging system (routing_feedback.log)
 
 ### Repository Structure
 ```
@@ -86,11 +91,13 @@ mirador/
 
 **Features**:
 - Smart search bar with autocomplete
-- Intent detection visualization
+- Intent detection visualization (show which patterns matched)
 - Query history with search
-- Suggested prompts
-- Format selection (quick/summary/detailed)
-- Export capabilities
+- Suggested prompts based on common patterns
+- Format selection (quick/summary/detailed/export)
+- Export capabilities (JSON, Markdown, PDF)
+- Real-time display of which model is currently processing
+- Token count and performance metrics display
 
 **Integration**:
 - Connect to existing API endpoints
@@ -125,11 +132,14 @@ mirador/
 
 **Features**:
 - Visual chain builder (drag-and-drop)
-- A/B testing interface
+- A/B testing interface for comparing chain outputs
 - Custom dashboard layouts
-- Collaborative sessions
+- Collaborative sessions (multi-model dialogue)
 - Voice input/output
 - Keyboard shortcuts
+- REPL-style interactive mode for conversations
+- Custom constraint editor (time, budget, resources)
+- Model performance comparison tools
 
 **Technical Challenges**:
 - Real-time collaboration (CRDT/OT)
@@ -237,7 +247,17 @@ web/
 --background: #0F172A;   /* Dark blue */
 --surface: #1E293B;      /* Lighter dark */
 --text: #E2E8F0;        /* Light gray */
+--success: #10B981;      /* Green - for successful operations */
+--warning: #F59E0B;      /* Amber - for warnings */
+--error: #EF4444;        /* Red - for errors */
+--info: #3B82F6;         /* Blue - for information */
 ```
+
+### Visual Identity
+- **Progress Indicators**: Show each model's contribution with color-coded sections
+- **Model Cards**: Display base LLM, temperature, context window, specialty
+- **Chain Visualization**: Animated flow showing data movement between models
+- **Trust Indicators**: Local processing badge, privacy shield icon
 
 ### Typography
 - Headers: Inter or system-ui
@@ -281,20 +301,26 @@ POST /api/v5/sessions
 ### Technical Metrics
 - Page load time < 2s
 - API response time < 100ms (cached)
+- Model chain execution: 10-20s (3-4 models), 30-45s (5-6 models)
 - 99.9% uptime
 - Zero critical security issues
+- Hardware utilization > 80% during processing
 
 ### User Metrics
 - 10x increase in user adoption
 - 80% feature discovery rate
 - 5-star user satisfaction
 - <5% error rate
+- Average 5+ queries per session
+- 70% of users customize constraints
 
 ### Business Metrics
 - 100+ integrations
 - 1000+ daily active users
 - 50% conversion to paid tier
 - 90% retention rate
+- Enterprise adoption in regulated industries (healthcare, finance)
+- Cost savings vs cloud AI: 90% reduction at scale
 
 ## 🚢 Deployment Strategy
 
@@ -388,15 +414,21 @@ docs(readme): update installation guide
 ### Short Term (3-6 months)
 - Mobile app (React Native)
 - Browser extension
-- VS Code plugin
+- VS Code plugin  
 - Slack/Teams integration
+- Electron desktop app for non-technical users
+- Dynamic model selection based on query embeddings
+- Parallel model execution for independent steps
 
 ### Long Term (6-12 months)
 - Multi-language support
 - White-label solution
-- Marketplace for chains
+- Marketplace for chains and custom models
 - Community model sharing
-- Enterprise features
+- Enterprise features (SSO, audit logs, compliance reports)
+- Automatic feedback-based routing optimization
+- Integration with internal knowledge bases (enterprise wikis, documents)
+- On-premise deployment guide for enterprises
 
 ## 📚 Resources
 
@@ -413,4 +445,27 @@ docs(readme): update installation guide
 
 ---
 
-Remember: The goal is to democratize AI orchestration while maintaining the power and flexibility that makes Mirador unique. Every decision should balance developer experience, user accessibility, and system performance.
+## 🏢 Enterprise Considerations
+
+### Healthcare/Insurance Focus (e.g., Humana)
+- **Compliance**: HIPAA-compliant local processing
+- **Custom Models**: Domain-specific models for policy, claims, medical terminology
+- **Integration**: Connect to internal systems while maintaining data locality
+- **Audit Trail**: Complete logging of all queries and responses for compliance
+- **Role-Based Access**: Different model chains for different employee roles
+
+### Hardware Requirements
+- **Minimum**: 16GB RAM, 100GB storage
+- **Recommended**: 32GB RAM, 200GB SSD, Apple Silicon or NVIDIA GPU
+- **Enterprise**: Dedicated server with 64GB+ RAM, multiple GPUs
+- **Scaling**: Support for Ollama cluster deployment
+
+### Change Management
+- **Training Materials**: Interactive tutorials for non-technical users
+- **Success Stories**: Document ROI and efficiency gains
+- **Champions Program**: Identify and train power users
+- **Gradual Rollout**: Start with pilot teams, expand based on success
+
+---
+
+Remember: The goal is to democratize AI orchestration while maintaining the power and flexibility that makes Mirador unique. Every decision should balance developer experience, user accessibility, and system performance. As noted by external analysis, Mirador represents "a paradigm shift in how one can leverage AI" by turning your desktop into "a mini AI department."
